@@ -39,7 +39,7 @@ in
       in attrs
     );
 
-    environment.systemPackages = with pkgs; [ asusctl ];
+    environment.systempackages = with pkgs; [ asusctl ];
     services.dbus.packages = with pkgs; [ asusctl ];
 
     # Avoiding adding udev rules file of asusctl as-is due to the reference to systemd.
