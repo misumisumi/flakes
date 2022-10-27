@@ -1,9 +1,9 @@
 { stdenv, lib, name, pkgSources, writeShellScript, makeDesktopItem, tk, tcl, snack }:
 let
-  launcher = writeShellScript "wavesurfer" ''
-    #! /usr/bin/env bash
-    exec /run/current-system/sw/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl "''$@"
-  '';
+  # launcher = writeShellScript "wavesurfer" ''
+  #   #! /usr/bin/env bash
+  #   exec /run/current-system/sw/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl "''$@"
+  # '';
 
   desktopApp = makeDesktopItem {
     inherit name;
@@ -31,9 +31,17 @@ stdenv.mkDerivation {
     chmod a+x $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl
     cp doc/* $out/doc/wavesurfer/
 
-    install -Dm755 ${launcher} $out/bin/wavesurfer
+    cp $desktopApp/share/applications $out/share/applications
+
+    cat <<EOF > $out/bin/wavesurfer
+    #! /usr/bin/env bash
+    exec $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl "''$@"
+    EOF
+    chmod a+x $out/bin/wavesurfer
     install LICENSE.txt $out/share/licenses/wavesurfer/LICENSE.txt
   '';
+
+    #install -Dm755 ${launcher} $out/bin/wavesurfer
 
   meta = with lib; {
     inherit version;
