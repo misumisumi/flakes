@@ -1,0 +1,103 @@
+{
+    "asusctl": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "asusctl",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "4.4.0",
+            "sha256": "sha256-h7CTbPeeQgn5fu+/PgQE9TaK7+AX3zHLbnk2wxq4YpA=",
+            "type": "git",
+            "url": "https://gitlab.com/asus-linux/asusctl"
+        },
+        "version": "4.4.0"
+    },
+    "egui": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "egui",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "0.19.0",
+            "sha256": "sha256-g0YYCfzVQz2uzmOf2Na3fNuojv5gDnjflxfl4TpQ1Ok=",
+            "type": "git",
+            "url": "https://github.com/emilk/egui.git"
+        },
+        "version": "0.19.0"
+    },
+    "fcitx5-nord": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "fcitx5-nord",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tonyfettes",
+            "repo": "fcitx5-nord",
+            "rev": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1",
+            "sha256": "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=",
+            "type": "github"
+        },
+        "version": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1"
+    },
+    "snack": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "snack",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-S/52RUerkrpY9Dt3Nm27fHs1EtZaJ82/nlhanLZM6B4=",
+            "type": "url",
+            "url": "http://www.speech.kth.se/snack/dist/snack2.2.10.tar.gz"
+        },
+        "version": "2.2.10"
+    },
+    "supergfxctl": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "supergfxctl",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "4.0.5",
+            "sha256": "sha256-hdHZ1GNhEotyOOPW3PJMe4+sdTqwic7iCnVsA5a1F1c=",
+            "type": "git",
+            "url": "https://gitlab.com/asus-linux/supergfxctl"
+        },
+        "version": "4.0.5"
+    },
+    "wavesurfer": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "wavesurfer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-rlYGEUfdEXD3SF3JwZ23pF3RVwUKw5RmYsf8ec/7YRo=",
+            "type": "url",
+            "url": "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
+        },
+        "version": "1.8.8p5"
+    }
+}
