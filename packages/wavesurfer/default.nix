@@ -5,7 +5,7 @@ let
   #   exec /run/current-system/sw/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl "''$@"
   # '';
 
-  desktopApp = makeDesktopItem {
+  desktopItem = makeDesktopItem {
     inherit name;
     exec = name;
     icon = "wavesurfer_48";
@@ -19,6 +19,8 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [ tk tcl snack ];
 
+  desktopItems = [ desktopItem ];
+
   installPhase = ''
     mkdir -p $out/bin
     mkdir -p $out/{lib,doc}/wavesurfer
@@ -30,8 +32,6 @@ stdenv.mkDerivation {
     cp -r icons/icon48.xpm $out/share/icons/hicolor/48x48/apps
     chmod a+x $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl
     cp doc/* $out/doc/wavesurfer/
-
-    cp $desktopApp/share/applications $out/share/applications
 
     cat <<EOF > $out/bin/wavesurfer
     #! /usr/bin/env bash
