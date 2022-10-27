@@ -1,6 +1,6 @@
 { stdenv, lib, name, pkgSources, writeShellScript, makeDesktopItem, tk, tcl, snack }:
 let
-  launcher = path: writeShellScript "wavesurfer" ''
+  launcher = writeShellScript "wavesurfer" ''
     #! /usr/bin/env bash
     exec /run/current-system/sw/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl "''$@"
   '';
