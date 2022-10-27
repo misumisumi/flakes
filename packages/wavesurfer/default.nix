@@ -21,6 +21,10 @@ stdenv.mkDerivation {
 
   desktopItems = [ desktopItem ];
 
+  patchPhase = ''
+    sed -i -e "3s/wish/''$(echo ${tk}|sed -e "s/\//\\\\\//g")\/bin\/wish/g" src/app-wavesurfer/wavesurfer.tcl
+  '';
+
   installPhase = ''
     mkdir -p $out/bin
     mkdir -p $out/{lib,doc}/wavesurfer
