@@ -13,7 +13,7 @@ in
     };
   };
   config = mkIf cfg.enable {
-    environment.systempackages = with pkgs; [ asusctl ];
+    environment.systemPackages = with pkgs; [ asusctl ];
     services.dbus.packages = with pkgs; [ asusctl ];
 
     systemd.services.asus-notify = {
