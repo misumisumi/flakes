@@ -1,9 +1,9 @@
-{ stdenv, lib, name, pkgSources, writeShellScript, makeDesktopItem, makeWrapper, tk, tcl, snack }:
+{ stdenv, lib, name, pkgSources, writeShellScript, makeDesktopItem, makeWrapper, tk, tcl, snack, imagemagick }:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
-  buildInputs = [ makeWrapper ];
+  buildInputs = [ makeWrapper imagemagick ];
   nativeBuildInputs = [ tk tcl snack ];
 
   desktopItems = [ 
@@ -25,7 +25,8 @@ stdenv.mkDerivation {
     mkdir -p $out/share/applications/
 
     cp -r demos msgs src tools $out/lib/wavesurfer/
-    cp icons/icon48.xpm $out/share/icons/hicolor/48x48/apps/wavesurfer.xpm
+    convert icons/icon48.xpm icons/wavesurfer.png
+    cp icons/wavesurfer.png $out/share/icons/hicolor/48x48/apps/
     chmod a+x $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl
     cp doc/* $out/doc/wavesurfer/
     cp $desktopItems/share/applications/* $out/share/applications/
