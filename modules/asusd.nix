@@ -55,8 +55,7 @@ in
 
     systemd.services.asusd = {
       description = "Asus Control Daemon";
-      wantedBy = [ "multi-user.target" ];
-      wants = [ "dbus.socket" ];
+      Before = [ "multi-user.target" ];
       environment.IS_SERVICE = "1";
       unitConfig = {
         StartLimitInterval = 200;
@@ -68,9 +67,8 @@ in
         SELinuxContext = "system_u:system_r:unconfined_t:s0";
         ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 2";
         ExecStart = "${pkgs.asusctl}/bin/asusd";
-        ConfigurationDirectory = "asusd";
-        # Restart="on-failure";
-        Restart="no";
+        # ConfigurationDirectory = "asusd";
+        Restart="on-failure";
       };
     };
   };
