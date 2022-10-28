@@ -25,7 +25,7 @@ stdenv.mkDerivation {
     mkdir -p $out/share/applications/
 
     cp -r demos msgs src tools $out/lib/wavesurfer/
-    cp -r icons/icon48.xpm $out/share/icons/hicolor/48x48/apps
+    cp icons/icon48.xpm $out/share/icons/hicolor/48x48/apps/wavesurfer.xpm
     chmod a+x $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl
     cp doc/* $out/doc/wavesurfer/
     cp $desktopItems/share/applications/* $out/share/applications/
