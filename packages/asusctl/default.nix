@@ -47,11 +47,12 @@ rustPlatform.buildRustPackage rec {
   '';
 
   installPhase = ''
-  mkdir -p $out/tmp
-  make DESTDIR=$out/tmp install
-  mv $out/tmp/usr/* $out/
-  mv $out/tmp/etc $out/
-  rm -r $out/tmp
+    mkdir -p $out/tmp
+    make DESTDIR=$out/tmp install
+    mv $out/tmp/usr/* $out/
+    mv $out/tmp/etc $out/
+    rm -r $out/tmp
+    rm -r $out/lib
   '';
 
   meta = with lib; {
