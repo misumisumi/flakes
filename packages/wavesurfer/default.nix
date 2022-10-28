@@ -47,11 +47,7 @@ stdenv.mkDerivation {
   '';
   postInstall = ''
     wrapProgram $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl \
-      --prefix PATH : ${lib.makeSearchPath [
-        tk
-        tcl
-        snack
-      ]} 
+      --prefix PATH : ${lib.makeSearchPath [ tk tcl snack ]} 
   '';
 
     #install -Dm755 ${launcher} $out/bin/wavesurfer
