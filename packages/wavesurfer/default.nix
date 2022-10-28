@@ -45,9 +45,9 @@ stdenv.mkDerivation {
     chmod a+x $out/bin/wavesurfer
     install LICENSE.txt $out/share/licenses/wavesurfer/LICENSE.txt
   '';
-  postInstallPhase = ''
+  postInstall = ''
     wrapProgram $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl \
-      --prefix PATH : ${lib.makeSearchPath[
+      --prefix PATH : ${lib.makeSearchPath [
         tk
         tcl
         snack
