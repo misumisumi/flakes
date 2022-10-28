@@ -21,9 +21,9 @@ stdenv.mkDerivation {
 
   desktopItems = [ desktopItem ];
 
-  patchPhase = ''
-    sed -i -e "3s/wish/''$(echo ${tk}|sed -e "s/\//\\\\\//g")\/bin\/wish/g" src/app-wavesurfer/wavesurfer.tcl
-  '';
+  # patchPhase = ''
+  #   sed -i -e "3s/wish/''$(echo ${tk}|sed -e "s/\//\\\\\//g")\/bin\/wish/g" src/app-wavesurfer/wavesurfer.tcl
+  # '';
 
   installPhase = ''
     mkdir -p $out/bin
@@ -43,6 +43,14 @@ stdenv.mkDerivation {
     EOF
     chmod a+x $out/bin/wavesurfer
     install LICENSE.txt $out/share/licenses/wavesurfer/LICENSE.txt
+  '';
+  postInstallPhase = ''
+    wrapProgram $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl \
+      --set PATH ${lib.makeSearchPath[
+        tk
+        tcl
+        snack
+      ]} 
   '';
 
     #install -Dm755 ${launcher} $out/bin/wavesurfer
