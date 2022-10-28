@@ -1,30 +1,21 @@
 { stdenv, lib, name, pkgSources, writeShellScript, makeDesktopItem, makeWrapper, tk, tcl, snack }:
-let
-  # launcher = writeShellScript "wavesurfer" ''
-  #   #! /usr/bin/env bash
-  #   exec /run/current-system/sw/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl "''$@"
-  # '';
 
-  desktopItem = makeDesktopItem {
-    inherit name;
-    exec = name;
-    icon = "wavesurfer_48";
-    comment = "Open source tool for sound visualization and manipulation";
-    desktopName = "WaveSurfer";
-    categories = [ "Application" "AudioVideo" "Audio" "AudioVideoEditing" ];
-  };
-in
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
   buildInputs = [ makeWrapper ];
   nativeBuildInputs = [ tk tcl snack ];
 
-  desktopItems = [ desktopItem ];
-
-  # patchPhase = ''
-  #   sed -i -e "3s/wish/''$(echo ${tk}|sed -e "s/\//\\\\\//g")\/bin\/wish/g" src/app-wavesurfer/wavesurfer.tcl
-  # '';
+  desktopItems = [ 
+    (makeDesktopItem {
+      inherit name;
+      exec = name;
+      icon = "wavesurfer_48";
+      comment = "Open source tool for sound visualization and manipulation";
+      desktopName = "WaveSurfer";
+      categories = [ "Application" "AudioVideo" "Audio" "AudioVideoEditing" ];
+    })
+  ];
 
   installPhase = ''
     mkdir -p $out/bin
@@ -37,10 +28,9 @@ stdenv.mkDerivation {
     cp -r icons/icon48.xpm $out/share/icons/hicolor/48x48/apps
     chmod a+x $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl
     cp doc/* $out/doc/wavesurfer/
+    cp $desktopItems/share/applications/* $out/share/applications/
 
     cat <<EOF > $out/bin/wavesurfer
-    #! /usr/bin/env bash
-    echo $PATH
     exec $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl "''$@"
     EOF
     chmod a+x $out/bin/wavesurfer
@@ -48,12 +38,9 @@ stdenv.mkDerivation {
   '';
 
   postFixup = ''
-    wrapProgram $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl \
+    wrapProgram $out/bin/wavesurfer \
       --prefix PATH : ${lib.makeBinPath [ tk tcl ]} \
-      --prefix PATH : ${lib.makeLibraryPath [ snack ]}
-
-    wrapProgram $out/lib/wavesurfer/src/app-wavesurfer/.wavesurfer.tcl-wrapped \
-      --prefix PATH : ${lib.makeLibraryPath [ snack ]}
+      --prefix TCLLIBPATH : ${lib.makeLibraryPath [ snack ]}
   '';
 
   meta = with lib; {
