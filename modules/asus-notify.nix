@@ -31,7 +31,8 @@ in
         SELinuxContext = "system_u:system_r:unconfined_t:s0";
         ExecStart = "${pkgs.asusctl}/bin/asus-notify";
         ConfigurationDirectory = "asusd";
-        Restart="on-failure";
+        # Restart="on-failure";
+        Restart="no";
       };
     };
   };
