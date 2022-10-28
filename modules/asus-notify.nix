@@ -33,7 +33,6 @@ in
         ExecStart = "${pkgs.asusctl}/bin/asus-notify";
         ConfigurationDirectory = "asusd";
         Restart="on-failure";
-        Restart = "always";
         RestartSec = "1s";
       };
     };
