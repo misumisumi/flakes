@@ -4,8 +4,8 @@ stdenvNoCC.mkDerivation rec {
   inherit (pkgSources."${name}") pname version src;
 
   installPhase = ''
-    mkdir $out
-    cp -r Nord-Dark/ Nord-Light/ $out
+    mkdir -p $out/share/fcitx5/themes
+    cp -r Nord-Dark/ Nord-Light/ $out/share/fcitx5/themes/
   '';
 
   meta = with lib; {
