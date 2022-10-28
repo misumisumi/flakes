@@ -10,7 +10,7 @@ stdenv.mkDerivation {
     (makeDesktopItem {
       inherit name;
       exec = name;
-      icon = "wavesurfer_48";
+      icon = "wavesurfer";
       comment = "Open source tool for sound visualization and manipulation";
       desktopName = "WaveSurfer";
       categories = [ "Application" "AudioVideo" "Audio" "AudioVideoEditing" ];
