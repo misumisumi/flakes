@@ -49,11 +49,10 @@ stdenv.mkDerivation {
   postFixup = ''
     wrapProgram $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl \
       --prefix PATH : ${lib.makeBinPath [ tk tcl ]}
-    wrapProgram $out/lib/wavesurfer/src/wsurf/wsurf.tcl \
+
+    wrapProgram $out/lib/wavesurfer/src/app-wavesurfer/.wavesurfer.tcl-wrapped \
       --prefix PATH : ${lib.makeLibraryPath [ snack ]}
   '';
-
-    #install -Dm755 ${launcher} $out/bin/wavesurfer
 
   meta = with lib; {
     inherit version;
