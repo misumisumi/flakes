@@ -29,7 +29,6 @@ in
         Type = "dbus";
         BusName = "org.asuslinux.Daemon";
         SELinuxContext = "system_u:system_r:unconfined_t:s0";
-        ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 2";
         ExecStart = "${pkgs.asusctl}/bin/asus-notify";
         ConfigurationDirectory = "asusd";
         Restart="on-failure";
