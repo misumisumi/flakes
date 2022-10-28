@@ -40,6 +40,7 @@ stdenv.mkDerivation {
 
     cat <<EOF > $out/bin/wavesurfer
     #! /usr/bin/env bash
+    echo $PATH
     exec $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl "''$@"
     EOF
     chmod a+x $out/bin/wavesurfer
@@ -48,7 +49,8 @@ stdenv.mkDerivation {
 
   postFixup = ''
     wrapProgram $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl \
-      --prefix PATH : ${lib.makeBinPath [ tk tcl ]}
+      --prefix PATH : ${lib.makeBinPath [ tk tcl ]} \
+      --prefix PATH : ${lib.makeLibraryPath [ snack ]}
 
     wrapProgram $out/lib/wavesurfer/src/app-wavesurfer/.wavesurfer.tcl-wrapped \
       --prefix PATH : ${lib.makeLibraryPath [ snack ]}
