@@ -1,4 +1,4 @@
-{ stdenv, lib, name, pkgSources, writeShellScript, makeDesktopItem, tk, tcl, snack }:
+{ stdenv, lib, name, pkgSources, writeShellScript, makeDesktopItem, wakeWrapper tk, tcl, snack }:
 let
   # launcher = writeShellScript "wavesurfer" ''
   #   #! /usr/bin/env bash
@@ -17,6 +17,7 @@ in
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
+  buildInputs = [ makeWrapper ];
   nativeBuildInputs = [ tk tcl snack ];
 
   desktopItems = [ desktopItem ];
