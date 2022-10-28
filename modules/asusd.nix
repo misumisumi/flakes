@@ -68,7 +68,8 @@ in
         ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 2";
         ExecStart = "${pkgs.asusctl}/bin/asusd";
         # ConfigurationDirectory = "asusd";
-        Restart="on-failure";
+        Restart = "on-failure";
+        RestartSec = "1s";
       };
     };
   };
