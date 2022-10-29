@@ -1,4 +1,4 @@
-{ lib, pythonPackages, name, pkgSources }:
+{ lib, pythonPackages, python3, name, pkgSources }:
 let
   inherit (pythonPackages) buildPythonPackage;
 in buildPythonPackage rec {
@@ -6,7 +6,7 @@ in buildPythonPackage rec {
 
   doCheck = false;
 
-  propagatedBuildInputs = with pythonPackages; [ setuptools ];
+  propagatedBuildInputs = with pythonPackages; [ toml jinja2 parso ];
 
   meta = with lib; {
     homepage = "https://github.com/heavenshell/py-doq";
