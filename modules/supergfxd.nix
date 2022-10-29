@@ -43,7 +43,7 @@ in
         SELinuxContext = "system_u:system_r:unconfined_t:s0";
         ExecStart = "${pkgs.supergfxctl}/bin/supergfxd";
         Restart = "on-failure";
-        RestartSec = "1s";
+        RestartSec = "1";
       };
     };
   };

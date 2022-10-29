@@ -7,13 +7,15 @@
   cargo,
   rustc,
   rustfmt,
-  gcc
+  gcc,
+  kmod
 }:
 
 rustPlatform.buildRustPackage rec {
   inherit (pkgSources."${name}") pname version src;
 
   buildInputs = [ git cargo rustc rustfmt gcc];
+  nativeBuildInputs = [ kmod ];
 
   doCheck = false;
 

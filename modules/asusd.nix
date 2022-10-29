@@ -85,7 +85,7 @@ in
         ExecStart = "${pkgs.asusctl}/bin/asusd";
         # ConfigurationDirectory = "asusd";
         Restart = "on-failure";
-        RestartSec = "1s";
+        RestartSec = "1";
       };
     };
   };
