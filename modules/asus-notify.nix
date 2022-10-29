@@ -21,11 +21,11 @@ in
       wantedBy = [ "multi-user.target" ];
       wants = [ "dbus.socket" ];
       environment.IS_SERVICE = "1";
-      unitConfig = {
+      Unit = {
         StartLimitInterval = 200;
         StartLimitBurst = 2;
       };
-      serviceConfig = {
+      Service = {
         type="simple";
         ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 2";
         ExecStart = "${pkgs.asusctl}/bin/asus-notify";
