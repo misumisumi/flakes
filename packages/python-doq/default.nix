@@ -1,6 +1,6 @@
-{ lib, pythonPackages, name, pkgSources }:
+{ lib, buildPythonPackage, name, pkgSources }:
 
-pythonPackages.buildPythonPackage rec {
+buildPythonPackage rec {
   inherit (pkgSources."${name}") pname version src;
 
   doCheck = false;
