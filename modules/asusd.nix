@@ -55,7 +55,7 @@ in
 
     systemd.services.asusd = {
       description = "Asus Control Daemon";
-      before = [ "multi-user.target" ];
+      wantedBy = [ "multi-user.target" ];
       environment.IS_SERVICE = "1";
       unitConfig = {
         StartLimitInterval = 200;
