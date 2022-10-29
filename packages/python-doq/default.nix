@@ -5,7 +5,7 @@ in buildPythonPackage rec {
   inherit (pkgSources."${name}") pname version src;
 
   doCheck = false;
-
+  # for runtime depend
   propagatedBuildInputs = with pythonPackages; [ toml jinja2 parso ];
 
   meta = with lib; {
