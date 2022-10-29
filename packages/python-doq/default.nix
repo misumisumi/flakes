@@ -3,6 +3,8 @@
 buildPythonPackage rec {
   inherit (pkgSources."${name}") pname version src;
 
+  format = "setuptools";
+
   doCheck = false;
 
   meta = with lib; {
