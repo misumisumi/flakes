@@ -48,7 +48,7 @@ in
     # See ${pkgs.asusctl}/lib/udev/rules.d/99-asusd.rules
     services.udev.extraRules = ''
       ACTION=="add|change", SUBSYSTEM=="input", ENV{ID_VENDOR_ID}=="0b05", ENV{ID_MODEL_ID}=="1[89][a-zA-Z0-9][a-zA-Z0-9]|193b", ENV{ID_TYPE}=="hid", TAG+="systemd", ENV{SYSTEMD_WANTS}="asusd.service"
-      ACTION=="add|remove", SUBSYSTEM=="input", ENV{ID_VENDOR_ID}=="0b05", ENV{ID_MODEL_ID}=="1[89][a-zA-Z0-9][a-zA-Z0-9]|193b", RUN+="systemctl restart asusd.service"
+      # ACTION=="add|remove", SUBSYSTEM=="input", ENV{ID_VENDOR_ID}=="0b05", ENV{ID_MODEL_ID}=="1[89][a-zA-Z0-9][a-zA-Z0-9]|193b", RUN+="systemctl restart asusd.service"
     '';
 
     environment.etc."asusd/asusd-ledmodes.toml".source = tomlFormat.generate "asusd-ledmodes.toml" cfg.ledmodes;
