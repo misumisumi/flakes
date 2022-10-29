@@ -13,4 +13,4 @@ This repository use [nvfetcher](https://github.com/berberman/nvfetcher.git) for 
 ## ToDO
 
 - [ ] add auto update package system using github action    
-- [ ] Do I pythonPackages overlays?
+- [ ] Do I `pythonPackages` overlays?
