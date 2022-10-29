@@ -32,7 +32,7 @@ in
     systemd.services.supergfxd = {
       description = "GPU control for asus laptops";
       before = [ "multi-user.target" ];
-      environment.IS_SERVICE = "1";
+      environment.IS_SUPERGFX_SERVICE = "1";
       unitConfig = {
         StartLimitInterval = 200;
         StartLimitBurst = 2;
@@ -42,7 +42,7 @@ in
         BusName = "org.supergfxctl.Daemon";
         SELinuxContext = "system_u:system_r:unconfined_t:s0";
         ExecStart = "${pkgs.supergfxctl}/bin/supergfxd";
-        Restart = "on-failure";
+        Restart = "Always";
         RestartSec = "1s";
       };
     };

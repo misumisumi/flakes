@@ -52,7 +52,6 @@ rustPlatform.buildRustPackage rec {
     mv $out/tmp/usr/* $out/
     mv $out/tmp/etc $out/
     rm -r $out/tmp
-    rm -r $out/lib
   '';
 
   meta = with lib; {
