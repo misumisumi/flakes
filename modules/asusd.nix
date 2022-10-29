@@ -47,8 +47,22 @@ in
 
     # See ${pkgs.asusctl}/lib/udev/rules.d/99-asusd.rules
     services.udev.extraRules = ''
-      ACTION=="add|change", SUBSYSTEM=="input", ENV{ID_VENDOR_ID}=="0b05", ENV{ID_MODEL_ID}=="1[89][a-zA-Z0-9][a-zA-Z0-9]|193b", ENV{ID_TYPE}=="hid", TAG+="systemd", ENV{SYSTEMD_WANTS}="asusd.service"
-      ACTION=="add|remove", SUBSYSTEM=="input", ENV{ID_VENDOR_ID}=="0b05", ENV{ID_MODEL_ID}=="1[89][a-zA-Z0-9][a-zA-Z0-9]|193b", RUN+="${pkgs.systemd}/bin/systemctl restart asusd.service"
+      ENV{DMI_VENDOR}="$attr{[dmi/id]sys_vendor}"
+      ENV{DMI_VENDOR}!="ASUSTeK COMPUTER INC.", GOTO="asusd_end"
+
+      ENV{DMI_FAMILY}="$attr{[dmi/id]product_family}"
+      ENV{DMI_FAMILY}=="*TUF*", GOTO="asusd_start"
+      ENV{DMI_FAMILY}=="*ROG*", GOTO="asusd_start"
+      ENV{DMI_FAMILY}=="*Zephyrus*", GOTO="asusd_start"
+      ENV{DMI_FAMILY}=="*Strix*", GOTO="asusd_start"
+      # No match so
+      GOTO="asusd_end"
+
+      LABEL="asusd_start"
+      ACTION=="add|change", DRIVER=="asus-nb-wmi", TAG+="systemd", ENV{SYSTEMD_WANTS}="asusd.service"
+      ACTION=="add|remove", DRIVER=="asus-nb-wmi", TAG+="systemd", RUN+="systemctl restart asusd.service"
+
+      LABEL="asusd_end"
     '';
 
     environment.etc."asusd/asusd-ledmodes.toml".source = tomlFormat.generate "asusd-ledmodes.toml" cfg.ledmodes;
