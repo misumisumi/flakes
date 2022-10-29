@@ -8,13 +8,14 @@
   rustc,
   rustfmt,
   gcc,
+  makeWrapper,
   kmod
 }:
 
 rustPlatform.buildRustPackage rec {
   inherit (pkgSources."${name}") pname version src;
 
-  buildInputs = [ git cargo rustc rustfmt gcc];
+  buildInputs = [ git cargo rustc rustfmt gcc makeWrapper ];
   nativeBuildInputs = [ kmod ];
 
   doCheck = false;
@@ -36,6 +37,11 @@ rustPlatform.buildRustPackage rec {
   make DESTDIR=$out/tmp install
   mv $out/tmp/usr/* $out/
   rm -r $out/tmp
+  '';
+
+  postFixup = ''
+    wrapProgram $out/bin/supergfxd \
+      --prefix PATH : ${lib.makeBinPath [ kmod ]}
   '';
 
   meta = with lib; {
