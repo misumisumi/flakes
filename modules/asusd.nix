@@ -57,11 +57,11 @@ in
       description = "Asus Control Daemon";
       before = [ "multi-user.target" ];
       environment.IS_SERVICE = "1";
-      Unit = {
+      unitConfig = {
         StartLimitInterval = 200;
         StartLimitBurst = 2;
       };
-      Service = {
+      serviceConfig = {
         Type = "dbus";
         BusName = "org.asuslinux.Daemon";
         SELinuxContext = "system_u:system_r:unconfined_t:s0";
@@ -70,9 +70,6 @@ in
         # ConfigurationDirectory = "asusd";
         Restart = "on-failure";
         RestartSec = "1s";
-      };
-      Install = {
-        WantedBy = [ "multi-user.target" ];
       };
     };
   };

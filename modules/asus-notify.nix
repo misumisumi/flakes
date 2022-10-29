@@ -21,19 +21,16 @@ in
       wantedBy = [ "multi-user.target" ];
       wants = [ "dbus.socket" ];
       environment.IS_SERVICE = "1";
-      Unit = {
+      unitConfig = {
         StartLimitInterval = 200;
         StartLimitBurst = 2;
       };
-      Service = {
+      serviceConfig = {
         type="simple";
         ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 2";
         ExecStart = "${pkgs.asusctl}/bin/asus-notify";
         ConfigurationDirectory = "asusd";
         Restart="on-failure";
-      };
-      Install = {
-        WantedBy = [ "default.target" ];
       };
     };
   };
