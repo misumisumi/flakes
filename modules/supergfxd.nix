@@ -1,4 +1,4 @@
-elf: { config, lib, pkgs, ... }:
+self: { config, lib, pkgs, ... }:
 
 with lib;
 let
