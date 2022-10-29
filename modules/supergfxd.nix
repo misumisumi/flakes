@@ -1,9 +1,8 @@
-self: { config, lib, pkgs, ... }:
+elf: { config, lib, pkgs, ... }:
 
 with lib;
 let
-  cfg = config.services.asusd;
-  tomlFormat = pkgs.formats.toml {};
+  cfg = config.services.supergfxd;
 in
 {
   options = {
