@@ -54,6 +54,20 @@
         },
         "version": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1"
     },
+    "python-doq": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "python-doq",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-uszDSN35Z8i/Mr/fVNqDJuHcdPN4ZeLBdgEq0Lx+6h4=",
+            "type": "url",
+            "url": "https://pypi.io/packages/source/d/doq/doq-0.9.1.tar.gz"
+        },
+        "version": "0.9.1"
+    },
     "snack": {
         "cargoLocks": null,
         "extract": null,

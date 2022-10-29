@@ -36,6 +36,14 @@
       sha256 = "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=";
     });
   };
+  python-doq = {
+    pname = "python-doq";
+    version = "0.9.1";
+    src = fetchurl {
+      url = "https://pypi.io/packages/source/d/doq/doq-0.9.1.tar.gz";
+      sha256 = "sha256-uszDSN35Z8i/Mr/fVNqDJuHcdPN4ZeLBdgEq0Lx+6h4=";
+    };
+  };
   snack = {
     pname = "snack";
     version = "2.2.10";
