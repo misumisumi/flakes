@@ -42,7 +42,7 @@ in
         BusName = "org.supergfxctl.Daemon";
         SELinuxContext = "system_u:system_r:unconfined_t:s0";
         ExecStart = "${pkgs.supergfxctl}/bin/supergfxd";
-        Restart = "Always";
+        Restart = "on-failure";
         RestartSec = "1s";
       };
     };
