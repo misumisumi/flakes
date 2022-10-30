@@ -26,7 +26,7 @@ in
         StartLimitBurst = 2;
       };
       serviceConfig = {
-        type="simple";
+        Type="simple";
         ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 2";
         ExecStart = "${pkgs.asusctl}/bin/asus-notify";
         ConfigurationDirectory = "asusd";
