@@ -39,9 +39,9 @@
 
       isModules = file: with lib; if (hasSuffix ".nix" file) then strings.removeSuffix ".nix" file else null;
       modules = with builtins; lib.remove null (map isModules (attrNames (ls ./modules)));
-      genModule = self: name: {
+      genModule = name: {
         inherit name;
-        value = import ./modules/${name}.nix self;
+        value = import ./modules/${name}.nix;
       };
       mkModules = with builtins; listToAttrs (map genModule modules);
     in rec {
