@@ -45,7 +45,7 @@
       };
       mkModules = self: with builtins; listToAttrs (map (genModule self) modules);
     in rec {
-      overlay = overlays.default;
+      overlay = overlays.default; # deprecated attributes for retro compatibility
       overlays.default = final: prev:
       let
         pkgSources = sources { inherit (final) fetchgit fetchurl fetchFromGitHub ; };
