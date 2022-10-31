@@ -1,5 +1,5 @@
 # This conf from https://github.com/NixOS/nixpkgs/pull/146751
-self: { config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 let

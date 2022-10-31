@@ -43,7 +43,7 @@
         inherit name;
         value = import ./modules/${name}.nix self;
       };
-      mkModules = self: with builtins; listToAttrs (map (genModule self) modules);
+      mkModules = with builtins; listToAttrs (map genModule modules);
     in rec {
       overlay = overlays.default; # deprecated attributes for retro compatibility
       overlays.default = final: prev:
@@ -70,6 +70,6 @@
         checks = packages;
         devShells.default = nvfetcher.packages.${system}.ghcWithNvfetcher;  # For `nix develop`
       }) // {
-        nixosModules = mkModules self;
+        nixosModules = mkModules;
       };
 }
