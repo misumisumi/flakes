@@ -44,32 +44,32 @@
         value = import ./modules/${name}.nix self;
       };
       mkModules = self: with builtins; listToAttrs (map (genModule self) modules);
-    in
-      {
-        overlays.default = final: prev:
+    in rec {
+      overlay = overlays.default;
+      overlays.default = final: prev:
+      let
+        pkgSources = sources { inherit (final) fetchgit fetchurl fetchFromGitHub ; };
+      in withContents (name:
         let
-          pkgSources = sources { inherit (final) fetchgit fetchurl fetchFromGitHub ; };
-        in withContents (name:
-          let
-            pkgs = import (pkgDir + "/${name}");
-            override = builtins.intersectAttrs (builtins.functionArgs pkgs) ({
-              inherit name pkgSources;
-              pythonPackages = final.python3.pkgs;
-            });
-          in final.callPackage pkgs override
-          ) // { sources = pkgSources; }; } //
-        flake-utils.lib.eachSystem ["x86_64-linux"] (system:
-        let
-          pkgs = import nixpkgs {
-            system = "${system}";
-            overlays = [ self.overlays.default nvfetcher.overlay];  # nvfetcherもoverlayする
-            config.allowUnfree = true;
-          }; in with pkgs.legacyPackages.${system}; rec {
-          packages =  withContents (name: pkgs.${name});
-          apps = mkApps pkgs (runnableApps pkgs names);
-          checks = packages;
-          devShells.default = nvfetcher.packages.${system}.ghcWithNvfetcher;  # For `nix develop`
-        }) // {
-          nixosModules = mkModules self;
-        };
+          pkgs = import (pkgDir + "/${name}");
+          override = builtins.intersectAttrs (builtins.functionArgs pkgs) ({
+            inherit name pkgSources;
+            pythonPackages = final.python3.pkgs;
+          });
+        in final.callPackage pkgs override
+        ) // { sources = pkgSources; }; } //
+      flake-utils.lib.eachSystem ["x86_64-linux"] (system:
+      let
+        pkgs = import nixpkgs {
+          system = "${system}";
+          overlays = [ self.overlays.default nvfetcher.overlay];  # nvfetcherもoverlayする
+          config.allowUnfree = true;
+        }; in with pkgs.legacyPackages.${system}; rec {
+        packages =  withContents (name: pkgs.${name});
+        apps = mkApps pkgs (runnableApps pkgs names);
+        checks = packages;
+        devShells.default = nvfetcher.packages.${system}.ghcWithNvfetcher;  # For `nix develop`
+      }) // {
+        nixosModules = mkModules self;
+      };
 }
