@@ -19,7 +19,7 @@ in
     systemd.user = {
       services.asus-notify = {
         description = "Notication for asusctl";
-        wantedBy = [ "multi-user.target" ];
+        wantedBy = [ "default.target" ];
         wants = [ "dbus.socket" ];
         environment.IS_SERVICE = "1";
         unitConfig = {
@@ -28,9 +28,7 @@ in
         };
         serviceConfig = {
           Type="simple";
-          ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 2";
           ExecStart = "${pkgs.asusctl}/bin/asus-notify";
-          ConfigurationDirectory = "asusd";
           Restart="on-failure";
         };
       };
