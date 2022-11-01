@@ -33,10 +33,10 @@ rustPlatform.buildRustPackage rec {
   '';
 
   installPhase = ''
-  mkdir -p $out/tmp
-  make DESTDIR=$out/tmp install
-  mv $out/tmp/usr/* $out/
-  rm -r $out/tmp
+    mkdir -p $out/tmp
+    make DESTDIR=$out/tmp install
+    mv $out/tmp/usr/* $out/
+    rm -r $out/tmp
   '';
 
   postFixup = ''
