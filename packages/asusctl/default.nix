@@ -18,11 +18,14 @@
 let
   egui_ver = pkgSources."egui".version;
   egui_hash = (with builtins; fromJSON (readFile ../../_sources/generated.json))."egui".src.sha256;
+  # supergfxctl_ver = pkgSources."supergfxctl".version;
+  # supergfxctl_hash = (with builtins; fromJSON (readFile ../../_sources/generated.json))."supergfxctl".src.sha256;
+  # notify-rust_hash = (with builtins; fromJSON (readFile ../../_sources/generated.json))."notify-rust".src.sha256;
 in
 rustPlatform.buildRustPackage rec {
   inherit (pkgSources."${name}") pname version src;
 
-  buildInputs = [ git cargo rustc rustfmt systemd libusb1 freetype expat fontconfig ];
+  buildInputs = [ git cargo rustc rustfmt systemd libusb1 freetype expat fontconfig pkg-config ];
   nativeBuildInputs = [ pkg-config power-profiles-daemon ];
 
   cargoLock = {
@@ -34,6 +37,8 @@ rustPlatform.buildRustPackage rec {
       "egui_glow-${egui_ver}" = egui_hash;
       "emath-${egui_ver}" = egui_hash;
       "epaint-${egui_ver}" = egui_hash;
+      # "notify-rust-4.5.11" = notify-rust_hash;
+      # "supergfxctl-${supergfxctl_ver}" = supergfxctl_hash;
     };
   };
   doCheck = false;
