@@ -1,9 +1,9 @@
 
-{ stdenv, lib, fetchpatch, name, pkgSources, libjpeg, libusbmuxd, libimobiledevice, lobster}:
+{ stdenv, lib, fetchpatch, name, pkgSources, libjpeg, libusbmuxd, libimobiledevice, obs-studio}:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
-  nativeBuildInputs = [ libjpeg libusbmuxd libimobiledevice lobster ];
+  nativeBuildInputs = [ libjpeg libusbmuxd libimobiledevice obs-studio ];
   patches = [
     ./fix-makefile.patch
   ];
