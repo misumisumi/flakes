@@ -13,6 +13,18 @@
       sha256 = "sha256-h7CTbPeeQgn5fu+/PgQE9TaK7+AX3zHLbnk2wxq4YpA=";
     };
   };
+  droidcam-obs-plugin = {
+    pname = "droidcam-obs-plugin";
+    version = "1.6.0";
+    src = fetchgit {
+      url = "https://github.com/dev47apps/droidcam-obs-plugin";
+      rev = "1.6.0";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-ILvZMwrBZvLLj+wcMIT9vOODWlSuAQ/AdxaGhqjYdyA=";
+    };
+  };
   egui = {
     pname = "egui";
     version = "0.19.0";
@@ -36,6 +48,17 @@
       sha256 = "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=";
     });
   };
+  notify-rust = {
+    pname = "notify-rust";
+    version = "6033d06377d6d601207ae31861cda560d03a9aa8";
+    src = fetchFromGitHub ({
+      owner = "flukejones";
+      repo = "notify-rust";
+      rev = "6033d06377d6d601207ae31861cda560d03a9aa8";
+      fetchSubmodules = false;
+      sha256 = "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=";
+    });
+  };
   python-doq = {
     pname = "python-doq";
     version = "0.9.1";
@@ -54,14 +77,14 @@
   };
   supergfxctl = {
     pname = "supergfxctl";
-    version = "4.0.5";
+    version = "4.0.4";
     src = fetchgit {
       url = "https://gitlab.com/asus-linux/supergfxctl";
-      rev = "4.0.5";
+      rev = "4.0.4";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-hdHZ1GNhEotyOOPW3PJMe4+sdTqwic7iCnVsA5a1F1c=";
+      sha256 = "sha256-EqwUsSk/Rq60q3wWzR3ONNlfisdURHVqFHNiXAJ2yi0=";
     };
   };
   wavesurfer = {

@@ -1,12 +1,13 @@
 
-{ stdenv, lib, fetchpatch, name, pkgSources, libjpeg, libusbmuxd, }:
+{ stdenv, lib, fetchpatch, name, pkgSources, libjpeg, libusbmuxd, libimobiledevice, lobster}:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
-  nativeBuildInputs = [ libjpeg libusbmuxd ];
+  nativeBuildInputs = [ libjpeg libusbmuxd libimobiledevice lobster ];
   patches = [
     ./fix-makefile.patch
   ];
+
   patchPhase = ''
     for i in $patches ; do
       patch -p1 < $i

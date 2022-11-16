@@ -1,5 +1,6 @@
 [asusctl]
-src.aur = 'asusctl'
+# src.aur = 'asusctl'
+src.manual = '4.4.0'
 src.branch = '$ver'
 fetch.git = 'https://gitlab.com/asus-linux/asusctl'
 
@@ -7,6 +8,10 @@ fetch.git = 'https://gitlab.com/asus-linux/asusctl'
 src.github_tag = "emilk/egui"
 src.include_regex = '[0-9]+\.[0-9]+\.[0-9]+'
 fetch.git = 'https://github.com/emilk/egui.git'
+
+[notify-rust]
+src.git = "https://github.com/flukejones/notify-rust.git"
+fetch.github = 'flukejones/notify-rust'
 
 [fcitx5-nord]
 src.git = 'https://github.com/tonyfettes/fcitx5-nord.git'
@@ -19,7 +24,8 @@ src.prefix = 'Snack v'
 fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
 
 [supergfxctl]
-src.aur = "supergfxctl"
+# src.aur = "supergfxctl"
+src.manual = '4.0.4'
 fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
 
 [wavesurfer]
@@ -30,7 +36,7 @@ fetch.url = 'http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz
 [droidcam-obs-plugin]
 src.aur = 'droidcam-obs-plugin'
 src.branch = '$ver'
-fetch.url = 'https://github.com/dev47apps/droidcam-obs-plugin'
+fetch.git = 'https://github.com/dev47apps/droidcam-obs-plugin'
 
 [python-doq]
 src.pypi = 'doq'
