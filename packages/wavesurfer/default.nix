@@ -32,7 +32,7 @@ stdenv.mkDerivation {
     cp $desktopItems/share/applications/* $out/share/applications/
 
     cat <<EOF > $out/bin/wavesurfer
-    exec $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl "''$@"
+    exec $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl
     EOF
     chmod a+x $out/bin/wavesurfer
     install LICENSE.txt $out/share/licenses/wavesurfer/LICENSE.txt
