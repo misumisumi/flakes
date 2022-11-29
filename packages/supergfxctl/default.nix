@@ -14,19 +14,12 @@
 
 rustPlatform.buildRustPackage rec {
   inherit (pkgSources."${name}") pname version src;
+  cargoLock = pkgSources."${name}".cargoLock."Cargo.lock";
 
   buildInputs = [ git cargo rustc rustfmt gcc makeWrapper ];
   nativeBuildInputs = [ kmod ];
 
   doCheck = false;
-
-  cargoLock = {
-    lockFile = ./Cargo.lock;
-  };
-
-  postPatch = ''
-    cp ${./Cargo.lock} Cargo.lock
-  '';
 
   buildPhase = ''
     make

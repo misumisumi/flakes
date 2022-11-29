@@ -1,13 +1,7 @@
 [asusctl]
-# src.aur = 'asusctl'
-src.manual = '4.4.0'
-src.branch = '$ver'
+src.aur = 'asusctl'
 fetch.git = 'https://gitlab.com/asus-linux/asusctl'
-
-[egui]
-src.github_tag = 'emilk/egui'
-src.include_regex = '[0-9]+\.[0-9]+\.[0-9]+'
-fetch.git = 'https://github.com/emilk/egui.git'
+cargo_locks = [ 'Cargo.lock' ]
 
 [notify-rust]
 src.git = 'https://github.com/flukejones/notify-rust.git'
@@ -24,9 +18,9 @@ src.prefix = 'Snack v'
 fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
 
 [supergfxctl]
-# src.aur = 'supergfxctl'
-src.manual = '4.0.4'
+ src.aur = 'supergfxctl'
 fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
+cargo_locks = [ 'Cargo.lock' ]
 
 [wavesurfer]
 src.httpheader = 'http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz'
@@ -45,4 +39,3 @@ fetch.pypi = 'doq'
 [xp-pen-tablet]
 src.aur = 'xp-pen-tablet'
 fetch.url = 'https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html'
-passthuru = { name = 'xp-pen-tablet-$ver.x86_64.tar.gz' }
