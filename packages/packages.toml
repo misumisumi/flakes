@@ -5,12 +5,12 @@ src.branch = '$ver'
 fetch.git = 'https://gitlab.com/asus-linux/asusctl'
 
 [egui]
-src.github_tag = "emilk/egui"
+src.github_tag = 'emilk/egui'
 src.include_regex = '[0-9]+\.[0-9]+\.[0-9]+'
 fetch.git = 'https://github.com/emilk/egui.git'
 
 [notify-rust]
-src.git = "https://github.com/flukejones/notify-rust.git"
+src.git = 'https://github.com/flukejones/notify-rust.git'
 fetch.github = 'flukejones/notify-rust'
 
 [fcitx5-nord]
@@ -24,7 +24,7 @@ src.prefix = 'Snack v'
 fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
 
 [supergfxctl]
-# src.aur = "supergfxctl"
+# src.aur = 'supergfxctl'
 src.manual = '4.0.4'
 fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
 
@@ -41,3 +41,8 @@ fetch.git = 'https://github.com/dev47apps/droidcam-obs-plugin'
 [python-doq]
 src.pypi = 'doq'
 fetch.pypi = 'doq'
+
+[xp-pen-tablet]
+src.aur = 'xp-pen-tablet'
+fetch.url = 'https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html'
+passthuru = { name = 'xp-pen-tablet-$ver.x86_64.tar.gz' }

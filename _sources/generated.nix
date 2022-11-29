@@ -3,14 +3,22 @@
 {
   asusctl = {
     pname = "asusctl";
-    version = "4.4.0";
+    version = "4.5.1";
     src = fetchgit {
       url = "https://gitlab.com/asus-linux/asusctl";
-      rev = "4.4.0";
+      rev = "4.5.1";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-h7CTbPeeQgn5fu+/PgQE9TaK7+AX3zHLbnk2wxq4YpA=";
+      sha256 = "sha256-5LlPDti7LRa1QiwNyln2GwX6JBN0XH4EZ9OpczLSU0g=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./asusctl-4.5.1/Cargo.lock;
+      outputHashes = {
+        "eframe-0.19.0" = "sha256-HW7gfs8vXXhQbNTBPdl3KurqcjvZHANoF2t0DAB+QDI=";
+        "supergfxctl-5.0.2" = "sha256-N2k/vkv+bct+Lo3y5jzpwdEGBcoOAtX9SBI8inNQqGQ=";
+        "notify-rust-4.5.11" = "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=";
+      };
     };
   };
   droidcam-obs-plugin = {
@@ -23,18 +31,6 @@
       deepClone = false;
       leaveDotGit = false;
       sha256 = "sha256-ILvZMwrBZvLLj+wcMIT9vOODWlSuAQ/AdxaGhqjYdyA=";
-    };
-  };
-  egui = {
-    pname = "egui";
-    version = "0.19.0";
-    src = fetchgit {
-      url = "https://github.com/emilk/egui.git";
-      rev = "0.19.0";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-g0YYCfzVQz2uzmOf2Na3fNuojv5gDnjflxfl4TpQ1Ok=";
     };
   };
   fcitx5-nord = {
@@ -77,14 +73,20 @@
   };
   supergfxctl = {
     pname = "supergfxctl";
-    version = "4.0.4";
+    version = "5.0.1";
     src = fetchgit {
       url = "https://gitlab.com/asus-linux/supergfxctl";
-      rev = "4.0.4";
+      rev = "5.0.1";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-EqwUsSk/Rq60q3wWzR3ONNlfisdURHVqFHNiXAJ2yi0=";
+      sha256 = "sha256-4q+7F8s6y+oDkBUKIBBsXZ2EtADcChdnjmABjBUnH9k=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./supergfxctl-5.0.1/Cargo.lock;
+      outputHashes = {
+        
+      };
     };
   };
   wavesurfer = {
@@ -93,6 +95,14 @@
     src = fetchurl {
       url = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz";
       sha256 = "sha256-rlYGEUfdEXD3SF3JwZ23pF3RVwUKw5RmYsf8ec/7YRo=";
+    };
+  };
+  xp-pen-tablet = {
+    pname = "xp-pen-tablet";
+    version = "3.2.3.220323";
+    src = fetchurl {
+      url = "https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html";
+      sha256 = "sha256-cLbcE0WVjBhY0JGj1IvddckfzIeboXVznvkVJ5C9yys=";
     };
   };
 }

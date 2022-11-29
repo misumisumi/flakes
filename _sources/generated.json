@@ -1,6 +1,15 @@
 {
     "asusctl": {
-        "cargoLocks": null,
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./asusctl-4.5.1/Cargo.lock",
+                {
+                    "eframe-0.19.0": "sha256-HW7gfs8vXXhQbNTBPdl3KurqcjvZHANoF2t0DAB+QDI=",
+                    "notify-rust-4.5.11": "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=",
+                    "supergfxctl-5.0.2": "sha256-N2k/vkv+bct+Lo3y5jzpwdEGBcoOAtX9SBI8inNQqGQ="
+                }
+            ]
+        },
         "extract": null,
         "name": "asusctl",
         "passthru": null,
@@ -10,12 +19,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "4.4.0",
-            "sha256": "sha256-h7CTbPeeQgn5fu+/PgQE9TaK7+AX3zHLbnk2wxq4YpA=",
+            "rev": "4.5.1",
+            "sha256": "sha256-5LlPDti7LRa1QiwNyln2GwX6JBN0XH4EZ9OpczLSU0g=",
             "type": "git",
             "url": "https://gitlab.com/asus-linux/asusctl"
         },
-        "version": "4.4.0"
+        "version": "4.5.1"
     },
     "droidcam-obs-plugin": {
         "cargoLocks": null,
@@ -34,24 +43,6 @@
             "url": "https://github.com/dev47apps/droidcam-obs-plugin"
         },
         "version": "1.6.0"
-    },
-    "egui": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "egui",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "0.19.0",
-            "sha256": "sha256-g0YYCfzVQz2uzmOf2Na3fNuojv5gDnjflxfl4TpQ1Ok=",
-            "type": "git",
-            "url": "https://github.com/emilk/egui.git"
-        },
-        "version": "0.19.0"
     },
     "fcitx5-nord": {
         "cargoLocks": null,
@@ -120,7 +111,12 @@
         "version": "2.2.10"
     },
     "supergfxctl": {
-        "cargoLocks": null,
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./supergfxctl-5.0.1/Cargo.lock",
+                {}
+            ]
+        },
         "extract": null,
         "name": "supergfxctl",
         "passthru": null,
@@ -130,12 +126,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "4.0.4",
-            "sha256": "sha256-EqwUsSk/Rq60q3wWzR3ONNlfisdURHVqFHNiXAJ2yi0=",
+            "rev": "5.0.1",
+            "sha256": "sha256-4q+7F8s6y+oDkBUKIBBsXZ2EtADcChdnjmABjBUnH9k=",
             "type": "git",
             "url": "https://gitlab.com/asus-linux/supergfxctl"
         },
-        "version": "4.0.4"
+        "version": "5.0.1"
     },
     "wavesurfer": {
         "cargoLocks": null,
@@ -150,5 +146,19 @@
             "url": "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
         },
         "version": "1.8.8p5"
+    },
+    "xp-pen-tablet": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "xp-pen-tablet",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-cLbcE0WVjBhY0JGj1IvddckfzIeboXVznvkVJ5C9yys=",
+            "type": "url",
+            "url": "https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html"
+        },
+        "version": "3.2.3.220323"
     }
 }
