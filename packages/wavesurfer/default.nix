@@ -31,15 +31,12 @@ stdenv.mkDerivation {
     cp doc/* $out/doc/wavesurfer/
     cp $desktopItems/share/applications/* $out/share/applications/
 
-    cat <<EOF > $out/bin/wavesurfer
-    $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl
-    EOF
     chmod a+x $out/bin/wavesurfer
     install LICENSE.txt $out/share/licenses/wavesurfer/LICENSE.txt
   '';
 
   postFixup = ''
-    wrapProgram $out/bin/wavesurfer \
+    makeWrapper $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl $out/bin/wavesurfer \
       --prefix PATH : ${lib.makeBinPath [ tk tcl ]} \
       --prefix TCLLIBPATH : ${lib.makeLibraryPath [ snack ]}
   '';
