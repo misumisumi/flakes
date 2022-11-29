@@ -31,7 +31,6 @@ stdenv.mkDerivation {
     cp doc/* $out/doc/wavesurfer/
     cp $desktopItems/share/applications/* $out/share/applications/
 
-    chmod a+x $out/bin/wavesurfer
     install LICENSE.txt $out/share/licenses/wavesurfer/LICENSE.txt
   '';
 
