@@ -30,7 +30,7 @@ mkDerivation rec {
   };
 
   nativeBuildInputs = [
-    wrapQtAppsHook
+    libsForQt5.wrapQtAppsHook
     autoPatchelfHook
   ];
 
