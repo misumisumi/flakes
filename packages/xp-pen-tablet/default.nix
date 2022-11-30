@@ -1,4 +1,4 @@
-{ stdenvNoCC, lib, name, pkgSources, fetchurl, libXinerama, libXrandr, libXtst }:
+{ stdenvNoCC, lib, name, pkgSources, fetchurl, autoPatchelfHook, libXinerama, libXrandr, libXtst }:
 let
   pkg_url = (with builtins; fromJSON (readFile ../../_sources/generated.json))."xp-pen-tablet".src.url;
   pkg_sha256 = (with builtins; fromJSON (readFile ../../_sources/generated.json))."xp-pen-tablet".src.sha256;
@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation rec {
     name = "xp-pen-tablet-${version}.x86_64.tar.gz";
   };
 
-  nativeBuildInputs = [ libXinerama libXrandr libXtst ];
+  nativeBuildInputs = [ autoPatchelfHook libXinerama libXrandr libXtst ];
 
   installPhase = ''
     mkdir -p $out/{etc,lib,share}
