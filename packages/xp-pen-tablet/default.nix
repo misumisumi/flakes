@@ -76,7 +76,7 @@ mkDerivation rec {
     cp -r $desktopItems/share/applications $out/share/applications
 
     #config is global so everyone needs write access
-    chmod 666 $out/lib/pentablet/conf/xppen/config.xml
+    chmod 666 $out/opt/conf/xppen/config.xml
 
     runHook postInstall
   '';
