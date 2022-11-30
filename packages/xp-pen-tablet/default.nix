@@ -65,13 +65,13 @@ mkDerivation rec {
   installPhase = ''
     runHook preInstall
     mkdir -p $out/{opt,bin,share}
-    cp -r App/usr/lib/pentablet/{pentablet,resource.rcc,conf} $out/opt
+    cp -r App/usr/lib/pentablet/{pentablet,resource.rcc,conf,LGPL} $out/opt
     chmod +x $out/opt/pentablet
     cp -r App/lib $out/lib
     cp -r App/usr/share/* $out/share
 
     #fix license permissions
-    chmod 644 $out/lib/pentablet/LGPL
+    chmod 644 $out/opt/LGPL
 
     cp $desktopItems/share/applications $out/share/applications
 
