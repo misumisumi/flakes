@@ -1,9 +1,26 @@
-{ stdenvNoCC, lib, name, pkgSources, fetchurl, autoPatchelfHook, libXinerama, libXrandr, libXtst }:
+{ stdenv,
+  lib,
+  name,
+  pkgSources,
+  fetchurl,
+  autoPatchelfHook,
+  libsForQt5,
+  libusb1,
+  glibc,
+  libGL,
+  xorg,
+  libX11,
+  libXtst,
+  libXi,
+  libXrandr,
+  libXinerama,
+}:
 let
   pkg_url = (with builtins; fromJSON (readFile ../../_sources/generated.json))."xp-pen-tablet".src.url;
   pkg_sha256 = (with builtins; fromJSON (readFile ../../_sources/generated.json))."xp-pen-tablet".src.sha256;
+  mkDerivation = libsForQt5.callPackage ({ mkDerivation }: mkDerivation) {};
 in
-stdenvNoCC.mkDerivation rec {
+mkDerivation rec {
   inherit (pkgSources."${name}") pname version;
   src = fetchurl {
     url = pkg_url;
@@ -11,7 +28,20 @@ stdenvNoCC.mkDerivation rec {
     name = "xp-pen-tablet-${version}.x86_64.tar.gz";
   };
 
-  nativeBuildInputs = [ autoPatchelfHook libXinerama libXrandr libXtst ];
+  nativeBuildInputs = [ autoPatchelfHook libsForQt5.wrapQtAppsHook ];
+
+  buildInputs = [
+      libusb1
+      libX11
+      libXtst
+      libXi
+      libXrandr
+      libXinerama
+      glibc
+      libGL
+      stdenv.cc.cc.lib
+      libsForQt5.qtx11extras
+    ];
 
   installPhase = ''
     mkdir -p $out/{etc,lib,share}
