@@ -53,9 +53,9 @@ mkDerivation rec {
   ];
 
   desktopItems = [ 
-    (makeDesktopItem {
-      inherit name;
-      exec = "xp-pen-driver /mini";
+    (prev.makeDesktopItem {
+      name = "xp-pen-driver";
+      exec = "sudo xp-pen-driver /mini";
       icon = "pentablet";
       comment = "XPPen driver";
       desktopName = "xppentablet";
@@ -66,28 +66,22 @@ mkDerivation rec {
   installPhase = ''
     runHook preInstall
     mkdir -p $out/{opt,bin,share}
-    cp -r App/usr/lib/pentablet/{pentablet,resource.rcc,conf,LGPL} $out/opt
+    cp -r App/usr/lib/pentablet/{pentablet,resource.rcc,conf} $out/opt
     chmod +x $out/opt/pentablet
     cp -r App/lib $out/lib
-
-    #fix license permissions
-    chmod 644 $out/opt/LGPL
+    sed -i 's#usr/lib/pentablet#${dataDir}#g' $out/opt/pentablet
 
     cp -r $desktopItems/share/applications $out/share/applications
     cp -r App/usr/share/icons $out/share/icons
-
-    #config is global so everyone needs write access
-    chmod 666 $out/opt/conf/xppen/config.xml
-
     runHook postInstall
   '';
 
   postFixup = ''
     makeWrapper $out/opt/pentablet $out/bin/xp-pen-driver \
-      "''${qtWrapperArgs[@]}" \
+    "''${qtWrapperArgs[@]}" \
       --run 'if [ "$EUID" -ne 0 ]; then echo "Please run as root."; exit 1; fi' \
       --run 'if [ ! -d /${dataDir} ]; then mkdir -p /${dataDir}; cp -r '$out'/opt/conf /${dataDir}; chmod u+w -R /${dataDir}; fi'
-  '';
+      '';
 
   meta = with lib; {
     description = "XP-Pen (Official) Linux utility (New UI driver)";
