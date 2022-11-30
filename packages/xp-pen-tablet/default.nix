@@ -51,6 +51,7 @@ mkDerivation rec {
     stdenv.cc.cc.lib
     libsForQt5.qtx11extras
   ];
+
   desktopItems = [ 
     (makeDesktopItem {
       inherit name;
@@ -73,6 +74,7 @@ mkDerivation rec {
     chmod 644 $out/opt/LGPL
 
     cp -r $desktopItems/share/applications $out/share/applications
+    cp -r App/share/icons $out/share/icons
 
     #config is global so everyone needs write access
     chmod 666 $out/opt/conf/xppen/config.xml
@@ -81,7 +83,7 @@ mkDerivation rec {
   '';
 
   postFixup = ''
-    makeWrapper $out/opt/pentablet $out/bin/xp-pen-deco-01-v2-driver \
+    makeWrapper $out/opt/pentablet $out/bin/xp-pen-driver \
       "''${qtWrapperArgs[@]}" \
       --run 'if [ "$EUID" -ne 0 ]; then echo "Please run as root."; exit 1; fi' \
       --run 'if [ ! -d /${dataDir} ]; then mkdir -p /${dataDir}; cp -r '$out'/opt/conf /${dataDir}; chmod u+w -R /${dataDir}; fi'
