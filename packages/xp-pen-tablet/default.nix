@@ -73,7 +73,7 @@ mkDerivation rec {
     #fix license permissions
     chmod 644 $out/opt/LGPL
 
-    cp $desktopItems/share/applications $out/share/applications
+    cp -r $desktopItems/share/applications $out/share/applications
 
     #config is global so everyone needs write access
     chmod 666 $out/lib/pentablet/conf/xppen/config.xml
