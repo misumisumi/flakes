@@ -68,7 +68,6 @@ mkDerivation rec {
     cp -r App/usr/lib/pentablet/{pentablet,resource.rcc,conf,LGPL} $out/opt
     chmod +x $out/opt/pentablet
     cp -r App/lib $out/lib
-    cp -r App/usr/share/* $out/share
 
     #fix license permissions
     chmod 644 $out/opt/LGPL
@@ -82,8 +81,10 @@ mkDerivation rec {
   '';
 
   postFixup = ''
-    makeWrapper $out/opt/pentablet $out/bin/xp-pen-driver \
-      "''${qtWrapperArgs[@]}"
+    makeWrapper $out/opt/pentablet $out/bin/xp-pen-deco-01-v2-driver \
+      "''${qtWrapperArgs[@]}" \
+      --run 'if [ "$EUID" -ne 0 ]; then echo "Please run as root."; exit 1; fi' \
+      --run 'if [ ! -d /${dataDir} ]; then mkdir -p /${dataDir}; cp -r '$out'/opt/conf /${dataDir}; chmod u+w -R /${dataDir}; fi'
   '';
 
   meta = with lib; {
