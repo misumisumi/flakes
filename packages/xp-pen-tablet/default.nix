@@ -74,7 +74,7 @@ mkDerivation rec {
     chmod 644 $out/opt/LGPL
 
     cp -r $desktopItems/share/applications $out/share/applications
-    cp -r App/share/icons $out/share/icons
+    cp -r App/usr/share/icons $out/share/icons
 
     #config is global so everyone needs write access
     chmod 666 $out/opt/conf/xppen/config.xml
