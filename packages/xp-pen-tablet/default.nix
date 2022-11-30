@@ -4,6 +4,7 @@
   pkgSources,
   fetchurl,
   autoPatchelfHook,
+  makeDesktopItem,
   libsForQt5,
   libusb1,
   glibc,
