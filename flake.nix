@@ -63,22 +63,22 @@
         in final.callPackage pkg override
         ) // {
           sources = pkgSources;
-          pythonPackagesOverlays = (prev.pythonPackagesOverlays or [ ]) ++ [
-              (python-final: python-prev: {
-                doq = python-final.callPackage (import pkgDir + "/python-doq") (_override (import pkgDir + "/python-doq"));
-                # ...
-              })
-            ];
+          # pythonPackagesOverlays = (prev.pythonPackagesOverlays or [ ]) ++ [
+          #   (python-final: python-prev: {
+          #     doq = python-final.callPackage (import pkgDir + "/python-doq") (_override (import pkgDir + "/python-doq"));
+          #     # ...
+          #   })
+          # ];
 
-            python3 =
-              let
-                self = prev.python3.override {
-                  inherit self;
-                  packageOverrides = prev.lib.composeManyExtensions final.pythonPackagesOverlays;
-                }; in
-              self;
+          # python3 =
+          #   let
+          #     self = prev.python3.override {
+          #       inherit self;
+          #       packageOverrides = prev.lib.composeManyExtensions final.pythonPackagesOverlays;
+          #     }; in
+          #   self;
 
-            python3Packages = final.python3.pkgs;
+          # python3Packages = final.python3.pkgs;
 
         }; } //
 
