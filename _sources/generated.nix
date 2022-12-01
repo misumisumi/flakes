@@ -46,13 +46,13 @@
   };
   notify-rust = {
     pname = "notify-rust";
-    version = "6033d06377d6d601207ae31861cda560d03a9aa8";
+    version = "c83082a2549932bde52a4ec449b9981fc39e9a0d";
     src = fetchFromGitHub ({
       owner = "flukejones";
       repo = "notify-rust";
-      rev = "6033d06377d6d601207ae31861cda560d03a9aa8";
+      rev = "c83082a2549932bde52a4ec449b9981fc39e9a0d";
       fetchSubmodules = false;
-      sha256 = "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=";
+      sha256 = "sha256-jhCgisA9f6AI9e9JQUYRtEt47gQnDv5WsdRKFoKvHJs=";
     });
   };
   python-doq = {
@@ -61,6 +61,14 @@
     src = fetchurl {
       url = "https://pypi.io/packages/source/d/doq/doq-0.9.1.tar.gz";
       sha256 = "sha256-uszDSN35Z8i/Mr/fVNqDJuHcdPN4ZeLBdgEq0Lx+6h4=";
+    };
+  };
+  python-pyknp = {
+    pname = "python-pyknp";
+    version = "0.6.1";
+    src = fetchurl {
+      url = "https://pypi.io/packages/source/p/pyknp/pyknp-0.6.1.tar.gz";
+      sha256 = "sha256-X8ooinAwTHRdINpWV8YXW16t96elce1PV7sVfrbn300=";
     };
   };
   snack = {
