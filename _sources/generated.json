@@ -26,6 +26,20 @@
         },
         "version": "4.5.1"
     },
+    "doq": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "doq",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-uszDSN35Z8i/Mr/fVNqDJuHcdPN4ZeLBdgEq0Lx+6h4=",
+            "type": "url",
+            "url": "https://pypi.io/packages/source/d/doq/doq-0.9.1.tar.gz"
+        },
+        "version": "0.9.1"
+    },
     "droidcam-obs-plugin": {
         "cargoLocks": null,
         "extract": null,
@@ -101,24 +115,10 @@
         },
         "version": "c83082a2549932bde52a4ec449b9981fc39e9a0d"
     },
-    "python-doq": {
+    "pyknp": {
         "cargoLocks": null,
         "extract": null,
-        "name": "python-doq",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-uszDSN35Z8i/Mr/fVNqDJuHcdPN4ZeLBdgEq0Lx+6h4=",
-            "type": "url",
-            "url": "https://pypi.io/packages/source/d/doq/doq-0.9.1.tar.gz"
-        },
-        "version": "0.9.1"
-    },
-    "python-pyknp": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "python-pyknp",
+        "name": "pyknp",
         "passthru": null,
         "pinned": false,
         "src": {

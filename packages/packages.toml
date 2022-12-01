@@ -40,15 +40,12 @@ fetch.url = 'https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html'
 src.git = 'https://github.com/ku-nlp/knp/'
 fetch.github = 'ku-nlp/knp'
 
-# [knp-dict]
-# src.git = 'https://github.com/ku-nlp/knp/'
-# fetch.url = 'http://lotus.kuee.kyoto-u.ac.jp/nl-resource/knp/dict/latest/knp-dict-latest-bin.zip'
-
-[python-doq]
+# python modules
+[doq]
 src.pypi = 'doq'
 fetch.pypi = 'doq'
 
-[python-pyknp]
+[pyknp]
 src.pypi = 'pyknp'
 fetch.pypi = 'pyknp'
 

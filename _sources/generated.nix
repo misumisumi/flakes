@@ -21,6 +21,14 @@
       };
     };
   };
+  doq = {
+    pname = "doq";
+    version = "0.9.1";
+    src = fetchurl {
+      url = "https://pypi.io/packages/source/d/doq/doq-0.9.1.tar.gz";
+      sha256 = "sha256-uszDSN35Z8i/Mr/fVNqDJuHcdPN4ZeLBdgEq0Lx+6h4=";
+    };
+  };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
     version = "1.6.0";
@@ -66,16 +74,8 @@
       sha256 = "sha256-jhCgisA9f6AI9e9JQUYRtEt47gQnDv5WsdRKFoKvHJs=";
     });
   };
-  python-doq = {
-    pname = "python-doq";
-    version = "0.9.1";
-    src = fetchurl {
-      url = "https://pypi.io/packages/source/d/doq/doq-0.9.1.tar.gz";
-      sha256 = "sha256-uszDSN35Z8i/Mr/fVNqDJuHcdPN4ZeLBdgEq0Lx+6h4=";
-    };
-  };
-  python-pyknp = {
-    pname = "python-pyknp";
+  pyknp = {
+    pname = "pyknp";
     version = "0.6.1";
     src = fetchurl {
       url = "https://pypi.io/packages/source/p/pyknp/pyknp-0.6.1.tar.gz";

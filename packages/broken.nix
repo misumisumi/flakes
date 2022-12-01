@@ -1,12 +1,2 @@
 [
-  "asusctl"
-  "droidcam-obs-plugin"
-  "fcitx5-nord"
-  "knp"
-  "prime-run"
-  "python-pyknp"
-  "snack"
-  "supergfxctl"
-  "wavesurfer"
-  "xp-pen-tablet"
 ]

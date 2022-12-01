@@ -23,22 +23,25 @@
         value = flake-utils.lib.mkApp { drv = pkgs.${name}; };
       };
       # For nix run
-      isRunnableApp = pkgs: name: if pkgs.${name}.passthru.runnable or false then name else null;
-      runnableApps = pkgs: ts: lib.remove null (map (isRunnableApp pkgs) ts);
+      isRunnableApp = pkgs: name: if pkgs.${name}.passthru.runnable or false then name else false;
+      runnableApps = pkgs: ts: lib.remove false (map (isRunnableApp pkgs) ts);
 
-      pkgDir = ./packages;
+      appsDir = ./packages/apps;
+      pythonModulesDir = ./packages/python-modules;
+
       sources = import ./_sources/generated.nix;
       broken = import ./packages/broken.nix;
 
       ls = path: builtins.readDir path;
       isDir = ts: t: if ts.${t} == "directory" then t else false;
-      names = with builtins; lib.subtractLists broken (lib.remove false (map (isDir (ls pkgDir)) (attrNames (ls pkgDir))));
-      withContents = func: with builtins; listToAttrs (map (genPkg func) names);
+      names = targetDir: with builtins; lib.subtractLists broken (lib.remove false (map (isDir (ls targetDir)) (attrNames (ls targetDir))));
+      # Make { appName = import ./<appName> }
+      withContents = targetDir: func: with builtins; listToAttrs (map (genPkg func) (names targetDir));
 
       mkApps = pkgs: appNames: with builtins; listToAttrs (map (genApp pkgs) appNames);
 
-      isModules = file: with lib; if (hasSuffix ".nix" file) then strings.removeSuffix ".nix" file else null;
-      modules = with builtins; lib.remove null (map isModules (attrNames (ls ./modules)));
+      isModules = file: with lib; if (hasSuffix ".nix" file) then strings.removeSuffix ".nix" file else false;
+      modules = with builtins; lib.remove false (map isModules (attrNames (ls ./modules)));
       genModule = name: {
         inherit name;
         value = import ./modules/${name}.nix;
@@ -49,26 +52,25 @@
       overlays.default = final: prev:
       let
         pkgSources = sources { inherit (final) fetchgit fetchurl fetchFromGitHub ; };
-        _override = name: pkg: builtins.intersectAttrs (builtins.functionArgs pkg) ({
+        override = name: pkg: builtins.intersectAttrs (builtins.functionArgs pkg) ({
           inherit name pkgSources;
           pythonPackages = final.python3.pkgs;
         });
-      in withContents (name:
+      in withContents appsDir (name:
         let
-          pkg = import (pkgDir + "/${name}");
-          override = builtins.intersectAttrs (builtins.functionArgs pkg) ({
-            inherit name pkgSources;
-            pythonPackages = final.python3.pkgs;
-          });
-        in final.callPackage pkg override
+          app = import (appsDir + "/${name}");
+        in final.callPackage app (override name app)
         ) // {
-          sources = pkgSources;
+          sources = pkgSources; 
+        } // {
           pythonPackagesOverlays = (prev.pythonPackagesOverlays or [ ]) ++ [
-            (python-final: python-prev: {
-              doq = python-final.callPackage (import (pkgDir + "/python-doq")) (_override "python-doq" (import (pkgDir + "/python-doq")));
-            })
+            (pfinal: pprev:
+              withContents pythonModulesDir (name:
+                let
+                  module = import (pythonModulesDir + "/${name}");
+                in pfinal.callPackage module (override name module)
+            ))
           ];
-
           python3 =
             let
               self = prev.python3.override {
@@ -76,10 +78,9 @@
                 packageOverrides = prev.lib.composeManyExtensions final.pythonPackagesOverlays;
               }; in
             self;
-
           python3Packages = final.python3.pkgs;
-
-        }; } //
+        };
+      } //
 
       flake-utils.lib.eachSystem ["x86_64-linux"] (system:
       let
@@ -88,8 +89,8 @@
           overlays = [ self.overlays.default nvfetcher.overlay];  # nvfetcherもoverlayする
           config.allowUnfree = true;
         }; in with pkgs.legacyPackages.${system}; rec {
-        packages =  withContents (name: pkgs.${name});
-        apps = mkApps pkgs (runnableApps pkgs names);
+        packages =  withContents appsDir (name: pkgs.${name}) // withContents pythonModulesDir (name: pkgs.python3Packages.${name});
+        apps = mkApps pkgs (runnableApps pkgs (names appsDir));
         checks = packages;
         devShells.default = nvfetcher.packages.${system}.ghcWithNvfetcher;  # For `nix develop`
       }) // {
