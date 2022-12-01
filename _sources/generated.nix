@@ -44,6 +44,17 @@
       sha256 = "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=";
     });
   };
+  knp = {
+    pname = "knp";
+    version = "25425d33907ce69c5fa5b584ba58183020a07bba";
+    src = fetchFromGitHub ({
+      owner = "ku-nlp";
+      repo = "knp";
+      rev = "25425d33907ce69c5fa5b584ba58183020a07bba";
+      fetchSubmodules = false;
+      sha256 = "sha256-P33+6Iwh7fYugZrFRylrtzz24EjwUToXJ/nbDw06Pbg=";
+    });
+  };
   notify-rust = {
     pname = "notify-rust";
     version = "c83082a2549932bde52a4ec449b9981fc39e9a0d";

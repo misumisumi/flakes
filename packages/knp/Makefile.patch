@@ -1,0 +1,13 @@
+diff --git a/Makefile.am b/Makefile.am
+index 8e0ce305..3ecbbc9c 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -12,7 +12,7 @@ SUBDIRS += system rule dict doc chinese_rule
+ 
+ knprcdir=$(sysconfdir)
+ nodist_knprc_DATA = knprc
+-dist_noinst_DATA = knprc.in .git/HEAD .git/index VERSION.txt
++dist_noinst_DATA = knprc.in VERSION.txt
+ CLEANFILES = knprc
+ EXTRA_DIST = autogen.sh perl cdb
+ 

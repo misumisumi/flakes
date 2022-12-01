@@ -18,7 +18,7 @@ src.prefix = 'Snack v'
 fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
 
 [supergfxctl]
- src.aur = 'supergfxctl'
+src.aur = 'supergfxctl'
 fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
 cargo_locks = [ 'Cargo.lock' ]
 
@@ -35,6 +35,14 @@ fetch.git = 'https://github.com/dev47apps/droidcam-obs-plugin'
 [xp-pen-tablet]
 src.aur = 'xp-pen-tablet'
 fetch.url = 'https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html'
+
+[knp]
+src.git = 'https://github.com/ku-nlp/knp/'
+fetch.github = 'ku-nlp/knp'
+
+# [knp-dict]
+# src.git = 'https://github.com/ku-nlp/knp/'
+# fetch.url = 'http://lotus.kuee.kyoto-u.ac.jp/nl-resource/knp/dict/latest/knp-dict-latest-bin.zip'
 
 [python-doq]
 src.pypi = 'doq'

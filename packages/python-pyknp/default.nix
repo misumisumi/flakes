@@ -1,8 +1,10 @@
-{ lib, pythonPackages, python3, name, pkgSources }:
+{ lib, pythonPackages, python3, name, pkgSources, knp, jumanpp }:
 let
   inherit (pythonPackages) buildPythonPackage;
 in buildPythonPackage rec {
   inherit (pkgSources."${name}") pname version src;
+
+  nativeBuildInputs = [ knp jumanpp ];
 
   doCheck = false;
   # for runtime depend

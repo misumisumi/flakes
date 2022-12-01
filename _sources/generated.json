@@ -63,6 +63,25 @@
         },
         "version": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1"
     },
+    "knp": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "knp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ku-nlp",
+            "repo": "knp",
+            "rev": "25425d33907ce69c5fa5b584ba58183020a07bba",
+            "sha256": "sha256-P33+6Iwh7fYugZrFRylrtzz24EjwUToXJ/nbDw06Pbg=",
+            "type": "github"
+        },
+        "version": "25425d33907ce69c5fa5b584ba58183020a07bba"
+    },
     "notify-rust": {
         "cargoLocks": null,
         "extract": null,
