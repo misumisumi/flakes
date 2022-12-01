@@ -3,21 +3,23 @@
   rustPlatform,
   name,
   pkgSources,
+  makeWrapper,
   git,
   cargo,
   rustc,
   rustfmt,
   gcc,
-  makeWrapper,
-  kmod
+  kmod,
+  pkg-config,
+  udev
 }:
 
 rustPlatform.buildRustPackage rec {
   inherit (pkgSources."${name}") pname version src;
   cargoLock = pkgSources."${name}".cargoLock."Cargo.lock";
 
-  buildInputs = [ git cargo rustc rustfmt gcc makeWrapper ];
-  nativeBuildInputs = [ kmod ];
+  buildInputs = [ makeWrapper git cargo rustc rustfmt gcc udev ];
+  nativeBuildInputs = [ kmod pkg-config ];
 
   doCheck = false;
 

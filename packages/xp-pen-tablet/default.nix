@@ -53,7 +53,7 @@ mkDerivation rec {
   ];
 
   desktopItems = [ 
-    (prev.makeDesktopItem {
+    (makeDesktopItem {
       name = "xp-pen-driver";
       exec = "sudo xp-pen-driver /mini";
       icon = "pentablet";
