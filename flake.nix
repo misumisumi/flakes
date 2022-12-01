@@ -49,8 +49,8 @@
       overlays.default = final: prev:
       let
         pkgSources = sources { inherit (final) fetchgit fetchurl fetchFromGitHub ; };
-        _override = pkg: builtins.intersectAttrs (builtins.functionArgs pkg) ({
-          inherit pkgSources;
+        _override = name: pkg: builtins.intersectAttrs (builtins.functionArgs pkg) ({
+          inherit name pkgSources;
           pythonPackages = final.python3.pkgs;
         });
       in withContents (name:
@@ -65,7 +65,7 @@
           sources = pkgSources;
           pythonPackagesOverlays = (prev.pythonPackagesOverlays or [ ]) ++ [
             (python-final: python-prev: {
-              doq = python-final.callPackage (import (pkgDir + "/python-doq")) (_override (import (pkgDir + "/python-doq")));
+              doq = python-final.callPackage (import (pkgDir + "/python-doq")) (_override "python-doq" (import (pkgDir + "/python-doq")));
             })
           ];
 
