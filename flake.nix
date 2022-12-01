@@ -31,8 +31,8 @@
       broken = import ./packages/broken.nix;
 
       ls = path: builtins.readDir path;
-      isDir = ts: t: if ts.${t} == "directory" then t else null;
-      names = with builtins; lib.subtractLists broken (lib.remove null (map (isDir (ls pkgDir)) (attrNames (ls pkgDir))));
+      isDir = ts: t: if ts.${t} == "directory" then t else false;
+      names = with builtins; lib.subtractLists broken (lib.remove false (map (isDir (ls pkgDir)) (attrNames (ls pkgDir))));
       withContents = func: with builtins; listToAttrs (map (genPkg func) names);
 
       mkApps = pkgs: appNames: with builtins; listToAttrs (map (genApp pkgs) appNames);
@@ -49,15 +49,39 @@
       overlays.default = final: prev:
       let
         pkgSources = sources { inherit (final) fetchgit fetchurl fetchFromGitHub ; };
+        _override = pkg: builtins.intersectAttrs (builtins.functionArgs pkg) ({
+          inherit pkgSources;
+          pythonPackages = final.python3.pkgs;
+        });
       in withContents (name:
         let
-          pkgs = import (pkgDir + "/${name}");
-          override = builtins.intersectAttrs (builtins.functionArgs pkgs) ({
+          pkg = import (pkgDir + "/${name}");
+          override = builtins.intersectAttrs (builtins.functionArgs pkg) ({
             inherit name pkgSources;
             pythonPackages = final.python3.pkgs;
           });
-        in final.callPackage pkgs override
-        ) // { sources = pkgSources; }; } //
+        in final.callPackage pkg override
+        ) // {
+          sources = pkgSources;
+          pythonPackagesOverlays = (prev.pythonPackagesOverlays or [ ]) ++ [
+              (python-final: python-prev: {
+                doq = python-final.callPackage (import pkgDir + "/python-doq") (_override (import pkgDir + "/python-doq"));
+                # ...
+              })
+            ];
+
+            python3 =
+              let
+                self = prev.python3.override {
+                  inherit self;
+                  packageOverrides = prev.lib.composeManyExtensions final.pythonPackagesOverlays;
+                }; in
+              self;
+
+            python3Packages = final.python3.pkgs;
+
+        }; } //
+
       flake-utils.lib.eachSystem ["x86_64-linux"] (system:
       let
         pkgs = import nixpkgs {
