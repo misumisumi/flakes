@@ -3,51 +3,87 @@
   fetchpatch,
   name,
   pkgSources,
+  makeDesktopItem,
   alsa-lib,
-  cl-freetype2,
-  cl-webkit2gtk,
   cmake,
+  curl,
   doxygen,
+  flac,
+  freetype,
   graphviz,
   gtk3,
   jack1,
-  ladspa,
+  ladspaH,
+  libjpeg_turbo,
+  libogg,
+  libpng,
+  libvorbis,
+  pkg-config,
+  perlPackages,
   python3,
+  webkitgtk,
+  zlib,
 }:
-
+let
+  # Need jpegint.h
+  libjpeg_with_jpegint = libjpeg_turbo.overrideAttrs (old: {
+    postInstall = ''
+      install -vDm 644 $src/jpegint.h "$dev/include"
+    '';
+  });
+in
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
-  buildInputs = [ alsa-lib cl-freetype2 cl-webkit2gtk cmake doxygen graphviz gtk3 jack1 ladspa python3 ];
+  patches = [
+    ./juce-6.1.3-cmake_link_against_system_deps.patch
+    ./juce-6.1.2-devendor_libs.patch
+  ];
+  buildInputs = [ alsa-lib curl doxygen flac freetype graphviz gtk3 jack1 ladspaH
+                  libjpeg_with_jpegint libogg libpng libvorbis webkitgtk zlib ] ++
+                  (with perlPackages; [ ArchiveZip ]);
+  nativeBuildInputs = [ cmake python3 pkg-config ];
+  postPatch = ''
+    rm -rvf modules/juce_audio_formats/codecs/flac/ \
+        modules/juce_audio_formats/codecs/oggvorbis/ \
+        modules/juce_audio_plugin_client/AU/ \
+        modules/juce_graphics/image_formats/jpglib/ \
+        modules/juce_graphics/image_formats/pnglib/ \
+        modules/juce_core/zip/zlib/
+  '';
   configureFlags = [
     "CPPFLAGS+= -DJUCER_ENABLE_GPL_MODE=1"
   ];
-  outputs = [ "out" "doc" ];
+  cmakeFlags = [
+    "-DCMAKE_BUILD_TYPE=None"
+    "-DJUCE_BUILD_EXTRAS=ON"
+    "-Wno-dev"
+  ];
 
-  buildPhase = ''
-    cmake -DCMAKE_INSTALL_PREFIX=$out \
-          -DCMAKE_BUILD_TYPE=None \
-          -DJUCE_BUILD_EXTRAS=ON \
-          -DJUCE_TOOL_INSTALL_DIR=$out/bin \
-          -Wno-dev \
-          -B build \
-          -S $out
-    make VERBOSE=1 -C build
-    make -C $doc
-  '';
+  desktopItems = [ 
+    (makeDesktopItem {
+      name = "Projucer";
+      exec = "Projucer";
+      icon = "Projucer";
+      comment = "Cross-platform project manager and C++ code editor";
+      desktopName = "Projucer";
+      categories = [ "Development" ];
+    })
+  ];
 
   installPhase = ''
-    make DESTDIR=$out VERBOSE=1 -C build install
+    mkdir -p $out/share/icons/hicolor/512x512/apps/
+    mkdir -p $out/share/doc/$pname
+    mkdir -p $out/share/licenses/$pname
+
+    make install
     # projucer has no install target
-    install -vDm 755 build/extras/Projucer/Projucer_artefacts/None/Projucer -t "$out/bin"
-    # install custom vst2 handling from juce < 5.4.1
-    install -vDm 644 juce_VSTInterface.h -t "$out/share/juce/modules/juce_audio_processors/format_types/"
-    # xdg desktop integration
-    # install -vDm 644 *.desktop -t "$out/share/applications/"
-    install -vDm 644 $_name-$pkgver/examples/Assets/juce_icon.png "$pkgdir/usr/share/icons/hicolor/512x512/apps/Projucer.png"
-    # docs
-    install -vDm 644 $_name-$pkgver/{{BREAKING-CHANGES,ChangeList}.txt,README.md} -t "$pkgdir/usr/share/doc/$pkgname/"
-    # license
-    install -vDm 644 $_name-$pkgver/LICENSE.md -t "$pkgdir/usr/share/licenses/$pkgname/"
+    install -vDm 755 /build/source/build/extras/Projucer/Projucer_artefacts/None/Projucer -t "$out/bin"
+
+    cp $src/examples/Assets/juce_icon.png $out/share/icons/hicolor/512x512/apps/Projucer.png
+    cp $src/{{BREAKING-CHANGES,ChangeList}.txt,README.md} $out/share/doc/$pname/
+    cp $src/LICENSE.md $out/share/licenses/$pname/
+
+    cp -r $desktopItems/share/applications $out/share/
   ''; 
 
   meta = with lib; {
