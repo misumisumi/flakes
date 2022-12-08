@@ -25,7 +25,7 @@
   pkg-config,
   python3,
   webkitgtk,
-  zlib,
+  zlib
 }:
 let
   # Need jpegint.h
