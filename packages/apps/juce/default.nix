@@ -43,20 +43,21 @@ stdenv.mkDerivation {
                   libjpeg_with_jpegint libogg libpng libvorbis webkitgtk zlib ] ++
                   (with perlPackages; [ ArchiveZip ]);
   nativeBuildInputs = [ cmake python3 pkg-config ];
-  postPatch = ''
-    rm -rvf modules/juce_audio_formats/codecs/flac/ \
-        modules/juce_audio_formats/codecs/oggvorbis/ \
-        modules/juce_audio_plugin_client/AU/ \
-        modules/juce_graphics/image_formats/jpglib/ \
-        modules/juce_graphics/image_formats/pnglib/ \
-        modules/juce_core/zip/zlib/
-  '';
+  # postPatch = ''
+  #   rm -rvf modules/juce_audio_formats/codecs/flac/ \
+  #       modules/juce_audio_formats/codecs/oggvorbis/ \
+  #       modules/juce_audio_plugin_client/AU/ \
+  #       modules/juce_graphics/image_formats/jpglib/ \
+  #       modules/juce_graphics/image_formats/pnglib/ \
+  #       modules/juce_core/zip/zlib/
+  # '';
   configureFlags = [
     "CPPFLAGS+= -DJUCER_ENABLE_GPL_MODE=1"
   ];
   cmakeFlags = [
     "-DCMAKE_BUILD_TYPE=None"
     "-DJUCE_BUILD_EXTRAS=ON"
+    "-DJUCE_TOOL_INSTALL_DIR=bin"
     "-Wno-dev"
   ];
 
