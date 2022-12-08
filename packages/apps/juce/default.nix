@@ -91,7 +91,7 @@ stdenv.mkDerivation rec {
     mkdir -p $out/share/doc/$pname
     mkdir -p $out/share/licenses/$pname
 
-    make DESTDIR=$out install
+    make install
     # projucer has no install target
     install -vDm 755 /build/source/build/extras/Projucer/Projucer_artefacts/None/Projucer -t "$out/bin"
 
