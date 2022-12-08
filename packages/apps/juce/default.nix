@@ -4,6 +4,7 @@
   name,
   pkgSources,
   makeDesktopItem,
+  makeWrapper,
   alsa-lib,
   cmake,
   curl,
@@ -11,6 +12,8 @@
   flac,
   fontconfig,
   freetype,
+  glib,
+  gio-sharp,
   graphviz,
   gtk3,
   ladspaH,
@@ -24,6 +27,8 @@
   libogg,
   libpng,
   libvorbis,
+  mount,
+  pcre2,
   perlPackages,
   pkg-config,
   python3,
@@ -38,34 +43,20 @@ let
     '';
   });
 in
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   inherit (pkgSources."${name}") pname version src;
   patches = [
     ./juce-6.1.3-cmake_link_against_system_deps.patch
     ./juce-6.1.2-devendor_libs.patch
+    ./juce-6.1.2-cmake_install.patch
+    ./juce-6.1.2-cmake_juce_utils.patch
+    ./juce-6.1.2-projucer_disable_update_check.patch
   ];
-  buildInputs = [ alsa-lib cmake curl doxygen flac fontconfig freetype graphviz gtk3 ladspaH libGL 
+  buildInputs = [ alsa-lib cmake curl doxygen flac fontconfig freetype glib gio-sharp graphviz gtk3 ladspaH libGL 
                   libX11 libXcursor libXrandr libXext libjack2 libjpeg_with_jpegint libogg libpng
-                  libvorbis pkg-config python3 webkitgtk zlib ] ++
+                  libvorbis mount pcre2 pkg-config python3 webkitgtk zlib ] ++
                   (with perlPackages; [ ArchiveZip ]);
-  nativeBuildInputs = [ cmake python3 pkg-config ];
-  postPatch = ''
-    rm -rvf modules/juce_audio_formats/codecs/flac/ \
-        modules/juce_audio_formats/codecs/oggvorbis/ \
-        modules/juce_audio_plugin_client/AU/ \
-        modules/juce_graphics/image_formats/jpglib/ \
-        modules/juce_graphics/image_formats/pnglib/ \
-        modules/juce_core/zip/zlib/
-  '';
-  configureFlags = [
-    "CPPFLAGS+= -DJUCER_ENABLE_GPL_MODE=1"
-  ];
-  cmakeFlags = [
-    "-DCMAKE_BUILD_TYPE=None"
-    "-DJUCE_BUILD_EXTRAS=ON"
-    "-DJUCE_TOOL_INSTALL_DIR=bin"
-    "-Wno-dev"
-  ];
+  nativeBuildInputs = [ cmake python3 pkg-config makeWrapper ];
 
   desktopItems = [ 
     (makeDesktopItem {
@@ -78,12 +69,29 @@ stdenv.mkDerivation {
     })
   ];
 
+  postPatch = ''
+    rm -rvf modules/juce_audio_formats/codecs/flac/ \
+        modules/juce_audio_formats/codecs/oggvorbis/ \
+        modules/juce_audio_plugin_client/AU/ \
+        modules/juce_graphics/image_formats/jpglib/ \
+        modules/juce_graphics/image_formats/pnglib/ \
+        modules/juce_core/zip/zlib/
+  '';
+
+  cmakeFlags = [
+    "-DCMAKE_BUILD_TYPE=None"
+    "-DJUCE_BUILD_EXTRAS=ON"
+    "-DJUCE_TOOL_INSTALL_DIR=bin"
+    "-Wno-dev"
+  ];
+  CPPFLAGS = "-DJUCER_ENABLE_GPL_MODE=1";
+
   installPhase = ''
     mkdir -p $out/share/icons/hicolor/512x512/apps/
     mkdir -p $out/share/doc/$pname
     mkdir -p $out/share/licenses/$pname
 
-    make install
+    make DESTDIR=$out install
     # projucer has no install target
     install -vDm 755 /build/source/build/extras/Projucer/Projucer_artefacts/None/Projucer -t "$out/bin"
 
