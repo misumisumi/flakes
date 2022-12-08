@@ -10,6 +10,7 @@
   doxygen,
   flac,
   freetype,
+  fontconfig,
   graphviz,
   gtk3,
   jack1,
@@ -38,7 +39,7 @@ stdenv.mkDerivation {
     ./juce-6.1.3-cmake_link_against_system_deps.patch
     ./juce-6.1.2-devendor_libs.patch
   ];
-  buildInputs = [ alsa-lib curl doxygen flac freetype graphviz gtk3 jack1 ladspaH
+  buildInputs = [ alsa-lib curl doxygen flac freetype fontconfig graphviz gtk3 jack1 ladspaH
                   libjpeg_with_jpegint libogg libpng libvorbis webkitgtk zlib ] ++
                   (with perlPackages; [ ArchiveZip ]);
   nativeBuildInputs = [ cmake python3 pkg-config ];
