@@ -1,10 +1,10 @@
 # { stdenv, lib, mySource, tc, tcl, alsa-lib, libX11 }:
-{ stdenv, lib, fetchpatch, name, pkgSources, tk, tcl, alsa-lib, libX11 }:
+{ stdenv, lib, fetchpatch, name, pkgSources, alsa-lib, libX11, tk, tcl }:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
-  nativeBuildInputs = [ tk tcl alsa-lib libX11 ];
+  nativeBuildInputs = [ alsa-lib libX11 tk tcl ];
   patches = [
     (fetchpatch {
       name = "alsa.patch";

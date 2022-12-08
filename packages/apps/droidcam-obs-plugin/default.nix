@@ -1,9 +1,9 @@
 
-{ stdenv, lib, fetchpatch, name, pkgSources, libjpeg, libusbmuxd, libimobiledevice, obs-studio}:
+{ stdenv, lib, fetchpatch, name, pkgSources, libimobiledevice, libjpeg, libusbmuxd, obs-studio }:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
-  nativeBuildInputs = [ libjpeg libusbmuxd libimobiledevice obs-studio ];
+  buildInputs = [ libimobiledevice libjpeg libusbmuxd obs-studio ];
   patches = [
     ./fix-makefile.patch
   ];
@@ -16,7 +16,7 @@ stdenv.mkDerivation {
 
   buildPhase = ''
     mkdir -p build
-    make ALLOW_STATIC=no
+    make ALLOW_STATIC=no -j $NIX_BUILD_CORES
   '';
 
   installPhase = ''

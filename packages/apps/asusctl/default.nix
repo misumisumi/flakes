@@ -3,31 +3,29 @@
   rustPlatform,
   name,
   pkgSources,
-  git,
   cargo,
-  rustc,
-  rustfmt,
-  libusb1,
-  systemd,
-  freetype,
   expat,
   fontconfig,
+  freetype,
+  libappindicator-gtk3,
+  libusb1,
   pkg-config, 
   power-profiles-daemon,
-  libappindicator-gtk3
+  rustc,
+  rustfmt,
+  systemd,
 }:
 
 rustPlatform.buildRustPackage rec {
   inherit (pkgSources."${name}") pname version src;
   cargoLock = pkgSources."${name}".cargoLock."Cargo.lock";
 
-  buildInputs = [ git cargo rustc rustfmt systemd libusb1 freetype expat fontconfig pkg-config libappindicator-gtk3];
-  nativeBuildInputs = [ pkg-config power-profiles-daemon ];
+  buildInputs = [ cargo expat fontconfig freetype libappindicator-gtk3 libusb1 power-profiles-daemon rustc rustfmt systemd ];
+  nativeBuildInputs = [ pkg-config ];
 
   doCheck = false;
-
   buildPhase = ''
-    make
+    make -j $NIX_BUILD_CORES
   '';
 
   installPhase = ''

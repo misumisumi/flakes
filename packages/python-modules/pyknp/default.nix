@@ -1,14 +1,18 @@
-{ lib, pythonPackages, python3, name, pkgSources, knp, jumanpp }:
+{ lib, pythonPackages, python3, name, pkgSources, jumanpp, knp }:
 let
   inherit (pythonPackages) buildPythonPackage;
 in buildPythonPackage rec {
   inherit (pkgSources."${name}") pname version src;
+  patchPhase = ''
+    substituteInPlace pyproject.toml \
+      --replace 'build-backend = "poetry.masonry.api"' 'build-backend = "poetry.core.masonry.api"'
+  '';
 
-  nativeBuildInputs = [ knp jumanpp ];
+  buildInputs = [ jumanpp knp ];
 
   doCheck = false;
   # for runtime depend
-  propagatedBuildInputs = with pythonPackages; [ toml poetry ];
+  propagatedBuildInputs = with pythonPackages; [ poetry-core six toml ];
 
   meta = with lib; {
     homepage = "https://github.com/heavenshell/py-doq";

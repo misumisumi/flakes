@@ -1,10 +1,9 @@
-{ stdenv, lib, name, pkgSources, writeShellScript, makeDesktopItem, makeWrapper, tk, tcl, snack, imagemagick }:
+{ stdenv, lib, name, pkgSources, writeShellScript, makeDesktopItem, makeWrapper, imagemagick, tk, tcl, snack }:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
-  buildInputs = [ makeWrapper imagemagick ];
-  nativeBuildInputs = [ tk tcl snack ];
+  buildInputs = [ makeWrapper imagemagick tk tcl snack ];
 
   desktopItems = [ 
     (makeDesktopItem {
