@@ -9,18 +9,23 @@
   curl,
   doxygen,
   flac,
-  freetype,
   fontconfig,
+  freetype,
   graphviz,
   gtk3,
-  jack1,
   ladspaH,
+  libGL,
+  libX11,
+  libXcursor,
+  libXrandr,
+  libext,
+  libjack2,
   libjpeg_turbo,
   libogg,
   libpng,
   libvorbis,
-  pkg-config,
   perlPackages,
+  pkg-config,
   python3,
   webkitgtk,
   zlib,
@@ -39,18 +44,19 @@ stdenv.mkDerivation {
     ./juce-6.1.3-cmake_link_against_system_deps.patch
     ./juce-6.1.2-devendor_libs.patch
   ];
-  buildInputs = [ alsa-lib curl doxygen flac freetype fontconfig graphviz gtk3 jack1 ladspaH
-                  libjpeg_with_jpegint libogg libpng libvorbis webkitgtk zlib ] ++
+  buildInputs = [ alsa-lib cmake curl doxygen flac fontconfig freetype graphviz gtk3 ladspaH libGL 
+                  libX11 libXcursor libXrandr libext libjack2 libjpeg_turbo libogg libpng
+                  libvorbis perlPackages pkg-config python3 webkitgtk zlib ] ++
                   (with perlPackages; [ ArchiveZip ]);
   nativeBuildInputs = [ cmake python3 pkg-config ];
-  # postPatch = ''
-  #   rm -rvf modules/juce_audio_formats/codecs/flac/ \
-  #       modules/juce_audio_formats/codecs/oggvorbis/ \
-  #       modules/juce_audio_plugin_client/AU/ \
-  #       modules/juce_graphics/image_formats/jpglib/ \
-  #       modules/juce_graphics/image_formats/pnglib/ \
-  #       modules/juce_core/zip/zlib/
-  # '';
+  postPatch = ''
+    rm -rvf modules/juce_audio_formats/codecs/flac/ \
+        modules/juce_audio_formats/codecs/oggvorbis/ \
+        modules/juce_audio_plugin_client/AU/ \
+        modules/juce_graphics/image_formats/jpglib/ \
+        modules/juce_graphics/image_formats/pnglib/ \
+        modules/juce_core/zip/zlib/
+  '';
   configureFlags = [
     "CPPFLAGS+= -DJUCER_ENABLE_GPL_MODE=1"
   ];
