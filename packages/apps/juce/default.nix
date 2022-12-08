@@ -15,7 +15,10 @@
   gtk3,
   ladspaH,
   libGL,
-  xorg,
+  libX11,
+  libXcursor,
+  libXrandr,
+  libext,
   libjack2,
   libjpeg_turbo,
   libogg,
@@ -41,10 +44,9 @@ stdenv.mkDerivation {
     ./juce-6.1.3-cmake_link_against_system_deps.patch
     ./juce-6.1.2-devendor_libs.patch
   ];
-  buildInputs = [ alsa-lib cmake curl doxygen flac fontconfig freetype graphviz gtk3 ladspaH 
-                  libGL libjack2 libjpeg_turbo libogg libpng libvorbis perlPackages 
-                  pkg-config python3 webkitgtk zlib ] ++
-                  (with xorg; [ libX11 libXcursor libXrandr libXext ]) ++
+  buildInputs = [ alsa-lib cmake curl doxygen flac fontconfig freetype graphviz gtk3 ladspaH libGL 
+                  libX11 libXcursor libXrandr libext libjack2 libjpeg_turbo libogg libpng
+                  libvorbis pkg-config python3 webkitgtk zlib ] ++
                   (with perlPackages; [ ArchiveZip ]);
   nativeBuildInputs = [ cmake python3 pkg-config ];
   postPatch = ''
