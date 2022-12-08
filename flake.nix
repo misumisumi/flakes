@@ -92,7 +92,7 @@
         packages =  withContents appsDir (name: pkgs.${name}) // withContents pythonModulesDir (name: pkgs.python3Packages.${name});
         apps = mkApps pkgs (runnableApps pkgs (names appsDir));
         checks = packages;
-        devShells.default = nvfetcher.packages.${system}.ghcWithNvfetcher;  # For `nix develop`
+        devShells =  withContents appsDir (name: pkgs.${name}) // withContents pythonModulesDir (name: pkgs.python3Packages.${name}) // { default =  nvfetcher.packages.${system}.ghcWithNvfetcher; };
       }) // {
         nixosModules = mkModules;
       };

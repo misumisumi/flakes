@@ -52,6 +52,17 @@
       sha256 = "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=";
     });
   };
+  juce = {
+    pname = "juce";
+    version = "7.0.3";
+    src = fetchFromGitHub ({
+      owner = "juce-framework";
+      repo = "JUCE";
+      rev = "7.0.3";
+      fetchSubmodules = false;
+      sha256 = "sha256-6YX/ur8sJzG578F6aK27tQaP2z6taO+ntIEGAcJoD84=";
+    });
+  };
   knp = {
     pname = "knp";
     version = "25425d33907ce69c5fa5b584ba58183020a07bba";

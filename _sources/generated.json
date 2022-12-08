@@ -77,6 +77,25 @@
         },
         "version": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1"
     },
+    "juce": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "juce",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "juce-framework",
+            "repo": "JUCE",
+            "rev": "7.0.3",
+            "sha256": "sha256-6YX/ur8sJzG578F6aK27tQaP2z6taO+ntIEGAcJoD84=",
+            "type": "github"
+        },
+        "version": "7.0.3"
+    },
     "knp": {
         "cargoLocks": null,
         "extract": null,
