@@ -1,24 +1,20 @@
 
-{ stdenv, lib, fetchpatch, name, pkgSources, libimobiledevice, libjpeg_turbo, libusbmuxd, obs-studio }:
+{ stdenvNoCC, lib, fetchpatch, name, pkgSources, libimobiledevice, libjpeg_turbo, libusbmuxd, obs-studio, unzip }:
 
-stdenv.mkDerivation {
+stdenvNoCC.mkDerivation rec {
   inherit (pkgSources."${name}") pname version src;
   buildInputs = [ libimobiledevice libjpeg_turbo libusbmuxd obs-studio ];
-  patches = [
-    ./fix-makefile.patch
-    ./linux_mk.patch
-  ];
+  nativeBuildInputs = [ unzip ];
 
-  buildPhase = ''
-    mkdir -p build
-    ALLOW_STATIC=no IMOBILEDEV_DIR=${libimobiledevice} JPEG_DIR=${libjpeg_turbo} make -j $NIX_BUILD_CORES
+  unpackPhase = ''
+    unzip $src -d /build/
   '';
 
   installPhase = ''
     mkdir -p $out/lib/obs-plugins
-    cp ./build/droidcam-obs.so $out/lib/obs-plugins
+    cp ./droidcam-obs/bin/64bit/droidcam-obs.so $out/lib/obs-plugins
     mkdir -p $out/share/obs/obs-plugins/droidcam-obs
-    cp -r ./data/locale $out/share/obs/obs-plugins/droidcam-obs/
+    cp -r ./droidcam-obs/data/locale $out/share/obs/obs-plugins/droidcam-obs/
   '';
 
   meta = with lib; {

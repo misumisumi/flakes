@@ -6,7 +6,7 @@ cargo_locks = [ 'Cargo.lock' ]
 
 [droidcam-obs-plugin]
 src.github_tag = "dev47apps/droidcam-obs-plugin"
-fetch.github = "dev47apps/droidcam-obs-plugin"
+fetch.url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux.zip"
 
 [fcitx5-nord]
 src.git = 'https://github.com/tonyfettes/fcitx5-nord.git'
