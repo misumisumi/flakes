@@ -32,7 +32,7 @@
 }:
 let
   # Need jpegint.h
-  libjpeg_with_jpegint = libjpeg_turbo.overrideAttrs (old: {
+  libjpeg_turbo = libjpeg_turbo.overrideAttrs (old: {
     postInstall = ''
       install -vDm 644 $src/jpegint.h "$dev/include"
     '';
