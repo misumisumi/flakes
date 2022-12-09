@@ -51,12 +51,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "1.6.0",
-            "sha256": "sha256-ILvZMwrBZvLLj+wcMIT9vOODWlSuAQ/AdxaGhqjYdyA=",
-            "type": "git",
-            "url": "https://github.com/dev47apps/droidcam-obs-plugin"
+            "owner": "dev47apps",
+            "repo": "droidcam-obs-plugin",
+            "rev": "2.0.1",
+            "sha256": "sha256-oaw/mq4WCQMlf3sv9WtNlv9J9rm79xnqDwKzHtyFW50=",
+            "type": "github"
         },
-        "version": "1.6.0"
+        "version": "2.0.1"
     },
     "fcitx5-nord": {
         "cargoLocks": null,

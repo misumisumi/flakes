@@ -1,22 +1,17 @@
 
-{ stdenv, lib, fetchpatch, name, pkgSources, libimobiledevice, libjpeg, libusbmuxd, obs-studio }:
+{ stdenv, lib, fetchpatch, name, pkgSources, libimobiledevice, libjpeg_turbo, libusbmuxd, obs-studio }:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
-  buildInputs = [ libimobiledevice libjpeg libusbmuxd obs-studio ];
+  buildInputs = [ libimobiledevice libjpeg_turbo libusbmuxd obs-studio ];
   patches = [
     ./fix-makefile.patch
+    ./linux_mk.patch
   ];
-
-  patchPhase = ''
-    for i in $patches ; do
-      patch -p1 < $i
-    done
-  '';
 
   buildPhase = ''
     mkdir -p build
-    make ALLOW_STATIC=no -j $NIX_BUILD_CORES
+    ALLOW_STATIC=no IMOBILEDEV_DIR=${libimobiledevice} JPEG_DIR=${libjpeg_turbo} make -j $NIX_BUILD_CORES
   '';
 
   installPhase = ''

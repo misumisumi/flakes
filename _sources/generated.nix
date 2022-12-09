@@ -31,15 +31,14 @@
   };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
-    version = "1.6.0";
-    src = fetchgit {
-      url = "https://github.com/dev47apps/droidcam-obs-plugin";
-      rev = "1.6.0";
+    version = "2.0.1";
+    src = fetchFromGitHub ({
+      owner = "dev47apps";
+      repo = "droidcam-obs-plugin";
+      rev = "2.0.1";
       fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-ILvZMwrBZvLLj+wcMIT9vOODWlSuAQ/AdxaGhqjYdyA=";
-    };
+      sha256 = "sha256-oaw/mq4WCQMlf3sv9WtNlv9J9rm79xnqDwKzHtyFW50=";
+    });
   };
   fcitx5-nord = {
     pname = "fcitx5-nord";
