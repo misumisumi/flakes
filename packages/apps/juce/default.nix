@@ -27,11 +27,11 @@
   libogg,
   libpng,
   libvorbis,
-  mount,
   pcre2,
   perlPackages,
   pkg-config,
   python3,
+  util-linux,
   webkitgtk,
   zlib
 }:
@@ -54,7 +54,7 @@ stdenv.mkDerivation rec {
   ];
   buildInputs = [ alsa-lib cmake curl doxygen flac fontconfig freetype glib gio-sharp graphviz gtk3 ladspaH libGL 
                   libX11 libXcursor libXrandr libXext libjack2 libjpeg_with_jpegint libogg libpng
-                  libvorbis mount pcre2 pkg-config python3 webkitgtk zlib ] ++
+                  libvorbis pcre2 pkg-config python3 util-linux webkitgtk zlib ] ++
                   (with perlPackages; [ ArchiveZip ]);
   nativeBuildInputs = [ cmake python3 pkg-config makeWrapper ];
 
@@ -68,14 +68,24 @@ stdenv.mkDerivation rec {
       categories = [ "Development" ];
     })
   ];
-
   postPatch = ''
-    rm -rvf modules/juce_audio_formats/codecs/flac/ \
+    rm -rf modules/juce_audio_formats/codecs/flac/ \
         modules/juce_audio_formats/codecs/oggvorbis/ \
         modules/juce_audio_plugin_client/AU/ \
         modules/juce_graphics/image_formats/jpglib/ \
         modules/juce_graphics/image_formats/pnglib/ \
         modules/juce_core/zip/zlib/
+    substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp
+    --replace "return (os == TargetOS::windows ? "C:\\JUCE" : "~/JUCE");" \
+      "return (os == TargetOS::windows ? "C:\\JUCE" : "$out/share/doc/juce");"
+
+    substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp
+    --replace "return (os == TargetOS::windows ? "C:\\JUCE\\modules" : "~/JUCE/modules");" \
+      "return (os == TargetOS::windows ? "C:\\modules" : "$out/share/juce/modules");"
+
+    substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp
+    --replace "return (os == TargetOS::windows ? "C:\\modules" : "~/modules");" \
+      "return (os == TargetOS::windows ? "C:\\modules" : "~/.local/share/juce/modules");"
   '';
 
   cmakeFlags = [
