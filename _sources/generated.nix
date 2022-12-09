@@ -32,13 +32,10 @@
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
     version = "2.0.1";
-    src = fetchFromGitHub ({
-      owner = "dev47apps";
-      repo = "droidcam-obs-plugin";
-      rev = "2.0.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-oaw/mq4WCQMlf3sv9WtNlv9J9rm79xnqDwKzHtyFW50=";
-    });
+    src = fetchurl {
+      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.0.1/droidcam_obs_2.0.1_linux.zip";
+      sha256 = "sha256-WFDTNoZ51O31NCxr6UknzfCBbkOcqjuo9wHejxJEV30=";
+    };
   };
   fcitx5-nord = {
     pname = "fcitx5-nord";
