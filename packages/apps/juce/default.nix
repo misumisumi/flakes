@@ -75,17 +75,17 @@ stdenv.mkDerivation rec {
         modules/juce_graphics/image_formats/jpglib/ \
         modules/juce_graphics/image_formats/pnglib/ \
         modules/juce_core/zip/zlib/
-    substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp
-    --replace "return (os == TargetOS::windows ? "C:\\JUCE" : "~/JUCE");" \
-      "return (os == TargetOS::windows ? "C:\\JUCE" : "$out/share/doc/juce");"
+    substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp \
+      --replace "return (os == TargetOS::windows ? "C:\\JUCE" : "~/JUCE");" \
+        "return (os == TargetOS::windows ? "C:\\JUCE" : "$out/share/doc/juce");"
 
-    substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp
-    --replace "return (os == TargetOS::windows ? "C:\\JUCE\\modules" : "~/JUCE/modules");" \
-      "return (os == TargetOS::windows ? "C:\\modules" : "$out/share/juce/modules");"
+    substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp \
+      --replace "return (os == TargetOS::windows ? "C:\\JUCE\\modules" : "~/JUCE/modules");" \
+        "return (os == TargetOS::windows ? "C:\\modules" : "$out/share/juce/modules");"
 
-    substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp
-    --replace "return (os == TargetOS::windows ? "C:\\modules" : "~/modules");" \
-      "return (os == TargetOS::windows ? "C:\\modules" : "~/.local/share/juce/modules");"
+    substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp \
+      --replace "return (os == TargetOS::windows ? "C:\\modules" : "~/modules");" \
+        "return (os == TargetOS::windows ? "C:\\modules" : "~/.local/share/juce/modules");"
   '';
 
   cmakeFlags = [
