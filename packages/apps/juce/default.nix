@@ -49,7 +49,7 @@ stdenv.mkDerivation rec {
   ];
   buildInputs = [ alsa-lib cmake curl doxygen flac fontconfig freetype glib gio-sharp 
                   graphviz gtk3 ladspaH libjack2 libjpeg_turbo libogg libpng libvorbis 
-                  pcre2 perlPackages pkg-config python3 util-linux webkitgtk zlib ] ++
+                  pcre2 pkg-config python3 util-linux webkitgtk zlib ] ++
                   (with perlPackages; [ ArchiveZip ]);
   nativeBuildInputs = [ cmake python3 pkg-config makeWrapper ];
 
