@@ -11,10 +11,14 @@
   };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
-    version = "2.0.1";
-    src = fetchurl {
-      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.0.1/droidcam_obs_2.0.1_linux.zip";
-      sha256 = "sha256-WFDTNoZ51O31NCxr6UknzfCBbkOcqjuo9wHejxJEV30=";
+    version = "1.6.0";
+    src = fetchgit {
+      url = "https://github.com/dev47apps/droidcam-obs-plugin";
+      rev = "1.6.0";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-ILvZMwrBZvLLj+wcMIT9vOODWlSuAQ/AdxaGhqjYdyA=";
     };
   };
   fcitx5-nord = {
@@ -28,18 +32,6 @@
       sha256 = "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=";
     });
   };
-<<<<<<< HEAD
-  juce = {
-    pname = "juce";
-    version = "7.0.2";
-    src = fetchFromGitHub ({
-      owner = "juce-framework";
-      repo = "JUCE";
-      rev = "7.0.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-G531oy31eAXdBOnB6HWKP697BBpRqMUd+xbVlZiwXGs=";
-    });
-=======
   flake-asusctl = {
     pname = "flake-asusctl";
     version = "4.5.7";
@@ -77,7 +69,6 @@
         
       };
     };
->>>>>>> 8d165f8 (rename and update asusctl and supergfxctl)
   };
   knp = {
     pname = "knp";

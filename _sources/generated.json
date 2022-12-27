@@ -20,12 +20,16 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-WFDTNoZ51O31NCxr6UknzfCBbkOcqjuo9wHejxJEV30=",
-            "type": "url",
-            "url": "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.0.1/droidcam_obs_2.0.1_linux.zip"
+            "rev": "1.6.0",
+            "sha256": "sha256-ILvZMwrBZvLLj+wcMIT9vOODWlSuAQ/AdxaGhqjYdyA=",
+            "type": "git",
+            "url": "https://github.com/dev47apps/droidcam-obs-plugin"
         },
-        "version": "2.0.1"
+        "version": "1.6.0"
     },
     "fcitx5-nord": {
         "cargoLocks": null,
@@ -46,12 +50,6 @@
         },
         "version": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1"
     },
-<<<<<<< HEAD
-    "juce": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "juce",
-=======
     "flake-asusctl": {
         "cargoLocks": {
             "Cargo.lock": [
@@ -65,7 +63,6 @@
         },
         "extract": null,
         "name": "flake-asusctl",
->>>>>>> 8d165f8 (rename and update asusctl and supergfxctl)
         "passthru": null,
         "pinned": false,
         "src": {
@@ -73,15 +70,6 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-<<<<<<< HEAD
-            "owner": "juce-framework",
-            "repo": "JUCE",
-            "rev": "7.0.2",
-            "sha256": "sha256-G531oy31eAXdBOnB6HWKP697BBpRqMUd+xbVlZiwXGs=",
-            "type": "github"
-        },
-        "version": "7.0.2"
-=======
             "rev": "4.5.7",
             "sha256": "sha256-43oAW7mP+ZKYNGthm305cAJblWDEJH5ApuUE7Bw/+6s=",
             "type": "git",
@@ -111,7 +99,6 @@
             "url": "https://gitlab.com/asus-linux/supergfxctl"
         },
         "version": "5.0.1"
->>>>>>> 8d165f8 (rename and update asusctl and supergfxctl)
     },
     "knp": {
         "cargoLocks": null,
