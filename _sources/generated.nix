@@ -70,6 +70,17 @@
       };
     };
   };
+  juce = {
+    pname = "juce";
+    version = "7.0.2";
+    src = fetchFromGitHub ({
+      owner = "juce-framework";
+      repo = "JUCE";
+      rev = "7.0.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-G531oy31eAXdBOnB6HWKP697BBpRqMUd+xbVlZiwXGs=";
+    });
+  };
   knp = {
     pname = "knp";
     version = "25425d33907ce69c5fa5b584ba58183020a07bba";

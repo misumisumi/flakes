@@ -32,6 +32,10 @@ src.aur = 'droidcam-obs-plugin'
 src.branch = '$ver'
 fetch.git = 'https://github.com/dev47apps/droidcam-obs-plugin'
 
+[juce]
+src.archpkg = 'juce'
+fetch.github = 'juce-framework/JUCE'
+
 [xp-pen-tablet]
 src.aur = 'xp-pen-tablet'
 fetch.url = 'https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html'
