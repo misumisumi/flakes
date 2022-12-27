@@ -24,8 +24,8 @@ in
 
   config = mkIf cfg.enable {
     # Set the ledmodes to the packaged ledmodes by default.
-    environment.systemPackages = [ cfg.flake-supergfxctl ];
-    services.dbus.packages = [ cfg.flake-supergfxctl ];
+    environment.systemPackages = [ cfg.package ];
+    services.dbus.packages = [ cfg.package ];
 
     services.udev.extraRules = ''
       # Enable runtime PM for NVIDIA VGA/3D controller devices on driver bind
@@ -49,7 +49,7 @@ in
         Type = "dbus";
         BusName = "org.supergfxctl.Daemon";
         SELinuxContext = "system_u:system_r:unconfined_t:s0";
-        ExecStart = "${cfg.flake-supergfxctl}/bin/supergfxd";
+        ExecStart = "${cfg.package}/bin/supergfxd";
         Restart = "on-failure";
         RestartSec = "1";
       };
