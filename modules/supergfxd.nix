@@ -49,7 +49,7 @@ in
         Type = "dbus";
         BusName = "org.supergfxctl.Daemon";
         SELinuxContext = "system_u:system_r:unconfined_t:s0";
-        ExecStart = "${cfg.supergfxctl}/bin/supergfxd";
+        ExecStart = "${cfg.flake-supergfxctl}/bin/supergfxd";
         Restart = "on-failure";
         RestartSec = "1";
       };
