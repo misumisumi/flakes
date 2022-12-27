@@ -6,17 +6,26 @@ let
 in
 {
   options = {
-    services.supergfxd= {
+    services.supergfxd = {
       enable = mkEnableOption ''
-          Enable supergfxd systemd unit
+        Enable supergfxd systemd unit
+      '';
+      package = mkOption {
+        type = types.package;
+        default = pkgs.flake-supergfxctl;
+        defaultText = literalExpression "pkgs.flake-supergfxctl";
+        example = literalExpression "pkgs.flake-supergfxctl";
+        description = lib.mdDoc ''
+          package of supergfxctl
         '';
+      };
     };
   };
 
   config = mkIf cfg.enable {
     # Set the ledmodes to the packaged ledmodes by default.
-    environment.systemPackages = with pkgs; [ supergfxctl ];
-    services.dbus.packages = with pkgs; [ supergfxctl ];
+    environment.systemPackages = [ cfg.flake-supergfxctl ];
+    services.dbus.packages = [ cfg.flake-supergfxctl ];
 
     services.udev.extraRules = ''
       # Enable runtime PM for NVIDIA VGA/3D controller devices on driver bind
@@ -40,7 +49,7 @@ in
         Type = "dbus";
         BusName = "org.supergfxctl.Daemon";
         SELinuxContext = "system_u:system_r:unconfined_t:s0";
-        ExecStart = "${pkgs.supergfxctl}/bin/supergfxd";
+        ExecStart = "${cfg.supergfxctl}/bin/supergfxd";
         Restart = "on-failure";
         RestartSec = "1";
       };
