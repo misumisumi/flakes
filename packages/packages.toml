@@ -29,9 +29,8 @@ src.regex = '[0-9]+.[0-9]+.[0-9]+p[0-9]+'
 fetch.url = 'http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz'
 
 [droidcam-obs-plugin]
-src.aur = 'droidcam-obs-plugin'
-src.branch = '$ver'
-fetch.git = 'https://github.com/dev47apps/droidcam-obs-plugin'
+src.github = 'dev47apps/droidcam-obs-plugin'
+fetch.url = 'https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux.zip'
 
 [juce]
 src.archpkg = 'juce'
