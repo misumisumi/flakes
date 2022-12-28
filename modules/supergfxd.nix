@@ -40,7 +40,7 @@ in
     systemd.services.supergfxd = {
       description = "GPU control for asus laptops";
       wantedBy = [ "multi-user.target" ];
-      environment.IS_SUPERGFX_SERVICE = "1";
+      environment.IS_SERVICE = "1";
       unitConfig = {
         StartLimitInterval = 200;
         StartLimitBurst = 2;
