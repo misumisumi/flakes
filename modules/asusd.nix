@@ -35,7 +35,7 @@ in
 
   config = mkIf cfg.enable {
     # Set the ledmodes to the packaged ledmodes by default.
-    services.asusd.ledmodes = mkDefault (
+    services.flake-asusd.ledmodes = mkDefault (
       let
         # Convert packaged asusd-ledmodes.toml to JSON.
         json = pkgs.runCommand "asusd-ledmodes.json"
