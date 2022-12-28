@@ -2,7 +2,7 @@
 
 with lib;
 let
-  cfg = config.services.supergfxd;
+  cfg = config.services.flake-supergfxd;
 in
 {
   options = {

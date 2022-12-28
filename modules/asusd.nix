@@ -3,7 +3,7 @@
 
 with lib;
 let
-  cfg = config.services.asusd;
+  cfg = config.services.flake-asusd;
   tomlFormat = pkgs.formats.toml { };
 in
 {
