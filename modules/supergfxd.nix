@@ -6,7 +6,7 @@ let
 in
 {
   options = {
-    services.supergfxd = {
+    services.flake-supergfxd = {
       enable = mkEnableOption ''
         Enable supergfxd systemd unit
       '';

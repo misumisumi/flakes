@@ -8,7 +8,7 @@ let
 in
 {
   options = {
-    services.asusd = {
+    services.flake-asusd = {
       enable = mkEnableOption ''
         an interface for rootless control of system functions for Asus ROG-like laptops.
         This will allow usage of <code>asusctl</code> to control hardware such as fan speeds, keyboard LEDs and graphics modes
