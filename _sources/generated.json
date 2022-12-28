@@ -53,11 +53,11 @@
     "flake-asusctl": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./flake-asusctl-4.5.7/Cargo.lock",
+                "./flake-asusctl-4.5.1/Cargo.lock",
                 {
-                    "ecolor-0.20.0": "sha256-tnjFkaCWmCPGw3huQN9VOAeiH+zk3Zk9xYoRKmg2WQg=",
-                    "notify-rust-4.6.0": "sha256-jhCgisA9f6AI9e9JQUYRtEt47gQnDv5WsdRKFoKvHJs=",
-                    "supergfxctl-5.0.2": "sha256-zp92mWyWUEWUP4kEyHbiUyYTtp2kLv+gxkPzOu77fi8="
+                    "eframe-0.19.0": "sha256-HW7gfs8vXXhQbNTBPdl3KurqcjvZHANoF2t0DAB+QDI=",
+                    "notify-rust-4.5.11": "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=",
+                    "supergfxctl-5.0.2": "sha256-N2k/vkv+bct+Lo3y5jzpwdEGBcoOAtX9SBI8inNQqGQ="
                 }
             ]
         },
@@ -70,12 +70,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "4.5.7",
-            "sha256": "sha256-43oAW7mP+ZKYNGthm305cAJblWDEJH5ApuUE7Bw/+6s=",
+            "rev": "4.5.1",
+            "sha256": "sha256-5LlPDti7LRa1QiwNyln2GwX6JBN0XH4EZ9OpczLSU0g=",
             "type": "git",
             "url": "https://gitlab.com/asus-linux/asusctl"
         },
-        "version": "4.5.7"
+        "version": "4.5.1"
     },
     "flake-supergfxctl": {
         "cargoLocks": {

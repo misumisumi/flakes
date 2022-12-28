@@ -1,5 +1,6 @@
 [flake-asusctl]
-src.aur = 'asusctl'
+# src.aur = 'asusctl'
+src.manual = '4.5.1'
 fetch.git = 'https://gitlab.com/asus-linux/asusctl'
 cargo_locks = [ 'Cargo.lock' ]
 

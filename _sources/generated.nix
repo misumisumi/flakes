@@ -34,21 +34,21 @@
   };
   flake-asusctl = {
     pname = "flake-asusctl";
-    version = "4.5.7";
+    version = "4.5.1";
     src = fetchgit {
       url = "https://gitlab.com/asus-linux/asusctl";
-      rev = "4.5.7";
+      rev = "4.5.1";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-43oAW7mP+ZKYNGthm305cAJblWDEJH5ApuUE7Bw/+6s=";
+      sha256 = "sha256-5LlPDti7LRa1QiwNyln2GwX6JBN0XH4EZ9OpczLSU0g=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./flake-asusctl-4.5.7/Cargo.lock;
+      lockFile = ./flake-asusctl-4.5.1/Cargo.lock;
       outputHashes = {
-        "supergfxctl-5.0.2" = "sha256-zp92mWyWUEWUP4kEyHbiUyYTtp2kLv+gxkPzOu77fi8=";
-        "ecolor-0.20.0" = "sha256-tnjFkaCWmCPGw3huQN9VOAeiH+zk3Zk9xYoRKmg2WQg=";
-        "notify-rust-4.6.0" = "sha256-jhCgisA9f6AI9e9JQUYRtEt47gQnDv5WsdRKFoKvHJs=";
+        "eframe-0.19.0" = "sha256-HW7gfs8vXXhQbNTBPdl3KurqcjvZHANoF2t0DAB+QDI=";
+        "supergfxctl-5.0.2" = "sha256-N2k/vkv+bct+Lo3y5jzpwdEGBcoOAtX9SBI8inNQqGQ=";
+        "notify-rust-4.5.11" = "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=";
       };
     };
   };
