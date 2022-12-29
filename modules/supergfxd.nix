@@ -1,59 +1,41 @@
 { config, lib, pkgs, ... }:
 
-with lib;
 let
   cfg = config.services.flake-supergfxd;
+  json = pkgs.formats.json { };
 in
 {
   options = {
-    services.flake-supergfxd = {
-      enable = mkEnableOption ''
-        Enable supergfxd systemd unit
-      '';
-      package = mkOption {
-        type = types.package;
-        default = pkgs.flake-supergfxctl;
-        defaultText = literalExpression "pkgs.flake-supergfxctl";
-        example = literalExpression "pkgs.flake-supergfxctl";
+    services.supergfxd = {
+      enable = lib.mkEnableOption (lib.mdDoc "Enable the supergfxd service");
+
+      settings = lib.mkOption {
+        type = lib.types.nullOr json.type;
+        default = null;
         description = lib.mdDoc ''
-          package of supergfxctl
+          The content of /etc/supergfxd.conf.
+          See https://gitlab.com/asus-linux/supergfxctl/#config-options-etcsupergfxdconf.
         '';
       };
     };
   };
 
-  config = mkIf cfg.enable {
-    # Set the ledmodes to the packaged ledmodes by default.
-    environment.systemPackages = [ cfg.package ];
-    services.dbus.packages = [ cfg.package ];
+  config = lib.mkIf cfg.enable {
+    environment.systemPackages = [ pkgs.supergfxctl ];
 
-    services.udev.extraRules = ''
-      # Enable runtime PM for NVIDIA VGA/3D controller devices on driver bind
-      ACTION=="bind", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x030000", TEST=="power/control", ATTR{power/control}="auto"
-      ACTION=="bind", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x030200", TEST=="power/control", ATTR{power/control}="auto"
-
-      # Disable runtime PM for NVIDIA VGA/3D controller devices on driver unbind
-      ACTION=="unbind", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x030000", TEST=="power/control", ATTR{power/control}="on"
-      ACTION=="unbind", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x030200", TEST=="power/control", ATTR{power/control}="on"
-    '';
-
-    systemd.services.supergfxd = {
-      description = "GPU control for asus laptops";
-      wantedBy = [ "multi-user.target" ];
-      environment.IS_SERVICE = "1";
-      unitConfig = {
-        StartLimitInterval = 200;
-        StartLimitBurst = 2;
-      };
-      serviceConfig = {
-        Type = "dbus";
-        BusName = "org.supergfxctl.Daemon";
-        SELinuxContext = "system_u:system_r:unconfined_t:s0";
-        ExecStart = "${cfg.package}/bin/supergfxd";
-        Restart = "on-failure";
-        RestartSec = "1";
-      };
+    environment.etc."supergfxd.conf" = lib.mkIf (cfg.settings != null) {
+      source = json.generate "supergfxd.conf" cfg.settings;
+      mode = "0644";
     };
-  };
-}
 
+    services.dbus.enable = true;
+
+    systemd.packages = [ pkgs.supergfxctl ];
+    systemd.services.supergfxd.wantedBy = [ "multi-user.target" ];
+
+    services.dbus.packages = [ pkgs.supergfxctl ];
+    services.udev.packages = [ pkgs.supergfxctl ];
+  };
+
+  meta.maintainers = pkgs.supergfxctl.meta.maintainers;
+}
