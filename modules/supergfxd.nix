@@ -6,7 +6,7 @@ let
 in
 {
   options = {
-    services.supergfxd = {
+    services.flake-supergfxd = {
       enable = lib.mkEnableOption (lib.mdDoc "Enable the supergfxd service");
 
       settings = lib.mkOption {
