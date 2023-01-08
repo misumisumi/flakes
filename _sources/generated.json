@@ -181,6 +181,20 @@
         },
         "version": "2.2.10"
     },
+    "unityhub-latest": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "unityhub-latest",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-/P6gPLSRGfwEN801cyNrZTpHyZKO+4tU6cFvLz8ERuo=",
+            "type": "url",
+            "url": "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.4.1.deb"
+        },
+        "version": "3.4.1"
+    },
     "wavesurfer": {
         "cargoLocks": null,
         "extract": null,

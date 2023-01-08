@@ -44,6 +44,10 @@ fetch.url = 'https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html'
 src.git = 'https://github.com/ku-nlp/knp/'
 fetch.github = 'ku-nlp/knp'
 
+[unityhub-latest]
+src.aur = "unityhub"
+fetch.url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-$ver.deb"
+
 # python modules
 [doq]
 src.pypi = 'doq'

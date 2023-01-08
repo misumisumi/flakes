@@ -115,6 +115,14 @@
       sha256 = "sha256-S/52RUerkrpY9Dt3Nm27fHs1EtZaJ82/nlhanLZM6B4=";
     };
   };
+  unityhub-latest = {
+    pname = "unityhub-latest";
+    version = "3.4.1";
+    src = fetchurl {
+      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.4.1.deb";
+      sha256 = "sha256-/P6gPLSRGfwEN801cyNrZTpHyZKO+4tU6cFvLz8ERuo=";
+    };
+  };
   wavesurfer = {
     pname = "wavesurfer";
     version = "1.8.8p5";
