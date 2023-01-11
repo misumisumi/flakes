@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, flake-utils, nvfetcher }: 
+  outputs = { self, nixpkgs, flake-utils, nvfetcher }:
     let
       lib = nixpkgs.lib;
       genPkg = func: name: {
@@ -47,29 +47,34 @@
         value = import ./modules/${name}.nix;
       };
       mkModules = with builtins; listToAttrs (map genModule modules);
-    in rec {
+    in
+    rec {
       overlay = overlays.default; # deprecated attributes for retro compatibility
       overlays.default = final: prev:
-      let
-        pkgSources = sources { inherit (final) fetchgit fetchurl fetchFromGitHub ; };
-        override = name: pkg: builtins.intersectAttrs (builtins.functionArgs pkg) ({
-          inherit name pkgSources;
-          pythonPackages = final.python3.pkgs;
-        });
-      in withContents appsDir (name:
         let
-          app = import (appsDir + "/${name}");
-        in final.callPackage app (override name app)
-        ) // {
-          sources = pkgSources; 
+          pkgSources = sources { inherit (final) fetchgit fetchurl fetchFromGitHub dockerTools; };
+          override = name: pkg: builtins.intersectAttrs (builtins.functionArgs pkg) ({
+            inherit name pkgSources;
+            pythonPackages = final.python3.pkgs;
+          });
+        in
+        withContents appsDir
+          (name:
+            let
+              app = import (appsDir + "/${name}");
+            in
+            final.callPackage app (override name app)
+          ) // {
+          sources = pkgSources;
         } // {
           pythonPackagesOverlays = (prev.pythonPackagesOverlays or [ ]) ++ [
             (pfinal: pprev:
               withContents pythonModulesDir (name:
                 let
                   module = import (pythonModulesDir + "/${name}");
-                in pfinal.callPackage module (override name module)
-            ))
+                in
+                pfinal.callPackage module (override name module)
+              ))
           ];
           python3 =
             let
@@ -80,20 +85,21 @@
             self;
           python3Packages = final.python3.pkgs;
         };
-      } //
+    } //
 
-      flake-utils.lib.eachSystem ["x86_64-linux"] (system:
+    flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs = import nixpkgs {
           system = "${system}";
-          overlays = [ self.overlays.default nvfetcher.overlay];  # nvfetcherもoverlayする
+          overlays = [ self.overlays.default nvfetcher.overlay ]; # nvfetcherもoverlayする
           config.allowUnfree = true;
-        }; in with pkgs.legacyPackages.${system}; rec {
-        packages =  withContents appsDir (name: pkgs.${name}) // withContents pythonModulesDir (name: pkgs.python3Packages.${name});
+        }; in
+      with pkgs.legacyPackages.${system}; rec {
+        packages = withContents appsDir (name: pkgs.${name}) // withContents pythonModulesDir (name: pkgs.python3Packages.${name});
         apps = mkApps pkgs (runnableApps pkgs (names appsDir));
         checks = packages;
-        devShells =  withContents appsDir (name: pkgs.${name}) // withContents pythonModulesDir (name: pkgs.python3Packages.${name}) // { default =  nvfetcher.packages.${system}.ghcWithNvfetcher; };
+        devShells = withContents appsDir (name: pkgs.${name}) // withContents pythonModulesDir (name: pkgs.python3Packages.${name}) // { default = nvfetcher.packages.${system}.ghcWithNvfetcher; };
       }) // {
-        nixosModules = mkModules;
-      };
+      nixosModules = mkModules;
+    };
 }
