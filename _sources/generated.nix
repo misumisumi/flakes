@@ -17,6 +17,18 @@
       sha256 = "sha256-WFDTNoZ51O31NCxr6UknzfCBbkOcqjuo9wHejxJEV30=";
     };
   };
+  fcitx5-nord = {
+    pname = "fcitx5-nord";
+    version = "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1";
+    src = fetchFromGitHub ({
+      owner = "tonyfettes";
+      repo = "fcitx5-nord";
+      rev = "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1";
+      fetchSubmodules = false;
+      sha256 = "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=";
+    });
+    date = "2021-07-27";
+  };
   flake-asusctl = {
     pname = "flake-asusctl";
     version = "4.5.1";

@@ -29,6 +29,26 @@
         },
         "version": "2.0.1"
     },
+    "fcitx5-nord": {
+        "cargoLocks": null,
+        "date": "2021-07-27",
+        "extract": null,
+        "name": "fcitx5-nord",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tonyfettes",
+            "repo": "fcitx5-nord",
+            "rev": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1",
+            "sha256": "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=",
+            "type": "github"
+        },
+        "version": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1"
+    },
     "flake-asusctl": {
         "cargoLocks": {
             "Cargo.lock": [
