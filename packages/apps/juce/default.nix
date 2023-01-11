@@ -1,34 +1,34 @@
-{ stdenv,
-  lib,
-  fetchpatch,
-  name,
-  pkgSources,
-  makeDesktopItem,
-  makeWrapper,
-  alsa-lib,
-  cmake,
-  curl,
-  doxygen,
-  flac,
-  fontconfig,
-  freetype,
-  glib,
-  gio-sharp,
-  graphviz,
-  gtk3,
-  ladspaH,
-  libjack2,
-  libjpeg_turbo,
-  libogg,
-  libpng,
-  libvorbis,
-  pcre2,
-  perlPackages,
-  pkg-config,
-  python3,
-  util-linux,
-  webkitgtk,
-  zlib
+{ stdenv
+, lib
+, fetchpatch
+, name
+, pkgSources
+, makeDesktopItem
+, makeWrapper
+, alsa-lib
+, cmake
+, curl
+, doxygen
+, flac
+, fontconfig
+, freetype
+, glib
+, gio-sharp
+, graphviz
+, gtk3
+, ladspaH
+, libjack2
+, libjpeg_turbo
+, libogg
+, libpng
+, libvorbis
+, pcre2
+, perlPackages
+, pkg-config
+, python3
+, util-linux
+, webkitgtk
+, zlib
 }:
 let
   # Need jpegint.h
@@ -47,13 +47,35 @@ stdenv.mkDerivation rec {
     ./juce-6.1.2-cmake_juce_utils.patch
     ./juce-6.1.2-projucer_disable_update_check.patch
   ];
-  buildInputs = [ alsa-lib cmake curl doxygen flac fontconfig freetype glib gio-sharp 
-                  graphviz gtk3 ladspaH libjack2 libjpeg_with_jpegint libogg libpng libvorbis 
-                  pcre2 pkg-config python3 util-linux webkitgtk zlib ] ++
-                  (with perlPackages; [ ArchiveZip ]);
+  buildInputs = [
+    alsa-lib
+    cmake
+    curl
+    doxygen
+    flac
+    fontconfig
+    freetype
+    glib
+    gio-sharp
+    graphviz
+    gtk3
+    ladspaH
+    libjack2
+    libjpeg_with_jpegint
+    libogg
+    libpng
+    libvorbis
+    pcre2
+    pkg-config
+    python3
+    util-linux
+    webkitgtk
+    zlib
+  ] ++
+  (with perlPackages; [ ArchiveZip ]);
   nativeBuildInputs = [ cmake python3 pkg-config makeWrapper ];
 
-  desktopItems = [ 
+  desktopItems = [
     (makeDesktopItem {
       name = "Projucer";
       exec = "Projucer";
@@ -71,16 +93,16 @@ stdenv.mkDerivation rec {
         modules/juce_graphics/image_formats/pnglib/ \
         modules/juce_core/zip/zlib/
     substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp \
-      --replace "return (os == TargetOS::windows ? "C:\\JUCE" : "~/JUCE");" \
-        "return (os == TargetOS::windows ? "C:\\JUCE" : "$out/share/doc/juce");"
+      --replace "return (os == TargetOS::windows ? \"C:\\\JUCE\" : \"~/JUCE\");" \
+        "return (os == TargetOS::windows ? \"C:\\\JUCE\" : \"$out/share/doc/juce\");"
 
     substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp \
-      --replace "return (os == TargetOS::windows ? "C:\\JUCE\\modules" : "~/JUCE/modules");" \
-        "return (os == TargetOS::windows ? "C:\\modules" : "$out/share/juce/modules");"
+      --replace "return (os == TargetOS::windows ? \"C:\\\JUCE\\\modules\" : \"~/JUCE/modules\");" \
+        "return (os == TargetOS::windows ? \"C:\\\JUCE\\\modules\" : \"$out/share/juce/modules\");"
 
     substituteInPlace extras/Projucer/Source/Settings/jucer_StoredSettings.cpp \
-      --replace "return (os == TargetOS::windows ? "C:\\modules" : "~/modules");" \
-        "return (os == TargetOS::windows ? "C:\\modules" : "~/.local/share/juce/modules");"
+      --replace "return (os == TargetOS::windows ? \"C:\\\modules\" : \"~/modules\");" \
+        "return (os == TargetOS::windows ? \"C:\\\modules\" : \"~/.local/share/juce/modules\");"
   '';
 
   cmakeFlags = [
@@ -105,7 +127,7 @@ stdenv.mkDerivation rec {
     cp $src/LICENSE.md $out/share/licenses/$pname/
 
     cp -r $desktopItems/share/applications $out/share/
-  ''; 
+  '';
 
   meta = with lib; {
     inherit version;
