@@ -1,32 +1,4 @@
 {
-    "asusctl": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./asusctl-4.5.1/Cargo.lock",
-                {
-                    "eframe-0.19.0": "sha256-HW7gfs8vXXhQbNTBPdl3KurqcjvZHANoF2t0DAB+QDI=",
-                    "notify-rust-4.5.11": "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=",
-                    "supergfxctl-5.0.2": "sha256-N2k/vkv+bct+Lo3y5jzpwdEGBcoOAtX9SBI8inNQqGQ="
-                }
-            ]
-        },
-        "date": null,
-        "extract": null,
-        "name": "asusctl",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "4.5.1",
-            "sha256": "sha256-5LlPDti7LRa1QiwNyln2GwX6JBN0XH4EZ9OpczLSU0g=",
-            "type": "git",
-            "url": "https://gitlab.com/asus-linux/asusctl"
-        },
-        "version": "4.5.1"
-    },
     "doq": {
         "cargoLocks": null,
         "date": null,
@@ -57,11 +29,20 @@
         },
         "version": "2.0.1"
     },
-    "fcitx5-nord": {
-        "cargoLocks": null,
-        "date": "2021-07-27",
+    "flake-asusctl": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./flake-asusctl-4.5.1/Cargo.lock",
+                {
+                    "eframe-0.19.0": "sha256-HW7gfs8vXXhQbNTBPdl3KurqcjvZHANoF2t0DAB+QDI=",
+                    "notify-rust-4.5.11": "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=",
+                    "supergfxctl-5.0.2": "sha256-N2k/vkv+bct+Lo3y5jzpwdEGBcoOAtX9SBI8inNQqGQ="
+                }
+            ]
+        },
+        "date": null,
         "extract": null,
-        "name": "fcitx5-nord",
+        "name": "flake-asusctl",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -69,13 +50,36 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "tonyfettes",
-            "repo": "fcitx5-nord",
-            "rev": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1",
-            "sha256": "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=",
-            "type": "github"
+            "rev": "4.5.1",
+            "sha256": "sha256-5LlPDti7LRa1QiwNyln2GwX6JBN0XH4EZ9OpczLSU0g=",
+            "type": "git",
+            "url": "https://gitlab.com/asus-linux/asusctl"
         },
-        "version": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1"
+        "version": "4.5.1"
+    },
+    "flake-supergfxctl": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./flake-supergfxctl-5.0.1/Cargo.lock",
+                {}
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "flake-supergfxctl",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "5.0.1",
+            "sha256": "sha256-4q+7F8s6y+oDkBUKIBBsXZ2EtADcChdnjmABjBUnH9k=",
+            "type": "git",
+            "url": "https://gitlab.com/asus-linux/supergfxctl"
+        },
+        "version": "5.0.1"
     },
     "juce": {
         "cargoLocks": null,
@@ -167,29 +171,20 @@
         },
         "version": "2.2.10"
     },
-    "supergfxctl": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./supergfxctl-5.0.1/Cargo.lock",
-                {}
-            ]
-        },
+    "unityhub-latest": {
+        "cargoLocks": null,
         "date": null,
         "extract": null,
-        "name": "supergfxctl",
+        "name": "unityhub-latest",
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "rev": "5.0.1",
-            "sha256": "sha256-4q+7F8s6y+oDkBUKIBBsXZ2EtADcChdnjmABjBUnH9k=",
-            "type": "git",
-            "url": "https://gitlab.com/asus-linux/supergfxctl"
+            "sha256": "sha256-/P6gPLSRGfwEN801cyNrZTpHyZKO+4tU6cFvLz8ERuo=",
+            "type": "url",
+            "url": "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.4.1.deb"
         },
-        "version": "5.0.1"
+        "version": "3.4.1"
     },
     "wavesurfer": {
         "cargoLocks": null,

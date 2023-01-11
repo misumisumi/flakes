@@ -1,25 +1,8 @@
-[asusctl]
+[flake-asusctl]
 # src.aur = 'asusctl'
 src.manual = '4.5.1'
 fetch.git = 'https://gitlab.com/asus-linux/asusctl'
 cargo_locks = [ 'Cargo.lock' ]
-
-[droidcam-obs-plugin]
-src.github_tag = "dev47apps/droidcam-obs-plugin"
-fetch.url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux.zip"
-
-[fcitx5-nord]
-src.git = 'https://github.com/tonyfettes/fcitx5-nord.git'
-fetch.github = 'tonyfettes/fcitx5-nord'
-
-[juce]
-src.github_tag = 'juce-framework/JUCE'
-# src.ignored = '7.0.3'
-fetch.github = 'juce-framework/JUCE'
-
-[knp]
-src.git = 'https://github.com/ku-nlp/knp/'
-fetch.github = 'ku-nlp/knp'
 
 [notify-rust]
 src.git = 'https://github.com/flukejones/notify-rust.git'
@@ -31,7 +14,7 @@ src.regex = 'Snack v[0-9]+\.[0-9]+\.[0-9]+'
 src.prefix = 'Snack v'
 fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
 
-[supergfxctl]
+[flake-supergfxctl]
 src.aur = 'supergfxctl'
 fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
 cargo_locks = [ 'Cargo.lock' ]
@@ -41,9 +24,25 @@ src.httpheader = 'http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5
 src.regex = '[0-9]+.[0-9]+.[0-9]+p[0-9]+'
 fetch.url = 'http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz'
 
+[droidcam-obs-plugin]
+src.github = 'dev47apps/droidcam-obs-plugin'
+fetch.url = 'https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux.zip'
+
+[juce]
+src.github = 'juce-framework/JUCE'
+fetch.github = 'juce-framework/JUCE'
+
 [xp-pen-tablet]
 src.aur = 'xp-pen-tablet'
 fetch.url = 'https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html'
+
+[knp]
+src.git = 'https://github.com/ku-nlp/knp/'
+fetch.github = 'ku-nlp/knp'
+
+[unityhub-latest]
+src.aur = "unityhub"
+fetch.url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-$ver.deb"
 
 # python modules
 [doq]
