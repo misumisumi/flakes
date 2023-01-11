@@ -14,7 +14,7 @@ fetch.github = 'tonyfettes/fcitx5-nord'
 
 [juce]
 src.github_tag = 'juce-framework/JUCE'
-src.ignored = '7.0.3'
+# src.ignored = '7.0.3'
 fetch.github = 'juce-framework/JUCE'
 
 [knp]

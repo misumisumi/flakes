@@ -10,6 +10,7 @@
                 }
             ]
         },
+        "date": null,
         "extract": null,
         "name": "asusctl",
         "passthru": null,
@@ -28,6 +29,7 @@
     },
     "doq": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "doq",
         "passthru": null,
@@ -42,6 +44,7 @@
     },
     "droidcam-obs-plugin": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "droidcam-obs-plugin",
         "passthru": null,
@@ -56,6 +59,7 @@
     },
     "fcitx5-nord": {
         "cargoLocks": null,
+        "date": "2021-07-27",
         "extract": null,
         "name": "fcitx5-nord",
         "passthru": null,
@@ -75,6 +79,7 @@
     },
     "juce": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "juce",
         "passthru": null,
@@ -86,14 +91,15 @@
             "name": null,
             "owner": "juce-framework",
             "repo": "JUCE",
-            "rev": "7.0.2",
-            "sha256": "sha256-G531oy31eAXdBOnB6HWKP697BBpRqMUd+xbVlZiwXGs=",
+            "rev": "7.0.4",
+            "sha256": "sha256-R9kckKyzTUD1lPf68hDISbMJLcxEFNPVDR6nbbRoi14=",
             "type": "github"
         },
-        "version": "7.0.2"
+        "version": "7.0.4"
     },
     "knp": {
         "cargoLocks": null,
+        "date": "2022-06-14",
         "extract": null,
         "name": "knp",
         "passthru": null,
@@ -113,6 +119,7 @@
     },
     "notify-rust": {
         "cargoLocks": null,
+        "date": "2022-11-30",
         "extract": null,
         "name": "notify-rust",
         "passthru": null,
@@ -132,6 +139,7 @@
     },
     "pyknp": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "pyknp",
         "passthru": null,
@@ -146,6 +154,7 @@
     },
     "snack": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "snack",
         "passthru": null,
@@ -165,6 +174,7 @@
                 {}
             ]
         },
+        "date": null,
         "extract": null,
         "name": "supergfxctl",
         "passthru": null,
@@ -183,6 +193,7 @@
     },
     "wavesurfer": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "wavesurfer",
         "passthru": null,
@@ -197,6 +208,7 @@
     },
     "xp-pen-tablet": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "xp-pen-tablet",
         "passthru": null,
