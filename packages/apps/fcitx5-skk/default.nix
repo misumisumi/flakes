@@ -13,6 +13,10 @@ stdenv.mkDerivation
     "-DCMAKE_INSTALL_PREFIX=/"
     "-DCMAKE_INSTALL_LIBDIR=/lib"
   ];
+  patchPhase = ''
+    substituteInPlace CMakeLists.txt \
+      --replace /usr/share/skk/SKK-JISYO.L ${skk-dicts}/share/SKK-JISYO.L
+  '';
 
   buildPhase = ''
     cmake $cmakeFlags .
