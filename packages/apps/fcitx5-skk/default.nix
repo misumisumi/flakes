@@ -6,10 +6,11 @@ stdenv.mkDerivation
 
   nativeBuildInputs = [ cmake ninja extra-cmake-modules pkg-config ];
   buildInputs = [ fcitx5 libsForQt5.fcitx5-qt qt5.qtbase libskk skk-dicts ];
+  dontWrapQtApps = true;
 
   cmakeFlags = [
     "-GNinja"
-    "-DCMAKE_INSTALL_PREFIX=/share"
+    "-DCMAKE_INSTALL_PREFIX=/"
     "-DCMAKE_INSTALL_LIBDIR=/lib"
   ];
 
@@ -19,7 +20,10 @@ stdenv.mkDerivation
   '';
 
   installPhase = ''
-    DESTDIR=$out ninja install
+    mkdir $out
+    DESTDIR=build ninja install
+    cp -r build/usr/share $out/
+    cp -r build/lib $out/
   '';
 
   meta = with lib; {
