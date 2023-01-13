@@ -1,16 +1,20 @@
-[flake-asusctl]
+[asusctl-latest]
 # src.aur = 'asusctl'
 src.manual = '4.5.1'
 fetch.git = 'https://gitlab.com/asus-linux/asusctl'
 cargo_locks = [ 'Cargo.lock' ]
 
 [droidcam-obs-plugin]
-src.github_tag = "dev47apps/droidcam-obs-plugin"
-fetch.url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux.zip"
+src.github_tag = 'dev47apps/droidcam-obs-plugin'
+fetch.url = 'https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux.zip'
 
 [fcitx5-nord]
 src.git = 'https://github.com/tonyfettes/fcitx5-nord.git'
 fetch.github = 'tonyfettes/fcitx5-nord'
+
+[fcitx5-skk]
+src.github_tag = 'fcitx/fcitx5-skk'
+fetch.github = 'fcitx/fcitx5-skk'
 
 [juce]
 src.github_tag = 'juce-framework/JUCE'
@@ -30,7 +34,7 @@ src.regex = 'Snack v[0-9]+\.[0-9]+\.[0-9]+'
 src.prefix = 'Snack v'
 fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
 
-[flake-supergfxctl]
+[supergfxctl-latest]
 src.aur = 'supergfxctl'
 fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
 cargo_locks = [ 'Cargo.lock' ]
@@ -45,8 +49,8 @@ src.aur = 'xp-pen-tablet'
 fetch.url = 'https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html'
 
 [unityhub-latest]
-src.aur = "unityhub"
-fetch.url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-$ver.deb"
+src.aur = 'unityhub'
+fetch.url = 'https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-$ver.deb'
 
 # python modules
 [doq]
