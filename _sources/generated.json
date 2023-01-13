@@ -1,4 +1,32 @@
 {
+    "asusctl-latest": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./asusctl-latest-4.5.1/Cargo.lock",
+                {
+                    "eframe-0.19.0": "sha256-HW7gfs8vXXhQbNTBPdl3KurqcjvZHANoF2t0DAB+QDI=",
+                    "notify-rust-4.5.11": "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=",
+                    "supergfxctl-5.0.2": "sha256-N2k/vkv+bct+Lo3y5jzpwdEGBcoOAtX9SBI8inNQqGQ="
+                }
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "asusctl-latest",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "4.5.1",
+            "sha256": "sha256-5LlPDti7LRa1QiwNyln2GwX6JBN0XH4EZ9OpczLSU0g=",
+            "type": "git",
+            "url": "https://gitlab.com/asus-linux/asusctl"
+        },
+        "version": "4.5.1"
+    },
     "doq": {
         "cargoLocks": null,
         "date": null,
@@ -49,20 +77,11 @@
         },
         "version": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1"
     },
-    "flake-asusctl": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./flake-asusctl-4.5.1/Cargo.lock",
-                {
-                    "eframe-0.19.0": "sha256-HW7gfs8vXXhQbNTBPdl3KurqcjvZHANoF2t0DAB+QDI=",
-                    "notify-rust-4.5.11": "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=",
-                    "supergfxctl-5.0.2": "sha256-N2k/vkv+bct+Lo3y5jzpwdEGBcoOAtX9SBI8inNQqGQ="
-                }
-            ]
-        },
+    "fcitx5-skk": {
+        "cargoLocks": null,
         "date": null,
         "extract": null,
-        "name": "flake-asusctl",
+        "name": "fcitx5-skk",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -70,36 +89,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "4.5.1",
-            "sha256": "sha256-5LlPDti7LRa1QiwNyln2GwX6JBN0XH4EZ9OpczLSU0g=",
-            "type": "git",
-            "url": "https://gitlab.com/asus-linux/asusctl"
+            "owner": "fcitx",
+            "repo": "fcitx5-skk",
+            "rev": "5.0.14",
+            "sha256": "sha256-12N7ctBj3yQKOc4wbov2ea7DQ5OGLVZEE++lSF3Ib1Q=",
+            "type": "github"
         },
-        "version": "4.5.1"
-    },
-    "flake-supergfxctl": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./flake-supergfxctl-5.0.1/Cargo.lock",
-                {}
-            ]
-        },
-        "date": null,
-        "extract": null,
-        "name": "flake-supergfxctl",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "5.0.1",
-            "sha256": "sha256-4q+7F8s6y+oDkBUKIBBsXZ2EtADcChdnjmABjBUnH9k=",
-            "type": "git",
-            "url": "https://gitlab.com/asus-linux/supergfxctl"
-        },
-        "version": "5.0.1"
+        "version": "5.0.14"
     },
     "juce": {
         "cargoLocks": null,
@@ -190,6 +186,30 @@
             "url": "http://www.speech.kth.se/snack/dist/snack2.2.10.tar.gz"
         },
         "version": "2.2.10"
+    },
+    "supergfxctl-latest": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./supergfxctl-latest-5.0.1/Cargo.lock",
+                {}
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "supergfxctl-latest",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "5.0.1",
+            "sha256": "sha256-4q+7F8s6y+oDkBUKIBBsXZ2EtADcChdnjmABjBUnH9k=",
+            "type": "git",
+            "url": "https://gitlab.com/asus-linux/supergfxctl"
+        },
+        "version": "5.0.1"
     },
     "unityhub-latest": {
         "cargoLocks": null,

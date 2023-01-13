@@ -23,9 +23,9 @@ in
       };
       package = mkOption {
         type = types.package;
-        default = pkgs.flake-asusctl;
-        defaultText = literalExpression "pkgs.flake-asusctl";
-        example = literalExpression "pkgs.flake-asusctl";
+        default = pkgs.asusctl-latest;
+        defaultText = literalExpression "pkgs.asusctl-latest";
+        example = literalExpression "pkgs.asusctl-latest";
         description = lib.mdDoc ''
           package of asusctl
         '';
@@ -42,7 +42,7 @@ in
           {
             nativeBuildInputs = [ pkgs.remarshal ];
           } ''
-          toml2json "${pkgs.flake-asusctl}/etc/asusd/asusd-ledmodes.toml" "$out"
+          toml2json "${pkgs.asusctl-latest}/etc/asusd/asusd-ledmodes.toml" "$out"
         '';
         # Convert JSON to Nix attribute-set.
         attrs = builtins.fromJSON (builtins.readFile json);

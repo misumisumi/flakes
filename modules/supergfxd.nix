@@ -1,12 +1,12 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.services.flake-supergfxd;
+  cfg = config.services.supergfxd-latest;
   json = pkgs.formats.json { };
 in
 {
   options = {
-    services.flake-supergfxd = {
+    services.supergfxd-latest = {
       enable = lib.mkEnableOption (lib.mdDoc "Enable the supergfxd service");
 
       settings = lib.mkOption {
@@ -21,7 +21,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = [ pkgs.supergfxctl ];
+    environment.systemPackages = [ pkgs.supergfxctl-latest ];
 
     environment.etc."supergfxd.conf" = lib.mkIf (cfg.settings != null) {
       source = json.generate "supergfxd.conf" cfg.settings;
@@ -30,12 +30,12 @@ in
 
     services.dbus.enable = true;
 
-    systemd.packages = [ pkgs.supergfxctl ];
+    systemd.packages = [ pkgs.supergfxctl-latest ];
     systemd.services.supergfxd.wantedBy = [ "multi-user.target" ];
 
-    services.dbus.packages = [ pkgs.supergfxctl ];
-    services.udev.packages = [ pkgs.supergfxctl ];
+    services.dbus.packages = [ pkgs.supergfxctl-latest ];
+    services.udev.packages = [ pkgs.supergfxctl-latest ];
   };
 
-  meta.maintainers = pkgs.supergfxctl.meta.maintainers;
+  meta.maintainers = pkgs.supergfxctl-latest.meta.maintainers;
 }
