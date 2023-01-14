@@ -57,6 +57,26 @@
         },
         "version": "2.0.1"
     },
+    "fcitx5-mozc-ext-neologd": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "fcitx5-mozc-ext-neologd",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "fcitx",
+            "repo": "mozc",
+            "rev": "1882e33b61673b66d63277f82b4c80ae4e506c10",
+            "sha256": "sha256-R+w0slVFpqtt7PIr1pyupJjRoQsABVZiMdZ9fKGKAqw=",
+            "type": "github"
+        },
+        "version": "1882e33b61673b66d63277f82b4c80ae4e506c10"
+    },
     "fcitx5-nord": {
         "cargoLocks": null,
         "date": "2021-07-27",
@@ -96,6 +116,25 @@
             "type": "github"
         },
         "version": "5.0.14"
+    },
+    "japanese-usege-dictionary": {
+        "cargoLocks": null,
+        "date": "2018-07-01",
+        "extract": null,
+        "name": "japanese-usege-dictionary",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "a4a66772e33746b91e99caceecced9a28507e925",
+            "sha256": "sha256-qnWA+lesLo3Odk8gY9UTKQr/YmIn+nCcbtKDjUDobII=",
+            "type": "git",
+            "url": "https://github.com/hiroyuki-komatsu/japanese-usage-dictionary"
+        },
+        "version": "a4a66772e33746b91e99caceecced9a28507e925"
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
@@ -151,6 +190,75 @@
             "type": "github"
         },
         "version": "25425d33907ce69c5fa5b584ba58183020a07bba"
+    },
+    "mecab-ipadic-neologd": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "mecab-ipadic-neologd",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "neologd",
+            "repo": "mecab-ipadic-neologd",
+            "rev": "v0.0.7",
+            "sha256": "sha256-6mZ+Wcre0ZTUitso9kQn11um29cdOUaOAbhPgSq7OxU=",
+            "type": "github"
+        },
+        "version": "v0.0.7"
+    },
+    "mozc-dict-jigyosyo": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "mozc-dict-jigyosyo",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-bI1F/UyrBAnMwcrZff4GDc87jAfnPm2UJqh+itzsOkM=",
+            "type": "url",
+            "url": "https://osdn.net/projects/ponsfoot-aur/storage/mozc/jigyosyo-202110.zip"
+        },
+        "version": "202110"
+    },
+    "mozc-dict-x-ken-all": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "mozc-dict-x-ken-all",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-85iKUrxpGdcoSg7wzbmrAn+HZ8ud58uEabEuH7PLavk=",
+            "type": "url",
+            "url": "https://osdn.net/projects/ponsfoot-aur/storage/mozc/x-ken-all-202110.zip"
+        },
+        "version": "202110"
+    },
+    "mozcdict-ext": {
+        "cargoLocks": null,
+        "date": "2023-01-13",
+        "extract": null,
+        "name": "mozcdict-ext",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "e218f784fe56bdde5577e613aedb8c55a6325296",
+            "sha256": "sha256-cOehIQov1C3v9RA5AAoQ4jyad3aLSVeQipvRDglQ3RY=",
+            "type": "git",
+            "url": "https://github.com/reasonset/mozcdict-ext"
+        },
+        "version": "e218f784fe56bdde5577e613aedb8c55a6325296"
     },
     "notify-rust": {
         "cargoLocks": null,

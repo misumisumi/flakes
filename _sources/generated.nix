@@ -37,6 +37,17 @@
       sha256 = "sha256-WFDTNoZ51O31NCxr6UknzfCBbkOcqjuo9wHejxJEV30=";
     };
   };
+  fcitx5-mozc-ext-neologd = {
+    pname = "fcitx5-mozc-ext-neologd";
+    version = "1882e33b61673b66d63277f82b4c80ae4e506c10";
+    src = fetchFromGitHub ({
+      owner = "fcitx";
+      repo = "mozc";
+      rev = "1882e33b61673b66d63277f82b4c80ae4e506c10";
+      fetchSubmodules = false;
+      sha256 = "sha256-R+w0slVFpqtt7PIr1pyupJjRoQsABVZiMdZ9fKGKAqw=";
+    });
+  };
   fcitx5-nord = {
     pname = "fcitx5-nord";
     version = "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1";
@@ -59,6 +70,19 @@
       fetchSubmodules = false;
       sha256 = "sha256-12N7ctBj3yQKOc4wbov2ea7DQ5OGLVZEE++lSF3Ib1Q=";
     });
+  };
+  japanese-usege-dictionary = {
+    pname = "japanese-usege-dictionary";
+    version = "a4a66772e33746b91e99caceecced9a28507e925";
+    src = fetchgit {
+      url = "https://github.com/hiroyuki-komatsu/japanese-usage-dictionary";
+      rev = "a4a66772e33746b91e99caceecced9a28507e925";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-qnWA+lesLo3Odk8gY9UTKQr/YmIn+nCcbtKDjUDobII=";
+    };
+    date = "2018-07-01";
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
@@ -91,6 +115,46 @@
       sha256 = "sha256-P33+6Iwh7fYugZrFRylrtzz24EjwUToXJ/nbDw06Pbg=";
     });
     date = "2022-06-14";
+  };
+  mecab-ipadic-neologd = {
+    pname = "mecab-ipadic-neologd";
+    version = "v0.0.7";
+    src = fetchFromGitHub ({
+      owner = "neologd";
+      repo = "mecab-ipadic-neologd";
+      rev = "v0.0.7";
+      fetchSubmodules = false;
+      sha256 = "sha256-6mZ+Wcre0ZTUitso9kQn11um29cdOUaOAbhPgSq7OxU=";
+    });
+  };
+  mozc-dict-jigyosyo = {
+    pname = "mozc-dict-jigyosyo";
+    version = "202110";
+    src = fetchurl {
+      url = "https://osdn.net/projects/ponsfoot-aur/storage/mozc/jigyosyo-202110.zip";
+      sha256 = "sha256-bI1F/UyrBAnMwcrZff4GDc87jAfnPm2UJqh+itzsOkM=";
+    };
+  };
+  mozc-dict-x-ken-all = {
+    pname = "mozc-dict-x-ken-all";
+    version = "202110";
+    src = fetchurl {
+      url = "https://osdn.net/projects/ponsfoot-aur/storage/mozc/x-ken-all-202110.zip";
+      sha256 = "sha256-85iKUrxpGdcoSg7wzbmrAn+HZ8ud58uEabEuH7PLavk=";
+    };
+  };
+  mozcdict-ext = {
+    pname = "mozcdict-ext";
+    version = "e218f784fe56bdde5577e613aedb8c55a6325296";
+    src = fetchgit {
+      url = "https://github.com/reasonset/mozcdict-ext";
+      rev = "e218f784fe56bdde5577e613aedb8c55a6325296";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-cOehIQov1C3v9RA5AAoQ4jyad3aLSVeQipvRDglQ3RY=";
+    };
+    date = "2023-01-13";
   };
   notify-rust = {
     pname = "notify-rust";
