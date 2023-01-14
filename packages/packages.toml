@@ -1,6 +1,6 @@
 [asusctl-latest]
-# src.aur = 'asusctl'
-src.manual = '4.5.1'
+src.aur = 'asusctl'
+# src.manual = '4.5.1'
 fetch.git = 'https://gitlab.com/asus-linux/asusctl'
 cargo_locks = [ 'Cargo.lock' ]
 
@@ -28,6 +28,14 @@ fetch.github = 'ku-nlp/knp'
 src.git = 'https://github.com/flukejones/notify-rust.git'
 fetch.github = 'flukejones/notify-rust'
 
+[skk-emoji-jisyo]
+src.github_tag = 'uasi/skk-emoji-jisyo'
+fetch.github = 'uasi/skk-emoji-jisyo'
+
+[jawiki-kana-kanji-dict]
+src.git = 'https://github.com/tokuhirom/jawiki-kana-kanji-dict.git'
+fetch.url = 'https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/$ver/SKK-JISYO.jawiki'
+
 [snack]
 src.webpage = 'https://www.speech.kth.se/snack/'
 src.regex = 'Snack v[0-9]+\.[0-9]+\.[0-9]+'
@@ -37,6 +45,11 @@ fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
 [supergfxctl-latest]
 src.aur = 'supergfxctl'
 fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
+cargo_locks = [ 'Cargo.lock' ]
+
+[yaskkserv2]
+src.github_tag = 'wachikun/yaskkserv2'
+fetch.github = 'wachikun/yaskkserv2'
 cargo_locks = [ 'Cargo.lock' ]
 
 [wavesurfer]

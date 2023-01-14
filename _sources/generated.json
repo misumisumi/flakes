@@ -2,11 +2,11 @@
     "asusctl-latest": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./asusctl-latest-4.5.1/Cargo.lock",
+                "./asusctl-latest-4.5.8/Cargo.lock",
                 {
-                    "eframe-0.19.0": "sha256-HW7gfs8vXXhQbNTBPdl3KurqcjvZHANoF2t0DAB+QDI=",
-                    "notify-rust-4.5.11": "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=",
-                    "supergfxctl-5.0.2": "sha256-N2k/vkv+bct+Lo3y5jzpwdEGBcoOAtX9SBI8inNQqGQ="
+                    "ecolor-0.20.0": "sha256-tnjFkaCWmCPGw3huQN9VOAeiH+zk3Zk9xYoRKmg2WQg=",
+                    "notify-rust-4.6.0": "sha256-jhCgisA9f6AI9e9JQUYRtEt47gQnDv5WsdRKFoKvHJs=",
+                    "supergfxctl-5.0.2": "sha256-zp92mWyWUEWUP4kEyHbiUyYTtp2kLv+gxkPzOu77fi8="
                 }
             ]
         },
@@ -20,12 +20,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "4.5.1",
-            "sha256": "sha256-5LlPDti7LRa1QiwNyln2GwX6JBN0XH4EZ9OpczLSU0g=",
+            "rev": "4.5.8",
+            "sha256": "sha256-6AitRpyLIq5by9/rXdIC8AChMVKZmR1Eo5GTo+DtGhc=",
             "type": "git",
             "url": "https://gitlab.com/asus-linux/asusctl"
         },
-        "version": "4.5.1"
+        "version": "4.5.8"
     },
     "doq": {
         "cargoLocks": null,
@@ -96,6 +96,21 @@
             "type": "github"
         },
         "version": "5.0.14"
+    },
+    "jawiki-kana-kanji-dict": {
+        "cargoLocks": null,
+        "date": "2023-01-13",
+        "extract": null,
+        "name": "jawiki-kana-kanji-dict",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-wZmFTnmzGZBPBvZBZm3C10OtyiXPsNpzpZdGKL1cIMY=",
+            "type": "url",
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/04d892f0c37daba5b5e182c0784a027765ef6a6c/SKK-JISYO.jawiki"
+        },
+        "version": "04d892f0c37daba5b5e182c0784a027765ef6a6c"
     },
     "juce": {
         "cargoLocks": null,
@@ -171,6 +186,26 @@
             "url": "https://pypi.io/packages/source/p/pyknp/pyknp-0.6.1.tar.gz"
         },
         "version": "0.6.1"
+    },
+    "skk-emoji-jisyo": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "skk-emoji-jisyo",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "uasi",
+            "repo": "skk-emoji-jisyo",
+            "rev": "v0.0.7",
+            "sha256": "sha256-cxaRVV5d7zZdhWxq6m+NjA9P9PKZfwiimCToo81yxkY=",
+            "type": "github"
+        },
+        "version": "v0.0.7"
     },
     "snack": {
         "cargoLocks": null,
@@ -255,5 +290,30 @@
             "url": "https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html"
         },
         "version": "3.2.3.220323"
+    },
+    "yaskkserv2": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./yaskkserv2-0.1.5/Cargo.lock",
+                {}
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "yaskkserv2",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "wachikun",
+            "repo": "yaskkserv2",
+            "rev": "0.1.5",
+            "sha256": "sha256-S1xuraK85gBI9DV8bojjNBgRD9R98pWR2eaeji5rC6M=",
+            "type": "github"
+        },
+        "version": "0.1.5"
     }
 }

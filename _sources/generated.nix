@@ -3,21 +3,21 @@
 {
   asusctl-latest = {
     pname = "asusctl-latest";
-    version = "4.5.1";
+    version = "4.5.8";
     src = fetchgit {
       url = "https://gitlab.com/asus-linux/asusctl";
-      rev = "4.5.1";
+      rev = "4.5.8";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-5LlPDti7LRa1QiwNyln2GwX6JBN0XH4EZ9OpczLSU0g=";
+      sha256 = "sha256-6AitRpyLIq5by9/rXdIC8AChMVKZmR1Eo5GTo+DtGhc=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./asusctl-latest-4.5.1/Cargo.lock;
+      lockFile = ./asusctl-latest-4.5.8/Cargo.lock;
       outputHashes = {
-        "eframe-0.19.0" = "sha256-HW7gfs8vXXhQbNTBPdl3KurqcjvZHANoF2t0DAB+QDI=";
-        "supergfxctl-5.0.2" = "sha256-N2k/vkv+bct+Lo3y5jzpwdEGBcoOAtX9SBI8inNQqGQ=";
-        "notify-rust-4.5.11" = "sha256-ybjbKl/5326L4RKene8WrBd3k6KCbanx/UrFbUzoxpo=";
+        "supergfxctl-5.0.2" = "sha256-zp92mWyWUEWUP4kEyHbiUyYTtp2kLv+gxkPzOu77fi8=";
+        "ecolor-0.20.0" = "sha256-tnjFkaCWmCPGw3huQN9VOAeiH+zk3Zk9xYoRKmg2WQg=";
+        "notify-rust-4.6.0" = "sha256-jhCgisA9f6AI9e9JQUYRtEt47gQnDv5WsdRKFoKvHJs=";
       };
     };
   };
@@ -59,6 +59,15 @@
       fetchSubmodules = false;
       sha256 = "sha256-12N7ctBj3yQKOc4wbov2ea7DQ5OGLVZEE++lSF3Ib1Q=";
     });
+  };
+  jawiki-kana-kanji-dict = {
+    pname = "jawiki-kana-kanji-dict";
+    version = "04d892f0c37daba5b5e182c0784a027765ef6a6c";
+    src = fetchurl {
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/04d892f0c37daba5b5e182c0784a027765ef6a6c/SKK-JISYO.jawiki";
+      sha256 = "sha256-wZmFTnmzGZBPBvZBZm3C10OtyiXPsNpzpZdGKL1cIMY=";
+    };
+    date = "2023-01-13";
   };
   juce = {
     pname = "juce";
@@ -102,6 +111,17 @@
       url = "https://pypi.io/packages/source/p/pyknp/pyknp-0.6.1.tar.gz";
       sha256 = "sha256-X8ooinAwTHRdINpWV8YXW16t96elce1PV7sVfrbn300=";
     };
+  };
+  skk-emoji-jisyo = {
+    pname = "skk-emoji-jisyo";
+    version = "v0.0.7";
+    src = fetchFromGitHub ({
+      owner = "uasi";
+      repo = "skk-emoji-jisyo";
+      rev = "v0.0.7";
+      fetchSubmodules = false;
+      sha256 = "sha256-cxaRVV5d7zZdhWxq6m+NjA9P9PKZfwiimCToo81yxkY=";
+    });
   };
   snack = {
     pname = "snack";
@@ -151,6 +171,23 @@
     src = fetchurl {
       url = "https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html";
       sha256 = "sha256-cLbcE0WVjBhY0JGj1IvddckfzIeboXVznvkVJ5C9yys=";
+    };
+  };
+  yaskkserv2 = {
+    pname = "yaskkserv2";
+    version = "0.1.5";
+    src = fetchFromGitHub ({
+      owner = "wachikun";
+      repo = "yaskkserv2";
+      rev = "0.1.5";
+      fetchSubmodules = false;
+      sha256 = "sha256-S1xuraK85gBI9DV8bojjNBgRD9R98pWR2eaeji5rC6M=";
+    });
+    cargoLock."Cargo.lock" = {
+      lockFile = ./yaskkserv2-0.1.5/Cargo.lock;
+      outputHashes = {
+        
+      };
     };
   };
 }
