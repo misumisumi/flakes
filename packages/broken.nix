@@ -1,2 +1,4 @@
 [
+  "asusctl-latest"
+  "supergfxctl-latest"
 ]
