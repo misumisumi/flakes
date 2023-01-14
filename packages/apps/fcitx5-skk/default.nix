@@ -15,6 +15,7 @@
 , useAssoc ? false
 , useEdict ? false
 , useEmoji ? false
+, skk-emoji-jisyo ? null
 }:
 let
   dicts = { "Minimal" = "SKK-JISYO.S"; "Middle" = "SKK-JISYO.M"; "Large" = "SKK-JISYO.L"; "Combined" = "SKK-JISYO.combined"; };
