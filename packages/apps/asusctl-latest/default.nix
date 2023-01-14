@@ -1,26 +1,23 @@
-{ stdenv,
-  lib,
-  rustPlatform,
-  name,
-  pkgSources,
-  cargo,
-  expat,
-  fontconfig,
-  freetype,
-  libappindicator-gtk3,
-  libusb1,
-  pkg-config, 
-  power-profiles-daemon,
-  rustc,
-  rustfmt,
-  systemd,
+{ stdenv
+, lib
+, rustPlatform
+, name
+, pkgSources
+, expat
+, fontconfig
+, freetype
+, libappindicator-gtk3
+, libusb1
+, pkg-config
+, power-profiles-daemon
+, systemd
 }:
 
 rustPlatform.buildRustPackage rec {
   inherit (pkgSources."${name}") pname version src;
   cargoLock = pkgSources."${name}".cargoLock."Cargo.lock";
 
-  buildInputs = [ cargo expat fontconfig freetype libappindicator-gtk3 libusb1 power-profiles-daemon rustc rustfmt systemd ];
+  buildInputs = [ expat fontconfig freetype libappindicator-gtk3 libusb1 power-profiles-daemon systemd ];
   nativeBuildInputs = [ pkg-config ];
 
   doCheck = false;

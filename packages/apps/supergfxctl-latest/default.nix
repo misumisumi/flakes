@@ -1,23 +1,20 @@
-{ stdenv,
-  lib,
-  rustPlatform,
-  name,
-  pkgSources,
-  makeWrapper,
-  cargo,
-  gcc,
-  kmod,
-  pkg-config,
-  rustc,
-  rustfmt,
-  udev
+{ stdenv
+, lib
+, rustPlatform
+, name
+, pkgSources
+, makeWrapper
+, gcc
+, kmod
+, pkg-config
+, udev
 }:
 
 rustPlatform.buildRustPackage rec {
   inherit (pkgSources."${name}") pname version src;
   cargoLock = pkgSources."${name}".cargoLock."Cargo.lock";
 
-  buildInputs = [ makeWrapper cargo gcc kmod pkg-config rustc rustfmt udev ];
+  buildInputs = [ makeWrapper gcc kmod pkg-config udev ];
   nativeBuildInputs = [ pkg-config ];
 
   doCheck = false;
