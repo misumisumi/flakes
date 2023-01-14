@@ -26,7 +26,7 @@ in
           ExecStart = "${pkgs.yaskkserv2}/bin/yaskkserv2 --midashi-utf8 --no-daemonize ${pkgs.yaskkserv2-dict}/share/dictionary.yaskkserv2";
           Restart = "on-failure";
         };
-        Install.WantedBy = [ "default.target" ];
+        Install.WantedBy = [ "graphical-session.target" "fcitx5-daemon.service" ];
       };
     };
   };
