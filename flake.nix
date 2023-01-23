@@ -91,7 +91,7 @@
       let
         pkgs = import nixpkgs {
           system = "${system}";
-          overlays = [ self.overlays.default nvfetcher.overlay ]; # nvfetcherもoverlayする
+          overlays = [ self.overlays.default nvfetcher.overlays.default ]; # nvfetcherもoverlayする
           config.allowUnfree = true;
         }; in
       with pkgs.legacyPackages.${system}; rec {

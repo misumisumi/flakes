@@ -104,6 +104,9 @@ stdenv.mkDerivation rec {
       --replace "return (os == TargetOS::windows ? \"C:\\\modules\" : \"~/modules\");" \
         "return (os == TargetOS::windows ? \"C:\\\modules\" : \"~/.local/share/juce/modules\");"
   '';
+  preConfigure = ''
+    export LDFLAGS="-Wl,--copy-dt-needed-entries"
+  '';
 
   cmakeFlags = [
     "-DCMAKE_BUILD_TYPE=None"
