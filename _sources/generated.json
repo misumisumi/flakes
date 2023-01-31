@@ -27,6 +27,36 @@
         },
         "version": "4.5.8"
     },
+    "cups-brother-hll5100dn-cupswrapper": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "cups-brother-hll5100dn-cupswrapper",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-i309lhjE6FTNd8f0d4vv7/oaNUt165scU9Gzlff8gcE=",
+            "type": "url",
+            "url": "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-3.5.1-1.i386.deb"
+        },
+        "version": "3.5.1-1"
+    },
+    "cups-brother-hll5100dn-lpr": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "cups-brother-hll5100dn-lpr",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-JnPiBVJ+ZJKivjq+Kizcf5U8vilOFdLVWBuRUiWJ5zE=",
+            "type": "url",
+            "url": "https://download.brother.com/welcome/dlf102553/hll5100dnlpr-3.5.1-1.i386.deb"
+        },
+        "version": "3.5.1-1"
+    },
     "doq": {
         "cargoLocks": null,
         "date": null,
@@ -138,18 +168,18 @@
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2023-01-13",
+        "date": "2023-01-30",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-wZmFTnmzGZBPBvZBZm3C10OtyiXPsNpzpZdGKL1cIMY=",
+            "sha256": "sha256-rD+jXusv5Ozow370vn4ATIqJN2yR4Aao3RZiSeh4Ykk=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/04d892f0c37daba5b5e182c0784a027765ef6a6c/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/5b0de6746562a40f69fca22c9f6fe2db4f3ec749/SKK-JISYO.jawiki"
         },
-        "version": "04d892f0c37daba5b5e182c0784a027765ef6a6c"
+        "version": "5b0de6746562a40f69fca22c9f6fe2db4f3ec749"
     },
     "juce": {
         "cargoLocks": null,
@@ -165,11 +195,11 @@
             "name": null,
             "owner": "juce-framework",
             "repo": "JUCE",
-            "rev": "7.0.4",
-            "sha256": "sha256-R9kckKyzTUD1lPf68hDISbMJLcxEFNPVDR6nbbRoi14=",
+            "rev": "7.0.5",
+            "sha256": "sha256-NRF9oSE04hk6KVSxuUBpP+z+DKRyb6pzBXtz/pLz0/0=",
             "type": "github"
         },
-        "version": "7.0.4"
+        "version": "7.0.5"
     },
     "knp": {
         "cargoLocks": null,
@@ -243,7 +273,7 @@
     },
     "mozcdict-ext": {
         "cargoLocks": null,
-        "date": "2023-01-13",
+        "date": "2023-01-15",
         "extract": null,
         "name": "mozcdict-ext",
         "passthru": null,
@@ -253,12 +283,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "e218f784fe56bdde5577e613aedb8c55a6325296",
-            "sha256": "sha256-cOehIQov1C3v9RA5AAoQ4jyad3aLSVeQipvRDglQ3RY=",
+            "rev": "21294dd9671a0c03f24fed2b528befb1e516c843",
+            "sha256": "sha256-d1Z/xHwa1e4zy4UtHtIgZV5ZFSvz/nFNY0LhOOmLuRY=",
             "type": "git",
             "url": "https://github.com/reasonset/mozcdict-ext"
         },
-        "version": "e218f784fe56bdde5577e613aedb8c55a6325296"
+        "version": "21294dd9671a0c03f24fed2b528befb1e516c843"
     },
     "notify-rust": {
         "cargoLocks": null,

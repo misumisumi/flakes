@@ -21,6 +21,22 @@
       };
     };
   };
+  cups-brother-hll5100dn-cupswrapper = {
+    pname = "cups-brother-hll5100dn-cupswrapper";
+    version = "3.5.1-1";
+    src = fetchurl {
+      url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-3.5.1-1.i386.deb";
+      sha256 = "sha256-i309lhjE6FTNd8f0d4vv7/oaNUt165scU9Gzlff8gcE=";
+    };
+  };
+  cups-brother-hll5100dn-lpr = {
+    pname = "cups-brother-hll5100dn-lpr";
+    version = "3.5.1-1";
+    src = fetchurl {
+      url = "https://download.brother.com/welcome/dlf102553/hll5100dnlpr-3.5.1-1.i386.deb";
+      sha256 = "sha256-JnPiBVJ+ZJKivjq+Kizcf5U8vilOFdLVWBuRUiWJ5zE=";
+    };
+  };
   doq = {
     pname = "doq";
     version = "0.9.1";
@@ -86,22 +102,22 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "04d892f0c37daba5b5e182c0784a027765ef6a6c";
+    version = "5b0de6746562a40f69fca22c9f6fe2db4f3ec749";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/04d892f0c37daba5b5e182c0784a027765ef6a6c/SKK-JISYO.jawiki";
-      sha256 = "sha256-wZmFTnmzGZBPBvZBZm3C10OtyiXPsNpzpZdGKL1cIMY=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/5b0de6746562a40f69fca22c9f6fe2db4f3ec749/SKK-JISYO.jawiki";
+      sha256 = "sha256-rD+jXusv5Ozow370vn4ATIqJN2yR4Aao3RZiSeh4Ykk=";
     };
-    date = "2023-01-13";
+    date = "2023-01-30";
   };
   juce = {
     pname = "juce";
-    version = "7.0.4";
+    version = "7.0.5";
     src = fetchFromGitHub ({
       owner = "juce-framework";
       repo = "JUCE";
-      rev = "7.0.4";
+      rev = "7.0.5";
       fetchSubmodules = false;
-      sha256 = "sha256-R9kckKyzTUD1lPf68hDISbMJLcxEFNPVDR6nbbRoi14=";
+      sha256 = "sha256-NRF9oSE04hk6KVSxuUBpP+z+DKRyb6pzBXtz/pLz0/0=";
     });
   };
   knp = {
@@ -145,16 +161,16 @@
   };
   mozcdict-ext = {
     pname = "mozcdict-ext";
-    version = "e218f784fe56bdde5577e613aedb8c55a6325296";
+    version = "21294dd9671a0c03f24fed2b528befb1e516c843";
     src = fetchgit {
       url = "https://github.com/reasonset/mozcdict-ext";
-      rev = "e218f784fe56bdde5577e613aedb8c55a6325296";
+      rev = "21294dd9671a0c03f24fed2b528befb1e516c843";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-cOehIQov1C3v9RA5AAoQ4jyad3aLSVeQipvRDglQ3RY=";
+      sha256 = "sha256-d1Z/xHwa1e4zy4UtHtIgZV5ZFSvz/nFNY0LhOOmLuRY=";
     };
-    date = "2023-01-13";
+    date = "2023-01-15";
   };
   notify-rust = {
     pname = "notify-rust";
