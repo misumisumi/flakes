@@ -4,6 +4,10 @@ src.aur = 'asusctl'
 fetch.git = 'https://gitlab.com/asus-linux/asusctl'
 cargo_locks = [ 'Cargo.lock' ]
 
+[bt-dualboot]
+src.pypi = 'bt-dualboot'
+fetch.pypi = 'bt-dualboot'
+
 [cups-brother-hll5100dn-lpr]
 src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
 src.regex = "[0-9].[0-9].[0-9]-[0-9]"

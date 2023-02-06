@@ -27,6 +27,21 @@
         },
         "version": "4.5.8"
     },
+    "bt-dualboot": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "bt-dualboot",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-pjzGvLkotQllzyrnxqDIjGlpBOvUPkWpv0eooCUrgv8=",
+            "type": "url",
+            "url": "https://pypi.io/packages/source/b/bt-dualboot/bt-dualboot-1.0.1.tar.gz"
+        },
+        "version": "1.0.1"
+    },
     "cups-brother-hll5100dn-cupswrapper": {
         "cargoLocks": null,
         "date": null,
@@ -168,18 +183,18 @@
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2023-01-30",
+        "date": "2023-02-02",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-rD+jXusv5Ozow370vn4ATIqJN2yR4Aao3RZiSeh4Ykk=",
+            "sha256": "sha256-AsmiZCMe3eTAC6u1WXrJpwiVhci3XmKbCyYpuMOZw3s=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/5b0de6746562a40f69fca22c9f6fe2db4f3ec749/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/e31d3242e97260997497b9fef8c87f128168ea4a/SKK-JISYO.jawiki"
         },
-        "version": "5b0de6746562a40f69fca22c9f6fe2db4f3ec749"
+        "version": "e31d3242e97260997497b9fef8c87f128168ea4a"
     },
     "juce": {
         "cargoLocks": null,

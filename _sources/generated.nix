@@ -21,6 +21,14 @@
       };
     };
   };
+  bt-dualboot = {
+    pname = "bt-dualboot";
+    version = "1.0.1";
+    src = fetchurl {
+      url = "https://pypi.io/packages/source/b/bt-dualboot/bt-dualboot-1.0.1.tar.gz";
+      sha256 = "sha256-pjzGvLkotQllzyrnxqDIjGlpBOvUPkWpv0eooCUrgv8=";
+    };
+  };
   cups-brother-hll5100dn-cupswrapper = {
     pname = "cups-brother-hll5100dn-cupswrapper";
     version = "3.5.1-1";
@@ -102,12 +110,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "5b0de6746562a40f69fca22c9f6fe2db4f3ec749";
+    version = "e31d3242e97260997497b9fef8c87f128168ea4a";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/5b0de6746562a40f69fca22c9f6fe2db4f3ec749/SKK-JISYO.jawiki";
-      sha256 = "sha256-rD+jXusv5Ozow370vn4ATIqJN2yR4Aao3RZiSeh4Ykk=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/e31d3242e97260997497b9fef8c87f128168ea4a/SKK-JISYO.jawiki";
+      sha256 = "sha256-AsmiZCMe3eTAC6u1WXrJpwiVhci3XmKbCyYpuMOZw3s=";
     };
-    date = "2023-01-30";
+    date = "2023-02-02";
   };
   juce = {
     pname = "juce";
