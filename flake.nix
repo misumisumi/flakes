@@ -26,11 +26,11 @@
       isRunnableApp = pkgs: name: if pkgs.${name}.passthru.runnable or false then name else false;
       runnableApps = pkgs: ts: lib.remove false (map (isRunnableApp pkgs) ts);
 
-      appsDir = ./packages/apps;
-      pythonModulesDir = ./packages/python-modules;
+      appsDir = ./pkgs/apps;
+      pythonModulesDir = ./pkgs/python-modules;
 
       sources = import ./_sources/generated.nix;
-      broken = import ./packages/broken.nix;
+      broken = import ./pkgs/broken.nix;
 
       ls = path: builtins.readDir path;
       isDir = ts: t: if ts.${t} == "directory" then t else false;

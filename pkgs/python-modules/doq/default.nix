@@ -1,7 +1,8 @@
 { lib, pythonPackages, python3, name, pkgSources }:
 let
   inherit (pythonPackages) buildPythonPackage;
-in buildPythonPackage rec {
+in
+buildPythonPackage rec {
   inherit (pkgSources."${name}") pname version src;
 
   doCheck = false;
