@@ -192,6 +192,38 @@
     });
     date = "2022-11-30";
   };
+  plemoljp = {
+    pname = "plemoljp";
+    version = "v1.4.0";
+    src = fetchurl {
+      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_v1.4.0.zip";
+      sha256 = "sha256-pBam2nFjDt+rT6ndRzkg66ijguMPgfQ/TqNCkhehqYk=";
+    };
+  };
+  plemoljp_hs = {
+    pname = "plemoljp_hs";
+    version = "v1.4.0";
+    src = fetchurl {
+      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_HS_v1.4.0.zip";
+      sha256 = "sha256-mAvjDlUORmUDo1UlQOVlcCNE5HUVzVBLduZ6FqWYDZ0=";
+    };
+  };
+  plemoljp_nf = {
+    pname = "plemoljp_nf";
+    version = "v1.4.0";
+    src = fetchurl {
+      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_NF_v1.4.0.zip";
+      sha256 = "sha256-WfI9N5Xa6dxi4+NWgpzUluC96o7+/o15U6mOxehcZYA=";
+    };
+  };
+  plemoljp_nfj = {
+    pname = "plemoljp_nfj";
+    version = "v1.4.0";
+    src = fetchurl {
+      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_NFJ_v1.4.0.zip";
+      sha256 = "sha256-3uTIoVMFc4HP+Q62EJHtR7akL0V6EyQ/CrC38UHYHb8=";
+    };
+  };
   pyknp = {
     pname = "pyknp";
     version = "0.6.1";

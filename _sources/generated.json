@@ -325,6 +325,66 @@
         },
         "version": "c83082a2549932bde52a4ec449b9981fc39e9a0d"
     },
+    "plemoljp": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "plemoljp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-pBam2nFjDt+rT6ndRzkg66ijguMPgfQ/TqNCkhehqYk=",
+            "type": "url",
+            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_v1.4.0.zip"
+        },
+        "version": "v1.4.0"
+    },
+    "plemoljp_hs": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "plemoljp_hs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-mAvjDlUORmUDo1UlQOVlcCNE5HUVzVBLduZ6FqWYDZ0=",
+            "type": "url",
+            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_HS_v1.4.0.zip"
+        },
+        "version": "v1.4.0"
+    },
+    "plemoljp_nf": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "plemoljp_nf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-WfI9N5Xa6dxi4+NWgpzUluC96o7+/o15U6mOxehcZYA=",
+            "type": "url",
+            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_NF_v1.4.0.zip"
+        },
+        "version": "v1.4.0"
+    },
+    "plemoljp_nfj": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "plemoljp_nfj",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-3uTIoVMFc4HP+Q62EJHtR7akL0V6EyQ/CrC38UHYHb8=",
+            "type": "url",
+            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_NFJ_v1.4.0.zip"
+        },
+        "version": "v1.4.0"
+    },
     "pyknp": {
         "cargoLocks": null,
         "date": null,
