@@ -1,14 +1,19 @@
-{ stdenvNoCC, lib, name, pkgSources, withNerd ? false }:
+{ stdenvNoCC, lib, name, pkgSources, unzip, withNerd ? false }:
 let
   fName = if withNerd then "udev-gothic-nf" else "udev-gothic";
 in
 stdenvNoCC.mkDerivation rec {
   inherit (pkgSources."${fName}") pname version src;
+  nativeBuildInputs = [
+    unzip
+  ];
+  sourceRoot = ".";
+  unpackCmd = "unzip -o $curSrc";
 
   installPhase = ''
     runHook preInstall
 
-    find -name \*.ttf -exec mkdir -p $out/share/fonts/truetype/udevgothic \; -exec mv {} $out/share/fonts/truetype/udevgothic \;
+    find -name \*.ttf -exec mkdir -p $out/share/fonts/truetype/UDEVGothic \; -exec mv {} $out/share/fonts/truetype/UDEVGothic \;
 
     runHook postInstall
   '';
