@@ -340,11 +340,11 @@
         },
         "version": "v1.4.0"
     },
-    "plemoljp_hs": {
+    "plemoljp-hs": {
         "cargoLocks": null,
         "date": null,
         "extract": null,
-        "name": "plemoljp_hs",
+        "name": "plemoljp-hs",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -355,11 +355,11 @@
         },
         "version": "v1.4.0"
     },
-    "plemoljp_nf": {
+    "plemoljp-nf": {
         "cargoLocks": null,
         "date": null,
         "extract": null,
-        "name": "plemoljp_nf",
+        "name": "plemoljp-nf",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -370,11 +370,11 @@
         },
         "version": "v1.4.0"
     },
-    "plemoljp_nfj": {
+    "plemoljp-nfj": {
         "cargoLocks": null,
         "date": null,
         "extract": null,
-        "name": "plemoljp_nfj",
+        "name": "plemoljp-nfj",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -458,6 +458,36 @@
             "url": "https://gitlab.com/asus-linux/supergfxctl"
         },
         "version": "5.0.1"
+    },
+    "udev-gothic": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "udev-gothic",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-lZ9KaHzpYLqPZ84yOEPBGTc6kjwbYhbJRL80yKZBU24=",
+            "type": "url",
+            "url": "https://github.com/yuru7/udev-gothic/releases/download/v1.1.0/UDEVGothic_v1.1.0.zip"
+        },
+        "version": "v1.1.0"
+    },
+    "udev-gothic-nf": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "udev-gothic-nf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-E3Y6XX0M8qAldAuRCCCTOvdFoXNLr3MMkQ+tgv+oUXg=",
+            "type": "url",
+            "url": "https://github.com/yuru7/udev-gothic/releases/download/v1.1.0/UDEVGothic_NF_v1.1.0.zip"
+        },
+        "version": "v1.1.0"
     },
     "unityhub-latest": {
         "cargoLocks": null,

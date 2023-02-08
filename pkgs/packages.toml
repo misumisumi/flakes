@@ -110,21 +110,30 @@ src.git = 'https://github.com/reasonset/mozcdict-ext'
 fetch.git = 'https://github.com/reasonset/mozcdict-ext'
 
 # fonts
-[plemoljp_hs]
+[plemoljp-hs]
 src.github = "yuru7/PlemolJP"
 fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_HS_$ver.zip"
 
-[plemoljp_nfj]
+[plemoljp-nfj]
 src.github = "yuru7/PlemolJP"
 fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_NFJ_$ver.zip"
 
-[plemoljp_nf]
+[plemoljp-nf]
 src.github = "yuru7/PlemolJP"
 fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_NF_$ver.zip"
 
 [plemoljp]
 src.github = "yuru7/PlemolJP"
 fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_$ver.zip"
+
+[udev-gothic]
+src.github = "yuru7/udev-gothic"
+fetch.url = "https://github.com/yuru7/udev-gothic/releases/download/$ver/UDEVGothic_$ver.zip"
+
+
+[udev-gothic-nf]
+src.github = "yuru7/udev-gothic"
+fetch.url = "https://github.com/yuru7/udev-gothic/releases/download/$ver/UDEVGothic_NF_$ver.zip"
 
 # python modules
 [doq]

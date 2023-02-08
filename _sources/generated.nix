@@ -200,24 +200,24 @@
       sha256 = "sha256-pBam2nFjDt+rT6ndRzkg66ijguMPgfQ/TqNCkhehqYk=";
     };
   };
-  plemoljp_hs = {
-    pname = "plemoljp_hs";
+  plemoljp-hs = {
+    pname = "plemoljp-hs";
     version = "v1.4.0";
     src = fetchurl {
       url = "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_HS_v1.4.0.zip";
       sha256 = "sha256-mAvjDlUORmUDo1UlQOVlcCNE5HUVzVBLduZ6FqWYDZ0=";
     };
   };
-  plemoljp_nf = {
-    pname = "plemoljp_nf";
+  plemoljp-nf = {
+    pname = "plemoljp-nf";
     version = "v1.4.0";
     src = fetchurl {
       url = "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_NF_v1.4.0.zip";
       sha256 = "sha256-WfI9N5Xa6dxi4+NWgpzUluC96o7+/o15U6mOxehcZYA=";
     };
   };
-  plemoljp_nfj = {
-    pname = "plemoljp_nfj";
+  plemoljp-nfj = {
+    pname = "plemoljp-nfj";
     version = "v1.4.0";
     src = fetchurl {
       url = "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_NFJ_v1.4.0.zip";
@@ -267,6 +267,22 @@
       outputHashes = {
         
       };
+    };
+  };
+  udev-gothic = {
+    pname = "udev-gothic";
+    version = "v1.1.0";
+    src = fetchurl {
+      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.1.0/UDEVGothic_v1.1.0.zip";
+      sha256 = "sha256-lZ9KaHzpYLqPZ84yOEPBGTc6kjwbYhbJRL80yKZBU24=";
+    };
+  };
+  udev-gothic-nf = {
+    pname = "udev-gothic-nf";
+    version = "v1.1.0";
+    src = fetchurl {
+      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.1.0/UDEVGothic_NF_v1.1.0.zip";
+      sha256 = "sha256-E3Y6XX0M8qAldAuRCCCTOvdFoXNLr3MMkQ+tgv+oUXg=";
     };
   };
   unityhub-latest = {
