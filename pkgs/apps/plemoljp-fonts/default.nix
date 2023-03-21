@@ -1,6 +1,6 @@
 { stdenvNoCC, lib, name, pkgSources, unzip, fonts ? [ ] }:
 let
-  knownFonts = [ "plemoljp_hs" "plemoljp_nfj" "plemoljp_nf" "plemoljp" ];
+  knownFonts = [ "plemoljp-hs" "plemoljp-nfj" "plemoljp-nf" "plemoljp" ];
   selectedFonts =
     if (fonts == [ ]) then
       knownFonts
@@ -16,7 +16,7 @@ in
 stdenvNoCC.mkDerivation rec {
   inherit (pkgSources."plemoljp") version;
   inherit srcs;
-  pname = "plemoljp";
+  pname = "plemoljp-fonts";
 
   nativeBuildInputs = [
     unzip
