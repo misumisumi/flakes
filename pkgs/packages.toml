@@ -2,11 +2,14 @@
 src.aur = 'asusctl'
 # src.manual = '4.5.1'
 fetch.git = 'https://gitlab.com/asus-linux/asusctl'
-cargo_locks = [ 'Cargo.lock' ]
-
+cargo_locks = ['Cargo.lock']
 [bt-dualboot]
 src.pypi = 'bt-dualboot'
 fetch.pypi = 'bt-dualboot'
+
+[csharp-ls]
+src.github = "razzmatazz/csharp-language-server"
+fetch.url = "https://www.nuget.org/api/v2/package/csharp-ls/$ver"
 
 [cups-brother-hll5100dn-lpr]
 src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
@@ -59,12 +62,12 @@ fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
 [supergfxctl-latest]
 src.aur = 'supergfxctl'
 fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
-cargo_locks = [ 'Cargo.lock' ]
+cargo_locks = ['Cargo.lock']
 
 [yaskkserv2]
 src.github_tag = 'wachikun/yaskkserv2'
 fetch.github = 'wachikun/yaskkserv2'
-cargo_locks = [ 'Cargo.lock' ]
+cargo_locks = ['Cargo.lock']
 
 [wavesurfer]
 src.httpheader = 'http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz'
@@ -126,6 +129,11 @@ fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_N
 src.github = "yuru7/PlemolJP"
 fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_$ver.zip"
 
+[vrchat-vpm-cli]
+src.webpage = "https://www.nuget.org/packages/VRChat.VPM.CLI"
+src.regex = '0\.[0-9]+\.[0-9]+'
+fetch.url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/$ver"
+
 # python modules
 [doq]
 src.pypi = 'doq'
@@ -134,4 +142,3 @@ fetch.pypi = 'doq'
 [pyknp]
 src.pypi = 'pyknp'
 fetch.pypi = 'pyknp'
-
