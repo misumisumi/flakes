@@ -1,6 +1,5 @@
 # { stdenv, lib, mySource, tc, tcl, alsa-lib, libX11 }:
 { stdenv, lib, fetchpatch, name, pkgSources, alsa-lib, libX11, tk, tcl }:
-
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
