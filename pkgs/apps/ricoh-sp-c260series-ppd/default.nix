@@ -4,6 +4,7 @@
   pkgSources,
   stdenv,
   makeWrapper,
+  autoPatchelfHook,
   dpkg,
   ghostscript,
   file,
@@ -24,7 +25,7 @@ in
   stdenv.mkDerivation {
     inherit (pkgSources."${name}") src version pname;
 
-    nativeBuildInputs = [dpkg makeWrapper];
+    nativeBuildInputs = [dpkg makeWrapper autoPatchelfHook];
 
     unpackPhase = ''
       runHook preUnpack
@@ -38,7 +39,7 @@ in
       mv $out/usr/* $out
       rm -rf $out/usr
       echo "PATH:${lib.makeBinPath runtimeDeps}"
-      find "$out" -executable -and -type f | while read file; do
+      find "$out/lib" -executable -and -type f | while read file; do
         wrapProgram "$file" --prefix PATH : "${lib.makeBinPath runtimeDeps}"
       done
       runHook postInstall
