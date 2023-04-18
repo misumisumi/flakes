@@ -42,6 +42,21 @@
         },
         "version": "1.0.1"
     },
+    "csharp-ls": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "csharp-ls",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-UAEgV5TSIfnELG+LYGd4i0zKPA9PkUMEVJ0M+C5rDr8=",
+            "type": "url",
+            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.7.1"
+        },
+        "version": "0.7.1"
+    },
     "cups-brother-hll5100dn-cupswrapper": {
         "cargoLocks": null,
         "date": null,
@@ -518,6 +533,21 @@
             "url": "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.4.1.deb"
         },
         "version": "3.4.1"
+    },
+    "vrchat-vpm-cli": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "vrchat-vpm-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-h+X5UWlT9afGwzID6o5k7/XZzjP7b1meuLodcZ4jO2M=",
+            "type": "url",
+            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.15"
+        },
+        "version": "0.1.15"
     },
     "wavesurfer": {
         "cargoLocks": null,

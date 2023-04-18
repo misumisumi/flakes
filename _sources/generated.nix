@@ -29,6 +29,14 @@
       sha256 = "sha256-pjzGvLkotQllzyrnxqDIjGlpBOvUPkWpv0eooCUrgv8=";
     };
   };
+  csharp-ls = {
+    pname = "csharp-ls";
+    version = "0.7.1";
+    src = fetchurl {
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.7.1";
+      sha256 = "sha256-UAEgV5TSIfnELG+LYGd4i0zKPA9PkUMEVJ0M+C5rDr8=";
+    };
+  };
   cups-brother-hll5100dn-cupswrapper = {
     pname = "cups-brother-hll5100dn-cupswrapper";
     version = "3.5.1-1";
@@ -299,6 +307,14 @@
     src = fetchurl {
       url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.4.1.deb";
       sha256 = "sha256-/P6gPLSRGfwEN801cyNrZTpHyZKO+4tU6cFvLz8ERuo=";
+    };
+  };
+  vrchat-vpm-cli = {
+    pname = "vrchat-vpm-cli";
+    version = "0.1.15";
+    src = fetchurl {
+      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.15";
+      sha256 = "sha256-h+X5UWlT9afGwzID6o5k7/XZzjP7b1meuLodcZ4jO2M=";
     };
   };
   wavesurfer = {
