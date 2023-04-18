@@ -37,7 +37,12 @@ in
       runHook preInstall
       mv $out/usr/* $out
       rm -rf $out/usr
-      find "$out" -executable -and -type f | while read file; do
+      echo "PATH:${lib.makeBinPath runtimeDeps}"
+      find "$out/share/cups/model/ricoh" -type f | while read file; do
+        chmod +x $file
+        wrapProgram "$file" --prefix PATH : "${lib.makeBinPath runtimeDeps}"
+      done
+      find "$out/lib" -executable -and -type f | while read file; do
         wrapProgram "$file" --prefix PATH : "${lib.makeBinPath runtimeDeps}"
       done
       runHook postInstall
