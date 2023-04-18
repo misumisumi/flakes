@@ -32,7 +32,8 @@ rustPlatform.buildRustPackage rec {
   postFixup = ''
     wrapProgram $out/bin/supergfxd \
       --prefix PATH : ${lib.makeBinPath [kmod]}
-    sed -i -e "s/\/usr\/bin\/supergfxd/$out\/bin\/supergfxd/g" $out/lib/systemd/system/supergfxd.service
+    substituteInPlace $out/lib/systemd/system/supergfxd.service \
+      --replace "/usr/bin/supergfxd" "$out/bin/supergfxd"
   '';
 
   meta = with lib; {
