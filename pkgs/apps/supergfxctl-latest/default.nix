@@ -1,21 +1,21 @@
-{ stdenv
-, lib
-, rustPlatform
-, name
-, pkgSources
-, makeWrapper
-, gcc
-, kmod
-, pkg-config
-, udev
+{
+  stdenv,
+  lib,
+  rustPlatform,
+  name,
+  pkgSources,
+  makeWrapper,
+  gcc,
+  kmod,
+  pkg-config,
+  udev,
 }:
-
 rustPlatform.buildRustPackage rec {
   inherit (pkgSources."${name}") pname version src;
   cargoLock = pkgSources."${name}".cargoLock."Cargo.lock";
 
-  buildInputs = [ makeWrapper gcc kmod pkg-config udev ];
-  nativeBuildInputs = [ pkg-config ];
+  buildInputs = [makeWrapper gcc kmod pkg-config udev];
+  nativeBuildInputs = [pkg-config];
 
   doCheck = false;
   buildPhase = ''
@@ -31,7 +31,8 @@ rustPlatform.buildRustPackage rec {
 
   postFixup = ''
     wrapProgram $out/bin/supergfxd \
-      --prefix PATH : ${lib.makeBinPath [ kmod ]}
+      --prefix PATH : ${lib.makeBinPath [kmod]}
+    sed -i -e "s/\/usr\/bin\/supergfxd/supergfxd/g" $out/lib/systemd/system/supergfxd.service
   '';
 
   meta = with lib; {
