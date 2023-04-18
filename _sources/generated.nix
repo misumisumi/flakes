@@ -3,19 +3,19 @@
 {
   asusctl-latest = {
     pname = "asusctl-latest";
-    version = "4.5.8";
+    version = "4.6.0";
     src = fetchgit {
       url = "https://gitlab.com/asus-linux/asusctl";
-      rev = "4.5.8";
+      rev = "4.6.0";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-6AitRpyLIq5by9/rXdIC8AChMVKZmR1Eo5GTo+DtGhc=";
+      sha256 = "sha256-QXRUi/CiJTG04Kv/p3PWVloPIguLyfFQoiY6tCQIF/M=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./asusctl-latest-4.5.8/Cargo.lock;
+      lockFile = ./asusctl-latest-4.6.0/Cargo.lock;
       outputHashes = {
-        "supergfxctl-5.0.2" = "sha256-zp92mWyWUEWUP4kEyHbiUyYTtp2kLv+gxkPzOu77fi8=";
+        "supergfxctl-5.0.2" = "sha256-oyOi6DLMtShY0V81l96zii1ibYCueNgHle+FGHmNv+M=";
         "ecolor-0.20.0" = "sha256-tnjFkaCWmCPGw3huQN9VOAeiH+zk3Zk9xYoRKmg2WQg=";
         "notify-rust-4.6.0" = "sha256-jhCgisA9f6AI9e9JQUYRtEt47gQnDv5WsdRKFoKvHJs=";
       };
@@ -55,10 +55,10 @@
   };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
-    version = "2.0.1";
+    version = "2.0.2";
     src = fetchurl {
-      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.0.1/droidcam_obs_2.0.1_linux.zip";
-      sha256 = "sha256-WFDTNoZ51O31NCxr6UknzfCBbkOcqjuo9wHejxJEV30=";
+      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.0.2/droidcam_obs_2.0.2_linux.zip";
+      sha256 = "sha256-wezWdoFKkPEL4VH7H66/7q2zASpZb2Bbjv2AXaVT/wU=";
     };
   };
   fcitx5-mozc-ext-neologd = {
@@ -86,13 +86,13 @@
   };
   fcitx5-skk = {
     pname = "fcitx5-skk";
-    version = "5.0.14";
+    version = "5.0.15";
     src = fetchFromGitHub ({
       owner = "fcitx";
       repo = "fcitx5-skk";
-      rev = "5.0.14";
+      rev = "5.0.15";
       fetchSubmodules = false;
-      sha256 = "sha256-12N7ctBj3yQKOc4wbov2ea7DQ5OGLVZEE++lSF3Ib1Q=";
+      sha256 = "sha256-y5GciWJMEFQM8SsqYANXe/SdVq6GEqsfF1yrKKhw0KA=";
     });
   };
   japanese-usege-dictionary = {
@@ -110,12 +110,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "e31d3242e97260997497b9fef8c87f128168ea4a";
+    version = "4af3d5c43cdfd2e37dedc5a2338eba74f96cf6de";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/e31d3242e97260997497b9fef8c87f128168ea4a/SKK-JISYO.jawiki";
-      sha256 = "sha256-AsmiZCMe3eTAC6u1WXrJpwiVhci3XmKbCyYpuMOZw3s=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/4af3d5c43cdfd2e37dedc5a2338eba74f96cf6de/SKK-JISYO.jawiki";
+      sha256 = "sha256-K/XTYLu+ksAxTOlKuf6qyV4KV87QydevtpD7XIXFC2c=";
     };
-    date = "2023-02-02";
+    date = "2023-03-21";
   };
   juce = {
     pname = "juce";
@@ -130,15 +130,15 @@
   };
   knp = {
     pname = "knp";
-    version = "25425d33907ce69c5fa5b584ba58183020a07bba";
+    version = "5c637eb99d66defa40d586028cd0ed05c6bdd8fe";
     src = fetchFromGitHub ({
       owner = "ku-nlp";
       repo = "knp";
-      rev = "25425d33907ce69c5fa5b584ba58183020a07bba";
+      rev = "5c637eb99d66defa40d586028cd0ed05c6bdd8fe";
       fetchSubmodules = false;
-      sha256 = "sha256-P33+6Iwh7fYugZrFRylrtzz24EjwUToXJ/nbDw06Pbg=";
+      sha256 = "sha256-Jr8a8Pdi0u5ArZmSnwaIgVyHL89SH7ziuNr3N9OFgJQ=";
     });
-    date = "2022-06-14";
+    date = "2023-02-24";
   };
   mecab-ipadic-neologd = {
     pname = "mecab-ipadic-neologd";
@@ -169,16 +169,16 @@
   };
   mozcdict-ext = {
     pname = "mozcdict-ext";
-    version = "21294dd9671a0c03f24fed2b528befb1e516c843";
+    version = "1041a9ca03e48b29873d950c9ea19de70fde1139";
     src = fetchgit {
       url = "https://github.com/reasonset/mozcdict-ext";
-      rev = "21294dd9671a0c03f24fed2b528befb1e516c843";
+      rev = "1041a9ca03e48b29873d950c9ea19de70fde1139";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-d1Z/xHwa1e4zy4UtHtIgZV5ZFSvz/nFNY0LhOOmLuRY=";
+      sha256 = "sha256-PnOsR4q4aswgR1dmu/MLBFPYA4RLs5TlUFJc84PO7Pw=";
     };
-    date = "2023-01-15";
+    date = "2023-02-16";
   };
   notify-rust = {
     pname = "notify-rust";
@@ -194,34 +194,34 @@
   };
   plemoljp = {
     pname = "plemoljp";
-    version = "v1.4.0";
+    version = "v1.5.0";
     src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_v1.4.0.zip";
-      sha256 = "sha256-pBam2nFjDt+rT6ndRzkg66ijguMPgfQ/TqNCkhehqYk=";
+      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.5.0/PlemolJP_v1.5.0.zip";
+      sha256 = "sha256-ajkUjoiANvdBQ+o0DJOKuunVFOGXpGJah1F+YAu2gnY=";
     };
   };
   plemoljp-hs = {
     pname = "plemoljp-hs";
-    version = "v1.4.0";
+    version = "v1.5.0";
     src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_HS_v1.4.0.zip";
-      sha256 = "sha256-mAvjDlUORmUDo1UlQOVlcCNE5HUVzVBLduZ6FqWYDZ0=";
+      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.5.0/PlemolJP_HS_v1.5.0.zip";
+      sha256 = "sha256-k/vCYpwYV3xW/wHpvFn/35/gLRMn4NitSgwHRMOiikc=";
     };
   };
   plemoljp-nf = {
     pname = "plemoljp-nf";
-    version = "v1.4.0";
+    version = "v1.5.0";
     src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_NF_v1.4.0.zip";
-      sha256 = "sha256-WfI9N5Xa6dxi4+NWgpzUluC96o7+/o15U6mOxehcZYA=";
+      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.5.0/PlemolJP_NF_v1.5.0.zip";
+      sha256 = "sha256-L85jzxL2F1oSAqrZWrPQwQII9y1Wlb2i7G/34HYpBEE=";
     };
   };
   plemoljp-nfj = {
     pname = "plemoljp-nfj";
-    version = "v1.4.0";
+    version = "v1.5.0";
     src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.4.0/PlemolJP_NFJ_v1.4.0.zip";
-      sha256 = "sha256-3uTIoVMFc4HP+Q62EJHtR7akL0V6EyQ/CrC38UHYHb8=";
+      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.5.0/PlemolJP_NFJ_v1.5.0.zip";
+      sha256 = "sha256-GMpugJeeKGONJMo7swhGNek5zxiBxwwglB6fwoC0vvY=";
     };
   };
   pyknp = {
@@ -230,6 +230,14 @@
     src = fetchurl {
       url = "https://pypi.io/packages/source/p/pyknp/pyknp-0.6.1.tar.gz";
       sha256 = "sha256-X8ooinAwTHRdINpWV8YXW16t96elce1PV7sVfrbn300=";
+    };
+  };
+  ricoh-sp-c260series-ppd = {
+    pname = "ricoh-sp-c260series-ppd";
+    version = "1.00";
+    src = fetchurl {
+      url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb";
+      sha256 = "sha256-aRqpBpYpQnOdAoGe21cBYrkhtRaiBZJTYgVsdN2irEU=";
     };
   };
   skk-emoji-jisyo = {
@@ -271,18 +279,18 @@
   };
   udev-gothic = {
     pname = "udev-gothic";
-    version = "v1.1.0";
+    version = "v1.2.1";
     src = fetchurl {
-      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.1.0/UDEVGothic_v1.1.0.zip";
-      sha256 = "sha256-lZ9KaHzpYLqPZ84yOEPBGTc6kjwbYhbJRL80yKZBU24=";
+      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.2.1/UDEVGothic_v1.2.1.zip";
+      sha256 = "sha256-J86O/OKcBRQudWhKsetikC+SA1jPtHY4xT6/QbHxnDA=";
     };
   };
   udev-gothic-nf = {
     pname = "udev-gothic-nf";
-    version = "v1.1.0";
+    version = "v1.2.1";
     src = fetchurl {
-      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.1.0/UDEVGothic_NF_v1.1.0.zip";
-      sha256 = "sha256-E3Y6XX0M8qAldAuRCCCTOvdFoXNLr3MMkQ+tgv+oUXg=";
+      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.2.1/UDEVGothic_NF_v1.2.1.zip";
+      sha256 = "sha256-W2XksNRe8vkowrenbCxQrt4fWB27ufL16a8VM/qTmtA=";
     };
   };
   unityhub-latest = {
@@ -303,7 +311,7 @@
   };
   xp-pen-tablet = {
     pname = "xp-pen-tablet";
-    version = "3.2.3.220323";
+    version = "3.3.9.230222";
     src = fetchurl {
       url = "https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html";
       sha256 = "sha256-cLbcE0WVjBhY0JGj1IvddckfzIeboXVznvkVJ5C9yys=";

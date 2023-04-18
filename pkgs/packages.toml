@@ -2,7 +2,7 @@
 src.aur = 'asusctl'
 # src.manual = '4.5.1'
 fetch.git = 'https://gitlab.com/asus-linux/asusctl'
-cargo_locks = [ 'Cargo.lock' ]
+cargo_locks = ['Cargo.lock']
 
 [bt-dualboot]
 src.pypi = 'bt-dualboot'
@@ -18,8 +18,12 @@ src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&
 src.regex = "[0-9].[0-9].[0-9]-[0-9]"
 fetch.url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-$ver.i386.deb"
 
+[ricoh-sp-c260series-ppd]
+src.manual = "1.00"
+fetch.url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
+
 [droidcam-obs-plugin]
-src.github_tag = 'dev47apps/droidcam-obs-plugin'
+src.github = 'dev47apps/droidcam-obs-plugin'
 fetch.url = 'https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux.zip'
 
 [fcitx5-nord]
@@ -58,13 +62,16 @@ fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
 
 [supergfxctl-latest]
 src.aur = 'supergfxctl'
+# fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
+# src.webpage = 'https://gitlab.com/asus-linux/supergfxctl/-/releases'
+# src.regex = '[0-9]+\.[0-9]+\.[0-9]+-RC[[0-9]]'
 fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
-cargo_locks = [ 'Cargo.lock' ]
+cargo_locks = ['Cargo.lock']
 
 [yaskkserv2]
 src.github_tag = 'wachikun/yaskkserv2'
 fetch.github = 'wachikun/yaskkserv2'
-cargo_locks = [ 'Cargo.lock' ]
+cargo_locks = ['Cargo.lock']
 
 [wavesurfer]
 src.httpheader = 'http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz'
@@ -130,7 +137,6 @@ fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_$
 src.github = "yuru7/udev-gothic"
 fetch.url = "https://github.com/yuru7/udev-gothic/releases/download/$ver/UDEVGothic_$ver.zip"
 
-
 [udev-gothic-nf]
 src.github = "yuru7/udev-gothic"
 fetch.url = "https://github.com/yuru7/udev-gothic/releases/download/$ver/UDEVGothic_NF_$ver.zip"
@@ -143,4 +149,3 @@ fetch.pypi = 'doq'
 [pyknp]
 src.pypi = 'pyknp'
 fetch.pypi = 'pyknp'
-
