@@ -12,6 +12,7 @@
   gnugrep,
   coreutils,
   which,
+  cups,
 }: let
   runtimeDeps = [
     ghostscript
@@ -24,7 +25,7 @@
 in
   stdenv.mkDerivation {
     inherit (pkgSources."${name}") src version pname;
-
+    buildInputs = [cups];
     nativeBuildInputs = [dpkg makeWrapper autoPatchelfHook];
 
     unpackPhase = ''
