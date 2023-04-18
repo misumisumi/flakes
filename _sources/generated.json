@@ -468,11 +468,11 @@
     "supergfxctl-latest": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./supergfxctl-latest-5.0.1/Cargo.lock",
+                "./supergfxctl-latest-92d82977b47c54d868aa92e54a22d10a2e858598/Cargo.lock",
                 {}
             ]
         },
-        "date": null,
+        "date": "2023-04-18",
         "extract": null,
         "name": "supergfxctl-latest",
         "passthru": null,
@@ -482,12 +482,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "5.0.1",
-            "sha256": "sha256-4q+7F8s6y+oDkBUKIBBsXZ2EtADcChdnjmABjBUnH9k=",
+            "rev": "92d82977b47c54d868aa92e54a22d10a2e858598",
+            "sha256": "sha256-z8rV+f+P6zOT/eDyrLGGXnRzy0ALKtmz6WKBJ+v12+k=",
             "type": "git",
             "url": "https://gitlab.com/asus-linux/supergfxctl"
         },
-        "version": "5.0.1"
+        "version": "92d82977b47c54d868aa92e54a22d10a2e858598"
     },
     "udev-gothic": {
         "cargoLocks": null,

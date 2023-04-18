@@ -269,21 +269,22 @@
   };
   supergfxctl-latest = {
     pname = "supergfxctl-latest";
-    version = "5.0.1";
+    version = "92d82977b47c54d868aa92e54a22d10a2e858598";
     src = fetchgit {
       url = "https://gitlab.com/asus-linux/supergfxctl";
-      rev = "5.0.1";
+      rev = "92d82977b47c54d868aa92e54a22d10a2e858598";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-4q+7F8s6y+oDkBUKIBBsXZ2EtADcChdnjmABjBUnH9k=";
+      sha256 = "sha256-z8rV+f+P6zOT/eDyrLGGXnRzy0ALKtmz6WKBJ+v12+k=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./supergfxctl-latest-5.0.1/Cargo.lock;
+      lockFile = ./supergfxctl-latest-92d82977b47c54d868aa92e54a22d10a2e858598/Cargo.lock;
       outputHashes = {
         
       };
     };
+    date = "2023-04-18";
   };
   udev-gothic = {
     pname = "udev-gothic";

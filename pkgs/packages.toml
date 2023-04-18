@@ -65,10 +65,7 @@ src.prefix = 'Snack v'
 fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
 
 [supergfxctl-latest]
-src.aur = 'supergfxctl'
-# fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
-# src.webpage = 'https://gitlab.com/asus-linux/supergfxctl/-/releases'
-# src.regex = '[0-9]+\.[0-9]+\.[0-9]+-RC[[0-9]]'
+src.git = 'https://gitlab.com/asus-linux/supergfxctl'
 fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
 cargo_locks = ['Cargo.lock']
 
