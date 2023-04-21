@@ -1,7 +1,5 @@
 {
   imports = [
-    ./asus-notify.nix
-    ./asusd.nix
-    ./supergfxd.nix
+    ./yaskkserv2.nix
   ];
 }
