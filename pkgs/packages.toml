@@ -28,7 +28,7 @@ fetch.url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100
 
 [droidcam-obs-plugin]
 src.github = 'dev47apps/droidcam-obs-plugin'
-fetch.url = 'https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux.zip'
+fetch.url = 'https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux_ffmpeg5.zip'
 
 [fcitx5-nord]
 src.git = 'https://github.com/tonyfettes/fcitx5-nord.git'

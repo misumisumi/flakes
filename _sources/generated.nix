@@ -3,20 +3,20 @@
 {
   asusctl-latest = {
     pname = "asusctl-latest";
-    version = "4.6.0";
+    version = "4.6.2";
     src = fetchgit {
       url = "https://gitlab.com/asus-linux/asusctl";
-      rev = "4.6.0";
+      rev = "4.6.2";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-QXRUi/CiJTG04Kv/p3PWVloPIguLyfFQoiY6tCQIF/M=";
+      sha256 = "sha256-qfl8MUSHjqlSnsaudoRD9fY5TM9zgy7L7DA+pctn/nc=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./asusctl-latest-4.6.0/Cargo.lock;
+      lockFile = ./asusctl-latest-4.6.2/Cargo.lock;
       outputHashes = {
-        "supergfxctl-5.0.2" = "sha256-oyOi6DLMtShY0V81l96zii1ibYCueNgHle+FGHmNv+M=";
-        "ecolor-0.20.0" = "sha256-tnjFkaCWmCPGw3huQN9VOAeiH+zk3Zk9xYoRKmg2WQg=";
+        "supergfxctl-5.1.1" = "sha256-AThaZ9dp5T/DtLPE6gZ9qgkw0xksiq+VCL9Y4G41voE=";
+        "ecolor-0.21.0" = "sha256-m7eHX6flwO21umtx3dnIuVUnNsEs3ZCyOk5Vvp/lVfI=";
         "notify-rust-4.6.0" = "sha256-jhCgisA9f6AI9e9JQUYRtEt47gQnDv5WsdRKFoKvHJs=";
       };
     };
@@ -31,10 +31,10 @@
   };
   csharp-ls = {
     pname = "csharp-ls";
-    version = "0.7.1";
+    version = "0.8.0";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.7.1";
-      sha256 = "sha256-UAEgV5TSIfnELG+LYGd4i0zKPA9PkUMEVJ0M+C5rDr8=";
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.8.0";
+      sha256 = "sha256-F3N6ESE/VmQA5sOMm3eqSkhSNVCCsnAXTCC+McsAnQw=";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
@@ -63,10 +63,10 @@
   };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
-    version = "2.0.2";
+    version = "2.1.0";
     src = fetchurl {
-      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.0.2/droidcam_obs_2.0.2_linux.zip";
-      sha256 = "sha256-wezWdoFKkPEL4VH7H66/7q2zASpZb2Bbjv2AXaVT/wU=";
+      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.1.0/droidcam_obs_2.1.0_linux_ffmpeg5.zip";
+      sha256 = "sha256-Qrb23aNddJhMvLgRyW7UamDVAjrhZhw4Kbr0FP/5mXs=";
     };
   };
   fcitx5-mozc-ext-neologd = {
@@ -118,12 +118,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "4af3d5c43cdfd2e37dedc5a2338eba74f96cf6de";
+    version = "a60f2362ce7e9eea55ce91a210de5586b1a3ef3f";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/4af3d5c43cdfd2e37dedc5a2338eba74f96cf6de/SKK-JISYO.jawiki";
-      sha256 = "sha256-K/XTYLu+ksAxTOlKuf6qyV4KV87QydevtpD7XIXFC2c=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/a60f2362ce7e9eea55ce91a210de5586b1a3ef3f/SKK-JISYO.jawiki";
+      sha256 = "sha256-l7AsOnpjo1+0DfFPUjn12EqlLAvjMjXdtc5pd21YHgE=";
     };
-    date = "2023-03-21";
+    date = "2023-05-01";
   };
   juce = {
     pname = "juce";
@@ -269,22 +269,22 @@
   };
   supergfxctl-latest = {
     pname = "supergfxctl-latest";
-    version = "92d82977b47c54d868aa92e54a22d10a2e858598";
+    version = "63e95820b52658962f3fdc3a48d8f1f684242549";
     src = fetchgit {
       url = "https://gitlab.com/asus-linux/supergfxctl";
-      rev = "92d82977b47c54d868aa92e54a22d10a2e858598";
+      rev = "63e95820b52658962f3fdc3a48d8f1f684242549";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-z8rV+f+P6zOT/eDyrLGGXnRzy0ALKtmz6WKBJ+v12+k=";
+      sha256 = "sha256-OFUnt1gBwzZo1Dvo5vNBIQYlQMWUJqGx1FxqonqctG8=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./supergfxctl-latest-92d82977b47c54d868aa92e54a22d10a2e858598/Cargo.lock;
+      lockFile = ./supergfxctl-latest-63e95820b52658962f3fdc3a48d8f1f684242549/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2023-04-18";
+    date = "2023-04-30";
   };
   udev-gothic = {
     pname = "udev-gothic";
@@ -304,18 +304,18 @@
   };
   unityhub-latest = {
     pname = "unityhub-latest";
-    version = "3.4.1";
+    version = "3.4.2";
     src = fetchurl {
-      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.4.1.deb";
-      sha256 = "sha256-/P6gPLSRGfwEN801cyNrZTpHyZKO+4tU6cFvLz8ERuo=";
+      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.4.2.deb";
+      sha256 = "sha256-I1qtrD94IpMut0a6JUHErHaksoZ+z8/dDG8U68Y5zJE=";
     };
   };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
-    version = "0.1.15";
+    version = "0.1.16";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.15";
-      sha256 = "sha256-h+X5UWlT9afGwzID6o5k7/XZzjP7b1meuLodcZ4jO2M=";
+      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.16";
+      sha256 = "sha256-lchER19pfnkly9cm5D6YanBQuatG6wlqQYFRhFiwpP4=";
     };
   };
   wavesurfer = {
@@ -328,7 +328,7 @@
   };
   xp-pen-tablet = {
     pname = "xp-pen-tablet";
-    version = "3.3.9.230222";
+    version = "3.2.3.230215";
     src = fetchurl {
       url = "https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html";
       sha256 = "sha256-cLbcE0WVjBhY0JGj1IvddckfzIeboXVznvkVJ5C9yys=";
