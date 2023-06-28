@@ -1,4 +1,19 @@
 {
+    "SpeechRecognition": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "SpeechRecognition",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-FBMRVeiougDq0be5saL6cchF5Ntfml9mozob1sVcbDU=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/S/SpeechRecognition/SpeechRecognition-3.10.0.tar.gz"
+        },
+        "version": "3.10.0"
+    },
     "asusctl-latest": {
         "cargoLocks": {
             "Cargo.lock": [
@@ -38,7 +53,7 @@
             "name": null,
             "sha256": "sha256-pjzGvLkotQllzyrnxqDIjGlpBOvUPkWpv0eooCUrgv8=",
             "type": "url",
-            "url": "https://pypi.io/packages/source/b/bt-dualboot/bt-dualboot-1.0.1.tar.gz"
+            "url": "https://pypi.org/packages/source/b/bt-dualboot/bt-dualboot-1.0.1.tar.gz"
         },
         "version": "1.0.1"
     },
@@ -98,7 +113,7 @@
             "name": null,
             "sha256": "sha256-uszDSN35Z8i/Mr/fVNqDJuHcdPN4ZeLBdgEq0Lx+6h4=",
             "type": "url",
-            "url": "https://pypi.io/packages/source/d/doq/doq-0.9.1.tar.gz"
+            "url": "https://pypi.org/packages/source/d/doq/doq-0.9.1.tar.gz"
         },
         "version": "0.9.1"
     },
@@ -198,18 +213,18 @@
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2023-05-01",
+        "date": "2023-06-21",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-l7AsOnpjo1+0DfFPUjn12EqlLAvjMjXdtc5pd21YHgE=",
+            "sha256": "sha256-Pl6IeOe4fWuldIbFC8C5zYmME3oftPYYVYiKWaDhZek=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/a60f2362ce7e9eea55ce91a210de5586b1a3ef3f/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/32c2137741740888d791be463f8155937e7a8e46/SKK-JISYO.jawiki"
         },
-        "version": "a60f2362ce7e9eea55ce91a210de5586b1a3ef3f"
+        "version": "32c2137741740888d791be463f8155937e7a8e46"
     },
     "juce": {
         "cargoLocks": null,
@@ -349,11 +364,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ajkUjoiANvdBQ+o0DJOKuunVFOGXpGJah1F+YAu2gnY=",
+            "sha256": "sha256-iQB11qItBWhaoL0+hTkPugFRwiIKHiZJl2xa9BaSw8w=",
             "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.5.0/PlemolJP_v1.5.0.zip"
+            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.6.0/PlemolJP_v1.6.0.zip"
         },
-        "version": "v1.5.0"
+        "version": "v1.6.0"
     },
     "plemoljp-hs": {
         "cargoLocks": null,
@@ -364,11 +379,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-k/vCYpwYV3xW/wHpvFn/35/gLRMn4NitSgwHRMOiikc=",
+            "sha256": "sha256-2t6IKpFA2qy0L7HHNneQQUh76DAkkiiujYyFR06tpO4=",
             "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.5.0/PlemolJP_HS_v1.5.0.zip"
+            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.6.0/PlemolJP_HS_v1.6.0.zip"
         },
-        "version": "v1.5.0"
+        "version": "v1.6.0"
     },
     "plemoljp-nf": {
         "cargoLocks": null,
@@ -379,26 +394,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-L85jzxL2F1oSAqrZWrPQwQII9y1Wlb2i7G/34HYpBEE=",
+            "sha256": "sha256-6mPtfrb6JV970rsQZhWAd9QbhmjjKob/qTIlAdb8GNw=",
             "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.5.0/PlemolJP_NF_v1.5.0.zip"
+            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.6.0/PlemolJP_NF_v1.6.0.zip"
         },
-        "version": "v1.5.0"
-    },
-    "plemoljp-nfj": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "plemoljp-nfj",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-GMpugJeeKGONJMo7swhGNek5zxiBxwwglB6fwoC0vvY=",
-            "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.5.0/PlemolJP_NFJ_v1.5.0.zip"
-        },
-        "version": "v1.5.0"
+        "version": "v1.6.0"
     },
     "pyknp": {
         "cargoLocks": null,
@@ -411,7 +411,7 @@
             "name": null,
             "sha256": "sha256-X8ooinAwTHRdINpWV8YXW16t96elce1PV7sVfrbn300=",
             "type": "url",
-            "url": "https://pypi.io/packages/source/p/pyknp/pyknp-0.6.1.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pyknp/pyknp-0.6.1.tar.gz"
         },
         "version": "0.6.1"
     },
@@ -468,11 +468,11 @@
     "supergfxctl-latest": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./supergfxctl-latest-63e95820b52658962f3fdc3a48d8f1f684242549/Cargo.lock",
+                "./supergfxctl-latest-fcba63b1a29284fc76da65e60751a33b81380259/Cargo.lock",
                 {}
             ]
         },
-        "date": "2023-04-30",
+        "date": "2023-06-22",
         "extract": null,
         "name": "supergfxctl-latest",
         "passthru": null,
@@ -482,12 +482,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "63e95820b52658962f3fdc3a48d8f1f684242549",
-            "sha256": "sha256-OFUnt1gBwzZo1Dvo5vNBIQYlQMWUJqGx1FxqonqctG8=",
+            "rev": "fcba63b1a29284fc76da65e60751a33b81380259",
+            "sha256": "sha256-H00QHNILEjOtavXdj4Jd+rdLprJpVSlSVV3qkTeknzQ=",
             "type": "git",
             "url": "https://gitlab.com/asus-linux/supergfxctl"
         },
-        "version": "63e95820b52658962f3fdc3a48d8f1f684242549"
+        "version": "fcba63b1a29284fc76da65e60751a33b81380259"
     },
     "udev-gothic": {
         "cargoLocks": null,
@@ -498,11 +498,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-J86O/OKcBRQudWhKsetikC+SA1jPtHY4xT6/QbHxnDA=",
+            "sha256": "sha256-SN8g+4d3zeigMrAmOfr9JD5Zvyr8muC0epenb3hHfJI=",
             "type": "url",
-            "url": "https://github.com/yuru7/udev-gothic/releases/download/v1.2.1/UDEVGothic_v1.2.1.zip"
+            "url": "https://github.com/yuru7/udev-gothic/releases/download/v1.3.0/UDEVGothic_v1.3.0.zip"
         },
-        "version": "v1.2.1"
+        "version": "v1.3.0"
     },
     "udev-gothic-nf": {
         "cargoLocks": null,
@@ -513,11 +513,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-W2XksNRe8vkowrenbCxQrt4fWB27ufL16a8VM/qTmtA=",
+            "sha256": "sha256-2H4CbiACo+QJm3GD3pJF1FIw3+c5PtWXvNn1aBwasCk=",
             "type": "url",
-            "url": "https://github.com/yuru7/udev-gothic/releases/download/v1.2.1/UDEVGothic_NF_v1.2.1.zip"
+            "url": "https://github.com/yuru7/udev-gothic/releases/download/v1.3.0/UDEVGothic_NF_v1.3.0.zip"
         },
-        "version": "v1.2.1"
+        "version": "v1.3.0"
     },
     "unityhub-latest": {
         "cargoLocks": null,
@@ -528,11 +528,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-I1qtrD94IpMut0a6JUHErHaksoZ+z8/dDG8U68Y5zJE=",
+            "sha256": "sha256-d5TUUhGqchkrCRqJWHEewurjsHxbfZ+5hv9w9Yv2EQ4=",
             "type": "url",
-            "url": "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.4.2.deb"
+            "url": "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.5.0.deb"
         },
-        "version": "3.4.2"
+        "version": "3.5.0"
     },
     "vrchat-vpm-cli": {
         "cargoLocks": null,
@@ -582,7 +582,7 @@
     "yaskkserv2": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./yaskkserv2-0.1.5/Cargo.lock",
+                "./yaskkserv2-0.1.6/Cargo.lock",
                 {}
             ]
         },
@@ -598,10 +598,10 @@
             "name": null,
             "owner": "wachikun",
             "repo": "yaskkserv2",
-            "rev": "0.1.5",
-            "sha256": "sha256-S1xuraK85gBI9DV8bojjNBgRD9R98pWR2eaeji5rC6M=",
+            "rev": "0.1.6",
+            "sha256": "sha256-qVQxkbnk6UXBSZaOEyy7jZhvejHS/FJWqDsBSM1tCpE=",
             "type": "github"
         },
-        "version": "0.1.5"
+        "version": "0.1.6"
     }
 }

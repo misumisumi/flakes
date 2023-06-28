@@ -122,10 +122,6 @@ fetch.git = 'https://github.com/reasonset/mozcdict-ext'
 src.github = "yuru7/PlemolJP"
 fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_HS_$ver.zip"
 
-[plemoljp-nfj]
-src.github = "yuru7/PlemolJP"
-fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_NFJ_$ver.zip"
-
 [plemoljp-nf]
 src.github = "yuru7/PlemolJP"
 fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_NF_$ver.zip"
@@ -155,3 +151,7 @@ fetch.pypi = 'doq'
 [pyknp]
 src.pypi = 'pyknp'
 fetch.pypi = 'pyknp'
+
+[SpeechRecognition]
+src.pypi = 'SpeechRecognition'
+fetch.pypi = 'SpeechRecognition'
