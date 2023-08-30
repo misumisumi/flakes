@@ -329,21 +329,6 @@
         },
         "version": "2.2.10"
     },
-    "torch-lightning": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "torch-lightning",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-8FrNS6hGUF1AEltPnwvaCASysDVuKtL9Tkv30cYcjMY=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/l/lightning/lightning-2.0.7.tar.gz"
-        },
-        "version": "2.0.7"
-    },
     "udev-gothic": {
         "cargoLocks": null,
         "date": null,
@@ -418,21 +403,6 @@
             "url": "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
         },
         "version": "1.8.8p5"
-    },
-    "xp-pen-tablet": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "xp-pen-tablet",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-cLbcE0WVjBhY0JGj1IvddckfzIeboXVznvkVJ5C9yys=",
-            "type": "url",
-            "url": "https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html"
-        },
-        "version": "3.2.3.230215"
     },
     "yaskkserv2": {
         "cargoLocks": {

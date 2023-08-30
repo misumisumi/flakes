@@ -79,9 +79,11 @@ src.httpheader = 'http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5
 src.regex = '[0-9]+.[0-9]+.[0-9]+p[0-9]+'
 fetch.url = 'http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz'
 
-[xp-pen-tablet]
-src.aur = 'xp-pen-tablet'
-fetch.url = 'https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html'
+# [xp-pen-tablet]
+# src.webpage = 'https://www.xp-pen.com/download/artist-pro-16.html'
+# src.regex = 'Linux[0-9]+\.[0-9]+\.[0-9]+-[0-9]+'
+# src.prefix = 'Linux'
+# fetch.url = 'https://download01.xp-pen.com/file/2023/07/XPPenLinux$ver.tar.gz'
 
 [unityhub-latest]
 src.aur = 'unityhub'
@@ -155,7 +157,3 @@ fetch.pypi = 'pyknp'
 [SpeechRecognition]
 src.pypi = 'SpeechRecognition'
 fetch.pypi = 'SpeechRecognition'
-
-[torch-lightning]
-src.pypi = 'lightning'
-fetch.pypi = 'lightning'

@@ -183,14 +183,6 @@
       sha256 = "sha256-S/52RUerkrpY9Dt3Nm27fHs1EtZaJ82/nlhanLZM6B4=";
     };
   };
-  torch-lightning = {
-    pname = "torch-lightning";
-    version = "2.0.7";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/l/lightning/lightning-2.0.7.tar.gz";
-      sha256 = "sha256-8FrNS6hGUF1AEltPnwvaCASysDVuKtL9Tkv30cYcjMY=";
-    };
-  };
   udev-gothic = {
     pname = "udev-gothic";
     version = "v1.3.1";
@@ -229,14 +221,6 @@
     src = fetchurl {
       url = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz";
       sha256 = "sha256-rlYGEUfdEXD3SF3JwZ23pF3RVwUKw5RmYsf8ec/7YRo=";
-    };
-  };
-  xp-pen-tablet = {
-    pname = "xp-pen-tablet";
-    version = "3.2.3.230215";
-    src = fetchurl {
-      url = "https://www.xp-pen.com/download/file/id/1936/pid/690/ext/gz.html";
-      sha256 = "sha256-cLbcE0WVjBhY0JGj1IvddckfzIeboXVznvkVJ5C9yys=";
     };
   };
   yaskkserv2 = {
