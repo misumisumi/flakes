@@ -40,7 +40,7 @@ stdenv.mkDerivation rec {
       xorg.libXtst
 
       libva
-      openssl_1_1
+      openssl
       cairo
       xdg-utils
       libnotify
