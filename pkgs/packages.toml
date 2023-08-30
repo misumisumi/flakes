@@ -1,8 +1,8 @@
-[asusctl-latest]
-src.aur = 'asusctl'
-# src.manual = '4.5.1'
-fetch.git = 'https://gitlab.com/asus-linux/asusctl'
-cargo_locks = ['Cargo.lock']
+# [asusctl-latest]
+# src.aur = 'asusctl'
+# # src.manual = '4.5.1'
+# fetch.git = 'https://gitlab.com/asus-linux/asusctl'
+# cargo_locks = ['Cargo.lock']
 
 [bt-dualboot]
 src.pypi = 'bt-dualboot'
@@ -64,10 +64,10 @@ src.regex = 'Snack v[0-9]+\.[0-9]+\.[0-9]+'
 src.prefix = 'Snack v'
 fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
 
-[supergfxctl-latest]
-src.git = 'https://gitlab.com/asus-linux/supergfxctl'
-fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
-cargo_locks = ['Cargo.lock']
+# [supergfxctl-latest]
+# src.git = 'https://gitlab.com/asus-linux/supergfxctl'
+# fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
+# cargo_locks = ['Cargo.lock']
 
 [yaskkserv2]
 src.github_tag = 'wachikun/yaskkserv2'
@@ -88,34 +88,34 @@ src.aur = 'unityhub'
 fetch.url = 'https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-$ver.deb'
 
 # For mozc
-[fcitx5-mozc-ext-neologd]
-# src.git = 'https://github.com/fcitx/mozc.git'
-src.manual = '1882e33b61673b66d63277f82b4c80ae4e506c10'
-fetch.github = 'fcitx/mozc'
-
-[mozc-dict-jigyosyo]
-src.webpage = 'https://osdn.net/projects/ponsfoot-aur/storage/mozc/'
-src.regex = 'jigyosyo-[0-9]+'
-src.prefix = 'jigyosyo-'
-fetch.url = 'https://osdn.net/projects/ponsfoot-aur/storage/mozc/jigyosyo-$ver.zip'
-
-[mozc-dict-x-ken-all]
-src.webpage = 'https://osdn.net/projects/ponsfoot-aur/storage/mozc/'
-src.regex = 'x-ken-all-[0-9]+'
-src.prefix = 'x-ken-all-'
-fetch.url = 'https://osdn.net/projects/ponsfoot-aur/storage/mozc/x-ken-all-$ver.zip'
-
-[japanese-usege-dictionary]
-src.git = 'https://github.com/hiroyuki-komatsu/japanese-usage-dictionary'
-fetch.git = 'https://github.com/hiroyuki-komatsu/japanese-usage-dictionary'
-
-[mecab-ipadic-neologd]
-src.github = "neologd/mecab-ipadic-neologd"
-fetch.github = "neologd/mecab-ipadic-neologd"
-
-[mozcdict-ext]
-src.git = 'https://github.com/reasonset/mozcdict-ext'
-fetch.git = 'https://github.com/reasonset/mozcdict-ext'
+# [fcitx5-mozc-ext-neologd]
+# # src.git = 'https://github.com/fcitx/mozc.git'
+# src.manual = '1882e33b61673b66d63277f82b4c80ae4e506c10'
+# fetch.github = 'fcitx/mozc'
+#
+# [mozc-dict-jigyosyo]
+# src.webpage = 'https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/'
+# src.regex = 'jigyosyo-[0-9]+'
+# src.prefix = 'jigyosyo-'
+# fetch.url = 'https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/jigyosyo-$ver.zip'
+#
+# [mozc-dict-x-ken-all]
+# src.webpage = 'https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/'
+# src.regex = 'x-ken-all-[0-9]+'
+# src.prefix = 'x-ken-all-'
+# fetch.url = 'https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/x-ken-all-$ver.zip'
+#
+# [japanese-usege-dictionary]
+# src.git = 'https://github.com/hiroyuki-komatsu/japanese-usage-dictionary'
+# fetch.git = 'https://github.com/hiroyuki-komatsu/japanese-usage-dictionary'
+#
+# [mecab-ipadic-neologd]
+# src.github = "neologd/mecab-ipadic-neologd"
+# fetch.github = "neologd/mecab-ipadic-neologd"
+#
+# [mozcdict-ext]
+# src.git = 'https://github.com/reasonset/mozcdict-ext'
+# fetch.git = 'https://github.com/reasonset/mozcdict-ext'
 
 # fonts
 [plemoljp-hs]

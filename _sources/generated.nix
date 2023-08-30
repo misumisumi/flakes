@@ -9,26 +9,6 @@
       sha256 = "sha256-FBMRVeiougDq0be5saL6cchF5Ntfml9mozob1sVcbDU=";
     };
   };
-  asusctl-latest = {
-    pname = "asusctl-latest";
-    version = "4.6.2";
-    src = fetchgit {
-      url = "https://gitlab.com/asus-linux/asusctl";
-      rev = "4.6.2";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-qfl8MUSHjqlSnsaudoRD9fY5TM9zgy7L7DA+pctn/nc=";
-    };
-    cargoLock."Cargo.lock" = {
-      lockFile = ./asusctl-latest-4.6.2/Cargo.lock;
-      outputHashes = {
-        "supergfxctl-5.1.1" = "sha256-AThaZ9dp5T/DtLPE6gZ9qgkw0xksiq+VCL9Y4G41voE=";
-        "ecolor-0.21.0" = "sha256-m7eHX6flwO21umtx3dnIuVUnNsEs3ZCyOk5Vvp/lVfI=";
-        "notify-rust-4.6.0" = "sha256-jhCgisA9f6AI9e9JQUYRtEt47gQnDv5WsdRKFoKvHJs=";
-      };
-    };
-  };
   bt-dualboot = {
     pname = "bt-dualboot";
     version = "1.0.1";
@@ -39,10 +19,10 @@
   };
   csharp-ls = {
     pname = "csharp-ls";
-    version = "0.8.0";
+    version = "0.9.0";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.8.0";
-      sha256 = "sha256-F3N6ESE/VmQA5sOMm3eqSkhSNVCCsnAXTCC+McsAnQw=";
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.9.0";
+      sha256 = "sha256-SKfe34r1lAirTGQdB+FTFEMVXWeTE/zFO0Evp+Pfcbc=";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
@@ -63,10 +43,10 @@
   };
   doq = {
     pname = "doq";
-    version = "0.9.1";
+    version = "0.10.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/d/doq/doq-0.9.1.tar.gz";
-      sha256 = "sha256-uszDSN35Z8i/Mr/fVNqDJuHcdPN4ZeLBdgEq0Lx+6h4=";
+      url = "https://pypi.org/packages/source/d/doq/doq-0.10.0.tar.gz";
+      sha256 = "sha256-ZyuAwa658CzaO8vpWzBG6WMZOFggusxwZizEhvTDSoY=";
     };
   };
   droidcam-obs-plugin = {
@@ -75,17 +55,6 @@
     src = fetchurl {
       url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.1.0/droidcam_obs_2.1.0_linux_ffmpeg5.zip";
       sha256 = "sha256-Qrb23aNddJhMvLgRyW7UamDVAjrhZhw4Kbr0FP/5mXs=";
-    };
-  };
-  fcitx5-mozc-ext-neologd = {
-    pname = "fcitx5-mozc-ext-neologd";
-    version = "1882e33b61673b66d63277f82b4c80ae4e506c10";
-    src = fetchFromGitHub {
-      owner = "fcitx";
-      repo = "mozc";
-      rev = "1882e33b61673b66d63277f82b4c80ae4e506c10";
-      fetchSubmodules = false;
-      sha256 = "sha256-R+w0slVFpqtt7PIr1pyupJjRoQsABVZiMdZ9fKGKAqw=";
     };
   };
   fcitx5-nord = {
@@ -102,46 +71,33 @@
   };
   fcitx5-skk = {
     pname = "fcitx5-skk";
-    version = "5.0.15";
+    version = "5.1.0";
     src = fetchFromGitHub {
       owner = "fcitx";
       repo = "fcitx5-skk";
-      rev = "5.0.15";
+      rev = "5.1.0";
       fetchSubmodules = false;
-      sha256 = "sha256-y5GciWJMEFQM8SsqYANXe/SdVq6GEqsfF1yrKKhw0KA=";
+      sha256 = "sha256-N69OyGzJGO27tsR1g06d0EILsX2mpbW/tIgeSLc06OU=";
     };
-  };
-  japanese-usege-dictionary = {
-    pname = "japanese-usege-dictionary";
-    version = "a4a66772e33746b91e99caceecced9a28507e925";
-    src = fetchgit {
-      url = "https://github.com/hiroyuki-komatsu/japanese-usage-dictionary";
-      rev = "a4a66772e33746b91e99caceecced9a28507e925";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-qnWA+lesLo3Odk8gY9UTKQr/YmIn+nCcbtKDjUDobII=";
-    };
-    date = "2018-07-01";
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "32c2137741740888d791be463f8155937e7a8e46";
+    version = "43af3f7cc2dc1ad7bac58dcf44dd4ab22436135b";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/32c2137741740888d791be463f8155937e7a8e46/SKK-JISYO.jawiki";
-      sha256 = "sha256-Pl6IeOe4fWuldIbFC8C5zYmME3oftPYYVYiKWaDhZek=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/43af3f7cc2dc1ad7bac58dcf44dd4ab22436135b/SKK-JISYO.jawiki";
+      sha256 = "sha256-B60S/LEQ3lBblrqFgz52s8up3BC0Fh0TAga/PULBHFY=";
     };
-    date = "2023-06-21";
+    date = "2023-08-21";
   };
   juce = {
     pname = "juce";
-    version = "7.0.5";
+    version = "7.0.7";
     src = fetchFromGitHub {
       owner = "juce-framework";
       repo = "JUCE";
-      rev = "7.0.5";
+      rev = "7.0.7";
       fetchSubmodules = false;
-      sha256 = "sha256-NRF9oSE04hk6KVSxuUBpP+z+DKRyb6pzBXtz/pLz0/0=";
+      sha256 = "sha256-r+Wf/skPDexm3rsrVBoWrygKvV9HGlCQd7r0iHr9avM=";
     };
   };
   knp = {
@@ -155,46 +111,6 @@
       sha256 = "sha256-Jr8a8Pdi0u5ArZmSnwaIgVyHL89SH7ziuNr3N9OFgJQ=";
     };
     date = "2023-02-24";
-  };
-  mecab-ipadic-neologd = {
-    pname = "mecab-ipadic-neologd";
-    version = "v0.0.7";
-    src = fetchFromGitHub {
-      owner = "neologd";
-      repo = "mecab-ipadic-neologd";
-      rev = "v0.0.7";
-      fetchSubmodules = false;
-      sha256 = "sha256-6mZ+Wcre0ZTUitso9kQn11um29cdOUaOAbhPgSq7OxU=";
-    };
-  };
-  mozc-dict-jigyosyo = {
-    pname = "mozc-dict-jigyosyo";
-    version = "202110";
-    src = fetchurl {
-      url = "https://osdn.net/projects/ponsfoot-aur/storage/mozc/jigyosyo-202110.zip";
-      sha256 = "sha256-bI1F/UyrBAnMwcrZff4GDc87jAfnPm2UJqh+itzsOkM=";
-    };
-  };
-  mozc-dict-x-ken-all = {
-    pname = "mozc-dict-x-ken-all";
-    version = "202110";
-    src = fetchurl {
-      url = "https://osdn.net/projects/ponsfoot-aur/storage/mozc/x-ken-all-202110.zip";
-      sha256 = "sha256-85iKUrxpGdcoSg7wzbmrAn+HZ8ud58uEabEuH7PLavk=";
-    };
-  };
-  mozcdict-ext = {
-    pname = "mozcdict-ext";
-    version = "1041a9ca03e48b29873d950c9ea19de70fde1139";
-    src = fetchgit {
-      url = "https://github.com/reasonset/mozcdict-ext";
-      rev = "1041a9ca03e48b29873d950c9ea19de70fde1139";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-PnOsR4q4aswgR1dmu/MLBFPYA4RLs5TlUFJc84PO7Pw=";
-    };
-    date = "2023-02-16";
   };
   notify-rust = {
     pname = "notify-rust";
@@ -250,13 +166,13 @@
   };
   skk-emoji-jisyo = {
     pname = "skk-emoji-jisyo";
-    version = "v0.0.7";
+    version = "v0.0.9";
     src = fetchFromGitHub {
       owner = "uasi";
       repo = "skk-emoji-jisyo";
-      rev = "v0.0.7";
+      rev = "v0.0.9";
       fetchSubmodules = false;
-      sha256 = "sha256-cxaRVV5d7zZdhWxq6m+NjA9P9PKZfwiimCToo81yxkY=";
+      sha256 = "sha256-H73wfvFhff55vFvNOunkma3C28BnXGuLzMrSvTLTgXU=";
     };
   };
   snack = {
@@ -267,61 +183,44 @@
       sha256 = "sha256-S/52RUerkrpY9Dt3Nm27fHs1EtZaJ82/nlhanLZM6B4=";
     };
   };
-  supergfxctl-latest = {
-    pname = "supergfxctl-latest";
-    version = "fcba63b1a29284fc76da65e60751a33b81380259";
-    src = fetchgit {
-      url = "https://gitlab.com/asus-linux/supergfxctl";
-      rev = "fcba63b1a29284fc76da65e60751a33b81380259";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-H00QHNILEjOtavXdj4Jd+rdLprJpVSlSVV3qkTeknzQ=";
-    };
-    cargoLock."Cargo.lock" = {
-      lockFile = ./supergfxctl-latest-fcba63b1a29284fc76da65e60751a33b81380259/Cargo.lock;
-      outputHashes = { };
-    };
-    date = "2023-06-22";
-  };
   torch-lightning = {
     pname = "torch-lightning";
-    version = "2.0.4";
+    version = "2.0.7";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/l/lightning/lightning-2.0.4.tar.gz";
-      sha256 = "sha256-9fXtdaZXyqiTEFFZDtAA1GvxuDEa6JuxepYcPymdvzM=";
+      url = "https://pypi.org/packages/source/l/lightning/lightning-2.0.7.tar.gz";
+      sha256 = "sha256-8FrNS6hGUF1AEltPnwvaCASysDVuKtL9Tkv30cYcjMY=";
     };
   };
   udev-gothic = {
     pname = "udev-gothic";
-    version = "v1.3.0";
+    version = "v1.3.1";
     src = fetchurl {
-      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.3.0/UDEVGothic_v1.3.0.zip";
-      sha256 = "sha256-SN8g+4d3zeigMrAmOfr9JD5Zvyr8muC0epenb3hHfJI=";
+      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.3.1/UDEVGothic_v1.3.1.zip";
+      sha256 = "sha256-E1Jcxz6mBLOkCg6b4iLNpB1TwhcJJUaksXjH6L9zIAI=";
     };
   };
   udev-gothic-nf = {
     pname = "udev-gothic-nf";
-    version = "v1.3.0";
+    version = "v1.3.1";
     src = fetchurl {
-      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.3.0/UDEVGothic_NF_v1.3.0.zip";
-      sha256 = "sha256-2H4CbiACo+QJm3GD3pJF1FIw3+c5PtWXvNn1aBwasCk=";
+      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.3.1/UDEVGothic_NF_v1.3.1.zip";
+      sha256 = "sha256-hABKMDi99SgoahE7TbB22EErtMpncdAqJAMYRz+bn84=";
     };
   };
   unityhub-latest = {
     pname = "unityhub-latest";
-    version = "3.5.0";
+    version = "3.5.1";
     src = fetchurl {
-      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.5.0.deb";
-      sha256 = "sha256-d5TUUhGqchkrCRqJWHEewurjsHxbfZ+5hv9w9Yv2EQ4=";
+      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.5.1.deb";
+      sha256 = "sha256-R/Ehf379Vbh/fN6iJO6BKsUuGMe2ogJdlWosElR+7f8=";
     };
   };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
-    version = "0.1.16";
+    version = "0.1.17";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.16";
-      sha256 = "sha256-lchER19pfnkly9cm5D6YanBQuatG6wlqQYFRhFiwpP4=";
+      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.17";
+      sha256 = "sha256-14LNQxZ3yMwTzahXaftHidSVr+isjL7qExnhFffGSa8=";
     };
   };
   wavesurfer = {
@@ -352,7 +251,9 @@
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./yaskkserv2-0.1.6/Cargo.lock;
-      outputHashes = { };
+      outputHashes = {
+        
+      };
     };
   };
 }
