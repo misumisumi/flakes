@@ -489,6 +489,21 @@
         },
         "version": "fcba63b1a29284fc76da65e60751a33b81380259"
     },
+    "torch-lightning": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "torch-lightning",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-9fXtdaZXyqiTEFFZDtAA1GvxuDEa6JuxepYcPymdvzM=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/l/lightning/lightning-2.0.4.tar.gz"
+        },
+        "version": "2.0.4"
+    },
     "udev-gothic": {
         "cargoLocks": null,
         "date": null,

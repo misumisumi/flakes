@@ -286,6 +286,14 @@
     };
     date = "2023-06-22";
   };
+  torch-lightning = {
+    pname = "torch-lightning";
+    version = "2.0.4";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/l/lightning/lightning-2.0.4.tar.gz";
+      sha256 = "sha256-9fXtdaZXyqiTEFFZDtAA1GvxuDEa6JuxepYcPymdvzM=";
+    };
+  };
   udev-gothic = {
     pname = "udev-gothic";
     version = "v1.3.0";

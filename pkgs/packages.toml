@@ -155,3 +155,7 @@ fetch.pypi = 'pyknp'
 [SpeechRecognition]
 src.pypi = 'SpeechRecognition'
 fetch.pypi = 'SpeechRecognition'
+
+[torch-lightning]
+src.pypi = 'lightning'
+fetch.pypi = 'lightning'
