@@ -8,8 +8,8 @@ in
   options = {
     services.asus-notify = {
       enable = mkEnableOption ''
-          Notication for asusctl.
-        '';
+        Notication for asusctl.
+      '';
     };
   };
   config = mkIf cfg.enable {
@@ -27,9 +27,9 @@ in
           StartLimitBurst = 2;
         };
         serviceConfig = {
-          Type="simple";
+          Type = "simple";
           ExecStart = "${pkgs.asusctl}/bin/asus-notify";
-          Restart="on-failure";
+          Restart = "on-failure";
         };
       };
     };

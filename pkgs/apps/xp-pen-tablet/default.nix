@@ -1,26 +1,26 @@
-{ stdenv,
-  lib,
-  name,
-  pkgSources,
-  fetchurl,
-  autoPatchelfHook,
-  makeDesktopItem,
-  writeShellApplication,
-  glibc,
-  libGL,
-  libX11,
-  libXi,
-  libXinerama,
-  libXrandr,
-  libXtst,
-  libsForQt5,
-  libusb1,
-  xorg
+{ stdenv
+, lib
+, name
+, pkgSources
+, fetchurl
+, autoPatchelfHook
+, makeDesktopItem
+, writeShellApplication
+, glibc
+, libGL
+, libX11
+, libXi
+, libXinerama
+, libXrandr
+, libXtst
+, libsForQt5
+, libusb1
+, xorg
 }:
 let
-  pkg_url = (with builtins; fromJSON (readFile  ../../../_sources/generated.json))."xp-pen-tablet".src.url;
+  pkg_url = (with builtins; fromJSON (readFile ../../../_sources/generated.json))."xp-pen-tablet".src.url;
   pkg_sha256 = (with builtins; fromJSON (readFile ../../../_sources/generated.json))."xp-pen-tablet".src.sha256;
-  mkDerivation = libsForQt5.callPackage ({ mkDerivation }: mkDerivation) {};
+  mkDerivation = libsForQt5.callPackage ({ mkDerivation }: mkDerivation) { };
   dataDir = "var/lib/xppend1v2";
 in
 mkDerivation rec {
@@ -42,7 +42,7 @@ mkDerivation rec {
 
   buildInputs = [ glibc libGL libX11 libXi libXinerama libXrandr libXtst libsForQt5.qtx11extras libusb1 stdenv.cc.cc.lib ];
 
-  desktopItems = [ 
+  desktopItems = [
     (makeDesktopItem {
       name = "xp-pen-driver";
       exec = "xp-pen-driver-indicator";
@@ -53,17 +53,17 @@ mkDerivation rec {
     })
   ];
   run_script = writeShellApplication {
-      name = "xp-pen-driver";
-      text = ''
-        sudo sh -c "xp-pen-driver &"
-      '';
-    };
+    name = "xp-pen-driver";
+    text = ''
+      sudo sh -c "xp-pen-driver &"
+    '';
+  };
   indicator = writeShellApplication {
-      name = "xp-pen-driver-indicator";
-      text = ''
-        sudo sh -c "xp-pen-driver /mini &"
-      '';
-    };
+    name = "xp-pen-driver-indicator";
+    text = ''
+      sudo sh -c "xp-pen-driver /mini &"
+    '';
+  };
   installPhase = ''
     runHook preInstall
     mkdir -p $out/{opt,bin,share}
@@ -85,7 +85,7 @@ mkDerivation rec {
     makeWrapper $out/opt/pentablet $out/opt/xp-pen-driver \
     "''${qtWrapperArgs[@]}" \
       --run 'if [ ! -d /${dataDir} ]; then mkdir -p /${dataDir}; cp -r '$out'/opt/conf /${dataDir}; chmod u+w -R /${dataDir}; fi'
-    '';
+  '';
 
   meta = with lib; {
     description = "XP-Pen (Official) Linux utility (New UI driver)";

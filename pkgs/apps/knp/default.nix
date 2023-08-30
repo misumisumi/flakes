@@ -1,14 +1,14 @@
-{ stdenv,
-  lib,
-  name,
-  pkgSources,
-  fetchurl,
-  autoconf,
-  automake,
-  libtool,
-  perl,
-  unzip,
-  zlib
+{ stdenv
+, lib
+, name
+, pkgSources
+, fetchurl
+, autoconf
+, automake
+, libtool
+, perl
+, unzip
+, zlib
 }:
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
@@ -18,10 +18,10 @@ stdenv.mkDerivation {
     sha256 = "0sagr41gh1hx0i22h3s8kjwb5g9qc46hv2fxvswjh8c1fwknqpxl";
   };
 
-  hardeningDisable = [ "format" ];  # remove "-Werror=format-security" from gcc flag 
+  hardeningDisable = [ "format" ]; # remove "-Werror=format-security" from gcc flag 
 
   # Multi linkerでもビルドできるようにする
-  NIX_CFLAGS_COMPILE = [ "-fcommon" ]; 
+  NIX_CFLAGS_COMPILE = [ "-fcommon" ];
 
   patches = [
     ./Makefile.patch

@@ -9,7 +9,7 @@ stdenv.mkDerivation {
       name = "alsa.patch";
       url = "https://aur.archlinux.org/cgit/aur.git/plain/alsa.patch?h=snack";
       sha256 = "sha256-0BC/uu7QGMxHuYGBgdY9n07LeyPgqzD7RWVLGM5/EF8=";
-     })
+    })
   ];
   patchPhase = ''
     for i in $patches ; do
@@ -23,7 +23,7 @@ stdenv.mkDerivation {
   '';
 
   configureFlags = [
-    "--prefix=$out" 
+    "--prefix=$out"
     "--with-tcl=${tcl}/lib"
     "--with-tk=${tk}/lib"
     "--enable-alsa"

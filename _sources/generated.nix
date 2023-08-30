@@ -280,9 +280,7 @@
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./supergfxctl-latest-fcba63b1a29284fc76da65e60751a33b81380259/Cargo.lock;
-      outputHashes = {
-        
-      };
+      outputHashes = { };
     };
     date = "2023-06-22";
   };
@@ -354,9 +352,7 @@
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./yaskkserv2-0.1.6/Cargo.lock;
-      outputHashes = {
-        
-      };
+      outputHashes = { };
     };
   };
 }

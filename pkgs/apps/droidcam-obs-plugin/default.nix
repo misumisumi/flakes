@@ -1,4 +1,3 @@
-
 { stdenvNoCC, lib, fetchpatch, name, pkgSources, libimobiledevice, libjpeg_turbo, libusbmuxd, obs-studio, unzip }:
 
 stdenvNoCC.mkDerivation rec {
