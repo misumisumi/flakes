@@ -1,0 +1,51 @@
+name: update-flake-lock
+on:
+  workflow_dispatch: # allows manual triggering
+  schedule:
+    - cron: "0 0 * * 0" # runs weekly on Sunday at 00:00
+
+jobs:
+  update_flake_lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v1
+
+      - name: Update
+        uses: DeterminateSystems/update-flake-lock@vX
+        with:
+          pr-title: "Update flake.lock" # Title of PR to be created
+          pr-labels: | # Labels to be set on the PR
+            dependencies
+            automated
+
+      - name: Build_check
+        uses: ./.github/workflows/build_check.yml
+
+  commit_change:
+    needs: [update_flake_lock]
+    if: update_flake_lock.steps.Build_check.conclusion == 'success'
+    steps:
+      - name: Update README
+        run: ./update-readme.yml
+
+      - name: Commit README
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update(flake): Automated Change"
+
+      - name: Approve PR
+        run: gh pr review --approve ${{ steps.Update.outputs.pull-request-number }}
+
+      - name: Auto merge
+        run: gh pr merge --merge --auto ${{ steps.Update.outputs.pull-request-number }}
+
+  failure:
+    needs: [update_flake_lock]
+    if: update_flake_lock.steps.steps.Build_check.conclusion == 'failure'
+    steps:
+      - name: Close PR
+        run: gh pr close ${{ steps.Update.outputs.pull-request-number }}
