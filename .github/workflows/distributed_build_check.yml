@@ -1,0 +1,45 @@
+name: distributed_build_check
+on:
+  push:
+
+jobs:
+  distributed_build_check1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build_check
+        with:
+          start: 1
+          end: 5
+        uses: ./.github/workflows/build_check.yml
+  distributed_build_check2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build_check
+        with:
+          start: 6
+          end: 10
+        uses: ./.github/workflows/build_check.yml
+  distributed_build_check3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build_check
+        with:
+          start: 11
+          end: 15
+        uses: ./.github/workflows/build_check.yml
+  distributed_build_check4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build_check
+        with:
+          start: 16
+          end: 20
+        uses: ./.github/workflows/build_check.yml
+  distributed_build_check5:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build_check
+        with:
+          start: 21
+          end: 25
+        uses: ./.github/workflows/build_check.yml

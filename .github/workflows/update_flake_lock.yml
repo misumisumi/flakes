@@ -23,6 +23,8 @@ jobs:
             automated
 
       - name: Build_check
+        with:
+          do_checkout: false
         uses: ./.github/workflows/build_check.yml
 
   commit_change:

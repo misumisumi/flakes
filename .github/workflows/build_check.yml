@@ -1,13 +1,31 @@
 name: build check
-on: [push, pull_request, workflow_call]
+on:
+  workflow_call:
+    inputs:
+      start:
+        description: start
+        required: true
+        type: number
+      end:
+        description: end
+        required: true
+        type: number
 
 jobs:
   build_check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.3.0
+      - uses: easimon/maximize-build-space@master
         with:
-          fetch-depth: 0
+          root-reserve-mb: 8192
+          swap-size-mb: 1024
+          build-mount-path: "/nix/store"
+          remove-dotnet: true
+          remove-android: true
+          remove-haskell: true
+          remove-codeql: true
+          remove-docker-images: true
+      - uses: actions/checkout@v3.3.0
       - name: Cache nvfetcher
         uses: actions/cache@v3.2.6
         with:
@@ -20,5 +38,5 @@ jobs:
         with:
           name: misumisumi
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-      - name: Run flake check
-        run: nix flake check
+      - name: Run flake build
+        run: ./check_build.sh ${{ inputs.start }} ${{ inputs.end }}
