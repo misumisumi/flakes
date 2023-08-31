@@ -31,9 +31,11 @@ let
     value = mkApp { drv = pkgs.${name}; };
   };
   broken = import ./pkgs/broken.nix;
+  dontcheck = import ./pkgs/dontcheck.nix;
 in
 rec {
   mkApps = pkgs: appNames: lib.listToAttrs (map (genApp pkgs) appNames);
+  mkCheck = pkgs: lib.filterAttrs (n: v: (lib.findFirst (x: n == x) true dontcheck) == true) pkgs;
   names = targetDir: lib.subtractLists broken (lib.remove false (map (isDir (ls targetDir)) (lib.attrNames (ls targetDir))));
   runnableApps = pkgs: ts: lib.remove false (map (isRunnableApp pkgs) ts);
   sources = pkgs: import ./_sources/generated.nix { inherit (pkgs) fetchgit fetchurl fetchFromGitHub dockerTools; };

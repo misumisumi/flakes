@@ -17,7 +17,7 @@
     , ...
     }:
     let
-      inherit (import ./lib.nix { inherit (inputs.nixpkgs) lib; }) mkApps names runnableApps sources withContents;
+      inherit (import ./lib.nix { inherit (inputs.nixpkgs) lib; }) mkApps mkCheck names runnableApps sources withContents;
 
       appsDir = ./pkgs/apps;
       pythonModulesDir = ./pkgs/python-modules;
@@ -85,7 +85,7 @@
             packages = withContents appsDir (name: pkgs.${name})
               // withContents pythonModulesDir (name: pkgs.python3Packages.${name});
             apps = mkApps pkgs (runnableApps pkgs (names appsDir));
-            checks = packages;
+            checks = mkCheck packages;
             devShells = withContents appsDir (name: pkgs.${name})
               // withContents pythonModulesDir (name: pkgs.python3Packages.${name})
               // { default = inputs.nvfetcher.packages.${system}.ghcWithNvfetcher; };
