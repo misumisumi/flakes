@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-cat <<"EOF" >test.md
+cat <<"EOF" >../README.md
 # My nix packages and nixosModules
 
 This repository use [nvfetcher](https://github.com/berberman/nvfetcher.git) for auto update packages.
