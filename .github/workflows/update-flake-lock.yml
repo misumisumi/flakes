@@ -37,23 +37,25 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
           skipPush: true
 
-      - uses: DeterminateSystems/update-flake-lock@v20
+      - name: Update-flake-lock
+        uses: DeterminateSystems/update-flake-lock@v20
         with:
           pr-title: 'Update flake.lock' # Title of PR to be created
           pr-labels: | # Labels to be set on the PR
             dependencies
             automated
 
-      - name: Run flake build
-        run: nix flake check
-
   commit-change:
     runs-on: ubuntu-latest
     needs: [update-flake-lock]
     if: needs.update-flake-lock.result == 'success'
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
+      - uses: actions/checkout@v3.3.0
+
       - name: Update README
-        run: ./scripts/update-readme.yml
+        run: ./scripts/update-readme.sh
 
       - name: Commit README
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -62,15 +64,17 @@ jobs:
           file-pattern: 'README.md'
 
       - name: Approve PR
-        run: gh pr review --approve ${{ steps.Update.outputs.pull-request-number }}
+        run: gh pr review --approve ${{ needs.update-flake-lock.steps.Update-flake-lock.outputs.pull-request-number }}
 
       - name: Auto merge
-        run: gh pr merge --merge --auto ${{ steps.Update.outputs.pull-request-number }}
+        run: gh pr merge --merge --auto ${{ needs.update-flake-lock.steps.Update-flake-lock.outputs.pull-request-number }}
 
   failure:
     runs-on: ubuntu-latest
     needs: [update-flake-lock]
     if: needs.update-flake-lock.result == 'failure'
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Close PR
-        run: gh pr close ${{ steps.Update.outputs.pull-request-number }}
+        run: gh pr close ${{ needs.update-flake-lock.steps.Update-flake-lock.outputs.pull-request-number }}
