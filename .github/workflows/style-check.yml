@@ -1,6 +1,10 @@
 name: Style check
 on:
   push:
+    branch-ignore:
+      - 'update_flake_lock_action'
+    tags:
+      - '*'
     path-ignore:
       - '**.lock'
       - '**.md'

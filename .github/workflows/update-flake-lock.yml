@@ -36,12 +36,15 @@ jobs:
           pr-labels: | # Labels to be set on the PR
             dependencies
             automated
+      - name: Get latest commit hash
+        id: get-commit-hash
+        run: 'echo latest_hash=$(git log --pretty=%H | head -n1) >> $GITHUB_ENV'
 
       - name: Wait CI
         id: wait-ci
         uses: lirlia/check-all-ci-completion-action@v1.6.1
         with:
-          commit-hash: ${{ github.event.pull_request.head.sha }}
+          commit-hash: ${{ env.latest_hash }}
 
       - name: Update README
         if: steps.wait-ci.conclusion == 'success'
