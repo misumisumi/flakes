@@ -62,8 +62,17 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
 
-      - name: Auto approve PR and merge
-        if: steps.generate.conclusion == 'success'
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.3.6
+        with:
+          GITHUB_TOKEN: ${{ steps.generate.outputs.token }}
+
+      - name: Approve & enable auto-merge
+        if: |
+          steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
+          steps.metadata.outputs.update-type == 'version-update:semver-minor' &&
+          steps.generate.conclusion == 'success'
         env:
           GITHUB_TOKEN: ${{ steps.generate.outputs.token }}
         run: |
@@ -72,4 +81,6 @@ jobs:
 
       - name: Close PR
         if: steps.update.conclusion == 'failure'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: gh pr close ${{ steps.update.outputs.pull-request-number }}
