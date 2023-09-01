@@ -40,14 +40,8 @@ jobs:
         id: get-commit-hash
         run: 'echo latest_hash=$(git log --pretty=%H | head -n1) >> $GITHUB_ENV'
 
-      - name: Wait CI
-        id: wait-ci
-        uses: lirlia/check-all-ci-completion-action@v1.6.1
-        with:
-          commit-hash: ${{ env.latest_hash }}
-
       - name: Update README
-        if: steps.wait-ci.conclusion == 'success'
+        if: steps.update.conclusion == 'success'
         run: ./scripts/update-readme.sh
 
       - name: Commit README
@@ -68,7 +62,7 @@ jobs:
           gh pr merge --merge --auto ${{ steps.update.outputs.pull-request-number }}
 
       - name: Close PR
-        if: steps.wait-ci.conclusion == 'failure'
+        if: steps.update.conclusion == 'failure'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: gh pr close ${{ steps.update.outputs.pull-request-number }}
