@@ -1,6 +1,11 @@
 name: Build check
 on:
   push:
+    path-ignore:
+      - '**.lock'
+      - '**.md'
+      - '**.sh'
+      - '**.yml'
   pull_request:
 
 jobs:
