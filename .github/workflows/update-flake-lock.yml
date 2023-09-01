@@ -7,6 +7,8 @@ on:
 jobs:
   update-flake-lock:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       # - uses: easimon/maximize-build-space@master
       #   with:
@@ -45,30 +47,31 @@ jobs:
           pr-labels: | # Labels to be set on the PR
             dependencies
             automated
+          git-author-name: 'misumiumi[bot]'
+          git-author-email: 'misumisuminan@gmail.com'
+          git-committer-name: 'misumiumi[bot]'
+          git-committer-email: 'misumisuminan@gmail.com'
 
       - name: Commit README
         id: commit
         uses: stefanzweifel/git-auto-commit-action@v4
         if: steps.update.conclusion == 'success'
         with:
-          commit-options: '--amend --no-edit'
-          file-pattern: 'README.md'
+          commit_options: '--amend --no-edit'
+          file_pattern: 'README.md'
+          commit_user_name: 'misumiumi[bot]'
+          commit_user_email: 'misumisuminan@gmail.com'
+          commit_author: 'misumisumi[bot] <misumisuminan@gmail.com>'
 
       - name: Approve PR
         id: pr
         if: steps.commit.conclusion == 'success'
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: gh pr review --approve ${{ steps.update.outputs.pull-request-number }}
 
       - name: Auto merge
         if: steps.pr.conclusion == 'success'
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: gh pr merge --merge --auto ${{ steps.update.outputs.pull-request-number }}
 
       - name: Close PR
         if: steps.update.conclusion == 'failure'
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: gh pr close ${{ steps.update.outputs.pull-request-number }}
