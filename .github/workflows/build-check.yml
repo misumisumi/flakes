@@ -1,32 +1,38 @@
-name: Build_check
+name: Build check
 on: [push, pull_request]
 
 jobs:
-  build_check:
+  build-check:
     runs-on: ubuntu-latest
     steps:
       - uses: easimon/maximize-build-space@master
         with:
-          root-reserve-mb: 16384
+          root-reserve-mb: 8192
           swap-size-mb: 1024
-          build-mount-path: "/nix/store"
+          build-mount-path: '/nix/store'
           remove-dotnet: true
           remove-android: true
           remove-haskell: true
           remove-codeql: true
           remove-docker-images: true
+
       - uses: actions/checkout@v3.3.0
+
       - name: Cache nvfetcher
         uses: actions/cache@v3.2.6
         with:
           path: ~/.local/share/nvfetcher
           key: ${{ runner.os }}-nvfetcher
+
       - uses: cachix/install-nix-action@v20
         with:
           nix_path: nixpkgs=channel:nixos-unstable
+
       - uses: cachix/cachix-action@v12
         with:
           name: misumisumi
-          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          skipPush: true
+
       - name: Run flake build
         run: nix flake check

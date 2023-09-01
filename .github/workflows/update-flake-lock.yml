@@ -1,26 +1,25 @@
-name: Update flake lock
+name: Update flake.lock
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: "0 0 * * 0" # runs weekly on Sunday at 00:00
+    - cron: '0 0 * * 0' # runs weekly on Sunday at 00:00
 
 jobs:
-  update_flake_lock:
+  update-flake-lock:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
       - uses: easimon/maximize-build-space@master
         with:
-          root-reserve-mb: 16384
+          root-reserve-mb: 8192
           swap-size-mb: 1024
-          build-mount-path: "/nix/store"
+          build-mount-path: '/nix/store'
           remove-dotnet: true
           remove-android: true
           remove-haskell: true
           remove-codeql: true
           remove-docker-images: true
+
+      - uses: actions/checkout@v3.3.0
 
       - name: Cache nvfetcher
         uses: actions/cache@v3.2.6
@@ -32,25 +31,26 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixos-unstable
 
-      - name: Update
-        uses: DeterminateSystems/update-flake-lock@vX
+      - uses: cachix/cachix-action@v12
         with:
-          pr-title: "Update flake.lock" # Title of PR to be created
+          name: misumisumi
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          skipPush: true
+
+      - uses: DeterminateSystems/update-flake-lock@v20
+        with:
+          pr-title: 'Update flake.lock' # Title of PR to be created
           pr-labels: | # Labels to be set on the PR
             dependencies
             automated
 
-      - uses: cachix/cachix-action@v12
-        with:
-          name: misumisumi
-          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-
       - name: Run flake build
         run: nix flake check
 
-  commit_change:
-    needs: [update_flake_lock]
-    if: needs.update_flake_lock.result == 'success'
+  commit-change:
+    runs-on: ubuntu-latest
+    needs: [update-flake-lock]
+    if: needs.update-flake-lock.result == 'success'
     steps:
       - name: Update README
         run: ./scripts/update-readme.yml
@@ -58,7 +58,8 @@ jobs:
       - name: Commit README
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Update(flake): Automated Change"
+          commit-options: '--amend --no-edit'
+          file-pattern: 'README.md'
 
       - name: Approve PR
         run: gh pr review --approve ${{ steps.Update.outputs.pull-request-number }}
@@ -67,8 +68,9 @@ jobs:
         run: gh pr merge --merge --auto ${{ steps.Update.outputs.pull-request-number }}
 
   failure:
-    needs: [update_flake_lock]
-    if: needs.update_flake_lock.result == 'failure'
+    runs-on: ubuntu-latest
+    needs: [update-flake-lock]
+    if: needs.update-flake-lock.result == 'failure'
     steps:
       - name: Close PR
         run: gh pr close ${{ steps.Update.outputs.pull-request-number }}
