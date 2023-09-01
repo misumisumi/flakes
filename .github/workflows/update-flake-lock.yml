@@ -8,16 +8,16 @@ jobs:
   update-flake-lock:
     runs-on: ubuntu-latest
     steps:
-      - uses: easimon/maximize-build-space@master
-        with:
-          root-reserve-mb: 8192
-          swap-size-mb: 1024
-          build-mount-path: '/nix/store'
-          remove-dotnet: true
-          remove-android: true
-          remove-haskell: true
-          remove-codeql: true
-          remove-docker-images: true
+      # - uses: easimon/maximize-build-space@master
+      #   with:
+      #     root-reserve-mb: 8192
+      #     swap-size-mb: 1024
+      #     build-mount-path: '/nix/store'
+      #     remove-dotnet: true
+      #     remove-android: true
+      #     remove-haskell: true
+      #     remove-codeql: true
+      #     remove-docker-images: true
 
       - uses: actions/checkout@v3.3.0
 
@@ -37,40 +37,38 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
           skipPush: true
 
-      - uses: DeterminateSystems/update-flake-lock@v20
+      - name: Update flake lock
+        id: update
+        uses: DeterminateSystems/update-flake-lock@v20
         with:
           pr-title: 'Update flake.lock' # Title of PR to be created
           pr-labels: | # Labels to be set on the PR
             dependencies
             automated
 
-      - name: Run flake build
-        run: nix flake check
-
-  commit-change:
-    runs-on: ubuntu-latest
-    needs: [update-flake-lock]
-    if: needs.update-flake-lock.result == 'success'
-    steps:
-      - name: Update README
-        run: ./scripts/update-readme.yml
-
       - name: Commit README
+        id: commit
         uses: stefanzweifel/git-auto-commit-action@v4
+        if: steps.update.conclusion == 'success'
         with:
           commit-options: '--amend --no-edit'
           file-pattern: 'README.md'
 
       - name: Approve PR
-        run: gh pr review --approve ${{ steps.Update.outputs.pull-request-number }}
+        id: pr
+        if: steps.commit.conclusion == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr review --approve ${{ steps.update.outputs.pull-request-number }}
 
       - name: Auto merge
-        run: gh pr merge --merge --auto ${{ steps.Update.outputs.pull-request-number }}
+        if: steps.pr.conclusion == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr merge --merge --auto ${{ steps.update.outputs.pull-request-number }}
 
-  failure:
-    runs-on: ubuntu-latest
-    needs: [update-flake-lock]
-    if: needs.update-flake-lock.result == 'failure'
-    steps:
       - name: Close PR
-        run: gh pr close ${{ steps.Update.outputs.pull-request-number }}
+        if: steps.update.conclusion == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr close ${{ steps.update.outputs.pull-request-number }}
