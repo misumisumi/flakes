@@ -1,10 +1,9 @@
 #! /usr/bin/env bash
 
-cat <<"EOF" >../README.md
+cat <<"EOF" >README.md
 # My nix packages and nixosModules
 
 This repository use [nvfetcher](https://github.com/berberman/nvfetcher.git) for auto update packages.
-See [auto-update.sh](./auto-update.sh)
 
 ## Usage
 
@@ -54,7 +53,7 @@ In your `flake.nix`
 
 EOF
 
-cat <<EOF >>test.md
+cat <<EOF >>README.md
 ## Available packages
 
 - Apps

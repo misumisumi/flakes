@@ -1,39 +1,80 @@
-# My nix packages and nixos modules
+# My nix packages and nixosModules
 
 This repository use [nvfetcher](https://github.com/berberman/nvfetcher.git) for auto update packages.
+See [auto-update.sh](./auto-update.sh)
 
-## Warning
+## Usage
 
-1. When using `asusctl-latest` and `supergfxctl-latest`, the nixpkgs does not contain the latest rustc, so you need to adjust the version.default.(So I'm treating it as broken.)
-2. `fcitx5-mozc-ext-neologd` conflicts with fcitx5-mozc included in nixpkgs
-3. `modules/yaskkserv2.nix` is module for [home-manager](https://github.com/nix-community/home-manager).
-   In addition, intended to be used with fcitx5
+### Use binary cache from cachix:
+
+```sh
+$ cachix use misumisumi
+```
+
+### Run a package immediately
+
+```sh
+$ nix run github:misumisumi/flakes#<package-name>
+```
+
+### Add the overlay to your system
+
+In your `flake.nix`
+
+```nix
+{
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    misumisumi = {
+      url = "github:misumisumi/flakes";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+  outputs = { self, nixpkgs, misumisumi }: {
+    nixosConfigurations.my-machine = nixpkgs.lib.nixosSystem {
+      # ...
+      modules = [
+        # ...
+        {
+          nixpkgs.overlays = [
+            # ...
+            misumisumi.overlays
+          ];
+        }
+      ];
+    };
+  };
+}
+
+```
 
 ## Available packages
 
 - Apps
-  - [droidcam-obs-plugin](https://dev47apps.com/obs/)
-  - [fcitx5-mozc-ext-neologd](https://aur.archlinux.org/packages/fcitx5-mozc-ext-neologd)
-  - [fcitx5-nord](https://github.com/tonyfettes/fcitx5-nord.git)
-  - [fcitx5-skk](https://github.com/fcitx/fcitx5-skk)
-  - [juce](https://juce.com/)
-  - [knp](https://nlp.ist.i.kyoto-u.ac.jp/?KNP)
-  - [prime-run](https://wiki.archlinux.org/title/PRIME)
-  - [skk-emoji-jisyo](https://github.com/uasi/skk-emoji-jisyo)
-  - [snack](https://www.speech.kth.se/snack/)
-  - [unityhub-latest](https://unity.com/ja/download)
-  - [wavesurfer](https://gitlab.com/asus-linux/supergfxctl)
-  - [xp-pen-tablet](https://www.xp-pen.com/download)
-  - [yaskkserv2](https://github.com/wachikun/yaskkserv2)
-  - [yaskkserv2-dict](https://github.com/wachikun/yaskkserv2)
-  - They already exist in nixpkgs-unstable.
-    - [asusctl-latest](https://gitlab.com/asus-linux/asusctl)
-    - [supergfxctl-latest](https://gitlab.com/asus-linux/supergfxctl)
-- PythonModules
-  - [doc](https://github.com/heavenshell/py-doq)
-  - [pyknp](https://github.com/heavenshell/py-doq)
 
-## ToDO
+  - bt-dualboot-1.0.1
+  - csharp-ls-0.9.0
+  - cups-brother-hll5100dn-3.5.1-1
+  - droidcam-obs-plugin-2.1.0
+  - fcitx5-nord-bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1
+  - fcitx5-skk-5.1.0
+  - juce-7.0.7
+  - knp-5c637eb99d66defa40d586028cd0ed05c6bdd8fe
+  - plemoljp-fonts-v1.6.0
+  - prime-run
+  - ricoh-sp-c260series-ppd-1.00
+  - skk-emoji-jisyo-v0.0.9
+  - snack-2.2.10
+  - udev-gothic-v1.3.1
+  - unityhub-latest-3.5.1
+  - wavesurfer-1.8.8p5
+  - yaskkserv2-0.1.6
+  - yaskkserv2-dict-43af3f7cc2dc1ad7bac58dcf44dd4ab22436135b
 
-- [ ] Add auto update package system using github action
-- [x] Do I `pythonPackages` overlays?
+- PythonPackages
+
+  - python3.10-doq-0.10.0
+  - python3.10-pyknp-0.6.1
+  - python3.10-SpeechRecognition-3.10.0
+
