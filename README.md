@@ -1,7 +1,6 @@
 # My nix packages and nixosModules
 
 This repository use [nvfetcher](https://github.com/berberman/nvfetcher.git) for auto update packages.
-See [auto-update.sh](./auto-update.sh)
 
 ## Usage
 
@@ -74,7 +73,7 @@ In your `flake.nix`
 
 - PythonPackages
 
+  - python3.10-SpeechRecognition-3.10.0
   - python3.10-doq-0.10.0
   - python3.10-pyknp-0.6.1
-  - python3.10-SpeechRecognition-3.10.0
 
