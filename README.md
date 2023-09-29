@@ -55,6 +55,7 @@ In your `flake.nix`
   - bt-dualboot-1.0.1
   - csharp-ls-0.9.0
   - cups-brother-hll5100dn-3.5.1-1
+  - drbd9-dkms-9.1.16
   - droidcam-obs-plugin-2.1.0
   - fcitx5-nord-bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1
   - fcitx5-skk-5.1.0
@@ -66,10 +67,10 @@ In your `flake.nix`
   - skk-emoji-jisyo-v0.0.9
   - snack-2.2.10
   - udev-gothic-v1.3.1
-  - unityhub-latest-3.5.1
+  - unityhub-latest-3.5.2
   - wavesurfer-1.8.8p5
-  - yaskkserv2-0.1.6
-  - yaskkserv2-dict-43af3f7cc2dc1ad7bac58dcf44dd4ab22436135b
+  - yaskkserv2-0.1.7
+  - yaskkserv2-dict-00189e8b954fd41089c8a1e8ae1b2aec4bd1d24c
 
 - PythonPackages
 
