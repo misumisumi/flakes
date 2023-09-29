@@ -26,6 +26,12 @@ fetch.url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper
 src.manual = "1.00"
 fetch.url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
 
+[drbd9-dkms]
+src.github_tag = 'LINBIT/drbd'
+src.include_regex = 'drbd-9.1.*'
+src.prefix = 'drbd-'
+fetch.url = 'https://pkg.linbit.com//downloads/drbd/9/drbd-$ver.tar.gz'
+
 [droidcam-obs-plugin]
 src.github = 'dev47apps/droidcam-obs-plugin'
 fetch.url = 'https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux_ffmpeg5.zip'
