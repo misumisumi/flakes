@@ -1,4 +1,4 @@
-name: Update flake.lock
+name: Update repository
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
@@ -31,6 +31,8 @@ jobs:
 
       - name: Update package version
         run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           nix develop --command nvfetcher -c pkgs/packages.toml --commit-changes
 
       - name: Update flake lock
