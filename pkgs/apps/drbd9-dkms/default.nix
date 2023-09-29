@@ -2,6 +2,7 @@
 , name
 , stdenv
 , lib
+, nukeReferences
 , linuxPackages
 , kernel ? linuxPackages.kernel
 }:
@@ -10,7 +11,7 @@ stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
   hardeningDisable = [ "pic" "format" ];
-  nativeBuildInputs = kernel.moduleBuildDependencies;
+  nativeBuildInputs = [ nukeReferences ] ++ kernel.moduleBuildDependencies;
 
   makeFlags = [
     "KVER=${kernel.modDirVersion}"
