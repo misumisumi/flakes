@@ -49,6 +49,14 @@
       sha256 = "sha256-ZyuAwa658CzaO8vpWzBG6WMZOFggusxwZizEhvTDSoY=";
     };
   };
+  drbd9-dkms = {
+    pname = "drbd9-dkms";
+    version = "9.1.16";
+    src = fetchurl {
+      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.16.tar.gz";
+      sha256 = "sha256-GtmTU9uuYqzBv07zL6jKMX5mVxOOAsAJ49TPQr+0Zfs=";
+    };
+  };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
     version = "2.1.0";
@@ -82,12 +90,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "43af3f7cc2dc1ad7bac58dcf44dd4ab22436135b";
+    version = "00189e8b954fd41089c8a1e8ae1b2aec4bd1d24c";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/43af3f7cc2dc1ad7bac58dcf44dd4ab22436135b/SKK-JISYO.jawiki";
-      sha256 = "sha256-B60S/LEQ3lBblrqFgz52s8up3BC0Fh0TAga/PULBHFY=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/00189e8b954fd41089c8a1e8ae1b2aec4bd1d24c/SKK-JISYO.jawiki";
+      sha256 = "sha256-JsvfdxJsx35UVXKQhfn7nz5RhywoEtem5i7JDy/58MM=";
     };
-    date = "2023-08-21";
+    date = "2023-09-21";
   };
   juce = {
     pname = "juce";
@@ -201,18 +209,18 @@
   };
   unityhub-latest = {
     pname = "unityhub-latest";
-    version = "3.5.1";
+    version = "3.5.2";
     src = fetchurl {
-      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.5.1.deb";
-      sha256 = "sha256-R/Ehf379Vbh/fN6iJO6BKsUuGMe2ogJdlWosElR+7f8=";
+      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.5.2.deb";
+      sha256 = "sha256-MiehcBs+Egfen7MzkzzWxLuTrWrHkqIj1y47sPI3Y74=";
     };
   };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
-    version = "0.1.17";
+    version = "0.1.18";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.17";
-      sha256 = "sha256-14LNQxZ3yMwTzahXaftHidSVr+isjL7qExnhFffGSa8=";
+      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.18";
+      sha256 = "sha256-F+2i4hSTgXELRP3n4/iFisyOjFBDUmSQ3WLT9fOILdE=";
     };
   };
   wavesurfer = {
@@ -225,16 +233,16 @@
   };
   yaskkserv2 = {
     pname = "yaskkserv2";
-    version = "0.1.6";
+    version = "0.1.7";
     src = fetchFromGitHub {
       owner = "wachikun";
       repo = "yaskkserv2";
-      rev = "0.1.6";
+      rev = "0.1.7";
       fetchSubmodules = false;
-      sha256 = "sha256-qVQxkbnk6UXBSZaOEyy7jZhvejHS/FJWqDsBSM1tCpE=";
+      sha256 = "sha256-bF8OHP6nvGhxXNvvnVCuOVFarK/n7WhGRktRN4X5ZjE=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./yaskkserv2-0.1.6/Cargo.lock;
+      lockFile = ./yaskkserv2-0.1.7/Cargo.lock;
       outputHashes = {
         
       };
