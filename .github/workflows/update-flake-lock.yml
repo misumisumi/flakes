@@ -2,10 +2,10 @@ name: Update flake.lock
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: "0 0 * * 0" # runs weekly on Sunday at 00:00
+    - cron: '0 0 * * 0' # runs weekly on Sunday at 00:00
 
 jobs:
-  update-flake-lock:
+  update-repo:
     runs-on: ubuntu-latest
     outputs:
       pr-number: ${{ steps.update.outputs.pull-request-number }}
@@ -26,22 +26,27 @@ jobs:
       - uses: cachix/cachix-action@v12
         with:
           name: misumisumi
-          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
           skipPush: true
 
+      - name: Update package version
+        run: |
+          nix develop --command nvfetcher -c pkgs/packages.toml --commit-changes
+
       - name: Update flake lock
-        id: update-flake
+        id: update
         uses: DeterminateSystems/update-flake-lock@v20
         with:
           token: ${{ steps.generate.outputs.token }}
-          pr-title: "Update flake.lock" # Title of PR to be created
+          commit-msg: 'Update flake and package version'
+          pr-title: 'Update repository' # Title of PR to be created
           pr-labels: | # Labels to be set on the PR
             dependencies
             automated
 
   update-readme:
     runs-on: ubuntu-latest
-    needs: update-flake-lock
+    needs: update-repo
     steps:
       - name: Generate GitHub Apps token
         id: generate
@@ -51,49 +56,49 @@ jobs:
           private_key: ${{ secrets.PRIVATE_KEY }}
 
       - uses: actions/checkout@v3.3.0
-        if: needs.update-flake-lock.result == 'success'
+        if: needs.update-repo.result == 'success'
         with:
           fetch-depth: 2
-          ref: "update_flake_lock_action"
+          ref: 'update_flake_lock_action'
           token: ${{ steps.generate.outputs.token }}
 
       - uses: cachix/install-nix-action@v20
-        if: needs.update-flake-lock.result == 'success'
+        if: needs.update-repo.result == 'success'
         with:
           nix_path: nixpkgs=channel:nixos-unstable
 
       - name: Update README
         id: update-readme
-        if: needs.update-flake-lock.result == 'success'
+        if: needs.update-repo.result == 'success'
         run: ./scripts/update-readme.sh
 
       - name: Get last commit message
         id: last-commit-message
-        if: needs.update-flake-lock.result == 'success'
+        if: needs.update-repo.result == 'success'
         run: |
           echo "msg=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
 
       - name: Commit README
         id: commit
         uses: stefanzweifel/git-auto-commit-action@v4
-        if: needs.update-flake-lock.result == 'success'
+        if: needs.update-repo.result == 'success'
         with:
-          push_options: "--force"
+          push_options: '--force'
           commit_message: ${{ steps.last-commit-message.outputs.msg }}
-          commit_options: "--amend --no-edit"
+          commit_options: '--amend --no-edit'
           skip_fetch: true
-          file_pattern: "README.md"
+          file_pattern: 'README.md _sources/*'
 
       - name: Approve & enable auto-merge
-        if: needs.update-flake-lock.result == 'success'
+        if: needs.update-repo.result == 'success'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          gh pr review --approve ${{ needs.update-flake-lock.outputs.pr-number }}
-          gh pr merge --merge --auto ${{ needs.update-flake-lock.outputs.pr-number }}
+          gh pr review --approve ${{ needs.update-repo.outputs.pr-number }}
+          gh pr merge --merge --auto ${{ needs.update-repo.outputs.pr-number }}
 
       - name: Close PR
-        if: needs.update-flake-lock.result != 'success'
+        if: needs.update-repo.result != 'success'
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: gh pr close ${{ needs.update-flake-lock.outputs.pr-number }}
+        run: gh pr close ${{ needs.update-repo.outputs.pr-number }}
