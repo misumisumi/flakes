@@ -44,6 +44,10 @@ fetch.github = 'tonyfettes/fcitx5-nord'
 src.github_tag = 'fcitx/fcitx5-skk'
 fetch.github = 'fcitx/fcitx5-skk'
 
+[fence-agents]
+src.github_tag = 'ClusterLabs/fence-agents'
+fetch.github = 'ClusterLabs/fence-agents'
+
 [juce]
 src.github_tag = 'juce-framework/JUCE'
 fetch.github = 'juce-framework/JUCE'
@@ -155,6 +159,10 @@ fetch.url = "https://github.com/yuru7/udev-gothic/releases/download/$ver/UDEVGot
 [doq]
 src.pypi = 'doq'
 fetch.pypi = 'doq'
+
+[suds]
+src.pypi = 'suds'
+fetch.pypi = 'suds'
 
 [pyknp]
 src.pypi = 'pyknp'

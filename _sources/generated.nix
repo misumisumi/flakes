@@ -88,6 +88,17 @@
       sha256 = "sha256-N69OyGzJGO27tsR1g06d0EILsX2mpbW/tIgeSLc06OU=";
     };
   };
+  fence-agents = {
+    pname = "fence-agents";
+    version = "v4.12.1";
+    src = fetchFromGitHub {
+      owner = "ClusterLabs";
+      repo = "fence-agents";
+      rev = "v4.12.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-0iiL/7SGUekCBQnZR/x10M5B0HqhLnfdnFYrBSJftuY=";
+    };
+  };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
     version = "00189e8b954fd41089c8a1e8ae1b2aec4bd1d24c";
@@ -191,6 +202,14 @@
       sha256 = "sha256-S/52RUerkrpY9Dt3Nm27fHs1EtZaJ82/nlhanLZM6B4=";
     };
   };
+  suds = {
+    pname = "suds";
+    version = "1.1.2";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/s/suds/suds-1.1.2.tar.gz";
+      sha256 = "sha256-HVz6dBFxk7JEpCM/JGxIPZ9BGYtEjF8UqLrRHE9knys=";
+    };
+  };
   udev-gothic = {
     pname = "udev-gothic";
     version = "v1.3.1";
@@ -243,9 +262,7 @@
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./yaskkserv2-0.1.7/Cargo.lock;
-      outputHashes = {
-        
-      };
+      outputHashes = { };
     };
   };
 }
