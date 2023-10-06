@@ -159,6 +159,26 @@
         },
         "version": "5.1.0"
     },
+    "fence-agents": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "fence-agents",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ClusterLabs",
+            "repo": "fence-agents",
+            "rev": "v4.12.1",
+            "sha256": "sha256-0iiL/7SGUekCBQnZR/x10M5B0HqhLnfdnFYrBSJftuY=",
+            "type": "github"
+        },
+        "version": "v4.12.1"
+    },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
         "date": "2023-09-21",
@@ -343,6 +363,21 @@
             "url": "http://www.speech.kth.se/snack/dist/snack2.2.10.tar.gz"
         },
         "version": "2.2.10"
+    },
+    "suds": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "suds",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-HVz6dBFxk7JEpCM/JGxIPZ9BGYtEjF8UqLrRHE9knys=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/s/suds/suds-1.1.2.tar.gz"
+        },
+        "version": "1.1.2"
     },
     "udev-gothic": {
         "cargoLocks": null,
