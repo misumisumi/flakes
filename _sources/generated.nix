@@ -262,7 +262,9 @@
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./yaskkserv2-0.1.7/Cargo.lock;
-      outputHashes = { };
+      outputHashes = {
+        
+      };
     };
   };
 }
