@@ -86,9 +86,12 @@
               // withContents pythonModulesDir (name: pkgs.python3Packages.${name});
             apps = mkApps pkgs (runnableApps pkgs (names appsDir));
             checks = mkCheck packages;
-            devShells = withContents appsDir (name: pkgs.${name})
-              // withContents pythonModulesDir (name: pkgs.python3Packages.${name})
-              // { default = inputs.nvfetcher.packages.${system}.ghcWithNvfetcher; };
+            devShells = withContents appsDir
+              (name:
+                (pkgs.${name}.overrideAttrs (old: { buildInputs = old.buildInputs ++ [ pkgs.bashInteractive ]; })))
+            // withContents pythonModulesDir (name:
+              (pkgs.python3Packages.${name}.overrideAttrs (old: { buildInputs = old.buildInputs ++ [ pkgs.bashInteractive ]; })))
+            // { default = (inputs.nvfetcher.packages.${system}.ghcWithNvfetcher.overrideAttrs (old: { buildInputs = old.buildInputs ++ [ pkgs.bashInteractive ]; })); };
           };
       };
 }
