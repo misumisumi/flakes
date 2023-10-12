@@ -36,7 +36,10 @@ in
 
   config = mkIf cfg.enable {
     environment.systemPackages = [ cfg.package ];
-    environment.etc."fence_virt.conf".text = cfg.extraConfig;
+    environment.etc."fence_virt.conf" = {
+      text = cfg.extraConfig;
+      mode = "0600";
+    };
 
     systemd.services.fence_virtd = {
       description = "Fence-Virt system host daemon";
@@ -64,6 +67,10 @@ in
     };
   };
 }
+
+
+
+
 
 
 
