@@ -116,15 +116,20 @@ stdenv.mkDerivation rec {
     "--sbindir=$(out)/bin"
     "--libdir=$(out)/lib"
     "--libexecdir=$(out)/lib"
-    "--sysconfdir=$PWD/etc"
-    "--localstatedir=$(out)/var"
+    "--sysconfdir=/etc"
+    "--localstatedir=/var"
     "--with-fencetmpdir=$(out)/var/run/fence-agents"
-    "--with-systemdsystemunitdir=$(out)/lib/systemd/system"
     "--with-agents=${agents}"
   ];
   preInstall = ''
+    mkdir -p $out/etc
     substituteInPlace Makefile \
-      --replace "\$(INSTALL) -d -m 1755 \$(DESTDIR)\$(FENCETMPDIR)" ""
+      --replace "\$(INSTALL) -d \$(DESTDIR)/\$(LOGDIR)" "" \
+      --replace "\$(INSTALL) -d \$(DESTDIR)/\$(CLUSTERVARRUN)" "" \
+      --replace "\$(INSTALL) -d -m 1755 \$(DESTDIR)\$(FENCETMPDIR)" ""  \
+
+    substituteInPlace agents/virt/config/Makefile \
+      --replace "sysconfdir = /etc" "sysconfdir = $out/etc"
   '';
 
   postInstall = ''
