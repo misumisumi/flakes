@@ -12,9 +12,9 @@
 , libskk
 , skk-dicts
 , useDict ? "Combined"
-, useAssoc ? false
-, useEdict ? false
-, useEmoji ? false
+, useAssoc ? true
+, useEdict ? true
+, useEmoji ? true
 , skk-emoji-jisyo ? null
 }:
 let
