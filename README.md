@@ -59,9 +59,9 @@ In your `flake.nix`
   - droidcam-obs-plugin-2.1.0
   - fcitx5-nord-bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1
   - fcitx5-skk-5.1.0
-  - fence-agents-4.12.1
+  - fence-agents-4.13.0
   - juce-7.0.7
-  - knp-5c637eb99d66defa40d586028cd0ed05c6bdd8fe
+  - knp-f98d4eefcc95309ce91e82d6ee0c6db1c3680c1a
   - plemoljp-fonts-v1.6.0
   - prime-run
   - ricoh-sp-c260series-ppd-1.00
