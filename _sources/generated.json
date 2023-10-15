@@ -173,11 +173,11 @@
             "name": null,
             "owner": "ClusterLabs",
             "repo": "fence-agents",
-            "rev": "v4.12.1",
-            "sha256": "sha256-0iiL/7SGUekCBQnZR/x10M5B0HqhLnfdnFYrBSJftuY=",
+            "rev": "v4.13.0",
+            "sha256": "sha256-IfsFh9esALPXOoTbxcq8Hzx9vFo1U98ZXyyrFp93ySo=",
             "type": "github"
         },
-        "version": "v4.12.1"
+        "version": "v4.13.0"
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
@@ -216,7 +216,7 @@
     },
     "knp": {
         "cargoLocks": null,
-        "date": "2023-02-24",
+        "date": "2023-10-10",
         "extract": null,
         "name": "knp",
         "passthru": null,
@@ -228,11 +228,11 @@
             "name": null,
             "owner": "ku-nlp",
             "repo": "knp",
-            "rev": "5c637eb99d66defa40d586028cd0ed05c6bdd8fe",
-            "sha256": "sha256-Jr8a8Pdi0u5ArZmSnwaIgVyHL89SH7ziuNr3N9OFgJQ=",
+            "rev": "f98d4eefcc95309ce91e82d6ee0c6db1c3680c1a",
+            "sha256": "sha256-DMsqG5oUjQXik5HVjFHkjrVAvIKlgcVwO5p5tNGSL90=",
             "type": "github"
         },
-        "version": "5c637eb99d66defa40d586028cd0ed05c6bdd8fe"
+        "version": "f98d4eefcc95309ce91e82d6ee0c6db1c3680c1a"
     },
     "notify-rust": {
         "cargoLocks": null,
@@ -433,11 +433,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-F+2i4hSTgXELRP3n4/iFisyOjFBDUmSQ3WLT9fOILdE=",
+            "sha256": "sha256-3Y3GSUq6aTl7vtAhwT7zBPGjbf4cMMrbYC5AdiundOg=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.18"
+            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.19"
         },
-        "version": "0.1.18"
+        "version": "0.1.19"
     },
     "wavesurfer": {
         "cargoLocks": null,
