@@ -88,10 +88,10 @@
             checks = mkCheck packages;
             devShells = withContents appsDir
               (name:
-                (pkgs.${name}.overrideAttrs (old: { buildInputs = old.buildInputs ++ [ pkgs.bashInteractive ]; })))
+                (pkgs.${name}.overrideAttrs (old: { buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ]; })))
             // withContents pythonModulesDir (name:
-              (pkgs.python3Packages.${name}.overrideAttrs (old: { buildInputs = old.buildInputs ++ [ pkgs.bashInteractive ]; })))
-            // { default = (inputs.nvfetcher.packages.${system}.ghcWithNvfetcher.overrideAttrs (old: { buildInputs = old.buildInputs ++ [ pkgs.bashInteractive ]; })); };
+              (pkgs.python3Packages.${name}.overrideAttrs (old: { buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ]; })))
+            // { default = (inputs.nvfetcher.packages.${system}.ghcWithNvfetcher.overrideAttrs (old: { buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ]; })); };
           };
       };
 }
