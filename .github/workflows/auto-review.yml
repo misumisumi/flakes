@@ -12,12 +12,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3.3.0
 
-      - uses: actions/download-artifact@v3
+      - name: Download artifact
+        id: download-artifact
+        uses: dawidd6/action-download-artifact@v2
         with:
+          workflow: build-check.yml
+          workflow_conclusion: success
           name: pr-number
+          path: artifacts
+
       - name: Set PR number
         id: pr-number
-        run: pr-number=$(cat ${{steps.test.outputs.download-path}}/pr-number.txt) >> $GITHUB_OUTPUT
+        run: echo pr-number=$(cat ./artifacts/pr-number.txt) >> $GITHUB_OUTPUT
 
       - name: PR review and merge
         env:
@@ -32,12 +38,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3.3.0
 
-      - uses: actions/download-artifact@v3
+      - name: Download artifact
+        id: download-artifact
+        uses: dawidd6/action-download-artifact@v2
         with:
+          workflow: build-check.yml
+          workflow_conclusion: success
           name: pr-number
+          path: artifacts
+
       - name: Set PR number
         id: pr-number
-        run: pr-number=$(cat ${{steps.test.outputs.download-path}}/pr-number.txt) >> $GITHUB_OUTPUT
+        run: echo pr-number=$(cat ./artifacts/pr-number.txt) >> $GITHUB_OUTPUT
 
       - name: Close PR
         env:
