@@ -1,15 +1,5 @@
 name: Build check
 on:
-  push:
-    branch-ignore:
-      - 'update_flake_lock_action'
-    tags:
-      - '*'
-    path-ignore:
-      - '**.lock'
-      - '**.md'
-      - '**.sh'
-      - '**.yml'
   pull_request:
 
 jobs:
@@ -20,7 +10,7 @@ jobs:
         with:
           root-reserve-mb: 8192
           swap-size-mb: 1024
-          build-mount-path: '/nix/store'
+          build-mount-path: "/nix/store"
           remove-dotnet: true
           remove-android: true
           remove-haskell: true
@@ -42,8 +32,18 @@ jobs:
       - uses: cachix/cachix-action@v12
         with:
           name: misumisumi
-          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
           skipPush: true
 
       - name: Run flake build
         run: nix flake check
+
+      - name: Save PR number
+        run: echo $GITHUB_REF | sed -e 's/[^0-9]//g' > pr_number.txt
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: pr-number
+          path: pr-number.txt
+          retention-days: 7

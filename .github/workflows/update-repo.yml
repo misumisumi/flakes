@@ -2,7 +2,7 @@ name: Update repository
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: '0 0 * * 0' # runs weekly on Sunday at 00:00
+    - cron: "0 0 * * 0" # runs weekly on Sunday at 00:00
 
 jobs:
   update-repo:
@@ -26,7 +26,7 @@ jobs:
       - uses: cachix/cachix-action@v12
         with:
           name: misumisumi
-          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
           skipPush: true
 
       - name: Update package version
@@ -40,8 +40,8 @@ jobs:
         uses: DeterminateSystems/update-flake-lock@v20
         with:
           token: ${{ steps.generate.outputs.token }}
-          commit-msg: 'Update flake and package version'
-          pr-title: 'Update repository' # Title of PR to be created
+          commit-msg: "Update flake and package version"
+          pr-title: "Update repository" # Title of PR to be created
           pr-labels: | # Labels to be set on the PR
             dependencies
             automated
@@ -61,7 +61,7 @@ jobs:
         if: needs.update-repo.result == 'success'
         with:
           fetch-depth: 2
-          ref: 'update_flake_lock_action'
+          ref: "update_flake_lock_action"
           token: ${{ steps.generate.outputs.token }}
 
       - uses: cachix/install-nix-action@v20
@@ -85,22 +85,8 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         if: needs.update-repo.result == 'success'
         with:
-          push_options: '--force'
+          push_options: "--force"
           commit_message: ${{ steps.last-commit-message.outputs.msg }}
-          commit_options: '--amend --no-edit'
+          commit_options: "--amend --no-edit"
           skip_fetch: true
-          file_pattern: 'README.md _sources/*'
-
-      - name: Approve & enable auto-merge
-        if: needs.update-repo.result == 'success'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          gh pr review --approve ${{ needs.update-repo.outputs.pr-number }}
-          gh pr merge --merge --auto ${{ needs.update-repo.outputs.pr-number }}
-
-      - name: Close PR
-        if: needs.update-repo.result != 'success'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: gh pr close ${{ needs.update-repo.outputs.pr-number }}
+          file_pattern: "README.md _sources/*"
