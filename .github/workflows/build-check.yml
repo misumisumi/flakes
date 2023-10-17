@@ -39,7 +39,7 @@ jobs:
         run: nix flake check
 
       - name: Save PR number
-        run: echo $GITHUB_REF | sed -e 's/[^0-9]//g' > pr_number.txt
+        run: echo $GITHUB_REF | sed -e 's/[^0-9]//g' > pr-number.txt
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
