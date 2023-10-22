@@ -59,8 +59,8 @@ In your `flake.nix`
   - droidcam-obs-plugin-2.1.0
   - fcitx5-nord-bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1
   - fcitx5-skk-5.1.0
-  - fence-agents-4.13.0
-  - juce-7.0.7
+  - fence-agents-4.13.1
+  - juce-7.0.8
   - knp-f98d4eefcc95309ce91e82d6ee0c6db1c3680c1a
   - plemoljp-fonts-v1.6.0
   - prime-run
@@ -71,7 +71,7 @@ In your `flake.nix`
   - unityhub-latest-3.5.2
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-00189e8b954fd41089c8a1e8ae1b2aec4bd1d24c
+  - yaskkserv2-dict-3b68ce1e23a4064f0e5c6e59a2e5ff805502ba30
 
 - PythonPackages
 
