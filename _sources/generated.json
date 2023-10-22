@@ -173,26 +173,26 @@
             "name": null,
             "owner": "ClusterLabs",
             "repo": "fence-agents",
-            "rev": "v4.13.0",
-            "sha256": "sha256-IfsFh9esALPXOoTbxcq8Hzx9vFo1U98ZXyyrFp93ySo=",
+            "rev": "v4.13.1",
+            "sha256": "sha256-vqD3z/w0pGPKAynEAr1+G6FcanldhfuMb4Cvs4mqkhE=",
             "type": "github"
         },
-        "version": "v4.13.0"
+        "version": "v4.13.1"
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2023-09-21",
+        "date": "2023-10-21",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-JsvfdxJsx35UVXKQhfn7nz5RhywoEtem5i7JDy/58MM=",
+            "sha256": "sha256-a55LIjAsfcKpwyEuVHwa5t4goVszXkC/gL4BCt71YO0=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/00189e8b954fd41089c8a1e8ae1b2aec4bd1d24c/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/3b68ce1e23a4064f0e5c6e59a2e5ff805502ba30/SKK-JISYO.jawiki"
         },
-        "version": "00189e8b954fd41089c8a1e8ae1b2aec4bd1d24c"
+        "version": "3b68ce1e23a4064f0e5c6e59a2e5ff805502ba30"
     },
     "juce": {
         "cargoLocks": null,
@@ -208,11 +208,11 @@
             "name": null,
             "owner": "juce-framework",
             "repo": "JUCE",
-            "rev": "7.0.7",
-            "sha256": "sha256-r+Wf/skPDexm3rsrVBoWrygKvV9HGlCQd7r0iHr9avM=",
+            "rev": "7.0.8",
+            "sha256": "sha256-YjFw3s0D6e6Nj7ZsL6v5dWZ1GYt/q2IYOovxw9rCu6M=",
             "type": "github"
         },
-        "version": "7.0.7"
+        "version": "7.0.8"
     },
     "knp": {
         "cargoLocks": null,
@@ -433,11 +433,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-3Y3GSUq6aTl7vtAhwT7zBPGjbf4cMMrbYC5AdiundOg=",
+            "sha256": "sha256-KZrHwrrc9NojcfYGqm9avGDqxQEj/sBV9dWWIneMjss=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.19"
+            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.20"
         },
-        "version": "0.1.19"
+        "version": "0.1.20"
     },
     "wavesurfer": {
         "cargoLocks": null,

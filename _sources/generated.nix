@@ -90,33 +90,33 @@
   };
   fence-agents = {
     pname = "fence-agents";
-    version = "v4.13.0";
+    version = "v4.13.1";
     src = fetchFromGitHub {
       owner = "ClusterLabs";
       repo = "fence-agents";
-      rev = "v4.13.0";
+      rev = "v4.13.1";
       fetchSubmodules = false;
-      sha256 = "sha256-IfsFh9esALPXOoTbxcq8Hzx9vFo1U98ZXyyrFp93ySo=";
+      sha256 = "sha256-vqD3z/w0pGPKAynEAr1+G6FcanldhfuMb4Cvs4mqkhE=";
     };
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "00189e8b954fd41089c8a1e8ae1b2aec4bd1d24c";
+    version = "3b68ce1e23a4064f0e5c6e59a2e5ff805502ba30";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/00189e8b954fd41089c8a1e8ae1b2aec4bd1d24c/SKK-JISYO.jawiki";
-      sha256 = "sha256-JsvfdxJsx35UVXKQhfn7nz5RhywoEtem5i7JDy/58MM=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/3b68ce1e23a4064f0e5c6e59a2e5ff805502ba30/SKK-JISYO.jawiki";
+      sha256 = "sha256-a55LIjAsfcKpwyEuVHwa5t4goVszXkC/gL4BCt71YO0=";
     };
-    date = "2023-09-21";
+    date = "2023-10-21";
   };
   juce = {
     pname = "juce";
-    version = "7.0.7";
+    version = "7.0.8";
     src = fetchFromGitHub {
       owner = "juce-framework";
       repo = "JUCE";
-      rev = "7.0.7";
+      rev = "7.0.8";
       fetchSubmodules = false;
-      sha256 = "sha256-r+Wf/skPDexm3rsrVBoWrygKvV9HGlCQd7r0iHr9avM=";
+      sha256 = "sha256-YjFw3s0D6e6Nj7ZsL6v5dWZ1GYt/q2IYOovxw9rCu6M=";
     };
   };
   knp = {
@@ -236,10 +236,10 @@
   };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
-    version = "0.1.19";
+    version = "0.1.20";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.19";
-      sha256 = "sha256-3Y3GSUq6aTl7vtAhwT7zBPGjbf4cMMrbYC5AdiundOg=";
+      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.20";
+      sha256 = "sha256-KZrHwrrc9NojcfYGqm9avGDqxQEj/sBV9dWWIneMjss=";
     };
   };
   wavesurfer = {
