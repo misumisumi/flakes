@@ -60,7 +60,6 @@ In your `flake.nix`
   - fcitx5-nord-bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1
   - fcitx5-skk-5.1.0
   - fence-agents-4.13.1
-  - juce-7.0.8
   - knp-f98d4eefcc95309ce91e82d6ee0c6db1c3680c1a
   - plemoljp-fonts-v1.6.0
   - prime-run
@@ -75,8 +74,8 @@ In your `flake.nix`
 
 - PythonPackages
 
-  - python3.10-SpeechRecognition-3.10.0
-  - python3.10-doq-0.10.0
-  - python3.10-pyknp-0.6.1
-  - python3.10-suds-1.1.2
+  - python3.11-SpeechRecognition-3.10.0
+  - python3.11-doq-0.10.0
+  - python3.11-pyknp-0.6.1
+  - python3.11-suds-1.1.2
 
