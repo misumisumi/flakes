@@ -234,6 +234,23 @@
       sha256 = "sha256-MiehcBs+Egfen7MzkzzWxLuTrWrHkqIj1y47sPI3Y74=";
     };
   };
+  vrc-get-latest = {
+    pname = "vrc-get-latest";
+    version = "v1.3.2";
+    src = fetchFromGitHub {
+      owner = "anatawa12";
+      repo = "vrc-get";
+      rev = "v1.3.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-5610o5Wl2xKTeJwQRsFiTG9IZhdreyTUiWry4d8FkGo=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./vrc-get-latest-v1.3.2/Cargo.lock;
+      outputHashes = {
+        "async_zip-0.0.15" = "sha256-UXBVZy3nf20MUh9jQdYeS5ygrZfeRWtiNRtiyMvkdSs=";
+      };
+    };
+  };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
     version = "0.1.20";

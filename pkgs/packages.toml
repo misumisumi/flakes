@@ -147,6 +147,11 @@ src.webpage = "https://www.nuget.org/packages/VRChat.VPM.CLI"
 src.regex = '0\.[0-9]+\.[0-9]+'
 fetch.url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/$ver"
 
+[vrc-get-latest]
+src.github_tag = "anatawa12/vrc-get"
+fetch.github = "anatawa12/vrc-get"
+cargo_locks = ['Cargo.lock']
+
 [udev-gothic]
 src.github = "yuru7/udev-gothic"
 fetch.url = "https://github.com/yuru7/udev-gothic/releases/download/$ver/UDEVGothic_$ver.zip"
