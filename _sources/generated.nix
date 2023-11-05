@@ -19,10 +19,10 @@
   };
   csharp-ls = {
     pname = "csharp-ls";
-    version = "0.9.0";
+    version = "0.10.0";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.9.0";
-      sha256 = "sha256-SKfe34r1lAirTGQdB+FTFEMVXWeTE/zFO0Evp+Pfcbc=";
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.10.0";
+      sha256 = "sha256-1t8U2Q4lIlj2QwbnevAMMGcqtpPh5zk0Bd7EHa7qvCI=";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
@@ -51,10 +51,10 @@
   };
   drbd9-dkms = {
     pname = "drbd9-dkms";
-    version = "9.1.16";
+    version = "9.1.17";
     src = fetchurl {
-      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.16.tar.gz";
-      sha256 = "sha256-GtmTU9uuYqzBv07zL6jKMX5mVxOOAsAJ49TPQr+0Zfs=";
+      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.17.tar.gz";
+      sha256 = "sha256-Xvl5Cw7cp7xHtUGbo1fNvYdHtLosU6lsHQLkozdvveI=";
     };
   };
   droidcam-obs-plugin = {
@@ -121,15 +121,15 @@
   };
   knp = {
     pname = "knp";
-    version = "f98d4eefcc95309ce91e82d6ee0c6db1c3680c1a";
+    version = "bc4cef188669f88cdeb590fe7afb1021ce2ae481";
     src = fetchFromGitHub {
       owner = "ku-nlp";
       repo = "knp";
-      rev = "f98d4eefcc95309ce91e82d6ee0c6db1c3680c1a";
+      rev = "bc4cef188669f88cdeb590fe7afb1021ce2ae481";
       fetchSubmodules = false;
-      sha256 = "sha256-DMsqG5oUjQXik5HVjFHkjrVAvIKlgcVwO5p5tNGSL90=";
+      sha256 = "sha256-QdBeT/tJVleX0HgV30JqiOWXXzemWfS6VEhvN76fObE=";
     };
-    date = "2023-10-10";
+    date = "2023-11-01";
   };
   notify-rust = {
     pname = "notify-rust";
@@ -228,10 +228,10 @@
   };
   unityhub-latest = {
     pname = "unityhub-latest";
-    version = "3.5.2";
+    version = "3.6.0";
     src = fetchurl {
-      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.5.2.deb";
-      sha256 = "sha256-MiehcBs+Egfen7MzkzzWxLuTrWrHkqIj1y47sPI3Y74=";
+      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.6.0.deb";
+      sha256 = "sha256-6Y6uF9Zs9jYEGCoGA790//MKRzi2P1uwuy6vaFwkrtg=";
     };
   };
   vrc-get-latest = {
