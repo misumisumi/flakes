@@ -91,7 +91,19 @@
                 (pkgs.${name}.overrideAttrs (old: { buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ]; })))
             // withContents pythonModulesDir (name:
               (pkgs.python3Packages.${name}.overrideAttrs (old: { buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ]; })))
-            // { default = (inputs.nvfetcher.packages.${system}.ghcWithNvfetcher.overrideAttrs (old: { buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ]; })); };
+            // {
+              default = (
+                inputs.nvfetcher.packages.${system}.ghcWithNvfetcher.overrideAttrs (old:
+                  {
+                    buildInputs = with pkgs; (old.buildInputs or [ ]) ++ [
+                      bashInteractive
+                      nix-index # A files database for nixpkgs
+                      nix-prefetch # Prefetch checkers
+                      nix-prefetch-git
+                      nvfetcher # Tool of automate nix package updates
+                    ];
+                  }));
+            };
           };
       };
 }
