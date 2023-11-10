@@ -194,26 +194,6 @@
         },
         "version": "3b68ce1e23a4064f0e5c6e59a2e5ff805502ba30"
     },
-    "juce": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "juce",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "juce-framework",
-            "repo": "JUCE",
-            "rev": "7.0.8",
-            "sha256": "sha256-YjFw3s0D6e6Nj7ZsL6v5dWZ1GYt/q2IYOovxw9rCu6M=",
-            "type": "github"
-        },
-        "version": "7.0.8"
-    },
     "knp": {
         "cargoLocks": null,
         "date": "2023-11-01",
@@ -233,26 +213,6 @@
             "type": "github"
         },
         "version": "bc4cef188669f88cdeb590fe7afb1021ce2ae481"
-    },
-    "notify-rust": {
-        "cargoLocks": null,
-        "date": "2022-11-30",
-        "extract": null,
-        "name": "notify-rust",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "flukejones",
-            "repo": "notify-rust",
-            "rev": "c83082a2549932bde52a4ec449b9981fc39e9a0d",
-            "sha256": "sha256-jhCgisA9f6AI9e9JQUYRtEt47gQnDv5WsdRKFoKvHJs=",
-            "type": "github"
-        },
-        "version": "c83082a2549932bde52a4ec449b9981fc39e9a0d"
     },
     "plemoljp": {
         "cargoLocks": null,
@@ -379,36 +339,6 @@
         },
         "version": "1.1.2"
     },
-    "udev-gothic": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "udev-gothic",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-E1Jcxz6mBLOkCg6b4iLNpB1TwhcJJUaksXjH6L9zIAI=",
-            "type": "url",
-            "url": "https://github.com/yuru7/udev-gothic/releases/download/v1.3.1/UDEVGothic_v1.3.1.zip"
-        },
-        "version": "v1.3.1"
-    },
-    "udev-gothic-nf": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "udev-gothic-nf",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-hABKMDi99SgoahE7TbB22EErtMpncdAqJAMYRz+bn84=",
-            "type": "url",
-            "url": "https://github.com/yuru7/udev-gothic/releases/download/v1.3.1/UDEVGothic_NF_v1.3.1.zip"
-        },
-        "version": "v1.3.1"
-    },
     "unityhub-latest": {
         "cargoLocks": null,
         "date": null,
@@ -418,11 +348,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-6Y6uF9Zs9jYEGCoGA790//MKRzi2P1uwuy6vaFwkrtg=",
+            "sha256": "sha256-rpH87aFvbYanthwPw/SlluOH/rtj6owcVetBD4+TJeU=",
             "type": "url",
-            "url": "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.6.0.deb"
+            "url": "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.6.1.deb"
         },
-        "version": "3.6.0"
+        "version": "3.6.1"
     },
     "vrc-get-latest": {
         "cargoLocks": {

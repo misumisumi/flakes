@@ -108,17 +108,6 @@
     };
     date = "2023-10-21";
   };
-  juce = {
-    pname = "juce";
-    version = "7.0.8";
-    src = fetchFromGitHub {
-      owner = "juce-framework";
-      repo = "JUCE";
-      rev = "7.0.8";
-      fetchSubmodules = false;
-      sha256 = "sha256-YjFw3s0D6e6Nj7ZsL6v5dWZ1GYt/q2IYOovxw9rCu6M=";
-    };
-  };
   knp = {
     pname = "knp";
     version = "bc4cef188669f88cdeb590fe7afb1021ce2ae481";
@@ -130,18 +119,6 @@
       sha256 = "sha256-QdBeT/tJVleX0HgV30JqiOWXXzemWfS6VEhvN76fObE=";
     };
     date = "2023-11-01";
-  };
-  notify-rust = {
-    pname = "notify-rust";
-    version = "c83082a2549932bde52a4ec449b9981fc39e9a0d";
-    src = fetchFromGitHub {
-      owner = "flukejones";
-      repo = "notify-rust";
-      rev = "c83082a2549932bde52a4ec449b9981fc39e9a0d";
-      fetchSubmodules = false;
-      sha256 = "sha256-jhCgisA9f6AI9e9JQUYRtEt47gQnDv5WsdRKFoKvHJs=";
-    };
-    date = "2022-11-30";
   };
   plemoljp = {
     pname = "plemoljp";
@@ -210,28 +187,12 @@
       sha256 = "sha256-HVz6dBFxk7JEpCM/JGxIPZ9BGYtEjF8UqLrRHE9knys=";
     };
   };
-  udev-gothic = {
-    pname = "udev-gothic";
-    version = "v1.3.1";
-    src = fetchurl {
-      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.3.1/UDEVGothic_v1.3.1.zip";
-      sha256 = "sha256-E1Jcxz6mBLOkCg6b4iLNpB1TwhcJJUaksXjH6L9zIAI=";
-    };
-  };
-  udev-gothic-nf = {
-    pname = "udev-gothic-nf";
-    version = "v1.3.1";
-    src = fetchurl {
-      url = "https://github.com/yuru7/udev-gothic/releases/download/v1.3.1/UDEVGothic_NF_v1.3.1.zip";
-      sha256 = "sha256-hABKMDi99SgoahE7TbB22EErtMpncdAqJAMYRz+bn84=";
-    };
-  };
   unityhub-latest = {
     pname = "unityhub-latest";
-    version = "3.6.0";
+    version = "3.6.1";
     src = fetchurl {
-      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.6.0.deb";
-      sha256 = "sha256-6Y6uF9Zs9jYEGCoGA790//MKRzi2P1uwuy6vaFwkrtg=";
+      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.6.1.deb";
+      sha256 = "sha256-rpH87aFvbYanthwPw/SlluOH/rtj6owcVetBD4+TJeU=";
     };
   };
   vrc-get-latest = {
