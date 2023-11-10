@@ -27,7 +27,7 @@ with lib; stdenv.mkDerivation
 
   nativeBuildInputs = [ cmake ninja extra-cmake-modules pkg-config ];
   buildInputs = [ fcitx5 libsForQt5.fcitx5-qt qt5.qtbase libskk skk-dicts ]
-    ++ optional (useEmoji) skk-emoji-jisyo;
+    ++ optional useEmoji skk-emoji-jisyo;
   dontWrapQtApps = true;
 
   cmakeFlags = [
@@ -40,9 +40,9 @@ with lib; stdenv.mkDerivation
     substituteInPlace CMakeLists.txt \
       --replace /usr/share/skk/SKK-JISYO.L ${skk-dicts}/share/${dicts.${useDict}}
   ''
-  + optionalString (useAssoc) "\necho '${addDict "SKK-JISYO.assoc"}' >> src/dictonary_list.in"
-  + optionalString (useEdict) "\necho '${addDict "SKK-JISYO.edict"}' >> src/dictonary_list.in"
-  + optionalString (useEmoji) "\necho 'type=file,file=${skk-emoji-jisyo}/share/SKK-JISYO.emoji.utf8' >> src/dictonary_list.in";
+  + optionalString useAssoc "\necho '${addDict "SKK-JISYO.assoc"}' >> src/dictonary_list.in"
+  + optionalString useEdict "\necho '${addDict "SKK-JISYO.edict"}' >> src/dictonary_list.in"
+  + optionalString useEmoji "\necho 'type=file,file=${skk-emoji-jisyo}/share/SKK-JISYO.emoji.utf8' >> src/dictonary_list.in";
 
   buildPhase = ''
     cmake $cmakeFlags .

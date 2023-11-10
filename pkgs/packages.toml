@@ -1,12 +1,6 @@
-# [asusctl-latest]
-# src.aur = 'asusctl'
-# # src.manual = '4.5.1'
-# fetch.git = 'https://gitlab.com/asus-linux/asusctl'
-# cargo_locks = ['Cargo.lock']
-
 [bt-dualboot]
-src.pypi = 'bt-dualboot'
-fetch.pypi = 'bt-dualboot'
+src.pypi = "bt-dualboot"
+fetch.pypi = "bt-dualboot"
 
 [csharp-ls]
 src.github = "razzmatazz/csharp-language-server"
@@ -14,165 +8,136 @@ fetch.url = "https://www.nuget.org/api/v2/package/csharp-ls/$ver"
 
 [cups-brother-hll5100dn-lpr]
 src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
-src.regex = "[0-9].[0-9].[0-9]-[0-9]"
+src.regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
 fetch.url = "https://download.brother.com/welcome/dlf102553/hll5100dnlpr-$ver.i386.deb"
 
 [cups-brother-hll5100dn-cupswrapper]
 src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
-src.regex = "[0-9].[0-9].[0-9]-[0-9]"
+src.regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
 fetch.url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-$ver.i386.deb"
 
-[ricoh-sp-c260series-ppd]
-src.manual = "1.00"
-fetch.url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
-
 [drbd9-dkms]
-src.github_tag = 'LINBIT/drbd'
-src.include_regex = 'drbd-9.1.*'
-src.prefix = 'drbd-'
-fetch.url = 'https://pkg.linbit.com//downloads/drbd/9/drbd-$ver.tar.gz'
+src.github_tag = "LINBIT/drbd"
+src.include_regex = "drbd-9.1.*"
+src.prefix = "drbd-"
+fetch.url = "https://pkg.linbit.com//downloads/drbd/9/drbd-$ver.tar.gz"
 
 [droidcam-obs-plugin]
-src.github = 'dev47apps/droidcam-obs-plugin'
-fetch.url = 'https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux_ffmpeg5.zip'
+src.github = "dev47apps/droidcam-obs-plugin"
+fetch.url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux_ffmpeg5.zip"
 
-[fcitx5-nord]
-src.git = 'https://github.com/tonyfettes/fcitx5-nord.git'
-fetch.github = 'tonyfettes/fcitx5-nord'
-
-[fcitx5-skk]
-src.github_tag = 'fcitx/fcitx5-skk'
-fetch.github = 'fcitx/fcitx5-skk'
-
-[fence-agents]
-src.github_tag = 'ClusterLabs/fence-agents'
-fetch.github = 'ClusterLabs/fence-agents'
-
-[juce]
-src.github_tag = 'juce-framework/JUCE'
-fetch.github = 'juce-framework/JUCE'
-
-[knp]
-src.git = 'https://github.com/ku-nlp/knp/'
-fetch.github = 'ku-nlp/knp'
-
-[notify-rust]
-src.git = 'https://github.com/flukejones/notify-rust.git'
-fetch.github = 'flukejones/notify-rust'
-
-[skk-emoji-jisyo]
-src.github_tag = 'uasi/skk-emoji-jisyo'
-fetch.github = 'uasi/skk-emoji-jisyo'
-
-[jawiki-kana-kanji-dict]
-src.git = 'https://github.com/tokuhirom/jawiki-kana-kanji-dict.git'
-fetch.url = 'https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/$ver/SKK-JISYO.jawiki'
-
-[snack]
-src.webpage = 'https://www.speech.kth.se/snack/'
-src.regex = 'Snack v[0-9]+\.[0-9]+\.[0-9]+'
-src.prefix = 'Snack v'
-fetch.url = 'http://www.speech.kth.se/snack/dist/snack$ver.tar.gz'
-
-# [supergfxctl-latest]
-# src.git = 'https://gitlab.com/asus-linux/supergfxctl'
-# fetch.git = 'https://gitlab.com/asus-linux/supergfxctl'
-# cargo_locks = ['Cargo.lock']
-
-[yaskkserv2]
-src.github_tag = 'wachikun/yaskkserv2'
-fetch.github = 'wachikun/yaskkserv2'
-cargo_locks = ['Cargo.lock']
-
-[wavesurfer]
-src.httpheader = 'http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz'
-src.regex = '[0-9]+.[0-9]+.[0-9]+p[0-9]+'
-fetch.url = 'http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz'
-
-# [xp-pen-tablet]
-# src.webpage = 'https://www.xp-pen.com/download/artist-pro-16.html'
-# src.regex = 'Linux[0-9]+\.[0-9]+\.[0-9]+-[0-9]+'
-# src.prefix = 'Linux'
-# fetch.url = 'https://download01.xp-pen.com/file/2023/07/XPPenLinux$ver.tar.gz'
-
-[unityhub-latest]
-src.aur = 'unityhub'
-fetch.url = 'https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-$ver.deb'
-
-# For mozc
 # [fcitx5-mozc-ext-neologd]
-# # src.git = 'https://github.com/fcitx/mozc.git'
-# src.manual = '1882e33b61673b66d63277f82b4c80ae4e506c10'
-# fetch.github = 'fcitx/mozc'
+# # src.git = "https://github.com/fcitx/mozc.git"
+# src.manual = "1882e33b61673b66d63277f82b4c80ae4e506c10"
+# fetch.github = "fcitx/mozc"
 #
 # [mozc-dict-jigyosyo]
-# src.webpage = 'https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/'
-# src.regex = 'jigyosyo-[0-9]+'
-# src.prefix = 'jigyosyo-'
-# fetch.url = 'https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/jigyosyo-$ver.zip'
+# src.webpage = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/"
+# src.regex = "jigyosyo-[0-9]+"
+# src.prefix = "jigyosyo-"
+# fetch.url = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/jigyosyo-$ver.zip"
 #
 # [mozc-dict-x-ken-all]
-# src.webpage = 'https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/'
-# src.regex = 'x-ken-all-[0-9]+'
-# src.prefix = 'x-ken-all-'
-# fetch.url = 'https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/x-ken-all-$ver.zip'
+# src.webpage = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/"
+# src.regex = "x-ken-all-[0-9]+"
+# src.prefix = "x-ken-all-"
+# fetch.url = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/x-ken-all-$ver.zip"
 #
 # [japanese-usege-dictionary]
-# src.git = 'https://github.com/hiroyuki-komatsu/japanese-usage-dictionary'
-# fetch.git = 'https://github.com/hiroyuki-komatsu/japanese-usage-dictionary'
+# src.git = "https://github.com/hiroyuki-komatsu/japanese-usage-dictionary"
+# fetch.git = "https://github.com/hiroyuki-komatsu/japanese-usage-dictionary"
 #
 # [mecab-ipadic-neologd]
 # src.github = "neologd/mecab-ipadic-neologd"
 # fetch.github = "neologd/mecab-ipadic-neologd"
 #
 # [mozcdict-ext]
-# src.git = 'https://github.com/reasonset/mozcdict-ext'
-# fetch.git = 'https://github.com/reasonset/mozcdict-ext'
+# src.git = "https://github.com/reasonset/mozcdict-ext"
+# fetch.git = "https://github.com/reasonset/mozcdict-ext"
 
-# fonts
-[plemoljp-hs]
-src.github = "yuru7/PlemolJP"
-fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_HS_$ver.zip"
+[fcitx5-nord]
+src.git = "https://github.com/tonyfettes/fcitx5-nord.git"
+fetch.github = "tonyfettes/fcitx5-nord"
 
-[plemoljp-nf]
-src.github = "yuru7/PlemolJP"
-fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_NF_$ver.zip"
+[fcitx5-skk]
+src.github_tag = "fcitx/fcitx5-skk"
+fetch.github = "fcitx/fcitx5-skk"
+
+[fence-agents]
+src.github_tag = "ClusterLabs/fence-agents"
+fetch.github = "ClusterLabs/fence-agents"
+
+[knp]
+src.git = "https://github.com/ku-nlp/knp/"
+fetch.github = "ku-nlp/knp"
 
 [plemoljp]
 src.github = "yuru7/PlemolJP"
 fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_$ver.zip"
 
-[vrchat-vpm-cli]
-src.webpage = "https://www.nuget.org/packages/VRChat.VPM.CLI"
-src.regex = '0\.[0-9]+\.[0-9]+'
-fetch.url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/$ver"
+[plemoljp-nf]
+src.github = "yuru7/PlemolJP"
+fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_NF_$ver.zip"
+
+[plemoljp-hs]
+src.github = "yuru7/PlemolJP"
+fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_HS_$ver.zip"
+
+[ricoh-sp-c260series-ppd]
+src.manual = "1.00"
+fetch.url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
+
+[skk-emoji-jisyo]
+src.github_tag = "uasi/skk-emoji-jisyo"
+fetch.github = "uasi/skk-emoji-jisyo"
+
+[snack]
+src.regex = "Snack v[0-9]+\\.[0-9]+\\.[0-9]+"
+src.webpage = "https://www.speech.kth.se/snack/"
+src.prefix = "Snack v"
+fetch.url = "http://www.speech.kth.se/snack/dist/snack$ver.tar.gz"
+
+[wavesurfer]
+src.httpheader = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
+src.regex = "[0-9]+\\.[0-9]+\\.[0-9]+p[0-9]+"
+fetch.url = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz"
+
+[unityhub-latest]
+src.aur = "unityhub"
+fetch.url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-$ver.deb"
 
 [vrc-get-latest]
 src.github_tag = "anatawa12/vrc-get"
 fetch.github = "anatawa12/vrc-get"
-cargo_locks = ['Cargo.lock']
+cargo_locks = ["Cargo.lock"]
 
-[udev-gothic]
-src.github = "yuru7/udev-gothic"
-fetch.url = "https://github.com/yuru7/udev-gothic/releases/download/$ver/UDEVGothic_$ver.zip"
+[vrchat-vpm-cli]
+src.regex = "0\\.[0-9]+\\.[0-9]+"
+src.webpage = "https://www.nuget.org/packages/VRChat.VPM.CLI"
+fetch.url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/$ver"
 
-[udev-gothic-nf]
-src.github = "yuru7/udev-gothic"
-fetch.url = "https://github.com/yuru7/udev-gothic/releases/download/$ver/UDEVGothic_NF_$ver.zip"
+[yaskkserv2]
+src.github_tag = "wachikun/yaskkserv2"
+fetch.github = "wachikun/yaskkserv2"
+cargo_locks = ["Cargo.lock"]
+
+[jawiki-kana-kanji-dict]
+src.git = "https://github.com/tokuhirom/jawiki-kana-kanji-dict.git"
+fetch.url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/$ver/SKK-JISYO.jawiki"
 
 # python modules
+[SpeechRecognition]
+src.pypi = "SpeechRecognition"
+fetch.pypi = "SpeechRecognition"
+
 [doq]
-src.pypi = 'doq'
-fetch.pypi = 'doq'
+src.pypi = "doq"
+fetch.pypi = "doq"
 
 [suds]
-src.pypi = 'suds'
-fetch.pypi = 'suds'
+src.pypi = "suds"
+fetch.pypi = "suds"
 
 [pyknp]
-src.pypi = 'pyknp'
-fetch.pypi = 'pyknp'
-
-[SpeechRecognition]
-src.pypi = 'SpeechRecognition'
-fetch.pypi = 'SpeechRecognition'
+src.pypi = "pyknp"
+fetch.pypi = "pyknp"

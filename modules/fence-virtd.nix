@@ -23,7 +23,7 @@ in
       };
       package = mkOption {
         type = types.package;
-        default = (pkgs.fence-agents.override { agents = "virt"; });
+        default = pkgs.fence-agents.override { agents = "virt"; };
         defaultText = literalExpression "pkgs.asusctl-latest";
         example = literalExpression "pkgs.fence-agents.override { agents = " virt "; }";
         description = lib.mdDoc ''

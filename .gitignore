@@ -1,3 +1,4 @@
 !_sources/*/Cargo.lock
+.devenv
 .direnv
 keyfile.toml

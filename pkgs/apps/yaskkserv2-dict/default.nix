@@ -1,6 +1,14 @@
-{ stdenvNoCC, lib, name, pkgSources, yaskkserv2, skk-dicts, skk-emoji-jisyo, isUtf8 ? true }:
+{ name
+, pkgSources
+, lib
+, stdenvNoCC
+, yaskkserv2
+, skk-dicts
+, skk-emoji-jisyo
+, isUtf8 ? true
+}:
 let
-  optionalString = lib.strings.optionalString;
+  inherit (lib.strings) optionalString;
 in
 stdenvNoCC.mkDerivation {
   pname = "yaskkserv2-dict";
@@ -10,7 +18,7 @@ stdenvNoCC.mkDerivation {
   buildPhase = ''
     ${yaskkserv2}/bin/yaskkserv2_make_dictionary --dictionary-filename ./dictionary.yaskkserv2 \
       ${skk-dicts}/share/SKK-JISYO.combined ${skk-emoji-jisyo}/share/SKK-JISYO.emoji.utf8 $src \
-  '' + optionalString (isUtf8) " --utf8";
+  '' + optionalString isUtf8 " --utf8";
 
   installPhase = ''
     mkdir -p $out/share

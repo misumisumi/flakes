@@ -4,18 +4,21 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
-
-    nvfetcher = {
-      url = "github:berberman/nvfetcher";
+    devenv.url = "github:cachix/devenv";
+    mk-shell-bin.url = "github:rrbutani/nix-mk-shell-bin";
+    nix2container = {
+      url = "github:nlewo/nix2container";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Uncomment if broken nvfetcher in nixpkgs
+    # nvfetcher = {
+    #   url = "github:berberman/nvfetcher";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
-  outputs =
-    inputs @ { self
-    , flake-parts
-    , ...
-    }:
+  outputs = inputs @ { self, flake-parts, ... }:
     let
       inherit (import ./lib.nix { inherit (inputs.nixpkgs) lib; }) mkApps mkCheck names runnableApps sources withContents;
 
@@ -24,6 +27,10 @@
     in
     flake-parts.lib.mkFlake { inherit inputs; }
       {
+        debug = true;
+        imports = [
+          inputs.devenv.flakeModule
+        ];
         flake = rec {
           nixosModules = {
             for-nixos = import ./modules/for-nixos.nix;
@@ -79,7 +86,10 @@
           rec {
             _module.args.pkgs = import inputs.nixpkgs {
               inherit system;
-              overlays = [ self.overlays.default inputs.nvfetcher.overlays.default ];
+              overlays = [
+                self.overlays.default
+                # inputs.nvfetcher.overlays.default
+              ];
               config.allowUnfree = true;
             };
             packages = withContents appsDir (name: pkgs.${name})
@@ -90,19 +100,16 @@
               (name:
                 (pkgs.${name}.overrideAttrs (old: { buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ]; })))
             // withContents pythonModulesDir (name:
-              (pkgs.python3Packages.${name}.overrideAttrs (old: { buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ]; })))
-            // {
-              default = (
-                inputs.nvfetcher.packages.${system}.ghcWithNvfetcher.overrideAttrs (old:
-                  {
-                    buildInputs = with pkgs; (old.buildInputs or [ ]) ++ [
-                      bashInteractive
-                      nix-index # A files database for nixpkgs
-                      nix-prefetch # Prefetch checkers
-                      nix-prefetch-git
-                      nvfetcher # Tool of automate nix package updates
-                    ];
-                  }));
+              (pkgs.python3Packages.${name}.overrideAttrs (old: { buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ]; })));
+            devenv.shells.default = {
+              packages = with pkgs; [
+                bashInteractive
+                nvfetcher
+                nix-index # A files database for nixpkgs
+                nix-prefetch # Prefetch checkers
+                nix-prefetch-git
+                nvfetcher # Tool of automate nix package updates
+              ];
             };
           };
       };
