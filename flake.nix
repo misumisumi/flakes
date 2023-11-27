@@ -4,10 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    devenv.url = "github:cachix/devenv";
-    mk-shell-bin.url = "github:rrbutani/nix-mk-shell-bin";
-    nix2container = {
-      url = "github:nlewo/nix2container";
+    devshell = {
+      url = "github:numtide/devshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -29,7 +27,7 @@
       {
         debug = true;
         imports = [
-          inputs.devenv.flakeModule
+          inputs.devshell.flakeModule
         ];
         flake = rec {
           nixosModules = {
@@ -101,7 +99,7 @@
                 (pkgs.${name}.overrideAttrs (old: { buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ]; })))
             // withContents pythonModulesDir (name:
               (pkgs.python3Packages.${name}.overrideAttrs (old: { buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ]; })));
-            devenv.shells.default = {
+            devshells.default = {
               packages = with pkgs; [
                 bashInteractive
                 nvfetcher
