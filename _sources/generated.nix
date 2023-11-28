@@ -101,12 +101,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "3b68ce1e23a4064f0e5c6e59a2e5ff805502ba30";
+    version = "8688cc9ef1daa3e8d6a64bbeb2d834d09105b3d6";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/3b68ce1e23a4064f0e5c6e59a2e5ff805502ba30/SKK-JISYO.jawiki";
-      sha256 = "sha256-a55LIjAsfcKpwyEuVHwa5t4goVszXkC/gL4BCt71YO0=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/8688cc9ef1daa3e8d6a64bbeb2d834d09105b3d6/SKK-JISYO.jawiki";
+      sha256 = "sha256-7Kie4eDtbH+pXBf0iSpzWDfIh9h0R4AVnYZofOLdkfQ=";
     };
-    date = "2023-10-21";
+    date = "2023-11-21";
   };
   knp = {
     pname = "knp";
