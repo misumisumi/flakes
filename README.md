@@ -66,12 +66,11 @@ In your `flake.nix`
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
   - snack-2.2.10
-  - udev-gothic-v1.3.1
-  - unityhub-latest-3.6.0
+  - unityhub-latest-3.6.1
   - vrc-get-latest-v1.3.2
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-3b68ce1e23a4064f0e5c6e59a2e5ff805502ba30
+  - yaskkserv2-dict-8688cc9ef1daa3e8d6a64bbeb2d834d09105b3d6
 
 - PythonPackages
 
