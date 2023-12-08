@@ -3,10 +3,10 @@
 {
   SpeechRecognition = {
     pname = "SpeechRecognition";
-    version = "3.10.0";
+    version = "3.10.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/S/SpeechRecognition/SpeechRecognition-3.10.0.tar.gz";
-      sha256 = "sha256-FBMRVeiougDq0be5saL6cchF5Ntfml9mozob1sVcbDU=";
+      url = "https://pypi.org/packages/source/S/SpeechRecognition/SpeechRecognition-3.10.1.tar.gz";
+      sha256 = "sha256-cYcxiGt4NuIKBrmixsrOEqnhMJcbtq8bHdEwsiutn4I=";
     };
   };
   bt-dualboot = {
