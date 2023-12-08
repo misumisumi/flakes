@@ -74,7 +74,7 @@ In your `flake.nix`
 
 - PythonPackages
 
-  - python3.11-SpeechRecognition-3.10.0
+  - python3.11-SpeechRecognition-3.10.1
   - python3.11-doq-0.10.0
   - python3.11-pyknp-0.6.1
   - python3.11-suds-1.1.2
