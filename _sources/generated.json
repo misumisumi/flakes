@@ -357,7 +357,7 @@
     "vrc-get-latest": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./vrc-get-latest-v1.3.2/Cargo.lock",
+                "./vrc-get-latest-v1.4.0/Cargo.lock",
                 {
                     "async_zip-0.0.15": "sha256-UXBVZy3nf20MUh9jQdYeS5ygrZfeRWtiNRtiyMvkdSs="
                 }
@@ -375,11 +375,11 @@
             "name": null,
             "owner": "anatawa12",
             "repo": "vrc-get",
-            "rev": "v1.3.2",
-            "sha256": "sha256-5610o5Wl2xKTeJwQRsFiTG9IZhdreyTUiWry4d8FkGo=",
+            "rev": "v1.4.0",
+            "sha256": "sha256-btv7gDYyke3vElJI58lvzjtyiv4Z5UITXQF7QOeyGS0=",
             "type": "github"
         },
-        "version": "v1.3.2"
+        "version": "v1.4.0"
     },
     "vrchat-vpm-cli": {
         "cargoLocks": null,
@@ -390,11 +390,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-KZrHwrrc9NojcfYGqm9avGDqxQEj/sBV9dWWIneMjss=",
+            "sha256": "sha256-rJRgJ/nLKhiUK2VT4gNrKbkyfoTyVv0SKBnUl2ajXHs=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.20"
+            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.22"
         },
-        "version": "0.1.20"
+        "version": "0.1.22"
     },
     "wavesurfer": {
         "cargoLocks": null,

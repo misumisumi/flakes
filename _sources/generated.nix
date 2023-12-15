@@ -197,16 +197,16 @@
   };
   vrc-get-latest = {
     pname = "vrc-get-latest";
-    version = "v1.3.2";
+    version = "v1.4.0";
     src = fetchFromGitHub {
       owner = "anatawa12";
       repo = "vrc-get";
-      rev = "v1.3.2";
+      rev = "v1.4.0";
       fetchSubmodules = false;
-      sha256 = "sha256-5610o5Wl2xKTeJwQRsFiTG9IZhdreyTUiWry4d8FkGo=";
+      sha256 = "sha256-btv7gDYyke3vElJI58lvzjtyiv4Z5UITXQF7QOeyGS0=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./vrc-get-latest-v1.3.2/Cargo.lock;
+      lockFile = ./vrc-get-latest-v1.4.0/Cargo.lock;
       outputHashes = {
         "async_zip-0.0.15" = "sha256-UXBVZy3nf20MUh9jQdYeS5ygrZfeRWtiNRtiyMvkdSs=";
       };
@@ -214,10 +214,10 @@
   };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
-    version = "0.1.20";
+    version = "0.1.22";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.20";
-      sha256 = "sha256-KZrHwrrc9NojcfYGqm9avGDqxQEj/sBV9dWWIneMjss=";
+      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.22";
+      sha256 = "sha256-rJRgJ/nLKhiUK2VT4gNrKbkyfoTyVv0SKBnUl2ajXHs=";
     };
   };
   wavesurfer = {
