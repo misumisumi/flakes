@@ -1,4 +1,15 @@
-{ stdenv, lib, name, pkgSources, makeDesktopItem, makeWrapper, imagemagick, tk, tcl, snack }:
+{ stdenv
+, lib
+, name
+, pkgSources
+, makeDesktopItem
+, makeWrapper
+, alsa-plugins
+, imagemagick
+, snack
+, tcl
+, tk
+}:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
@@ -36,7 +47,8 @@ stdenv.mkDerivation {
   postFixup = ''
     makeWrapper $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl $out/bin/wavesurfer \
       --prefix PATH : ${lib.makeBinPath [ tk tcl ]} \
-      --prefix TCLLIBPATH : ${lib.makeLibraryPath [ snack ]}
+      --set TCLLIBPATH ${lib.makeLibraryPath [ snack ]} \
+      --set ALSA_PLUGIN_DIR ${alsa-plugins}/lib/alsa-lib
   '';
 
   meta = with lib; {
