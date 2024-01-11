@@ -23,7 +23,8 @@ src.prefix = "drbd-"
 fetch.url = "https://pkg.linbit.com//downloads/drbd/9/drbd-$ver.tar.gz"
 
 [droidcam-obs-plugin]
-src.github = "dev47apps/droidcam-obs-plugin"
+src.github_tag = "dev47apps/droidcam-obs-plugin"
+src.ignored = "2.2.1 2.3.0"
 fetch.url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux_ffmpeg5.zip"
 
 # [fcitx5-mozc-ext-neologd]
@@ -97,6 +98,11 @@ src.webpage = "https://www.speech.kth.se/snack/"
 src.prefix = "Snack v"
 fetch.url = "http://www.speech.kth.se/snack/dist/snack$ver.tar.gz"
 
+[tkdnd]
+src.github_tag = "petasis/tkdnd"
+src.prefix = "tkdnd-release-test-v"
+fetch.url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v$ver.tar.gz"
+
 [wavesurfer]
 src.httpheader = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
 src.regex = "[0-9]+\\.[0-9]+\\.[0-9]+p[0-9]+"
@@ -108,6 +114,7 @@ fetch.url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_
 
 [vrc-get-latest]
 src.github_tag = "anatawa12/vrc-get"
+src.exclude_regex = ".*-beta.*"
 fetch.github = "anatawa12/vrc-get"
 cargo_locks = ["Cargo.lock"]
 

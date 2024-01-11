@@ -1,9 +1,18 @@
 # { stdenv, lib, mySource, tc, tcl, alsa-lib, libX11 }:
-{ stdenv, lib, fetchpatch, name, pkgSources, alsa-lib, libX11, tk, tcl }:
+{ stdenv
+, lib
+, fetchpatch
+, name
+, pkgSources
+, alsa-lib
+, libX11
+, tcl
+, tk
+}:
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
-  nativeBuildInputs = [ alsa-lib libX11 tk tcl ];
+  buildInputs = [ alsa-lib libX11 tk tcl ];
   patches = [
     (fetchpatch {
       name = "alsa.patch";
@@ -23,7 +32,6 @@ stdenv.mkDerivation {
   '';
 
   configureFlags = [
-    "--prefix=$out"
     "--with-tcl=${tcl}/lib"
     "--with-tk=${tk}/lib"
     "--enable-alsa"
@@ -31,9 +39,7 @@ stdenv.mkDerivation {
 
   hardeningDisable = [ "format" ];
 
-  installPhase = ''
-    make DESTDIR=$out install
-  '';
+  installFlags = [ "DESTDIR=$(out)" ];
 
   meta = with lib; {
     inherit version;

@@ -1,0 +1,11 @@
+--- src/wsurf/wsurf.tcl.orig	2024-01-11 11:26:28.582512187 +0900
++++ src/wsurf/wsurf.tcl	2024-01-11 11:25:03.170783639 +0900
+@@ -248,7 +248,7 @@
+     if {$::tcl_platform(os) == "Darwin"} {
+ 	set Info(DnD_File_type) NSFilenamesPboardType
+     } elseif {$::tcl_platform(platform) == "unix"} {
+-	set Info(DnD_File_type) "DND_Files"
++	set Info(DnD_File_type) "text/uri-list"
+     } elseif {$::tcl_platform(platform) == "windows"} {
+ 	set Info(DnD_File_type) "Shell IDList Array"
+     }

@@ -51,18 +51,18 @@
   };
   drbd9-dkms = {
     pname = "drbd9-dkms";
-    version = "9.1.17";
+    version = "9.1.18";
     src = fetchurl {
-      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.17.tar.gz";
-      sha256 = "sha256-Xvl5Cw7cp7xHtUGbo1fNvYdHtLosU6lsHQLkozdvveI=";
+      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.18.tar.gz";
+      sha256 = "sha256-dpjSgkFC4kXJcF4sfVC1jc5nBO2+9cWVdNjCKjY9gIc=";
     };
   };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
-    version = "2.1.0";
+    version = "2.2.0";
     src = fetchurl {
-      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.1.0/droidcam_obs_2.1.0_linux_ffmpeg5.zip";
-      sha256 = "sha256-Qrb23aNddJhMvLgRyW7UamDVAjrhZhw4Kbr0FP/5mXs=";
+      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.2.0/droidcam_obs_2.2.0_linux_ffmpeg5.zip";
+      sha256 = "sha256-3S7P7nVGsa3TP4bE5qXI9evQPZSo/SUm7RmM5na36Os=";
     };
   };
   fcitx5-nord = {
@@ -79,13 +79,13 @@
   };
   fcitx5-skk = {
     pname = "fcitx5-skk";
-    version = "5.1.0";
+    version = "5.1.1";
     src = fetchFromGitHub {
       owner = "fcitx";
       repo = "fcitx5-skk";
-      rev = "5.1.0";
+      rev = "5.1.1";
       fetchSubmodules = false;
-      sha256 = "sha256-N69OyGzJGO27tsR1g06d0EILsX2mpbW/tIgeSLc06OU=";
+      sha256 = "sha256-a+ZsuFEan61U0oOuhrTFoK5J4Vd0jj463jQ8Mk7TdbA=";
     };
   };
   fence-agents = {
@@ -101,12 +101,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "8688cc9ef1daa3e8d6a64bbeb2d834d09105b3d6";
+    version = "cbdf9ba0b55c1c7b93edf56258ade5ea1af39bdb";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/8688cc9ef1daa3e8d6a64bbeb2d834d09105b3d6/SKK-JISYO.jawiki";
-      sha256 = "sha256-7Kie4eDtbH+pXBf0iSpzWDfIh9h0R4AVnYZofOLdkfQ=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/cbdf9ba0b55c1c7b93edf56258ade5ea1af39bdb/SKK-JISYO.jawiki";
+      sha256 = "sha256-60eWs2Cl6nOaz93P6C+KqC9uZ6qQ/mYL+tljEGXO4XA=";
     };
-    date = "2023-11-21";
+    date = "2023-12-21";
   };
   knp = {
     pname = "knp";
@@ -187,28 +187,36 @@
       sha256 = "sha256-HVz6dBFxk7JEpCM/JGxIPZ9BGYtEjF8UqLrRHE9knys=";
     };
   };
+  tkdnd = {
+    pname = "tkdnd";
+    version = "2.9.4-rc3";
+    src = fetchurl {
+      url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.4-rc3.tar.gz";
+      sha256 = "sha256-o4Zb3X8qNIQDsS/JqfWsfl+UoRiBbAEroi55YgucTcw=";
+    };
+  };
   unityhub-latest = {
     pname = "unityhub-latest";
-    version = "3.6.1";
+    version = "3.7.0";
     src = fetchurl {
-      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.6.1.deb";
-      sha256 = "sha256-rpH87aFvbYanthwPw/SlluOH/rtj6owcVetBD4+TJeU=";
+      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.7.0.deb";
+      sha256 = "sha256-cFHcfpsHSDlR82PtZ0leRDpvCD6nw0Qdb3PsYKMnosA=";
     };
   };
   vrc-get-latest = {
     pname = "vrc-get-latest";
-    version = "v1.4.0";
+    version = "v1.4.3";
     src = fetchFromGitHub {
       owner = "anatawa12";
       repo = "vrc-get";
-      rev = "v1.4.0";
+      rev = "v1.4.3";
       fetchSubmodules = false;
-      sha256 = "sha256-btv7gDYyke3vElJI58lvzjtyiv4Z5UITXQF7QOeyGS0=";
+      sha256 = "sha256-we13m6aOmXbtkblbpl9K2aezXQ1DCvEHmnOCFp19o2o=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./vrc-get-latest-v1.4.0/Cargo.lock;
+      lockFile = ./vrc-get-latest-v1.4.3/Cargo.lock;
       outputHashes = {
-        "async_zip-0.0.15" = "sha256-UXBVZy3nf20MUh9jQdYeS5ygrZfeRWtiNRtiyMvkdSs=";
+        
       };
     };
   };

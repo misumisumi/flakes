@@ -1,9 +1,62 @@
-{ stdenv, lib, name, pkgSources, makeDesktopItem, makeWrapper, imagemagick, tk, tcl, snack }:
+{ stdenv
+, lib
+, name
+, pkgSources
+, fetchpatch
+, makeDesktopItem
+, makeWrapper
+, alsa-plugins
+, imagemagick
+, snack
+, tcl
+, tk
+, tkdnd
+}:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
+  patches = [
+    ./fix-drag-and-drop.patch
+    (fetchpatch {
+      name = "fix-wavebar.patch";
+      url = "https://aur.archlinux.org/cgit/aur.git/plain/fix-wavebar.patch?h=wavesurfer";
+      sha256 = "sha256-qEcNpXuFYW9DUimSz2UQlpowcc5M5Ueq2F6nMlpKyMM=";
+    })
+    (fetchpatch {
+      name = "fix-defaultconfig-search.patch";
+      url = "https://aur.archlinux.org/cgit/aur.git/plain/fix-defaultconfig-search.patch?h=wavesurfer";
+      sha256 = "sha256-CCYzJMCvP4Kz84aAaLJo3Yc6Izi7iEdWITeBJxvBHLI=";
+    })
+    (fetchpatch {
+      name = "fix-tkcon.patch";
+      url = "https://aur.archlinux.org/cgit/aur.git/plain/fix-tkcon.patch?h=wavesurfer";
+      sha256 = "sha256-0VMjzH2Wpu00owSE5jRYmL/3DIGA8K58nvHv/epzrOU=";
+    })
+    (fetchpatch {
+      name = "prefs.patch";
+      url = "https://aur.archlinux.org/cgit/aur.git/plain/prefs.patch?h=wavesurfer";
+      sha256 = "sha256-g6lS49EPJNB42ylawHFmAbydpUqv/2l91TnzWCNyGYU=";
+    })
+    (fetchpatch {
+      name = "snack-callbacks.patch";
+      url = "https://aur.archlinux.org/cgit/aur.git/plain/snack-callbacks.patch?h=wavesurfer";
+      sha256 = "sha256-9HYUarE7U1wWpI5aguO5k3feup3O8MQL/RVmC+Z0sbg=";
+    })
+  ];
+  patchPhase = ''
+    for i in $patches ; do
+      patch -p0 < $i
+    done
+  '';
 
-  buildInputs = [ makeWrapper imagemagick tk tcl snack ];
+  buildInputs = [
+    imagemagick
+    makeWrapper
+    snack
+    tcl
+    tk
+    tkdnd
+  ];
 
   desktopItems = [
     (makeDesktopItem {
@@ -36,7 +89,8 @@ stdenv.mkDerivation {
   postFixup = ''
     makeWrapper $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl $out/bin/wavesurfer \
       --prefix PATH : ${lib.makeBinPath [ tk tcl ]} \
-      --prefix TCLLIBPATH : ${lib.makeLibraryPath [ snack ]}
+      --set TCLLIBPATH  "${snack}/lib ${tkdnd}/lib" \
+      --set ALSA_PLUGIN_DIR ${alsa-plugins}/lib/alsa-lib
   '';
 
   meta = with lib; {
