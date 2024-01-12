@@ -55,10 +55,10 @@ In your `flake.nix`
   - bt-dualboot-1.0.1
   - csharp-ls-0.10.0
   - cups-brother-hll5100dn-3.5.1-1
-  - drbd9-dkms-9.1.17
-  - droidcam-obs-plugin-2.1.0
+  - drbd9-dkms-9.1.18
+  - droidcam-obs-plugin-2.2.0
   - fcitx5-nord-bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1
-  - fcitx5-skk-5.1.0
+  - fcitx5-skk-5.1.1
   - fence-agents-4.13.1
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
   - plemoljp-fonts-v1.6.0
@@ -66,11 +66,11 @@ In your `flake.nix`
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
   - snack-2.2.10
-  - unityhub-latest-3.6.1
-  - vrc-get-latest-v1.4.0
+  - tkdnd-2.9.4-rc3
+  - unityhub-latest-3.7.0
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-8688cc9ef1daa3e8d6a64bbeb2d834d09105b3d6
+  - yaskkserv2-dict-cbdf9ba0b55c1c7b93edf56258ade5ea1af39bdb
 
 - PythonPackages
 
