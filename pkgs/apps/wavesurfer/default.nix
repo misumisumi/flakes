@@ -66,6 +66,7 @@ stdenv.mkDerivation {
       comment = "Open source tool for sound visualization and manipulation";
       desktopName = "WaveSurfer";
       categories = [ "Application" "AudioVideo" "Audio" "AudioVideoEditing" ];
+      mimeTypes = [ "audio/wav" "audio/x-wav" "audio/mp3" "audio/x-mp3" "audio/mpeg" "audio/aiff" "audio/x-aiff" "audio/basic" ];
     })
   ];
 
