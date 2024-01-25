@@ -141,6 +141,10 @@ fetch.pypi = "SpeechRecognition"
 src.pypi = "doq"
 fetch.pypi = "doq"
 
+[jupynium]
+src.pypi = "jupynium"
+fetch.pypi = "jupynium"
+
 [suds]
 src.pypi = "suds"
 fetch.pypi = "suds"
