@@ -7,7 +7,22 @@ buildPythonPackage rec {
 
   doCheck = false;
   # for runtime depend
-  propagatedBuildInputs = with pythonPackages; [ setuptools_scm notebook nbclassic jupyter-console ];
+  propagatedBuildInputs = with pythonPackages; [
+    coloredlogs
+    gitpython
+    jupyter-console
+    nbclassic
+    notebook
+    packaging
+    persist-queue
+    platformdirs
+    psutil
+    pynvim
+    selenium
+    setuptools
+    setuptools_scm
+    verboselogs
+  ];
 
   meta = with lib; {
     homepage = "https://github.com/kiyoon/jupynium.nvim";
