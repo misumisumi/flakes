@@ -108,6 +108,14 @@
     };
     date = "2023-12-21";
   };
+  jupynium = {
+    pname = "jupynium";
+    version = "0.2.2";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.2.tar.gz";
+      sha256 = "sha256-3M58fSDJbaSdPnN/lpyRz5Knt0iUo3WXhkGg/LbELT8=";
+    };
+  };
   knp = {
     pname = "knp";
     version = "bc4cef188669f88cdeb590fe7afb1021ce2ae481";
@@ -205,16 +213,16 @@
   };
   vrc-get-latest = {
     pname = "vrc-get-latest";
-    version = "v1.5.1";
+    version = "v1.5.2";
     src = fetchFromGitHub {
       owner = "anatawa12";
       repo = "vrc-get";
-      rev = "v1.5.1";
+      rev = "v1.5.2";
       fetchSubmodules = false;
-      sha256 = "sha256-roUTfTBpNCwmI706c38pM0yaYPOJAT7jpnXwglxKzlE=";
+      sha256 = "sha256-DTiYyTZKYNprQSsAjHmpGdnS6dkXa3hSRGmIiLT/xr8=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./vrc-get-latest-v1.5.1/Cargo.lock;
+      lockFile = ./vrc-get-latest-v1.5.2/Cargo.lock;
       outputHashes = {
         
       };

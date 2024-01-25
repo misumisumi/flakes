@@ -194,6 +194,21 @@
         },
         "version": "cbdf9ba0b55c1c7b93edf56258ade5ea1af39bdb"
     },
+    "jupynium": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "jupynium",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-3M58fSDJbaSdPnN/lpyRz5Knt0iUo3WXhkGg/LbELT8=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.2.tar.gz"
+        },
+        "version": "0.2.2"
+    },
     "knp": {
         "cargoLocks": null,
         "date": "2023-11-01",
@@ -372,7 +387,7 @@
     "vrc-get-latest": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./vrc-get-latest-v1.5.1/Cargo.lock",
+                "./vrc-get-latest-v1.5.2/Cargo.lock",
                 {}
             ]
         },
@@ -388,11 +403,11 @@
             "name": null,
             "owner": "anatawa12",
             "repo": "vrc-get",
-            "rev": "v1.5.1",
-            "sha256": "sha256-roUTfTBpNCwmI706c38pM0yaYPOJAT7jpnXwglxKzlE=",
+            "rev": "v1.5.2",
+            "sha256": "sha256-DTiYyTZKYNprQSsAjHmpGdnS6dkXa3hSRGmIiLT/xr8=",
             "type": "github"
         },
-        "version": "v1.5.1"
+        "version": "v1.5.2"
     },
     "vrchat-vpm-cli": {
         "cargoLocks": null,
