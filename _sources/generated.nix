@@ -19,10 +19,10 @@
   };
   csharp-ls = {
     pname = "csharp-ls";
-    version = "0.10.0";
+    version = "0.11.0";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.10.0";
-      sha256 = "sha256-1t8U2Q4lIlj2QwbnevAMMGcqtpPh5zk0Bd7EHa7qvCI=";
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.11.0";
+      sha256 = "sha256-zB8uJqlf8kL8jh3WNsPQF7EJpONqi23co3O/iBzfEoU=";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
@@ -59,10 +59,10 @@
   };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
-    version = "2.2.0";
+    version = "2.3.1";
     src = fetchurl {
-      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.2.0/droidcam_obs_2.2.0_linux_ffmpeg5.zip";
-      sha256 = "sha256-3S7P7nVGsa3TP4bE5qXI9evQPZSo/SUm7RmM5na36Os=";
+      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.3.1/droidcam_obs_2.3.1_linux_ffmpeg5.zip";
+      sha256 = "sha256-YVMPXBIRvtXuEKJU3Fpk9pX2+mg3CFpUrH1nU/OlLe8=";
     };
   };
   fcitx5-nord = {
@@ -101,12 +101,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "cbdf9ba0b55c1c7b93edf56258ade5ea1af39bdb";
+    version = "53f34b277e75d9bae880a4e8cb36acaeb78cb239";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/cbdf9ba0b55c1c7b93edf56258ade5ea1af39bdb/SKK-JISYO.jawiki";
-      sha256 = "sha256-60eWs2Cl6nOaz93P6C+KqC9uZ6qQ/mYL+tljEGXO4XA=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/53f34b277e75d9bae880a4e8cb36acaeb78cb239/SKK-JISYO.jawiki";
+      sha256 = "sha256-NxK6mDmDizoAstNAV4PcBZ5sZ84DM3TmT3iJGPQApFE=";
     };
-    date = "2023-12-21";
+    date = "2024-01-24";
   };
   jupynium = {
     pname = "jupynium";
@@ -197,10 +197,10 @@
   };
   tkdnd = {
     pname = "tkdnd";
-    version = "2.9.4-rc3";
+    version = "2.9.4";
     src = fetchurl {
-      url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.4-rc3.tar.gz";
-      sha256 = "sha256-o4Zb3X8qNIQDsS/JqfWsfl+UoRiBbAEroi55YgucTcw=";
+      url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.4.tar.gz";
+      sha256 = "sha256-zG0/C32sqVZIaeKeXbCZbKpfDAPSHJtwMrrUPwpYEhw=";
     };
   };
   unityhub-latest = {
