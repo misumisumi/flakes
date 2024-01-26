@@ -53,29 +53,29 @@ In your `flake.nix`
 - Apps
 
   - bt-dualboot-1.0.1
-  - csharp-ls-0.10.0
+  - csharp-ls-0.11.0
   - cups-brother-hll5100dn-3.5.1-1
-  - drbd9-dkms-9.1.18
-  - droidcam-obs-plugin-2.2.0
+  - droidcam-obs-plugin-2.3.1
   - fcitx5-nord-bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1
   - fcitx5-skk-5.1.1
-  - fence-agents-4.13.1
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
   - plemoljp-fonts-v1.6.0
   - prime-run
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
   - snack-2.2.10
-  - tkdnd-2.9.4-rc3
+  - tkdnd-2.9.4
   - unityhub-latest-3.7.0
+  - vrc-get-latest-v1.5.2
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-cbdf9ba0b55c1c7b93edf56258ade5ea1af39bdb
+  - yaskkserv2-dict-53f34b277e75d9bae880a4e8cb36acaeb78cb239
 
 - PythonPackages
 
   - python3.11-SpeechRecognition-3.10.1
   - python3.11-doq-0.10.0
+  - python3.11-jupynium-0.2.2
   - python3.11-pyknp-0.6.1
   - python3.11-suds-1.1.2
 

@@ -38,11 +38,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-1t8U2Q4lIlj2QwbnevAMMGcqtpPh5zk0Bd7EHa7qvCI=",
+            "sha256": "sha256-zB8uJqlf8kL8jh3WNsPQF7EJpONqi23co3O/iBzfEoU=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.10.0"
+            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.11.0"
         },
-        "version": "0.10.0"
+        "version": "0.11.0"
     },
     "cups-brother-hll5100dn-cupswrapper": {
         "cargoLocks": null,
@@ -113,11 +113,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-3S7P7nVGsa3TP4bE5qXI9evQPZSo/SUm7RmM5na36Os=",
+            "sha256": "sha256-YVMPXBIRvtXuEKJU3Fpk9pX2+mg3CFpUrH1nU/OlLe8=",
             "type": "url",
-            "url": "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.2.0/droidcam_obs_2.2.0_linux_ffmpeg5.zip"
+            "url": "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.3.1/droidcam_obs_2.3.1_linux_ffmpeg5.zip"
         },
-        "version": "2.2.0"
+        "version": "2.3.1"
     },
     "fcitx5-nord": {
         "cargoLocks": null,
@@ -181,18 +181,18 @@
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2023-12-21",
+        "date": "2024-01-24",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-60eWs2Cl6nOaz93P6C+KqC9uZ6qQ/mYL+tljEGXO4XA=",
+            "sha256": "sha256-NxK6mDmDizoAstNAV4PcBZ5sZ84DM3TmT3iJGPQApFE=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/cbdf9ba0b55c1c7b93edf56258ade5ea1af39bdb/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/53f34b277e75d9bae880a4e8cb36acaeb78cb239/SKK-JISYO.jawiki"
         },
-        "version": "cbdf9ba0b55c1c7b93edf56258ade5ea1af39bdb"
+        "version": "53f34b277e75d9bae880a4e8cb36acaeb78cb239"
     },
     "jupynium": {
         "cargoLocks": null,
@@ -363,11 +363,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-o4Zb3X8qNIQDsS/JqfWsfl+UoRiBbAEroi55YgucTcw=",
+            "sha256": "sha256-zG0/C32sqVZIaeKeXbCZbKpfDAPSHJtwMrrUPwpYEhw=",
             "type": "url",
-            "url": "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.4-rc3.tar.gz"
+            "url": "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.4.tar.gz"
         },
-        "version": "2.9.4-rc3"
+        "version": "2.9.4"
     },
     "unityhub-latest": {
         "cargoLocks": null,
