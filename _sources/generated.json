@@ -387,7 +387,7 @@
     "vrc-get-latest": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./vrc-get-latest-v1.5.2/Cargo.lock",
+                "./vrc-get-latest-v1.5.3/Cargo.lock",
                 {}
             ]
         },
@@ -403,11 +403,11 @@
             "name": null,
             "owner": "anatawa12",
             "repo": "vrc-get",
-            "rev": "v1.5.2",
-            "sha256": "sha256-DTiYyTZKYNprQSsAjHmpGdnS6dkXa3hSRGmIiLT/xr8=",
+            "rev": "v1.5.3",
+            "sha256": "sha256-bN9gI+tvMN/9Wbra4GKGc0s91JSOaNDzE5ZoOB9cgNU=",
             "type": "github"
         },
-        "version": "v1.5.2"
+        "version": "v1.5.3"
     },
     "vrchat-vpm-cli": {
         "cargoLocks": null,
