@@ -79,7 +79,7 @@
               python3Packages = final.python3.pkgs;
             };
         };
-        systems = [ "x86_64-linux" "aarch64-linux" ];
+        systems = [ "x86_64-linux" ];
         perSystem = { system, pkgs, ... }:
           rec {
             _module.args.pkgs = import inputs.nixpkgs {
