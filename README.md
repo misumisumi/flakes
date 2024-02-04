@@ -66,7 +66,7 @@ In your `flake.nix`
   - snack-2.2.10
   - tkdnd-2.9.4
   - unityhub-latest-3.7.0
-  - vrc-get-latest-v1.5.2
+  - vrc-get-latest-v1.5.3
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-53f34b277e75d9bae880a4e8cb36acaeb78cb239
