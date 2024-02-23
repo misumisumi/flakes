@@ -101,12 +101,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "53f34b277e75d9bae880a4e8cb36acaeb78cb239";
+    version = "0e0fb52af809d6f675bf1ba5a828812715957762";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/53f34b277e75d9bae880a4e8cb36acaeb78cb239/SKK-JISYO.jawiki";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/0e0fb52af809d6f675bf1ba5a828812715957762/SKK-JISYO.jawiki";
       sha256 = "sha256-NxK6mDmDizoAstNAV4PcBZ5sZ84DM3TmT3iJGPQApFE=";
     };
-    date = "2024-01-24";
+    date = "2024-02-16";
   };
   jupynium = {
     pname = "jupynium";
@@ -130,26 +130,26 @@
   };
   plemoljp = {
     pname = "plemoljp";
-    version = "v1.6.0";
+    version = "v1.7.1";
     src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.6.0/PlemolJP_v1.6.0.zip";
-      sha256 = "sha256-iQB11qItBWhaoL0+hTkPugFRwiIKHiZJl2xa9BaSw8w=";
+      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_v1.7.1.zip";
+      sha256 = "sha256-aqsMIjtg6QRw1Yt796HftCgNmkcRLO+t9tNbyS4PU00=";
     };
   };
   plemoljp-hs = {
     pname = "plemoljp-hs";
-    version = "v1.6.0";
+    version = "v1.7.1";
     src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.6.0/PlemolJP_HS_v1.6.0.zip";
-      sha256 = "sha256-2t6IKpFA2qy0L7HHNneQQUh76DAkkiiujYyFR06tpO4=";
+      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_HS_v1.7.1.zip";
+      sha256 = "sha256-LYjVePbqgU7F9YBiGfVYnLfao2CNrvJVrYpUro8QZYM=";
     };
   };
   plemoljp-nf = {
     pname = "plemoljp-nf";
-    version = "v1.6.0";
+    version = "v1.7.1";
     src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.6.0/PlemolJP_NF_v1.6.0.zip";
-      sha256 = "sha256-6mPtfrb6JV970rsQZhWAd9QbhmjjKob/qTIlAdb8GNw=";
+      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_NF_v1.7.1.zip";
+      sha256 = "sha256-yBpMYSGvpdKvS/IqBP6rXFMdT0ARrhrcnUJD53oMzLs=";
     };
   };
   pyknp = {
@@ -213,16 +213,16 @@
   };
   vrc-get-latest = {
     pname = "vrc-get-latest";
-    version = "v1.5.3";
+    version = "v1.6.0";
     src = fetchFromGitHub {
       owner = "anatawa12";
       repo = "vrc-get";
-      rev = "v1.5.3";
+      rev = "v1.6.0";
       fetchSubmodules = false;
-      sha256 = "sha256-bN9gI+tvMN/9Wbra4GKGc0s91JSOaNDzE5ZoOB9cgNU=";
+      sha256 = "sha256-TOs1GEERE7vt5Rs9PKSPTTObpXrBIPYjed7XaYNvuOs=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./vrc-get-latest-v1.5.3/Cargo.lock;
+      lockFile = ./vrc-get-latest-v1.6.0/Cargo.lock;
       outputHashes = {
         
       };
@@ -230,10 +230,10 @@
   };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
-    version = "0.1.22";
+    version = "0.1.23";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.22";
-      sha256 = "sha256-rJRgJ/nLKhiUK2VT4gNrKbkyfoTyVv0SKBnUl2ajXHs=";
+      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.23";
+      sha256 = "sha256-jrFH3SMMUOy+zHbwnvyR4TtyQHfSSZ5uf/QUFXn22pw=";
     };
   };
   wavesurfer = {
