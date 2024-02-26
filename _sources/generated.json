@@ -181,7 +181,7 @@
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2024-01-24",
+        "date": "2024-02-16",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
@@ -190,9 +190,9 @@
             "name": null,
             "sha256": "sha256-NxK6mDmDizoAstNAV4PcBZ5sZ84DM3TmT3iJGPQApFE=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/53f34b277e75d9bae880a4e8cb36acaeb78cb239/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/0e0fb52af809d6f675bf1ba5a828812715957762/SKK-JISYO.jawiki"
         },
-        "version": "53f34b277e75d9bae880a4e8cb36acaeb78cb239"
+        "version": "0e0fb52af809d6f675bf1ba5a828812715957762"
     },
     "jupynium": {
         "cargoLocks": null,
@@ -238,11 +238,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-iQB11qItBWhaoL0+hTkPugFRwiIKHiZJl2xa9BaSw8w=",
+            "sha256": "sha256-aqsMIjtg6QRw1Yt796HftCgNmkcRLO+t9tNbyS4PU00=",
             "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.6.0/PlemolJP_v1.6.0.zip"
+            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_v1.7.1.zip"
         },
-        "version": "v1.6.0"
+        "version": "v1.7.1"
     },
     "plemoljp-hs": {
         "cargoLocks": null,
@@ -253,11 +253,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-2t6IKpFA2qy0L7HHNneQQUh76DAkkiiujYyFR06tpO4=",
+            "sha256": "sha256-LYjVePbqgU7F9YBiGfVYnLfao2CNrvJVrYpUro8QZYM=",
             "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.6.0/PlemolJP_HS_v1.6.0.zip"
+            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_HS_v1.7.1.zip"
         },
-        "version": "v1.6.0"
+        "version": "v1.7.1"
     },
     "plemoljp-nf": {
         "cargoLocks": null,
@@ -268,11 +268,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-6mPtfrb6JV970rsQZhWAd9QbhmjjKob/qTIlAdb8GNw=",
+            "sha256": "sha256-yBpMYSGvpdKvS/IqBP6rXFMdT0ARrhrcnUJD53oMzLs=",
             "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.6.0/PlemolJP_NF_v1.6.0.zip"
+            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_NF_v1.7.1.zip"
         },
-        "version": "v1.6.0"
+        "version": "v1.7.1"
     },
     "pyknp": {
         "cargoLocks": null,
@@ -418,11 +418,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-rJRgJ/nLKhiUK2VT4gNrKbkyfoTyVv0SKBnUl2ajXHs=",
+            "sha256": "sha256-jrFH3SMMUOy+zHbwnvyR4TtyQHfSSZ5uf/QUFXn22pw=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.22"
+            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.23"
         },
-        "version": "0.1.22"
+        "version": "0.1.23"
     },
     "wavesurfer": {
         "cargoLocks": null,

@@ -59,17 +59,17 @@ In your `flake.nix`
   - fcitx5-nord-bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1
   - fcitx5-skk-5.1.1
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
-  - plemoljp-fonts-v1.6.0
+  - plemoljp-fonts-v1.7.1
   - prime-run
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
   - snack-2.2.10
   - tkdnd-2.9.4
   - unityhub-latest-3.7.0
-  - vrc-get-latest-v1.5.3
+  - vrc-get-latest-v1.6.0
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-53f34b277e75d9bae880a4e8cb36acaeb78cb239
+  - yaskkserv2-dict-0e0fb52af809d6f675bf1ba5a828812715957762
 
 - PythonPackages
 
