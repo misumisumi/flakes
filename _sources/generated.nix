@@ -213,16 +213,16 @@
   };
   vrc-get-latest = {
     pname = "vrc-get-latest";
-    version = "v1.6.0";
+    version = "v1.5.3";
     src = fetchFromGitHub {
       owner = "anatawa12";
       repo = "vrc-get";
-      rev = "v1.6.0";
+      rev = "v1.5.3";
       fetchSubmodules = false;
-      sha256 = "sha256-TOs1GEERE7vt5Rs9PKSPTTObpXrBIPYjed7XaYNvuOs=";
+      sha256 = "sha256-bN9gI+tvMN/9Wbra4GKGc0s91JSOaNDzE5ZoOB9cgNU=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./vrc-get-latest-v1.6.0/Cargo.lock;
+      lockFile = ./vrc-get-latest-v1.5.3/Cargo.lock;
       outputHashes = {
         
       };

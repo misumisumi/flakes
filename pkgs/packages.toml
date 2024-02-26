@@ -115,6 +115,7 @@ fetch.url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_
 [vrc-get-latest]
 src.github_tag = "anatawa12/vrc-get"
 src.exclude_regex = ".*-beta.*"
+src.include_regex = "v1.5.*"
 fetch.github = "anatawa12/vrc-get"
 cargo_locks = ["Cargo.lock"]
 
