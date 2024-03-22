@@ -51,18 +51,18 @@
   };
   drbd9-dkms = {
     pname = "drbd9-dkms";
-    version = "9.1.18";
+    version = "9.1.19";
     src = fetchurl {
-      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.18.tar.gz";
-      sha256 = "sha256-dpjSgkFC4kXJcF4sfVC1jc5nBO2+9cWVdNjCKjY9gIc=";
+      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.19.tar.gz";
+      sha256 = "sha256-vHsN452/omQpcduk5XZ4zJQ1LySmqEaLIbcm/JHT/yw=";
     };
   };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
-    version = "2.3.1";
+    version = "2.3.2";
     src = fetchurl {
-      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.3.1/droidcam_obs_2.3.1_linux_ffmpeg5.zip";
-      sha256 = "sha256-YVMPXBIRvtXuEKJU3Fpk9pX2+mg3CFpUrH1nU/OlLe8=";
+      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.3.2/droidcam_obs_2.3.2_linux_ffmpeg5.zip";
+      sha256 = "sha256-7AOylYmseATVYN7NKnKKNkaWXo00VEZHgE3Gf/ENA7M=";
     };
   };
   fcitx5-nord = {
@@ -79,13 +79,13 @@
   };
   fcitx5-skk = {
     pname = "fcitx5-skk";
-    version = "5.1.1";
+    version = "5.1.2";
     src = fetchFromGitHub {
       owner = "fcitx";
       repo = "fcitx5-skk";
-      rev = "5.1.1";
+      rev = "5.1.2";
       fetchSubmodules = false;
-      sha256 = "sha256-a+ZsuFEan61U0oOuhrTFoK5J4Vd0jj463jQ8Mk7TdbA=";
+      sha256 = "sha256-vg79zJ/ZoUjCKU11krDUjO0rAyZxDMsBnHqJ/I6NTTA=";
     };
   };
   fence-agents = {
@@ -230,10 +230,10 @@
   };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
-    version = "0.1.23";
+    version = "0.1.24";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.23";
-      sha256 = "sha256-jrFH3SMMUOy+zHbwnvyR4TtyQHfSSZ5uf/QUFXn22pw=";
+      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.24";
+      sha256 = "sha256-2kulYzOtyrid3NFXwNivK3V0KcF7MvXGRMhpXN+Mab4=";
     };
   };
   wavesurfer = {
