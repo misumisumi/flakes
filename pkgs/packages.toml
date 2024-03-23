@@ -56,14 +56,6 @@ fetch.url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/
 # src.git = "https://github.com/reasonset/mozcdict-ext"
 # fetch.git = "https://github.com/reasonset/mozcdict-ext"
 
-[fcitx5-nord]
-src.git = "https://github.com/tonyfettes/fcitx5-nord.git"
-fetch.github = "tonyfettes/fcitx5-nord"
-
-[fcitx5-skk]
-src.github_tag = "fcitx/fcitx5-skk"
-fetch.github = "fcitx/fcitx5-skk"
-
 [fence-agents]
 src.github_tag = "ClusterLabs/fence-agents"
 fetch.github = "ClusterLabs/fence-agents"

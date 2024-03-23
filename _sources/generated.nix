@@ -51,41 +51,18 @@
   };
   drbd9-dkms = {
     pname = "drbd9-dkms";
-    version = "9.1.18";
+    version = "9.1.19";
     src = fetchurl {
-      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.18.tar.gz";
-      sha256 = "sha256-dpjSgkFC4kXJcF4sfVC1jc5nBO2+9cWVdNjCKjY9gIc=";
+      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.19.tar.gz";
+      sha256 = "sha256-vHsN452/omQpcduk5XZ4zJQ1LySmqEaLIbcm/JHT/yw=";
     };
   };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
-    version = "2.3.1";
+    version = "2.3.2";
     src = fetchurl {
-      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.3.1/droidcam_obs_2.3.1_linux_ffmpeg5.zip";
-      sha256 = "sha256-YVMPXBIRvtXuEKJU3Fpk9pX2+mg3CFpUrH1nU/OlLe8=";
-    };
-  };
-  fcitx5-nord = {
-    pname = "fcitx5-nord";
-    version = "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1";
-    src = fetchFromGitHub {
-      owner = "tonyfettes";
-      repo = "fcitx5-nord";
-      rev = "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1";
-      fetchSubmodules = false;
-      sha256 = "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=";
-    };
-    date = "2021-07-27";
-  };
-  fcitx5-skk = {
-    pname = "fcitx5-skk";
-    version = "5.1.1";
-    src = fetchFromGitHub {
-      owner = "fcitx";
-      repo = "fcitx5-skk";
-      rev = "5.1.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-a+ZsuFEan61U0oOuhrTFoK5J4Vd0jj463jQ8Mk7TdbA=";
+      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.3.2/droidcam_obs_2.3.2_linux_ffmpeg5.zip";
+      sha256 = "sha256-7AOylYmseATVYN7NKnKKNkaWXo00VEZHgE3Gf/ENA7M=";
     };
   };
   fence-agents = {
@@ -223,17 +200,15 @@
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./vrc-get-latest-v1.5.3/Cargo.lock;
-      outputHashes = {
-        
-      };
+      outputHashes = { };
     };
   };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
-    version = "0.1.23";
+    version = "0.1.24";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.23";
-      sha256 = "sha256-jrFH3SMMUOy+zHbwnvyR4TtyQHfSSZ5uf/QUFXn22pw=";
+      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.24";
+      sha256 = "sha256-2kulYzOtyrid3NFXwNivK3V0KcF7MvXGRMhpXN+Mab4=";
     };
   };
   wavesurfer = {
@@ -256,9 +231,7 @@
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./yaskkserv2-0.1.7/Cargo.lock;
-      outputHashes = {
-        
-      };
+      outputHashes = { };
     };
   };
 }

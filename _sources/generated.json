@@ -98,11 +98,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-dpjSgkFC4kXJcF4sfVC1jc5nBO2+9cWVdNjCKjY9gIc=",
+            "sha256": "sha256-vHsN452/omQpcduk5XZ4zJQ1LySmqEaLIbcm/JHT/yw=",
             "type": "url",
-            "url": "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.18.tar.gz"
+            "url": "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.19.tar.gz"
         },
-        "version": "9.1.18"
+        "version": "9.1.19"
     },
     "droidcam-obs-plugin": {
         "cargoLocks": null,
@@ -113,51 +113,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-YVMPXBIRvtXuEKJU3Fpk9pX2+mg3CFpUrH1nU/OlLe8=",
+            "sha256": "sha256-7AOylYmseATVYN7NKnKKNkaWXo00VEZHgE3Gf/ENA7M=",
             "type": "url",
-            "url": "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.3.1/droidcam_obs_2.3.1_linux_ffmpeg5.zip"
+            "url": "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.3.2/droidcam_obs_2.3.2_linux_ffmpeg5.zip"
         },
-        "version": "2.3.1"
-    },
-    "fcitx5-nord": {
-        "cargoLocks": null,
-        "date": "2021-07-27",
-        "extract": null,
-        "name": "fcitx5-nord",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "tonyfettes",
-            "repo": "fcitx5-nord",
-            "rev": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1",
-            "sha256": "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=",
-            "type": "github"
-        },
-        "version": "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1"
-    },
-    "fcitx5-skk": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "fcitx5-skk",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "fcitx",
-            "repo": "fcitx5-skk",
-            "rev": "5.1.1",
-            "sha256": "sha256-a+ZsuFEan61U0oOuhrTFoK5J4Vd0jj463jQ8Mk7TdbA=",
-            "type": "github"
-        },
-        "version": "5.1.1"
+        "version": "2.3.2"
     },
     "fence-agents": {
         "cargoLocks": null,
@@ -418,11 +378,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-jrFH3SMMUOy+zHbwnvyR4TtyQHfSSZ5uf/QUFXn22pw=",
+            "sha256": "sha256-2kulYzOtyrid3NFXwNivK3V0KcF7MvXGRMhpXN+Mab4=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.23"
+            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.24"
         },
-        "version": "0.1.23"
+        "version": "0.1.24"
     },
     "wavesurfer": {
         "cargoLocks": null,
