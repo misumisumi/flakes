@@ -65,29 +65,6 @@
       sha256 = "sha256-7AOylYmseATVYN7NKnKKNkaWXo00VEZHgE3Gf/ENA7M=";
     };
   };
-  fcitx5-nord = {
-    pname = "fcitx5-nord";
-    version = "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1";
-    src = fetchFromGitHub {
-      owner = "tonyfettes";
-      repo = "fcitx5-nord";
-      rev = "bdaa8fb723b8d0b22f237c9a60195c5f9c9d74d1";
-      fetchSubmodules = false;
-      sha256 = "sha256-qVo/0ivZ5gfUP17G29CAW0MrRFUO0KN1ADl1I/rvchE=";
-    };
-    date = "2021-07-27";
-  };
-  fcitx5-skk = {
-    pname = "fcitx5-skk";
-    version = "5.1.2";
-    src = fetchFromGitHub {
-      owner = "fcitx";
-      repo = "fcitx5-skk";
-      rev = "5.1.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-vg79zJ/ZoUjCKU11krDUjO0rAyZxDMsBnHqJ/I6NTTA=";
-    };
-  };
   fence-agents = {
     pname = "fence-agents";
     version = "v4.13.1";
@@ -223,9 +200,7 @@
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./vrc-get-latest-v1.5.3/Cargo.lock;
-      outputHashes = {
-        
-      };
+      outputHashes = { };
     };
   };
   vrchat-vpm-cli = {
@@ -256,9 +231,7 @@
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./yaskkserv2-0.1.7/Cargo.lock;
-      outputHashes = {
-        
-      };
+      outputHashes = { };
     };
   };
 }
