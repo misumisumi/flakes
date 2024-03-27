@@ -18,7 +18,7 @@
 
   outputs = inputs @ { self, flake-parts, ... }:
     let
-      inherit (import ./lib.nix { inherit (inputs.nixpkgs) lib; }) mkApps mkCheck names runnableApps sources withContents;
+      inherit (import ./lib.nix { inherit (inputs.nixpkgs) lib; }) mkApps mkCheck names runnableApps sources pkgSourcesJSON withContents;
 
       appsDir = ./pkgs/apps;
       pythonModulesDir = ./pkgs/python-modules;
@@ -40,7 +40,7 @@
               pkgSources = sources final;
               override = name: pkg:
                 builtins.intersectAttrs (builtins.functionArgs pkg) {
-                  inherit name pkgSources;
+                  inherit name pkgSources pkgSourcesJSON;
                   pythonPackages = final.python3.pkgs;
                 };
             in
