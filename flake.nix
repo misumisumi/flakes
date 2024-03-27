@@ -22,6 +22,7 @@
 
       appsDir = ./pkgs/apps;
       pythonModulesDir = ./pkgs/python-modules;
+      nodePackagesDir = ./pkgs/nodePackages;
     in
     flake-parts.lib.mkFlake { inherit inputs; }
       {
@@ -77,10 +78,15 @@
                 in
                 self;
               python3Packages = final.python3.pkgs;
-            };
+            } //
+            {
+              nodejs.pkgs = prev.nodejs.pkgs // import ./pkgs/nodePackages/default.nix { inherit (prev) config pkgs lib nodejs stdenv; };
+            }
+            // prev.lib.mapAttrs' (name: value: prev.lib.nameValuePair value final.nodejs.pkgs.${name}) (import ./pkgs/nodePackages/main-programs.nix)
+          ;
         };
         systems = [ "x86_64-linux" ];
-        perSystem = { system, pkgs, ... }:
+        perSystem = { system, pkgs, lib, ... }:
           rec {
             _module.args.pkgs = import inputs.nixpkgs {
               inherit system;
@@ -91,7 +97,10 @@
               config.allowUnfree = true;
             };
             packages = withContents appsDir (name: pkgs.${name})
-              // withContents pythonModulesDir (name: pkgs.python3Packages.${name});
+              // withContents pythonModulesDir (name: pkgs.python3Packages.${name})
+              // lib.listToAttrs (map (name: { inherit name; value = pkgs.nodePackages.${name}; }) (with builtins; fromJSON (readFile ./pkgs/nodePackages/node-packages.json)))
+              // lib.mapAttrs' (name: value: lib.nameValuePair value pkgs.nodePackages.${name}) (import ./pkgs/nodePackages/main-programs.nix)
+            ;
             apps = mkApps pkgs (runnableApps pkgs (names appsDir));
             checks = mkCheck packages;
             devShells = withContents appsDir
