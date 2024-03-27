@@ -44,7 +44,7 @@ fetch.url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/
 # src.prefix = "x-ken-all-"
 # fetch.url = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/x-ken-all-$ver.zip"
 #
-# [japanese-usege-dictionary]
+# [japanese-usage-dictionary]
 # src.git = "https://github.com/hiroyuki-komatsu/japanese-usage-dictionary"
 # fetch.git = "https://github.com/hiroyuki-komatsu/japanese-usage-dictionary"
 #
