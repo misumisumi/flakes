@@ -50,7 +50,7 @@ stdenv.mkDerivation rec {
     yarn --offline --production install
 
     mkdir -p $out/lib/node_modules/@pkgdeps/update-github-actions-permissions
-    cp -r package.json node_modules module bin $out/lib/node_modules/@pkgdeps/update-github-actions-permissions
+    cp -r actions.yml package.json node_modules third-party module bin $out/lib/node_modules/@pkgdeps/update-github-actions-permissions
 
     makeWrapper "${nodejs}/bin/node" "$out/bin/update-github-actions-permissions" \
       --add-flags "$out/lib/node_modules/@pkgdeps/update-github-actions-permissions/bin/cmd.js"
