@@ -39,6 +39,7 @@ rec {
   names = targetDir: lib.subtractLists broken (lib.remove false (map (isDir (ls targetDir)) (lib.attrNames (ls targetDir))));
   runnableApps = pkgs: ts: lib.remove false (map (isRunnableApp pkgs) ts);
   sources = pkgs: import ./_sources/generated.nix { inherit (pkgs) fetchgit fetchurl fetchFromGitHub dockerTools; };
+  pkgSourcesJSON = builtins.fromJSON (builtins.readFile ./_sources/generated.json);
   # Make { appName = import ./<appName> }
   withContents = targetDir: func: lib.listToAttrs (map (genPkg func) (names targetDir));
 }

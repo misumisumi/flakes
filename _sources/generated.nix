@@ -188,6 +188,19 @@
       sha256 = "sha256-cFHcfpsHSDlR82PtZ0leRDpvCD6nw0Qdb3PsYKMnosA=";
     };
   };
+  update-github-actions-permissions = {
+    pname = "update-github-actions-permissions";
+    version = "v2.6.0";
+    src = fetchFromGitHub {
+      owner = "pkgdeps";
+      repo = "update-github-actions-permissions";
+      rev = "v2.6.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-K4Puzi9qpD2OrGXcZh/QqewQloacp7tmiBwdedZlaPM=";
+    };
+    "yarn.lock" = builtins.readFile ./update-github-actions-permissions-v2.6.0/yarn.lock;
+    yarn-hash = "sha256-wm6z+Gx+EozfLqHcbdIhXK4UIeNDKTlxul3ohxiSLQo=";
+  };
   vrc-get-latest = {
     pname = "vrc-get-latest";
     version = "v1.5.3";
@@ -200,7 +213,9 @@
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./vrc-get-latest-v1.5.3/Cargo.lock;
-      outputHashes = { };
+      outputHashes = {
+        
+      };
     };
   };
   vrchat-vpm-cli = {
@@ -231,7 +246,9 @@
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./yaskkserv2-0.1.7/Cargo.lock;
-      outputHashes = { };
+      outputHashes = {
+        
+      };
     };
   };
 }
