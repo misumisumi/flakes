@@ -95,6 +95,12 @@ src.github_tag = "petasis/tkdnd"
 src.prefix = "tkdnd-release-test-v"
 fetch.url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v$ver.tar.gz"
 
+[update-github-actions-permissions]
+src.github_tag = "pkgdeps/update-github-actions-permissions"
+fetch.github = "pkgdeps/update-github-actions-permissions"
+extract = ["yarn.lock"]
+passthru = { yarn-hash = "update-github-actions-permissions-yarn-hash" }
+
 [wavesurfer]
 src.httpheader = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
 src.regex = "[0-9]+\\.[0-9]+\\.[0-9]+p[0-9]+"

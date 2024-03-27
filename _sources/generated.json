@@ -344,6 +344,30 @@
         },
         "version": "3.7.0"
     },
+    "update-github-actions-permissions": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": {
+            "yarn.lock": "./update-github-actions-permissions-v2.6.0/yarn.lock"
+        },
+        "name": "update-github-actions-permissions",
+        "passthru": {
+            "yarn-hash": "sha256-wm6z+Gx+EozfLqHcbdIhXK4UIeNDKTlxul3ohxiSLQo="
+        },
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "pkgdeps",
+            "repo": "update-github-actions-permissions",
+            "rev": "v2.6.0",
+            "sha256": "sha256-K4Puzi9qpD2OrGXcZh/QqewQloacp7tmiBwdedZlaPM=",
+            "type": "github"
+        },
+        "version": "v2.6.0"
+    },
     "vrc-get-latest": {
         "cargoLocks": {
             "Cargo.lock": [
