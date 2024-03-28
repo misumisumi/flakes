@@ -36,6 +36,14 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           nix develop --command nvfetcher -c pkgs/packages.toml --commit-changes
 
+      - name: Update node package version
+        run: |
+          pkgs/nodePackages/generate.sh
+
+      # - name: Update yarn hash
+      #   run: |
+      #      scripts/update-yarn-lock.sh
+
       - name: Update flake lock
         id: update
         uses: DeterminateSystems/update-flake-lock@v20
@@ -65,31 +73,10 @@ jobs:
           ref: "update_flake_lock_action"
           token: ${{ steps.generate.outputs.token }}
 
-      - uses: cachix/install-nix-action@v25
-        if: needs.update-repo.result == 'success'
-        with:
-          nix_path: nixpkgs=channel:nixos-unstable
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Update README
         id: update-readme
         if: needs.update-repo.result == 'success'
-        run: ./scripts/update-readme.sh
-
-      - name: Update yarn hash
-        if: needs.update-repo.result == 'success'
-        run: |
-          SOURCE_PATH=_sources
-          SRC_JSON_FILE=$SOURCE_PATH/generated.json
-          SRC_NIX_FILE=$SOURCE_PATH/generated.nix
-          cat _sources/generated.json | jq -r 'to_entries[] | select(.value.passthru | has("yarn-hash")) | .key + "-" + .value.version' | while read -r PKG_VER; do
-            echo $SOURCE_PATH/$PKG_VER
-            YARN_HASH="$(prefetch-yarn-deps "$SOURCE_PATH/$PKG_VER/yarn.lock")"
-            YARN_HASH="$(nix hash to-sri --type sha256 "$YARN_HASH")"
-            PKG=$(echo $PKG_VER | sed -e "s/-[^-]*$//g")
-            sed -i "s/$PKG-yarn-hash/$YARN_HASH/g" $SRC_JSON_FILE
-            sed -i "s/$PKG-yarn-hash/$YARN_HASH/g" $SRC_NIX_FILE
-          done
+        run: scripts/update-readme.sh
 
       - name: Get last commit message
         id: last-commit-message

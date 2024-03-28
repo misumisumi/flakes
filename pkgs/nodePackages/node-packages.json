@@ -1,0 +1,10 @@
+[
+    "@commitlint/config-angular",
+    "@commitlint/config-conventional",
+    "@commitlint/config-lerna-scopes",
+    "@commitlint/config-patternplate",
+    "@commitlint/load",
+    "@commitlint/read",
+    "@pkgdeps/update-github-actions-permissions",
+    "commitlint-format-json"
+]
