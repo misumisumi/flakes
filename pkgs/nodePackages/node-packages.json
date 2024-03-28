@@ -2,7 +2,6 @@
     "@commitlint/config-angular",
     "@commitlint/config-conventional",
     "@commitlint/config-lerna-scopes",
-    "@commitlint/config-nx-scopes",
     "@commitlint/config-patternplate",
     "@commitlint/load",
     "@commitlint/read",
