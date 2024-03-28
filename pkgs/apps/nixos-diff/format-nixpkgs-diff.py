@@ -7,21 +7,24 @@ pname_hash = re.compile(r"(-([^-]*?))$")
 
 def main(diff_txt):
     updates = [
-        "## Update-packages\n",
-        "| Package | From | To |",
-        "| --- | --- | --- |"
-    ]
-    adds = ["## New-packages\n", "| Package | Version |", "| --- | --- |"]
+      "## Update-packages\n", "| Package | From | To |", "| --- | --- | --- |"]
+    adds = [
+        "## New-packages\n", "| Package | Version |", "| --- | --- |"]
     removes = [
-        "## Remove-packages\n",
-        "| Package | Version |",
-        "| --- | --- |"
-    ]
+        "## Remove-packages\n", "| Package | Version |", "| --- | --- |"]
+
+    up_linux = False
+    up_systemd = False
+
+    minor = False
+
     for line in diff_txt:
         line = re.sub(r"\t|\s", "", line)
         if "|" in line:
             from_pkg, to_pkg = line.split("|")
             flag = 0
+            up_linux = True if "linux_header" in line else up_linux
+            up_systemd = True if "systemd" in line else up_systemd
         elif "<" in line:
             from_pkg, to_pkg = line.split("<")
             flag = 1
@@ -46,15 +49,29 @@ def main(diff_txt):
                 result.append((pname, version))
         if flag == 0 and result[0][1] and result[1][1]:
             updates.append(
-                f"| {result[0][0]} | {result[0][1]} | {result[1][1]} |"
-            )
+                f"| {result[0][0]} | {result[0][1]} | {result[1][1]} |")
+            if pname == "linux_header":
+                ver1 = result[0][1].split(".")
+                ver2 = result[1][1].split(".")
+
+                for i in range(min(len(ver1), len(ver2))):
+                    if ver1[i] < ver2[i]:
+                        if i == 0 or i == 1:
+                            minor = True
+
         elif flag == 1 and result[0][1]:
             removes.append(f"| {result[0][0]} | {result[0][1]} |")
         elif flag == 2 and result[0][1]:
             adds.append(f"| {result[0][0]} | {result[0][1]} |")
+    if minor:
+        print("## This-is-Minor-Update-because-'linux-kernel'-updated\n")
+    if up_linux or up_systemd:
+        print("## Need-reboot-because-'linux'-or-'systemd'-updated\n")
+    print("## Update-summary\n\n<details><summary>lists</summary>\n")
     for i in [updates, adds, removes]:
         if len(i) > 3:
             print("\n".join(i + [" "]))
+    print("</details>\n")
 
 
 if __name__ == "__main__":
