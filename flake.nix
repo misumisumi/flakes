@@ -80,9 +80,9 @@
               python3Packages = final.python3.pkgs;
             } //
             {
-              nodejs.pkgs = prev.nodejs.pkgs // import ./pkgs/nodePackages/default.nix { inherit (prev) config pkgs lib nodejs stdenv; };
+              nodePackages = prev.nodePackages // import ./pkgs/nodePackages/default.nix { inherit (prev) config pkgs lib nodejs stdenv; };
             }
-            // prev.lib.mapAttrs' (name: value: prev.lib.nameValuePair value final.nodejs.pkgs.${name}) (import ./pkgs/nodePackages/main-programs.nix)
+            // prev.lib.mapAttrs' (name: value: prev.lib.nameValuePair value final.nodePackages.${name}) (import ./pkgs/nodePackages/main-programs.nix)
           ;
         };
         systems = [ "x86_64-linux" ];
@@ -99,7 +99,7 @@
             packages = withContents appsDir (name: pkgs.${name})
               // withContents pythonModulesDir (name: pkgs.python3Packages.${name})
               // lib.listToAttrs (map (name: { inherit name; value = pkgs.nodePackages.${name}; }) (with builtins; fromJSON (readFile ./pkgs/nodePackages/node-packages.json)))
-              // lib.mapAttrs' (name: value: lib.nameValuePair value pkgs.nodePackages.${name}) (import ./pkgs/nodePackages/main-programs.nix)
+              // lib.mapAttrs' (name: value: lib.nameValuePair value pkgs.${value}) (import ./pkgs/nodePackages/main-programs.nix)
             ;
             apps = mkApps pkgs (runnableApps pkgs (names appsDir));
             checks = mkCheck packages;

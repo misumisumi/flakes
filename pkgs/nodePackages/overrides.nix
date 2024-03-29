@@ -17,8 +17,6 @@ let
 in
 
 final: prev: {
-  inherit nodejs;
-
   # Example
 
   # autoprefixer = prev.autoprefixer.override {
