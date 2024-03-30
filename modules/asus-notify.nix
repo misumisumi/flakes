@@ -8,7 +8,7 @@ in
   options = {
     services.asus-notify = {
       enable = mkEnableOption ''
-        Notication for asusctl.
+        enable asus-notify
       '';
     };
   };
@@ -18,7 +18,7 @@ in
 
     systemd.user = {
       services.asus-notify = {
-        description = "Notication for asusctl";
+        description = "notification for asusctl";
         wantedBy = [ "default.target" ];
         wants = [ "dbus.socket" ];
         environment.IS_SERVICE = "1";
