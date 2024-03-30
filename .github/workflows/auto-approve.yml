@@ -47,7 +47,7 @@ jobs:
               STATUS=ALLCOMPLETED
             fi
           fi
-          echo status="${STATUS}" >>"${GITHUB_OUTPUT}"
+          echo status="${STATUS}" >> $GITHUB_OUTPUT
 
       - name: Auto approve
         if: steps.status-check.outputs.status == 'ALLCOMPLETED'

@@ -19,7 +19,7 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
           github_access_token: ${{ github.token }}
 
-      - run: nix profile install nixpkgs#statix nixpkgs#typos
+      - run: nix profile install nixpkgs#statix nixpkgs#typos nixpkgs#actionlint
 
       - name: Run reviewdog
         env:
