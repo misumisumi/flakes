@@ -1,0 +1,16 @@
+runner:
+  statix:
+    cmd: statix check -o errfmt | cat
+    errorformat:
+      - "%f>%l:%c:%t:%n:%m"
+    level: warning
+
+  typos:
+    cmd: typos
+    format: typos
+
+  actionlint:
+    cmd: SHELLCHECK_OPTS='-e SC2086' actionlint -oneline
+    errorformat:
+      - "%f:%l:%c: %m"
+    level: warning

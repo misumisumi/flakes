@@ -1,0 +1,48 @@
+name: auto release
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    if: github.actor == 'release-please-action[bot]' || ! endsWith(github.actor, '[bot]')
+    outputs:
+      release_created: ${{ steps.release-please.outputs.release_created }}
+      major: ${{ steps.release-please.outputs.major }}
+      minor: ${{ steps.release-please.outputs.minor }}
+    steps:
+      - uses: tibdex/github-app-token@v2
+        id: generate_token
+        with:
+          app_id: ${{ secrets.RELEASE_PLEASE_ACTION_ID }}
+          private_key: ${{ secrets.RELEASE_PLEASE_ACTION_PRIVATE_KEY }}
+
+      - uses: google-github-actions/release-please-action@v4
+        id: release-please
+        with:
+          token: ${{ steps.generate_token.outputs.token }}
+          release-type: simple
+
+  update-major-and-minor-tag:
+    runs-on: ubuntu-latest
+    needs:
+      - release-please
+    if: ${{ needs.release-please.outputs.release_created }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update major and minor tag
+        env:
+          MAJOR: ${{ needs.release-please.outputs.major }}
+          MINOR: ${{ needs.release-please.outputs.minor }}
+        run: |
+          git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "${GITHUB_ACTOR}"
+
+          git push origin "${MAJOR}" --force
+          git push origin "${MINOR}" --force
