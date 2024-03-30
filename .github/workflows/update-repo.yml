@@ -1,96 +1,32 @@
-name: Update repository
+name: update repository
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: "0 17 * * 5" # runs weekly on Saturday at 02:00 (JST)
+    - cron: "0 18 * * 5" # runs weekly on Saturday at 03:00 (JST)
 
+permissions: read-all
 jobs:
   update-repo:
     runs-on: ubuntu-latest
-    outputs:
-      pr-number: ${{ steps.update.outputs.pull-request-number }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate GitHub Apps token
-        id: generate
-        uses: tibdex/github-app-token@v1
+      - uses: tibdex/github-app-token@v2
+        id: generate_token
         with:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
 
-      - uses: cachix/install-nix-action@v25
+      - uses: cachix/install-nix-action@v26
         with:
           nix_path: nixpkgs=channel:nixos-unstable
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: cachix/cachix-action@v14
-        with:
-          name: misumisumi
-          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-          skipPush: true
-
-      - name: Update package version
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          nix develop --command nvfetcher -c pkgs/packages.toml --commit-changes
-
-      - name: Update node package version
-        run: |
-          pkgs/nodePackages/generate.sh
-
-      # - name: Update yarn hash
-      #   run: |
-      #      scripts/update-yarn-lock.sh
-
-      - name: Update flake lock
+      - uses: DeterminateSystems/update-flake-lock@v21
         id: update
-        uses: DeterminateSystems/update-flake-lock@v20
         with:
-          token: ${{ steps.generate.outputs.token }}
-          commit-msg: "Update flake and package version"
-          pr-title: "Update repository" # Title of PR to be created
+          token: ${{ steps.generate_token.outputs.token }}
+          commit-msg: "chore(flake.lock): auto update flake.lock"
+          pr-title: "chore(flake.lock): auto update flake.lock" # Title of PR to be created
           pr-labels: | # Labels to be set on the PR
             dependencies
             automated
-
-  update-readme:
-    runs-on: ubuntu-latest
-    needs: update-repo
-    steps:
-      - name: Generate GitHub Apps token
-        id: generate
-        uses: tibdex/github-app-token@v1
-        with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.PRIVATE_KEY }}
-
-      - uses: actions/checkout@v4
-        if: needs.update-repo.result == 'success'
-        with:
-          fetch-depth: 2
-          ref: "update_flake_lock_action"
-          token: ${{ steps.generate.outputs.token }}
-
-      - name: Update README
-        id: update-readme
-        if: needs.update-repo.result == 'success'
-        run: scripts/update-readme.sh
-
-      - name: Get last commit message
-        id: last-commit-message
-        if: needs.update-repo.result == 'success'
-        run: |
-          echo "msg=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
-
-      - name: Commit README
-        id: commit
-        uses: stefanzweifel/git-auto-commit-action@v5
-        if: needs.update-repo.result == 'success'
-        with:
-          push_options: "--force"
-          commit_message: ${{ steps.last-commit-message.outputs.msg }}
-          commit_options: "--amend --no-edit"
-          skip_fetch: true
-          file_pattern: "README.md _sources/*"

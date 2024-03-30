@@ -22,7 +22,7 @@
 let
   inherit (python3Packages) python gyp six;
 
-  japanese_usage_dictionary = pkgSources.japanese-usege-dictionary.src;
+  japanese_usage_dictionary = pkgSources.japanese-usage-dictionary.src;
   jigyosyo = pkgSources.mozc-dict-jigyosyo.src;
   x-ken-all = pkgSources.mozc-dict-x-ken-all.src;
   neologd = pkgSources.mecab-ipadic-neologd.src;

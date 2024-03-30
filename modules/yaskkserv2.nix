@@ -9,7 +9,7 @@ in
   options = {
     services.yaskkserv2 = {
       enable = mkEnableOption ''
-        Notication for asusctl.
+        enable yaskkserv2 service
       '';
     };
   };
