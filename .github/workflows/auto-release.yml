@@ -48,8 +48,8 @@ jobs:
           MAJORTAG="v${MAJOR}"
           MINORTAG="v${MAJOR}.${MINOR}"
 
-          git tag -l | grep -q "${MAJORTAG}" || git tag "${MAJORTAG}"
-          git tag -l | grep -q "${MINORTAG}" || git tag "${MINORTAG}"
+          git tag -l | grep -q -x "${MAJORTAG}" || git tag "${MAJORTAG}"
+          git tag -l | grep -q -x "${MINORTAG}" || git tag "${MINORTAG}"
 
           git push origin "${MAJORTAG}" --force
           git push origin "${MINORTAG}" --force
