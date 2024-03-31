@@ -1,11 +1,8 @@
 name: auto approve
 on:
-  workflow_run:
-    workflows:
-      - "build check"
-      - "reviewdog"
+  pull_request:
     types:
-      - completed
+      - opened
 
 permissions: write-all
 jobs:
