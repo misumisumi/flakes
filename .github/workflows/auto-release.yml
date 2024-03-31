@@ -10,7 +10,6 @@ permissions:
 jobs:
   release-please:
     runs-on: ubuntu-latest
-    if: github.actor == 'release-please-action[bot]' || ! endsWith(github.actor, '[bot]')
     outputs:
       release_created: ${{ steps.release-please.outputs.release_created }}
       major: ${{ steps.release-please.outputs.major }}
