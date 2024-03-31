@@ -16,15 +16,15 @@ jobs:
       minor: ${{ steps.release-please.outputs.minor }}
     steps:
       - uses: tibdex/github-app-token@v2
-        id: generate_token
+        id: generate-token
         with:
-          app_id: ${{ secrets.RELEASE_PLEASE_ACTION_ID }}
-          private_key: ${{ secrets.RELEASE_PLEASE_ACTION_PRIVATE_KEY }}
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
 
       - uses: google-github-actions/release-please-action@v4
         id: release-please
         with:
-          token: ${{ steps.generate_token.outputs.token }}
+          token: ${{ steps.generate-token.outputs.token }}
           release-type: simple
 
   update-major-and-minor-tag:
@@ -34,6 +34,8 @@ jobs:
     if: ${{ needs.release-please.outputs.release_created }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Update major and minor tag
         env:
@@ -43,5 +45,11 @@ jobs:
           git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global user.name "${GITHUB_ACTOR}"
 
-          git push origin "${MAJOR}" --force
-          git push origin "${MAJOR}"."${MINOR}" --force
+          MAJORTAG="v${MAJOR}"
+          MINORTAG="v${MAJOR}.${MINOR}"
+
+          git tag -l | grep -q "${MAJORTAG}" || git tag "${MAJORTAG}"
+          git tag -l | grep -q "${MINORTAG}" || git tag "${MINORTAG}"
+
+          git push origin "${MAJORTAG}" --force
+          git push origin "${MINORTAG}" --force
