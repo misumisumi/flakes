@@ -3,10 +3,10 @@
 {
   SpeechRecognition = {
     pname = "SpeechRecognition";
-    version = "3.10.1";
+    version = "3.10.3";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/S/SpeechRecognition/SpeechRecognition-3.10.1.tar.gz";
-      sha256 = "sha256-cYcxiGt4NuIKBrmixsrOEqnhMJcbtq8bHdEwsiutn4I=";
+      url = "https://pypi.org/packages/source/S/SpeechRecognition/SpeechRecognition-3.10.3.tar.gz";
+      sha256 = "sha256-kbAc56BDXQ0DlDXXFO7eEHErBiizaVYjy7n75NLiuC0=";
     };
   };
   bt-dualboot = {
@@ -188,19 +188,6 @@
       sha256 = "sha256-cFHcfpsHSDlR82PtZ0leRDpvCD6nw0Qdb3PsYKMnosA=";
     };
   };
-  update-github-actions-permissions = {
-    pname = "update-github-actions-permissions";
-    version = "v2.6.0";
-    src = fetchFromGitHub {
-      owner = "pkgdeps";
-      repo = "update-github-actions-permissions";
-      rev = "v2.6.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-K4Puzi9qpD2OrGXcZh/QqewQloacp7tmiBwdedZlaPM=";
-    };
-    "yarn.lock" = builtins.readFile ./update-github-actions-permissions-v2.6.0/yarn.lock;
-    yarn-hash = "sha256-wm6z+Gx+EozfLqHcbdIhXK4UIeNDKTlxul3ohxiSLQo=";
-  };
   vrc-get-latest = {
     pname = "vrc-get-latest";
     version = "v1.5.3";
@@ -249,6 +236,14 @@
       outputHashes = {
         
       };
+    };
+  };
+  zenn-cli = {
+    pname = "zenn-cli";
+    version = "0.1.153";
+    src = fetchurl {
+      url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.153.tgz";
+      sha256 = "sha256-+XyGtckE7SgSneARezdFQhJ7rtkI6vc5+VGs/1bt0Eo=";
     };
   };
 }

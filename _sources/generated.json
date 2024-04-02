@@ -8,11 +8,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-cYcxiGt4NuIKBrmixsrOEqnhMJcbtq8bHdEwsiutn4I=",
+            "sha256": "sha256-kbAc56BDXQ0DlDXXFO7eEHErBiizaVYjy7n75NLiuC0=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/S/SpeechRecognition/SpeechRecognition-3.10.1.tar.gz"
+            "url": "https://pypi.org/packages/source/S/SpeechRecognition/SpeechRecognition-3.10.3.tar.gz"
         },
-        "version": "3.10.1"
+        "version": "3.10.3"
     },
     "bt-dualboot": {
         "cargoLocks": null,
@@ -344,30 +344,6 @@
         },
         "version": "3.7.0"
     },
-    "update-github-actions-permissions": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": {
-            "yarn.lock": "./update-github-actions-permissions-v2.6.0/yarn.lock"
-        },
-        "name": "update-github-actions-permissions",
-        "passthru": {
-            "yarn-hash": "sha256-wm6z+Gx+EozfLqHcbdIhXK4UIeNDKTlxul3ohxiSLQo="
-        },
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "pkgdeps",
-            "repo": "update-github-actions-permissions",
-            "rev": "v2.6.0",
-            "sha256": "sha256-K4Puzi9qpD2OrGXcZh/QqewQloacp7tmiBwdedZlaPM=",
-            "type": "github"
-        },
-        "version": "v2.6.0"
-    },
     "vrc-get-latest": {
         "cargoLocks": {
             "Cargo.lock": [
@@ -447,5 +423,20 @@
             "type": "github"
         },
         "version": "0.1.7"
+    },
+    "zenn-cli": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zenn-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-+XyGtckE7SgSneARezdFQhJ7rtkI6vc5+VGs/1bt0Eo=",
+            "type": "url",
+            "url": "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.153.tgz"
+        },
+        "version": "0.1.153"
     }
 }
