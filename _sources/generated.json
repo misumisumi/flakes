@@ -74,21 +74,6 @@
         },
         "version": "3.5.1-1"
     },
-    "doq": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "doq",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-ZyuAwa658CzaO8vpWzBG6WMZOFggusxwZizEhvTDSoY=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/d/doq/doq-0.10.0.tar.gz"
-        },
-        "version": "0.10.0"
-    },
     "drbd9-dkms": {
         "cargoLocks": null,
         "date": null,

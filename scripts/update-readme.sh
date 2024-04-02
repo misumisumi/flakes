@@ -56,12 +56,6 @@ EOF
 cat <<EOF >>README.md
 ## Available packages
 
-- Apps
-
-$(nix flake show --json | jq '.packages."x86_64-linux"[].name' | sort | sed -e "s/\"//g" | grep -v python | sed -e "s/^/  - /g")
-
-- PythonPackages
-
-$(nix flake show --json | jq '.packages."x86_64-linux"[].name' | sort | sed -e "s/\"//g" | grep python | sed -e "s/^/  - /g")
+$(nix flake show --json | jq '.packages."x86_64-linux"[].name' | sort | sed -e "s/\"//g" | sed -e "s/_at_/@/g" | sed -e "s/_slash_/\//g" | sed -e "s/^/  - /g")
 
 EOF

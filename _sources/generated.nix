@@ -41,14 +41,6 @@
       sha256 = "sha256-JnPiBVJ+ZJKivjq+Kizcf5U8vilOFdLVWBuRUiWJ5zE=";
     };
   };
-  doq = {
-    pname = "doq";
-    version = "0.10.0";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/d/doq/doq-0.10.0.tar.gz";
-      sha256 = "sha256-ZyuAwa658CzaO8vpWzBG6WMZOFggusxwZizEhvTDSoY=";
-    };
-  };
   drbd9-dkms = {
     pname = "drbd9-dkms";
     version = "9.1.19";

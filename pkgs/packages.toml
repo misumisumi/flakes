@@ -141,10 +141,6 @@ fetch.url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-$ver.tgz"
 src.pypi = "SpeechRecognition"
 fetch.pypi = "SpeechRecognition"
 
-[doq]
-src.pypi = "doq"
-fetch.pypi = "doq"
-
 [jupynium]
 src.pypi = "jupynium"
 fetch.pypi = "jupynium"
