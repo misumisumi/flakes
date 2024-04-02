@@ -52,6 +52,7 @@
                 in
                 final.callPackage app (override name app)
               )
+            // import ./pkgs/overrides/default.nix { inherit final prev; }
             // {
               sources = pkgSources;
             }

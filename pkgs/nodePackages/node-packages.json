@@ -6,5 +6,9 @@
     "@commitlint/load",
     "@commitlint/read",
     "@pkgdeps/update-github-actions-permissions",
-    "commitlint-format-json"
+    "commitlint-format-json",
+    "textlint-filter-rule-allowlist",
+    "textlint-filter-rule-comments",
+    "textlint-rule-preset-ja-spacing",
+    "textlint-rule-preset-ja-technical-writing"
 ]
