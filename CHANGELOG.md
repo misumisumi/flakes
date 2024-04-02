@@ -1,5 +1,85 @@
 # Changelog
 
+## [3.0.0](https://github.com/misumisumi/flakes/compare/v2.0.0...v3.0.0) (2024-04-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename to homeManagerModules
+
+### Features
+
+* add devShell ([c910267](https://github.com/misumisumi/flakes/commit/c910267edbb3976b30601252dc182367cfb8dc37))
+* add nodePackages ([8b9cf04](https://github.com/misumisumi/flakes/commit/8b9cf043fcfb8cca86c7fc5c2d49876d2a43bc75))
+* **build_check:** Add maximize-build-space ([46e1681](https://github.com/misumisumi/flakes/commit/46e16819df46bd26006418b7d89643e8efe67021))
+* **commitlint:** add commitlint ([8b9cf04](https://github.com/misumisumi/flakes/commit/8b9cf043fcfb8cca86c7fc5c2d49876d2a43bc75))
+* **fence-agents:** Add module and fix build ([27afcc8](https://github.com/misumisumi/flakes/commit/27afcc80d4023bf361100f7c9924d2e4caecac31))
+* **flake:** Add list for don't check to reduce cache ([4207ac3](https://github.com/misumisumi/flakes/commit/4207ac36e3092bdc3f4d6fcad061b29acb4c4841))
+* **lib.nix:** add func of read from generated.json ([1284cda](https://github.com/misumisumi/flakes/commit/1284cdac7678a2531de5c8912fa7abdf4d34300f))
+* **nixos-diff:** add nixos-diff script ([0e87a74](https://github.com/misumisumi/flakes/commit/0e87a74dccf34227d8e8b6b441e8cda1b5a8048c))
+* **nodePackages:** support my nodePackages overrides ([8b9cf04](https://github.com/misumisumi/flakes/commit/8b9cf043fcfb8cca86c7fc5c2d49876d2a43bc75))
+* support drag-and-drop ([ae15db9](https://github.com/misumisumi/flakes/commit/ae15db99163ae13e913b5fc4829430b260cd5f68))
+* **update-github-actions-permissions:** add update-github-actions-permissions ([d975865](https://github.com/misumisumi/flakes/commit/d97586579d07f72d9dc7a1eeb8e0b830fcd69ab2))
+* **workflow:** Add `delete workflow` workflow ([3823bae](https://github.com/misumisumi/flakes/commit/3823bae3eb65456ffff58ce83b76a294e55581f3))
+* **zenn-cli:** add zenn-cli ([53100f4](https://github.com/misumisumi/flakes/commit/53100f49dbb034df573b652aa6759ddccceee45b))
+
+
+### Bug Fixes
+
+* **_sources:** remove old version sources ([5f1f318](https://github.com/misumisumi/flakes/commit/5f1f3181465673cfbbecc96e1a6b46b912da838e))
+* add .nixd.json ([cf1834e](https://github.com/misumisumi/flakes/commit/cf1834e447b9ffbd7fbf5e8971552216cf9f78ca))
+* add autoPatchelfHook ([0769cb9](https://github.com/misumisumi/flakes/commit/0769cb9276d126dbc97e6359b4afc8770809b2a5))
+* add depend package ([323ad4f](https://github.com/misumisumi/flakes/commit/323ad4fef6a0c092cd7e641ab9a152d2895dd3ef))
+* add runtimeDeps ([599ff53](https://github.com/misumisumi/flakes/commit/599ff536df37464f8d2442452f873d1b60fa6ccb))
+* add runtimeDeps ([3c2ecb4](https://github.com/misumisumi/flakes/commit/3c2ecb45a94caa36a1fb7d9ae461d1b6021ee3e6))
+* add some depend packages ([bb5150d](https://github.com/misumisumi/flakes/commit/bb5150db32b1013c6dd9fcf5274706d39be350c1))
+* **auto-review:** Changed to an action that can retrieve artifacts from another workflow ([3fb9c81](https://github.com/misumisumi/flakes/commit/3fb9c81028bf5edb3a29860dc900f7c617d98cd6))
+* **build_check:** Use auth token ([8b24495](https://github.com/misumisumi/flakes/commit/8b2449520a0e24cfe893db3db23617f8431529f8))
+* Change `direnv` to `devshell` ([60bd864](https://github.com/misumisumi/flakes/commit/60bd864fc5bbbcb972afea792aac7737eb478268))
+* **drbd9-dkms:** fix input ([0319590](https://github.com/misumisumi/flakes/commit/0319590d170e6f50d24ad3f1028cafcba54e51db))
+* **drbd9-dkms:** fix kernelVersion ([9745597](https://github.com/misumisumi/flakes/commit/9745597c7a872bc48e25c8b95d9d1581a1297254))
+* enable review when skip build ([4ebfa0e](https://github.com/misumisumi/flakes/commit/4ebfa0e10269d7cf7e2f002c83078885927cd3ee))
+* fence-agent is now broken and vrc-get-latest can build ([0a2e50d](https://github.com/misumisumi/flakes/commit/0a2e50dafa7f5fe422d06186bbc734908d49deb4))
+* fix mkCheck ([0528dff](https://github.com/misumisumi/flakes/commit/0528dff53766fc34468fb41ccb5090b04acd4c4f))
+* Fix text mode of fence-virtd config ([20b4df0](https://github.com/misumisumi/flakes/commit/20b4df064c63abcb9f087929df48df18d0ef6815))
+* **flake:** Add `bashInteractive` for each devShells ([86602b4](https://github.com/misumisumi/flakes/commit/86602b49593b783e9784d0f2413adc4baec14888))
+* **flake:** Assuming there is no buildInputs ([21f36b5](https://github.com/misumisumi/flakes/commit/21f36b532ad50438e0cb36e633a722d35ed687d5))
+* moduleの内容が間違っていた ([1fc7ade](https://github.com/misumisumi/flakes/commit/1fc7adec868a4d8f55a78e158e71fca788111aaf))
+* move to nativeBuildInputs ([e695b45](https://github.com/misumisumi/flakes/commit/e695b45a121ad66d69eda952750de3a08c70b5b8))
+* nixpkg-fmt ([2c7d12c](https://github.com/misumisumi/flakes/commit/2c7d12cd86447d485fb83cf767eac92814f29a77))
+* **nodePackages:** add 'withPlugins' to textlint and commitlint ([81bf052](https://github.com/misumisumi/flakes/commit/81bf0524fed762c5fec2eadbf4a5c68561cea2da))
+* **nodePackages:** missing overlays ([8823d53](https://github.com/misumisumi/flakes/commit/8823d53194d6b5563fbe9ad455e711b8b16f122f))
+* **nodePackages:** rename to the same directory as nixpkgs ([77e2ee3](https://github.com/misumisumi/flakes/commit/77e2ee3feb229dff4d3d62ec2bf5201722858350))
+* **nodePackages:** ビルドできないconfigを削除 ([4b14c6f](https://github.com/misumisumi/flakes/commit/4b14c6f63fa8849521a498d62945c078a7c1a026))
+* package build ([c129b57](https://github.com/misumisumi/flakes/commit/c129b57d9f0bd558b371f7a6f7f750fc255905c5))
+* rename to homeManagerModules ([9d44eff](https://github.com/misumisumi/flakes/commit/9d44eff73635a2e618c26a39f675089b7ee39c11))
+* **skk:** Import extra dict as default ([262c31d](https://github.com/misumisumi/flakes/commit/262c31de7acefc213d10e69eda5cf601770e2133))
+* Some package is broken ([b1cd5f6](https://github.com/misumisumi/flakes/commit/b1cd5f6ba47faf873c5d4cd555fb3f2c0518d769))
+* **supergfxctl-latest:** cmd path ([d9a5dfa](https://github.com/misumisumi/flakes/commit/d9a5dfa008ca2e18708abed5bf2b1ece97864014))
+* **supergfxctl-latest:** exec path ([4c003a0](https://github.com/misumisumi/flakes/commit/4c003a07fa95d3095614b3c1322e82a837753e31))
+* **supergfxctl-latest:** exec path ([a64b11d](https://github.com/misumisumi/flakes/commit/a64b11d47ee789d101ac3969b411f8b23a8a5e37))
+* typos ([60b3af8](https://github.com/misumisumi/flakes/commit/60b3af8527abe403237e135c2f0c479171a5bb4a))
+* typos ([506198d](https://github.com/misumisumi/flakes/commit/506198dd93342094d4d565dd8c148b62eba2de3b))
+* **unityhub-latest:** openssl ([d4aee80](https://github.com/misumisumi/flakes/commit/d4aee800d03d3cc5409a7fefe70946454460c7a5))
+* **update-github-actions-permissions:** include need files ([b83a788](https://github.com/misumisumi/flakes/commit/b83a78899aef49a8b0b82b685bcb86d0b8e5bda7))
+* **update-readme:** Fix update-readme script ([c2ae4b7](https://github.com/misumisumi/flakes/commit/c2ae4b790269eaac2e5e29d2db4dfe96e802b331))
+* vrc-getはv1.6.0以降dotnetに依存するためv1.5.*系で一度固定する ([803c656](https://github.com/misumisumi/flakes/commit/803c65690303801b0d02d081da0e36ccd4d07463))
+* **workflow:** Add GITHUB Apps for auto pr review ([d21807c](https://github.com/misumisumi/flakes/commit/d21807c17c1626eb2df7efc0f59913f4676bc578))
+* **workflow:** fix commit author ([0e3f09d](https://github.com/misumisumi/flakes/commit/0e3f09d906de6a63f7484006fae1b20411c60493))
+* **workflow:** Fix id ([08f69d7](https://github.com/misumisumi/flakes/commit/08f69d7c002212436bccc20795c182fc1e3053f4))
+* **workflow:** Fix trigger and get latest hash ([d1a2876](https://github.com/misumisumi/flakes/commit/d1a287663d50826f36e1458ca3d82c78a613b49e))
+* **workflow:** fix workflow name and add .gitignore ([d3cebb5](https://github.com/misumisumi/flakes/commit/d3cebb50709c6f5c3d7150deba709ce66d644ccc))
+* **workflow:** Improved workflow ([6c63759](https://github.com/misumisumi/flakes/commit/6c637596d02396926e28bafd84c0c162573cbae7))
+* **workflow:** PR triger is not work when bot create PR. ([6a56b08](https://github.com/misumisumi/flakes/commit/6a56b08dfcd5cea2de58563ce55f803c70ad28ac))
+* **workflow:** remove check-all-ci-completion-action ([e4ba424](https://github.com/misumisumi/flakes/commit/e4ba424f93160513bc55b3754a556dac682e2f3c))
+* **workflow:** Sepalate jobs ([e684932](https://github.com/misumisumi/flakes/commit/e68493240d0820440134b0048b7b686f30992c67))
+* **workflows:** Fix artifact file name ([a7d9eb1](https://github.com/misumisumi/flakes/commit/a7d9eb17acb9e7664b0a523c1945b0f71fd2ffa2))
+* **workflows:** Separate auto merge workflow ([de9b643](https://github.com/misumisumi/flakes/commit/de9b64314250702610a4b43863d6febe2964395d))
+* **workflow:** Wait checking CI ([89f437c](https://github.com/misumisumi/flakes/commit/89f437cecee9ec96c05c52a0a71b5e9b15d0e659))
+* wrapProgram ([b9a2ed7](https://github.com/misumisumi/flakes/commit/b9a2ed7d3fca26620896899faf9f09aca51cb8f7))
+* wrapProgram ([45c7c01](https://github.com/misumisumi/flakes/commit/45c7c01810f5f9029eda999d6579043a980056e1))
+* チェックするpkgとしないpkgが反転していた問題の対応 ([0ac094d](https://github.com/misumisumi/flakes/commit/0ac094d9fab44438002f94de462f77c3314b686b))
+
 ## [2.0.0](https://github.com/misumisumi/flakes/compare/v1.0.0...v2.0.0) (2024-03-31)
 
 
