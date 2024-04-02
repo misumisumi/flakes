@@ -22,7 +22,7 @@
 
       appsDir = ./pkgs/apps;
       pythonModulesDir = ./pkgs/python-modules;
-      nodePackagesDir = ./pkgs/nodePackages;
+      nodePackagesDir = ./pkgs/node-packages;
     in
     flake-parts.lib.mkFlake { inherit inputs; }
       {
@@ -80,9 +80,9 @@
               python3Packages = final.python3.pkgs;
             } //
             {
-              nodePackages = prev.nodePackages // import ./pkgs/nodePackages/default.nix { inherit (prev) config pkgs lib nodejs stdenv; };
+              nodePackages = prev.nodePackages // import ./pkgs/node-packages { inherit (prev) config pkgs lib nodejs stdenv; };
             }
-            // prev.lib.mapAttrs' (name: value: prev.lib.nameValuePair value final.nodePackages.${name}) (import ./pkgs/nodePackages/main-programs.nix)
+            // prev.lib.mapAttrs' (name: value: prev.lib.nameValuePair value final.nodePackages.${name}) (import ./pkgs/node-packages/main-programs.nix)
           ;
         };
         systems = [ "x86_64-linux" ];
@@ -98,8 +98,8 @@
             };
             packages = withContents appsDir (name: pkgs.${name})
               // withContents pythonModulesDir (name: pkgs.python3Packages.${name})
-              // lib.listToAttrs (map (name: { inherit name; value = pkgs.nodePackages.${name}; }) (with builtins; fromJSON (readFile ./pkgs/nodePackages/node-packages.json)))
-              // lib.mapAttrs' (name: value: lib.nameValuePair value pkgs.${value}) (import ./pkgs/nodePackages/main-programs.nix)
+              // lib.listToAttrs (map (name: { inherit name; value = pkgs.nodePackages.${name}; }) (with builtins; fromJSON (readFile ./pkgs/node-packages/node-packages.json)))
+              // lib.mapAttrs' (name: value: lib.nameValuePair value pkgs.${value}) (import ./pkgs/node-packages/main-programs.nix)
             ;
             apps = mkApps pkgs (runnableApps pkgs (names appsDir));
             checks = mkCheck packages;
