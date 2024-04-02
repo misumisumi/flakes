@@ -131,6 +131,11 @@ cargo_locks = ["Cargo.lock"]
 src.git = "https://github.com/tokuhirom/jawiki-kana-kanji-dict.git"
 fetch.url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/$ver/SKK-JISYO.jawiki"
 
+[zenn-cli]
+src.github_tag = "zenn-dev/zenn-editor"
+src.exclude_regex = ".*-alpha.*|.*-beta.*"
+fetch.url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-$ver.tgz"
+
 # python modules
 [SpeechRecognition]
 src.pypi = "SpeechRecognition"

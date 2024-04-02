@@ -38,4 +38,6 @@ let
       aliases;
 in
 
-mapAliases { }
+mapAliases {
+  inherit (pkgs) zenn-cli;
+}
