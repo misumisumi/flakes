@@ -4,16 +4,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    nvfetcher.url = "github:berberman/nvfetcher";
     devshell = {
       url = "github:numtide/devshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Uncomment if broken nvfetcher in nixpkgs
-    # nvfetcher = {
-    #   url = "github:berberman/nvfetcher";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
   };
 
   outputs = inputs @ { self, flake-parts, ... }:
@@ -92,7 +87,7 @@
               inherit system;
               overlays = [
                 self.overlays.default
-                # inputs.nvfetcher.overlays.default
+                inputs.nvfetcher.overlays.default
               ];
               config.allowUnfree = true;
             };
@@ -112,11 +107,13 @@
             devshells.default = {
               packages = with pkgs; [
                 bashInteractive
-                nvfetcher
                 nix-index # A files database for nixpkgs
                 nix-prefetch # Prefetch checkers
                 nix-prefetch-git
+                nix-prefetch-github
                 nvfetcher # Tool of automate nix package updates
+                prefetch-npm-deps
+                prefetch-yarn-deps
               ];
             };
           };
