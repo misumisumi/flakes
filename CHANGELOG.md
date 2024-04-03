@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/misumisumi/flakes/compare/v1.1.0...v1.2.0) (2024-04-03)
+
+
+### Features
+
+* **node-packages:** add prettier.withPlugin and change zenn-cli ([3c885e6](https://github.com/misumisumi/flakes/commit/3c885e66ae88a63617ac3868cca9def160b90303))
+
 ## [1.1.0](https://github.com/misumisumi/flakes/compare/v1.0.0...v1.1.0) (2024-04-03)
 
 
