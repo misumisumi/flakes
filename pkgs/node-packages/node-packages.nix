@@ -301,6 +301,15 @@ let
         sha512 = "mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA==";
       };
     };
+    "@korzio/djv-draft-04-2.0.1" = {
+      name = "_at_korzio_slash_djv-draft-04";
+      packageName = "@korzio/djv-draft-04";
+      version = "2.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@korzio/djv-draft-04/-/djv-draft-04-2.0.1.tgz";
+        sha512 = "MeTVcNsfCIYxK6T7jW1sroC7dBAb4IfLmQe6RoCqlxHN5NFkzNpgdnBPR+/0D2wJDUJHM9s9NQv+ouhxKjvUjg==";
+      };
+    };
     "@kvs/env-1.2.0" = {
       name = "_at_kvs_slash_env";
       packageName = "@kvs/env";
@@ -1489,6 +1498,15 @@ let
         sha512 = "IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==";
       };
     };
+    "@xml-tools/parser-1.0.11" = {
+      name = "_at_xml-tools_slash_parser";
+      packageName = "@xml-tools/parser";
+      version = "1.0.11";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@xml-tools/parser/-/parser-1.0.11.tgz";
+        sha512 = "aKqQ077XnR+oQtHJlrAflaZaL7qZsulWc/i/ZEooar5JiWj1eLt0+Wg28cpa+XLney107wXqneC+oG1IZvxkTA==";
+      };
+    };
     "@yarnpkg/lockfile-1.1.0" = {
       name = "_at_yarnpkg_slash_lockfile";
       packageName = "@yarnpkg/lockfile";
@@ -1541,6 +1559,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/abbrev/-/abbrev-2.0.0.tgz";
         sha512 = "6/mh1E2u2YgEsCHdY0Yx5oW+61gZU+1vXaoiHHrpKeuRNNgFvS+/jrwHiQhB5apAf5oB7UB7E19ol2R2LKH8hQ==";
+      };
+    };
+    "acorn-7.4.1" = {
+      name = "acorn";
+      packageName = "acorn";
+      version = "7.4.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/acorn/-/acorn-7.4.1.tgz";
+        sha512 = "nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==";
       };
     };
     "add-stream-1.0.0" = {
@@ -1903,6 +1930,15 @@ let
         sha512 = "NzUnlZexiaH/46WDhANlyR2bXRopNg4F/zuSA3OpZnllCUgRaOF2znDioDWrmbNVsuZk6l9pMquQB38cfBZwkQ==";
       };
     };
+    "big-integer-1.6.52" = {
+      name = "big-integer";
+      packageName = "big-integer";
+      version = "1.6.52";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/big-integer/-/big-integer-1.6.52.tgz";
+        sha512 = "QxD8cf2eVqJOOz63z6JIN9BzvVs/dlySa5HGSBH5xtR8dPteIRQnBxxKqkNTiT6jbDTF6jAfrd4oMcND9RGbQg==";
+      };
+    };
     "bin-links-4.0.3" = {
       name = "bin-links";
       packageName = "bin-links";
@@ -2200,6 +2236,15 @@ let
         sha512 = "3Xnr+7ZFS1uxeiUDvV02wQ+QDbc55o97tIV5zHScSPJpcLm/r0DFPcoY3tYRp+VZukxuMeKgXYmsXQHO05zQeA==";
       };
     };
+    "character-parser-2.2.0" = {
+      name = "character-parser";
+      packageName = "character-parser";
+      version = "2.2.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/character-parser/-/character-parser-2.2.0.tgz";
+        sha512 = "+UqJQjFEFaTAs3bNsF2j2kEN1baG/zghZbdqoYEDxGZtJo9LBzl1A+m0D4n3qKx8N2FNv8/Xp6yV9mQmBuptaw==";
+      };
+    };
     "character-reference-invalid-1.1.4" = {
       name = "character-reference-invalid";
       packageName = "character-reference-invalid";
@@ -2234,6 +2279,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/check-ends-with-period/-/check-ends-with-period-3.0.2.tgz";
         sha512 = "/Bw+avucqqZ7PjKCVDod1QDGyZjo7Ht2701pdgcpTXzK5jI73/OUh3VR+m18jNUoJx5DSOUv0AxELZF7FYtcDA==";
+      };
+    };
+    "chevrotain-7.1.1" = {
+      name = "chevrotain";
+      packageName = "chevrotain";
+      version = "7.1.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/chevrotain/-/chevrotain-7.1.1.tgz";
+        sha512 = "wy3mC1x4ye+O+QkEinVJkPf5u2vsrDIYW9G7ZuwFl6v/Yu0LwUuT2POsb+NUWApebyxfkQq6+yDfRExbnI5rcw==";
       };
     };
     "chownr-2.0.0" = {
@@ -2459,6 +2513,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.8.tgz";
         sha512 = "GHuDRO12Sypu2cV70d1dkA2EUmXHgntrzbpvOB+Qy+49ypNfGgFQIC2fhhXbnyrJRynDCAARsT7Ou0M6hirpfw==";
+      };
+    };
+    "commander-2.20.3" = {
+      name = "commander";
+      packageName = "commander";
+      version = "2.20.3";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz";
+        sha512 = "GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==";
       };
     };
     "commandpost-1.4.0" = {
@@ -2963,6 +3026,24 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/dir-glob/-/dir-glob-3.0.1.tgz";
         sha512 = "WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==";
+      };
+    };
+    "discontinuous-range-1.0.0" = {
+      name = "discontinuous-range";
+      packageName = "discontinuous-range";
+      version = "1.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/discontinuous-range/-/discontinuous-range-1.0.0.tgz";
+        sha512 = "c68LpLbO+7kP/b1Hr1qs8/BJ09F5khZGTxqxZuhzxpmwJKOgRFHJWIb9/KmqnqHhLdO55aOxFH/EGBvUQbL/RQ==";
+      };
+    };
+    "djv-2.1.4" = {
+      name = "djv";
+      packageName = "djv";
+      version = "2.1.4";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/djv/-/djv-2.1.4.tgz";
+        sha512 = "giDn+BVbtLlwtkvtcsZjbjzpALHB77skiv3FIu6Wp8b5j8BunDcVJYH0cGUaexp6s0Sb7IkquXXjsLBJhXwQpA==";
       };
     };
     "dot-prop-3.0.0" = {
@@ -3638,6 +3719,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/get-stdin/-/get-stdin-7.0.0.tgz";
         sha512 = "zRKcywvrXlXsA0v0i9Io4KDRaAw7+a1ZpjRwl9Wox8PFlVCCHra7E9c4kqXCoCM9nR5tBkaTTZRBoCm60bFqTQ==";
+      };
+    };
+    "get-stdin-8.0.0" = {
+      name = "get-stdin";
+      packageName = "get-stdin";
+      version = "8.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/get-stdin/-/get-stdin-8.0.0.tgz";
+        sha512 = "sY22aA6xchAzprjyqmSEQv4UbAAzRN0L2dQB0NlN5acTTK9Don6nhoc3eAbUnpZiCANAMfd/+40kVdKfFygohg==";
       };
     };
     "get-stream-6.0.0" = {
@@ -4423,6 +4513,15 @@ let
         sha512 = "F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==";
       };
     };
+    "is-expression-4.0.0" = {
+      name = "is-expression";
+      packageName = "is-expression";
+      version = "4.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/is-expression/-/is-expression-4.0.0.tgz";
+        sha512 = "zMIXX63sxzG3XrkHkrAPvm/OVZVSCPNkwMHU8oTX7/U3AL78I0QXCEICXUM13BIa8TYGZ68PiTKfQz3yaTNr4A==";
+      };
+    };
     "is-extendable-1.0.1" = {
       name = "is-extendable";
       packageName = "is-extendable";
@@ -4729,6 +4828,15 @@ let
         sha512 = "rgs/V7G8Gfy8Z4XtnVBYXzWMAb9oUWp1pDdRmwHmh0hcjcy1kOu+DOpC5rwoHUAN4TqANwb7WD6z5W2v7v7PQQ==";
       };
     };
+    "jinx-rust-0.1.6" = {
+      name = "jinx-rust";
+      packageName = "jinx-rust";
+      version = "0.1.6";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/jinx-rust/-/jinx-rust-0.1.6.tgz";
+        sha512 = "qP+wtQL1PrDDFwtPKhNGtjWOmijCrKdfUHWTV2G/ikxfjrh+cjdvkQTmny9RAsVF0jiui9m+F0INWu4cuRcZeQ==";
+      };
+    };
     "jiti-1.21.0" = {
       name = "jiti";
       packageName = "jiti";
@@ -4864,6 +4972,15 @@ let
         sha512 = "POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==";
       };
     };
+    "jsox-1.2.119" = {
+      name = "jsox";
+      packageName = "jsox";
+      version = "1.2.119";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/jsox/-/jsox-1.2.119.tgz";
+        sha512 = "f37obwxWKKuylcaOzNlUlzfDvURSCpqTXs8yEivhvsp86D/DTIySxP4v5Qdlg24qCuzDSZ0mJr3krc/f7TZ/5A==";
+      };
+    };
     "just-diff-6.0.2" = {
       name = "just-diff";
       packageName = "just-diff";
@@ -4961,6 +5078,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-2.0.4.tgz";
         sha512 = "wM1+Z03eypVAVUCE7QdSqpVIvelbOakn1M0bPDoA4SGWPx3sNDVUiMo3L6To6WWGClB7VyXnhQ4Sn7gxiJbE6A==";
+      };
+    };
+    "linguist-languages-7.27.0" = {
+      name = "linguist-languages";
+      packageName = "linguist-languages";
+      version = "7.27.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/linguist-languages/-/linguist-languages-7.27.0.tgz";
+        sha512 = "Wzx/22c5Jsv2ag+uKy+ITanGA5hzvBZngrNGDXLTC7ZjGM6FLCYGgomauTkxNJeP9of353OM0pWqngYA180xgw==";
       };
     };
     "load-json-file-1.1.0" = {
@@ -5836,6 +5962,15 @@ let
         sha512 = "xYylXOjBS9mE/d690InK3Y74NpE0El0TmAKDmKJveWk9jds/0Tl7MQP4yhavS0U64diEq+5ey2905nhCpIHE+Q==";
       };
     };
+    "moo-0.5.2" = {
+      name = "moo";
+      packageName = "moo";
+      version = "0.5.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/moo/-/moo-0.5.2.tgz";
+        sha512 = "iSAJLHYKnX41mKcJKjqvnAN9sf0LMDTXDEvFv+ffuRR9a1MIuXLjMNL6EsnDHSkKLTWNqQQ5uo61P4EbU4NU+Q==";
+      };
+    };
     "morpheme-match-2.0.4" = {
       name = "morpheme-match";
       packageName = "morpheme-match";
@@ -5897,6 +6032,24 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.8.tgz";
         sha512 = "nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==";
+      };
+    };
+    "mvdan-sh-0.10.1" = {
+      name = "mvdan-sh";
+      packageName = "mvdan-sh";
+      version = "0.10.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/mvdan-sh/-/mvdan-sh-0.10.1.tgz";
+        sha512 = "kMbrH0EObaKmK3nVRKUIIya1dpASHIEusM13S4V1ViHFuxuNxCo+arxoa6j/dbV22YBGjl7UKJm9QQKJ2Crzhg==";
+      };
+    };
+    "nearley-2.20.1" = {
+      name = "nearley";
+      packageName = "nearley";
+      version = "2.20.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/nearley/-/nearley-2.20.1.tgz";
+        sha512 = "+Mc8UaAebFzgV+KpI5n7DasuuQCHA89dmwm7JXw3TV43ukfNQ9DnBH3Mdb2g/I4Fdxc26pwimBWvjIw0UAILSQ==";
       };
     };
     "negotiator-0.6.3" = {
@@ -5969,6 +6122,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/node-localstorage/-/node-localstorage-2.2.1.tgz";
         sha512 = "vv8fJuOUCCvSPjDjBLlMqYMHob4aGjkmrkaE42/mZr0VT+ZAU10jRF8oTnX9+pgU9/vYJ8P7YT3Vd6ajkmzSCw==";
+      };
+    };
+    "node-sql-parser-4.18.0" = {
+      name = "node-sql-parser";
+      packageName = "node-sql-parser";
+      version = "4.18.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/node-sql-parser/-/node-sql-parser-4.18.0.tgz";
+        sha512 = "2YEOR5qlI1zUFbGMLKNfsrR5JUvFg9LxIRVE+xJe962pfVLH0rnItqLzv96XVs1Y1UIR8FxsXAuvX/lYAWZ2BQ==";
       };
     };
     "nopt-6.0.0" = {
@@ -6212,6 +6374,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/object-assign/-/object-assign-3.0.0.tgz";
         sha512 = "jHP15vXVGeVh1HuaA2wY6lxk+whK/x4KBG88VXeRma7CCun7iGD5qPc4eYykQ9sdQvg8jkwFKsSxHln2ybW3xQ==";
+      };
+    };
+    "object-assign-4.1.1" = {
+      name = "object-assign";
+      packageName = "object-assign";
+      version = "4.1.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz";
+        sha512 = "rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==";
       };
     };
     "object-is-1.1.6" = {
@@ -6655,6 +6826,15 @@ let
         sha512 = "gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==";
       };
     };
+    "php-parser-3.1.5" = {
+      name = "php-parser";
+      packageName = "php-parser";
+      version = "3.1.5";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/php-parser/-/php-parser-3.1.5.tgz";
+        sha512 = "jEY2DcbgCm5aclzBdfW86GM6VEIWcSlhTBSHN1qhJguVePlYe28GhwS0yoeLYXpM2K8y6wzLwrbq814n2PHSoQ==";
+      };
+    };
     "picocolors-1.0.0" = {
       name = "picocolors";
       packageName = "picocolors";
@@ -6770,6 +6950,33 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz";
         sha512 = "vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==";
+      };
+    };
+    "prettier-1.19.1" = {
+      name = "prettier";
+      packageName = "prettier";
+      version = "1.19.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/prettier/-/prettier-1.19.1.tgz";
+        sha512 = "s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==";
+      };
+    };
+    "prettier-2.8.8" = {
+      name = "prettier";
+      packageName = "prettier";
+      version = "2.8.8";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/prettier/-/prettier-2.8.8.tgz";
+        sha512 = "tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==";
+      };
+    };
+    "prettier-3.2.5" = {
+      name = "prettier";
+      packageName = "prettier";
+      version = "3.2.5";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/prettier/-/prettier-3.2.5.tgz";
+        sha512 = "3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==";
       };
     };
     "pretty-format-29.4.3" = {
@@ -6898,6 +7105,24 @@ let
         sha512 = "D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==";
       };
     };
+    "pug-error-2.0.0" = {
+      name = "pug-error";
+      packageName = "pug-error";
+      version = "2.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/pug-error/-/pug-error-2.0.0.tgz";
+        sha512 = "sjiUsi9M4RAGHktC1drQfCr5C5eriu24Lfbt4s+7SykztEOwVZtbFk1RRq0tzLxcMxMYTBR+zMQaG07J/btayQ==";
+      };
+    };
+    "pug-lexer-5.0.1" = {
+      name = "pug-lexer";
+      packageName = "pug-lexer";
+      version = "5.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/pug-lexer/-/pug-lexer-5.0.1.tgz";
+        sha512 = "0I6C62+keXlZPZkOJeVam9aBLVP2EnbeDw3An+k0/QlqdwH6rv8284nko14Na7c0TtqtogfWXcRoFE4O4Ff20w==";
+      };
+    };
     "punycode-2.3.1" = {
       name = "punycode";
       packageName = "punycode";
@@ -6950,6 +7175,24 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/quick-lru/-/quick-lru-6.1.2.tgz";
         sha512 = "AAFUA5O1d83pIHEhJwWCq/RQcRukCkn/NSm2QsTEMle5f2hP0ChI2+3Xb051PZCkLryI/Ir1MVKviT2FIloaTQ==";
+      };
+    };
+    "railroad-diagrams-1.0.0" = {
+      name = "railroad-diagrams";
+      packageName = "railroad-diagrams";
+      version = "1.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz";
+        sha512 = "cz93DjNeLY0idrCNOH6PviZGRN9GJhsdm9hpn1YCS879fj4W+x5IFJhhkRZcwVgMmFF7R82UA/7Oh+R8lLZg6A==";
+      };
+    };
+    "randexp-0.4.6" = {
+      name = "randexp";
+      packageName = "randexp";
+      version = "0.4.6";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/randexp/-/randexp-0.4.6.tgz";
+        sha512 = "80WNmd9DA0tmZrw9qQa62GPPWfuXJknrmVmLcxvq4uZBdYqb1wYoKTmnlGUchvVWe0XiLupYkBoXVOxz3C8DYQ==";
       };
     };
     "rc-config-loader-4.1.3" = {
@@ -7166,6 +7409,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/regex-not/-/regex-not-1.0.2.tgz";
         sha512 = "J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==";
+      };
+    };
+    "regexp-to-ast-0.5.0" = {
+      name = "regexp-to-ast";
+      packageName = "regexp-to-ast";
+      version = "0.5.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/regexp-to-ast/-/regexp-to-ast-0.5.0.tgz";
+        sha512 = "tlbJqcMHnPKI9zSrystikWKwHkBqu2a/Sgw01h3zFjvYrMxEDYHzzoMZnUrbIfpTFEsoRnnviOXNCzFiSc54Qw==";
       };
     };
     "regexp.prototype.flags-1.5.2" = {
@@ -7546,6 +7798,15 @@ let
         sha512 = "7PGFlmtwsEADb0WYyvCMa1t+yke6daIG4Wirafur5kcf+MhUnPms1UeR0CKQdTZD81yESwMHbtn+TR+dMviakQ==";
       };
     };
+    "sh-syntax-0.4.2" = {
+      name = "sh-syntax";
+      packageName = "sh-syntax";
+      version = "0.4.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/sh-syntax/-/sh-syntax-0.4.2.tgz";
+        sha512 = "/l2UZ5fhGZLVZa16XQM9/Vq/hezGGbdHeVEA01uWjOL1+7Ek/gt6FquW0iKKws4a9AYPYvlz6RyVvjh3JxOteg==";
+      };
+    };
     "shallow-clone-3.0.1" = {
       name = "shallow-clone";
       packageName = "shallow-clone";
@@ -7796,6 +8057,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.3.tgz";
         sha512 = "Oo+0REFV59/rz3gfJNKQiBlwfHaSESl1pcGyABQsnnIfWOFt6JNj5gCog2U6MLZ//IGYD+nA8nI+mTShREReaA==";
+      };
+    };
+    "sql-formatter-15.3.0" = {
+      name = "sql-formatter";
+      packageName = "sql-formatter";
+      version = "15.3.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/sql-formatter/-/sql-formatter-15.3.0.tgz";
+        sha512 = "1aDYVEX+dwOSCkRYns4HEGupRZoaivcsNpU4IzR+MVC+cWFYK9/dce7pr4aId4+ED2iK9PNs3j1Vdf8C+SIvDg==";
       };
     };
     "ssri-10.0.5" = {
@@ -8687,6 +8957,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/uglify-js/-/uglify-js-3.17.4.tgz";
         sha512 = "T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==";
+      };
+    };
+    "ulid-2.3.0" = {
+      name = "ulid";
+      packageName = "ulid";
+      version = "2.3.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/ulid/-/ulid-2.3.0.tgz";
+        sha512 = "keqHubrlpvT6G2wH0OEfSW4mquYRcbe/J8NMmveoQOjUqmo+hXtO+ORCpWhdbZ7k72UtY61BL7haGxW6enBnjw==";
       };
     };
     "undici-types-5.26.5" = {
@@ -10790,6 +11069,115 @@ in
     bypassCache = true;
     reconstructLock = true;
   };
+  "@prettier/plugin-php" = nodeEnv.buildNodePackage {
+    name = "_at_prettier_slash_plugin-php";
+    packageName = "@prettier/plugin-php";
+    version = "0.22.2";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/@prettier/plugin-php/-/plugin-php-0.22.2.tgz";
+      sha512 = "md0+7tNbsP0oy+wIP3KZZc6fzx1k1jtWaMjOy/gM8yU9f2BDYEi+iHOc/UNPihYvPI28zFTbjvlhH4QXQjQwNg==";
+    };
+    dependencies = [
+      sources."linguist-languages-7.27.0"
+      sources."php-parser-3.1.5"
+      sources."prettier-3.2.5"
+    ];
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "Prettier PHP Plugin";
+      homepage = "https://github.com/prettier/prettier-php#readme";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
+  "@prettier/plugin-pug" = nodeEnv.buildNodePackage {
+    name = "_at_prettier_slash_plugin-pug";
+    packageName = "@prettier/plugin-pug";
+    version = "3.0.0";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/@prettier/plugin-pug/-/plugin-pug-3.0.0.tgz";
+      sha512 = "ERMMvGSJK/7CTc8OT7W/dtlV43sytyNeiCWckN0DIFepqwXotU0+coKMv5Wx6IWSNj7ZSjdNGBAA1nMPi388xw==";
+    };
+    dependencies = [
+      sources."acorn-7.4.1"
+      sources."call-bind-1.0.7"
+      sources."character-parser-2.2.0"
+      sources."define-data-property-1.1.4"
+      sources."es-define-property-1.0.0"
+      sources."es-errors-1.3.0"
+      sources."function-bind-1.1.2"
+      sources."get-intrinsic-1.2.4"
+      sources."gopd-1.0.1"
+      sources."has-property-descriptors-1.0.2"
+      sources."has-proto-1.0.3"
+      sources."has-symbols-1.0.3"
+      sources."has-tostringtag-1.0.2"
+      sources."hasown-2.0.2"
+      sources."is-expression-4.0.0"
+      sources."is-regex-1.1.4"
+      sources."object-assign-4.1.1"
+      sources."prettier-3.2.5"
+      sources."pug-error-2.0.0"
+      sources."pug-lexer-5.0.1"
+      sources."set-function-length-1.2.2"
+    ];
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "Prettier Pug Plugin";
+      homepage = "https://github.com/prettier/plugin-pug#readme";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
+  "@prettier/plugin-ruby" = nodeEnv.buildNodePackage {
+    name = "_at_prettier_slash_plugin-ruby";
+    packageName = "@prettier/plugin-ruby";
+    version = "4.0.4";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/@prettier/plugin-ruby/-/plugin-ruby-4.0.4.tgz";
+      sha512 = "lCpvfS/dQU5WrwN3AQ5vR8qrvj2h5gE41X08NNzAAXvHdM4zwwGRcP2sHSxfu6n6No+ljWCVx95NvJPFTTjCTg==";
+    };
+    dependencies = [
+      sources."prettier-3.2.5"
+    ];
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "prettier plugin for the Ruby programming language";
+      homepage = "https://github.com/prettier/plugin-ruby#readme";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
+  "@prettier/plugin-xml" = nodeEnv.buildNodePackage {
+    name = "_at_prettier_slash_plugin-xml";
+    packageName = "@prettier/plugin-xml";
+    version = "3.4.1";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/@prettier/plugin-xml/-/plugin-xml-3.4.1.tgz";
+      sha512 = "Uf/6/+9ez6z/IvZErgobZ2G9n1ybxF5BhCd7eMcKqfoWuOzzNUxBipNo3QAP8kRC1VD18TIo84no7LhqtyDcTg==";
+    };
+    dependencies = [
+      sources."@xml-tools/parser-1.0.11"
+      sources."chevrotain-7.1.1"
+      sources."prettier-3.2.5"
+      sources."regexp-to-ast-0.5.0"
+    ];
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "prettier plugin for XML";
+      homepage = "https://github.com/prettier/plugin-xml#readme";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
   "@proofdict/textlint-rule-proofdict" = nodeEnv.buildNodePackage {
     name = "_at_proofdict_slash_textlint-rule-proofdict";
     packageName = "@proofdict/textlint-rule-proofdict";
@@ -11111,6 +11499,161 @@ in
     meta = {
       description = "Format Commitlint output as plain JSON";
       homepage = "https://github.com/bycedric/commitlint-formats/tree/develop/packages/json";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
+  prettier-plugin-go-template = nodeEnv.buildNodePackage {
+    name = "prettier-plugin-go-template";
+    packageName = "prettier-plugin-go-template";
+    version = "0.0.15";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/prettier-plugin-go-template/-/prettier-plugin-go-template-0.0.15.tgz";
+      sha512 = "WqU92E1NokWYNZ9mLE6ijoRg6LtIGdLMePt2C7UBDjXeDH9okcRI3zRqtnWR4s5AloiqyvZ66jNBAa9tmRY5EQ==";
+    };
+    dependencies = [
+      sources."prettier-3.2.5"
+      sources."ulid-2.3.0"
+    ];
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "Prettier plugin for formatting Go & GoHugo templates.";
+      homepage = "https://github.com/NiklasPor/prettier-plugin-go-template#readme";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
+  prettier-plugin-kotlin = nodeEnv.buildNodePackage {
+    name = "prettier-plugin-kotlin";
+    packageName = "prettier-plugin-kotlin";
+    version = "2.1.0";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/prettier-plugin-kotlin/-/prettier-plugin-kotlin-2.1.0.tgz";
+      sha512 = "DfffhPlGQqJJyUfaNJXzRlCbtQWHpFi3jzahOJ/6fxawPGnZuIWauMj9yN0daRcVLvv/pR8IXan1YkCTw5TaPw==";
+    };
+    dependencies = [
+      sources."@korzio/djv-draft-04-2.0.1"
+      sources."balanced-match-1.0.2"
+      sources."brace-expansion-1.1.11"
+      sources."concat-map-0.0.1"
+      sources."djv-2.1.4"
+      sources."fs.realpath-1.0.0"
+      sources."glob-7.2.3"
+      sources."inflight-1.0.6"
+      sources."inherits-2.0.4"
+      sources."minimatch-3.1.2"
+      sources."once-1.4.0"
+      sources."path-is-absolute-1.0.1"
+      sources."prettier-1.19.1"
+      sources."wrappy-1.0.2"
+    ];
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "prettier plugin for the Kotlin programming language.";
+      homepage = "https://github.com/Angry-Potato/prettier-plugin-kotlin#readme";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
+  prettier-plugin-nginx = nodeEnv.buildNodePackage {
+    name = "prettier-plugin-nginx";
+    packageName = "prettier-plugin-nginx";
+    version = "1.0.3";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/prettier-plugin-nginx/-/prettier-plugin-nginx-1.0.3.tgz";
+      sha512 = "vV5q85s8XnV6NEgvz1gVLfZhmxAxY03MyOYj2ApBpjFkbs00lRsRkTmqO9L39ADuD18z1RRCcfZ3eVxKhI/nqg==";
+    };
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "NGINX configuration plugin for Prettier";
+      homepage = "https://github.com/joedeandev/prettier-plugin-nginx";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
+  prettier-plugin-rust = nodeEnv.buildNodePackage {
+    name = "prettier-plugin-rust";
+    packageName = "prettier-plugin-rust";
+    version = "0.1.9";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/prettier-plugin-rust/-/prettier-plugin-rust-0.1.9.tgz";
+      sha512 = "n1DTTJQaHMdnoG/+nKUvBm3EKsMVWsYES2UPCiOPiZdBrmuAO/pX++m7L3+Hz3uuhtddpH0HRKHB2F3jbtJBOQ==";
+    };
+    dependencies = [
+      sources."jinx-rust-0.1.6"
+      sources."prettier-2.8.8"
+    ];
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "Prettier plugin for Rust";
+      homepage = "https://github.com/jinxdash/prettier-plugin-rust#readme";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
+  prettier-plugin-sh = nodeEnv.buildNodePackage {
+    name = "prettier-plugin-sh";
+    packageName = "prettier-plugin-sh";
+    version = "0.14.0";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/prettier-plugin-sh/-/prettier-plugin-sh-0.14.0.tgz";
+      sha512 = "hfXulj5+zEl/ulrO5kMuuTPKmXvOg0bnLHY1hKFNN/N+/903iZbNp8NyZBTsgI8dtkSgFfAEIQq0IQTyP1ZVFQ==";
+    };
+    dependencies = [
+      sources."mvdan-sh-0.10.1"
+      sources."prettier-3.2.5"
+      sources."sh-syntax-0.4.2"
+      sources."tslib-2.6.2"
+    ];
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "An opinionated `shellscript` formatter plugin for Prettier, also support simple format of `Dockerfile`, `properties`, `gitignore`, `dotenv`, `hosts`, `jvmoptions`...";
+      homepage = "https://github.com/un-ts/prettier/tree/master/packages/sh";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
+  prettier-plugin-sql = nodeEnv.buildNodePackage {
+    name = "prettier-plugin-sql";
+    packageName = "prettier-plugin-sql";
+    version = "0.18.0";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/prettier-plugin-sql/-/prettier-plugin-sql-0.18.0.tgz";
+      sha512 = "E7WXooLNtWyv79sYYHtQbfvXZ5B/OOR0ySBsB2evfrfvD4wJos1OKLBvVLC/a7+7YpG30bSUTgc2DEwz8ctPmQ==";
+    };
+    dependencies = [
+      sources."argparse-2.0.1"
+      sources."big-integer-1.6.52"
+      sources."commander-2.20.3"
+      sources."discontinuous-range-1.0.0"
+      sources."get-stdin-8.0.0"
+      sources."jsox-1.2.119"
+      sources."moo-0.5.2"
+      sources."nearley-2.20.1"
+      sources."node-sql-parser-4.18.0"
+      sources."prettier-3.2.5"
+      sources."railroad-diagrams-1.0.0"
+      sources."randexp-0.4.6"
+      sources."ret-0.1.15"
+      sources."sql-formatter-15.3.0"
+      sources."tslib-2.6.2"
+    ];
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "An opinionated sql formatter plugin for Prettier";
+      homepage = "https://github.com/un-ts/prettier/tree/master/packages/sql";
       license = "MIT";
     };
     production = true;
@@ -12022,6 +12565,24 @@ in
     meta = {
       description = "技術文書向けのtextlintルールプリセット";
       homepage = "https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing";
+      license = "MIT";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
+  zenn-cli = nodeEnv.buildNodePackage {
+    name = "zenn-cli";
+    packageName = "zenn-cli";
+    version = "0.1.153";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/zenn-cli/-/zenn-cli-0.1.153.tgz";
+      sha512 = "MLIdtRW2arQBuVCKlWrMF4eFZGkvmswrcc0OvgxmQs9w9/9rODfoyFK9nQQwrgyUwlxDzhUa/oAO6nks4GY5DA==";
+    };
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "Preview Zenn content locally.";
+      homepage = "https://github.com/zenn-dev/zenn-editor#readme";
       license = "MIT";
     };
     production = true;
