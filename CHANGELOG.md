@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/misumisumi/flakes/compare/v1.0.0...v1.1.0) (2024-04-03)
+
+
+### Features
+
+* **env:** add all-in-one linter env for textlint and commitlint ([9f1a079](https://github.com/misumisumi/flakes/commit/9f1a0799d6757311998be5f1afa2efa4b3a04fca))
+
+
+### Bug Fixes
+
+* **proofdict:** add @proofdict/textlint-rule-proofdict ([6be89c8](https://github.com/misumisumi/flakes/commit/6be89c821a1c8db893eac591b1db9b0274dc09d1))
+
 ## 1.0.0 (2024-04-02)
 
 
