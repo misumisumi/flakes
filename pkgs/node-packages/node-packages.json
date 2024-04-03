@@ -6,6 +6,7 @@
     "@commitlint/load",
     "@commitlint/read",
     "@pkgdeps/update-github-actions-permissions",
+    "@proofdict/textlint-rule-proofdict",
     "commitlint-format-json",
     "textlint-filter-rule-allowlist",
     "textlint-filter-rule-comments",

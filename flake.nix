@@ -100,6 +100,7 @@
               // withContents pythonModulesDir (name: pkgs.python3Packages.${name})
               // lib.listToAttrs (map (name: { inherit name; value = pkgs.nodePackages.${name}; }) (with builtins; fromJSON (readFile ./pkgs/node-packages/node-packages.json)))
               // lib.mapAttrs' (name: value: lib.nameValuePair value pkgs.${value}) (import ./pkgs/node-packages/main-programs.nix)
+              // import ./env.nix { inherit pkgs; }
             ;
             apps = mkApps pkgs (runnableApps pkgs (names appsDir));
             checks = mkCheck packages;
