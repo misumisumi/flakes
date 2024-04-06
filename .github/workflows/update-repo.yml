@@ -24,7 +24,7 @@ jobs:
       - uses: DeterminateSystems/update-flake-lock@v21
         id: update
         with:
-          token: ${{ github.token }}
+          token: ${{ steps.generate-token.outputs.token }}
           commit-msg: "chore(flake.lock): auto update flake.lock"
           pr-title: "chore(flake.lock): auto update flake.lock" # Title of PR to be created
           pr-labels: | # Labels to be set on the PR
