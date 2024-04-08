@@ -1,15 +1,36 @@
 name: build check
 on:
   pull_request:
-    paths:
-      - "**.nix"
-      - "flake.lock"
 
 permissions: read-all
 jobs:
+  check-paths:
+    runs-on: ubuntu-latest
+    outputs:
+      change: ${{ steps.change.outputs.nix }}
+    steps:
+      - uses: dorny/paths-filter@v3
+        id: change
+        with:
+          filters: |
+            nix:
+              - "**.nix"
+              - "flake.lock"
+
   build-check:
     runs-on: ubuntu-latest
+    needs:
+      - check-paths
+    if: needs.check-paths.outputs.change == 'true'
     steps:
+      - uses: dorny/paths-filter@v3
+        id: change
+        with:
+          filters: |
+            nix:
+              - "**.nix"
+              - "flake.lock"
+
       - uses: easimon/maximize-build-space@master
         with:
           root-reserve-mb: 8192
