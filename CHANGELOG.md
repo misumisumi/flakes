@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/misumisumi/flakes/compare/v1.2.0...v1.2.1) (2024-04-12)
+
+
+### Bug Fixes
+
+* **node-packages:** add 'textlint-rule-preset-ja-engineering-paper' ([9f4cb86](https://github.com/misumisumi/flakes/commit/9f4cb864a30a09281df4336d8b4fd1d7d0181015))
+
 ## [1.2.0](https://github.com/misumisumi/flakes/compare/v1.1.0...v1.2.0) (2024-04-03)
 
 
