@@ -139,6 +139,26 @@
         },
         "version": "0e0fb52af809d6f675bf1ba5a828812715957762"
     },
+    "julius-speech": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "julius-speech",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "julius-speech",
+            "repo": "julius",
+            "rev": "v4.6",
+            "sha256": "sha256-jw3SF18naDnkt7qW9iWcM+h4lcQY5bGCewcUeLbwwP0=",
+            "type": "github"
+        },
+        "version": "v4.6"
+    },
     "jupynium": {
         "cargoLocks": null,
         "date": null,

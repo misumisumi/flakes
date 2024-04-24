@@ -77,6 +77,17 @@
     };
     date = "2024-02-16";
   };
+  julius-speech = {
+    pname = "julius-speech";
+    version = "v4.6";
+    src = fetchFromGitHub {
+      owner = "julius-speech";
+      repo = "julius";
+      rev = "v4.6";
+      fetchSubmodules = false;
+      sha256 = "sha256-jw3SF18naDnkt7qW9iWcM+h4lcQY5bGCewcUeLbwwP0=";
+    };
+  };
   jupynium = {
     pname = "jupynium";
     version = "0.2.2";
