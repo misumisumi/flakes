@@ -37,9 +37,11 @@ jobs:
         if: steps.change.outputs.nix == 'true'
         with:
           nix_path: nixpkgs=channel:nixos-unstable
+          extra_nix_config: |
+            connect-timeout = 15
+            stalled-download-timeout = 15
 
       - uses: DeterminateSystems/magic-nix-cache-action@main
-        if: steps.change.outputs.nix == 'true'
 
       - uses: cachix/cachix-action@v14
         if: steps.change.outputs.nix == 'true'
