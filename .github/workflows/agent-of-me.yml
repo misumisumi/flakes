@@ -58,7 +58,15 @@ jobs:
         needs.workflow-status.outputs.all-success != 'true'
        }}
     steps:
+      - uses: tibdex/github-app-token@v2
+        id: generate-token
+        with:
+          app_id: ${{ secrets.AGENT_OF_ME_APP_ID }}
+          private_key: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}
+
       - name: Dismiss approvals
+        env:
+          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
           gh api repos/${{ github.repository }}/pulls/${{ needs.workflow-status.outputs.pr-number }}/reviews \
             --jq '.[] | select(.state == "APPROVED") | .id' \
