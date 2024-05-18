@@ -55,3 +55,11 @@ jobs:
 
           git push origin "${MAJORTAG}" --force
           git push origin "${MINORTAG}" --force
+
+      - uses: cachix/cachix-action@v14
+        with:
+          name: misumisumi
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+
+      - name: Build check
+        run: nix run github:Mic92/nix-fast-build  -- --no-link
