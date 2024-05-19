@@ -52,4 +52,4 @@ jobs:
 
       - name: Build check
         if: steps.change.outputs.nix == 'true'
-        run: nix run github:Mic92/nix-fast-build  -- --no-link
+        run: nix run github:Mic92/nix-fast-build  -- --no-link --no-nom
