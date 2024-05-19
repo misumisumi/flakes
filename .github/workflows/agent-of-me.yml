@@ -56,6 +56,7 @@ jobs:
     if: >-
       ${{
         contains(fromJSON('["misumisumi", "[bot]"]'), github.actor) &&
+        github.event.workflow_run.name == 'build check' &&
         needs.workflow-status.outputs.existing-review == 'true' &&
         needs.workflow-status.outputs.all-success == 'false'
        }}
