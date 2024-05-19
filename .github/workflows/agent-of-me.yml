@@ -45,7 +45,7 @@ jobs:
           check_all_success=$(gh pr view "${PR_NUM}" --json statusCheckRollup --jq '.[] | [.[].conclusion] | map(if . == "" then "-" else . end) | all(. == "SUCCESS" or . == "NEUTRAL")')
           existing_review=$(gh pr view "${PR_NUM}" --json reviews --jq ".reviews | length > 0")
           echo "all-success=${check_all_success}" >> $GITHUB_OUTPUT
-          echo "existing-review=${existing_review} >> $GITHUB_OUTPUT"
+          echo "existing-review=${existing_review}" >> $GITHUB_OUTPUT
 
   # From https://github.com/cli/cli/issues/2342
   dismiss-reviews:

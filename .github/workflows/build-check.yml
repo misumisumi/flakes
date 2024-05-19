@@ -41,6 +41,8 @@ jobs:
             connect-timeout = 15
             stalled-download-timeout = 15
 
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+
       - uses: cachix/cachix-action@v14
         if: steps.change.outputs.nix == 'true'
         with:
