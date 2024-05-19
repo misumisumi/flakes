@@ -44,6 +44,8 @@ jobs:
         run: |
           check_all_success=$(gh pr view "${PR_NUM}" --json statusCheckRollup --jq '.[] | [.[].conclusion] | map(if . == "" then "-" else . end) | all(. == "SUCCESS" or . == "NEUTRAL")')
           existing_review=$(gh pr view "${PR_NUM}" --json reviews --jq ".reviews | length > 0")
+          echo "all-success is ${check_all_success}"
+          echo "existing-review is ${existing_review}"
           echo "all-success=${check_all_success}" >> $GITHUB_OUTPUT
           echo "existing-review=${existing_review}" >> $GITHUB_OUTPUT
 
@@ -55,7 +57,7 @@ jobs:
       ${{
         contains(fromJSON('["misumisumi", "[bot]"]'), github.actor) &&
         needs.workflow-status.outputs.existing-review == 'true' &&
-        needs.workflow-status.outputs.all-success != 'true'
+        needs.workflow-status.outputs.all-success == 'false'
        }}
     steps:
       - uses: tibdex/github-app-token@v2
