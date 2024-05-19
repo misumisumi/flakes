@@ -145,7 +145,7 @@ jobs:
       - uses: dependabot/fetch-metadata@v2
         id: metadata
         with:
-          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
+          github-token: ${{ steps.generate-token.outputs.token }}
 
       - name: Auto approve and merge for dependabot PRs
         if: contains(fromJSON('["minor", "patch"]'), steps.metadata.outputs.update-type)
