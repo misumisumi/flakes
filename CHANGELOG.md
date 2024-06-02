@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/misumisumi/flakes/compare/v1.2.1...v1.2.2) (2024-06-02)
+
+
+### Bug Fixes
+
+* remove textlintMyEnv ([7f6bc5f](https://github.com/misumisumi/flakes/commit/7f6bc5fd3f1313951e9f23daa0bce8333fd8d601))
+
 ## [1.2.1](https://github.com/misumisumi/flakes/compare/v1.2.0...v1.2.1) (2024-04-12)
 
 
