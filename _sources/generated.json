@@ -124,6 +124,26 @@
         },
         "version": "d62e22ece14866e4cb935c8077d7b49aa1897bd8"
     },
+    "julius-speech": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "julius-speech",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "julius-speech",
+            "repo": "julius",
+            "rev": "v4.6",
+            "sha256": "sha256-jw3SF18naDnkt7qW9iWcM+h4lcQY5bGCewcUeLbwwP0=",
+            "type": "github"
+        },
+        "version": "v4.6"
+    },
     "jupynium": {
         "cargoLocks": null,
         "date": null,
@@ -133,11 +153,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-3M58fSDJbaSdPnN/lpyRz5Knt0iUo3WXhkGg/LbELT8=",
+            "sha256": "sha256-o4ZjJjvNrRkTe5zeR4NG7bj+vGysm3dLqiWYbsgdzR8=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.2.tar.gz"
+            "url": "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.3.tar.gz"
         },
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "knp": {
         "cargoLocks": null,

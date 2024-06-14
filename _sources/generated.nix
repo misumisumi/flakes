@@ -69,12 +69,23 @@
     };
     date = "2024-05-21";
   };
+  julius-speech = {
+    pname = "julius-speech";
+    version = "v4.6";
+    src = fetchFromGitHub {
+      owner = "julius-speech";
+      repo = "julius";
+      rev = "v4.6";
+      fetchSubmodules = false;
+      sha256 = "sha256-jw3SF18naDnkt7qW9iWcM+h4lcQY5bGCewcUeLbwwP0=";
+    };
+  };
   jupynium = {
     pname = "jupynium";
-    version = "0.2.2";
+    version = "0.2.3";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.2.tar.gz";
-      sha256 = "sha256-3M58fSDJbaSdPnN/lpyRz5Knt0iUo3WXhkGg/LbELT8=";
+      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.3.tar.gz";
+      sha256 = "sha256-o4ZjJjvNrRkTe5zeR4NG7bj+vGysm3dLqiWYbsgdzR8=";
     };
   };
   knp = {
