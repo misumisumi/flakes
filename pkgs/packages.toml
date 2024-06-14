@@ -76,6 +76,31 @@ fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_N
 src.github = "yuru7/PlemolJP"
 fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_HS_$ver.zip"
 
+[moralerspace]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/moralerspace_$ver.zip"
+
+[moralerspace-hw]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHW_$ver.zip"
+
+[moralerspace-jpdoc]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceJPDOC_$ver.zip"
+
+[moralerspace-hw-jpdoc]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWJPDOC_$ver.zip"
+
+[moralerspace-nf]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceNF_$ver.zip"
+
+[moralerspace-hw-nf]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWNF_$ver.zip"
+
+
 [ricoh-sp-c260series-ppd]
 src.manual = "1.00"
 fetch.url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
@@ -137,10 +162,6 @@ src.exclude_regex = ".*-alpha.*|.*-beta.*"
 fetch.url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-$ver.tgz"
 
 # python modules
-[SpeechRecognition]
-src.pypi = "SpeechRecognition"
-fetch.pypi = "SpeechRecognition"
-
 [jupynium]
 src.pypi = "jupynium"
 fetch.pypi = "jupynium"
