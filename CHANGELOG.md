@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.0](https://github.com/misumisumi/flakes/compare/v1.2.2...v1.3.0) (2024-06-14)
+
+
+### Features
+
+* add julius-speech ([6c66300](https://github.com/misumisumi/flakes/commit/6c66300388dda17f5b2d5b2c078d3df373280382))
+* **moralerspace:** add moralerspace-font ([b417cfd](https://github.com/misumisumi/flakes/commit/b417cfd3deeb600e816baff4753830f755343209))
+
+
+### Bug Fixes
+
+* **fcitx5-mozc-ext-neologd:** remove mozc-ext-neologd ([6ca8dec](https://github.com/misumisumi/flakes/commit/6ca8decc99578844739150428039683f16a6479f))
+* **SpeechRecognition:** remove SpeechRecognition ([449f5a8](https://github.com/misumisumi/flakes/commit/449f5a83a931b02353a076f77015396f05cd4893))
+
 ## [1.2.2](https://github.com/misumisumi/flakes/compare/v1.2.1...v1.2.2) (2024-06-02)
 
 
