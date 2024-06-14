@@ -31,35 +31,6 @@ fetch.url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/
 src.github_tag = "julius-speech/julius"
 fetch.github = "julius-speech/julius"
 
-# [fcitx5-mozc-ext-neologd]
-# # src.git = "https://github.com/fcitx/mozc.git"
-# src.manual = "1882e33b61673b66d63277f82b4c80ae4e506c10"
-# fetch.github = "fcitx/mozc"
-#
-# [mozc-dict-jigyosyo]
-# src.webpage = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/"
-# src.regex = "jigyosyo-[0-9]+"
-# src.prefix = "jigyosyo-"
-# fetch.url = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/jigyosyo-$ver.zip"
-#
-# [mozc-dict-x-ken-all]
-# src.webpage = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/"
-# src.regex = "x-ken-all-[0-9]+"
-# src.prefix = "x-ken-all-"
-# fetch.url = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/x-ken-all-$ver.zip"
-#
-# [japanese-usage-dictionary]
-# src.git = "https://github.com/hiroyuki-komatsu/japanese-usage-dictionary"
-# fetch.git = "https://github.com/hiroyuki-komatsu/japanese-usage-dictionary"
-#
-# [mecab-ipadic-neologd]
-# src.github = "neologd/mecab-ipadic-neologd"
-# fetch.github = "neologd/mecab-ipadic-neologd"
-#
-# [mozcdict-ext]
-# src.git = "https://github.com/reasonset/mozcdict-ext"
-# fetch.git = "https://github.com/reasonset/mozcdict-ext"
-
 [fence-agents]
 src.github_tag = "ClusterLabs/fence-agents"
 fetch.github = "ClusterLabs/fence-agents"
