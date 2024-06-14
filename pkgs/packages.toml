@@ -27,34 +27,9 @@ src.github_tag = "dev47apps/droidcam-obs-plugin"
 src.ignored = "2.2.1 2.3.0"
 fetch.url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/$ver/droidcam_obs_$ver_linux_ffmpeg5.zip"
 
-# [fcitx5-mozc-ext-neologd]
-# # src.git = "https://github.com/fcitx/mozc.git"
-# src.manual = "1882e33b61673b66d63277f82b4c80ae4e506c10"
-# fetch.github = "fcitx/mozc"
-#
-# [mozc-dict-jigyosyo]
-# src.webpage = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/"
-# src.regex = "jigyosyo-[0-9]+"
-# src.prefix = "jigyosyo-"
-# fetch.url = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/jigyosyo-$ver.zip"
-#
-# [mozc-dict-x-ken-all]
-# src.webpage = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/"
-# src.regex = "x-ken-all-[0-9]+"
-# src.prefix = "x-ken-all-"
-# fetch.url = "https://osdn.net/projects-aur/ponsfoot-aur/storage/mozc/x-ken-all-$ver.zip"
-#
-# [japanese-usage-dictionary]
-# src.git = "https://github.com/hiroyuki-komatsu/japanese-usage-dictionary"
-# fetch.git = "https://github.com/hiroyuki-komatsu/japanese-usage-dictionary"
-#
-# [mecab-ipadic-neologd]
-# src.github = "neologd/mecab-ipadic-neologd"
-# fetch.github = "neologd/mecab-ipadic-neologd"
-#
-# [mozcdict-ext]
-# src.git = "https://github.com/reasonset/mozcdict-ext"
-# fetch.git = "https://github.com/reasonset/mozcdict-ext"
+[julius-speech]
+src.github_tag = "julius-speech/julius"
+fetch.github = "julius-speech/julius"
 
 [fence-agents]
 src.github_tag = "ClusterLabs/fence-agents"
@@ -75,6 +50,31 @@ fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_N
 [plemoljp-hs]
 src.github = "yuru7/PlemolJP"
 fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_HS_$ver.zip"
+
+[moralerspace]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/moralerspace_$ver.zip"
+
+[moralerspace-hw]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHW_$ver.zip"
+
+[moralerspace-jpdoc]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceJPDOC_$ver.zip"
+
+[moralerspace-hw-jpdoc]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWJPDOC_$ver.zip"
+
+[moralerspace-nf]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceNF_$ver.zip"
+
+[moralerspace-hw-nf]
+src.github = "yuru7/moralerspace"
+fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWNF_$ver.zip"
+
 
 [ricoh-sp-c260series-ppd]
 src.manual = "1.00"
@@ -137,10 +137,6 @@ src.exclude_regex = ".*-alpha.*|.*-beta.*"
 fetch.url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-$ver.tgz"
 
 # python modules
-[SpeechRecognition]
-src.pypi = "SpeechRecognition"
-fetch.pypi = "SpeechRecognition"
-
 [jupynium]
 src.pypi = "jupynium"
 fetch.pypi = "jupynium"

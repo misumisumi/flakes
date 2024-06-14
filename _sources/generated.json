@@ -1,19 +1,4 @@
 {
-    "SpeechRecognition": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "SpeechRecognition",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-kbAc56BDXQ0DlDXXFO7eEHErBiizaVYjy7n75NLiuC0=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/S/SpeechRecognition/SpeechRecognition-3.10.3.tar.gz"
-        },
-        "version": "3.10.3"
-    },
     "bt-dualboot": {
         "cargoLocks": null,
         "date": null,
@@ -38,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-zB8uJqlf8kL8jh3WNsPQF7EJpONqi23co3O/iBzfEoU=",
+            "sha256": "sha256-hhgMwDk3mT7E07REqZduTuEnS7D1tCgdxqN+MLNo9EI=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.11.0"
+            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.13.0"
         },
-        "version": "0.11.0"
+        "version": "0.13.0"
     },
     "cups-brother-hll5100dn-cupswrapper": {
         "cargoLocks": null,
@@ -83,11 +68,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-vHsN452/omQpcduk5XZ4zJQ1LySmqEaLIbcm/JHT/yw=",
+            "sha256": "sha256-64E3LYRY1k/45ucRBcStPNdVti8UgKnsxOCypMw+OYc=",
             "type": "url",
-            "url": "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.19.tar.gz"
+            "url": "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.21.tar.gz"
         },
-        "version": "9.1.19"
+        "version": "9.1.21"
     },
     "droidcam-obs-plugin": {
         "cargoLocks": null,
@@ -118,26 +103,46 @@
             "name": null,
             "owner": "ClusterLabs",
             "repo": "fence-agents",
-            "rev": "v4.13.1",
-            "sha256": "sha256-vqD3z/w0pGPKAynEAr1+G6FcanldhfuMb4Cvs4mqkhE=",
+            "rev": "v4.14.0",
+            "sha256": "sha256-8bBVXRDOOcZlKwQZLO3xezbo/VtRCysrZg3B+Sfc45Y=",
             "type": "github"
         },
-        "version": "v4.13.1"
+        "version": "v4.14.0"
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2024-02-16",
+        "date": "2024-05-21",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-NxK6mDmDizoAstNAV4PcBZ5sZ84DM3TmT3iJGPQApFE=",
+            "sha256": "sha256-OCcbgP0063JEsm66jZ2QRY4GJcnHiOO54NoMj/4IcWc=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/0e0fb52af809d6f675bf1ba5a828812715957762/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/d62e22ece14866e4cb935c8077d7b49aa1897bd8/SKK-JISYO.jawiki"
         },
-        "version": "0e0fb52af809d6f675bf1ba5a828812715957762"
+        "version": "d62e22ece14866e4cb935c8077d7b49aa1897bd8"
+    },
+    "julius-speech": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "julius-speech",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "julius-speech",
+            "repo": "julius",
+            "rev": "v4.6",
+            "sha256": "sha256-jw3SF18naDnkt7qW9iWcM+h4lcQY5bGCewcUeLbwwP0=",
+            "type": "github"
+        },
+        "version": "v4.6"
     },
     "jupynium": {
         "cargoLocks": null,
@@ -148,11 +153,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-3M58fSDJbaSdPnN/lpyRz5Knt0iUo3WXhkGg/LbELT8=",
+            "sha256": "sha256-o4ZjJjvNrRkTe5zeR4NG7bj+vGysm3dLqiWYbsgdzR8=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.2.tar.gz"
+            "url": "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.3.tar.gz"
         },
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "knp": {
         "cargoLocks": null,
@@ -173,6 +178,96 @@
             "type": "github"
         },
         "version": "bc4cef188669f88cdeb590fe7afb1021ce2ae481"
+    },
+    "moralerspace": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "moralerspace",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-7a/vJAUQpH+P00v8t4+wW633lc0M7wN2bJ5Yw/r274M=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/moralerspace_v1.0.2.zip"
+        },
+        "version": "v1.0.2"
+    },
+    "moralerspace-hw": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "moralerspace-hw",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-08cojwcSiOXtrbBJIRt2tCtyFLXBo9Q+SYSNrZwxm3g=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHW_v1.0.2.zip"
+        },
+        "version": "v1.0.2"
+    },
+    "moralerspace-hw-jpdoc": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "moralerspace-hw-jpdoc",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-8uem6oQTUVf63runQSA1CQMwioS0+lOmGTrTxCgrlZY=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHWJPDOC_v1.0.2.zip"
+        },
+        "version": "v1.0.2"
+    },
+    "moralerspace-hw-nf": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "moralerspace-hw-nf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-3NzK8mIEIuY/APOVia/FtQUv5i2PpuwajCRNo+aYKGg=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHWNF_v1.0.2.zip"
+        },
+        "version": "v1.0.2"
+    },
+    "moralerspace-jpdoc": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "moralerspace-jpdoc",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-DCIyC5Rm1c+55myey6G+9qca/ipYkOgZJ+/Xi6chJh4=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceJPDOC_v1.0.2.zip"
+        },
+        "version": "v1.0.2"
+    },
+    "moralerspace-nf": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "moralerspace-nf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-BtvY8r3VJZ0H5D6f1WAfamL4CmmBPKsYAcnp3Emccc4=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceNF_v1.0.2.zip"
+        },
+        "version": "v1.0.2"
     },
     "plemoljp": {
         "cargoLocks": null,
@@ -323,11 +418,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-cFHcfpsHSDlR82PtZ0leRDpvCD6nw0Qdb3PsYKMnosA=",
+            "sha256": "sha256-TjuOsF4LFqQGx4j5j/Er97MNhVm72qlvGYZvA5vuXs8=",
             "type": "url",
-            "url": "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.7.0.deb"
+            "url": "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.8.0.deb"
         },
-        "version": "3.7.0"
+        "version": "3.8.0"
     },
     "vrc-get-latest": {
         "cargoLocks": {
@@ -363,11 +458,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-2kulYzOtyrid3NFXwNivK3V0KcF7MvXGRMhpXN+Mab4=",
+            "sha256": "sha256-usKbIAQJFeoID84oU3ktCEPWXZirDTJd+lJWI2pBaCY=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.24"
+            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.25"
         },
-        "version": "0.1.24"
+        "version": "0.1.25"
     },
     "wavesurfer": {
         "cargoLocks": null,
@@ -418,10 +513,10 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-+XyGtckE7SgSneARezdFQhJ7rtkI6vc5+VGs/1bt0Eo=",
+            "sha256": "sha256-7AGps5RwpCguNa2yUO8VjcFqRuaoZ4lpbWLBSLsMcGA=",
             "type": "url",
-            "url": "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.153.tgz"
+            "url": "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.154.tgz"
         },
-        "version": "0.1.153"
+        "version": "0.1.154"
     }
 }
