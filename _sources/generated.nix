@@ -11,10 +11,10 @@
   };
   csharp-ls = {
     pname = "csharp-ls";
-    version = "0.13.0";
+    version = "0.14.0";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.13.0";
-      sha256 = "sha256-hhgMwDk3mT7E07REqZduTuEnS7D1tCgdxqN+MLNo9EI=";
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.14.0";
+      sha256 = "sha256-agcx7VPIqGhl3NzdGLPwXYJsRuvSjL4SdbNg9vFjIh4=";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
@@ -82,10 +82,10 @@
   };
   jupynium = {
     pname = "jupynium";
-    version = "0.2.3";
+    version = "0.2.4";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.3.tar.gz";
-      sha256 = "sha256-o4ZjJjvNrRkTe5zeR4NG7bj+vGysm3dLqiWYbsgdzR8=";
+      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.4.tar.gz";
+      sha256 = "sha256-AetKpN+6xnzpzkjUWMXcbtDcW3UxHezt2ZGQ99fbEek=";
     };
   };
   knp = {
@@ -229,23 +229,6 @@
     src = fetchurl {
       url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.8.0.deb";
       sha256 = "sha256-TjuOsF4LFqQGx4j5j/Er97MNhVm72qlvGYZvA5vuXs8=";
-    };
-  };
-  vrc-get-latest = {
-    pname = "vrc-get-latest";
-    version = "v1.5.3";
-    src = fetchFromGitHub {
-      owner = "anatawa12";
-      repo = "vrc-get";
-      rev = "v1.5.3";
-      fetchSubmodules = false;
-      sha256 = "sha256-bN9gI+tvMN/9Wbra4GKGc0s91JSOaNDzE5ZoOB9cgNU=";
-    };
-    cargoLock."Cargo.lock" = {
-      lockFile = ./vrc-get-latest-v1.5.3/Cargo.lock;
-      outputHashes = {
-        
-      };
     };
   };
   vrchat-vpm-cli = {
