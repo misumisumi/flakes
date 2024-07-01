@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/misumisumi/flakes/compare/v1.3.0...v1.3.1) (2024-07-01)
+
+
+### Bug Fixes
+
+* remove vrc-get-latest ([407529c](https://github.com/misumisumi/flakes/commit/407529c3cbc871ecd8572264a3dbd492f618684f))
+
 ## [1.3.0](https://github.com/misumisumi/flakes/compare/v1.2.2...v1.3.0) (2024-06-14)
 
 
