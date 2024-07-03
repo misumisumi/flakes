@@ -1,18 +1,20 @@
-name: build check
+name: push cachix
 on:
-  pull_request:
+  push:
+    branches:
+      - main
 
-permissions:
-  id-token: "write"
-  contents: "read"
+permissions: read-all
 
 jobs:
-  build-check:
+  push-cachix:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: dorny/paths-filter@v3
         id: change
         with:
+          base: ${{ github.ref }}
           filters: |
             nix:
               - "**.nix"
@@ -30,9 +32,6 @@ jobs:
           remove-codeql: true
           remove-docker-images: true
 
-      - uses: actions/checkout@v4
-        if: steps.change.outputs.nix == 'true'
-
       - uses: cachix/install-nix-action@V27
         if: steps.change.outputs.nix == 'true'
         with:
@@ -48,7 +47,6 @@ jobs:
         with:
           name: misumisumi
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-          skipPush: true
 
       - name: Build check
         if: steps.change.outputs.nix == 'true'
