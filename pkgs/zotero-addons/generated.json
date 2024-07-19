@@ -25,7 +25,7 @@
         "extract": null,
         "name": "zotero-night",
         "passthru": {
-            "addonId": "night@tefkah.com.",
+            "addonId": "night@tefkah.com",
             "description": "Night theme for Zotero UI and PDF",
             "homepage": "https://github.com/tefkah/zotero",
             "license": "gpl3"

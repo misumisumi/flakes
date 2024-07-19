@@ -23,7 +23,7 @@
     license = "gpl3";
     description = "Night theme for Zotero UI and PDF";
     homepage = "https://github.com/tefkah/zotero";
-    addonId = "night@tefkah.com.";
+    addonId = "night@tefkah.com";
   };
   zotero-pdf-translate = {
     pname = "zotero-pdf-translate";
