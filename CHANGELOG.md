@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/misumisumi/flakes/compare/v1.4.0...v1.4.1) (2024-07-19)
+
+
+### Bug Fixes
+
+* **zotero-night:** fix typo ([e9f48bb](https://github.com/misumisumi/flakes/commit/e9f48bb2f4861c8abd9a926ce9cd55895aa0c82b))
+
 ## [1.4.0](https://github.com/misumisumi/flakes/compare/v1.3.1...v1.4.0) (2024-07-19)
 
 
