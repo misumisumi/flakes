@@ -66,10 +66,13 @@ In your `flake.nix`
   - bt-dualboot-1.0.1
   - commitlint-format-json-1.1.0
   - commitlint-with-plugins
-  - csharp-ls-0.11.0
+  - csharp-ls-0.14.0
   - cups-brother-hll5100dn-3.5.1-1
   - droidcam-obs-plugin-2.3.2
+  - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
+  - moralerspace-fonts-v1.0.2
+  - moralerspace-nerd-fonts-v1.0.2
   - nixos-diff
   - plemoljp-fonts-v1.7.1
   - prettier-plugin-go-template-0.0.15
@@ -79,23 +82,25 @@ In your `flake.nix`
   - prettier-plugin-sh-0.14.0
   - prettier-plugin-sql-0.18.0
   - prime-run
-  - python3.11-SpeechRecognition-3.10.3
-  - python3.11-jupynium-0.2.2
-  - python3.11-pyknp-0.6.1
-  - python3.11-suds-1.1.2
+  - python3.12-jupynium-0.2.4
+  - python3.12-pyknp-0.6.1
+  - python3.12-suds-1.1.2
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
   - snack-2.2.10
   - textlint-filter-rule-allowlist-4.0.0
   - textlint-filter-rule-comments-1.2.2
+  - textlint-rule-preset-ja-engineering-paper-1.0.4
   - textlint-rule-preset-ja-spacing-2.3.1
   - textlint-rule-preset-ja-technical-writing-10.0.1
-  - textlint-with-plugins
   - tkdnd-2.9.4
-  - unityhub-latest-3.7.0
-  - vrc-get-latest-v1.5.3
+  - unityhub-latest-3.8.0
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-0e0fb52af809d6f675bf1ba5a828812715957762
+  - yaskkserv2-dict-d62e22ece14866e4cb935c8077d7b49aa1897bd8
   - zenn-cli-0.1.153
+  - zotero-better-bibtex-6.7.212
+  - zotero-night-0.4.23
+  - zotero-pdf-translate-1.0.27
+  - zotero-zotfile-5.1.2
 
