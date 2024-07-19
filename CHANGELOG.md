@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/misumisumi/flakes/compare/v1.3.1...v1.4.0) (2024-07-19)
+
+
+### Features
+
+* **zotero-addons:** add zotero-addon packages ([91c282c](https://github.com/misumisumi/flakes/commit/91c282c014384aba300e5dff27ad7840c3ac744e))
+
+
+### Bug Fixes
+
+* **workflow:** fix workflow of updating repository ([9110cae](https://github.com/misumisumi/flakes/commit/9110cae66c49be494e38a314307033354452398e))
+
 ## [1.3.1](https://github.com/misumisumi/flakes/compare/v1.3.0...v1.3.1) (2024-07-01)
 
 
