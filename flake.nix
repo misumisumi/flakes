@@ -78,6 +78,7 @@
               nodePackages = prev.nodePackages // import ./pkgs/node-packages { inherit (prev) config pkgs lib nodejs stdenv; };
             }
             // prev.lib.mapAttrs' (name: value: prev.lib.nameValuePair value final.nodePackages.${name}) (import ./pkgs/node-packages/main-programs.nix)
+            // { zotero-addons = import ./pkgs/zotero-addons { inherit (prev) fetchgit fetchurl fetchFromGitHub dockerTools lib stdenv; }; }
           ;
         };
         systems = [ "x86_64-linux" ];
@@ -93,7 +94,8 @@
             };
             packages = withContents appsDir (name: pkgs.${name})
               // withContents pythonModulesDir (name: pkgs.python3Packages.${name})
-              // lib.listToAttrs (map (name: { inherit name; value = pkgs.nodePackages.${name}; }) (with builtins; fromJSON (readFile ./pkgs/node-packages/node-packages.json)))
+              // lib.listToAttrs (map (name: { name = "nodePackages.${name}"; value = pkgs.nodePackages.${name}; }) (with builtins; fromJSON (readFile ./pkgs/node-packages/node-packages.json)))
+              // lib.mapAttrs' (name: value: lib.nameValuePair "zotero-addons.${name}" pkgs.zotero-addons.${name}) (with builtins; fromJSON (readFile ./pkgs/zotero-addons/generated.json))
               // lib.mapAttrs' (name: value: lib.nameValuePair value pkgs.${value}) (import ./pkgs/node-packages/main-programs.nix)
               // import ./env.nix { inherit pkgs; }
             ;
