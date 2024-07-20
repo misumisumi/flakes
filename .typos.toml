@@ -1,0 +1,11 @@
+[default]
+[default.extend-words]
+hda = "hda"
+
+[files]
+extend-exclude = [
+    "_sources/*",
+    "**/generated.json",
+    "**/generated.nix",
+    "pkgs/node-packages",
+]

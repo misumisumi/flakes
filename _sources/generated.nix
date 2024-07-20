@@ -54,13 +54,13 @@
   };
   fence-agents = {
     pname = "fence-agents";
-    version = "v4.14.0";
+    version = "v4.15.0";
     src = fetchFromGitHub {
       owner = "ClusterLabs";
       repo = "fence-agents";
-      rev = "v4.14.0";
+      rev = "v4.15.0";
       fetchSubmodules = false;
-      sha256 = "sha256-8bBVXRDOOcZlKwQZLO3xezbo/VtRCysrZg3B+Sfc45Y=";
+      sha256 = "sha256-RlpLUCHIuonVH94BQVUiRe+Efrm8NMV4L7AiKMe5x/g=";
     };
   };
   jawiki-kana-kanji-dict = {
