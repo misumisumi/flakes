@@ -108,11 +108,11 @@
             "name": null,
             "owner": "ClusterLabs",
             "repo": "fence-agents",
-            "rev": "v4.14.0",
-            "sha256": "sha256-8bBVXRDOOcZlKwQZLO3xezbo/VtRCysrZg3B+Sfc45Y=",
+            "rev": "v4.15.0",
+            "sha256": "sha256-RlpLUCHIuonVH94BQVUiRe+Efrm8NMV4L7AiKMe5x/g=",
             "type": "github"
         },
-        "version": "v4.14.0"
+        "version": "v4.15.0"
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,

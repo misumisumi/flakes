@@ -50,10 +50,10 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-19.1.0
-  - @commitlint/config-conventional-19.1.0
+  - @commitlint/config-angular-19.3.0
+  - @commitlint/config-conventional-19.2.2
   - @commitlint/config-lerna-scopes-19.0.0
-  - @commitlint/config-patternplate-19.1.0
+  - @commitlint/config-patternplate-19.3.0
   - @commitlint/load-19.2.0
   - @commitlint/read-19.2.1
   - @pkgdeps/update-github-actions-permissions-2.6.0
@@ -68,7 +68,7 @@ In your `flake.nix`
   - commitlint-with-plugins
   - csharp-ls-0.14.0
   - cups-brother-hll5100dn-3.5.1-1
-  - droidcam-obs-plugin-2.3.2
+  - droidcam-obs-plugin-2.3.3
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
   - moralerspace-fonts-v1.0.2
@@ -80,7 +80,7 @@ In your `flake.nix`
   - prettier-plugin-nginx-1.0.3
   - prettier-plugin-rust-0.1.9
   - prettier-plugin-sh-0.14.0
-  - prettier-plugin-sql-0.18.0
+  - prettier-plugin-sql-0.18.1
   - prime-run
   - python3.12-jupynium-0.2.4
   - python3.12-pyknp-0.6.1
@@ -91,14 +91,14 @@ In your `flake.nix`
   - textlint-filter-rule-allowlist-4.0.0
   - textlint-filter-rule-comments-1.2.2
   - textlint-rule-preset-ja-engineering-paper-1.0.4
-  - textlint-rule-preset-ja-spacing-2.3.1
+  - textlint-rule-preset-ja-spacing-2.4.3
   - textlint-rule-preset-ja-technical-writing-10.0.1
   - tkdnd-2.9.4
   - unityhub-latest-3.8.0
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-d62e22ece14866e4cb935c8077d7b49aa1897bd8
-  - zenn-cli-0.1.153
+  - zenn-cli-0.1.154
   - zotero-better-bibtex-6.7.212
   - zotero-night-0.4.23
   - zotero-pdf-translate-1.0.27
