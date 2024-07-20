@@ -35,7 +35,7 @@ jobs:
 
       - name: Update node package version
         run: |
-          pkgs/nodePackages/generate.sh
+          pkgs/node-packages/generate.sh
 
       - name: Update yarn hash
         run: |
