@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/misumisumi/flakes/compare/v1.4.1...v1.4.2) (2024-07-20)
+
+
+### Bug Fixes
+
+* **droidcam-obs-plugin:** fix derivation ([9666c94](https://github.com/misumisumi/flakes/commit/9666c9442f82f295f04d21cec962726eb23f18f1))
+
 ## [1.4.1](https://github.com/misumisumi/flakes/compare/v1.4.0...v1.4.1) (2024-07-19)
 
 
