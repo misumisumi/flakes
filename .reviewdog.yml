@@ -6,8 +6,9 @@ runner:
     level: warning
 
   typos:
-    cmd: typos --exclude CHANGELOG.md
+    cmd: typos
     format: typos
+    level: warning
 
   actionlint:
     cmd: SHELLCHECK_OPTS='-e SC2086' actionlint -oneline
