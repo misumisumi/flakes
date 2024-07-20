@@ -43,10 +43,13 @@
   };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
-    version = "2.3.2";
-    src = fetchurl {
-      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.3.2/droidcam_obs_2.3.2_linux_ffmpeg5.zip";
-      sha256 = "sha256-7AOylYmseATVYN7NKnKKNkaWXo00VEZHgE3Gf/ENA7M=";
+    version = "2.3.3";
+    src = fetchFromGitHub {
+      owner = "dev47apps";
+      repo = "droidcam-obs-plugin";
+      rev = "2.3.3";
+      fetchSubmodules = false;
+      sha256 = "sha256-Nl5W4skuoqll3fjzGmOLg0x7OLdP35kzAc3Tbnk/hQA=";
     };
   };
   fence-agents = {

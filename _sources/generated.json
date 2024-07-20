@@ -82,12 +82,17 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-7AOylYmseATVYN7NKnKKNkaWXo00VEZHgE3Gf/ENA7M=",
-            "type": "url",
-            "url": "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.3.2/droidcam_obs_2.3.2_linux_ffmpeg5.zip"
+            "owner": "dev47apps",
+            "repo": "droidcam-obs-plugin",
+            "rev": "2.3.3",
+            "sha256": "sha256-Nl5W4skuoqll3fjzGmOLg0x7OLdP35kzAc3Tbnk/hQA=",
+            "type": "github"
         },
-        "version": "2.3.2"
+        "version": "2.3.3"
     },
     "fence-agents": {
         "cargoLocks": null,
