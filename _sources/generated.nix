@@ -236,10 +236,10 @@
   };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
-    version = "0.1.25";
+    version = "0.1.26";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.25";
-      sha256 = "sha256-usKbIAQJFeoID84oU3ktCEPWXZirDTJd+lJWI2pBaCY=";
+      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.26";
+      sha256 = "sha256-t+SdV8MyFlpzvesQ8Ktfx4LMzqmOCMpj6Ob+o6cyHwo=";
     };
   };
   wavesurfer = {
