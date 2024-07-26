@@ -99,7 +99,7 @@ In your `flake.nix`
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-d62e22ece14866e4cb935c8077d7b49aa1897bd8
   - zenn-cli-0.1.154
-  - zotero-better-bibtex-6.7.212
+  - zotero-better-bibtex-6.7.214
   - zotero-night-0.4.23
   - zotero-pdf-translate-1.0.27
   - zotero-zotfile-5.1.2
