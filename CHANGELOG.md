@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.3](https://github.com/misumisumi/flakes/compare/v1.4.2...v1.4.3) (2024-07-27)
+
+
+### Bug Fixes
+
+* **snack:** fix sha256 of patch ([860206b](https://github.com/misumisumi/flakes/commit/860206be081f2ecb088634e6241a4d9837406118))
+
 ## [1.4.2](https://github.com/misumisumi/flakes/compare/v1.4.1...v1.4.2) (2024-07-20)
 
 
