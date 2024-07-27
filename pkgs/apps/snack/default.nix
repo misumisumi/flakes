@@ -17,14 +17,9 @@ stdenv.mkDerivation {
     (fetchpatch {
       name = "alsa.patch";
       url = "https://aur.archlinux.org/cgit/aur.git/plain/alsa.patch?h=snack";
-      sha256 = "sha256-0BC/uu7QGMxHuYGBgdY9n07LeyPgqzD7RWVLGM5/EF8=";
+      sha256 = "sha256-7VqIlQwPvNLMJ766TzgKKWdd3WK9TaSmoYsdZz0h9bE=";
     })
   ];
-  patchPhase = ''
-    for i in $patches ; do
-      patch -p0 < $i
-    done
-  '';
 
   preConfigure = ''
     sed -i -e 's|^\(#define roundf(.*\)|//\1|' generic/jkFormatMP3.c
