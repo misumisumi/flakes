@@ -101,6 +101,6 @@ In your `flake.nix`
   - zenn-cli-0.1.154
   - zotero-better-bibtex-6.7.214
   - zotero-night-0.4.23
-  - zotero-pdf-translate-1.0.27
+  - zotero-pdf-translate-1.0.28
   - zotero-zotfile-5.1.2
 
