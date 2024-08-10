@@ -54,8 +54,8 @@ In your `flake.nix`
   - @commitlint/config-conventional-19.2.2
   - @commitlint/config-lerna-scopes-19.0.0
   - @commitlint/config-patternplate-19.3.0
-  - @commitlint/load-19.2.0
-  - @commitlint/read-19.2.1
+  - @commitlint/load-19.4.0
+  - @commitlint/read-19.4.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @prettier/plugin-php-0.22.2
@@ -97,10 +97,10 @@ In your `flake.nix`
   - unityhub-latest-3.8.0
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-d62e22ece14866e4cb935c8077d7b49aa1897bd8
+  - yaskkserv2-dict-de34887d4375f3a1e959e2697fc7fbeb2a8b78f5
   - zenn-cli-0.1.154
-  - zotero-better-bibtex-6.7.214
+  - zotero-better-bibtex-6.7.218
   - zotero-night-0.4.23
-  - zotero-pdf-translate-1.0.28
+  - zotero-pdf-translate-2.0.0
   - zotero-zotfile-5.1.2
 
