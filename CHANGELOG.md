@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.4](https://github.com/misumisumi/flakes/compare/v1.4.3...v1.4.4) (2024-08-10)
+
+
+### Bug Fixes
+
+* **zotero-addons:** fix addon file name ([85f4b23](https://github.com/misumisumi/flakes/commit/85f4b230fed9f3b3ac73ab48d84e8f9601943e1a))
+
 ## [1.4.3](https://github.com/misumisumi/flakes/compare/v1.4.2...v1.4.3) (2024-07-27)
 
 
