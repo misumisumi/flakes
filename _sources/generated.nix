@@ -11,10 +11,10 @@
   };
   csharp-ls = {
     pname = "csharp-ls";
-    version = "0.14.0";
+    version = "0.15.0";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.14.0";
-      sha256 = "sha256-agcx7VPIqGhl3NzdGLPwXYJsRuvSjL4SdbNg9vFjIh4=";
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.15.0";
+      sha256 = "sha256-Fp1D2z4x2e85z4IO4xQentS7dbqhFT3e/BPZm0d5L5M=";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
@@ -35,10 +35,10 @@
   };
   drbd9-dkms = {
     pname = "drbd9-dkms";
-    version = "9.1.21";
+    version = "9.1.22";
     src = fetchurl {
-      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.21.tar.gz";
-      sha256 = "sha256-64E3LYRY1k/45ucRBcStPNdVti8UgKnsxOCypMw+OYc=";
+      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.22.tar.gz";
+      sha256 = "sha256-SgrzVg1tEz+AYtQoTdaivoYUOIu6zRQKCXgjL9FjxTM=";
     };
   };
   droidcam-obs-plugin = {
