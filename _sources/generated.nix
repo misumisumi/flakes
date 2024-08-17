@@ -210,28 +210,12 @@
       sha256 = "sha256-S/52RUerkrpY9Dt3Nm27fHs1EtZaJ82/nlhanLZM6B4=";
     };
   };
-  suds = {
-    pname = "suds";
-    version = "1.1.2";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/s/suds/suds-1.1.2.tar.gz";
-      sha256 = "sha256-HVz6dBFxk7JEpCM/JGxIPZ9BGYtEjF8UqLrRHE9knys=";
-    };
-  };
   tkdnd = {
     pname = "tkdnd";
     version = "2.9.4";
     src = fetchurl {
       url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.4.tar.gz";
       sha256 = "sha256-zG0/C32sqVZIaeKeXbCZbKpfDAPSHJtwMrrUPwpYEhw=";
-    };
-  };
-  unityhub-latest = {
-    pname = "unityhub-latest";
-    version = "3.8.0";
-    src = fetchurl {
-      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.8.0.deb";
-      sha256 = "sha256-TjuOsF4LFqQGx4j5j/Er97MNhVm72qlvGYZvA5vuXs8=";
     };
   };
   vrchat-vpm-cli = {
