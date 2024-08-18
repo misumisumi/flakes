@@ -23,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-agcx7VPIqGhl3NzdGLPwXYJsRuvSjL4SdbNg9vFjIh4=",
+            "sha256": "sha256-Fp1D2z4x2e85z4IO4xQentS7dbqhFT3e/BPZm0d5L5M=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.14.0"
+            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.15.0"
         },
-        "version": "0.14.0"
+        "version": "0.15.0"
     },
     "cups-brother-hll5100dn-cupswrapper": {
         "cargoLocks": null,
@@ -68,11 +68,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-64E3LYRY1k/45ucRBcStPNdVti8UgKnsxOCypMw+OYc=",
+            "sha256": "sha256-SgrzVg1tEz+AYtQoTdaivoYUOIu6zRQKCXgjL9FjxTM=",
             "type": "url",
-            "url": "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.21.tar.gz"
+            "url": "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.22.tar.gz"
         },
-        "version": "9.1.21"
+        "version": "9.1.22"
     },
     "droidcam-obs-plugin": {
         "cargoLocks": null,
@@ -384,21 +384,6 @@
         },
         "version": "2.2.10"
     },
-    "suds": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "suds",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-HVz6dBFxk7JEpCM/JGxIPZ9BGYtEjF8UqLrRHE9knys=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/s/suds/suds-1.1.2.tar.gz"
-        },
-        "version": "1.1.2"
-    },
     "tkdnd": {
         "cargoLocks": null,
         "date": null,
@@ -413,21 +398,6 @@
             "url": "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.4.tar.gz"
         },
         "version": "2.9.4"
-    },
-    "unityhub-latest": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "unityhub-latest",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-TjuOsF4LFqQGx4j5j/Er97MNhVm72qlvGYZvA5vuXs8=",
-            "type": "url",
-            "url": "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.8.0.deb"
-        },
-        "version": "3.8.0"
     },
     "vrchat-vpm-cli": {
         "cargoLocks": null,

@@ -11,10 +11,10 @@
   };
   csharp-ls = {
     pname = "csharp-ls";
-    version = "0.14.0";
+    version = "0.15.0";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.14.0";
-      sha256 = "sha256-agcx7VPIqGhl3NzdGLPwXYJsRuvSjL4SdbNg9vFjIh4=";
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.15.0";
+      sha256 = "sha256-Fp1D2z4x2e85z4IO4xQentS7dbqhFT3e/BPZm0d5L5M=";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
@@ -35,10 +35,10 @@
   };
   drbd9-dkms = {
     pname = "drbd9-dkms";
-    version = "9.1.21";
+    version = "9.1.22";
     src = fetchurl {
-      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.21.tar.gz";
-      sha256 = "sha256-64E3LYRY1k/45ucRBcStPNdVti8UgKnsxOCypMw+OYc=";
+      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.22.tar.gz";
+      sha256 = "sha256-SgrzVg1tEz+AYtQoTdaivoYUOIu6zRQKCXgjL9FjxTM=";
     };
   };
   droidcam-obs-plugin = {
@@ -210,28 +210,12 @@
       sha256 = "sha256-S/52RUerkrpY9Dt3Nm27fHs1EtZaJ82/nlhanLZM6B4=";
     };
   };
-  suds = {
-    pname = "suds";
-    version = "1.1.2";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/s/suds/suds-1.1.2.tar.gz";
-      sha256 = "sha256-HVz6dBFxk7JEpCM/JGxIPZ9BGYtEjF8UqLrRHE9knys=";
-    };
-  };
   tkdnd = {
     pname = "tkdnd";
     version = "2.9.4";
     src = fetchurl {
       url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.4.tar.gz";
       sha256 = "sha256-zG0/C32sqVZIaeKeXbCZbKpfDAPSHJtwMrrUPwpYEhw=";
-    };
-  };
-  unityhub-latest = {
-    pname = "unityhub-latest";
-    version = "3.8.0";
-    src = fetchurl {
-      url = "https://hub.unity3d.com/linux/repos/deb/pool/main/u/unity/unityhub_amd64/unityhub-amd64-3.8.0.deb";
-      sha256 = "sha256-TjuOsF4LFqQGx4j5j/Er97MNhVm72qlvGYZvA5vuXs8=";
     };
   };
   vrchat-vpm-cli = {

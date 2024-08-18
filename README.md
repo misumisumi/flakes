@@ -66,7 +66,7 @@ In your `flake.nix`
   - bt-dualboot-1.0.1
   - commitlint-format-json-1.1.0
   - commitlint-with-plugins
-  - csharp-ls-0.14.0
+  - csharp-ls-0.15.0
   - cups-brother-hll5100dn-3.5.1-1
   - droidcam-obs-plugin-2.3.3
   - julius-speech-v4.6
@@ -99,7 +99,7 @@ In your `flake.nix`
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-de34887d4375f3a1e959e2697fc7fbeb2a8b78f5
   - zenn-cli-0.1.154
-  - zotero-better-bibtex-6.7.218
+  - zotero-better-bibtex-6.7.221
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.0.0
   - zotero-zotfile-5.1.2
