@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/misumisumi/flakes/compare/v1.4.4...v2.0.0) (2024-08-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove some packages
+
+### Bug Fixes
+
+* remove some packages ([06a2388](https://github.com/misumisumi/flakes/commit/06a2388a1201f039dfd8014001bbd47e3ecff684))
+
 ## [1.4.4](https://github.com/misumisumi/flakes/compare/v1.4.3...v1.4.4) (2024-08-10)
 
 
