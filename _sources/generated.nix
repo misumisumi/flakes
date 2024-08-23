@@ -65,12 +65,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "de34887d4375f3a1e959e2697fc7fbeb2a8b78f5";
+    version = "49b6353c31ed2b735c9d9f22eb9469e0a3be3809";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/de34887d4375f3a1e959e2697fc7fbeb2a8b78f5/SKK-JISYO.jawiki";
-      sha256 = "sha256-F/U42Ji1kggmPRGN9QaxrR2poJO+IRzwd+s/WrxxvIA=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/49b6353c31ed2b735c9d9f22eb9469e0a3be3809/SKK-JISYO.jawiki";
+      sha256 = "sha256-pTj4HvF6GKY6jwHk3T+w33Cpiz/El0D4Q6YcBPFU7eY=";
     };
-    date = "2024-08-09";
+    date = "2024-08-21";
   };
   julius-speech = {
     pname = "julius-speech";
@@ -253,10 +253,10 @@
   };
   zenn-cli = {
     pname = "zenn-cli";
-    version = "0.1.154";
+    version = "0.1.155";
     src = fetchurl {
-      url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.154.tgz";
-      sha256 = "sha256-7AGps5RwpCguNa2yUO8VjcFqRuaoZ4lpbWLBSLsMcGA=";
+      url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.155.tgz";
+      sha256 = "sha256-b3YTRoSA3mRq3njVcWn+vlvjSS/98rWWIOLNlstTREg=";
     };
   };
 }
