@@ -50,10 +50,10 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-19.3.0
-  - @commitlint/config-conventional-19.2.2
+  - @commitlint/config-angular-19.4.1
+  - @commitlint/config-conventional-19.4.1
   - @commitlint/config-lerna-scopes-19.0.0
-  - @commitlint/config-patternplate-19.3.0
+  - @commitlint/config-patternplate-19.4.1
   - @commitlint/load-19.4.0
   - @commitlint/read-19.4.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
@@ -97,7 +97,7 @@ In your `flake.nix`
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-49b6353c31ed2b735c9d9f22eb9469e0a3be3809
   - zenn-cli-0.1.155
-  - zotero-better-bibtex-6.7.222
+  - zotero-better-bibtex-6.7.226
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.0.0
   - zotero-zotfile-5.1.2
