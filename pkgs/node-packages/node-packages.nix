@@ -967,13 +967,13 @@ let
         sha512 = "JxIvIo/Hrpv0JCHSyRpetAdQ6lB27oFYhv0PKCNf1g2gUXOjpeR1exrXccRxLMuAV5WAmGFBwRnNOJqN38+qtg==";
       };
     };
-    "@swc/core-1.7.22" = {
+    "@swc/core-1.7.23" = {
       name = "_at_swc_slash_core";
       packageName = "@swc/core";
-      version = "1.7.22";
+      version = "1.7.23";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@swc/core/-/core-1.7.22.tgz";
-        sha512 = "Asn79WKqyjEuO2VEeSnVjn2YiRMToRhFJwOsQeqftBvwWMn1FGUuzVcXtkQFBk37si8Gh2Vkk/+p0u4K5NxDig==";
+        url = "https://registry.npmjs.org/@swc/core/-/core-1.7.23.tgz";
+        sha512 = "VDNkpDvDlreGh2E3tlDj8B3piiuLhhQA/7rIVZpiLUvG1YpucAa6N7iDXA7Gc/+Hah8spaCg/qvEaBkCmcIYCQ==";
       };
     };
     "@swc/counter-0.1.3" = {
@@ -985,13 +985,13 @@ let
         sha512 = "e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==";
       };
     };
-    "@swc/helpers-0.5.12" = {
+    "@swc/helpers-0.5.13" = {
       name = "_at_swc_slash_helpers";
       packageName = "@swc/helpers";
-      version = "0.5.12";
+      version = "0.5.13";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.12.tgz";
-        sha512 = "KMZNXiGibsW9kvZAO1Pam2JPTDBm+KSHMMHWdsyI/1DbIZjT2A6Gy3hblVXUMEDvUAKq+e0vL0X0o54owWji7g==";
+        url = "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.13.tgz";
+        sha512 = "UoKGxQ3r5kYI9dALKJapMmuK+1zWM/H17Z1+iwnNmzcJRnfFuevZs375TA5rW31pu4BS4NoSy1fRsexDXfWn5w==";
       };
     };
     "@swc/types-0.1.12" = {
@@ -1489,13 +1489,13 @@ let
         sha512 = "hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==";
       };
     };
-    "@types/node-22.5.1" = {
+    "@types/node-22.5.4" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "22.5.1";
+      version = "22.5.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-22.5.1.tgz";
-        sha512 = "KkHsxej0j9IW1KKOOAA/XBA0z08UFSrRQHErzEfA3Vgq57eXIMYboIlHJuYIfd+lwCQjtKqUu3UnmKbtUc9yRw==";
+        url = "https://registry.npmjs.org/@types/node/-/node-22.5.4.tgz";
+        sha512 = "FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==";
       };
     };
     "@types/normalize-package-data-2.4.4" = {
@@ -1921,13 +1921,13 @@ let
         sha512 = "wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==";
       };
     };
-    "axios-1.7.5" = {
+    "axios-1.7.7" = {
       name = "axios";
       packageName = "axios";
-      version = "1.7.5";
+      version = "1.7.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/axios/-/axios-1.7.5.tgz";
-        sha512 = "fZu86yCo+svH3uqJ/yTdQ0QHpQu5oL+/QE+QPSv6BZSkDAoky9vytxp7u5qk83OJFS3kEBcesWni9WTZAv3tSw==";
+        url = "https://registry.npmjs.org/axios/-/axios-1.7.7.tgz";
+        sha512 = "S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==";
       };
     };
     "babel-polyfill-6.26.0" = {
@@ -2911,13 +2911,13 @@ let
         sha512 = "jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==";
       };
     };
-    "debug-4.3.6" = {
+    "debug-4.3.7" = {
       name = "debug";
       packageName = "debug";
-      version = "4.3.6";
+      version = "4.3.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/debug/-/debug-4.3.6.tgz";
-        sha512 = "O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==";
+        url = "https://registry.npmjs.org/debug/-/debug-4.3.7.tgz";
+        sha512 = "Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==";
       };
     };
     "decamelize-1.2.0" = {
@@ -3658,13 +3658,13 @@ let
         sha512 = "r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==";
       };
     };
-    "follow-redirects-1.15.6" = {
+    "follow-redirects-1.15.9" = {
       name = "follow-redirects";
       packageName = "follow-redirects";
-      version = "1.15.6";
+      version = "1.15.9";
       src = fetchurl {
-        url = "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.6.tgz";
-        sha512 = "wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==";
+        url = "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.9.tgz";
+        sha512 = "gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==";
       };
     };
     "for-each-0.3.3" = {
@@ -6322,13 +6322,13 @@ let
         sha512 = "CX+iQaUjjPMLvas+hZ8zg6Csxx5j1RLaytr+5w6lpBi/oTEV2pv6sgW5Vu3+pNJHbYcaqcuofQZsKocMNUNH8g==";
       };
     };
-    "ms-2.1.2" = {
+    "ms-2.1.3" = {
       name = "ms";
       packageName = "ms";
-      version = "2.1.2";
+      version = "2.1.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz";
-        sha512 = "sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==";
+        url = "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz";
+        sha512 = "6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==";
       };
     };
     "multimatch-5.0.0" = {
@@ -7204,13 +7204,13 @@ let
         sha512 = "jEY2DcbgCm5aclzBdfW86GM6VEIWcSlhTBSHN1qhJguVePlYe28GhwS0yoeLYXpM2K8y6wzLwrbq814n2PHSoQ==";
       };
     };
-    "picocolors-1.0.1" = {
+    "picocolors-1.1.0" = {
       name = "picocolors";
       packageName = "picocolors";
-      version = "1.0.1";
+      version = "1.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/picocolors/-/picocolors-1.0.1.tgz";
-        sha512 = "anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==";
+        url = "https://registry.npmjs.org/picocolors/-/picocolors-1.1.0.tgz";
+        sha512 = "TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==";
       };
     };
     "picomatch-2.3.1" = {
@@ -8455,13 +8455,13 @@ let
         sha512 = "Oo+0REFV59/rz3gfJNKQiBlwfHaSESl1pcGyABQsnnIfWOFt6JNj5gCog2U6MLZ//IGYD+nA8nI+mTShREReaA==";
       };
     };
-    "sql-formatter-15.4.1" = {
+    "sql-formatter-15.4.2" = {
       name = "sql-formatter";
       packageName = "sql-formatter";
-      version = "15.4.1";
+      version = "15.4.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/sql-formatter/-/sql-formatter-15.4.1.tgz";
-        sha512 = "lw/G/emIJ+tVspOtOFzfD2YFFMN3MFPxGnbWl1DlJLB+fsX7X7zMqSRM1SLSn2YuaRJ0lTe7AMknHDqmIW1Y8w==";
+        url = "https://registry.npmjs.org/sql-formatter/-/sql-formatter-15.4.2.tgz";
+        sha512 = "Pw4aAgfuyml/SHMlhbJhyOv+GR+Z1HNb9sgX3CVBVdN5YNM+v2VWkYJ3NNbYS7cu37GY3vP/PgnwoVynCuXRxg==";
       };
     };
     "ssri-10.0.6" = {
@@ -10039,13 +10039,13 @@ let
         sha512 = "r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==";
       };
     };
-    "yaml-2.5.0" = {
+    "yaml-2.5.1" = {
       name = "yaml";
       packageName = "yaml";
-      version = "2.5.0";
+      version = "2.5.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/yaml/-/yaml-2.5.0.tgz";
-        sha512 = "2wWLbGbYDiSqqIKoPjar3MPgB94ErzCtrNE1FdqGuaO0pi2JGjmE8aW8TDZwzU7vuxcGRdL/4gPQwQ7hD5AMSw==";
+        url = "https://registry.npmjs.org/yaml/-/yaml-2.5.1.tgz";
+        sha512 = "bLQOjaX/ADgQ20isPJRvF0iRUHIxVhYvr53Of7wGcWlO2jvtUlH5m87DsmulFVxRpNLOnI4tB6p/oh8D7kpn9Q==";
       };
     };
     "yargs-16.2.0" = {
@@ -10173,7 +10173,7 @@ in
     dependencies = [
       sources."@commitlint/types-19.0.3"
       sources."@types/conventional-commits-parser-5.0.0"
-      sources."@types/node-22.5.1"
+      sources."@types/node-22.5.4"
       sources."array-ify-1.0.0"
       sources."chalk-5.3.0"
       sources."compare-func-2.0.0"
@@ -10398,9 +10398,9 @@ in
       sources."@swc-node/core-1.13.3"
       sources."@swc-node/register-1.10.9"
       sources."@swc-node/sourcemap-support-0.5.1"
-      sources."@swc/core-1.7.22"
+      sources."@swc/core-1.7.23"
       sources."@swc/counter-0.1.3"
-      sources."@swc/helpers-0.5.12"
+      sources."@swc/helpers-0.5.13"
       sources."@swc/types-0.1.12"
       sources."@tootallnate/once-2.0.0"
       sources."@tufjs/canonical-json-1.0.0"
@@ -10441,7 +10441,7 @@ in
       sources."async-3.2.6"
       sources."asynckit-0.4.0"
       sources."at-least-node-1.0.0"
-      sources."axios-1.7.5"
+      sources."axios-1.7.7"
       sources."balanced-match-1.0.2"
       sources."base64-js-1.5.1"
       sources."before-after-hook-2.2.3"
@@ -10528,7 +10528,7 @@ in
       sources."cssesc-3.0.0"
       sources."dargs-7.0.0"
       sources."dateformat-3.0.3"
-      sources."debug-4.3.6"
+      sources."debug-4.3.7"
       sources."decamelize-1.2.0"
       (sources."decamelize-keys-1.1.1" // {
         dependencies = [
@@ -10588,7 +10588,7 @@ in
       sources."fill-range-7.1.1"
       sources."find-up-4.1.0"
       sources."flat-5.0.2"
-      sources."follow-redirects-1.15.6"
+      sources."follow-redirects-1.15.9"
       (sources."foreground-child-3.3.0" // {
         dependencies = [
           sources."signal-exit-4.1.0"
@@ -10910,7 +10910,7 @@ in
       sources."mkdirp-1.0.4"
       sources."mkdirp-infer-owner-2.0.0"
       sources."modify-values-1.0.1"
-      sources."ms-2.1.2"
+      sources."ms-2.1.3"
       (sources."multimatch-5.0.0" // {
         dependencies = [
           sources."brace-expansion-1.1.11"
@@ -11078,7 +11078,7 @@ in
         ];
       })
       sources."path-type-4.0.0"
-      sources."picocolors-1.0.1"
+      sources."picocolors-1.1.0"
       sources."picomatch-2.3.1"
       sources."pify-4.0.1"
       sources."pirates-4.0.6"
@@ -11393,7 +11393,7 @@ in
       sources."@commitlint/resolve-extends-19.1.0"
       sources."@commitlint/types-19.0.3"
       sources."@types/conventional-commits-parser-5.0.0"
-      sources."@types/node-22.5.1"
+      sources."@types/node-22.5.4"
       sources."ajv-8.17.1"
       sources."ansi-styles-3.2.1"
       sources."argparse-2.0.1"
@@ -11430,7 +11430,7 @@ in
       sources."lodash.uniq-4.5.0"
       sources."parent-module-1.0.1"
       sources."parse-json-5.2.0"
-      sources."picocolors-1.0.1"
+      sources."picocolors-1.1.0"
       sources."require-from-string-2.0.2"
       sources."resolve-from-5.0.0"
       sources."supports-color-5.5.0"
@@ -11459,7 +11459,7 @@ in
       sources."@commitlint/top-level-19.0.0"
       sources."@commitlint/types-19.0.3"
       sources."@types/conventional-commits-parser-5.0.0"
-      sources."@types/node-22.5.1"
+      sources."@types/node-22.5.4"
       sources."chalk-5.3.0"
       sources."cross-spawn-7.0.3"
       sources."dargs-8.1.0"
@@ -11590,7 +11590,7 @@ in
       sources."parse-json-5.2.0"
       sources."path-exists-5.0.0"
       sources."path-type-4.0.0"
-      sources."picocolors-1.0.1"
+      sources."picocolors-1.1.0"
       sources."picomatch-2.3.1"
       sources."queue-microtask-1.2.3"
       sources."quick-lru-6.1.2"
@@ -11622,7 +11622,7 @@ in
       sources."type-fest-3.13.1"
       sources."validate-npm-package-license-3.0.4"
       sources."yallist-4.0.0"
-      sources."yaml-2.5.0"
+      sources."yaml-2.5.1"
       sources."yargs-parser-21.1.1"
       sources."yocto-queue-1.1.1"
     ];
@@ -11774,7 +11774,7 @@ in
       sources."@textlint/utils-1.2.5"
       sources."@types/glob-7.2.0"
       sources."@types/minimatch-5.1.2"
-      sources."@types/node-22.5.1"
+      sources."@types/node-22.5.4"
       sources."@types/unist-2.0.11"
       sources."app-root-path-3.1.0"
       sources."argparse-1.0.10"
@@ -11786,7 +11786,7 @@ in
       sources."call-bind-1.0.7"
       sources."commandpost-1.4.0"
       sources."concat-map-0.0.1"
-      sources."debug-4.3.6"
+      sources."debug-4.3.7"
       sources."deep-equal-1.1.2"
       sources."define-data-property-1.1.4"
       sources."define-properties-1.2.1"
@@ -11831,7 +11831,7 @@ in
       sources."micromatch-4.0.8"
       sources."minimatch-3.1.2"
       sources."mkdirp-1.0.4"
-      sources."ms-2.1.2"
+      sources."ms-2.1.3"
       sources."node-fetch-2.6.13"
       sources."node-localstorage-2.2.1"
       sources."object-is-1.1.6"
@@ -12217,7 +12217,7 @@ in
       sources."railroad-diagrams-1.0.0"
       sources."randexp-0.4.6"
       sources."ret-0.1.15"
-      sources."sql-formatter-15.4.1"
+      sources."sql-formatter-15.4.2"
       sources."tslib-2.7.0"
     ];
     buildInputs = globalBuildInputs;
@@ -12320,7 +12320,7 @@ in
       sources."concat-map-0.0.1"
       sources."cross-spawn-7.0.3"
       sources."crypt-0.0.2"
-      sources."debug-4.3.6"
+      sources."debug-4.3.7"
       sources."deep-is-0.1.4"
       sources."define-property-2.0.2"
       sources."diff-5.2.0"
@@ -12425,7 +12425,7 @@ in
       sources."minimist-1.2.8"
       sources."minipass-7.1.2"
       sources."mkdirp-0.5.6"
-      sources."ms-2.1.2"
+      sources."ms-2.1.3"
       sources."neotraverse-0.6.18"
       sources."normalize-package-data-2.5.0"
       sources."once-1.4.0"
@@ -12595,7 +12595,7 @@ in
       sources."concat-map-0.0.1"
       sources."cross-spawn-7.0.3"
       sources."crypt-0.0.2"
-      sources."debug-4.3.6"
+      sources."debug-4.3.7"
       sources."deep-is-0.1.4"
       sources."diff-5.2.0"
       sources."eastasianwidth-0.2.0"
@@ -12683,7 +12683,7 @@ in
       sources."minimist-1.2.8"
       sources."minipass-7.1.2"
       sources."mkdirp-0.5.6"
-      sources."ms-2.1.2"
+      sources."ms-2.1.3"
       sources."neotraverse-0.6.18"
       sources."normalize-package-data-2.5.0"
       sources."once-1.4.0"
@@ -13048,7 +13048,7 @@ in
       sources."data-view-buffer-1.0.1"
       sources."data-view-byte-length-1.0.1"
       sources."data-view-byte-offset-1.0.0"
-      sources."debug-4.3.6"
+      sources."debug-4.3.7"
       sources."deep-is-0.1.4"
       sources."define-data-property-1.1.4"
       sources."define-properties-1.2.1"
@@ -13203,7 +13203,7 @@ in
       sources."morpheme-match-2.0.4"
       sources."morpheme-match-all-2.0.5"
       sources."morpheme-match-textlint-2.0.6"
-      sources."ms-2.1.2"
+      sources."ms-2.1.3"
       sources."neotraverse-0.6.18"
       sources."normalize-package-data-2.5.0"
       sources."object-assign-3.0.0"
