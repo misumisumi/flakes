@@ -408,11 +408,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-t+SdV8MyFlpzvesQ8Ktfx4LMzqmOCMpj6Ob+o6cyHwo=",
+            "sha256": "sha256-KfsFbWkYAvGMRjv+doh+w3/NpFtHy1kS5sJvkykIpH4=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.26"
+            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.27"
         },
-        "version": "0.1.26"
+        "version": "0.1.27"
     },
     "wavesurfer": {
         "cargoLocks": null,
