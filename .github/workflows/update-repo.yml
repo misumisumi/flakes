@@ -49,7 +49,7 @@ jobs:
         run: |
           git commit -a -m "chore(nvfetcher): auto update package version"
 
-      - uses: DeterminateSystems/update-flake-lock@v23
+      - uses: DeterminateSystems/update-flake-lock@v24
         id: update
         with:
           token: ${{ steps.generate-token.outputs.token }}
