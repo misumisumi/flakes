@@ -1489,13 +1489,13 @@ let
         sha512 = "hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==";
       };
     };
-    "@types/node-22.5.4" = {
+    "@types/node-22.5.5" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "22.5.4";
+      version = "22.5.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-22.5.4.tgz";
-        sha512 = "FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==";
+        url = "https://registry.npmjs.org/@types/node/-/node-22.5.5.tgz";
+        sha512 = "Xjs4y5UPO/CLdzpgR6GirZJx36yScjh73+2NlLlkFRSoQN8B0DpfXPdZGnvVmLRLOsqDpOfTNv7D9trgGhmOIA==";
       };
     };
     "@types/normalize-package-data-2.4.4" = {
@@ -10101,7 +10101,7 @@ in
     dependencies = [
       sources."@commitlint/types-19.5.0"
       sources."@types/conventional-commits-parser-5.0.0"
-      sources."@types/node-22.5.4"
+      sources."@types/node-22.5.5"
       sources."array-ify-1.0.0"
       sources."chalk-5.3.0"
       sources."compare-func-2.0.0"
@@ -11321,7 +11321,7 @@ in
       sources."@commitlint/resolve-extends-19.5.0"
       sources."@commitlint/types-19.5.0"
       sources."@types/conventional-commits-parser-5.0.0"
-      sources."@types/node-22.5.4"
+      sources."@types/node-22.5.5"
       sources."ajv-8.17.1"
       sources."ansi-styles-3.2.1"
       sources."argparse-2.0.1"
@@ -11387,7 +11387,7 @@ in
       sources."@commitlint/top-level-19.5.0"
       sources."@commitlint/types-19.5.0"
       sources."@types/conventional-commits-parser-5.0.0"
-      sources."@types/node-22.5.4"
+      sources."@types/node-22.5.5"
       sources."chalk-5.3.0"
       sources."dargs-8.1.0"
       sources."find-up-7.0.0"
@@ -11683,7 +11683,7 @@ in
       sources."@textlint/utils-1.2.5"
       sources."@types/glob-7.2.0"
       sources."@types/minimatch-5.1.2"
-      sources."@types/node-22.5.4"
+      sources."@types/node-22.5.5"
       sources."@types/unist-2.0.11"
       sources."app-root-path-3.1.0"
       sources."argparse-1.0.10"
@@ -13324,10 +13324,10 @@ in
   zenn-cli = nodeEnv.buildNodePackage {
     name = "zenn-cli";
     packageName = "zenn-cli";
-    version = "0.1.155";
+    version = "0.1.157";
     src = fetchurl {
-      url = "https://registry.npmjs.org/zenn-cli/-/zenn-cli-0.1.155.tgz";
-      sha512 = "PqxeLWVrqSrGGPaMiNM5myJcbmXHh/Ur6EhzLkezrDZa5uJe1jfD6COVEnCtRf86Y5P0qy5bejXifSTNdDmqOA==";
+      url = "https://registry.npmjs.org/zenn-cli/-/zenn-cli-0.1.157.tgz";
+      sha512 = "df1JPOwdf3r9dH3YvgiAzfPZllzSB140uXB3EaDtVvxGaDQ2pMsrqaHkhFM6TIAk5KkVX4afN3K4RUwL+S1gKw==";
     };
     buildInputs = globalBuildInputs;
     meta = {
