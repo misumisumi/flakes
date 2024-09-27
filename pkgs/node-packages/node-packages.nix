@@ -967,13 +967,13 @@ let
         sha512 = "JxIvIo/Hrpv0JCHSyRpetAdQ6lB27oFYhv0PKCNf1g2gUXOjpeR1exrXccRxLMuAV5WAmGFBwRnNOJqN38+qtg==";
       };
     };
-    "@swc/core-1.7.26" = {
+    "@swc/core-1.7.28" = {
       name = "_at_swc_slash_core";
       packageName = "@swc/core";
-      version = "1.7.26";
+      version = "1.7.28";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@swc/core/-/core-1.7.26.tgz";
-        sha512 = "f5uYFf+TmMQyYIoxkn/evWhNGuUzC730dFwAKGwBVHHVoPyak1/GvJUm6i1SKl+2Hrj9oN0i3WSoWWZ4pgI8lw==";
+        url = "https://registry.npmjs.org/@swc/core/-/core-1.7.28.tgz";
+        sha512 = "XapcMgsOS0cKh01AFEj+qXOk6KM4NZhp7a5vPicdhkRR8RzvjrCa7DTtijMxfotU8bqaEHguxmiIag2HUlT8QQ==";
       };
     };
     "@swc/counter-0.1.3" = {
@@ -1489,13 +1489,13 @@ let
         sha512 = "hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==";
       };
     };
-    "@types/node-22.5.5" = {
+    "@types/node-22.7.4" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "22.5.5";
+      version = "22.7.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-22.5.5.tgz";
-        sha512 = "Xjs4y5UPO/CLdzpgR6GirZJx36yScjh73+2NlLlkFRSoQN8B0DpfXPdZGnvVmLRLOsqDpOfTNv7D9trgGhmOIA==";
+        url = "https://registry.npmjs.org/@types/node/-/node-22.7.4.tgz";
+        sha512 = "y+NPi1rFzDs1NdQHHToqeiX2TIS79SWEAw9GYhkkx8bD0ChpfqC+n2j5OXOCpzfojBEBt6DnEnnG9MY0zk1XLg==";
       };
     };
     "@types/normalize-package-data-2.4.4" = {
@@ -3496,13 +3496,13 @@ let
         sha512 = "DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==";
       };
     };
-    "fast-uri-3.0.1" = {
+    "fast-uri-3.0.2" = {
       name = "fast-uri";
       packageName = "fast-uri";
-      version = "3.0.1";
+      version = "3.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/fast-uri/-/fast-uri-3.0.1.tgz";
-        sha512 = "MWipKbbYiYI0UC7cl8m/i/IWTqfC8YXsqjzybjddLsFjStroQzsHXkc73JutMvBiXmOvapk+axIl79ig5t55Bw==";
+        url = "https://registry.npmjs.org/fast-uri/-/fast-uri-3.0.2.tgz";
+        sha512 = "GR6f0hD7XXyNJa25Tb9BuIdN0tdr+0BMi6/CJPH3wJO1JjNG3n/VsSw38AwRdKZABm8lGbPfakLRkYzx2V9row==";
       };
     };
     "fastq-1.17.1" = {
@@ -6745,13 +6745,13 @@ let
         sha512 = "D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==";
       };
     };
-    "oxc-resolver-1.11.0" = {
+    "oxc-resolver-1.12.0" = {
       name = "oxc-resolver";
       packageName = "oxc-resolver";
-      version = "1.11.0";
+      version = "1.12.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/oxc-resolver/-/oxc-resolver-1.11.0.tgz";
-        sha512 = "N3qMse2AM7uST8PaiUMXZkcACyGAMN073tomyvzHTICSzaOqKHvVS0IZ3vj/OqoE140QP4CyOiWmgC1Hw5Urmg==";
+        url = "https://registry.npmjs.org/oxc-resolver/-/oxc-resolver-1.12.0.tgz";
+        sha512 = "YlaCIArvWNKCWZFRrMjhh2l5jK80eXnpYP+bhRc1J/7cW3TiyEY0ngJo73o/5n8hA3+4yLdTmXLNTQ3Ncz50LQ==";
       };
     };
     "p-finally-1.0.0" = {
@@ -6916,13 +6916,13 @@ let
         sha512 = "RRTnDb2TBG/epPRI2yYXsimO0v3BXC8Yd3ogr1545IaqKK17VGhbWVeGGN+XfCm/08OK8635nH31c8bATkHuSw==";
       };
     };
-    "package-json-from-dist-1.0.0" = {
+    "package-json-from-dist-1.0.1" = {
       name = "package-json-from-dist";
       packageName = "package-json-from-dist";
-      version = "1.0.0";
+      version = "1.0.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/package-json-from-dist/-/package-json-from-dist-1.0.0.tgz";
-        sha512 = "dATvCeZN/8wQsGywez1mzHtTlP22H8OEfPrVMLNr4/eGa+ijtLn/6M5f0dY8UKNrC2O9UCU6SSoG3qRKnt7STw==";
+        url = "https://registry.npmjs.org/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz";
+        sha512 = "UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==";
       };
     };
     "pacote-15.1.1" = {
@@ -10101,7 +10101,7 @@ in
     dependencies = [
       sources."@commitlint/types-19.5.0"
       sources."@types/conventional-commits-parser-5.0.0"
-      sources."@types/node-22.5.5"
+      sources."@types/node-22.7.4"
       sources."array-ify-1.0.0"
       sources."chalk-5.3.0"
       sources."compare-func-2.0.0"
@@ -10326,7 +10326,7 @@ in
       sources."@swc-node/core-1.13.3"
       sources."@swc-node/register-1.10.9"
       sources."@swc-node/sourcemap-support-0.5.1"
-      sources."@swc/core-1.7.26"
+      sources."@swc/core-1.7.28"
       sources."@swc/counter-0.1.3"
       sources."@swc/helpers-0.5.13"
       sources."@swc/types-0.1.12"
@@ -10950,7 +10950,7 @@ in
         ];
       })
       sources."os-tmpdir-1.0.2"
-      sources."oxc-resolver-1.11.0"
+      sources."oxc-resolver-1.12.0"
       sources."p-finally-1.0.0"
       sources."p-limit-2.3.0"
       sources."p-locate-4.1.0"
@@ -10962,7 +10962,7 @@ in
       sources."p-timeout-3.2.0"
       sources."p-try-2.2.0"
       sources."p-waterfall-2.1.1"
-      sources."package-json-from-dist-1.0.0"
+      sources."package-json-from-dist-1.0.1"
       (sources."pacote-15.1.1" // {
         dependencies = [
           sources."@npmcli/run-script-6.0.2"
@@ -11260,7 +11260,7 @@ in
       sources."lru-cache-10.4.3"
       sources."minimatch-9.0.5"
       sources."minipass-7.1.2"
-      sources."package-json-from-dist-1.0.0"
+      sources."package-json-from-dist-1.0.1"
       sources."path-key-3.1.1"
       sources."path-scurry-1.11.1"
       sources."shebang-command-2.0.0"
@@ -11321,7 +11321,7 @@ in
       sources."@commitlint/resolve-extends-19.5.0"
       sources."@commitlint/types-19.5.0"
       sources."@types/conventional-commits-parser-5.0.0"
-      sources."@types/node-22.5.5"
+      sources."@types/node-22.7.4"
       sources."ajv-8.17.1"
       sources."ansi-styles-3.2.1"
       sources."argparse-2.0.1"
@@ -11335,7 +11335,7 @@ in
       sources."error-ex-1.3.2"
       sources."escape-string-regexp-1.0.5"
       sources."fast-deep-equal-3.1.3"
-      sources."fast-uri-3.0.1"
+      sources."fast-uri-3.0.2"
       sources."global-directory-4.0.1"
       sources."has-flag-3.0.0"
       (sources."import-fresh-3.3.0" // {
@@ -11387,7 +11387,7 @@ in
       sources."@commitlint/top-level-19.5.0"
       sources."@commitlint/types-19.5.0"
       sources."@types/conventional-commits-parser-5.0.0"
-      sources."@types/node-22.5.5"
+      sources."@types/node-22.7.4"
       sources."chalk-5.3.0"
       sources."dargs-8.1.0"
       sources."find-up-7.0.0"
@@ -11456,7 +11456,7 @@ in
       sources."escape-string-regexp-1.0.5"
       sources."fast-deep-equal-3.1.3"
       sources."fast-glob-3.3.2"
-      sources."fast-uri-3.0.1"
+      sources."fast-uri-3.0.2"
       sources."fastq-1.17.1"
       sources."fill-range-7.1.1"
       sources."find-up-6.3.0"
@@ -11683,7 +11683,7 @@ in
       sources."@textlint/utils-1.2.5"
       sources."@types/glob-7.2.0"
       sources."@types/minimatch-5.1.2"
-      sources."@types/node-22.5.5"
+      sources."@types/node-22.7.4"
       sources."@types/unist-2.0.11"
       sources."app-root-path-3.1.0"
       sources."argparse-1.0.10"
@@ -12244,7 +12244,7 @@ in
       sources."fast-deep-equal-3.1.3"
       sources."fast-equals-4.0.3"
       sources."fast-levenshtein-2.0.6"
-      sources."fast-uri-3.0.1"
+      sources."fast-uri-3.0.2"
       sources."fault-1.0.4"
       sources."file-entry-cache-5.0.1"
       sources."find-up-2.1.0"
@@ -12342,7 +12342,7 @@ in
       sources."p-limit-1.3.0"
       sources."p-locate-2.0.0"
       sources."p-try-1.0.0"
-      sources."package-json-from-dist-1.0.0"
+      sources."package-json-from-dist-1.0.1"
       sources."parse-entities-2.0.0"
       sources."parse-json-2.2.0"
       sources."path-exists-3.0.0"
@@ -12516,7 +12516,7 @@ in
       sources."fast-deep-equal-3.1.3"
       sources."fast-equals-4.0.3"
       sources."fast-levenshtein-2.0.6"
-      sources."fast-uri-3.0.1"
+      sources."fast-uri-3.0.2"
       sources."fault-1.0.4"
       sources."file-entry-cache-5.0.1"
       sources."find-up-2.1.0"
@@ -12600,7 +12600,7 @@ in
       sources."p-limit-1.3.0"
       sources."p-locate-2.0.0"
       sources."p-try-1.0.0"
-      sources."package-json-from-dist-1.0.0"
+      sources."package-json-from-dist-1.0.1"
       sources."parse-entities-2.0.0"
       sources."parse-json-2.2.0"
       sources."path-exists-3.0.0"
@@ -12981,7 +12981,7 @@ in
       sources."fast-deep-equal-3.1.3"
       sources."fast-equals-4.0.3"
       sources."fast-levenshtein-2.0.6"
-      sources."fast-uri-3.0.1"
+      sources."fast-uri-3.0.2"
       sources."fault-1.0.4"
       sources."file-entry-cache-5.0.1"
       sources."find-up-2.1.0"
@@ -13124,7 +13124,7 @@ in
       sources."p-limit-1.3.0"
       sources."p-locate-2.0.0"
       sources."p-try-1.0.0"
-      sources."package-json-from-dist-1.0.0"
+      sources."package-json-from-dist-1.0.1"
       sources."parse-entities-2.0.0"
       sources."parse-json-2.2.0"
       sources."parse5-5.1.1"

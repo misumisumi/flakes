@@ -95,9 +95,9 @@ In your `flake.nix`
   - tkdnd-2.9.4
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-30eb868b551e809883a58f601759739a8fc53720
+  - yaskkserv2-dict-23a7cd0d6f05e1d0f0baaade20e3851a238c5866
   - zenn-cli-0.1.157
-  - zotero-better-bibtex-6.7.235
+  - zotero-better-bibtex-6.7.238
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.0.1
   - zotero-zotfile-5.1.2
