@@ -38,18 +38,6 @@ fetch.github = "ClusterLabs/fence-agents"
 src.git = "https://github.com/ku-nlp/knp/"
 fetch.github = "ku-nlp/knp"
 
-[plemoljp]
-src.github = "yuru7/PlemolJP"
-fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_$ver.zip"
-
-[plemoljp-nf]
-src.github = "yuru7/PlemolJP"
-fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_NF_$ver.zip"
-
-[plemoljp-hs]
-src.github = "yuru7/PlemolJP"
-fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_HS_$ver.zip"
-
 [moralerspace]
 src.github = "yuru7/moralerspace"
 fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/moralerspace_$ver.zip"

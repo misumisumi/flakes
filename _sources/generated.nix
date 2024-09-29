@@ -163,30 +163,6 @@
       sha256 = "sha256-BtvY8r3VJZ0H5D6f1WAfamL4CmmBPKsYAcnp3Emccc4=";
     };
   };
-  plemoljp = {
-    pname = "plemoljp";
-    version = "v1.7.1";
-    src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_v1.7.1.zip";
-      sha256 = "sha256-aqsMIjtg6QRw1Yt796HftCgNmkcRLO+t9tNbyS4PU00=";
-    };
-  };
-  plemoljp-hs = {
-    pname = "plemoljp-hs";
-    version = "v1.7.1";
-    src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_HS_v1.7.1.zip";
-      sha256 = "sha256-LYjVePbqgU7F9YBiGfVYnLfao2CNrvJVrYpUro8QZYM=";
-    };
-  };
-  plemoljp-nf = {
-    pname = "plemoljp-nf";
-    version = "v1.7.1";
-    src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_NF_v1.7.1.zip";
-      sha256 = "sha256-yBpMYSGvpdKvS/IqBP6rXFMdT0ARrhrcnUJD53oMzLs=";
-    };
-  };
   pyknp = {
     pname = "pyknp";
     version = "0.6.1";
