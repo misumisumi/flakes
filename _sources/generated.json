@@ -94,6 +94,26 @@
         },
         "version": "2.3.3"
     },
+    "emoticon-data": {
+        "cargoLocks": null,
+        "date": "2021-04-01",
+        "extract": null,
+        "name": "emoticon-data",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "w33ble",
+            "repo": "emoticon-data",
+            "rev": "92b6211ec2a93e14052e0e572d697d4d06c71868",
+            "sha256": "sha256-AlzFMsXmkSz4zphpYPTSXJsQ303lI9I02pjVxA1YcIs=",
+            "type": "github"
+        },
+        "version": "92b6211ec2a93e14052e0e572d697d4d06c71868"
+    },
     "fence-agents": {
         "cargoLocks": null,
         "date": null,
@@ -273,51 +293,6 @@
             "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceNF_v1.0.2.zip"
         },
         "version": "v1.0.2"
-    },
-    "plemoljp": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "plemoljp",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-aqsMIjtg6QRw1Yt796HftCgNmkcRLO+t9tNbyS4PU00=",
-            "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_v1.7.1.zip"
-        },
-        "version": "v1.7.1"
-    },
-    "plemoljp-hs": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "plemoljp-hs",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-LYjVePbqgU7F9YBiGfVYnLfao2CNrvJVrYpUro8QZYM=",
-            "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_HS_v1.7.1.zip"
-        },
-        "version": "v1.7.1"
-    },
-    "plemoljp-nf": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "plemoljp-nf",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-yBpMYSGvpdKvS/IqBP6rXFMdT0ARrhrcnUJD53oMzLs=",
-            "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_NF_v1.7.1.zip"
-        },
-        "version": "v1.7.1"
     },
     "pyknp": {
         "cargoLocks": null,

@@ -52,6 +52,18 @@
       sha256 = "sha256-Nl5W4skuoqll3fjzGmOLg0x7OLdP35kzAc3Tbnk/hQA=";
     };
   };
+  emoticon-data = {
+    pname = "emoticon-data";
+    version = "92b6211ec2a93e14052e0e572d697d4d06c71868";
+    src = fetchFromGitHub {
+      owner = "w33ble";
+      repo = "emoticon-data";
+      rev = "92b6211ec2a93e14052e0e572d697d4d06c71868";
+      fetchSubmodules = false;
+      sha256 = "sha256-AlzFMsXmkSz4zphpYPTSXJsQ303lI9I02pjVxA1YcIs=";
+    };
+    date = "2021-04-01";
+  };
   fence-agents = {
     pname = "fence-agents";
     version = "v4.15.0";
@@ -149,30 +161,6 @@
     src = fetchurl {
       url = "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceNF_v1.0.2.zip";
       sha256 = "sha256-BtvY8r3VJZ0H5D6f1WAfamL4CmmBPKsYAcnp3Emccc4=";
-    };
-  };
-  plemoljp = {
-    pname = "plemoljp";
-    version = "v1.7.1";
-    src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_v1.7.1.zip";
-      sha256 = "sha256-aqsMIjtg6QRw1Yt796HftCgNmkcRLO+t9tNbyS4PU00=";
-    };
-  };
-  plemoljp-hs = {
-    pname = "plemoljp-hs";
-    version = "v1.7.1";
-    src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_HS_v1.7.1.zip";
-      sha256 = "sha256-LYjVePbqgU7F9YBiGfVYnLfao2CNrvJVrYpUro8QZYM=";
-    };
-  };
-  plemoljp-nf = {
-    pname = "plemoljp-nf";
-    version = "v1.7.1";
-    src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_NF_v1.7.1.zip";
-      sha256 = "sha256-yBpMYSGvpdKvS/IqBP6rXFMdT0ARrhrcnUJD53oMzLs=";
     };
   };
   pyknp = {
