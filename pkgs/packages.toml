@@ -83,6 +83,10 @@ fetch.url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100
 src.github_tag = "uasi/skk-emoji-jisyo"
 fetch.github = "uasi/skk-emoji-jisyo"
 
+[emoticon-data]
+src.git = "https://github.com/w33ble/emoticon-data"
+fetch.github = "w33ble/emoticon-data"
+
 [snack]
 src.regex = "Snack v[0-9]+\\.[0-9]+\\.[0-9]+"
 src.webpage = "https://www.speech.kth.se/snack/"

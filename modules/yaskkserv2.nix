@@ -1,5 +1,10 @@
 # This is home-manager module
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 let
@@ -11,11 +16,28 @@ in
       enable = mkEnableOption ''
         enable yaskkserv2 service
       '';
+      package = mkOption {
+        type = types.package;
+        default = pkgs.yaskkserv2;
+        description = "Packages to install for yaskkserv2";
+      };
+      dictionary = mkOption {
+        type = types.str;
+        default = "${pkgs.yaskkserv2-dict}/share/dictionary.yaskkserv2";
+        description = "Path to yaskkserv2 dictionary";
+      };
+      extraArgs = mkOption {
+        type = types.listOf types.str;
+        default = [
+          "--midashi-utf8"
+          "--google-japanese-input notfound"
+          "--google-cache-filename=/tmp/yaskkserv2.cache"
+        ];
+        description = "Extra arguments to pass to yaskkserv2";
+      };
     };
   };
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [ yaskkserv2 yaskkserv2-dict ];
-
     systemd.user.services = {
       yaskkserv2 = {
         Unit = {
@@ -23,12 +45,14 @@ in
         };
         Service = {
           Type = "simple";
-          ExecStart = "${pkgs.yaskkserv2}/bin/yaskkserv2 --midashi-utf8 --no-daemonize ${pkgs.yaskkserv2-dict}/share/dictionary.yaskkserv2";
+          ExecStart = "${cfg.package}/bin/yaskkserv2 --no-daemonize ${lib.concatStringsSep " " cfg.extraArgs} ${cfg.dictionary}";
           Restart = "on-failure";
         };
-        Install.WantedBy = [ "graphical-session.target" "fcitx5-daemon.service" ];
+        Install.WantedBy = [
+          "graphical-session.target"
+          "fcitx5-daemon.service"
+        ];
       };
     };
   };
 }
-

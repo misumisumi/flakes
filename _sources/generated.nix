@@ -52,6 +52,18 @@
       sha256 = "sha256-Nl5W4skuoqll3fjzGmOLg0x7OLdP35kzAc3Tbnk/hQA=";
     };
   };
+  emoticon-data = {
+    pname = "emoticon-data";
+    version = "92b6211ec2a93e14052e0e572d697d4d06c71868";
+    src = fetchFromGitHub {
+      owner = "w33ble";
+      repo = "emoticon-data";
+      rev = "92b6211ec2a93e14052e0e572d697d4d06c71868";
+      fetchSubmodules = false;
+      sha256 = "sha256-AlzFMsXmkSz4zphpYPTSXJsQ303lI9I02pjVxA1YcIs=";
+    };
+    date = "2021-04-01";
+  };
   fence-agents = {
     pname = "fence-agents";
     version = "v4.15.0";

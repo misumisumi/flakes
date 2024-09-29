@@ -94,6 +94,26 @@
         },
         "version": "2.3.3"
     },
+    "emoticon-data": {
+        "cargoLocks": null,
+        "date": "2021-04-01",
+        "extract": null,
+        "name": "emoticon-data",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "w33ble",
+            "repo": "emoticon-data",
+            "rev": "92b6211ec2a93e14052e0e572d697d4d06c71868",
+            "sha256": "sha256-AlzFMsXmkSz4zphpYPTSXJsQ303lI9I02pjVxA1YcIs=",
+            "type": "github"
+        },
+        "version": "92b6211ec2a93e14052e0e572d697d4d06c71868"
+    },
     "fence-agents": {
         "cargoLocks": null,
         "date": null,
