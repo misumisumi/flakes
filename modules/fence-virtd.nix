@@ -1,10 +1,14 @@
 # This conf from https://github.com/NixOS/nixpkgs/pull/146751
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 let
   cfg = config.services.fence-virtd;
-  tomlFormat = pkgs.formats.toml { };
 in
 {
   options = {
@@ -67,11 +71,3 @@ in
     };
   };
 }
-
-
-
-
-
-
-
-
