@@ -77,12 +77,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "23a7cd0d6f05e1d0f0baaade20e3851a238c5866";
+    version = "6eb7262be90c093d775641e65d79dcef1f764483";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/23a7cd0d6f05e1d0f0baaade20e3851a238c5866/SKK-JISYO.jawiki";
-      sha256 = "sha256-C/D89V3KOERx1EpQhJ/RmwMb39lu9RHvzP4f6dtHbxI=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/6eb7262be90c093d775641e65d79dcef1f764483/SKK-JISYO.jawiki";
+      sha256 = "sha256-nqFkrQju1RYhDWJjXT38DdmaOXbVKqhDMk/40LqsWak=";
     };
-    date = "2024-09-21";
+    date = "2024-10-01";
   };
   julius-speech = {
     pname = "julius-speech";
