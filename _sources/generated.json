@@ -94,6 +94,26 @@
         },
         "version": "2.3.3"
     },
+    "emoticon-data": {
+        "cargoLocks": null,
+        "date": "2021-04-01",
+        "extract": null,
+        "name": "emoticon-data",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "w33ble",
+            "repo": "emoticon-data",
+            "rev": "92b6211ec2a93e14052e0e572d697d4d06c71868",
+            "sha256": "sha256-AlzFMsXmkSz4zphpYPTSXJsQ303lI9I02pjVxA1YcIs=",
+            "type": "github"
+        },
+        "version": "92b6211ec2a93e14052e0e572d697d4d06c71868"
+    },
     "fence-agents": {
         "cargoLocks": null,
         "date": null,
@@ -116,18 +136,18 @@
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2024-08-21",
+        "date": "2024-10-01",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-pTj4HvF6GKY6jwHk3T+w33Cpiz/El0D4Q6YcBPFU7eY=",
+            "sha256": "sha256-nqFkrQju1RYhDWJjXT38DdmaOXbVKqhDMk/40LqsWak=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/49b6353c31ed2b735c9d9f22eb9469e0a3be3809/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/6eb7262be90c093d775641e65d79dcef1f764483/SKK-JISYO.jawiki"
         },
-        "version": "49b6353c31ed2b735c9d9f22eb9469e0a3be3809"
+        "version": "6eb7262be90c093d775641e65d79dcef1f764483"
     },
     "julius-speech": {
         "cargoLocks": null,
@@ -274,51 +294,6 @@
         },
         "version": "v1.0.2"
     },
-    "plemoljp": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "plemoljp",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-aqsMIjtg6QRw1Yt796HftCgNmkcRLO+t9tNbyS4PU00=",
-            "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_v1.7.1.zip"
-        },
-        "version": "v1.7.1"
-    },
-    "plemoljp-hs": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "plemoljp-hs",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-LYjVePbqgU7F9YBiGfVYnLfao2CNrvJVrYpUro8QZYM=",
-            "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_HS_v1.7.1.zip"
-        },
-        "version": "v1.7.1"
-    },
-    "plemoljp-nf": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "plemoljp-nf",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-yBpMYSGvpdKvS/IqBP6rXFMdT0ARrhrcnUJD53oMzLs=",
-            "type": "url",
-            "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_NF_v1.7.1.zip"
-        },
-        "version": "v1.7.1"
-    },
     "pyknp": {
         "cargoLocks": null,
         "date": null,
@@ -408,11 +383,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-t+SdV8MyFlpzvesQ8Ktfx4LMzqmOCMpj6Ob+o6cyHwo=",
+            "sha256": "sha256-KfsFbWkYAvGMRjv+doh+w3/NpFtHy1kS5sJvkykIpH4=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.26"
+            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.27"
         },
-        "version": "0.1.26"
+        "version": "0.1.27"
     },
     "wavesurfer": {
         "cargoLocks": null,
@@ -463,10 +438,10 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-b3YTRoSA3mRq3njVcWn+vlvjSS/98rWWIOLNlstTREg=",
+            "sha256": "sha256-hTGHtXASNJm1R1HhAv6zbrdA/v3wym+O3VBTPmNaycU=",
             "type": "url",
-            "url": "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.155.tgz"
+            "url": "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.157.tgz"
         },
-        "version": "0.1.155"
+        "version": "0.1.157"
     }
 }

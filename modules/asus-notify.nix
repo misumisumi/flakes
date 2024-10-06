@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 let
@@ -13,7 +18,6 @@ in
     };
   };
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ asusctl ];
     services.dbus.packages = with pkgs; [ asusctl ];
 
     systemd.user = {

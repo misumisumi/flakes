@@ -52,6 +52,18 @@
       sha256 = "sha256-Nl5W4skuoqll3fjzGmOLg0x7OLdP35kzAc3Tbnk/hQA=";
     };
   };
+  emoticon-data = {
+    pname = "emoticon-data";
+    version = "92b6211ec2a93e14052e0e572d697d4d06c71868";
+    src = fetchFromGitHub {
+      owner = "w33ble";
+      repo = "emoticon-data";
+      rev = "92b6211ec2a93e14052e0e572d697d4d06c71868";
+      fetchSubmodules = false;
+      sha256 = "sha256-AlzFMsXmkSz4zphpYPTSXJsQ303lI9I02pjVxA1YcIs=";
+    };
+    date = "2021-04-01";
+  };
   fence-agents = {
     pname = "fence-agents";
     version = "v4.15.0";
@@ -65,12 +77,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "49b6353c31ed2b735c9d9f22eb9469e0a3be3809";
+    version = "6eb7262be90c093d775641e65d79dcef1f764483";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/49b6353c31ed2b735c9d9f22eb9469e0a3be3809/SKK-JISYO.jawiki";
-      sha256 = "sha256-pTj4HvF6GKY6jwHk3T+w33Cpiz/El0D4Q6YcBPFU7eY=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/6eb7262be90c093d775641e65d79dcef1f764483/SKK-JISYO.jawiki";
+      sha256 = "sha256-nqFkrQju1RYhDWJjXT38DdmaOXbVKqhDMk/40LqsWak=";
     };
-    date = "2024-08-21";
+    date = "2024-10-01";
   };
   julius-speech = {
     pname = "julius-speech";
@@ -151,30 +163,6 @@
       sha256 = "sha256-BtvY8r3VJZ0H5D6f1WAfamL4CmmBPKsYAcnp3Emccc4=";
     };
   };
-  plemoljp = {
-    pname = "plemoljp";
-    version = "v1.7.1";
-    src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_v1.7.1.zip";
-      sha256 = "sha256-aqsMIjtg6QRw1Yt796HftCgNmkcRLO+t9tNbyS4PU00=";
-    };
-  };
-  plemoljp-hs = {
-    pname = "plemoljp-hs";
-    version = "v1.7.1";
-    src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_HS_v1.7.1.zip";
-      sha256 = "sha256-LYjVePbqgU7F9YBiGfVYnLfao2CNrvJVrYpUro8QZYM=";
-    };
-  };
-  plemoljp-nf = {
-    pname = "plemoljp-nf";
-    version = "v1.7.1";
-    src = fetchurl {
-      url = "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_NF_v1.7.1.zip";
-      sha256 = "sha256-yBpMYSGvpdKvS/IqBP6rXFMdT0ARrhrcnUJD53oMzLs=";
-    };
-  };
   pyknp = {
     pname = "pyknp";
     version = "0.6.1";
@@ -220,10 +208,10 @@
   };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
-    version = "0.1.26";
+    version = "0.1.27";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.26";
-      sha256 = "sha256-t+SdV8MyFlpzvesQ8Ktfx4LMzqmOCMpj6Ob+o6cyHwo=";
+      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.27";
+      sha256 = "sha256-KfsFbWkYAvGMRjv+doh+w3/NpFtHy1kS5sJvkykIpH4=";
     };
   };
   wavesurfer = {
@@ -253,10 +241,10 @@
   };
   zenn-cli = {
     pname = "zenn-cli";
-    version = "0.1.155";
+    version = "0.1.157";
     src = fetchurl {
-      url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.155.tgz";
-      sha256 = "sha256-b3YTRoSA3mRq3njVcWn+vlvjSS/98rWWIOLNlstTREg=";
+      url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.157.tgz";
+      sha256 = "sha256-hTGHtXASNJm1R1HhAv6zbrdA/v3wym+O3VBTPmNaycU=";
     };
   };
 }

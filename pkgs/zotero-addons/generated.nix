@@ -3,10 +3,10 @@
 {
   zotero-better-bibtex = {
     pname = "zotero-better-bibtex";
-    version = "6.7.227";
+    version = "6.7.240";
     src = fetchurl {
-      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v6.7.227/zotero-better-bibtex-6.7.227.xpi";
-      sha256 = "sha256-CFURgdizbTR1na5OuR8NM50lQadlZUwbh3VymIuJ//8=";
+      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v6.7.240/zotero-better-bibtex-6.7.240.xpi";
+      sha256 = "sha256-lTkoB8S385+dtwcSAtmS/H2fqOAHAFaGhlUA/Jya+BI=";
     };
     license = "mit";
     description = "Make Zotero effective for us LaTeX holdouts";
@@ -27,10 +27,10 @@
   };
   zotero-pdf-translate = {
     pname = "zotero-pdf-translate";
-    version = "2.0.0";
+    version = "2.0.1";
     src = fetchurl {
-      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.0.0/translate-for-zotero.xpi";
-      sha256 = "sha256-m4KkHRyW5Kuq1dDqJafxL54h7xSvzK/lC22FqqTle1o=";
+      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.0.1/translate-for-zotero.xpi";
+      sha256 = "sha256-08WZoBl/4zHgixqEfJN0Zs2F1kJT9c8q/InqMteF6HM=";
     };
     license = "agpl3Only";
     description = "Translate PDF, EPub, webpage, metadata, annotations, notes to the target language. Support 20+ translate services.";

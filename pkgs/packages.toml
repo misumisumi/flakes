@@ -38,18 +38,6 @@ fetch.github = "ClusterLabs/fence-agents"
 src.git = "https://github.com/ku-nlp/knp/"
 fetch.github = "ku-nlp/knp"
 
-[plemoljp]
-src.github = "yuru7/PlemolJP"
-fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_$ver.zip"
-
-[plemoljp-nf]
-src.github = "yuru7/PlemolJP"
-fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_NF_$ver.zip"
-
-[plemoljp-hs]
-src.github = "yuru7/PlemolJP"
-fetch.url = "https://github.com/yuru7/PlemolJP/releases/download/$ver/PlemolJP_HS_$ver.zip"
-
 [moralerspace]
 src.github = "yuru7/moralerspace"
 fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/moralerspace_$ver.zip"
@@ -82,6 +70,10 @@ fetch.url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100
 [skk-emoji-jisyo]
 src.github_tag = "uasi/skk-emoji-jisyo"
 fetch.github = "uasi/skk-emoji-jisyo"
+
+[emoticon-data]
+src.git = "https://github.com/w33ble/emoticon-data"
+fetch.github = "w33ble/emoticon-data"
 
 [snack]
 src.regex = "Snack v[0-9]+\\.[0-9]+\\.[0-9]+"

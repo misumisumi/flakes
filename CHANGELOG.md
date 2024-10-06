@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.1.1](https://github.com/misumisumi/flakes/compare/v2.1.0...v2.1.1) (2024-10-06)
+
+
+### Bug Fixes
+
+* **skkDictionaries:** replace skk-dict to skkDictionaries ([f68ad4b](https://github.com/misumisumi/flakes/commit/f68ad4bc096c1c1a16d518d1e0366c70478cec7e))
+
+## [2.1.0](https://github.com/misumisumi/flakes/compare/v2.0.0...v2.1.0) (2024-09-29)
+
+
+### Features
+
+* **skk-jisyo:** add some skk dictionaries ([8b60884](https://github.com/misumisumi/flakes/commit/8b6088428e9a90497c73b84d49d19ce53be724be))
+
+
+### Bug Fixes
+
+* **plemoljp-fonts:** remove plemoljp-fonts ([66c38c0](https://github.com/misumisumi/flakes/commit/66c38c0f85c5971d4b4fcf755f0ae0db2e89b009))
+* **prime-run:** remove prime-run ([1e61ee8](https://github.com/misumisumi/flakes/commit/1e61ee8b5d57ec215c1078df45403e7cf6e6bf0f))
+
 ## [2.0.0](https://github.com/misumisumi/flakes/compare/v1.4.4...v2.0.0) (2024-08-18)
 
 

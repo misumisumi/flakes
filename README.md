@@ -50,16 +50,16 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-19.4.1
-  - @commitlint/config-conventional-19.4.1
-  - @commitlint/config-lerna-scopes-19.0.0
-  - @commitlint/config-patternplate-19.4.1
-  - @commitlint/load-19.4.0
-  - @commitlint/read-19.4.0
+  - @commitlint/config-angular-19.5.0
+  - @commitlint/config-conventional-19.5.0
+  - @commitlint/config-lerna-scopes-19.5.0
+  - @commitlint/config-patternplate-19.5.0
+  - @commitlint/load-19.5.0
+  - @commitlint/read-19.5.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @prettier/plugin-php-0.22.2
-  - @prettier/plugin-pug-3.0.0
+  - @prettier/plugin-pug-3.1.0
   - @prettier/plugin-ruby-4.0.4
   - @prettier/plugin-xml-3.4.1
   - @proofdict/textlint-rule-proofdict-3.1.2
@@ -69,23 +69,24 @@ In your `flake.nix`
   - csharp-ls-0.15.0
   - cups-brother-hll5100dn-3.5.1-1
   - droidcam-obs-plugin-2.3.3
+  - jawiki-kana-kanji-dict-2024-10-01
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
   - moralerspace-fonts-v1.0.2
   - moralerspace-nerd-fonts-v1.0.2
   - nixos-diff
-  - plemoljp-fonts-v1.7.1
   - prettier-plugin-go-template-0.0.15
   - prettier-plugin-kotlin-2.1.0
   - prettier-plugin-nginx-1.0.3
   - prettier-plugin-rust-0.1.9
   - prettier-plugin-sh-0.14.0
   - prettier-plugin-sql-0.18.1
-  - prime-run
   - python3.12-jupynium-0.2.4
   - python3.12-pyknp-0.6.1
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
+  - skk-emotikons-jisyo-2021-04-01
+  - skk-kaomoji-jisyo-2.26.4220.102
   - snack-2.2.10
   - textlint-filter-rule-allowlist-4.0.0
   - textlint-filter-rule-comments-1.2.2
@@ -95,10 +96,10 @@ In your `flake.nix`
   - tkdnd-2.9.4
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-49b6353c31ed2b735c9d9f22eb9469e0a3be3809
-  - zenn-cli-0.1.155
-  - zotero-better-bibtex-6.7.227
+  - yaskkserv2-dict-2024-10-01
+  - zenn-cli-0.1.157
+  - zotero-better-bibtex-6.7.240
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.0.0
+  - zotero-pdf-translate-2.0.1
   - zotero-zotfile-5.1.2
 
