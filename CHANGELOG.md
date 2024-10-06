@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/misumisumi/flakes/compare/v2.1.0...v2.1.1) (2024-10-06)
+
+
+### Bug Fixes
+
+* **skkDictionaries:** replace skk-dict to skkDictionaries ([f68ad4b](https://github.com/misumisumi/flakes/commit/f68ad4bc096c1c1a16d518d1e0366c70478cec7e))
+
 ## [2.1.0](https://github.com/misumisumi/flakes/compare/v2.0.0...v2.1.0) (2024-09-29)
 
 
