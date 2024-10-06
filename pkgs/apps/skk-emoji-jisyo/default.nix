@@ -1,11 +1,16 @@
-{ stdenvNoCC, lib, fetchpatch, name, pkgSources }:
+{
+  stdenvNoCC,
+  lib,
+  name,
+  pkgSources,
+}:
 
 stdenvNoCC.mkDerivation rec {
   inherit (pkgSources."${name}") pname version src;
 
   installPhase = ''
-    mkdir -p $out/share
-    cp ./SKK-JISYO.emoji.utf8 $out/share
+    mkdir -p $out/share/skk
+    cp ./SKK-JISYO.emoji.utf8 $out/share/skk
   '';
 
   meta = with lib; {

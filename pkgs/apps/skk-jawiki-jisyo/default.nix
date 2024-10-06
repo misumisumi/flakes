@@ -9,8 +9,8 @@ stdenvNoCC.mkDerivation rec {
   dontUnpack = true;
 
   installPhase = ''
-    mkdir -p $out/share
-    cp $src $out/share/SKK-JISYO.jawiki
+    mkdir -p $out/share/skk
+    cp $src $out/share/skk/SKK-JISYO.jawiki
   '';
 
   meta = with lib; {
