@@ -16,7 +16,7 @@ stdenvNoCC.mkDerivation rec {
   ];
 
   installPhase = ''
-    mkdir -p $out/share
+    mkdir -p $out/share/skk
     cat <<EOF > emoticons.jisyo
     ;; emoticons dictionary for SKK system
     ;;
@@ -26,7 +26,7 @@ stdenvNoCC.mkDerivation rec {
     yaskkserv2_make_dictionary --utf8 --dictionary-filename ./dictionary.yaskkserv2 emoticons.jisyo
     yaskkserv2_make_dictionary --utf8 --dictionary-filename ./dictionary.yaskkserv2 --output-jisyo-filename SKK-JISYO.emoticons.utf8
     sed -i -e "2s/yaskkserv2/Emoticons/g" SKK-JISYO.emoticons.utf8
-    cp SKK-JISYO.emoticons.utf8 $out/share/SKK-JISYO.emoticons.utf8
+    cp SKK-JISYO.emoticons.utf8 $out/share/skk/SKK-JISYO.emoticons.utf8
   '';
 
   meta = with lib; {

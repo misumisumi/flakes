@@ -11,12 +11,15 @@ in
 stdenvNoCC.mkDerivation rec {
   pname = "skk-kaomoji-jisyo";
   inherit (fcitx5-mozc) src version;
-  nativeBuildInputs = [ python3 yaskkserv2 ];
+  nativeBuildInputs = [
+    python3
+    yaskkserv2
+  ];
 
   installPhase = ''
-    mkdir -p $out/share
+    mkdir -p $out/share/skk
     python ${script} --input_file src/data/emoticon/emoticon.tsv --output_file SKK-JISYO.kaomoji.utf8
-    cp SKK-JISYO.kaomoji.utf8 $out/share/SKK-JISYO.kaomoji.utf8
+    cp SKK-JISYO.kaomoji.utf8 $out/share/skk/SKK-JISYO.kaomoji.utf8
   '';
 
   meta = with lib; {
