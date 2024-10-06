@@ -136,18 +136,18 @@
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2024-09-21",
+        "date": "2024-10-01",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-C/D89V3KOERx1EpQhJ/RmwMb39lu9RHvzP4f6dtHbxI=",
+            "sha256": "sha256-nqFkrQju1RYhDWJjXT38DdmaOXbVKqhDMk/40LqsWak=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/23a7cd0d6f05e1d0f0baaade20e3851a238c5866/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/6eb7262be90c093d775641e65d79dcef1f764483/SKK-JISYO.jawiki"
         },
-        "version": "23a7cd0d6f05e1d0f0baaade20e3851a238c5866"
+        "version": "6eb7262be90c093d775641e65d79dcef1f764483"
     },
     "julius-speech": {
         "cargoLocks": null,
