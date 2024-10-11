@@ -27,10 +27,10 @@
   };
   zotero-pdf-translate = {
     pname = "zotero-pdf-translate";
-    version = "2.0.1";
+    version = "2.0.3";
     src = fetchurl {
-      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.0.1/translate-for-zotero.xpi";
-      sha256 = "sha256-08WZoBl/4zHgixqEfJN0Zs2F1kJT9c8q/InqMteF6HM=";
+      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.0.3/translate-for-zotero.xpi";
+      sha256 = "sha256-67tbphfJQxRMNw0TCSV80PaU9vZdnD4eUozpVq9vN94=";
     };
     license = "agpl3Only";
     description = "Translate PDF, EPub, webpage, metadata, annotations, notes to the target language. Support 20+ translate services.";
