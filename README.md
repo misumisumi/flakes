@@ -59,7 +59,7 @@ In your `flake.nix`
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @prettier/plugin-php-0.22.2
-  - @prettier/plugin-pug-3.1.0
+  - @prettier/plugin-pug-3.2.0
   - @prettier/plugin-ruby-4.0.4
   - @prettier/plugin-xml-3.4.1
   - @proofdict/textlint-rule-proofdict-3.1.2
@@ -100,6 +100,6 @@ In your `flake.nix`
   - zenn-cli-0.1.157
   - zotero-better-bibtex-6.7.240
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.0.1
+  - zotero-pdf-translate-2.0.3
   - zotero-zotfile-5.1.2
 
