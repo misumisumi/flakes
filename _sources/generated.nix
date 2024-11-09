@@ -77,12 +77,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "6eb7262be90c093d775641e65d79dcef1f764483";
+    version = "69f3368f838a7fbdd3cca6315df9353fd796b08e";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/6eb7262be90c093d775641e65d79dcef1f764483/SKK-JISYO.jawiki";
-      sha256 = "sha256-nqFkrQju1RYhDWJjXT38DdmaOXbVKqhDMk/40LqsWak=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/69f3368f838a7fbdd3cca6315df9353fd796b08e/SKK-JISYO.jawiki";
+      sha256 = "sha256-TydGtpNgQkmhIq9xTKma2Iqtq3dEV/DzArWydLTWDLc=";
     };
-    date = "2024-10-01";
+    date = "2024-10-28";
   };
   julius-speech = {
     pname = "julius-speech";
@@ -210,7 +210,7 @@
     pname = "vrchat-vpm-cli";
     version = "0.1.27";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.27";
+      url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/0.1.27";
       sha256 = "sha256-KfsFbWkYAvGMRjv+doh+w3/NpFtHy1kS5sJvkykIpH4=";
     };
   };
@@ -241,10 +241,10 @@
   };
   zenn-cli = {
     pname = "zenn-cli";
-    version = "0.1.157";
+    version = "0.1.158";
     src = fetchurl {
-      url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.157.tgz";
-      sha256 = "sha256-hTGHtXASNJm1R1HhAv6zbrdA/v3wym+O3VBTPmNaycU=";
+      url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.158.tgz";
+      sha256 = "sha256-VVU3xH2BN8PPfU6+e/94HrKAb1L6pT0uGpAFkVW6z34=";
     };
   };
 }

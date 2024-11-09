@@ -136,18 +136,18 @@
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2024-10-01",
+        "date": "2024-10-28",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-nqFkrQju1RYhDWJjXT38DdmaOXbVKqhDMk/40LqsWak=",
+            "sha256": "sha256-TydGtpNgQkmhIq9xTKma2Iqtq3dEV/DzArWydLTWDLc=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/6eb7262be90c093d775641e65d79dcef1f764483/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/69f3368f838a7fbdd3cca6315df9353fd796b08e/SKK-JISYO.jawiki"
         },
-        "version": "6eb7262be90c093d775641e65d79dcef1f764483"
+        "version": "69f3368f838a7fbdd3cca6315df9353fd796b08e"
     },
     "julius-speech": {
         "cargoLocks": null,
@@ -385,7 +385,7 @@
             "name": null,
             "sha256": "sha256-KfsFbWkYAvGMRjv+doh+w3/NpFtHy1kS5sJvkykIpH4=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/0.1.27"
+            "url": "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/0.1.27"
         },
         "version": "0.1.27"
     },
@@ -438,10 +438,10 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-hTGHtXASNJm1R1HhAv6zbrdA/v3wym+O3VBTPmNaycU=",
+            "sha256": "sha256-VVU3xH2BN8PPfU6+e/94HrKAb1L6pT0uGpAFkVW6z34=",
             "type": "url",
-            "url": "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.157.tgz"
+            "url": "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.158.tgz"
         },
-        "version": "0.1.157"
+        "version": "0.1.158"
     }
 }
