@@ -69,7 +69,7 @@ In your `flake.nix`
   - csharp-ls-0.15.0
   - cups-brother-hll5100dn-3.5.1-1
   - droidcam-obs-plugin-2.3.3
-  - jawiki-kana-kanji-dict-2024-10-01
+  - jawiki-kana-kanji-dict-2024-10-28
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
   - moralerspace-fonts-v1.0.2
@@ -96,10 +96,10 @@ In your `flake.nix`
   - tkdnd-2.9.4
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-2024-10-01
-  - zenn-cli-0.1.157
-  - zotero-better-bibtex-6.7.240
+  - yaskkserv2-dict-2024-10-28
+  - zenn-cli-0.1.158
+  - zotero-better-bibtex-6.7.250
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.0.3
+  - zotero-pdf-translate-2.0.5
   - zotero-zotfile-5.1.2
 
