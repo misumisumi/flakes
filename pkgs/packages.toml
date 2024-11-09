@@ -92,9 +92,10 @@ src.regex = "[0-9]+\\.[0-9]+\\.[0-9]+p[0-9]+"
 fetch.url = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz"
 
 [vrchat-vpm-cli]
-src.regex = "0\\.[0-9]+\\.[0-9]+"
+src.regex = "0\\.[0-9]+\\.[a-z0-9-.]+"
+src.exclude_regex = ".*-alpha.*|.*-beta.*"
 src.webpage = "https://www.nuget.org/packages/VRChat.VPM.CLI"
-fetch.url = "https://www.nuget.org/api/v2/package/vrchat.vpm.cli/$ver"
+fetch.url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/$ver"
 
 [yaskkserv2]
 src.github_tag = "wachikun/yaskkserv2"
