@@ -81,12 +81,12 @@ In your `flake.nix`
   - prettier-plugin-rust-0.1.9
   - prettier-plugin-sh-0.14.0
   - prettier-plugin-sql-0.18.1
-  - python3.12-jupynium-0.2.4
+  - python3.12-jupynium-0.2.5
   - python3.12-pyknp-0.6.1
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
   - skk-emotikons-jisyo-2021-04-01
-  - skk-kaomoji-jisyo-2.26.4220.102
+  - skk-kaomoji-jisyo-2.30.5544.102
   - snack-2.2.10
   - textlint-filter-rule-allowlist-4.0.0
   - textlint-filter-rule-comments-1.2.2
@@ -98,7 +98,7 @@ In your `flake.nix`
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2024-10-28
   - zenn-cli-0.1.158
-  - zotero-better-bibtex-6.7.250
+  - zotero-better-bibtex-6.7.251
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.0.5
   - zotero-zotfile-5.1.2

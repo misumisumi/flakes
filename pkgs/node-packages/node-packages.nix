@@ -958,13 +958,13 @@ let
         sha512 = "JxIvIo/Hrpv0JCHSyRpetAdQ6lB27oFYhv0PKCNf1g2gUXOjpeR1exrXccRxLMuAV5WAmGFBwRnNOJqN38+qtg==";
       };
     };
-    "@swc/core-1.9.1" = {
+    "@swc/core-1.9.2" = {
       name = "_at_swc_slash_core";
       packageName = "@swc/core";
-      version = "1.9.1";
+      version = "1.9.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@swc/core/-/core-1.9.1.tgz";
-        sha512 = "OnPc+Kt5oy3xTvr/KCUOqE9ptJcWbyQgAUr1ydh9EmbBcmJTaO1kfQCxm/axzJi6sKeDTxL9rX5zvLOhoYIaQw==";
+        url = "https://registry.npmjs.org/@swc/core/-/core-1.9.2.tgz";
+        sha512 = "dYyEkO6mRYtZFpnOsnYzv9rY69fHAHoawYOjGOEcxk9WYtaJhowMdP/w6NcOKnz2G7GlZaenjkzkMa6ZeQeMsg==";
       };
     };
     "@swc/counter-0.1.3" = {
@@ -976,22 +976,22 @@ let
         sha512 = "e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==";
       };
     };
-    "@swc/helpers-0.5.13" = {
+    "@swc/helpers-0.5.15" = {
       name = "_at_swc_slash_helpers";
       packageName = "@swc/helpers";
-      version = "0.5.13";
+      version = "0.5.15";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.13.tgz";
-        sha512 = "UoKGxQ3r5kYI9dALKJapMmuK+1zWM/H17Z1+iwnNmzcJRnfFuevZs375TA5rW31pu4BS4NoSy1fRsexDXfWn5w==";
+        url = "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz";
+        sha512 = "JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==";
       };
     };
-    "@swc/types-0.1.14" = {
+    "@swc/types-0.1.15" = {
       name = "_at_swc_slash_types";
       packageName = "@swc/types";
-      version = "0.1.14";
+      version = "0.1.15";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@swc/types/-/types-0.1.14.tgz";
-        sha512 = "PbSmTiYCN+GMrvfjrMo9bdY+f2COnwbdnoMw7rqU/PI5jXpKjxOGZ0qqZCImxnT81NkNsKnmEpvu+hRXLBeCJg==";
+        url = "https://registry.npmjs.org/@swc/types/-/types-0.1.15.tgz";
+        sha512 = "XKaZ+dzDIQ9Ot9o89oJQ/aluI17+VvUnIpYJTcZtvv1iYX6MzHh3Ik2CSR7MdPKpPwfZXHBeCingb2b4PoDVdw==";
       };
     };
     "@textlint-ja/textlint-rule-no-synonyms-1.3.0" = {
@@ -3271,13 +3271,13 @@ let
         sha512 = "7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==";
       };
     };
-    "es-abstract-1.23.3" = {
+    "es-abstract-1.23.5" = {
       name = "es-abstract";
       packageName = "es-abstract";
-      version = "1.23.3";
+      version = "1.23.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/es-abstract/-/es-abstract-1.23.3.tgz";
-        sha512 = "e+HfNH61Bj1X9/jLc5v1owaLYuHdeHHSQlkhCBiTK8rBvKaULl/beGMxwrMXjpYrv4pz22BlY570vVePA2ho4A==";
+        url = "https://registry.npmjs.org/es-abstract/-/es-abstract-1.23.5.tgz";
+        sha512 = "vlmniQ0WNPwXqA0BnmwV3Ng7HxiGlh6r5U6JcTMNx8OilcAGqVJBHJcPjqOMaczU9fRuRK5Px2BdVyPRnKMMVQ==";
       };
     };
     "es-define-property-1.0.0" = {
@@ -6376,13 +6376,13 @@ let
         sha512 = "OQkWKbjQKbGkMf/xqI1jjy3oCTgMKJac58G2+bjZb3fza6gW2YrCSdMQYaoTb70crvE//Gngr4f0AgVHmqHvBQ==";
       };
     };
-    "node-gyp-build-4.8.2" = {
+    "node-gyp-build-4.8.3" = {
       name = "node-gyp-build";
       packageName = "node-gyp-build";
-      version = "4.8.2";
+      version = "4.8.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-4.8.2.tgz";
-        sha512 = "IRUxE4BVsHWXkV/SFOut4qTlagw2aM8T5/vnTsmrHJvVoKueJHRc/JaFND7QDDc61kLYUJ6qlZM3sqTSyx2dTw==";
+        url = "https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-4.8.3.tgz";
+        sha512 = "EMS95CMJzdoSKoIiXo8pxKoL8DYxwIZXYlLmgPb8KUv794abpnLK6ynsCAWNliOjREKruYKdzbh76HHYUHX7nw==";
       };
     };
     "node-localstorage-2.2.1" = {
@@ -7114,13 +7114,13 @@ let
         sha512 = "gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==";
       };
     };
-    "php-parser-3.2.0" = {
+    "php-parser-3.2.1" = {
       name = "php-parser";
       packageName = "php-parser";
-      version = "3.2.0";
+      version = "3.2.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/php-parser/-/php-parser-3.2.0.tgz";
-        sha512 = "HCjPJKnxt2Wse06CZ/qBElEetAXRq7+t7tvEa3QF5DUX0n66PYCObsQKGIReUSSmOnePcweDJO3+f2GsC+KuGQ==";
+        url = "https://registry.npmjs.org/php-parser/-/php-parser-3.2.1.tgz";
+        sha512 = "WT5AMqe39ZdqAxp9Yp7uR6e3clBWlT1dxHHs49GmnDx2d+975NEiLSVy2tRGLdSC9tgdQOLiN1Yz54g1d2cZDQ==";
       };
     };
     "picocolors-1.1.1" = {
@@ -8374,13 +8374,13 @@ let
         sha512 = "Oo+0REFV59/rz3gfJNKQiBlwfHaSESl1pcGyABQsnnIfWOFt6JNj5gCog2U6MLZ//IGYD+nA8nI+mTShREReaA==";
       };
     };
-    "sql-formatter-15.4.5" = {
+    "sql-formatter-15.4.6" = {
       name = "sql-formatter";
       packageName = "sql-formatter";
-      version = "15.4.5";
+      version = "15.4.6";
       src = fetchurl {
-        url = "https://registry.npmjs.org/sql-formatter/-/sql-formatter-15.4.5.tgz";
-        sha512 = "dxYn0OzEmB19/9Y+yh8bqD8kJx2S/4pOTM4QLKxQDh7K6lp1Sx9MhmiF9RUJHSVjfV72KihW5R1h6Kecy6O5qA==";
+        url = "https://registry.npmjs.org/sql-formatter/-/sql-formatter-15.4.6.tgz";
+        sha512 = "aH6kwvJpylljHqXe+zpie0Q5snL3uerDLLhjPEBjDCVK1NMRFq4nMJbuPJWYp08LaaaJJgBhShAdAfspcBYY0Q==";
       };
     };
     "ssri-10.0.6" = {
@@ -10284,10 +10284,10 @@ in
       sources."@swc-node/core-1.13.3"
       sources."@swc-node/register-1.10.9"
       sources."@swc-node/sourcemap-support-0.5.1"
-      sources."@swc/core-1.9.1"
+      sources."@swc/core-1.9.2"
       sources."@swc/counter-0.1.3"
-      sources."@swc/helpers-0.5.13"
-      sources."@swc/types-0.1.14"
+      sources."@swc/helpers-0.5.15"
+      sources."@swc/types-0.1.15"
       sources."@tootallnate/once-2.0.0"
       sources."@tufjs/canonical-json-1.0.0"
       sources."@tufjs/models-1.0.4"
@@ -10807,7 +10807,7 @@ in
           sources."unique-slug-3.0.0"
         ];
       })
-      sources."node-gyp-build-4.8.2"
+      sources."node-gyp-build-4.8.3"
       sources."nopt-6.0.0"
       (sources."normalize-package-data-5.0.0" // {
         dependencies = [
@@ -11454,7 +11454,7 @@ in
     };
     dependencies = [
       sources."linguist-languages-7.27.0"
-      sources."php-parser-3.2.0"
+      sources."php-parser-3.2.1"
       sources."prettier-3.3.3"
     ];
     buildInputs = globalBuildInputs;
@@ -12025,7 +12025,7 @@ in
       sources."railroad-diagrams-1.0.0"
       sources."randexp-0.4.6"
       sources."ret-0.1.15"
-      sources."sql-formatter-15.4.5"
+      sources."sql-formatter-15.4.6"
       sources."tslib-2.8.1"
     ];
     buildInputs = globalBuildInputs;
@@ -12866,7 +12866,7 @@ in
       sources."eastasianwidth-0.2.0"
       sources."emoji-regex-10.4.0"
       sources."error-ex-1.3.2"
-      sources."es-abstract-1.23.3"
+      sources."es-abstract-1.23.5"
       sources."es-define-property-1.0.0"
       sources."es-errors-1.3.0"
       sources."es-object-atoms-1.0.0"
