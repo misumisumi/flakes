@@ -23,10 +23,17 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixos-unstable
 
+      - name: yq - portable yaml processor
+        uses: mikefarah/yq@v4
+
       - name: Setup git account
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Update packages.toml
+        run: |
+          scripts/update-toml.sh
 
       - name: Update package version
         run: |

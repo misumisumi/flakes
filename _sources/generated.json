@@ -294,6 +294,20 @@
         },
         "version": "v1.0.2"
     },
+    "proton-ge-rtsp-bin": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "proton-ge-rtsp-bin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "sha256": "sha256-dj5qO1AmV0KinrfgUcv+bWzLN9aaAAKf/GxX5o9b6Dc=",
+            "type": "tarball",
+            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-20-rtsp15-1/GE-Proton9-20-rtsp15.tar.gz"
+        },
+        "version": "GE-Proton9-20-rtsp15-1"
+    },
     "pyknp": {
         "cargoLocks": null,
         "date": null,
