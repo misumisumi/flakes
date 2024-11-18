@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/misumisumi/flakes/compare/v2.1.1...v2.2.0) (2024-11-18)
+
+
+### Features
+
+* **proton-ge-rtsp-bin:** add proton-ge patched rtsp support ([f8ccd70](https://github.com/misumisumi/flakes/commit/f8ccd70943739a458bece23c4e164cbc34c1b41b))
+
 ## [2.1.1](https://github.com/misumisumi/flakes/compare/v2.1.0...v2.1.1) (2024-10-06)
 
 
