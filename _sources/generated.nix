@@ -163,6 +163,14 @@
       sha256 = "sha256-BtvY8r3VJZ0H5D6f1WAfamL4CmmBPKsYAcnp3Emccc4=";
     };
   };
+  proton-ge-rtsp-bin = {
+    pname = "proton-ge-rtsp-bin";
+    version = "GE-Proton9-20-rtsp15-1";
+    src = fetchTarball {
+      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-20-rtsp15-1/GE-Proton9-20-rtsp15.tar.gz";
+      sha256 = "sha256-dj5qO1AmV0KinrfgUcv+bWzLN9aaAAKf/GxX5o9b6Dc=";
+    };
+  };
   pyknp = {
     pname = "pyknp";
     version = "0.6.1";

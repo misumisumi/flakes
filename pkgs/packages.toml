@@ -1,121 +1,181 @@
-[bt-dualboot]
-src.pypi = "bt-dualboot"
-fetch.pypi = "bt-dualboot"
+[bt-dualboot.src]
+pypi = "bt-dualboot"
 
-[csharp-ls]
-src.github = "razzmatazz/csharp-language-server"
-fetch.url = "https://www.nuget.org/api/v2/package/csharp-ls/$ver"
+[bt-dualboot.fetch]
+pypi = "bt-dualboot"
 
-[cups-brother-hll5100dn-lpr]
-src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
-src.regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
-fetch.url = "https://download.brother.com/welcome/dlf102553/hll5100dnlpr-$ver.i386.deb"
+[csharp-ls.src]
+github = "razzmatazz/csharp-language-server"
 
-[cups-brother-hll5100dn-cupswrapper]
-src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
-src.regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
-fetch.url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-$ver.i386.deb"
+[csharp-ls.fetch]
+url = "https://www.nuget.org/api/v2/package/csharp-ls/$ver"
 
-[drbd9-dkms]
-src.github_tag = "LINBIT/drbd"
-src.include_regex = "drbd-9.1.*"
-src.prefix = "drbd-"
-fetch.url = "https://pkg.linbit.com//downloads/drbd/9/drbd-$ver.tar.gz"
+[cups-brother-hll5100dn-lpr.src]
+webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
+regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
 
-[droidcam-obs-plugin]
-src.github = "dev47apps/droidcam-obs-plugin"
-fetch.github = "dev47apps/droidcam-obs-plugin"
+[cups-brother-hll5100dn-lpr.fetch]
+url = "https://download.brother.com/welcome/dlf102553/hll5100dnlpr-$ver.i386.deb"
 
-[julius-speech]
-src.github_tag = "julius-speech/julius"
-fetch.github = "julius-speech/julius"
+[cups-brother-hll5100dn-cupswrapper.src]
+webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
+regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
 
-[fence-agents]
-src.github_tag = "ClusterLabs/fence-agents"
-fetch.github = "ClusterLabs/fence-agents"
+[cups-brother-hll5100dn-cupswrapper.fetch]
+url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-$ver.i386.deb"
 
-[knp]
-src.git = "https://github.com/ku-nlp/knp/"
-fetch.github = "ku-nlp/knp"
+[drbd9-dkms.src]
+github_tag = "LINBIT/drbd"
+include_regex = "drbd-9.1.*"
+prefix = "drbd-"
 
-[moralerspace]
-src.github = "yuru7/moralerspace"
-fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/moralerspace_$ver.zip"
+[drbd9-dkms.fetch]
+url = "https://pkg.linbit.com//downloads/drbd/9/drbd-$ver.tar.gz"
 
-[moralerspace-hw]
-src.github = "yuru7/moralerspace"
-fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHW_$ver.zip"
+[droidcam-obs-plugin.src]
+github = "dev47apps/droidcam-obs-plugin"
 
-[moralerspace-jpdoc]
-src.github = "yuru7/moralerspace"
-fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceJPDOC_$ver.zip"
+[droidcam-obs-plugin.fetch]
+github = "dev47apps/droidcam-obs-plugin"
 
-[moralerspace-hw-jpdoc]
-src.github = "yuru7/moralerspace"
-fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWJPDOC_$ver.zip"
+[julius-speech.src]
+github_tag = "julius-speech/julius"
 
-[moralerspace-nf]
-src.github = "yuru7/moralerspace"
-fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceNF_$ver.zip"
+[julius-speech.fetch]
+github = "julius-speech/julius"
 
-[moralerspace-hw-nf]
-src.github = "yuru7/moralerspace"
-fetch.url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWNF_$ver.zip"
+[fence-agents.src]
+github_tag = "ClusterLabs/fence-agents"
 
+[fence-agents.fetch]
+github = "ClusterLabs/fence-agents"
 
-[ricoh-sp-c260series-ppd]
-src.manual = "1.00"
-fetch.url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
+[knp.src]
+git = "https://github.com/ku-nlp/knp/"
 
-[skk-emoji-jisyo]
-src.github_tag = "uasi/skk-emoji-jisyo"
-fetch.github = "uasi/skk-emoji-jisyo"
+[knp.fetch]
+github = "ku-nlp/knp"
 
-[emoticon-data]
-src.git = "https://github.com/w33ble/emoticon-data"
-fetch.github = "w33ble/emoticon-data"
+[moralerspace.src]
+github = "yuru7/moralerspace"
 
-[snack]
-src.regex = "Snack v[0-9]+\\.[0-9]+\\.[0-9]+"
-src.webpage = "https://www.speech.kth.se/snack/"
-src.prefix = "Snack v"
-fetch.url = "http://www.speech.kth.se/snack/dist/snack$ver.tar.gz"
+[moralerspace.fetch]
+url = "https://github.com/yuru7/moralerspace/releases/download/$ver/moralerspace_$ver.zip"
 
-[tkdnd]
-src.github_tag = "petasis/tkdnd"
-src.prefix = "tkdnd-release-test-v"
-fetch.url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v$ver.tar.gz"
+[moralerspace-hw.src]
+github = "yuru7/moralerspace"
 
-[wavesurfer]
-src.httpheader = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
-src.regex = "[0-9]+\\.[0-9]+\\.[0-9]+p[0-9]+"
-fetch.url = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz"
+[moralerspace-hw.fetch]
+url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHW_$ver.zip"
 
-[vrchat-vpm-cli]
-src.regex = "0\\.[0-9]+\\.[a-z0-9-.]+"
-src.exclude_regex = ".*-alpha.*|.*-beta.*"
-src.webpage = "https://www.nuget.org/packages/VRChat.VPM.CLI"
-fetch.url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/$ver"
+[moralerspace-jpdoc.src]
+github = "yuru7/moralerspace"
+
+[moralerspace-jpdoc.fetch]
+url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceJPDOC_$ver.zip"
+
+[moralerspace-hw-jpdoc.src]
+github = "yuru7/moralerspace"
+
+[moralerspace-hw-jpdoc.fetch]
+url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWJPDOC_$ver.zip"
+
+[moralerspace-nf.src]
+github = "yuru7/moralerspace"
+
+[moralerspace-nf.fetch]
+url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceNF_$ver.zip"
+
+[moralerspace-hw-nf.src]
+github = "yuru7/moralerspace"
+
+[moralerspace-hw-nf.fetch]
+url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWNF_$ver.zip"
+
+[proton-ge-rtsp-bin.src]
+github = "SpookySkeletons/proton-ge-rtsp"
+
+[proton-ge-rtsp-bin.fetch]
+tarball = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-20-rtsp15-1/GE-Proton9-20-rtsp15.tar.gz"
+
+[ricoh-sp-c260series-ppd.src]
+manual = "1.00"
+
+[ricoh-sp-c260series-ppd.fetch]
+url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
+
+[skk-emoji-jisyo.src]
+github_tag = "uasi/skk-emoji-jisyo"
+
+[skk-emoji-jisyo.fetch]
+github = "uasi/skk-emoji-jisyo"
+
+[emoticon-data.src]
+git = "https://github.com/w33ble/emoticon-data"
+
+[emoticon-data.fetch]
+github = "w33ble/emoticon-data"
+
+[snack.src]
+regex = "Snack v[0-9]+\\.[0-9]+\\.[0-9]+"
+webpage = "https://www.speech.kth.se/snack/"
+prefix = "Snack v"
+
+[snack.fetch]
+url = "http://www.speech.kth.se/snack/dist/snack$ver.tar.gz"
+
+[tkdnd.src]
+github_tag = "petasis/tkdnd"
+prefix = "tkdnd-release-test-v"
+
+[tkdnd.fetch]
+url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v$ver.tar.gz"
+
+[wavesurfer.src]
+httpheader = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
+regex = "[0-9]+\\.[0-9]+\\.[0-9]+p[0-9]+"
+
+[wavesurfer.fetch]
+url = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz"
+
+[vrchat-vpm-cli.src]
+regex = "0\\.[0-9]+\\.[a-z0-9-.]+"
+exclude_regex = ".*-alpha.*|.*-beta.*"
+webpage = "https://www.nuget.org/packages/VRChat.VPM.CLI"
+
+[vrchat-vpm-cli.fetch]
+url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/$ver"
 
 [yaskkserv2]
-src.github_tag = "wachikun/yaskkserv2"
-fetch.github = "wachikun/yaskkserv2"
 cargo_locks = ["Cargo.lock"]
 
-[jawiki-kana-kanji-dict]
-src.git = "https://github.com/tokuhirom/jawiki-kana-kanji-dict.git"
-fetch.url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/$ver/SKK-JISYO.jawiki"
+[yaskkserv2.src]
+github_tag = "wachikun/yaskkserv2"
 
-[zenn-cli]
-src.github_tag = "zenn-dev/zenn-editor"
-src.exclude_regex = ".*-alpha.*|.*-beta.*"
-fetch.url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-$ver.tgz"
+[yaskkserv2.fetch]
+github = "wachikun/yaskkserv2"
 
-# python modules
-[jupynium]
-src.pypi = "jupynium"
-fetch.pypi = "jupynium"
+[jawiki-kana-kanji-dict.src]
+git = "https://github.com/tokuhirom/jawiki-kana-kanji-dict.git"
 
-[pyknp]
-src.pypi = "pyknp"
-fetch.pypi = "pyknp"
+[jawiki-kana-kanji-dict.fetch]
+url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/$ver/SKK-JISYO.jawiki"
+
+[zenn-cli.src]
+github_tag = "zenn-dev/zenn-editor"
+exclude_regex = ".*-alpha.*|.*-beta.*"
+
+[zenn-cli.fetch]
+url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-$ver.tgz"
+
+[jupynium.src]
+pypi = "jupynium"
+
+[jupynium.fetch]
+pypi = "jupynium"
+
+[pyknp.src]
+pypi = "pyknp"
+
+[pyknp.fetch]
+pypi = "pyknp"
