@@ -68,11 +68,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-SgrzVg1tEz+AYtQoTdaivoYUOIu6zRQKCXgjL9FjxTM=",
+            "sha256": "sha256-Jyc8ltaNY5m9wPmiFYHE6+Z/s4cgblX4cn0FWVuvHK4=",
             "type": "url",
-            "url": "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.22.tar.gz"
+            "url": "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.23.tar.gz"
         },
-        "version": "9.1.22"
+        "version": "9.1.23"
     },
     "droidcam-obs-plugin": {
         "cargoLocks": null,
@@ -128,11 +128,11 @@
             "name": null,
             "owner": "ClusterLabs",
             "repo": "fence-agents",
-            "rev": "v4.15.0",
-            "sha256": "sha256-RlpLUCHIuonVH94BQVUiRe+Efrm8NMV4L7AiKMe5x/g=",
+            "rev": "v4.16.0",
+            "sha256": "sha256-44LzxXQbc3NqqAtZgsp6ClTZIPkP9hHffc1DSkT3bCA=",
             "type": "github"
         },
-        "version": "v4.15.0"
+        "version": "v4.16.0"
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
