@@ -35,10 +35,10 @@
   };
   drbd9-dkms = {
     pname = "drbd9-dkms";
-    version = "9.1.22";
+    version = "9.1.23";
     src = fetchurl {
-      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.22.tar.gz";
-      sha256 = "sha256-SgrzVg1tEz+AYtQoTdaivoYUOIu6zRQKCXgjL9FjxTM=";
+      url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.23.tar.gz";
+      sha256 = "sha256-Jyc8ltaNY5m9wPmiFYHE6+Z/s4cgblX4cn0FWVuvHK4=";
     };
   };
   droidcam-obs-plugin = {
@@ -66,13 +66,13 @@
   };
   fence-agents = {
     pname = "fence-agents";
-    version = "v4.15.0";
+    version = "v4.16.0";
     src = fetchFromGitHub {
       owner = "ClusterLabs";
       repo = "fence-agents";
-      rev = "v4.15.0";
+      rev = "v4.16.0";
       fetchSubmodules = false;
-      sha256 = "sha256-RlpLUCHIuonVH94BQVUiRe+Efrm8NMV4L7AiKMe5x/g=";
+      sha256 = "sha256-44LzxXQbc3NqqAtZgsp6ClTZIPkP9hHffc1DSkT3bCA=";
     };
   };
   jawiki-kana-kanji-dict = {

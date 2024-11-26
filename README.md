@@ -50,10 +50,10 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-19.5.0
-  - @commitlint/config-conventional-19.5.0
+  - @commitlint/config-angular-19.6.0
+  - @commitlint/config-conventional-19.6.0
   - @commitlint/config-lerna-scopes-19.5.0
-  - @commitlint/config-patternplate-19.5.0
+  - @commitlint/config-patternplate-19.6.0
   - @commitlint/load-19.5.0
   - @commitlint/read-19.5.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
@@ -81,6 +81,7 @@ In your `flake.nix`
   - prettier-plugin-rust-0.1.9
   - prettier-plugin-sh-0.14.0
   - prettier-plugin-sql-0.18.1
+  - proton-ge-rtsp-bin-GE-Proton9-20-rtsp15-1
   - python3.12-jupynium-0.2.5
   - python3.12-pyknp-0.6.1
   - ricoh-sp-c260series-ppd-1.00
@@ -98,8 +99,8 @@ In your `flake.nix`
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2024-10-28
   - zenn-cli-0.1.158
-  - zotero-better-bibtex-6.7.251
+  - zotero-better-bibtex-6.7.256
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.0.5
+  - zotero-pdf-translate-2.0.11
   - zotero-zotfile-5.1.2
 
