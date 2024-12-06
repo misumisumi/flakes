@@ -165,10 +165,10 @@
   };
   proton-ge-rtsp-bin = {
     pname = "proton-ge-rtsp-bin";
-    version = "GE-Proton9-20-rtsp15-1";
+    version = "GE-Proton9-20-rtsp16";
     src = fetchTarball {
-      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-20-rtsp15-1/GE-Proton9-20-rtsp15.tar.gz";
-      sha256 = "sha256-dj5qO1AmV0KinrfgUcv+bWzLN9aaAAKf/GxX5o9b6Dc=";
+      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-20-rtsp16/GE-Proton9-20-rtsp16.tar.gz";
+      sha256 = "sha256-iq7oiDW5+51wzqYwASOGSV922c/pg1k29MdkIXlT34k=";
     };
   };
   pyknp = {
@@ -216,10 +216,10 @@
   };
   vrchat-vpm-cli = {
     pname = "vrchat-vpm-cli";
-    version = "0.1.27";
+    version = "0.1.28";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/0.1.27";
-      sha256 = "sha256-KfsFbWkYAvGMRjv+doh+w3/NpFtHy1kS5sJvkykIpH4=";
+      url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/0.1.28";
+      sha256 = "sha256-Pz8KBpjmpzx+6gD4nqGVBEp5z4UX6hFqZHGy8hJCD4k=";
     };
   };
   wavesurfer = {
