@@ -96,7 +96,7 @@ url = "https://github.com/yuru7/moralerspace/releases/download/$ver/Moralerspace
 github = "SpookySkeletons/proton-ge-rtsp"
 
 [proton-ge-rtsp-bin.fetch]
-tarball = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-20-rtsp15-1/GE-Proton9-20-rtsp15.tar.gz"
+tarball = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-20-rtsp16/GE-Proton9-20-rtsp16.tar.gz"
 
 [ricoh-sp-c260series-ppd.src]
 manual = "1.00"
