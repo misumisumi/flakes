@@ -66,7 +66,6 @@ In your `flake.nix`
   - bt-dualboot-1.0.1
   - commitlint-format-json-1.1.0
   - commitlint-with-plugins
-  - csharp-ls-0.15.0
   - cups-brother-hll5100dn-3.5.1-1
   - droidcam-obs-plugin-2.3.3
   - jawiki-kana-kanji-dict-2024-10-28
@@ -101,6 +100,6 @@ In your `flake.nix`
   - zenn-cli-0.1.158
   - zotero-better-bibtex-6.7.263
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.0.12
+  - zotero-pdf-translate-2.0.13
   - zotero-zotfile-5.1.2
 
