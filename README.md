@@ -54,7 +54,7 @@ In your `flake.nix`
   - @commitlint/config-conventional-19.6.0
   - @commitlint/config-lerna-scopes-19.5.0
   - @commitlint/config-patternplate-19.6.0
-  - @commitlint/load-19.5.0
+  - @commitlint/load-19.6.1
   - @commitlint/read-19.5.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
@@ -100,6 +100,6 @@ In your `flake.nix`
   - zenn-cli-0.1.158
   - zotero-better-bibtex-6.7.263
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.0.13
+  - zotero-pdf-translate-2.0.14
   - zotero-zotfile-5.1.2
 
