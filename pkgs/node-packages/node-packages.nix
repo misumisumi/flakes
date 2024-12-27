@@ -958,13 +958,13 @@ let
         sha512 = "JxIvIo/Hrpv0JCHSyRpetAdQ6lB27oFYhv0PKCNf1g2gUXOjpeR1exrXccRxLMuAV5WAmGFBwRnNOJqN38+qtg==";
       };
     };
-    "@swc/core-1.10.1" = {
+    "@swc/core-1.10.3" = {
       name = "_at_swc_slash_core";
       packageName = "@swc/core";
-      version = "1.10.1";
+      version = "1.10.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@swc/core/-/core-1.10.1.tgz";
-        sha512 = "rQ4dS6GAdmtzKiCRt3LFVxl37FaY1cgL9kSUTnhQ2xc3fmHOd7jdJK/V4pSZMG1ruGTd0bsi34O2R0Olg9Zo/w==";
+        url = "https://registry.npmjs.org/@swc/core/-/core-1.10.3.tgz";
+        sha512 = "2yjqCcsBx6SNBQZIYNlwxED9aYXW/7QBZyr8LYAxTx5bzmoNhKiClYbsNLe1NJ6ccf5uSbcInw12PjXLduNEdQ==";
       };
     };
     "@swc/counter-0.1.3" = {
@@ -2272,13 +2272,13 @@ let
         sha512 = "oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==";
       };
     };
-    "chalk-5.4.0" = {
+    "chalk-5.4.1" = {
       name = "chalk";
       packageName = "chalk";
-      version = "5.4.0";
+      version = "5.4.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/chalk/-/chalk-5.4.0.tgz";
-        sha512 = "ZkD35Mx92acjB2yNJgziGqT9oKHEOxjTBTDRpOsRWtdecL/0jM3z5kM/CTzHWvHIen1GvkM85p6TuFfDGfc8/Q==";
+        url = "https://registry.npmjs.org/chalk/-/chalk-5.4.1.tgz";
+        sha512 = "zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==";
       };
     };
     "character-entities-1.2.4" = {
@@ -3298,13 +3298,13 @@ let
         sha512 = "7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==";
       };
     };
-    "es-abstract-1.23.6" = {
+    "es-abstract-1.23.7" = {
       name = "es-abstract";
       packageName = "es-abstract";
-      version = "1.23.6";
+      version = "1.23.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/es-abstract/-/es-abstract-1.23.6.tgz";
-        sha512 = "Ifco6n3yj2tMZDWNLyloZrytt9lqqlwvS83P3HtaETR0NUOYnIULGGHpktqYGObGy+8wc1okO25p8TjemhImvA==";
+        url = "https://registry.npmjs.org/es-abstract/-/es-abstract-1.23.7.tgz";
+        sha512 = "OygGC8kIcDhXX+6yAZRGLqwi2CmEXCbLQixeGUgYeR+Qwlppqmo7DIDr8XibtEBZp+fJcoYpoatp5qwLMEdcqQ==";
       };
     };
     "es-define-property-1.0.1" = {
@@ -3523,13 +3523,13 @@ let
         sha512 = "aLrHthzCjH5He4Z2H9YZ+v6Ujb9ocRuW6ZzkJQOrTxleEijANq4v1TsaPaVG1PZcuurEzrLcWRyYBYXD5cEiaw==";
       };
     };
-    "fastq-1.17.1" = {
+    "fastq-1.18.0" = {
       name = "fastq";
       packageName = "fastq";
-      version = "1.17.1";
+      version = "1.18.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/fastq/-/fastq-1.17.1.tgz";
-        sha512 = "sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==";
+        url = "https://registry.npmjs.org/fastq/-/fastq-1.18.0.tgz";
+        sha512 = "QKHXPW0hD8g4UET03SdOdunzSouc9N4AuHdsX8XNcTsuz+yYFILVNIX4l9yHABMhiEI9Db0JTTIpu0wB+Y1QQw==";
       };
     };
     "fault-1.0.4" = {
@@ -4657,13 +4657,13 @@ let
         sha512 = "YfJT7rkpQB0updsdHLGWrvhBJfcfzNNawYDNIyQXJz0IViGf75O8EBPKSdvw2rF+LGCsX4FZ8tcr3b19LcZq4w==";
       };
     };
-    "is-core-module-2.16.0" = {
+    "is-core-module-2.16.1" = {
       name = "is-core-module";
       packageName = "is-core-module";
-      version = "2.16.0";
+      version = "2.16.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/is-core-module/-/is-core-module-2.16.0.tgz";
-        sha512 = "urTSINYfAYgcbLb0yDQ6egFm6h3Mo1DcF9EkyXSRjjzdHbsulg01qhwWuXdOoUBuTkbQ80KDboXa0vFJ+BDH+g==";
+        url = "https://registry.npmjs.org/is-core-module/-/is-core-module-2.16.1.tgz";
+        sha512 = "UfoeMA6fIJ8wTYFEUjelnaGI67v6+N7qXJEvQuIGa99l4xsCruSYOVSQ0uPANn4dAzm8lkYPaKLrrijLq7x23w==";
       };
     };
     "is-data-descriptor-1.0.1" = {
@@ -4826,15 +4826,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/is-map/-/is-map-2.0.3.tgz";
         sha512 = "1Qed0/Hr2m+YqxnM09CjA2d/i6YZNfF6R2oRAOj36eUdS6qIV/huPJNSEpKbupewFs+ZsJlxsjjPbc0/afW6Lw==";
-      };
-    };
-    "is-negative-zero-2.0.3" = {
-      name = "is-negative-zero";
-      packageName = "is-negative-zero";
-      version = "2.0.3";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/is-negative-zero/-/is-negative-zero-2.0.3.tgz";
-        sha512 = "5KoIu2Ngpyek75jXodFvnafB6DJgr3u8uuK0LEZJjrU19DrMD3EVERaR8sjz8CCGgpZvxPl9SuE1GMVPFHx1mw==";
       };
     };
     "is-number-7.0.0" = {
@@ -8509,13 +8500,13 @@ let
         sha512 = "Oo+0REFV59/rz3gfJNKQiBlwfHaSESl1pcGyABQsnnIfWOFt6JNj5gCog2U6MLZ//IGYD+nA8nI+mTShREReaA==";
       };
     };
-    "sql-formatter-15.4.7" = {
+    "sql-formatter-15.4.8" = {
       name = "sql-formatter";
       packageName = "sql-formatter";
-      version = "15.4.7";
+      version = "15.4.8";
       src = fetchurl {
-        url = "https://registry.npmjs.org/sql-formatter/-/sql-formatter-15.4.7.tgz";
-        sha512 = "gEXbtqN/fXmqlfjKbTO5d5kFj1X7fXyJzU/MD6wfFTCF2IXuIQXO21l2gnryZhtnYBhvQixBIMnFGYn4PZ8a9w==";
+        url = "https://registry.npmjs.org/sql-formatter/-/sql-formatter-15.4.8.tgz";
+        sha512 = "DNLFVjKB6QaBli00LaNEJgLeBIPygD6L35hKPbOVi01hK+7sTpShOc2+pa6FgDobcpHKI6+FKswkp7PiNiDaTw==";
       };
     };
     "ssri-10.0.6" = {
@@ -10229,7 +10220,7 @@ in
       sources."@types/conventional-commits-parser-5.0.1"
       sources."@types/node-22.10.2"
       sources."array-ify-1.0.0"
-      sources."chalk-5.4.0"
+      sources."chalk-5.4.1"
       sources."compare-func-2.0.0"
       sources."conventional-changelog-conventionalcommits-7.0.2"
       sources."dot-prop-5.3.0"
@@ -10437,7 +10428,7 @@ in
       sources."@swc-node/core-1.13.3"
       sources."@swc-node/register-1.10.9"
       sources."@swc-node/sourcemap-support-0.5.1"
-      sources."@swc/core-1.10.1"
+      sources."@swc/core-1.10.3"
       sources."@swc/counter-0.1.3"
       sources."@swc/helpers-0.5.15"
       sources."@swc/types-0.1.17"
@@ -10618,7 +10609,7 @@ in
         ];
       })
       sources."fast-glob-3.3.2"
-      sources."fastq-1.17.1"
+      sources."fastq-1.18.0"
       sources."figures-3.2.0"
       sources."file-url-3.0.0"
       (sources."filelist-1.0.4" // {
@@ -10728,7 +10719,7 @@ in
       })
       sources."is-arrayish-0.2.1"
       sources."is-ci-2.0.0"
-      sources."is-core-module-2.16.0"
+      sources."is-core-module-2.16.1"
       sources."is-docker-2.2.1"
       sources."is-extglob-2.1.1"
       sources."is-fullwidth-code-point-3.0.0"
@@ -11391,7 +11382,7 @@ in
       sources."ajv-8.17.1"
       sources."argparse-2.0.1"
       sources."callsites-3.1.0"
-      sources."chalk-5.4.0"
+      sources."chalk-5.4.1"
       sources."cosmiconfig-9.0.0"
       sources."cosmiconfig-typescript-loader-6.1.0"
       sources."env-paths-2.2.1"
@@ -11448,7 +11439,7 @@ in
       sources."@commitlint/types-19.5.0"
       sources."@types/conventional-commits-parser-5.0.1"
       sources."@types/node-22.10.2"
-      sources."chalk-5.4.0"
+      sources."chalk-5.4.1"
       sources."dargs-8.1.0"
       sources."find-up-7.0.0"
       sources."git-raw-commits-4.0.0"
@@ -11511,7 +11502,7 @@ in
       sources."fast-deep-equal-3.1.3"
       sources."fast-glob-3.3.2"
       sources."fast-uri-3.0.3"
-      sources."fastq-1.17.1"
+      sources."fastq-1.18.0"
       sources."fill-range-7.1.1"
       sources."find-up-6.3.0"
       sources."function-bind-1.1.2"
@@ -11523,7 +11514,7 @@ in
       sources."ignore-5.3.2"
       sources."indent-string-5.0.0"
       sources."is-arrayish-0.2.1"
-      sources."is-core-module-2.16.0"
+      sources."is-core-module-2.16.1"
       sources."is-extglob-2.1.1"
       sources."is-glob-4.0.3"
       sources."is-number-7.0.0"
@@ -11762,7 +11753,7 @@ in
       sources."es-object-atoms-1.0.0"
       sources."esprima-4.0.1"
       sources."fast-glob-3.3.2"
-      sources."fastq-1.17.1"
+      sources."fastq-1.18.0"
       sources."fetch-ponyfill-6.1.1"
       sources."fill-range-7.1.1"
       sources."fs.realpath-1.0.0"
@@ -11953,7 +11944,7 @@ in
       sources."inherits-2.0.4"
       sources."ini-1.3.8"
       sources."is-arrayish-0.2.1"
-      sources."is-core-module-2.16.0"
+      sources."is-core-module-2.16.1"
       sources."is-directory-0.3.1"
       sources."is-obj-1.0.1"
       sources."is-plain-obj-1.1.0"
@@ -12182,7 +12173,7 @@ in
       sources."railroad-diagrams-1.0.0"
       sources."randexp-0.4.6"
       sources."ret-0.1.15"
-      sources."sql-formatter-15.4.7"
+      sources."sql-formatter-15.4.8"
       sources."tslib-2.8.1"
     ];
     buildInputs = globalBuildInputs;
@@ -12329,7 +12320,7 @@ in
       sources."is-alphanumerical-1.0.4"
       sources."is-arrayish-0.2.1"
       sources."is-buffer-2.0.5"
-      sources."is-core-module-2.16.0"
+      sources."is-core-module-2.16.1"
       sources."is-data-descriptor-1.0.1"
       sources."is-decimal-1.0.4"
       sources."is-descriptor-1.0.3"
@@ -12600,7 +12591,7 @@ in
       sources."is-alphanumerical-1.0.4"
       sources."is-arrayish-0.2.1"
       sources."is-buffer-2.0.5"
-      sources."is-core-module-2.16.0"
+      sources."is-core-module-2.16.1"
       sources."is-decimal-1.0.4"
       sources."is-fullwidth-code-point-3.0.0"
       sources."is-hexadecimal-1.0.4"
@@ -13032,7 +13023,7 @@ in
       sources."eastasianwidth-0.2.0"
       sources."emoji-regex-10.4.0"
       sources."error-ex-1.3.2"
-      sources."es-abstract-1.23.6"
+      sources."es-abstract-1.23.7"
       sources."es-define-property-1.0.1"
       sources."es-errors-1.3.0"
       sources."es-object-atoms-1.0.0"
@@ -13095,7 +13086,7 @@ in
       sources."is-boolean-object-1.2.1"
       sources."is-buffer-2.0.5"
       sources."is-callable-1.2.7"
-      sources."is-core-module-2.16.0"
+      sources."is-core-module-2.16.1"
       sources."is-data-descriptor-1.0.1"
       sources."is-data-view-1.0.2"
       sources."is-date-object-1.1.0"
@@ -13107,7 +13098,6 @@ in
       sources."is-generator-function-1.0.10"
       sources."is-hexadecimal-1.0.4"
       sources."is-map-2.0.3"
-      sources."is-negative-zero-2.0.3"
       sources."is-number-object-1.1.1"
       sources."is-plain-obj-2.1.0"
       sources."is-plain-object-2.0.4"
