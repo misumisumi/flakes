@@ -1,17 +1,27 @@
-{ lib
-, pythonPackages
-, python3
-, name
-, pkgSources
-, chntpw
-,
+{
+  lib,
+  python3Packages,
+  name,
+  pkgSources,
+  chntpw,
+  fetchpatch,
 }:
 let
-  inherit (pythonPackages) buildPythonApplication;
+  inherit (python3Packages) buildPythonApplication;
+  _chntpw = chntpw.overrideAttrs (oldAttrs: {
+
+    patches = oldAttrs.patches ++ [
+      (fetchpatch {
+        name = "17_hexdump-pointer-type.patch";
+        url = "https://git.launchpad.net/ubuntu/+source/chntpw/plain/debian/patches/17_hexdump-pointer-type.patch?id=aed501c87499f403293e7b9f505277567c2f3b52";
+        sha256 = "sha256-ir9LFl8FJq141OwF5SbyVMtjQ1kTMH1NXlHl0XZq7m8=";
+      })
+    ];
+  });
 in
-buildPythonApplication rec {
+buildPythonApplication {
   inherit (pkgSources."${name}") pname version src;
-  nativeBuildInputs = [ chntpw ];
+  dependencies = [ _chntpw ];
 
   doCheck = false;
 
