@@ -1,13 +1,19 @@
-{ lib, pythonPackages, python3, name, pkgSources }:
+{
+  lib,
+  python3Packages,
+  name,
+  pkgSources,
+}:
 let
-  inherit (pythonPackages) buildPythonPackage;
+  inherit (python3Packages) buildPythonPackage;
 in
-buildPythonPackage rec {
+buildPythonPackage {
   inherit (pkgSources."${name}") pname version src;
 
   doCheck = false;
+  pyproject = true;
   # for runtime depend
-  propagatedBuildInputs = with pythonPackages; [
+  propagatedBuildInputs = with python3Packages; [
     coloredlogs
     gitpython
     jupyter-console

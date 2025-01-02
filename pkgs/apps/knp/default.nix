@@ -1,27 +1,40 @@
-{ stdenv
-, lib
-, name
-, pkgSources
-, fetchurl
-, autoconf
-, automake
-, libtool
-, perl
-, unzip
-, zlib
+{
+  stdenv,
+  lib,
+  name,
+  pkgSources,
+  fetchurl,
+  autoconf,
+  automake,
+  libtool,
+  perl,
+  unzip,
+  zlib,
 }:
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
-  buildInputs = [ autoconf automake libtool perl unzip zlib ];
+  buildInputs = [
+    autoconf
+    automake
+    libtool
+    perl
+    unzip
+    zlib
+  ];
   dict4knp = fetchurl {
     url = "http://lotus.kuee.kyoto-u.ac.jp/nl-resource/knp/dict/latest/knp-dict-latest-bin.zip";
     sha256 = "0sagr41gh1hx0i22h3s8kjwb5g9qc46hv2fxvswjh8c1fwknqpxl";
   };
 
-  hardeningDisable = [ "format" ]; # remove "-Werror=format-security" from gcc flag 
+  hardeningDisable = [ "format" ]; # remove "-Werror=format-security" from gcc flag
 
-  # Multi linkerでもビルドできるようにする
-  NIX_CFLAGS_COMPILE = [ "-fcommon" ];
+  env.NIX_CFLAGS_COMPILE = toString [
+    "-fcommon" # Multi linkerでもビルドできるようにする
+    "-Wno-error=implicit-function-declaration"
+    "-Wno-error=implicit-int"
+    "-Wno-error=incompatible-pointer-types"
+    "-Wno-error=int-conversion"
+  ];
 
   patches = [
     ./Makefile.patch
@@ -47,4 +60,3 @@ stdenv.mkDerivation {
     license = licenses.gpl2;
   };
 }
-
