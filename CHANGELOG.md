@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.2.2](https://github.com/misumisumi/flakes/compare/v2.2.1...v2.2.2) (2025-01-02)
+
+
+### Bug Fixes
+
+* **bt-dualboot:** patch chntpw for gcc 14 ([8a52a97](https://github.com/misumisumi/flakes/commit/8a52a976056b70044ac970d765bc50023819231d))
+* **jupynium:** use pyproject ([4a1186e](https://github.com/misumisumi/flakes/commit/4a1186e5c4ff814a5416bf6fd2bd9cbcec3e2713))
+* **pyknp:** fix compile flag and use pyproject ([17119ce](https://github.com/misumisumi/flakes/commit/17119cedf109ed2485e6e8320fd10c437dec62e3))
+* **snack:** add patch and fix compile flag ([c4a91b4](https://github.com/misumisumi/flakes/commit/c4a91b42fef887c248ad2eae82c804b45293aa23))
+
 ## [2.2.1](https://github.com/misumisumi/flakes/compare/v2.2.0...v2.2.1) (2024-11-30)
 
 
