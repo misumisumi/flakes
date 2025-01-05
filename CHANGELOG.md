@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.3](https://github.com/misumisumi/flakes/compare/v2.2.2...v2.2.3) (2025-01-05)
+
+
+### Bug Fixes
+
+* **zotero-addons:** add exclude_regex for zotero-better-bibtex ([7ee2354](https://github.com/misumisumi/flakes/commit/7ee2354d6b90428dbba0095ae8b641645a971efe))
+
 ## [2.2.2](https://github.com/misumisumi/flakes/compare/v2.2.1...v2.2.2) (2025-01-02)
 
 
