@@ -208,10 +208,10 @@
   };
   tkdnd = {
     pname = "tkdnd";
-    version = "2.9.4";
+    version = "2.9.5";
     src = fetchurl {
-      url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.4.tar.gz";
-      sha256 = "sha256-zG0/C32sqVZIaeKeXbCZbKpfDAPSHJtwMrrUPwpYEhw=";
+      url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.5.tar.gz";
+      sha256 = "sha256-erLR18D1el3H9tVUKJW0R2KjGgFiHJ1/gPO71nx7zDk=";
     };
   };
   vrchat-vpm-cli = {

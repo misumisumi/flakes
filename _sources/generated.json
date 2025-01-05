@@ -382,11 +382,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-zG0/C32sqVZIaeKeXbCZbKpfDAPSHJtwMrrUPwpYEhw=",
+            "sha256": "sha256-erLR18D1el3H9tVUKJW0R2KjGgFiHJ1/gPO71nx7zDk=",
             "type": "url",
-            "url": "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.4.tar.gz"
+            "url": "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.5.tar.gz"
         },
-        "version": "2.9.4"
+        "version": "2.9.5"
     },
     "vrchat-vpm-cli": {
         "cargoLocks": null,

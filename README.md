@@ -50,10 +50,10 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-19.6.0
+  - @commitlint/config-angular-19.7.0
   - @commitlint/config-conventional-19.6.0
-  - @commitlint/config-lerna-scopes-19.5.0
-  - @commitlint/config-patternplate-19.6.0
+  - @commitlint/config-lerna-scopes-19.7.0
+  - @commitlint/config-patternplate-19.7.0
   - @commitlint/load-19.6.1
   - @commitlint/read-19.5.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
@@ -92,14 +92,14 @@ In your `flake.nix`
   - textlint-filter-rule-comments-1.2.2
   - textlint-rule-preset-ja-engineering-paper-1.0.4
   - textlint-rule-preset-ja-spacing-2.4.3
-  - textlint-rule-preset-ja-technical-writing-10.0.1
-  - tkdnd-2.9.4
+  - textlint-rule-preset-ja-technical-writing-12.0.2
+  - tkdnd-2.9.5
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2024-10-28
   - zenn-cli-0.1.158
-  - zotero-better-bibtex-6.7.263
+  - zotero-better-bibtex-7.0.0
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.0.14
+  - zotero-pdf-translate-2.0.15
   - zotero-zotfile-5.1.2
 
