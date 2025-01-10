@@ -302,11 +302,11 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "sha256": "sha256-iq7oiDW5+51wzqYwASOGSV922c/pg1k29MdkIXlT34k=",
+            "sha256": "sha256-1zj0y7E9JWrnPC9HllFXos33rsdAt3q+NamoxNTmHHM=",
             "type": "tarball",
-            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-20-rtsp16/GE-Proton9-20-rtsp16.tar.gz"
+            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17/GE-Proton9-22-rtsp17.tar.gz"
         },
-        "version": "GE-Proton9-20-rtsp16"
+        "version": "GE-Proton9-22-rtsp17"
     },
     "pyknp": {
         "cargoLocks": null,
