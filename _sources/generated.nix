@@ -163,6 +163,17 @@
       sha256 = "sha256-BtvY8r3VJZ0H5D6f1WAfamL4CmmBPKsYAcnp3Emccc4=";
     };
   };
+  openpace = {
+    pname = "openpace";
+    version = "1.1.3";
+    src = fetchFromGitHub {
+      owner = "frankmorgner";
+      repo = "openpace";
+      rev = "1.1.3";
+      fetchSubmodules = false;
+      sha256 = "sha256-KsgCTHvbqxNOcf9HWgXGxagpIjHEcQ5Kryjq71F8XRk=";
+    };
+  };
   proton-ge-rtsp-bin = {
     pname = "proton-ge-rtsp-bin";
     version = "GE-Proton9-22-rtsp17";
@@ -212,6 +223,17 @@
     src = fetchurl {
       url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.5.tar.gz";
       sha256 = "sha256-erLR18D1el3H9tVUKJW0R2KjGgFiHJ1/gPO71nx7zDk=";
+    };
+  };
+  virtualsmartcard = {
+    pname = "virtualsmartcard";
+    version = "virtualsmartcard-0.9";
+    src = fetchFromGitHub {
+      owner = "frankmorgner";
+      repo = "vsmartcard";
+      rev = "virtualsmartcard-0.9";
+      fetchSubmodules = false;
+      sha256 = "sha256-ohvdC8Pz/HN2kfq8wVpB9EW6kkBCRCh0wvcgwMjHWcQ=";
     };
   };
   vrchat-vpm-cli = {

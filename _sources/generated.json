@@ -294,6 +294,26 @@
         },
         "version": "v1.0.2"
     },
+    "openpace": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "openpace",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "frankmorgner",
+            "repo": "openpace",
+            "rev": "1.1.3",
+            "sha256": "sha256-KsgCTHvbqxNOcf9HWgXGxagpIjHEcQ5Kryjq71F8XRk=",
+            "type": "github"
+        },
+        "version": "1.1.3"
+    },
     "proton-ge-rtsp-bin": {
         "cargoLocks": null,
         "date": null,
@@ -387,6 +407,26 @@
             "url": "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.5.tar.gz"
         },
         "version": "2.9.5"
+    },
+    "virtualsmartcard": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "virtualsmartcard",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "frankmorgner",
+            "repo": "vsmartcard",
+            "rev": "virtualsmartcard-0.9",
+            "sha256": "sha256-ohvdC8Pz/HN2kfq8wVpB9EW6kkBCRCh0wvcgwMjHWcQ=",
+            "type": "github"
+        },
+        "version": "virtualsmartcard-0.9"
     },
     "vrchat-vpm-cli": {
         "cargoLocks": null,
