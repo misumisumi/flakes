@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.3.0](https://github.com/misumisumi/flakes/compare/v2.2.3...v2.3.0) (2025-01-16)
+
+
+### Features
+
+* add openpace and virtualsmartcard ([0cc2670](https://github.com/misumisumi/flakes/commit/0cc2670d60547b59ec9341d70633cc5a07193345))
+
+
+### Bug Fixes
+
+* **bt-dualboot:** fixed upstream so remove own patch ([4bfde58](https://github.com/misumisumi/flakes/commit/4bfde585426a0fc5794aab6e36992937e6317914))
+
 ## [2.2.3](https://github.com/misumisumi/flakes/compare/v2.2.2...v2.2.3) (2025-01-05)
 
 
