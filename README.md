@@ -74,6 +74,7 @@ In your `flake.nix`
   - moralerspace-fonts-v1.0.2
   - moralerspace-nerd-fonts-v1.0.2
   - nixos-diff
+  - openpace-1.1.3
   - prettier-plugin-go-template-0.0.15
   - prettier-plugin-kotlin-2.1.0
   - prettier-plugin-nginx-1.0.3
@@ -94,12 +95,13 @@ In your `flake.nix`
   - textlint-rule-preset-ja-spacing-2.4.3
   - textlint-rule-preset-ja-technical-writing-12.0.2
   - tkdnd-2.9.5
+  - virtualsmartcard-virtualsmartcard-0.9
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2024-10-28
   - zenn-cli-0.1.158
-  - zotero-better-bibtex-7.0.2
+  - zotero-better-bibtex-7.0.5
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.1.0
+  - zotero-pdf-translate-2.1.1
   - zotero-zotfile-5.1.2
 

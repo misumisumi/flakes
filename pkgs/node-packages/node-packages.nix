@@ -598,13 +598,13 @@ let
         sha512 = "y7efHHwghQfk28G2z3tlZ67pLG0XdfYbcVG26r7YIXALRsrVQcTq4/tdenSmdOrEsNahIYA/eh8aEVROWGFUDg==";
       };
     };
-    "@nx/devkit-20.3.1" = {
+    "@nx/devkit-20.3.2" = {
       name = "_at_nx_slash_devkit";
       packageName = "@nx/devkit";
-      version = "20.3.1";
+      version = "20.3.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@nx/devkit/-/devkit-20.3.1.tgz";
-        sha512 = "Z6VdBg5GRu2Vg9FpeQJY+zQ1TvBoMWk8cTCZOf8J6myjoWYbksRfpWfNIvEk9OUsEMhpg98vxH2Cc8JR1zfiew==";
+        url = "https://registry.npmjs.org/@nx/devkit/-/devkit-20.3.2.tgz";
+        sha512 = "VhbxEsSTCZlOVgjuQC+6HQmb9Oz9VoHUeo4001Pw6BFBcSXZUi5q37C/lxbAgQPnMKLkFcLva3WKZ+fOLwhGIg==";
       };
     };
     "@octokit/auth-token-3.0.4" = {
@@ -778,13 +778,13 @@ let
         sha512 = "JzBqdVIyqm2FRQCulY6nbQzMpJJpSiJ8XXWMhtOX9eKgaXXpfNOF53lzQEjIydlStnd/eFtuC1dW4VYdD93oRg==";
       };
     };
-    "@sigstore/protobuf-specs-0.3.2" = {
+    "@sigstore/protobuf-specs-0.3.3" = {
       name = "_at_sigstore_slash_protobuf-specs";
       packageName = "@sigstore/protobuf-specs";
-      version = "0.3.2";
+      version = "0.3.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@sigstore/protobuf-specs/-/protobuf-specs-0.3.2.tgz";
-        sha512 = "c6B0ehIWxMI8wiS/bj6rHMPqeFvngFV7cDU/MY+B16P9Z3Mp9k8L93eYZ7BYzSickzuqAQqAq0V956b3Ju6mLw==";
+        url = "https://registry.npmjs.org/@sigstore/protobuf-specs/-/protobuf-specs-0.3.3.tgz";
+        sha512 = "RpacQhBlwpBWd7KEJsRKcBQalbV28fvkxwTOJIqhIuDysMMaJW47V4OqW30iJB9uRpqOSxxEAQFdr8tTattReQ==";
       };
     };
     "@sigstore/sign-2.3.2" = {
@@ -1372,13 +1372,13 @@ let
         sha512 = "hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==";
       };
     };
-    "@types/node-22.10.5" = {
+    "@types/node-22.10.7" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "22.10.5";
+      version = "22.10.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-22.10.5.tgz";
-        sha512 = "F8Q+SeGimwOo86fiovQh8qiXfFEh2/ocYv7tU5pJ3EXMSSxk1Joj5wefpFK2fHTf/N6HKGSxIDBT9f3gCxXPkQ==";
+        url = "https://registry.npmjs.org/@types/node/-/node-22.10.7.tgz";
+        sha512 = "V09KvXxFiutGp6B7XkpaDXlNadZxrzajcY50EuoLIpQ6WWYCSvf19lVIazzfIzQvhUN2HjX12spLojTnhuKlGg==";
       };
     };
     "@types/normalize-package-data-2.4.4" = {
@@ -1516,13 +1516,13 @@ let
         sha512 = "4YPL7IRAuaZflE10+BVhKr6k5KQl/DiLeNCIF7ISqKr0ogM2hqm9ztRNCPqL/xYDI7hfuIHR8T+U7mIDRLQNXw==";
       };
     };
-    "analyze-desumasu-dearu-5.0.1" = {
+    "analyze-desumasu-dearu-5.0.2" = {
       name = "analyze-desumasu-dearu";
       packageName = "analyze-desumasu-dearu";
-      version = "5.0.1";
+      version = "5.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/analyze-desumasu-dearu/-/analyze-desumasu-dearu-5.0.1.tgz";
-        sha512 = "r7ruCOqvqKxAzcvDzj7PdZOstOZP9wtw/wSIoV3FmNxF16CvytxhJnHYbSRhUwqzR542OO/J9CDRWS3SSp4hZA==";
+        url = "https://registry.npmjs.org/analyze-desumasu-dearu/-/analyze-desumasu-dearu-5.0.2.tgz";
+        sha512 = "3PUxFk790GpQkME//hwiJellbtKMiAFX/CyA93etmAo5FujJ+5GKVXW+NU9v2MfF07iWcXsrNMbGW5/vVpqWwA==";
       };
     };
     "ansi-colors-4.1.3" = {
@@ -3154,13 +3154,13 @@ let
         sha512 = "Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==";
       };
     };
-    "es-object-atoms-1.0.0" = {
+    "es-object-atoms-1.1.1" = {
       name = "es-object-atoms";
       packageName = "es-object-atoms";
-      version = "1.0.0";
+      version = "1.1.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/es-object-atoms/-/es-object-atoms-1.0.0.tgz";
-        sha512 = "MZ4iQ6JwHOBQjahnjwaC1ZtIBH+2ohjamzAO3oaHcXYup7qxjF2fixyH+Q71voWHeOkI2q/TnJao/KfXYIZWbw==";
+        url = "https://registry.npmjs.org/es-object-atoms/-/es-object-atoms-1.1.1.tgz";
+        sha512 = "FGgH2h8zKNim9ljj7dankFPcICIK9Cp5bm+c2gQSYePhpaG5+esrLODihIorn+Pe6FGJzWhXQotPv73jTaldXA==";
       };
     };
     "es-set-tostringtag-2.1.0" = {
@@ -3523,13 +3523,13 @@ let
         sha512 = "y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==";
       };
     };
-    "fs-extra-11.2.0" = {
+    "fs-extra-11.3.0" = {
       name = "fs-extra";
       packageName = "fs-extra";
-      version = "11.2.0";
+      version = "11.3.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/fs-extra/-/fs-extra-11.2.0.tgz";
-        sha512 = "PmDi3uwK5nFuXh7XDTlVnS17xJS7vW36is2+w3xcv8SVxiB4NyATf4ctkVY5bkSjX0Y4nbvZCq1/EjtEyr9ktw==";
+        url = "https://registry.npmjs.org/fs-extra/-/fs-extra-11.3.0.tgz";
+        sha512 = "Z4XaCL6dUDHfP/jT25jJKMmtxvuwbkrD1vNSMFlo9lNLY2c5FHYSQgHPRZUjAB26TpDEoW9HCOgplrdbaPV/ew==";
       };
     };
     "fs-minipass-2.1.0" = {
@@ -4000,13 +4000,13 @@ let
         sha512 = "WlztFuK+Lrvi3EggsqOkQ52rKbxkXL3RwB6t5lwoa8QLMemoWfBuL43eDrwOamJyR7uKQKdmKYaBH1NZBiIRrQ==";
       };
     };
-    "hookified-1.6.0" = {
+    "hookified-1.7.0" = {
       name = "hookified";
       packageName = "hookified";
-      version = "1.6.0";
+      version = "1.7.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/hookified/-/hookified-1.6.0.tgz";
-        sha512 = "se7cpwTA+iA/eY548Bu03JJqBiEZAqU2jnyKdj5B5qurtBg64CZGHTgqCv4Yh7NWu6FGI09W61MCq+NoPj9GXA==";
+        url = "https://registry.npmjs.org/hookified/-/hookified-1.7.0.tgz";
+        sha512 = "XQdMjqC1AyeOzfs+17cnIk7Wdfu1hh2JtcyNfBf5u9jHrT3iZUlGHxLTntFBuk5lwkqJ6l3+daeQdHK5yByHVA==";
       };
     };
     "hosted-git-info-2.8.9" = {
@@ -6367,13 +6367,13 @@ let
         sha512 = "4jbtZXNAsfZbAHiiqjLPBiCl16dES1zI4Hpzzxw61Tk+loF+sBDBKx1ICKKKwIqQ7M0mFn1TmkN7euSncWgHiQ==";
       };
     };
-    "nx-20.3.1" = {
+    "nx-20.3.2" = {
       name = "nx";
       packageName = "nx";
-      version = "20.3.1";
+      version = "20.3.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/nx/-/nx-20.3.1.tgz";
-        sha512 = "pO48DoQAwVKBEF7/od3bc1tHBYfafgiuS/hHX3yGmhpWW58baIlxMWFp6QY9+A9Q0R+26pd6AEGnE7d1f7+i/g==";
+        url = "https://registry.npmjs.org/nx/-/nx-20.3.2.tgz";
+        sha512 = "VWUHX0uCn8ACFbpBTpgucDzwe4q/a/UU3AYOhzKCvTzb3kQiyvoxLjORSze93ZNEqgor0PMkCQgcoMBUjxJfzQ==";
       };
     };
     "object-assign-3.0.0" = {
@@ -8050,13 +8050,13 @@ let
         sha512 = "cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==";
       };
     };
-    "spdx-license-ids-3.0.20" = {
+    "spdx-license-ids-3.0.21" = {
       name = "spdx-license-ids";
       packageName = "spdx-license-ids";
-      version = "3.0.20";
+      version = "3.0.21";
       src = fetchurl {
-        url = "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.20.tgz";
-        sha512 = "jg25NiDV/1fLtSgEgyvVyDunvaNHbuwF9lfNV17gSmPFAlYzdfNBlLtLzXTevwkPj7DhGbmN9VnmJIgLnhvaBw==";
+        url = "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.21.tgz";
+        sha512 = "Bvg/8F5XephndSK3JffaRqdT+gyhfqIPwDHpX80tJrF8QQRYMo8sNMeaZ2Dp5+jhwKnUmIOyFFQfHRkjJm5nXg==";
       };
     };
     "split-1.0.1" = {
@@ -8671,13 +8671,13 @@ let
         sha512 = "39s94HK6V1xnII1haYiYQnWy1YQAKK7Zj0mcpUMFHHC4M5JdsRnhGs6DQPVEff0gQIFV0iuDNlofXt15kjMtEA==";
       };
     };
-    "textlint-rule-no-mix-dearu-desumasu-6.0.3" = {
+    "textlint-rule-no-mix-dearu-desumasu-6.0.4" = {
       name = "textlint-rule-no-mix-dearu-desumasu";
       packageName = "textlint-rule-no-mix-dearu-desumasu";
-      version = "6.0.3";
+      version = "6.0.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/textlint-rule-no-mix-dearu-desumasu/-/textlint-rule-no-mix-dearu-desumasu-6.0.3.tgz";
-        sha512 = "6yHxMUMEp8A267gIO9DB9ElNv5VBVNEpSUbxS6sUKZtETTGHQ3P6pdNW20EShvNfy3GA7gl1+vovkFPH8NEtYw==";
+        url = "https://registry.npmjs.org/textlint-rule-no-mix-dearu-desumasu/-/textlint-rule-no-mix-dearu-desumasu-6.0.4.tgz";
+        sha512 = "SmALtOFbtmJ//k2iLMvtqhGrgJ/6uDVZFK7TBj2npVAbt10VxgLL87K+62pQ/BqiN9DpOVObshVFdug7lUOKHw==";
       };
     };
     "textlint-rule-no-nfd-2.0.2" = {
@@ -8842,13 +8842,13 @@ let
         sha512 = "N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==";
       };
     };
-    "traverse-0.6.10" = {
+    "traverse-0.6.11" = {
       name = "traverse";
       packageName = "traverse";
-      version = "0.6.10";
+      version = "0.6.11";
       src = fetchurl {
-        url = "https://registry.npmjs.org/traverse/-/traverse-0.6.10.tgz";
-        sha512 = "hN4uFRxbK+PX56DxYiGHsTn2dME3TVr9vbNqlQGcGcPhJAn+tdP126iA+TArMpI4YSgnTkMWyoLl5bf81Hi5TA==";
+        url = "https://registry.npmjs.org/traverse/-/traverse-0.6.11.tgz";
+        sha512 = "vxXDZg8/+p3gblxB6BhhG5yWVn1kGRlaL8O78UDXc3wRnPizB5g83dcvWV1jpDMIPnjZjOFuxlMmE82XJ4407w==";
       };
     };
     "treeverse-3.0.0" = {
@@ -9714,7 +9714,7 @@ in
     dependencies = [
       sources."@commitlint/types-19.5.0"
       sources."@types/conventional-commits-parser-5.0.1"
-      sources."@types/node-22.10.5"
+      sources."@types/node-22.10.7"
       sources."array-ify-1.0.0"
       sources."chalk-5.4.1"
       sources."compare-func-2.0.0"
@@ -9839,7 +9839,7 @@ in
           sources."which-4.0.0"
         ];
       })
-      (sources."@nx/devkit-20.3.1" // {
+      (sources."@nx/devkit-20.3.2" // {
         dependencies = [
           sources."minimatch-9.0.3"
         ];
@@ -9872,7 +9872,7 @@ in
       sources."@octokit/types-9.3.2"
       sources."@sigstore/bundle-2.3.2"
       sources."@sigstore/core-1.1.0"
-      sources."@sigstore/protobuf-specs-0.3.2"
+      sources."@sigstore/protobuf-specs-0.3.3"
       sources."@sigstore/sign-2.3.2"
       sources."@sigstore/tuf-2.3.4"
       sources."@sigstore/verify-1.2.1"
@@ -10072,7 +10072,7 @@ in
         ];
       })
       sources."fs-constants-1.0.0"
-      sources."fs-extra-11.2.0"
+      sources."fs-extra-11.3.0"
       (sources."fs-minipass-2.1.0" // {
         dependencies = [
           sources."minipass-3.3.6"
@@ -10366,7 +10366,7 @@ in
       })
       sources."npm-run-path-4.0.1"
       sources."npmlog-6.0.2"
-      (sources."nx-20.3.1" // {
+      (sources."nx-20.3.2" // {
         dependencies = [
           sources."lines-and-columns-2.0.3"
           sources."minimatch-9.0.3"
@@ -10515,7 +10515,7 @@ in
       sources."spdx-correct-3.2.0"
       sources."spdx-exceptions-2.5.0"
       sources."spdx-expression-parse-3.0.1"
-      sources."spdx-license-ids-3.0.20"
+      sources."spdx-license-ids-3.0.21"
       sources."split-1.0.1"
       sources."split2-3.2.2"
       sources."sprintf-js-1.0.3"
@@ -10713,7 +10713,7 @@ in
       sources."@commitlint/resolve-extends-19.5.0"
       sources."@commitlint/types-19.5.0"
       sources."@types/conventional-commits-parser-5.0.1"
-      sources."@types/node-22.10.5"
+      sources."@types/node-22.10.7"
       sources."ajv-8.17.1"
       sources."argparse-2.0.1"
       sources."callsites-3.1.0"
@@ -10773,7 +10773,7 @@ in
       sources."@commitlint/top-level-19.5.0"
       sources."@commitlint/types-19.5.0"
       sources."@types/conventional-commits-parser-5.0.1"
-      sources."@types/node-22.10.5"
+      sources."@types/node-22.10.7"
       sources."chalk-5.4.1"
       sources."dargs-8.1.0"
       sources."find-up-7.0.0"
@@ -10902,7 +10902,7 @@ in
       sources."spdx-correct-3.2.0"
       sources."spdx-exceptions-2.5.0"
       sources."spdx-expression-parse-3.0.1"
-      sources."spdx-license-ids-3.0.20"
+      sources."spdx-license-ids-3.0.21"
       sources."strip-indent-4.0.0"
       sources."to-regex-range-5.0.1"
       sources."trim-newlines-4.1.1"
@@ -10962,7 +10962,7 @@ in
       sources."dunder-proto-1.0.1"
       sources."es-define-property-1.0.1"
       sources."es-errors-1.3.0"
-      sources."es-object-atoms-1.0.0"
+      sources."es-object-atoms-1.1.1"
       sources."function-bind-1.1.2"
       sources."get-intrinsic-1.2.7"
       sources."get-proto-1.0.1"
@@ -11062,7 +11062,7 @@ in
       sources."@textlint/utils-1.2.5"
       sources."@types/glob-7.2.0"
       sources."@types/minimatch-5.1.2"
-      sources."@types/node-22.10.5"
+      sources."@types/node-22.10.7"
       sources."@types/unist-2.0.11"
       sources."app-root-path-3.1.0"
       sources."argparse-1.0.10"
@@ -11086,7 +11086,7 @@ in
       sources."encoding-0.1.13"
       sources."es-define-property-1.0.1"
       sources."es-errors-1.3.0"
-      sources."es-object-atoms-1.0.0"
+      sources."es-object-atoms-1.1.1"
       sources."esprima-4.0.1"
       sources."fast-glob-3.3.3"
       sources."fastq-1.18.0"
@@ -11339,7 +11339,7 @@ in
       sources."spdx-correct-3.2.0"
       sources."spdx-exceptions-2.5.0"
       sources."spdx-expression-parse-3.0.1"
-      sources."spdx-license-ids-3.0.20"
+      sources."spdx-license-ids-3.0.21"
       sources."split2-2.2.0"
       sources."sprintf-js-1.0.3"
       sources."string_decoder-1.1.1"
@@ -11646,7 +11646,7 @@ in
       sources."graceful-fs-4.2.11"
       sources."has-flag-4.0.0"
       sources."hasown-2.0.2"
-      sources."hookified-1.6.0"
+      sources."hookified-1.7.0"
       sources."hosted-git-info-2.8.9"
       sources."ieee754-1.2.1"
       sources."is-accessor-descriptor-1.0.1"
@@ -11768,7 +11768,7 @@ in
       sources."spdx-correct-3.2.0"
       sources."spdx-exceptions-2.5.0"
       sources."spdx-expression-parse-3.0.1"
-      sources."spdx-license-ids-3.0.20"
+      sources."spdx-license-ids-3.0.21"
       sources."sprintf-js-1.0.3"
       sources."string-width-4.2.3"
       sources."string-width-cjs-4.2.3"
@@ -11907,7 +11907,7 @@ in
       sources."graceful-fs-4.2.11"
       sources."has-flag-4.0.0"
       sources."hasown-2.0.2"
-      sources."hookified-1.6.0"
+      sources."hookified-1.7.0"
       sources."hosted-git-info-2.8.9"
       sources."ieee754-1.2.1"
       sources."is-alphabetical-1.0.4"
@@ -12017,7 +12017,7 @@ in
       sources."spdx-correct-3.2.0"
       sources."spdx-exceptions-2.5.0"
       sources."spdx-expression-parse-3.0.1"
-      sources."spdx-license-ids-3.0.20"
+      sources."spdx-license-ids-3.0.21"
       sources."sprintf-js-1.0.3"
       sources."string-width-4.2.3"
       sources."string-width-cjs-4.2.3"
@@ -12094,7 +12094,7 @@ in
       sources."dunder-proto-1.0.1"
       sources."es-define-property-1.0.1"
       sources."es-errors-1.3.0"
-      sources."es-object-atoms-1.0.0"
+      sources."es-object-atoms-1.1.1"
       sources."esprima-4.0.1"
       sources."function-bind-1.1.2"
       sources."functions-have-names-1.2.3"
@@ -12169,7 +12169,7 @@ in
       sources."dunder-proto-1.0.1"
       sources."es-define-property-1.0.1"
       sources."es-errors-1.3.0"
-      sources."es-object-atoms-1.0.0"
+      sources."es-object-atoms-1.1.1"
       sources."escape-string-regexp-4.0.0"
       sources."function-bind-1.1.2"
       sources."functions-have-names-1.2.3"
@@ -12248,7 +12248,7 @@ in
       sources."@textlint/utils-13.4.1"
       sources."@types/mdast-3.0.15"
       sources."@types/unist-2.0.11"
-      sources."analyze-desumasu-dearu-5.0.1"
+      sources."analyze-desumasu-dearu-5.0.2"
       sources."argparse-1.0.10"
       sources."array-buffer-byte-length-1.0.2"
       sources."arraybuffer.prototype.slice-1.0.4"
@@ -12282,7 +12282,7 @@ in
       sources."es-abstract-1.23.9"
       sources."es-define-property-1.0.1"
       sources."es-errors-1.3.0"
-      sources."es-object-atoms-1.0.0"
+      sources."es-object-atoms-1.1.1"
       sources."es-set-tostringtag-2.1.0"
       sources."es-to-primitive-1.3.0"
       sources."escape-string-regexp-2.0.0"
@@ -12444,7 +12444,7 @@ in
       sources."textlint-rule-no-dropping-the-ra-3.0.0"
       sources."textlint-rule-no-exclamation-question-mark-1.1.0"
       sources."textlint-rule-no-hankaku-kana-2.0.1"
-      sources."textlint-rule-no-mix-dearu-desumasu-6.0.3"
+      sources."textlint-rule-no-mix-dearu-desumasu-6.0.4"
       sources."textlint-rule-no-nfd-2.0.2"
       sources."textlint-rule-no-zero-width-spaces-1.0.1"
       (sources."textlint-rule-preset-jtf-style-3.0.1" // {
@@ -12463,7 +12463,7 @@ in
       sources."textlint-tester-13.4.1"
       sources."textlint-util-to-string-3.3.4"
       sources."to-regex-3.0.2"
-      sources."traverse-0.6.10"
+      sources."traverse-0.6.11"
       sources."trough-1.0.5"
       sources."typed-array-buffer-1.0.3"
       sources."typed-array-byte-length-1.0.3"
