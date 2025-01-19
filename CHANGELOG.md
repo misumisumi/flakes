@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/misumisumi/flakes/compare/v2.3.0...v2.3.1) (2025-01-19)
+
+
+### Bug Fixes
+
+* **moralerspace:** update moralerspace-fonts ([4e6a5e5](https://github.com/misumisumi/flakes/commit/4e6a5e53a8365885346e0f716314153371347514))
+
 ## [2.3.0](https://github.com/misumisumi/flakes/compare/v2.2.3...v2.3.0) (2025-01-16)
 
 
