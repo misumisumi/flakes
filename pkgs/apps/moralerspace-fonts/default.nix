@@ -1,26 +1,20 @@
-{ stdenvNoCC
-, lib
-, pkgSources
-, unzip
-, fonts ? [ ]
-,
+{
+  stdenvNoCC,
+  lib,
+  pkgSources,
+  unzip,
 }:
 let
-  knownFonts = [ "moralerspace-hw-jpdoc" "moralerspace-jpdoc" "moralerspace-hw" "moralerspace" ];
-  selectedFonts =
-    if (fonts == [ ])
-    then knownFonts
-    else
-      let
-        unknown = lib.subtractLists knownFonts fonts;
-      in
-      if (unknown != [ ])
-      then throw "Unknown font(s): ${lib.concatStringsSep " " unknown}"
-      else fonts;
-  srcs = map (fName: pkgSources."${fName}".src) selectedFonts;
+  knownFonts = [
+    "Moralerspace"
+    "MoralerspaceHW"
+    "MoralerspaceHWJPDOC"
+    "MoralerspaceJPDOC"
+  ];
+  srcs = map (fName: pkgSources."${fName}".src) knownFonts;
 in
 stdenvNoCC.mkDerivation rec {
-  inherit (pkgSources."moralerspace") version;
+  inherit (pkgSources."Moralerspace") version;
   inherit srcs;
   pname = "moralerspace-fonts";
 

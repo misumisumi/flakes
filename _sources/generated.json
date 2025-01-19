@@ -1,4 +1,94 @@
 {
+    "Moralerspace": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "Moralerspace",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-hj/Oh8IdHcH+6/6cP+MHYhhYzzk6jFJQO9Eb11dugX4=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.1.0/Moralerspace_v1.1.0.zip"
+        },
+        "version": "v1.1.0"
+    },
+    "MoralerspaceHW": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "MoralerspaceHW",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-fXvhgtE5MO9nEOwd5hrcW/l0C42XVM/VJgvKP0I5yPU=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.1.0/MoralerspaceHW_v1.1.0.zip"
+        },
+        "version": "v1.1.0"
+    },
+    "MoralerspaceHWJPDOC": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "MoralerspaceHWJPDOC",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-iu6mYWgB9IYGSZRDWYFClwSMCBMjyEBvUwpYJuoSY6Y=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.1.0/MoralerspaceHWJPDOC_v1.1.0.zip"
+        },
+        "version": "v1.1.0"
+    },
+    "MoralerspaceHWNF": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "MoralerspaceHWNF",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-tFGM7t51kxXL5F7SJJo4WV8COsbtQ+3yC1cOfYCQuqY=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.1.0/MoralerspaceHWNF_v1.1.0.zip"
+        },
+        "version": "v1.1.0"
+    },
+    "MoralerspaceJPDOC": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "MoralerspaceJPDOC",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-RlgenD8vQdpGAWSanaz1TgVRsGo16+pWuHYMuTWN3g8=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.1.0/MoralerspaceJPDOC_v1.1.0.zip"
+        },
+        "version": "v1.1.0"
+    },
+    "MoralerspaceNF": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "MoralerspaceNF",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-B6R7Mgre4zFAVi8rCus/hT5f2Gdg++qhA2u40ZrUM6Y=",
+            "type": "url",
+            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.1.0/MoralerspaceNF_v1.1.0.zip"
+        },
+        "version": "v1.1.0"
+    },
     "bt-dualboot": {
         "cargoLocks": null,
         "date": null,
@@ -203,96 +293,6 @@
             "type": "github"
         },
         "version": "bc4cef188669f88cdeb590fe7afb1021ce2ae481"
-    },
-    "moralerspace": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "moralerspace",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-7a/vJAUQpH+P00v8t4+wW633lc0M7wN2bJ5Yw/r274M=",
-            "type": "url",
-            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/moralerspace_v1.0.2.zip"
-        },
-        "version": "v1.0.2"
-    },
-    "moralerspace-hw": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "moralerspace-hw",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-08cojwcSiOXtrbBJIRt2tCtyFLXBo9Q+SYSNrZwxm3g=",
-            "type": "url",
-            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHW_v1.0.2.zip"
-        },
-        "version": "v1.0.2"
-    },
-    "moralerspace-hw-jpdoc": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "moralerspace-hw-jpdoc",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-8uem6oQTUVf63runQSA1CQMwioS0+lOmGTrTxCgrlZY=",
-            "type": "url",
-            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHWJPDOC_v1.0.2.zip"
-        },
-        "version": "v1.0.2"
-    },
-    "moralerspace-hw-nf": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "moralerspace-hw-nf",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-3NzK8mIEIuY/APOVia/FtQUv5i2PpuwajCRNo+aYKGg=",
-            "type": "url",
-            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHWNF_v1.0.2.zip"
-        },
-        "version": "v1.0.2"
-    },
-    "moralerspace-jpdoc": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "moralerspace-jpdoc",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-DCIyC5Rm1c+55myey6G+9qca/ipYkOgZJ+/Xi6chJh4=",
-            "type": "url",
-            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceJPDOC_v1.0.2.zip"
-        },
-        "version": "v1.0.2"
-    },
-    "moralerspace-nf": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "moralerspace-nf",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-BtvY8r3VJZ0H5D6f1WAfamL4CmmBPKsYAcnp3Emccc4=",
-            "type": "url",
-            "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceNF_v1.0.2.zip"
-        },
-        "version": "v1.0.2"
     },
     "openpace": {
         "cargoLocks": null,
