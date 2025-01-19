@@ -56,40 +56,40 @@ git = "https://github.com/ku-nlp/knp/"
 [knp.fetch]
 github = "ku-nlp/knp"
 
-[moralerspace.src]
+[Moralerspace.src]
 github = "yuru7/moralerspace"
 
-[moralerspace.fetch]
-url = "https://github.com/yuru7/moralerspace/releases/download/$ver/moralerspace_$ver.zip"
+[Moralerspace.fetch]
+url = "https://github.com/yuru7/moralerspace/releases/download/$ver/Moralerspace_$ver.zip"
 
-[moralerspace-hw.src]
+[MoralerspaceHW.src]
 github = "yuru7/moralerspace"
 
-[moralerspace-hw.fetch]
+[MoralerspaceHW.fetch]
 url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHW_$ver.zip"
 
-[moralerspace-jpdoc.src]
+[MoralerspaceJPDOC.src]
 github = "yuru7/moralerspace"
 
-[moralerspace-jpdoc.fetch]
+[MoralerspaceJPDOC.fetch]
 url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceJPDOC_$ver.zip"
 
-[moralerspace-hw-jpdoc.src]
+[MoralerspaceHWJPDOC.src]
 github = "yuru7/moralerspace"
 
-[moralerspace-hw-jpdoc.fetch]
+[MoralerspaceHWJPDOC.fetch]
 url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWJPDOC_$ver.zip"
 
-[moralerspace-nf.src]
+[MoralerspaceNF.src]
 github = "yuru7/moralerspace"
 
-[moralerspace-nf.fetch]
+[MoralerspaceNF.fetch]
 url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceNF_$ver.zip"
 
-[moralerspace-hw-nf.src]
+[MoralerspaceHWNF.src]
 github = "yuru7/moralerspace"
 
-[moralerspace-hw-nf.fetch]
+[MoralerspaceHWNF.fetch]
 url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWNF_$ver.zip"
 
 [proton-ge-rtsp-bin.src]
