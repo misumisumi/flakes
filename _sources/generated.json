@@ -180,6 +180,7 @@
             "repo": "droidcam-obs-plugin",
             "rev": "2.3.3",
             "sha256": "sha256-Nl5W4skuoqll3fjzGmOLg0x7OLdP35kzAc3Tbnk/hQA=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "2.3.3"
@@ -200,6 +201,7 @@
             "repo": "emoticon-data",
             "rev": "92b6211ec2a93e14052e0e572d697d4d06c71868",
             "sha256": "sha256-AlzFMsXmkSz4zphpYPTSXJsQ303lI9I02pjVxA1YcIs=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "92b6211ec2a93e14052e0e572d697d4d06c71868"
@@ -220,6 +222,7 @@
             "repo": "fence-agents",
             "rev": "v4.16.0",
             "sha256": "sha256-44LzxXQbc3NqqAtZgsp6ClTZIPkP9hHffc1DSkT3bCA=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "v4.16.0"
@@ -255,6 +258,7 @@
             "repo": "julius",
             "rev": "v4.6",
             "sha256": "sha256-jw3SF18naDnkt7qW9iWcM+h4lcQY5bGCewcUeLbwwP0=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "v4.6"
@@ -290,6 +294,7 @@
             "repo": "knp",
             "rev": "bc4cef188669f88cdeb590fe7afb1021ce2ae481",
             "sha256": "sha256-QdBeT/tJVleX0HgV30JqiOWXXzemWfS6VEhvN76fObE=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "bc4cef188669f88cdeb590fe7afb1021ce2ae481"
@@ -310,6 +315,7 @@
             "repo": "openpace",
             "rev": "1.1.3",
             "sha256": "sha256-KsgCTHvbqxNOcf9HWgXGxagpIjHEcQ5Kryjq71F8XRk=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "1.1.3"
@@ -374,6 +380,7 @@
             "repo": "skk-emoji-jisyo",
             "rev": "v0.0.9",
             "sha256": "sha256-H73wfvFhff55vFvNOunkma3C28BnXGuLzMrSvTLTgXU=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "v0.0.9"
@@ -424,6 +431,7 @@
             "repo": "vsmartcard",
             "rev": "virtualsmartcard-0.9",
             "sha256": "sha256-ohvdC8Pz/HN2kfq8wVpB9EW6kkBCRCh0wvcgwMjHWcQ=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "virtualsmartcard-0.9"
@@ -479,6 +487,7 @@
             "repo": "yaskkserv2",
             "rev": "0.1.7",
             "sha256": "sha256-bF8OHP6nvGhxXNvvnVCuOVFarK/n7WhGRktRN4X5ZjE=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "0.1.7"
