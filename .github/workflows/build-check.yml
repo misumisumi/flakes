@@ -72,8 +72,11 @@ jobs:
           skipPush: true
 
       - name: Build check
+        uses: gacts/run-and-post-run@v1
         if: steps.change.outputs.nix == 'true'
-        run: nix run github:Mic92/nix-fast-build  -- --no-link --no-nom
+        with:
+          run: nix run github:Mic92/nix-fast-build  -- --no-link --no-nom --result-file result.json
+          post: jq -r '.results[] | select(.success==false) | .attr' result.json
 
   post-workflow:
     uses: ./.github/workflows/agent-of-me.yml

@@ -1,0 +1,40 @@
+[zotero-better-bibtex]
+src.github_tag = "retorquere/zotero-better-bibtex"
+src.prefix = "v"
+src.exclude_regex = "v6.7.267"
+fetch.url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v$ver/zotero-better-bibtex-$ver.xpi"
+[zotero-better-bibtex.passthru]
+addonId = "better-bibtex@iris-advies.com"
+description = "Make Zotero effective for us LaTeX holdouts"
+homepage = "https://github.com/retorquere/zotero-better-bibtex"
+license = "mit"
+
+[zotero-zotfile]
+src.github = "jlegewie/zotfile"
+src.prefix = "v"
+fetch.url = "https://github.com/jlegewie/zotfile/releases/download/v$ver/zotfile-$ver-fx.xpi"
+[zotero-zotfile.passthru]
+addonId = "zotfile@columbia.edu"
+description = "Zotero plugin to manage your attachments: automatically rename, move, and attach PDFs (or other files) to Zotero items, sync PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.), and extract PDF annotations."
+homepage = "https://github.com/jlegewie/zotfile"
+license = "gpl3"
+
+[zotero-night]
+src.github = "tefkah/zotero-night"
+src.prefix = "v"
+fetch.url = "https://github.com/tefkah/zotero-night/releases/download/v$ver/night.xpi"
+[zotero-night.passthru]
+addonId = "night@tefkah.com"
+description = "Night theme for Zotero UI and PDF"
+homepage = "https://github.com/tefkah/zotero"
+license = "gpl3"
+
+[zotero-pdf-translate]
+src.github = "windingwind/zotero-pdf-translate"
+src.prefix = "v"
+fetch.url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v$ver/translate-for-zotero.xpi"
+[zotero-pdf-translate.passthru]
+addonId = "zoteropdftranslate@euclpts.com"
+description = "Translate PDF, EPub, webpage, metadata, annotations, notes to the target language. Support 20+ translate services."
+homepage = "https://github.com/winidngwind/zotero-pdf-translate"
+license = "agpl3Only"
