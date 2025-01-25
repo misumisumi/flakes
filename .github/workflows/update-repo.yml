@@ -38,7 +38,7 @@ jobs:
       - name: Update package version
         run: |
           nix run nixpkgs#nvfetcher -- -c pkgs/packages.toml
-          nix run nixpkgs#nvfetcher -- -c pkgs/zotero-addons/addons.toml -o pkgs/zotero-addons
+          nix run nixpkgs#nvfetcher -- -c pkgs/zotero-addons/addons.toml -o pkgs/zotero-addons/_sources
 
       - name: Update node package version
         run: |

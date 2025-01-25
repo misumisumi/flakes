@@ -1,9 +1,26 @@
-{ fetchgit, fetchurl, fetchFromGitHub, dockerTools, lib, stdenv }@args:
+{
+  fetchgit,
+  fetchurl,
+  fetchFromGitHub,
+  dockerTools,
+  lib,
+  stdenv,
+}@args:
 
 let
 
   buildZoteroXpiAddon = lib.makeOverridable (
-    { stdenv ? args.stdenv, pname, version, src, addonId, homepage, description, license, ... }:
+    {
+      stdenv ? args.stdenv,
+      pname,
+      version,
+      src,
+      addonId,
+      homepage,
+      description,
+      license,
+      ...
+    }:
     stdenv.mkDerivation {
       inherit pname version src;
 
@@ -23,10 +40,27 @@ let
       };
     }
   );
-  addonSources = import ./generated.nix { inherit fetchgit fetchurl fetchFromGitHub dockerTools; };
+  addonSources = import ./_sources/generated.nix {
+    inherit
+      fetchgit
+      fetchurl
+      fetchFromGitHub
+      dockerTools
+      ;
+  };
 in
-lib.mapAttrs
-  (name: source: buildZoteroXpiAddon {
-    inherit stdenv; inherit (source) pname version src addonId homepage description license;
-  })
-  addonSources
+lib.mapAttrs (
+  name: source:
+  buildZoteroXpiAddon {
+    inherit stdenv;
+    inherit (source)
+      pname
+      version
+      src
+      addonId
+      homepage
+      description
+      license
+      ;
+  }
+) addonSources
