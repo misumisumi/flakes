@@ -56,42 +56,6 @@ git = "https://github.com/ku-nlp/knp/"
 [knp.fetch]
 github = "ku-nlp/knp"
 
-[Moralerspace.src]
-github = "yuru7/moralerspace"
-
-[Moralerspace.fetch]
-url = "https://github.com/yuru7/moralerspace/releases/download/$ver/Moralerspace_$ver.zip"
-
-[MoralerspaceHW.src]
-github = "yuru7/moralerspace"
-
-[MoralerspaceHW.fetch]
-url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHW_$ver.zip"
-
-[MoralerspaceJPDOC.src]
-github = "yuru7/moralerspace"
-
-[MoralerspaceJPDOC.fetch]
-url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceJPDOC_$ver.zip"
-
-[MoralerspaceHWJPDOC.src]
-github = "yuru7/moralerspace"
-
-[MoralerspaceHWJPDOC.fetch]
-url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWJPDOC_$ver.zip"
-
-[MoralerspaceNF.src]
-github = "yuru7/moralerspace"
-
-[MoralerspaceNF.fetch]
-url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceNF_$ver.zip"
-
-[MoralerspaceHWNF.src]
-github = "yuru7/moralerspace"
-
-[MoralerspaceHWNF.fetch]
-url = "https://github.com/yuru7/moralerspace/releases/download/$ver/MoralerspaceHWNF_$ver.zip"
-
 [proton-ge-rtsp-bin.src]
 github = "SpookySkeletons/proton-ge-rtsp"
 
