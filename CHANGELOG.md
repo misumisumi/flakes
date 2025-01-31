@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/misumisumi/flakes/compare/v2.3.1...v3.0.0) (2025-01-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* **moralerspace:** deleted because it was included in the upstream
+
+### Bug Fixes
+
+* **moralerspace:** deleted because it was included in the upstream ([3a05bf9](https://github.com/misumisumi/flakes/commit/3a05bf92128e20a32e55cec4382c687217f1bcd3))
+
 ## [2.3.1](https://github.com/misumisumi/flakes/compare/v2.3.0...v2.3.1) (2025-01-19)
 
 
