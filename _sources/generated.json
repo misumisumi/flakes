@@ -88,12 +88,12 @@
             "name": null,
             "owner": "dev47apps",
             "repo": "droidcam-obs-plugin",
-            "rev": "2.3.3",
-            "sha256": "sha256-Nl5W4skuoqll3fjzGmOLg0x7OLdP35kzAc3Tbnk/hQA=",
+            "rev": "2.3.4",
+            "sha256": "sha256-KWMLhddK561xA+EjvoG4tXRW4xoLil31JcTTfppblmA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2.3.3"
+        "version": "2.3.4"
     },
     "emoticon-data": {
         "cargoLocks": null,
@@ -238,9 +238,9 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "sha256": "sha256-1zj0y7E9JWrnPC9HllFXos33rsdAt3q+NamoxNTmHHM=",
+            "sha256": "sha256-GeExWNW0J3Nfq5rcBGiG2BNEmBg0s6bavF68QqJfuX8=",
             "type": "tarball",
-            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17/GE-Proton9-22-rtsp17.tar.gz"
+            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17-1/GE-Proton9-22-rtsp17-1.tar.gz"
         },
         "version": "GE-Proton9-22-rtsp17"
     },

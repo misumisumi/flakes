@@ -53,11 +53,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-5BtCykqv2bKM5ku5fdFKPFy8kY06btKbsVDzboVY2Bg=",
+            "sha256": "sha256-56aqL/eYjafw6//7z9R4nvmxjTgQeOE7mfket7NdEqw=",
             "type": "url",
-            "url": "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.1.2/translate-for-zotero.xpi"
+            "url": "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.1.5/translate-for-zotero.xpi"
         },
-        "version": "2.1.2"
+        "version": "2.1.5"
     },
     "zotero-zotfile": {
         "cargoLocks": null,

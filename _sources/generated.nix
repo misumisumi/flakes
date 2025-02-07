@@ -43,13 +43,13 @@
   };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
-    version = "2.3.3";
+    version = "2.3.4";
     src = fetchFromGitHub {
       owner = "dev47apps";
       repo = "droidcam-obs-plugin";
-      rev = "2.3.3";
+      rev = "2.3.4";
       fetchSubmodules = false;
-      sha256 = "sha256-Nl5W4skuoqll3fjzGmOLg0x7OLdP35kzAc3Tbnk/hQA=";
+      sha256 = "sha256-KWMLhddK561xA+EjvoG4tXRW4xoLil31JcTTfppblmA=";
     };
   };
   emoticon-data = {
@@ -130,8 +130,8 @@
     pname = "proton-ge-rtsp-bin";
     version = "GE-Proton9-22-rtsp17";
     src = fetchTarball {
-      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17/GE-Proton9-22-rtsp17.tar.gz";
-      sha256 = "sha256-1zj0y7E9JWrnPC9HllFXos33rsdAt3q+NamoxNTmHHM=";
+      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17-1/GE-Proton9-22-rtsp17-1.tar.gz";
+      sha256 = "sha256-GeExWNW0J3Nfq5rcBGiG2BNEmBg0s6bavF68QqJfuX8=";
     };
   };
   pyknp = {

@@ -50,16 +50,16 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-19.7.0
-  - @commitlint/config-conventional-19.6.0
+  - @commitlint/config-angular-19.7.1
+  - @commitlint/config-conventional-19.7.1
   - @commitlint/config-lerna-scopes-19.7.0
-  - @commitlint/config-patternplate-19.7.0
+  - @commitlint/config-patternplate-19.7.1
   - @commitlint/load-19.6.1
   - @commitlint/read-19.5.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @prettier/plugin-php-0.22.4
-  - @prettier/plugin-pug-3.2.0
+  - @prettier/plugin-pug-3.2.1
   - @prettier/plugin-ruby-4.0.4
   - @prettier/plugin-xml-3.4.1
   - @proofdict/textlint-rule-proofdict-3.1.2
@@ -67,7 +67,7 @@ In your `flake.nix`
   - commitlint-format-json-1.1.0
   - commitlint-with-plugins
   - cups-brother-hll5100dn-3.5.1-1
-  - droidcam-obs-plugin-2.3.3
+  - droidcam-obs-plugin-2.3.4
   - jawiki-kana-kanji-dict-2024-10-28
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
@@ -100,6 +100,6 @@ In your `flake.nix`
   - zenn-cli-0.1.158
   - zotero-better-bibtex-7.0.5
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.1.2
+  - zotero-pdf-translate-2.1.5
   - zotero-zotfile-5.1.2
 
