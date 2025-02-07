@@ -60,7 +60,7 @@ github = "ku-nlp/knp"
 github = "SpookySkeletons/proton-ge-rtsp"
 
 [proton-ge-rtsp-bin.fetch]
-tarball = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17/GE-Proton9-22-rtsp17.tar.gz"
+tarball = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17-1/GE-Proton9-22-rtsp17-1.tar.gz"
 
 [ricoh-sp-c260series-ppd.src]
 manual = "1.00"
