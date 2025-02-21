@@ -97,10 +97,10 @@
   };
   jupynium = {
     pname = "jupynium";
-    version = "0.2.5";
+    version = "0.2.6";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.5.tar.gz";
-      sha256 = "sha256-v/6nNQxTvqev292LbRgejn3uFQc0+Uk5GCyryXSlJWc=";
+      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.6.tar.gz";
+      sha256 = "sha256-TydqvoODO49WjXdD20GD4ywVLzqaGHUdh07fr0MtuXw=";
     };
   };
   knp = {

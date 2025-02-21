@@ -182,11 +182,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-v/6nNQxTvqev292LbRgejn3uFQc0+Uk5GCyryXSlJWc=",
+            "sha256": "sha256-TydqvoODO49WjXdD20GD4ywVLzqaGHUdh07fr0MtuXw=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.5.tar.gz"
+            "url": "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.6.tar.gz"
         },
-        "version": "0.2.5"
+        "version": "0.2.6"
     },
     "knp": {
         "cargoLocks": null,
