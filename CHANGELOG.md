@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/misumisumi/flakes/compare/v3.0.0...v3.0.1) (2025-02-22)
+
+
+### Bug Fixes
+
+* **jupynium:** add version-pioneer for jupynium dependent ([8bd241f](https://github.com/misumisumi/flakes/commit/8bd241f69135fea150bdad63ca6cf1c9d527d864))
+
 ## [3.0.0](https://github.com/misumisumi/flakes/compare/v2.3.1...v3.0.0) (2025-01-31)
 
 
