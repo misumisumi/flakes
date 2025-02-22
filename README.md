@@ -77,10 +77,10 @@ In your `flake.nix`
   - prettier-plugin-kotlin-2.1.0
   - prettier-plugin-nginx-1.0.3
   - prettier-plugin-rust-0.1.9
-  - prettier-plugin-sh-0.14.0
+  - prettier-plugin-sh-0.15.0
   - prettier-plugin-sql-0.18.1
   - proton-ge-rtsp-bin-GE-Proton9-22-rtsp17
-  - python3.12-jupynium-0.2.5
+  - python3.12-jupynium-0.2.6
   - python3.12-pyknp-0.6.1
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9

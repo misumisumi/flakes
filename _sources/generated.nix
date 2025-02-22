@@ -97,10 +97,10 @@
   };
   jupynium = {
     pname = "jupynium";
-    version = "0.2.5";
+    version = "0.2.6";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.5.tar.gz";
-      sha256 = "sha256-v/6nNQxTvqev292LbRgejn3uFQc0+Uk5GCyryXSlJWc=";
+      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.6.tar.gz";
+      sha256 = "sha256-TydqvoODO49WjXdD20GD4ywVLzqaGHUdh07fr0MtuXw=";
     };
   };
   knp = {
@@ -175,6 +175,14 @@
     src = fetchurl {
       url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.5.tar.gz";
       sha256 = "sha256-erLR18D1el3H9tVUKJW0R2KjGgFiHJ1/gPO71nx7zDk=";
+    };
+  };
+  version-pioneer = {
+    pname = "version-pioneer";
+    version = "0.0.13";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/v/version_pioneer/version_pioneer-0.0.13.tar.gz";
+      sha256 = "sha256-bUocCPOtiHFNmf/GtU+szyLMomwYBziK7cPAY8Nki18=";
     };
   };
   virtualsmartcard = {

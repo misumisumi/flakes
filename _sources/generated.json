@@ -182,11 +182,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-v/6nNQxTvqev292LbRgejn3uFQc0+Uk5GCyryXSlJWc=",
+            "sha256": "sha256-TydqvoODO49WjXdD20GD4ywVLzqaGHUdh07fr0MtuXw=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.5.tar.gz"
+            "url": "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.6.tar.gz"
         },
-        "version": "0.2.5"
+        "version": "0.2.6"
     },
     "knp": {
         "cargoLocks": null,
@@ -324,6 +324,21 @@
             "url": "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.5.tar.gz"
         },
         "version": "2.9.5"
+    },
+    "version-pioneer": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "version-pioneer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-bUocCPOtiHFNmf/GtU+szyLMomwYBziK7cPAY8Nki18=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/v/version_pioneer/version_pioneer-0.0.13.tar.gz"
+        },
+        "version": "0.0.13"
     },
     "virtualsmartcard": {
         "cargoLocks": null,

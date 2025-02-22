@@ -110,13 +110,6 @@ webpage = "https://www.nuget.org/packages/VRChat.VPM.CLI"
 [vrchat-vpm-cli.fetch]
 url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/$ver"
 
-[virtualsmartcard.src]
-github_tag = "frankmorgner/vsmartcard"
-regex = "virtualsmartcard-*"
-
-[virtualsmartcard.fetch]
-github = "frankmorgner/vsmartcard"
-
 [openpace.src]
 github_tag = "frankmorgner/openpace"
 
@@ -156,3 +149,16 @@ pypi = "pyknp"
 
 [pyknp.fetch]
 pypi = "pyknp"
+
+[version-pioneer.src]
+pypi = "version-pioneer"
+
+[version-pioneer.fetch]
+pypi = "version_pioneer"
+
+[virtualsmartcard.src]
+github_tag = "frankmorgner/vsmartcard"
+regex = "virtualsmartcard-*"
+
+[virtualsmartcard.fetch]
+github = "frankmorgner/vsmartcard"
