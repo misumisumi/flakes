@@ -325,6 +325,21 @@
         },
         "version": "2.9.5"
     },
+    "version-pioneer": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "version-pioneer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-bUocCPOtiHFNmf/GtU+szyLMomwYBziK7cPAY8Nki18=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/v/version_pioneer/version_pioneer-0.0.13.tar.gz"
+        },
+        "version": "0.0.13"
+    },
     "virtualsmartcard": {
         "cargoLocks": null,
         "date": null,

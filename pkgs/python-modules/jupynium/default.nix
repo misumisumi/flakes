@@ -16,6 +16,8 @@ buildPythonPackage {
   propagatedBuildInputs = with python3Packages; [
     coloredlogs
     gitpython
+    hatch-requirements-txt
+    hatchling
     jupyter-console
     nbclassic
     notebook
@@ -28,6 +30,7 @@ buildPythonPackage {
     setuptools
     setuptools_scm
     verboselogs
+    version-pioneer
   ];
 
   meta = with lib; {
