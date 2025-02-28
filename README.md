@@ -82,6 +82,7 @@ In your `flake.nix`
   - proton-ge-rtsp-bin-GE-Proton9-22-rtsp17
   - python3.12-jupynium-0.2.6
   - python3.12-pyknp-0.6.1
+  - python3.12-version-pioneer-0.0.13
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
   - skk-emotikons-jisyo-2021-04-01
