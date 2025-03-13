@@ -44,7 +44,7 @@
       url = "https://github.com/syt2/zotero-scipdf/releases/download/V1.3.0/sci-pdf.xpi";
       sha256 = "sha256-Z0OVtN7JHmvfE0hZ6rQ6VUgLFJPF3hnewJn/iQ+Ma8c=";
     };
-    license = "agpl3Only";
+    license = "agpl3Plus";
     description = "Download PDF from Sci-Hub automatically (For Zotero7)";
     homepage = "https://github.com/syt2/zotero-scipdf";
     addonId = "scipdf@ytshen.com";

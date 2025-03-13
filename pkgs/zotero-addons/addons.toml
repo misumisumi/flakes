@@ -47,4 +47,4 @@ fetch.url = "https://github.com/syt2/zotero-scipdf/releases/download/V$ver/sci-p
 addonId = "scipdf@ytshen.com"
 description = "Download PDF from Sci-Hub automatically (For Zotero7)"
 homepage = "https://github.com/syt2/zotero-scipdf"
-license = "agpl3Only"
+license = "agpl3Plus"
