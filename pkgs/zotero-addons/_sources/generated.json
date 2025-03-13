@@ -98,5 +98,25 @@
             "url": "https://github.com/jlegewie/zotfile/releases/download/v5.1.2/zotfile-5.1.2-fx.xpi"
         },
         "version": "5.1.2"
+    },
+    "zotero-zotmoov": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zotero-zotmoov",
+        "passthru": {
+            "addonId": "zotmoov@wileyy.com",
+            "description": "Mooves attachments and links them",
+            "homepage": "https://github.com/wileyyugioh/zotmoov",
+            "license": "gpl3Only"
+        },
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-THHoymaINraEcEokZqPCod96FCx8CwHTqPYslv+iK9w=",
+            "type": "url",
+            "url": "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.18/zotmoov-1.2.18-fx.xpi"
+        },
+        "version": "1.2.18"
     }
 }

@@ -61,4 +61,16 @@
     homepage = "https://github.com/jlegewie/zotfile";
     addonId = "zotfile@columbia.edu";
   };
+  zotero-zotmoov = {
+    pname = "zotero-zotmoov";
+    version = "1.2.18";
+    src = fetchurl {
+      url = "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.18/zotmoov-1.2.18-fx.xpi";
+      sha256 = "sha256-THHoymaINraEcEokZqPCod96FCx8CwHTqPYslv+iK9w=";
+    };
+    license = "gpl3Only";
+    description = "Mooves attachments and links them";
+    homepage = "https://github.com/wileyyugioh/zotmoov";
+    addonId = "zotmoov@wileyy.com";
+  };
 }
