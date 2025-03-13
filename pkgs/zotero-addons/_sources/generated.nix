@@ -37,6 +37,18 @@
     homepage = "https://github.com/winidngwind/zotero-pdf-translate";
     addonId = "zoteropdftranslate@euclpts.com";
   };
+  zotero-scipdf = {
+    pname = "zotero-scipdf";
+    version = "1.3.0";
+    src = fetchurl {
+      url = "https://github.com/syt2/zotero-scipdf/releases/download/V1.3.0/sci-pdf.xpi";
+      sha256 = "sha256-Z0OVtN7JHmvfE0hZ6rQ6VUgLFJPF3hnewJn/iQ+Ma8c=";
+    };
+    license = "agpl3Only";
+    description = "Download PDF from Sci-Hub automatically (For Zotero7)";
+    homepage = "https://github.com/syt2/zotero-scipdf";
+    addonId = "scipdf@ytshen.com";
+  };
   zotero-zotfile = {
     pname = "zotero-zotfile";
     version = "5.1.2";
