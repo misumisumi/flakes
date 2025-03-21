@@ -37,6 +37,18 @@
     homepage = "https://github.com/winidngwind/zotero-pdf-translate";
     addonId = "zoteropdftranslate@euclpts.com";
   };
+  zotero-scipdf = {
+    pname = "zotero-scipdf";
+    version = "1.3.0";
+    src = fetchurl {
+      url = "https://github.com/syt2/zotero-scipdf/releases/download/V1.3.0/sci-pdf.xpi";
+      sha256 = "sha256-Z0OVtN7JHmvfE0hZ6rQ6VUgLFJPF3hnewJn/iQ+Ma8c=";
+    };
+    license = "agpl3Plus";
+    description = "Download PDF from Sci-Hub automatically (For Zotero7)";
+    homepage = "https://github.com/syt2/zotero-scipdf";
+    addonId = "scipdf@ytshen.com";
+  };
   zotero-zotfile = {
     pname = "zotero-zotfile";
     version = "5.1.2";
@@ -48,5 +60,17 @@
     description = "Zotero plugin to manage your attachments: automatically rename, move, and attach PDFs (or other files) to Zotero items, sync PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.), and extract PDF annotations.";
     homepage = "https://github.com/jlegewie/zotfile";
     addonId = "zotfile@columbia.edu";
+  };
+  zotero-zotmoov = {
+    pname = "zotero-zotmoov";
+    version = "1.2.18";
+    src = fetchurl {
+      url = "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.18/zotmoov-1.2.18-fx.xpi";
+      sha256 = "sha256-THHoymaINraEcEokZqPCod96FCx8CwHTqPYslv+iK9w=";
+    };
+    license = "gpl3Only";
+    description = "Mooves attachments and links them";
+    homepage = "https://github.com/wileyyugioh/zotmoov";
+    addonId = "zotmoov@wileyy.com";
   };
 }

@@ -59,6 +59,26 @@
         },
         "version": "2.1.5"
     },
+    "zotero-scipdf": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zotero-scipdf",
+        "passthru": {
+            "addonId": "scipdf@ytshen.com",
+            "description": "Download PDF from Sci-Hub automatically (For Zotero7)",
+            "homepage": "https://github.com/syt2/zotero-scipdf",
+            "license": "agpl3Plus"
+        },
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Z0OVtN7JHmvfE0hZ6rQ6VUgLFJPF3hnewJn/iQ+Ma8c=",
+            "type": "url",
+            "url": "https://github.com/syt2/zotero-scipdf/releases/download/V1.3.0/sci-pdf.xpi"
+        },
+        "version": "1.3.0"
+    },
     "zotero-zotfile": {
         "cargoLocks": null,
         "date": null,
@@ -78,5 +98,25 @@
             "url": "https://github.com/jlegewie/zotfile/releases/download/v5.1.2/zotfile-5.1.2-fx.xpi"
         },
         "version": "5.1.2"
+    },
+    "zotero-zotmoov": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zotero-zotmoov",
+        "passthru": {
+            "addonId": "zotmoov@wileyy.com",
+            "description": "Mooves attachments and links them",
+            "homepage": "https://github.com/wileyyugioh/zotmoov",
+            "license": "gpl3Only"
+        },
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-THHoymaINraEcEokZqPCod96FCx8CwHTqPYslv+iK9w=",
+            "type": "url",
+            "url": "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.18/zotmoov-1.2.18-fx.xpi"
+        },
+        "version": "1.2.18"
     }
 }
