@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.1.0](https://github.com/misumisumi/flakes/compare/v3.0.1...v3.1.0) (2025-03-21)
+
+
+### Features
+
+* **zotero-addons:** add zotero-scipdf ([118ea67](https://github.com/misumisumi/flakes/commit/118ea672bfc0d357fa8d75077c7838ee606295f9))
+* **zotero-addons:** add zotero-zotmoov ([5c94850](https://github.com/misumisumi/flakes/commit/5c9485041455611aab37bbbf510beb40b93fc5bb))
+
+
+### Bug Fixes
+
+* **zotero-addons:** use appropriate license ([d65472a](https://github.com/misumisumi/flakes/commit/d65472a585ab0e9900fcf4fb024b86aaeecdcae9))
+
 ## [3.0.1](https://github.com/misumisumi/flakes/compare/v3.0.0...v3.0.1) (2025-02-22)
 
 
