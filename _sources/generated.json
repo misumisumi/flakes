@@ -354,12 +354,12 @@
             "name": null,
             "owner": "frankmorgner",
             "repo": "vsmartcard",
-            "rev": "virtualsmartcard-0.9",
-            "sha256": "sha256-ohvdC8Pz/HN2kfq8wVpB9EW6kkBCRCh0wvcgwMjHWcQ=",
+            "rev": "virtualsmartcard-0.10",
+            "sha256": "sha256-+BrX2aqByUvIUbN4K+sdq9bH29FD2rtTt4q+URPgx7A=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "virtualsmartcard-0.9"
+        "version": "virtualsmartcard-0.10"
     },
     "vrchat-vpm-cli": {
         "cargoLocks": null,
