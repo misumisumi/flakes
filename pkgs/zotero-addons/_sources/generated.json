@@ -13,11 +13,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-MXRcvd6QDYwKKPtLq01KlUijrHbMhUhu95qXcv3f6Pc=",
+            "sha256": "sha256-5mToXVKTCqJc+ERVIyzbCjRRupFctXYG8P+0o6krjkc=",
             "type": "url",
-            "url": "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.5/zotero-better-bibtex-7.0.5.xpi"
+            "url": "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.9/zotero-better-bibtex-7.0.9.xpi"
         },
-        "version": "7.0.5"
+        "version": "7.0.9"
     },
     "zotero-night": {
         "cargoLocks": null,
@@ -53,11 +53,31 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-56aqL/eYjafw6//7z9R4nvmxjTgQeOE7mfket7NdEqw=",
+            "sha256": "sha256-1qEXIypO+2940ZTTocZvX3UON+Vd54xxY9VGEuIZkeI=",
             "type": "url",
-            "url": "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.1.5/translate-for-zotero.xpi"
+            "url": "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.2.1/translate-for-zotero.xpi"
         },
-        "version": "2.1.5"
+        "version": "2.2.1"
+    },
+    "zotero-scipdf": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zotero-scipdf",
+        "passthru": {
+            "addonId": "scipdf@ytshen.com",
+            "description": "Download PDF from Sci-Hub automatically (For Zotero7)",
+            "homepage": "https://github.com/syt2/zotero-scipdf",
+            "license": "agpl3Plus"
+        },
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Z0OVtN7JHmvfE0hZ6rQ6VUgLFJPF3hnewJn/iQ+Ma8c=",
+            "type": "url",
+            "url": "https://github.com/syt2/zotero-scipdf/releases/download/V1.3.0/sci-pdf.xpi"
+        },
+        "version": "1.3.0"
     },
     "zotero-zotfile": {
         "cargoLocks": null,
@@ -78,5 +98,25 @@
             "url": "https://github.com/jlegewie/zotfile/releases/download/v5.1.2/zotfile-5.1.2-fx.xpi"
         },
         "version": "5.1.2"
+    },
+    "zotero-zotmoov": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zotero-zotmoov",
+        "passthru": {
+            "addonId": "zotmoov@wileyy.com",
+            "description": "Mooves attachments and links them",
+            "homepage": "https://github.com/wileyyugioh/zotmoov",
+            "license": "gpl3Only"
+        },
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-THHoymaINraEcEokZqPCod96FCx8CwHTqPYslv+iK9w=",
+            "type": "url",
+            "url": "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.18/zotmoov-1.2.18-fx.xpi"
+        },
+        "version": "1.2.18"
     }
 }
