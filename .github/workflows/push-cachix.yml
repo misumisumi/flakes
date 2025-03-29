@@ -42,7 +42,7 @@ jobs:
 
       - uses: DeterminateSystems/magic-nix-cache-action@main
 
-      - uses: cachix/cachix-action@v15
+      - uses: cachix/cachix-action@v16
         if: steps.change.outputs.nix == 'true'
         with:
           name: misumisumi

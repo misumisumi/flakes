@@ -187,13 +187,13 @@
   };
   virtualsmartcard = {
     pname = "virtualsmartcard";
-    version = "virtualsmartcard-0.9";
+    version = "virtualsmartcard-0.10";
     src = fetchFromGitHub {
       owner = "frankmorgner";
       repo = "vsmartcard";
-      rev = "virtualsmartcard-0.9";
+      rev = "virtualsmartcard-0.10";
       fetchSubmodules = false;
-      sha256 = "sha256-ohvdC8Pz/HN2kfq8wVpB9EW6kkBCRCh0wvcgwMjHWcQ=";
+      sha256 = "sha256-+BrX2aqByUvIUbN4K+sdq9bH29FD2rtTt4q+URPgx7A=";
     };
   };
   vrchat-vpm-cli = {
