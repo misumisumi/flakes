@@ -59,7 +59,7 @@ In your `flake.nix`
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @prettier/plugin-php-0.22.4
-  - @prettier/plugin-pug-3.2.1
+  - @prettier/plugin-pug-3.3.0
   - @prettier/plugin-ruby-4.0.4
   - @prettier/plugin-xml-3.4.1
   - @proofdict/textlint-rule-proofdict-3.1.2
@@ -77,7 +77,7 @@ In your `flake.nix`
   - prettier-plugin-kotlin-2.1.0
   - prettier-plugin-nginx-1.0.3
   - prettier-plugin-rust-0.1.9
-  - prettier-plugin-sh-0.15.0
+  - prettier-plugin-sh-0.16.0
   - prettier-plugin-sql-0.18.1
   - proton-ge-rtsp-bin-GE-Proton9-22-rtsp17
   - python3.12-jupynium-0.2.6
@@ -99,10 +99,10 @@ In your `flake.nix`
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2025-03-04
   - zenn-cli-0.1.158
-  - zotero-better-bibtex-7.0.9
+  - zotero-better-bibtex-7.0.14
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.2.1
+  - zotero-pdf-translate-2.2.5
   - zotero-scipdf-1.3.0
   - zotero-zotfile-5.1.2
-  - zotero-zotmoov-1.2.18
+  - zotero-zotmoov-1.2.19
 
