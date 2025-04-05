@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/misumisumi/flakes/compare/v3.1.0...v3.1.1) (2025-04-05)
+
+
+### Bug Fixes
+
+* **python-modules:** fix pkgs broken by NixOS/nixpkgs[#394838](https://github.com/misumisumi/flakes/issues/394838) ([9b07a08](https://github.com/misumisumi/flakes/commit/9b07a08da4c33ed6fbb85905018dc4f818a7276e))
+
 ## [3.1.0](https://github.com/misumisumi/flakes/compare/v3.0.1...v3.1.0) (2025-03-21)
 
 
