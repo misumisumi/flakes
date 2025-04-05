@@ -7,15 +7,14 @@
   openpace,
   pkg-config,
   pkgSources,
-  python3Packages,
+  python,
+  toPythonModule,
+  wrapPython,
+  pyscard,
+  pycryptodome,
   qrencode,
   pcsclite,
 }:
-let
-  inherit (python3Packages) python;
-  inherit (python3Packages.python.pkgs) pyscard pycryptodome;
-  inherit (python3Packages) toPythonModule wrapPython;
-in
 toPythonModule (
   stdenv.mkDerivation rec {
     inherit (pkgSources."${name}") pname version src;

@@ -1,13 +1,13 @@
 {
-  python3Packages,
   name,
   pkgSources,
+  buildPythonPackage,
   jumanpp,
   knp,
+  poetry-core,
+  six,
+  toml,
 }:
-let
-  inherit (python3Packages) buildPythonPackage;
-in
 buildPythonPackage {
   inherit (pkgSources."${name}") pname version src;
   patchPhase = ''
@@ -22,7 +22,7 @@ buildPythonPackage {
 
   doCheck = false;
   # for runtime depend
-  propagatedBuildInputs = with python3Packages; [
+  propagatedBuildInputs = [
     poetry-core
     six
     toml
