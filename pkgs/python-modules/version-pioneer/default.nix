@@ -1,18 +1,18 @@
 {
-  python3Packages,
   name,
   pkgSources,
+  buildPythonPackage,
+  hatchling,
+  hatch-requirements-txt,
+  tomli,
 }:
-let
-  inherit (python3Packages) buildPythonPackage;
-in
 buildPythonPackage {
   inherit (pkgSources."${name}") pname version src;
 
   doCheck = false;
   pyproject = true;
   # for runtime depend
-  propagatedBuildInputs = with python3Packages; [
+  propagatedBuildInputs = [
     hatchling
     hatch-requirements-txt
     tomli
