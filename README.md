@@ -77,8 +77,8 @@ In your `flake.nix`
   - prettier-plugin-kotlin-2.1.0
   - prettier-plugin-nginx-1.0.3
   - prettier-plugin-rust-0.1.9
-  - prettier-plugin-sh-0.16.0
-  - prettier-plugin-sql-0.18.1
+  - prettier-plugin-sh-0.17.2
+  - prettier-plugin-sql-0.19.0
   - proton-ge-rtsp-bin-GE-Proton9-22-rtsp17
   - python3.12-jupynium-0.2.6
   - python3.12-pyknp-0.6.1
@@ -99,9 +99,9 @@ In your `flake.nix`
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2025-03-04
   - zenn-cli-0.1.158
-  - zotero-better-bibtex-7.0.14
+  - zotero-better-bibtex-7.0.17
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.2.5
+  - zotero-pdf-translate-2.2.7
   - zotero-scipdf-1.3.0
   - zotero-zotfile-5.1.2
   - zotero-zotmoov-1.2.19
