@@ -13,11 +13,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-PnnPzyRvUAKaCWIf2829ermd2tRjAL6IeHv/OJS1RIA=",
+            "sha256": "sha256-ZwWhjmvPPTdNg2/I3HjGWvD4v9o7fuhzrO9gEzzd4ys=",
             "type": "url",
-            "url": "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.14/zotero-better-bibtex-7.0.14.xpi"
+            "url": "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.17/zotero-better-bibtex-7.0.17.xpi"
         },
-        "version": "7.0.14"
+        "version": "7.0.17"
     },
     "zotero-night": {
         "cargoLocks": null,
@@ -53,11 +53,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-SJLbSO3san+nctgywr/jTDxjVzHRXEU9iMTtlEYSxZc=",
+            "sha256": "sha256-cNxEwjdcDjsphY/5eWsnw6sP3P1Fh1EZbhJW4YflH5c=",
             "type": "url",
-            "url": "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.2.5/translate-for-zotero.xpi"
+            "url": "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.2.7/translate-for-zotero.xpi"
         },
-        "version": "2.2.5"
+        "version": "2.2.7"
     },
     "zotero-scipdf": {
         "cargoLocks": null,
