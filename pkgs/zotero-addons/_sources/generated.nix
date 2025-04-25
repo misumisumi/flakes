@@ -3,10 +3,10 @@
 {
   zotero-better-bibtex = {
     pname = "zotero-better-bibtex";
-    version = "7.0.19";
+    version = "7.0.22";
     src = fetchurl {
-      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.19/zotero-better-bibtex-7.0.19.xpi";
-      sha256 = "sha256-Dp71waix6VamzDjZDLm3CBc+ZwAEQRKqt8pOTFqB1No=";
+      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.22/zotero-better-bibtex-7.0.22.xpi";
+      sha256 = "sha256-WU+8fLA2EZIb6lfVGfGvJgy8E8SSaKWy3nm8ioLiBCg=";
     };
     license = "mit";
     description = "Make Zotero effective for us LaTeX holdouts";
