@@ -59,7 +59,7 @@ In your `flake.nix`
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @pkgdeps/update-github-actions-permissions-2.6.0
   - @prettier/plugin-php-0.22.4
-  - @prettier/plugin-pug-3.3.0
+  - @prettier/plugin-pug-3.4.0
   - @prettier/plugin-ruby-4.0.4
   - @prettier/plugin-xml-3.4.1
   - @proofdict/textlint-rule-proofdict-3.1.2
