@@ -23,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-1uj0GlnrOXIYcjJSbkr3Kugft9xrHX4RYOeqH0hf1VU=",
+            "sha256": "sha256-8dPBDhLc+L/njlRE4UPqhWRV2k+jjgRri4rLW0dIHzM=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.16.0"
+            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.17.0"
         },
-        "version": "0.16.0"
+        "version": "0.17.0"
     },
     "cups-brother-hll5100dn-cupswrapper": {
         "cargoLocks": null,
