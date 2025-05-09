@@ -3,15 +3,15 @@
 {
   zotero-better-bibtex = {
     pname = "zotero-better-bibtex";
-    version = "7.0.22";
+    version = "7.0.24";
     src = fetchurl {
-      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.22/zotero-better-bibtex-7.0.22.xpi";
-      sha256 = "sha256-WU+8fLA2EZIb6lfVGfGvJgy8E8SSaKWy3nm8ioLiBCg=";
+      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.24/zotero-better-bibtex-7.0.24.xpi";
+      sha256 = "sha256-A9amheuaMQvoYd3kzVxm8LwWHwNcT76ClKXSXPwbCcY=";
     };
-    license = "mit";
-    description = "Make Zotero effective for us LaTeX holdouts";
-    homepage = "https://github.com/retorquere/zotero-better-bibtex";
     addonId = "better-bibtex@iris-advies.com";
+    license = "mit";
+    homepage = "https://github.com/retorquere/zotero-better-bibtex";
+    description = "Make Zotero effective for us LaTeX holdouts";
   };
   zotero-night = {
     pname = "zotero-night";
@@ -20,22 +20,22 @@
       url = "https://github.com/tefkah/zotero-night/releases/download/v0.4.23/night.xpi";
       sha256 = "sha256-szoKwmYMm9fZrWxqN2ZJptahCgGkIUNwR0n3m5zhiJw=";
     };
-    license = "gpl3";
-    description = "Night theme for Zotero UI and PDF";
-    homepage = "https://github.com/tefkah/zotero";
     addonId = "night@tefkah.com";
+    license = "gpl3";
+    homepage = "https://github.com/tefkah/zotero";
+    description = "Night theme for Zotero UI and PDF";
   };
   zotero-pdf-translate = {
     pname = "zotero-pdf-translate";
-    version = "2.2.8";
+    version = "2.2.10";
     src = fetchurl {
-      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.2.8/translate-for-zotero.xpi";
-      sha256 = "sha256-oSS+2p1rDK7FN6h0iAbkLjD1cWUI0oBIbgQPG+uBr1w=";
+      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.2.10/translate-for-zotero.xpi";
+      sha256 = "sha256-8apR04cF2/J/0hJNDD3q9j0WvJpYVMh/AEz9GaOmJz0=";
     };
-    license = "agpl3Only";
-    description = "Translate PDF, EPub, webpage, metadata, annotations, notes to the target language. Support 20+ translate services.";
-    homepage = "https://github.com/winidngwind/zotero-pdf-translate";
     addonId = "zoteropdftranslate@euclpts.com";
+    license = "agpl3Only";
+    homepage = "https://github.com/winidngwind/zotero-pdf-translate";
+    description = "Translate PDF, EPub, webpage, metadata, annotations, notes to the target language. Support 20+ translate services.";
   };
   zotero-scipdf = {
     pname = "zotero-scipdf";
@@ -44,10 +44,10 @@
       url = "https://github.com/syt2/zotero-scipdf/releases/download/V1.3.0/sci-pdf.xpi";
       sha256 = "sha256-Z0OVtN7JHmvfE0hZ6rQ6VUgLFJPF3hnewJn/iQ+Ma8c=";
     };
-    license = "agpl3Plus";
-    description = "Download PDF from Sci-Hub automatically (For Zotero7)";
-    homepage = "https://github.com/syt2/zotero-scipdf";
     addonId = "scipdf@ytshen.com";
+    license = "agpl3Plus";
+    homepage = "https://github.com/syt2/zotero-scipdf";
+    description = "Download PDF from Sci-Hub automatically (For Zotero7)";
   };
   zotero-zotfile = {
     pname = "zotero-zotfile";
@@ -56,10 +56,10 @@
       url = "https://github.com/jlegewie/zotfile/releases/download/v5.1.2/zotfile-5.1.2-fx.xpi";
       sha256 = "sha256-vmJVLqNgxbI6eE3TqDKJs/u/Bdemag2aADfy8L89YKc=";
     };
-    license = "gpl3";
-    description = "Zotero plugin to manage your attachments: automatically rename, move, and attach PDFs (or other files) to Zotero items, sync PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.), and extract PDF annotations.";
-    homepage = "https://github.com/jlegewie/zotfile";
     addonId = "zotfile@columbia.edu";
+    license = "gpl3";
+    homepage = "https://github.com/jlegewie/zotfile";
+    description = "Zotero plugin to manage your attachments: automatically rename, move, and attach PDFs (or other files) to Zotero items, sync PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.), and extract PDF annotations.";
   };
   zotero-zotmoov = {
     pname = "zotero-zotmoov";
@@ -68,9 +68,9 @@
       url = "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.21/zotmoov-1.2.21-fx.xpi";
       sha256 = "sha256-gN5INdWAM8LSJKGzinklT05x4oU28muJUYLtmmh9Pn4=";
     };
-    license = "gpl3Only";
-    description = "Mooves attachments and links them";
-    homepage = "https://github.com/wileyyugioh/zotmoov";
     addonId = "zotmoov@wileyy.com";
+    license = "gpl3Only";
+    homepage = "https://github.com/wileyyugioh/zotmoov";
+    description = "Mooves attachments and links them";
   };
 }
