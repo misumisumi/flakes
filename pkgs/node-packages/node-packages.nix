@@ -49,31 +49,31 @@ let
         sha512 = "D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow==";
       };
     };
-    "@babel/parser-7.27.2" = {
+    "@babel/parser-7.27.4" = {
       name = "_at_babel_slash_parser";
       packageName = "@babel/parser";
-      version = "7.27.2";
+      version = "7.27.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@babel/parser/-/parser-7.27.2.tgz";
-        sha512 = "QYLs8299NA7WM/bZAdp+CviYYkVoYXlDW2rzliy3chxd1PQjej7JORuMJDJXJUb9g0TT+B99EwaVLKmX+sPXWw==";
+        url = "https://registry.npmjs.org/@babel/parser/-/parser-7.27.4.tgz";
+        sha512 = "BRmLHGwpUqLFR2jzx9orBuX/ABDkj2jLKOXrHDTN2aOKL+jFDDKaRNo9nyYsIl9h/UE/7lMKdDjKQQyxKKDZ7g==";
       };
     };
-    "@babel/runtime-7.27.1" = {
+    "@babel/runtime-7.27.4" = {
       name = "_at_babel_slash_runtime";
       packageName = "@babel/runtime";
-      version = "7.27.1";
+      version = "7.27.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@babel/runtime/-/runtime-7.27.1.tgz";
-        sha512 = "1x3D2xEk2fRo3PAhwQwu5UubzgiVWSXTBfWpVd2Mx2AzRqJuDJCsgaDVZ7HB5iGzDW1Hl1sWN2mFyKjmR9uAog==";
+        url = "https://registry.npmjs.org/@babel/runtime/-/runtime-7.27.4.tgz";
+        sha512 = "t3yaEOuGu9NlIZ+hIeGbBjFtZT7j2cb2tg0fuaJKeGotchRjjLfrBA9Kwf8quhpP1EUuxModQg04q/mBwyg8uA==";
       };
     };
-    "@babel/types-7.27.1" = {
+    "@babel/types-7.27.3" = {
       name = "_at_babel_slash_types";
       packageName = "@babel/types";
-      version = "7.27.1";
+      version = "7.27.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@babel/types/-/types-7.27.1.tgz";
-        sha512 = "+EzkxvLNfiUeKMgy/3luqfsCWFRXLb7U6wNQTk60tovuckwB15B191tJWvpp4HjiQWdJkCxO3Wbvc6jlk3Xb2Q==";
+        url = "https://registry.npmjs.org/@babel/types/-/types-7.27.3.tgz";
+        sha512 = "Y1GkI4ktrtvmawoSq+4FCVHNryea6uR+qUQy0AGxLSsjCX0nVmkYQMBLHDkXZuo5hGx7eYdnIaslsdBFm7zbUw==";
       };
     };
     "@commitlint/cli-7.6.1" = {
@@ -1390,13 +1390,13 @@ let
         sha512 = "hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==";
       };
     };
-    "@types/node-22.15.21" = {
+    "@types/node-22.15.28" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "22.15.21";
+      version = "22.15.28";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-22.15.21.tgz";
-        sha512 = "EV/37Td6c+MgKAbkcLG6vqZ2zEYHD7bvSrzqqs2RIhbA6w3x+Dqz8MZM3sP6kGTeLrdoOgKZe+Xja7tUB2DNkQ==";
+        url = "https://registry.npmjs.org/@types/node/-/node-22.15.28.tgz";
+        sha512 = "I0okKVDmyKR281I0UIFV7EWAWRnR0gkuSKob5wVcByyyhr7Px/slhkQapcYX4u00ekzNWaS1gznKZnuzxwo4pw==";
       };
     };
     "@types/normalize-package-data-2.4.4" = {
@@ -3109,13 +3109,13 @@ let
         sha512 = "7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==";
       };
     };
-    "es-abstract-1.23.10" = {
+    "es-abstract-1.24.0" = {
       name = "es-abstract";
       packageName = "es-abstract";
-      version = "1.23.10";
+      version = "1.24.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/es-abstract/-/es-abstract-1.23.10.tgz";
-        sha512 = "MtUbM072wlJNyeYAe0mhzrD+M6DIJa96CZAOBBrhDbgKnB4MApIKefcyAB1eOdYn8cUNZgvwBvEzdoAYsxgEIw==";
+        url = "https://registry.npmjs.org/es-abstract/-/es-abstract-1.24.0.tgz";
+        sha512 = "WSzPgsdLtTcQwm4CROfS5ju2Wa1QQcVeT37jFjYzdFz1r9ahadC8B8/a4qxJxM+09F18iumCdRmlr96ZYkQvEg==";
       };
     };
     "es-define-property-1.0.1" = {
@@ -4520,6 +4520,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/is-map/-/is-map-2.0.3.tgz";
         sha512 = "1Qed0/Hr2m+YqxnM09CjA2d/i6YZNfF6R2oRAOj36eUdS6qIV/huPJNSEpKbupewFs+ZsJlxsjjPbc0/afW6Lw==";
+      };
+    };
+    "is-negative-zero-2.0.3" = {
+      name = "is-negative-zero";
+      packageName = "is-negative-zero";
+      version = "2.0.3";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/is-negative-zero/-/is-negative-zero-2.0.3.tgz";
+        sha512 = "5KoIu2Ngpyek75jXodFvnafB6DJgr3u8uuK0LEZJjrU19DrMD3EVERaR8sjz8CCGgpZvxPl9SuE1GMVPFHx1mw==";
       };
     };
     "is-number-7.0.0" = {
@@ -7978,6 +7987,15 @@ let
         sha512 = "MGrFH9Z4NP9Iyhqn16sDtBpRRNJ0Y2hNa6D65h736fVSaPCHr4DM4sWUNvVaSuC+0OBGhwsrydQwmgfg5LncqQ==";
       };
     };
+    "stop-iteration-iterator-1.1.0" = {
+      name = "stop-iteration-iterator";
+      packageName = "stop-iteration-iterator";
+      version = "1.1.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/stop-iteration-iterator/-/stop-iteration-iterator-1.1.0.tgz";
+        sha512 = "eLoXW/DHyl62zxY4SCaIgnRhuMr6ri4juEYARS8E6sCEqzKpOiE521Ucofdx+KnDZl5xmvGYaaKCk5FEOxJCoQ==";
+      };
+    };
     "string-width-4.2.3" = {
       name = "string-width";
       packageName = "string-width";
@@ -9525,7 +9543,7 @@ in
     dependencies = [
       sources."@commitlint/types-19.8.1"
       sources."@types/conventional-commits-parser-5.0.1"
-      sources."@types/node-22.15.21"
+      sources."@types/node-22.15.28"
       sources."array-ify-1.0.0"
       sources."chalk-5.4.1"
       sources."compare-func-2.0.0"
@@ -9555,7 +9573,7 @@ in
     dependencies = [
       sources."@babel/code-frame-7.27.1"
       sources."@babel/helper-validator-identifier-7.27.1"
-      sources."@babel/runtime-7.27.1"
+      sources."@babel/runtime-7.27.4"
       sources."@commitlint/config-workspace-scopes-19.8.1"
       sources."@emnapi/core-1.4.3"
       sources."@emnapi/runtime-1.4.3"
@@ -10465,7 +10483,7 @@ in
       sources."@commitlint/resolve-extends-19.8.1"
       sources."@commitlint/types-19.8.1"
       sources."@types/conventional-commits-parser-5.0.1"
-      sources."@types/node-22.15.21"
+      sources."@types/node-22.15.28"
       sources."ajv-8.17.1"
       sources."argparse-2.0.1"
       sources."callsites-3.1.0"
@@ -10525,7 +10543,7 @@ in
       sources."@commitlint/top-level-19.8.1"
       sources."@commitlint/types-19.8.1"
       sources."@types/conventional-commits-parser-5.0.1"
-      sources."@types/node-22.15.21"
+      sources."@types/node-22.15.28"
       sources."chalk-5.4.1"
       sources."dargs-8.1.0"
       sources."find-up-7.0.0"
@@ -10814,7 +10832,7 @@ in
       sources."@textlint/utils-1.2.5"
       sources."@types/glob-7.2.0"
       sources."@types/minimatch-5.1.2"
-      sources."@types/node-22.15.21"
+      sources."@types/node-22.15.28"
       sources."@types/unist-2.0.11"
       sources."app-root-path-3.1.0"
       sources."argparse-1.0.10"
@@ -11825,8 +11843,8 @@ in
     dependencies = [
       sources."@babel/helper-string-parser-7.27.1"
       sources."@babel/helper-validator-identifier-7.27.1"
-      sources."@babel/parser-7.27.2"
-      sources."@babel/types-7.27.1"
+      sources."@babel/parser-7.27.4"
+      sources."@babel/types-7.27.3"
       sources."@textlint-ja/textlint-rule-no-synonyms-1.3.0"
       sources."@textlint/ast-node-types-13.4.1"
       sources."@textlint/module-interop-1.2.5"
@@ -11974,8 +11992,8 @@ in
     dependencies = [
       sources."@babel/helper-string-parser-7.27.1"
       sources."@babel/helper-validator-identifier-7.27.1"
-      sources."@babel/parser-7.27.2"
-      sources."@babel/types-7.27.1"
+      sources."@babel/parser-7.27.4"
+      sources."@babel/types-7.27.3"
       sources."@kvs/env-2.2.0"
       sources."@kvs/indexeddb-2.1.4"
       sources."@kvs/node-localstorage-2.2.0"
@@ -12036,7 +12054,7 @@ in
       sources."doublearray-0.0.2"
       sources."dunder-proto-1.0.1"
       sources."emoji-regex-10.4.0"
-      sources."es-abstract-1.23.10"
+      sources."es-abstract-1.24.0"
       sources."es-define-property-1.0.1"
       sources."es-errors-1.3.0"
       sources."es-object-atoms-1.1.1"
@@ -12090,6 +12108,7 @@ in
       sources."is-generator-function-1.1.0"
       sources."is-hexadecimal-1.0.4"
       sources."is-map-2.0.3"
+      sources."is-negative-zero-2.0.3"
       sources."is-number-object-1.1.1"
       sources."is-plain-obj-2.1.0"
       sources."is-plain-object-2.0.4"
@@ -12184,6 +12203,7 @@ in
       sources."slide-1.1.6"
       sources."space-separated-tokens-1.1.5"
       sources."sprintf-js-1.0.3"
+      sources."stop-iteration-iterator-1.1.0"
       sources."string.prototype.trim-1.2.10"
       sources."string.prototype.trimend-1.0.9"
       sources."string.prototype.trimstart-1.0.8"
@@ -12263,10 +12283,10 @@ in
   zenn-cli = nodeEnv.buildNodePackage {
     name = "zenn-cli";
     packageName = "zenn-cli";
-    version = "0.1.159";
+    version = "0.1.161";
     src = fetchurl {
-      url = "https://registry.npmjs.org/zenn-cli/-/zenn-cli-0.1.159.tgz";
-      sha512 = "a4/Lkg3DnxWlYh2Z0abuvvmpQc0BnfTQrVyNQxYm+IOrwGJepZabwWTT0Q3eZ3r7hAV/xd8MZsmZL3y3pzMpAA==";
+      url = "https://registry.npmjs.org/zenn-cli/-/zenn-cli-0.1.161.tgz";
+      sha512 = "PVdw0zj2GwtAaYbrvN/a5C2IHIzRhAu24AYkw16r344O8FYt/29v0pnGNQFKVfZdSZlgcl5HnH7jQWmlOVdXPw==";
     };
     buildInputs = globalBuildInputs;
     meta = {

@@ -98,10 +98,10 @@ In your `flake.nix`
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2025-03-04
-  - zenn-cli-0.1.159
-  - zotero-better-bibtex-7.0.27
+  - zenn-cli-0.1.161
+  - zotero-better-bibtex-7.0.28
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.2.13
+  - zotero-pdf-translate-2.2.14
   - zotero-scipdf-1.3.0
   - zotero-zotfile-5.1.2
   - zotero-zotmoov-1.2.21

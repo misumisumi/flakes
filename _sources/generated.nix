@@ -231,10 +231,10 @@
   };
   zenn-cli = {
     pname = "zenn-cli";
-    version = "0.1.159";
+    version = "0.1.161";
     src = fetchurl {
-      url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.159.tgz";
-      sha256 = "sha256-2yX8m+qxYsTy3uKAHFJMtmo0w4edmHin2h4XUGogRGw=";
+      url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.161.tgz";
+      sha256 = "sha256-4yFpfB83D3E7Ef0aUgICCttHwQKuVy4tLJdFyYhBkts=";
     };
   };
 }
