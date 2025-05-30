@@ -426,10 +426,10 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-2yX8m+qxYsTy3uKAHFJMtmo0w4edmHin2h4XUGogRGw=",
+            "sha256": "sha256-4yFpfB83D3E7Ef0aUgICCttHwQKuVy4tLJdFyYhBkts=",
             "type": "url",
-            "url": "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.159.tgz"
+            "url": "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.161.tgz"
         },
-        "version": "0.1.159"
+        "version": "0.1.161"
     }
 }
