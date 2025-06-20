@@ -67,7 +67,7 @@ In your `flake.nix`
   - commitlint-format-json-1.1.0
   - commitlint-with-plugins
   - cups-brother-hll5100dn-3.5.1-1
-  - droidcam-obs-plugin-2.3.4
+  - droidcam-obs-plugin-2.4.0
   - jawiki-kana-kanji-dict-2025-06-09
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
@@ -99,7 +99,7 @@ In your `flake.nix`
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2025-06-09
   - zenn-cli-0.1.161
-  - zotero-better-bibtex-7.0.32
+  - zotero-better-bibtex-7.0.34
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.2.14
   - zotero-scipdf-1.3.0
