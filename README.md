@@ -68,7 +68,7 @@ In your `flake.nix`
   - commitlint-with-plugins
   - cups-brother-hll5100dn-3.5.1-1
   - droidcam-obs-plugin-2.4.0
-  - jawiki-kana-kanji-dict-2025-06-09
+  - jawiki-kana-kanji-dict-2025-06-21
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
   - nixos-diff
@@ -77,12 +77,12 @@ In your `flake.nix`
   - prettier-plugin-kotlin-2.1.0
   - prettier-plugin-nginx-1.0.3
   - prettier-plugin-rust-0.1.9
-  - prettier-plugin-sh-0.17.4
+  - prettier-plugin-sh-0.18.0
   - prettier-plugin-sql-0.19.1
   - proton-ge-rtsp-bin-GE-Proton9-22-rtsp17
-  - python3.12-jupynium-0.2.6
-  - python3.12-pyknp-0.6.1
-  - python3.12-version-pioneer-0.0.13
+  - python3.13-jupynium-0.2.6
+  - python3.13-pyknp-0.6.1
+  - python3.13-version-pioneer-0.0.13
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
   - skk-emotikons-jisyo-2021-04-01
@@ -97,9 +97,9 @@ In your `flake.nix`
   - virtualsmartcard-virtualsmartcard-0.10
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-2025-06-09
-  - zenn-cli-0.1.161
-  - zotero-better-bibtex-7.0.34
+  - yaskkserv2-dict-2025-06-21
+  - zenn-cli-0.1.162
+  - zotero-better-bibtex-7.0.35
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.2.14
   - zotero-scipdf-1.3.0

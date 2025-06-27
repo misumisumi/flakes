@@ -11,10 +11,10 @@
   };
   csharp-ls = {
     pname = "csharp-ls";
-    version = "0.17.0";
+    version = "0.18.0";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.17.0";
-      sha256 = "sha256-8dPBDhLc+L/njlRE4UPqhWRV2k+jjgRri4rLW0dIHzM=";
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.18.0";
+      sha256 = "sha256-VSlyAt5c03Oiha21ZyQ4Xm/2iIse0h1eVrVpu+nWW3s=";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
@@ -77,12 +77,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "2a6cfdf7418d1ebca7bb529d5b7174bd563be3d2";
+    version = "a7a746e3fe1c0448c7eab1e3f38a0f1cc3f10874";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/2a6cfdf7418d1ebca7bb529d5b7174bd563be3d2/SKK-JISYO.jawiki";
-      sha256 = "sha256-l5y31mx+fA63cBpnfwHBN0LInUC1OQzB0HCWJ2LdlRg=";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/a7a746e3fe1c0448c7eab1e3f38a0f1cc3f10874/SKK-JISYO.jawiki";
+      sha256 = "sha256-GaHOe3FXbqVe4NYNpkv6cTn4vw8mE53oZdQhhBsMjZA=";
     };
-    date = "2025-06-09";
+    date = "2025-06-21";
   };
   julius-speech = {
     pname = "julius-speech";
@@ -231,10 +231,10 @@
   };
   zenn-cli = {
     pname = "zenn-cli";
-    version = "0.1.161";
+    version = "0.1.162";
     src = fetchurl {
-      url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.161.tgz";
-      sha256 = "sha256-4yFpfB83D3E7Ef0aUgICCttHwQKuVy4tLJdFyYhBkts=";
+      url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.162.tgz";
+      sha256 = "sha256-gv8/cZAUUzRfdDW7Z3r9leiMmj1N0nNYGv3wX9I2/lA=";
     };
   };
 }

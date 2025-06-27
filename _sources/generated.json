@@ -23,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-8dPBDhLc+L/njlRE4UPqhWRV2k+jjgRri4rLW0dIHzM=",
+            "sha256": "sha256-VSlyAt5c03Oiha21ZyQ4Xm/2iIse0h1eVrVpu+nWW3s=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.17.0"
+            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.18.0"
         },
-        "version": "0.17.0"
+        "version": "0.18.0"
     },
     "cups-brother-hll5100dn-cupswrapper": {
         "cargoLocks": null,
@@ -139,18 +139,18 @@
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2025-06-09",
+        "date": "2025-06-21",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-l5y31mx+fA63cBpnfwHBN0LInUC1OQzB0HCWJ2LdlRg=",
+            "sha256": "sha256-GaHOe3FXbqVe4NYNpkv6cTn4vw8mE53oZdQhhBsMjZA=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/2a6cfdf7418d1ebca7bb529d5b7174bd563be3d2/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/a7a746e3fe1c0448c7eab1e3f38a0f1cc3f10874/SKK-JISYO.jawiki"
         },
-        "version": "2a6cfdf7418d1ebca7bb529d5b7174bd563be3d2"
+        "version": "a7a746e3fe1c0448c7eab1e3f38a0f1cc3f10874"
     },
     "julius-speech": {
         "cargoLocks": null,
@@ -426,10 +426,10 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-4yFpfB83D3E7Ef0aUgICCttHwQKuVy4tLJdFyYhBkts=",
+            "sha256": "sha256-gv8/cZAUUzRfdDW7Z3r9leiMmj1N0nNYGv3wX9I2/lA=",
             "type": "url",
-            "url": "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.161.tgz"
+            "url": "https://registry.npmjs.com/zenn-cli/-/zenn-cli-0.1.162.tgz"
         },
-        "version": "0.1.161"
+        "version": "0.1.162"
     }
 }
