@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.2](https://github.com/misumisumi/flakes/compare/v3.1.1...v3.1.2) (2025-07-18)
+
+
+### Bug Fixes
+
+* **skk-kaomoji:** fix create kaomoji script ([f287804](https://github.com/misumisumi/flakes/commit/f287804d91c172a5e2e13e0b1782045373159fd5))
+
 ## [3.1.1](https://github.com/misumisumi/flakes/compare/v3.1.0...v3.1.1) (2025-04-05)
 
 
