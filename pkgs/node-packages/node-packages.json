@@ -22,6 +22,5 @@
     "textlint-filter-rule-comments",
     "textlint-rule-preset-ja-engineering-paper",
     "textlint-rule-preset-ja-spacing",
-    "textlint-rule-preset-ja-technical-writing",
-    "zenn-cli"
+    "textlint-rule-preset-ja-technical-writing"
 ]
