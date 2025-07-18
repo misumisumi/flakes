@@ -39,6 +39,13 @@ def main(args=None):
         f"yaskkserv2_make_dictionary --utf8 --dictionary-filename ./tmp.yaskkserv2 --output-jisyo-filename {args.output_file}",
         shell=True,
     )
+    with open(args.output_file, "r", encoding="utf-8") as f:
+        lines = f.readlines()[4:]
+    with open(args.output_file, "a", encoding="utf-8") as f:
+        total = [line.split(" ")[-1][1:-2] for line in lines]
+        total = f"かおもじ /{'/'.join(total)}/"
+        f.write(total)
+
     subprocess.run(f'sed -i -e "2s/yaskkserv2/Kaomoji/g" {args.output_file}', shell=True)
     # エラーを発声させる顔文字の削除
     subprocess.run(f'sed -i -e "$ s/( ^)o(^ )\\/\\///g" {args.output_file}', shell=True)
