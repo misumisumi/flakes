@@ -28,11 +28,13 @@ def main(args=None):
                 else:
                     collect[category] = [kaomoji]
     results = []
+    total = "かおもじ "
     for k, v in collect.items():
         results.append("\n".join(map(lambda x: f"{k} /{x}/", v)))
+        total += "/" + "/".join(v) + "/"
     results.sort()
     with open("tmp.jisyo", "w", encoding="utf-8") as f:
-        f.write(first_lines + "\n".join(results))
+        f.write(first_lines + "\n".join(results) + f"\n{total}")
 
     subprocess.run("yaskkserv2_make_dictionary --utf8 --dictionary-filename ./tmp.yaskkserv2 tmp.jisyo", shell=True)
     subprocess.run(
