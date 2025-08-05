@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/misumisumi/flakes/compare/v3.1.2...v3.2.0) (2025-08-05)
+
+
+### Features
+
+* **ppp-scripts:** add scripts for ppp from .deb pkgs ([9816174](https://github.com/misumisumi/flakes/commit/9816174c5fbb12109740fb6bb9513c64444bdee0))
+
 ## [3.1.2](https://github.com/misumisumi/flakes/compare/v3.1.1...v3.1.2) (2025-07-18)
 
 
