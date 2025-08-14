@@ -131,13 +131,6 @@ git = "https://github.com/tokuhirom/jawiki-kana-kanji-dict.git"
 [jawiki-kana-kanji-dict.fetch]
 url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/$ver/SKK-JISYO.jawiki"
 
-[zenn-cli.src]
-github_tag = "zenn-dev/zenn-editor"
-exclude_regex = ".*-alpha.*|.*-beta.*"
-
-[zenn-cli.fetch]
-url = "https://registry.npmjs.com/zenn-cli/-/zenn-cli-$ver.tgz"
-
 [jupynium.src]
 pypi = "jupynium"
 
