@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.1](https://github.com/misumisumi/flakes/compare/v3.2.0...v3.2.1) (2025-08-14)
+
+
+### Bug Fixes
+
+* remove zenn-cli from packges.toml ([f5970b0](https://github.com/misumisumi/flakes/commit/f5970b072c6015827182c6aabbef83f713239f22))
+
 ## [3.2.0](https://github.com/misumisumi/flakes/compare/v3.1.2...v3.2.0) (2025-08-05)
 
 
