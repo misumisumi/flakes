@@ -4,6 +4,7 @@ hda = "hda"
 
 [files]
 extend-exclude = [
+    "CHANGELOG.md",
     "_sources/*",
     "**/generated.json",
     "**/generated.nix",
