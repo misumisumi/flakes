@@ -3,10 +3,10 @@
 {
   zotero-better-bibtex = {
     pname = "zotero-better-bibtex";
-    version = "7.0.35";
+    version = "7.0.43";
     src = fetchurl {
-      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.35/zotero-better-bibtex-7.0.35.xpi";
-      sha256 = "sha256-wL2fyUnOQ3p9RiZFc/ZtMMN+xrgre6hl7/ntVChMlzo=";
+      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.43/zotero-better-bibtex-7.0.43.xpi";
+      sha256 = "sha256-mPtstLrgJC0f4KACpeCg75TfehK88Ms+bVF1h74M20Q=";
     };
     addonId = "better-bibtex@iris-advies.com";
     license = "mit";
@@ -27,10 +27,10 @@
   };
   zotero-pdf-translate = {
     pname = "zotero-pdf-translate";
-    version = "2.2.14";
+    version = "2.3.7";
     src = fetchurl {
-      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.2.14/translate-for-zotero.xpi";
-      sha256 = "sha256-PYRP6X45QvknmVA2DKSK6Gq57zDETIRy4njeNmt4AWE=";
+      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.3.7/translate-for-zotero.xpi";
+      sha256 = "sha256-Q+JlZjwPpxjHY4efGPi/qtW37RcrXHz7tfyXATRL6sc=";
     };
     addonId = "zoteropdftranslate@euclpts.com";
     license = "agpl3Only";
@@ -63,10 +63,10 @@
   };
   zotero-zotmoov = {
     pname = "zotero-zotmoov";
-    version = "1.2.21";
+    version = "1.2.22";
     src = fetchurl {
-      url = "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.21/zotmoov-1.2.21-fx.xpi";
-      sha256 = "sha256-gN5INdWAM8LSJKGzinklT05x4oU28muJUYLtmmh9Pn4=";
+      url = "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.22/zotmoov-1.2.22-fx.xpi";
+      sha256 = "sha256-DM/FvSPuKCdJizQyAH/WtMff5zoBYTXyQz6QRTLkJyE=";
     };
     addonId = "zotmoov@wileyy.com";
     license = "gpl3Only";

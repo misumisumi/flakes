@@ -11,8 +11,10 @@ in
 buildPythonApplication {
   inherit (pkgSources."${name}") pname version src;
   dependencies = [ chntpw ];
+  build-system = with python3Packages; [ poetry-core ];
 
   doCheck = false;
+  pyproject = true;
 
   meta = with lib; {
     homepage = "https://github.com/x2es/bt-dualboot";

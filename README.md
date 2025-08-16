@@ -56,29 +56,30 @@ In your `flake.nix`
   - @commitlint/config-patternplate-19.8.1
   - @commitlint/load-19.8.1
   - @commitlint/read-19.8.1
-  - @pkgdeps/update-github-actions-permissions-2.6.0
-  - @pkgdeps/update-github-actions-permissions-2.6.0
-  - @prettier/plugin-php-0.22.4
-  - @prettier/plugin-pug-3.4.0
+  - @pkgdeps/update-github-actions-permissions-2.8.0
+  - @pkgdeps/update-github-actions-permissions-2.8.0
+  - @prettier/plugin-php-0.24.0
+  - @prettier/plugin-pug-3.4.2
   - @prettier/plugin-ruby-4.0.4
-  - @prettier/plugin-xml-3.4.1
+  - @prettier/plugin-xml-3.4.2
   - @proofdict/textlint-rule-proofdict-3.1.2
   - bt-dualboot-1.0.1
   - commitlint-format-json-1.1.0
   - commitlint-with-plugins
   - cups-brother-hll5100dn-3.5.1-1
   - droidcam-obs-plugin-2.4.0
-  - jawiki-kana-kanji-dict-2025-06-21
+  - jawiki-kana-kanji-dict-2025-08-11
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
   - nixos-diff
   - openpace-1.1.3
+  - ppp-scripts-2.5.2
   - prettier-plugin-go-template-0.0.15
   - prettier-plugin-kotlin-2.1.0
   - prettier-plugin-nginx-1.0.3
   - prettier-plugin-rust-0.1.9
   - prettier-plugin-sh-0.18.0
-  - prettier-plugin-sql-0.19.1
+  - prettier-plugin-sql-0.19.2
   - proton-ge-rtsp-bin-GE-Proton9-22-rtsp17
   - python3.13-jupynium-0.2.6
   - python3.13-pyknp-0.6.1
@@ -97,12 +98,11 @@ In your `flake.nix`
   - virtualsmartcard-virtualsmartcard-0.10
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-2025-06-21
-  - zenn-cli-0.1.162
-  - zotero-better-bibtex-7.0.35
+  - yaskkserv2-dict-2025-08-11
+  - zotero-better-bibtex-7.0.43
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.2.14
+  - zotero-pdf-translate-2.3.7
   - zotero-scipdf-1.3.0
   - zotero-zotfile-5.1.2
-  - zotero-zotmoov-1.2.21
+  - zotero-zotmoov-1.2.22
 
