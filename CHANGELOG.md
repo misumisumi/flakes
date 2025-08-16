@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.2](https://github.com/misumisumi/flakes/compare/v3.2.1...v3.2.2) (2025-08-16)
+
+
+### Bug Fixes
+
+* **bt-dualboot:** fix build failure ([68030cd](https://github.com/misumisumi/flakes/commit/68030cd8ca99227fcce7249b2b1a46c442779cd6))
+
 ## [3.2.1](https://github.com/misumisumi/flakes/compare/v3.2.0...v3.2.1) (2025-08-14)
 
 
