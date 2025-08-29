@@ -13,11 +13,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-mPtstLrgJC0f4KACpeCg75TfehK88Ms+bVF1h74M20Q=",
+            "sha256": "sha256-V6mdMR2jSGR36lL8wIhodRPs3nSY6/Bt6KjWnohbQNA=",
             "type": "url",
-            "url": "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.43/zotero-better-bibtex-7.0.43.xpi"
+            "url": "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.45/zotero-better-bibtex-7.0.45.xpi"
         },
-        "version": "7.0.43"
+        "version": "7.0.45"
     },
     "zotero-night": {
         "cargoLocks": null,
@@ -113,10 +113,10 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-DM/FvSPuKCdJizQyAH/WtMff5zoBYTXyQz6QRTLkJyE=",
+            "sha256": "sha256-4L/Iezpj+mkEKRu09eLpNzniAHddnx9bWj0tSij5aLg=",
             "type": "url",
-            "url": "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.22/zotmoov-1.2.22-fx.xpi"
+            "url": "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.23/zotmoov-1.2.23-fx.xpi"
         },
-        "version": "1.2.22"
+        "version": "1.2.23"
     }
 }
