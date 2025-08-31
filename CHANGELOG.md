@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.3.0](https://github.com/misumisumi/flakes/compare/v3.2.2...v3.3.0) (2025-08-31)
+
+
+### Features
+
+* **@commitlint/config-workspace-scopes:** replace from @commitlint/config-lerna-scopes ([713d931](https://github.com/misumisumi/flakes/commit/713d931e40a5997951ed5111b0fa06872a1587d1))
+
+
+### Bug Fixes
+
+* **flake.nix:** fix overlays ([17e898b](https://github.com/misumisumi/flakes/commit/17e898be54e0de6fdda2a82c17281eefbf521f27))
+* **pyknp:** add pyproject ([4e28833](https://github.com/misumisumi/flakes/commit/4e28833602e6ade6e51186d7a25048049170cb33))
+
 ## [3.2.2](https://github.com/misumisumi/flakes/compare/v3.2.1...v3.2.2) (2025-08-16)
 
 
