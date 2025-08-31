@@ -26,7 +26,6 @@
 
       appsDir = ./pkgs/apps;
       pythonModulesDir = ./pkgs/python-modules;
-      nodePackagesDir = ./pkgs/node-packages;
     in
     flake-parts.lib.mkFlake { inherit inputs; } {
       debug = true;

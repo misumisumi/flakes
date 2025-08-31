@@ -10,23 +10,19 @@ let
     fetchFromGitHub
     fetchurl
     fetchpatch
-    nixosTests;
+    nixosTests
+    ;
 
   since = version: lib.versionAtLeast nodejs.version version;
   before = version: lib.versionOlder nodejs.version version;
 in
 
 final: prev: {
-  # Example
+  inherit nodejs;
 
-  # autoprefixer = prev.autoprefixer.override {
-  #   nativeBuildInputs = [ pkgs.buildPackages.makeWrapper ];
-  #   postInstall = ''
-  #     wrapProgram "$out/bin/autoprefixer" \
-  #       --prefix NODE_PATH : ${final.postcss}/lib/node_modules
-  #   '';
-  #   passthru.tests = {
-  #     simple-execution = callPackage ./package-tests/autoprefixer.nix { inherit (final) autoprefixer; };
-  #   };
-  # };
+  "@commitlint/config-lerna-scopes" = prev."@commitlint/config-lerna-scopes".overrideAttrs (old: {
+    # nativeBuildInputs = [ pkgs.bash ];
+    buildInputs = old.buildInputs ++ [ pkgs.nodePackages.napi-postinstall ];
+  });
+
 }
