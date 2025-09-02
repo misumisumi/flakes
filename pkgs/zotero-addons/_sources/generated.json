@@ -13,11 +13,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-V6mdMR2jSGR36lL8wIhodRPs3nSY6/Bt6KjWnohbQNA=",
+            "sha256": "sha256-xkAsiS2gzaJPGCfmeiPQfc1YQ4lFcSe4cGc/lGCZe2k=",
             "type": "url",
-            "url": "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.45/zotero-better-bibtex-7.0.45.xpi"
+            "url": "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.49/zotero-better-bibtex-7.0.49.xpi"
         },
-        "version": "7.0.45"
+        "version": "7.0.49"
     },
     "zotero-night": {
         "cargoLocks": null,
@@ -58,6 +58,26 @@
             "url": "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.3.7/translate-for-zotero.xpi"
         },
         "version": "2.3.7"
+    },
+    "zotero-reading-list": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zotero-reading-list",
+        "passthru": {
+            "addonId": "reading-list@hotmail.com",
+            "description": "Keep track of whether you've read items in Zotero",
+            "homepage": "https://github.com/Dominic-DallOsto/zotero-reading-list",
+            "license": "gpl3"
+        },
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-IPz26FF3Z9qKB57sAjKiouOgWxJvp388fr3gwUfQF7A=",
+            "type": "url",
+            "url": "https://github.com/Dominic-DallOsto/zotero-reading-list/releases/download/v1.5.11/zotero-reading-list.xpi"
+        },
+        "version": "1.5.11"
     },
     "zotero-scipdf": {
         "cargoLocks": null,

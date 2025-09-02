@@ -3,10 +3,10 @@
 {
   zotero-better-bibtex = {
     pname = "zotero-better-bibtex";
-    version = "7.0.45";
+    version = "7.0.49";
     src = fetchurl {
-      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.45/zotero-better-bibtex-7.0.45.xpi";
-      sha256 = "sha256-V6mdMR2jSGR36lL8wIhodRPs3nSY6/Bt6KjWnohbQNA=";
+      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.49/zotero-better-bibtex-7.0.49.xpi";
+      sha256 = "sha256-xkAsiS2gzaJPGCfmeiPQfc1YQ4lFcSe4cGc/lGCZe2k=";
     };
     addonId = "better-bibtex@iris-advies.com";
     license = "mit";
@@ -36,6 +36,18 @@
     license = "agpl3Only";
     homepage = "https://github.com/winidngwind/zotero-pdf-translate";
     description = "Translate PDF, EPub, webpage, metadata, annotations, notes to the target language. Support 20+ translate services.";
+  };
+  zotero-reading-list = {
+    pname = "zotero-reading-list";
+    version = "1.5.11";
+    src = fetchurl {
+      url = "https://github.com/Dominic-DallOsto/zotero-reading-list/releases/download/v1.5.11/zotero-reading-list.xpi";
+      sha256 = "sha256-IPz26FF3Z9qKB57sAjKiouOgWxJvp388fr3gwUfQF7A=";
+    };
+    addonId = "reading-list@hotmail.com";
+    license = "gpl3";
+    homepage = "https://github.com/Dominic-DallOsto/zotero-reading-list";
+    description = "Keep track of whether you've read items in Zotero";
   };
   zotero-scipdf = {
     pname = "zotero-scipdf";
