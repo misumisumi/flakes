@@ -33,8 +33,8 @@
         inputs.devshell.flakeModule
       ];
       flake = rec {
-        nixosModules.default = import ./modules/nixosModules.nix;
-        homeManagerModules.default = import ./modules/homeManagerModules.nix;
+        nixosModules.default = import ./modules/nixos;
+        homeManagerModules.default = import ./modules/home-manager;
 
         overlay = overlays.default; # deprecated attributes for retro compatibility
         overlays.default =
