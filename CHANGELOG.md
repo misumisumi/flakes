@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.4.0](https://github.com/misumisumi/flakes/compare/v3.3.0...v3.4.0) (2025-09-06)
+
+
+### Features
+
+* **modules:** add some modules for nixos and home-manager ([2a45551](https://github.com/misumisumi/flakes/commit/2a4555109a974262aea3550d1f979a53a8c7377a))
+* **zotero-addons:** add zotero-reading-list ([a1a306f](https://github.com/misumisumi/flakes/commit/a1a306f9007e15152ed2b53e62a1c11d368cd2df))
+
 ## [3.3.0](https://github.com/misumisumi/flakes/compare/v3.2.2...v3.3.0) (2025-08-31)
 
 
