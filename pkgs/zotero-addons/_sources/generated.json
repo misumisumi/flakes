@@ -59,6 +59,26 @@
         },
         "version": "2.3.7"
     },
+    "zotero-reading-list": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zotero-reading-list",
+        "passthru": {
+            "addonId": "reading-list@hotmail.com",
+            "description": "Keep track of whether you've read items in Zotero",
+            "homepage": "https://github.com/Dominic-DallOsto/zotero-reading-list",
+            "license": "gpl3"
+        },
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-IPz26FF3Z9qKB57sAjKiouOgWxJvp388fr3gwUfQF7A=",
+            "type": "url",
+            "url": "https://github.com/Dominic-DallOsto/zotero-reading-list/releases/download/v1.5.11/zotero-reading-list.xpi"
+        },
+        "version": "1.5.11"
+    },
     "zotero-scipdf": {
         "cargoLocks": null,
         "date": null,

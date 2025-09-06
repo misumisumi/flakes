@@ -37,6 +37,18 @@
     homepage = "https://github.com/winidngwind/zotero-pdf-translate";
     description = "Translate PDF, EPub, webpage, metadata, annotations, notes to the target language. Support 20+ translate services.";
   };
+  zotero-reading-list = {
+    pname = "zotero-reading-list";
+    version = "1.5.11";
+    src = fetchurl {
+      url = "https://github.com/Dominic-DallOsto/zotero-reading-list/releases/download/v1.5.11/zotero-reading-list.xpi";
+      sha256 = "sha256-IPz26FF3Z9qKB57sAjKiouOgWxJvp388fr3gwUfQF7A=";
+    };
+    addonId = "reading-list@hotmail.com";
+    license = "gpl3";
+    homepage = "https://github.com/Dominic-DallOsto/zotero-reading-list";
+    description = "Keep track of whether you've read items in Zotero";
+  };
   zotero-scipdf = {
     pname = "zotero-scipdf";
     version = "1.3.0";

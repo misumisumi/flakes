@@ -39,6 +39,16 @@ description = "Translate PDF, EPub, webpage, metadata, annotations, notes to the
 homepage = "https://github.com/winidngwind/zotero-pdf-translate"
 license = "agpl3Only"
 
+[zotero-reading-list]
+src.github = "Dominic-DallOsto/zotero-reading-list"
+src.prefix = "v"
+fetch.url = "https://github.com/Dominic-DallOsto/zotero-reading-list/releases/download/v$ver/zotero-reading-list.xpi"
+[zotero-reading-list.passthru]
+addonId = "reading-list@hotmail.com"
+description = "Keep track of whether you've read items in Zotero"
+homepage = "https://github.com/Dominic-DallOsto/zotero-reading-list"
+license = "gpl3"
+
 [zotero-scipdf]
 src.github = "syt2/zotero-scipdf"
 src.prefix = "V"
