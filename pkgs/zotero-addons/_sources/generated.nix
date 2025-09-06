@@ -75,10 +75,10 @@
   };
   zotero-zotmoov = {
     pname = "zotero-zotmoov";
-    version = "1.2.23";
+    version = "1.2.24";
     src = fetchurl {
-      url = "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.23/zotmoov-1.2.23-fx.xpi";
-      sha256 = "sha256-4L/Iezpj+mkEKRu09eLpNzniAHddnx9bWj0tSij5aLg=";
+      url = "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.24/zotmoov-1.2.24-fx.xpi";
+      sha256 = "sha256-77wLfqMv26C7SxXwmyOtiPjyFJb0xYcoj2m5hJzt+6c=";
     };
     addonId = "zotmoov@wileyy.com";
     license = "gpl3Only";
