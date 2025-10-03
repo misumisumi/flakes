@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.4.1](https://github.com/misumisumi/flakes/compare/v3.4.0...v3.4.1) (2025-10-03)
+
+
+### Bug Fixes
+
+* **package.toml:** fix versioning of progon-ge-rtsp ([647a35e](https://github.com/misumisumi/flakes/commit/647a35e6fa7164c285e6b5a88f9edc7180ca7946))
+* **package.toml:** fix versioning of progon-ge-rtsp ([445bb60](https://github.com/misumisumi/flakes/commit/445bb60f5f686cad0ab33c1355ea42ef9eba252b))
+
 ## [3.4.0](https://github.com/misumisumi/flakes/compare/v3.3.0...v3.4.0) (2025-09-06)
 
 
