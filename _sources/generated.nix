@@ -128,10 +128,10 @@
   };
   proton-ge-rtsp-bin = {
     pname = "proton-ge-rtsp-bin";
-    version = "GE-Proton9-22-rtsp17";
+    version = "GE-Proton10-15-rtsp18-1";
     src = fetchTarball {
-      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17-1/GE-Proton9-22-rtsp17-1.tar.gz";
-      sha256 = "sha256-GeExWNW0J3Nfq5rcBGiG2BNEmBg0s6bavF68QqJfuX8=";
+      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton10-15-rtsp18-1/GE-Proton10-15-rtsp18-1.tar.gz";
+      sha256 = "sha256-SPf8YWmNcGDhh/WTVQ7lET1+UKYKp6sHXhKpKjHKlHM=";
     };
   };
   pyknp = {

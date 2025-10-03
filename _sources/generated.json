@@ -238,11 +238,11 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "sha256": "sha256-GeExWNW0J3Nfq5rcBGiG2BNEmBg0s6bavF68QqJfuX8=",
+            "sha256": "sha256-SPf8YWmNcGDhh/WTVQ7lET1+UKYKp6sHXhKpKjHKlHM=",
             "type": "tarball",
-            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17-1/GE-Proton9-22-rtsp17-1.tar.gz"
+            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton10-15-rtsp18-1/GE-Proton10-15-rtsp18-1.tar.gz"
         },
-        "version": "GE-Proton9-22-rtsp17"
+        "version": "GE-Proton10-15-rtsp18-1"
     },
     "pyknp": {
         "cargoLocks": null,
