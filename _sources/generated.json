@@ -88,12 +88,12 @@
             "name": null,
             "owner": "dev47apps",
             "repo": "droidcam-obs-plugin",
-            "rev": "2.4.0",
-            "sha256": "sha256-rA+EMtAeM2LSUqtiYJt0hHZ85aZ+5bvVUUjIG2LC3pc=",
+            "rev": "2.4.1",
+            "sha256": "sha256-hxG/v15Q4D+6LU4BNV6ErSa1WvPk4kMPl07pIqiMcc4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2.4.0"
+        "version": "2.4.1"
     },
     "emoticon-data": {
         "cargoLocks": null,
