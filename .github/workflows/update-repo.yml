@@ -32,13 +32,13 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
-          nix profile install nixpkgs#yq
+          nix profile add nixpkgs#yq
           scripts/update-toml.sh
 
       - name: Update package version
         run: |
-          nix run nixpkgs#nvfetcher -- -c pkgs/packages.toml
-          nix run nixpkgs#nvfetcher -- -c pkgs/zotero-addons/addons.toml -o pkgs/zotero-addons/_sources
+          nix run nixpkgs#nvfetcher -- -c pkgs/packages.toml -v
+          nix run nixpkgs#nvfetcher -- -c pkgs/zotero-addons/addons.toml -o pkgs/zotero-addons/_sources -v
 
       - name: Update node package version
         run: |
