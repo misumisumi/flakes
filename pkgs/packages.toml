@@ -1,158 +1,108 @@
-[bt-dualboot.src]
-pypi = "bt-dualboot"
+[bt-dualboot]
+src.pypi = "bt-dualboot"
+fetch.pypi = "bt-dualboot"
 
-[bt-dualboot.fetch]
-pypi = "bt-dualboot"
+[csharp-ls]
+src.github = "razzmatazz/csharp-language-server"
+fetch.url = "https://www.nuget.org/api/v2/package/csharp-ls/$ver"
 
-[csharp-ls.src]
-github = "razzmatazz/csharp-language-server"
+[cups-brother-hll5100dn-lpr]
+src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
+src.regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
+fetch.url = "https://download.brother.com/welcome/dlf102553/hll5100dnlpr-$ver.i386.deb"
 
-[csharp-ls.fetch]
-url = "https://www.nuget.org/api/v2/package/csharp-ls/$ver"
+[cups-brother-hll5100dn-cupswrapper]
+src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
+src.regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
+fetch.url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-$ver.i386.deb"
 
-[cups-brother-hll5100dn-lpr.src]
-webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
-regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
+[drbd9-dkms]
+src.github_tag = "LINBIT/drbd"
+src.include_regex = "drbd-9.1.*"
+src.prefix = "drbd-"
+fetch.url = "https://pkg.linbit.com//downloads/drbd/9/drbd-$ver.tar.gz"
 
-[cups-brother-hll5100dn-lpr.fetch]
-url = "https://download.brother.com/welcome/dlf102553/hll5100dnlpr-$ver.i386.deb"
+[droidcam-obs-plugin]
+src.github = "dev47apps/droidcam-obs-plugin"
+fetch.github = "dev47apps/droidcam-obs-plugin"
 
-[cups-brother-hll5100dn-cupswrapper.src]
-webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
-regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
+[julius-speech]
+src.github_tag = "julius-speech/julius"
+fetch.github = "julius-speech/julius"
 
-[cups-brother-hll5100dn-cupswrapper.fetch]
-url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-$ver.i386.deb"
+[fence-agents]
+src.github_tag = "ClusterLabs/fence-agents"
+fetch.github = "ClusterLabs/fence-agents"
 
-[drbd9-dkms.src]
-github_tag = "LINBIT/drbd"
-include_regex = "drbd-9.1.*"
-prefix = "drbd-"
+[knp]
+src.git = "https://github.com/ku-nlp/knp/"
+fetch.github = "ku-nlp/knp"
 
-[drbd9-dkms.fetch]
-url = "https://pkg.linbit.com//downloads/drbd/9/drbd-$ver.tar.gz"
+[proton-ge-rtsp-bin]
+src.github_tag = "SpookySkeletons/proton-ge-rtsp"
+src.include_regex = "GE-Proton.*"
+fetch.tarball = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/$ver/$ver.tar.gz"
 
-[droidcam-obs-plugin.src]
-github = "dev47apps/droidcam-obs-plugin"
+[ricoh-sp-c260series-ppd]
+src.manual = "1.00"
+fetch.url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
 
-[droidcam-obs-plugin.fetch]
-github = "dev47apps/droidcam-obs-plugin"
+[skk-emoji-jisyo]
+src.github_tag = "uasi/skk-emoji-jisyo"
+fetch.github = "uasi/skk-emoji-jisyo"
 
-[julius-speech.src]
-github_tag = "julius-speech/julius"
+[emoticon-data]
+src.git = "https://github.com/w33ble/emoticon-data"
+fetch.github = "w33ble/emoticon-data"
 
-[julius-speech.fetch]
-github = "julius-speech/julius"
+[snack]
+src.regex = "Snack v[0-9]+\\.[0-9]+\\.[0-9]+"
+src.webpage = "https://www.speech.kth.se/snack/"
+src.prefix = "Snack v"
+fetch.url = "http://www.speech.kth.se/snack/dist/snack$ver.tar.gz"
 
-[fence-agents.src]
-github_tag = "ClusterLabs/fence-agents"
+[tkdnd]
+src.github_tag = "petasis/tkdnd"
+src.prefix = "tkdnd-release-test-v"
+fetch.url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v$ver.tar.gz"
 
-[fence-agents.fetch]
-github = "ClusterLabs/fence-agents"
+[wavesurfer]
+src.httpheader = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
+src.regex = "[0-9]+\\.[0-9]+\\.[0-9]+p[0-9]+"
+fetch.url = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz"
 
-[knp.src]
-git = "https://github.com/ku-nlp/knp/"
+[vrchat-vpm-cli]
+src.regex = "0\\.[0-9]+\\.[a-z0-9-.]+"
+src.exclude_regex = ".*-alpha.*|.*-beta.*"
+src.webpage = "https://www.nuget.org/packages/VRChat.VPM.CLI"
+fetch.url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/$ver"
 
-[knp.fetch]
-github = "ku-nlp/knp"
-
-[proton-ge-rtsp-bin.src]
-github_tag = "SpookySkeletons/proton-ge-rtsp"
-include_regex = "GE-Proton.*"
-
-[proton-ge-rtsp-bin.fetch]
-tarball = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/$ver/$ver.tar.gz"
-
-[ricoh-sp-c260series-ppd.src]
-manual = "1.00"
-
-[ricoh-sp-c260series-ppd.fetch]
-url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
-
-[skk-emoji-jisyo.src]
-github_tag = "uasi/skk-emoji-jisyo"
-
-[skk-emoji-jisyo.fetch]
-github = "uasi/skk-emoji-jisyo"
-
-[emoticon-data.src]
-git = "https://github.com/w33ble/emoticon-data"
-
-[emoticon-data.fetch]
-github = "w33ble/emoticon-data"
-
-[snack.src]
-regex = "Snack v[0-9]+\\.[0-9]+\\.[0-9]+"
-webpage = "https://www.speech.kth.se/snack/"
-prefix = "Snack v"
-
-[snack.fetch]
-url = "http://www.speech.kth.se/snack/dist/snack$ver.tar.gz"
-
-[tkdnd.src]
-github_tag = "petasis/tkdnd"
-prefix = "tkdnd-release-test-v"
-
-[tkdnd.fetch]
-url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v$ver.tar.gz"
-
-[wavesurfer.src]
-httpheader = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
-regex = "[0-9]+\\.[0-9]+\\.[0-9]+p[0-9]+"
-
-[wavesurfer.fetch]
-url = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz"
-
-[vrchat-vpm-cli.src]
-regex = "0\\.[0-9]+\\.[a-z0-9-.]+"
-exclude_regex = ".*-alpha.*|.*-beta.*"
-webpage = "https://www.nuget.org/packages/VRChat.VPM.CLI"
-
-[vrchat-vpm-cli.fetch]
-url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/$ver"
-
-[openpace.src]
-github_tag = "frankmorgner/openpace"
-
-[openpace.fetch]
-github = "frankmorgner/openpace"
+[openpace]
+src.github_tag = "frankmorgner/openpace"
+fetch.github = "frankmorgner/openpace"
 
 [yaskkserv2]
+src.github_tag = "wachikun/yaskkserv2"
+fetch.github = "wachikun/yaskkserv2"
 cargo_locks = ["Cargo.lock"]
 
-[yaskkserv2.src]
-github_tag = "wachikun/yaskkserv2"
+[jawiki-kana-kanji-dict]
+src.git = "https://github.com/tokuhirom/jawiki-kana-kanji-dict.git"
+fetch.url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/$ver/SKK-JISYO.jawiki"
 
-[yaskkserv2.fetch]
-github = "wachikun/yaskkserv2"
+[jupynium]
+src.pypi = "jupynium"
+fetch.pypi = "jupynium"
 
-[jawiki-kana-kanji-dict.src]
-git = "https://github.com/tokuhirom/jawiki-kana-kanji-dict.git"
+[pyknp]
+src.pypi = "pyknp"
+fetch.pypi = "pyknp"
 
-[jawiki-kana-kanji-dict.fetch]
-url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/$ver/SKK-JISYO.jawiki"
+[version-pioneer]
+src.pypi = "version-pioneer"
+fetch.pypi = "version_pioneer"
 
-[jupynium.src]
-pypi = "jupynium"
-
-[jupynium.fetch]
-pypi = "jupynium"
-
-[pyknp.src]
-pypi = "pyknp"
-
-[pyknp.fetch]
-pypi = "pyknp"
-
-[version-pioneer.src]
-pypi = "version-pioneer"
-
-[version-pioneer.fetch]
-pypi = "version_pioneer"
-
-[virtualsmartcard.src]
-github_tag = "frankmorgner/vsmartcard"
-regex = "virtualsmartcard-*"
-
-[virtualsmartcard.fetch]
-github = "frankmorgner/vsmartcard"
+[virtualsmartcard]
+src.github_tag = "frankmorgner/vsmartcard"
+src.regex = "virtualsmartcard-*"
+fetch.github = "frankmorgner/vsmartcard"
