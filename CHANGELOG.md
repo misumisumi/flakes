@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.4.2](https://github.com/misumisumi/flakes/compare/v3.4.1...v3.4.2) (2025-10-07)
+
+
+### Bug Fixes
+
+* **nixosModules:** remove virtualisation.lxd ([2ec7fea](https://github.com/misumisumi/flakes/commit/2ec7fea32d0a6e3ac81d4f16f421c9aec76750ac))
+* **nixosModules:** remove virtualisation.lxd ([43f9070](https://github.com/misumisumi/flakes/commit/43f90705c87ff4bd5437d91ab38e180190fee9cf))
+
 ## [3.4.1](https://github.com/misumisumi/flakes/compare/v3.4.0...v3.4.1) (2025-10-03)
 
 
