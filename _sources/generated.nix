@@ -43,13 +43,13 @@
   };
   droidcam-obs-plugin = {
     pname = "droidcam-obs-plugin";
-    version = "2.4.0";
+    version = "2.4.1";
     src = fetchFromGitHub {
       owner = "dev47apps";
       repo = "droidcam-obs-plugin";
-      rev = "2.4.0";
+      rev = "2.4.1";
       fetchSubmodules = false;
-      sha256 = "sha256-rA+EMtAeM2LSUqtiYJt0hHZ85aZ+5bvVUUjIG2LC3pc=";
+      sha256 = "sha256-hxG/v15Q4D+6LU4BNV6ErSa1WvPk4kMPl07pIqiMcc4=";
     };
   };
   emoticon-data = {
