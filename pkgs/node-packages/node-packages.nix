@@ -418,13 +418,13 @@ let
         sha512 = "7f3zZddAk92G1opoX/glbDO6YbrzmMAJAw0RJAcvunnV7sR4L9llyBUAABptKoF1Jf37UQ1QTJy5p2H4J4rBNA==";
       };
     };
-    "@modelcontextprotocol/sdk-1.20.0" = {
+    "@modelcontextprotocol/sdk-1.20.1" = {
       name = "_at_modelcontextprotocol_slash_sdk";
       packageName = "@modelcontextprotocol/sdk";
-      version = "1.20.0";
+      version = "1.20.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@modelcontextprotocol/sdk/-/sdk-1.20.0.tgz";
-        sha512 = "kOQ4+fHuT4KbR2iq2IjeV32HiihueuOf1vJkq18z08CLZ1UQrTc8BXJpVfxZkq45+inLLD+D4xx4nBjUelJa4Q==";
+        url = "https://registry.npmjs.org/@modelcontextprotocol/sdk/-/sdk-1.20.1.tgz";
+        sha512 = "j/P+yuxXfgxb+mW7OEoRCM3G47zCTDqUPivJo/VzpjbG8I9csTXtOprCf5FfOfHK4whOJny0aHuBEON+kS7CCA==";
       };
     };
     "@nodelib/fs.scandir-2.1.5" = {
@@ -526,13 +526,13 @@ let
         sha512 = "qrZyhCh8Ekk6nwArx3BROybm9BnX6vF7VcZbijetV/OM3yfS4rTYhoMWISmhVEP2H2re0CtWEyMl/XF+WdvVLQ==";
       };
     };
-    "@textlint/ast-node-types-15.2.2" = {
+    "@textlint/ast-node-types-15.2.3" = {
       name = "_at_textlint_slash_ast-node-types";
       packageName = "@textlint/ast-node-types";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/ast-node-types/-/ast-node-types-15.2.2.tgz";
-        sha512 = "9ByYNzWV8tpz6BFaRzeRzIov8dkbSZu9q7IWqEIfmRuLWb2qbI/5gTvKcoWT1HYs4XM7IZ8TKSXcuPvMb6eorA==";
+        url = "https://registry.npmjs.org/@textlint/ast-node-types/-/ast-node-types-15.2.3.tgz";
+        sha512 = "GEhoxfmh6TF+xC8TJmAUwOzzh0J6sVDqjKhwTTwetf7YDdhHbIv1PuUb/dTadMVIWs1H0+JD4Y27n6LWMmqn9Q==";
       };
     };
     "@textlint/ast-node-types-4.4.3" = {
@@ -553,13 +553,13 @@ let
         sha512 = "YSHUR1qDgMPGF5+nvrquEhif6zRJ667xUnfP/9rTNtThIhoTQINvczr5/7xa43F1PDWplL6Curw+2jrE1qHwGQ==";
       };
     };
-    "@textlint/ast-tester-15.2.2" = {
+    "@textlint/ast-tester-15.2.3" = {
       name = "_at_textlint_slash_ast-tester";
       packageName = "@textlint/ast-tester";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/ast-tester/-/ast-tester-15.2.2.tgz";
-        sha512 = "puwnJSPOeqtPQslz6ehfEF1wqoTb/iTebHj+vy6zePpHhBZRJdZKOqPe7p83Atetc8O5SEYa1aJ8ur8sSm0wQw==";
+        url = "https://registry.npmjs.org/@textlint/ast-tester/-/ast-tester-15.2.3.tgz";
+        sha512 = "eT0DBbQTa7Hm0JRRHT9vUv6VoIuY19eqI8UL2I7AzE820DSrrNkgGg/ZxB9I6BCDK/Yg96lJ45fMIeOFPvuJaQ==";
       };
     };
     "@textlint/ast-tester-2.3.5" = {
@@ -580,13 +580,13 @@ let
         sha512 = "uucuC7+NHWkXx2TX5vuyreuHeb+GFiA83V65I+FnYP5EC4dAMOQ86rTSPrZmCwLz+qIWgfDgihGzPccpj3EZGg==";
       };
     };
-    "@textlint/ast-traverse-15.2.2" = {
+    "@textlint/ast-traverse-15.2.3" = {
       name = "_at_textlint_slash_ast-traverse";
       packageName = "@textlint/ast-traverse";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/ast-traverse/-/ast-traverse-15.2.2.tgz";
-        sha512 = "5uZCNp6fSYvDgQW3LGnJYC90ac1qWhUZJtjE1tI0fPk7U14Gr0Qu5FEOMuW0YUV5aoo3P1OpwrKPt2U6FFlrvg==";
+        url = "https://registry.npmjs.org/@textlint/ast-traverse/-/ast-traverse-15.2.3.tgz";
+        sha512 = "XqlEVbQanAu40pGrtoRJzV3bWUxiCvqpu6FBmHotUgah1jjNWe6DQRkDsjcil9qXrVjXfQFAjG8ZuDk9/sUcGg==";
       };
     };
     "@textlint/ast-traverse-2.3.5" = {
@@ -598,13 +598,13 @@ let
         sha512 = "yo1gIoXDx2bNs1JjC9viRxJpErNsfPtzb585KcVwWxxWmu3tXlT2iz13iKdjj5FMYPJe/PORe7lYqymkSUZ7kg==";
       };
     };
-    "@textlint/config-loader-15.2.2" = {
+    "@textlint/config-loader-15.2.3" = {
       name = "_at_textlint_slash_config-loader";
       packageName = "@textlint/config-loader";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/config-loader/-/config-loader-15.2.2.tgz";
-        sha512 = "uFlxTMhgS0jLzdn4xd3TDS/3QWlE8br2LQVnCjdNmvyU7qNpXHy/9+XUEfbvVMyBXrfBnDIFY4AQAXfhGdOo7g==";
+        url = "https://registry.npmjs.org/@textlint/config-loader/-/config-loader-15.2.3.tgz";
+        sha512 = "dSedypITXGyh/Bz0t/tQU1NMyehfZeeYhEMtfqpdFY6a3ABLpfaZpOMOZd9EP4zwu2oi2OsooQBMbn/ZdXJ12w==";
       };
     };
     "@textlint/feature-flag-13.4.1" = {
@@ -616,13 +616,13 @@ let
         sha512 = "qY8gKUf30XtzWMTkwYeKytCo6KPx6milpz8YZhuRsEPjT/5iNdakJp5USWDQWDrwbQf7RbRncQdU+LX5JbM9YA==";
       };
     };
-    "@textlint/feature-flag-15.2.2" = {
+    "@textlint/feature-flag-15.2.3" = {
       name = "_at_textlint_slash_feature-flag";
       packageName = "@textlint/feature-flag";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/feature-flag/-/feature-flag-15.2.2.tgz";
-        sha512 = "SX//fr056jGT3aRDbPTz4k0kEqyHRTvbHTr7HgC3yuksO89NKl605gmU9flrykBZC+i4GOMcR2BL4SweiNXbTg==";
+        url = "https://registry.npmjs.org/@textlint/feature-flag/-/feature-flag-15.2.3.tgz";
+        sha512 = "XW2NVj3K7Pi8jlgwxKMUh7L1y+EMN+s47TtEC1rkagI581THgHnAyAe+/aHZsF/CJEwevZtGnaan2MY1rnbsYA==";
       };
     };
     "@textlint/feature-flag-3.3.5" = {
@@ -634,13 +634,13 @@ let
         sha512 = "S4JhbDQGu1Sutnvqs96nwxqwaErHrL49/QQDR8i/YNsINlurfKJbmktotb+w+qzeSibDibKzB8feOMVBXmO9Ww==";
       };
     };
-    "@textlint/fixer-formatter-15.2.2" = {
+    "@textlint/fixer-formatter-15.2.3" = {
       name = "_at_textlint_slash_fixer-formatter";
       packageName = "@textlint/fixer-formatter";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/fixer-formatter/-/fixer-formatter-15.2.2.tgz";
-        sha512 = "wX52sevPrM/hWDAolBm5yJkSQ5QGmLYMja4C1Ao3o/HVO5eI/Q6PS8amtoGJOilOXKrVV0hBuEwGdrXuyGngXw==";
+        url = "https://registry.npmjs.org/@textlint/fixer-formatter/-/fixer-formatter-15.2.3.tgz";
+        sha512 = "cdA3Pt2aaR2NKDBqv/rZiZ8VIuTsUZYX1uaq6v2T2HDFlHn46gv6A4TPg8w5ACpoHid1+kADqe67GRpCxPb9rQ==";
       };
     };
     "@textlint/get-config-base-dir-2.0.0" = {
@@ -661,13 +661,13 @@ let
         sha512 = "r2sUhjPysFjl2Ax37x9AfWkJM8jgKN0bL4SX3xRzOukdcj69Dst5On5qBZtULaVMX1LDkwkdxA6ZEADmq27qQA==";
       };
     };
-    "@textlint/kernel-15.2.2" = {
+    "@textlint/kernel-15.2.3" = {
       name = "_at_textlint_slash_kernel";
       packageName = "@textlint/kernel";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/kernel/-/kernel-15.2.2.tgz";
-        sha512 = "xFtIx3thI3SC2wk4uApJ5lW0cks4pkSfoRejfYoAMwPd1VyvFhCsQQWNRTyXIlXfNIGT6qY82SoPyXvi3XF6Zg==";
+        url = "https://registry.npmjs.org/@textlint/kernel/-/kernel-15.2.3.tgz";
+        sha512 = "A+YVhh5cFMDrNbnhA754/PT2WrVirQ/zCvGKJz/+yKR+ju97eQc6wZOcu/vYAEsS0+vDZRyR/opD+aOaI3GHZA==";
       };
     };
     "@textlint/kernel-3.4.5" = {
@@ -679,13 +679,13 @@ let
         sha512 = "KGeOq4mbjPe3okDtPw7mbnTX/wP66ndmRKAoOz8gOKDIDRlH8nOG/av6k6xbVhdMk9+ZnomqU8jSSYwTZHzAnA==";
       };
     };
-    "@textlint/linter-formatter-15.2.2" = {
+    "@textlint/linter-formatter-15.2.3" = {
       name = "_at_textlint_slash_linter-formatter";
       packageName = "@textlint/linter-formatter";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/linter-formatter/-/linter-formatter-15.2.2.tgz";
-        sha512 = "oMVaMJ3exFvXhCj3AqmCbLaeYrTNLqaJnLJMIlmnRM3/kZdxvku4OYdaDzgtlI194cVxamOY5AbHBBVnY79kEg==";
+        url = "https://registry.npmjs.org/@textlint/linter-formatter/-/linter-formatter-15.2.3.tgz";
+        sha512 = "gnFGl8MejAS4rRDPKV2OYvU0Tb0iJySOPDahf+RCK30b615UqY6CjqWxXw1FvXfT3pHPoRrefVu39j1AKm2ezg==";
       };
     };
     "@textlint/markdown-to-ast-13.4.1" = {
@@ -697,13 +697,13 @@ let
         sha512 = "jUa5bTNmxjEgfCXW4xfn7eSJqzUXyNKiIDWLKtI4MUKRNhT3adEaa/NuQl0Mii3Hu3HraZR7hYhRHLh+eeM43w==";
       };
     };
-    "@textlint/markdown-to-ast-15.2.2" = {
+    "@textlint/markdown-to-ast-15.2.3" = {
       name = "_at_textlint_slash_markdown-to-ast";
       packageName = "@textlint/markdown-to-ast";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/markdown-to-ast/-/markdown-to-ast-15.2.2.tgz";
-        sha512 = "7LsDOCApuM5463e4mfJAORyOMDxzJGmfDfoT6RtwL5P1T1kKGxLl5yudzdfm8++WB8v4wJZZEUQqppejeDRs9Q==";
+        url = "https://registry.npmjs.org/@textlint/markdown-to-ast/-/markdown-to-ast-15.2.3.tgz";
+        sha512 = "5kz75TBEOUQIpqCaV65l98YSIpfyOyTKSn4et9A//iSbjiwZHDK3HBo2jDWdkHmGX28+w1hBFDR7/eFMnbxAJQ==";
       };
     };
     "@textlint/module-interop-1.2.5" = {
@@ -724,13 +724,13 @@ let
         sha512 = "1LdPYLAVpa27NOt6EqvuFO99s4XLB0c19Hw9xKSG6xQ1K82nUEyuWhzTQKb3KJ5Qx7qj14JlXZLfnEuL6A16Bw==";
       };
     };
-    "@textlint/module-interop-15.2.2" = {
+    "@textlint/module-interop-15.2.3" = {
       name = "_at_textlint_slash_module-interop";
       packageName = "@textlint/module-interop";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/module-interop/-/module-interop-15.2.2.tgz";
-        sha512 = "2rmNcWrcqhuR84Iio1WRzlc4tEoOMHd6T7urjtKNNefpTt1owrTJ9WuOe60yD3FrTW0J/R0ux5wxUbP/eaeFOA==";
+        url = "https://registry.npmjs.org/@textlint/module-interop/-/module-interop-15.2.3.tgz";
+        sha512 = "dV6M3ptOFJjR5bgYUMeVqc8AqFrMtCEFaZEiLAfMufX29asYonI2K8arqivOA69S2Lh6esyij6V7qpQiXeK/cA==";
       };
     };
     "@textlint/regexp-string-matcher-1.1.1" = {
@@ -751,13 +751,13 @@ let
         sha512 = "OXLD9XRxMhd3S0LWuPHpiARQOI7z9tCOs0FsynccW2lmyZzHHFJ9/eR6kuK9xF459Qf+740qI5h+/0cx+NljzA==";
       };
     };
-    "@textlint/resolver-15.2.2" = {
+    "@textlint/resolver-15.2.3" = {
       name = "_at_textlint_slash_resolver";
       packageName = "@textlint/resolver";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/resolver/-/resolver-15.2.2.tgz";
-        sha512 = "4hGWjmHt0y+5NAkoYZ8FvEkj8Mez9TqfbTm3BPjoV32cIfEixl2poTOgapn1rfm73905GSO3P1jiWjmgvii13Q==";
+        url = "https://registry.npmjs.org/@textlint/resolver/-/resolver-15.2.3.tgz";
+        sha512 = "Qd3udqo2sWa3u0sYgDVd9M/iybBVBJLrWGaID6Yzl9GyhdGi0E6ngo3b9r+H6psbJDIaCKi54IxvC9q5didWfA==";
       };
     };
     "@textlint/source-code-fixer-13.4.1" = {
@@ -769,13 +769,13 @@ let
         sha512 = "Sl29f3Tpimp0uVE3ysyJBjxaFTVYLOXiJX14eWCQ/kC5ZhIXGosEbStzkP1n8Urso1rs1W4p/2UemVAm3NH2ng==";
       };
     };
-    "@textlint/source-code-fixer-15.2.2" = {
+    "@textlint/source-code-fixer-15.2.3" = {
       name = "_at_textlint_slash_source-code-fixer";
       packageName = "@textlint/source-code-fixer";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/source-code-fixer/-/source-code-fixer-15.2.2.tgz";
-        sha512 = "Cstr9wjK7toLmY2hhlZ3YcIh8o/gr7E5dpCd9IalNiMBedvvLYuOfhktKgUa4E7oFcGtl0leDPgx5ENDY25JDw==";
+        url = "https://registry.npmjs.org/@textlint/source-code-fixer/-/source-code-fixer-15.2.3.tgz";
+        sha512 = "DfKy15kGFG8ddEYDyeRKilVI3nTSdEp5/sw7ariyUXk2spAW8xdToRpgeMaluF4Cp5gcGa6bVOTDJapj/UfFvA==";
       };
     };
     "@textlint/source-code-fixer-3.4.5" = {
@@ -796,13 +796,13 @@ let
         sha512 = "vCA7uMmbjRv06sEHPbwxTV5iS8OQedC5s7qwmXnWAn2LLWxg4Yp98mONPS1o4D5cPomzYyKNCSfbLwu6yJBUQA==";
       };
     };
-    "@textlint/text-to-ast-15.2.2" = {
+    "@textlint/text-to-ast-15.2.3" = {
       name = "_at_textlint_slash_text-to-ast";
       packageName = "@textlint/text-to-ast";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/text-to-ast/-/text-to-ast-15.2.2.tgz";
-        sha512 = "IphrojtJw3eW/1JMm/Hzc0dsDFALpEzjankABS6tIHMvB2O+2wejRDbDaqmgCgMCr+lGKoMNg5Xvlr5x9XRxww==";
+        url = "https://registry.npmjs.org/@textlint/text-to-ast/-/text-to-ast-15.2.3.tgz";
+        sha512 = "xweE4sDTz56tLy90UXcjn/YEYZr2NH/Kh4Kr5FmQ8K4MtJXOVOubnwmN9503/Vmj4Mq9uNuEzR35D4H2LVHriQ==";
       };
     };
     "@textlint/textlint-plugin-markdown-13.4.1" = {
@@ -814,13 +814,13 @@ let
         sha512 = "OcLkFKYmbYeGJ0kj2487qcicCYTiE2vJLwfPcUDJrNoMYak5JtvHJfWffck8gON2mEM00DPkHH0UdxZpFjDfeg==";
       };
     };
-    "@textlint/textlint-plugin-markdown-15.2.2" = {
+    "@textlint/textlint-plugin-markdown-15.2.3" = {
       name = "_at_textlint_slash_textlint-plugin-markdown";
       packageName = "@textlint/textlint-plugin-markdown";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/textlint-plugin-markdown/-/textlint-plugin-markdown-15.2.2.tgz";
-        sha512 = "JzmHAtC2C4LOpJ/JD2YsqBZt9ej4khFFDI0d9E6P9y9AO/HOEv4GeT7aAjGGPG6AVO977aGiJ92EK9kTwlVnIQ==";
+        url = "https://registry.npmjs.org/@textlint/textlint-plugin-markdown/-/textlint-plugin-markdown-15.2.3.tgz";
+        sha512 = "fpHuWt1Tonl+UuObH5upByvPWQjd9swu+beMlrSagBWTFblEyNxGwgaQkTjaWC/SYqJn4TkTsT1c1IZJaHV5oQ==";
       };
     };
     "@textlint/textlint-plugin-text-13.4.1" = {
@@ -832,13 +832,13 @@ let
         sha512 = "z0p5B8WUfTCIRmhjVHFfJv719oIElDDKWOIZei4CyYkfMGo0kq8fkrYBkUR6VZ6gofHwc+mwmIABdUf1rDHzYA==";
       };
     };
-    "@textlint/textlint-plugin-text-15.2.2" = {
+    "@textlint/textlint-plugin-text-15.2.3" = {
       name = "_at_textlint_slash_textlint-plugin-text";
       packageName = "@textlint/textlint-plugin-text";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/textlint-plugin-text/-/textlint-plugin-text-15.2.2.tgz";
-        sha512 = "bZYlxw8S9zsuJgx2EAR23RFyQ3JtyuIDUA3dbt5Sov2eo20LitNjDIqrQgDo85widbOD/6rG7VioNesV1/6HFw==";
+        url = "https://registry.npmjs.org/@textlint/textlint-plugin-text/-/textlint-plugin-text-15.2.3.tgz";
+        sha512 = "d5a1dXCYqx3cz8Q8dg5JFqWGbZHbfnYIKsue5DndEY6YtZ99JnaAvReo6GuJK5Pg+6pgOys2OvyZRxFA4D59fQ==";
       };
     };
     "@textlint/types-1.5.5" = {
@@ -859,13 +859,13 @@ let
         sha512 = "1ApwQa31sFmiJeJ5yTNFqjbb2D1ICZvIDW0tFSM0OtmQCSDFNcKD3YrrwDBgSokZ6gWQq/FpNjlhi6iETUWt0Q==";
       };
     };
-    "@textlint/types-15.2.2" = {
+    "@textlint/types-15.2.3" = {
       name = "_at_textlint_slash_types";
       packageName = "@textlint/types";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/types/-/types-15.2.2.tgz";
-        sha512 = "X2BHGAR3yXJsCAjwYEDBIk9qUDWcH4pW61ISfmtejau+tVqKtnbbvEZnMTb6mWgKU1BvTmftd5DmB1XVDUtY3g==";
+        url = "https://registry.npmjs.org/@textlint/types/-/types-15.2.3.tgz";
+        sha512 = "i8XVmDHJwykMXcGgkSxZLjdbeqnl+voYAcIr94KIe0STwgkHIhwHJgb/tEVFawGClHo+gPczF12l1C5+TAZEzQ==";
       };
     };
     "@textlint/utils-1.2.5" = {
@@ -886,13 +886,13 @@ let
         sha512 = "wX8RT1ejHAPTDmqlzngf0zI5kYoe3QvGDcj+skoTxSv+m/wOs/NyEr92d+ahCP32YqFYzXlqU7aDx2FkULKT+g==";
       };
     };
-    "@textlint/utils-15.2.2" = {
+    "@textlint/utils-15.2.3" = {
       name = "_at_textlint_slash_utils";
       packageName = "@textlint/utils";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@textlint/utils/-/utils-15.2.2.tgz";
-        sha512 = "uPCfBl2NF4tiXGjAE5DAwah0Bn/EFsgtXhDEIJV4hsSfBQBD8Guqnh8MvJj25fvZaQS+MTNGiEC6bFXtIMHuAg==";
+        url = "https://registry.npmjs.org/@textlint/utils/-/utils-15.2.3.tgz";
+        sha512 = "B5OHi1P6JA0Hy04MmmTeNXFTsSfvgbbqQAWj9iUHg+GhPtd8GyFzb0uxLDIp1oqAGN8eM2hR/n8vwz4WsfPqMw==";
       };
     };
     "@types/conventional-commits-parser-5.0.1" = {
@@ -940,13 +940,13 @@ let
         sha512 = "hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==";
       };
     };
-    "@types/node-24.7.1" = {
+    "@types/node-24.8.1" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "24.7.1";
+      version = "24.8.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-24.7.1.tgz";
-        sha512 = "CmyhGZanP88uuC5GpWU9q+fI61j2SkhO3UGMUdfYRE6Bcy0ccyzn1Rqj9YAB/ZY4kOXmNf0ocah5GtphmLMP6Q==";
+        url = "https://registry.npmjs.org/@types/node/-/node-24.8.1.tgz";
+        sha512 = "alv65KGRadQVfVcG69MuB4IzdYVpRwMG/mq8KWOaoOdyY617P5ivaDiMCGOFDWD2sAn5Q0mR3mRtUOgm99hL9Q==";
       };
     };
     "@types/normalize-package-data-2.4.4" = {
@@ -2029,13 +2029,13 @@ let
         sha512 = "WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==";
       };
     };
-    "emoji-regex-10.5.0" = {
+    "emoji-regex-10.6.0" = {
       name = "emoji-regex";
       packageName = "emoji-regex";
-      version = "10.5.0";
+      version = "10.6.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.5.0.tgz";
-        sha512 = "lb49vf1Xzfx080OKA0o6l8DQQpV+6Vg95zyCJX9VB/BqKYlhG7N4wgROUUHRA+ZPUefLnteQOad7z1kT2bV7bg==";
+        url = "https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.6.0.tgz";
+        sha512 = "toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==";
       };
     };
     "emoji-regex-8.0.0" = {
@@ -2407,13 +2407,13 @@ let
         sha512 = "afd4O7zpqHeRyg4PfDQsXmlDe2PfdHtJt6Akt8jOWaApLOZk5JXs6VMR29lz03pRe9mpykrRCYIYxaJYcfpncQ==";
       };
     };
-    "flat-cache-6.1.17" = {
+    "flat-cache-6.1.18" = {
       name = "flat-cache";
       packageName = "flat-cache";
-      version = "6.1.17";
+      version = "6.1.18";
       src = fetchurl {
-        url = "https://registry.npmjs.org/flat-cache/-/flat-cache-6.1.17.tgz";
-        sha512 = "Jzse4YoiUJBVYTwz5Bwl4h/2VQM7e2KK3MVAMlXzX9uamIHAH/TXUlRKU1AQGQOryQhN0EsmufiiF40G057YXA==";
+        url = "https://registry.npmjs.org/flat-cache/-/flat-cache-6.1.18.tgz";
+        sha512 = "JUPnFgHMuAVmLmoH9/zoZ6RHOt5n9NlUw/sDXsTbROJ2SFoS2DS4s+swAV6UTeTbGH/CAsZIE6M8TaG/3jVxgQ==";
       };
     };
     "flatted-3.3.3" = {
@@ -2767,13 +2767,13 @@ let
         sha512 = "WlztFuK+Lrvi3EggsqOkQ52rKbxkXL3RwB6t5lwoa8QLMemoWfBuL43eDrwOamJyR7uKQKdmKYaBH1NZBiIRrQ==";
       };
     };
-    "hookified-1.12.1" = {
+    "hookified-1.12.2" = {
       name = "hookified";
       packageName = "hookified";
-      version = "1.12.1";
+      version = "1.12.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/hookified/-/hookified-1.12.1.tgz";
-        sha512 = "xnKGl+iMIlhrZmGHB729MqlmPoWBznctSQTYCpFKqNsCgimJQmithcW0xSQMMFzYnV2iKUh25alswn6epgxS0Q==";
+        url = "https://registry.npmjs.org/hookified/-/hookified-1.12.2.tgz";
+        sha512 = "aokUX1VdTpI0DUsndvW+OiwmBpKCu/NgRsSSkuSY0zq8PY6Q6a+lmOfAFDXAAOtBqJELvcWY9L1EVtzjbQcMdg==";
       };
     };
     "hosted-git-info-2.8.9" = {
@@ -4360,13 +4360,13 @@ let
         sha512 = "vv8fJuOUCCvSPjDjBLlMqYMHob4aGjkmrkaE42/mZr0VT+ZAU10jRF8oTnX9+pgU9/vYJ8P7YT3Vd6ajkmzSCw==";
       };
     };
-    "node-sql-parser-5.3.12" = {
+    "node-sql-parser-5.3.13" = {
       name = "node-sql-parser";
       packageName = "node-sql-parser";
-      version = "5.3.12";
+      version = "5.3.13";
       src = fetchurl {
-        url = "https://registry.npmjs.org/node-sql-parser/-/node-sql-parser-5.3.12.tgz";
-        sha512 = "GQBwA2e44qjbK0MzFwh5bNYefniV6cKT4KfjNDpuh/2EWipUEK1BCMc//moSidp8EF6fHB/EqJwUH9GCh9MAPg==";
+        url = "https://registry.npmjs.org/node-sql-parser/-/node-sql-parser-5.3.13.tgz";
+        sha512 = "heyWv3lLjKHpcBDMUSR+R0DohRYZTYq+Ro3hJ4m9Ia8ccdKbL5UijIaWr2L4co+bmmFuvBVZ4v23QW2PqvBFAA==";
       };
     };
     "normalize-package-data-2.5.0" = {
@@ -5773,13 +5773,13 @@ let
         sha512 = "RsSNPLpq6YUL7QYy44RnPVTn/lcVZtb48Uof3X5JLbF4zD/Gs7ZFDv2HWol+leoQN2mT86LAzSshGfkTlSOpsA==";
       };
     };
-    "strip-indent-4.1.0" = {
+    "strip-indent-4.1.1" = {
       name = "strip-indent";
       packageName = "strip-indent";
-      version = "4.1.0";
+      version = "4.1.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/strip-indent/-/strip-indent-4.1.0.tgz";
-        sha512 = "OA95x+JPmL7kc7zCu+e+TeYxEiaIyndRx0OrBcK2QPPH09oAndr2ALvymxWA+Lx1PYYvFUm4O63pRkdJAaW96w==";
+        url = "https://registry.npmjs.org/strip-indent/-/strip-indent-4.1.1.tgz";
+        sha512 = "SlyRoSkdh1dYP0PzclLE7r0M9sgbFKKMFXpFRUMNuKhQSbC6VQIGzq3E0qsfvGJaUFJPGv6Ws1NZ/haTAjfbMA==";
       };
     };
     "structured-source-3.0.2" = {
@@ -5863,13 +5863,13 @@ let
         sha512 = "N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==";
       };
     };
-    "textlint-15.2.2" = {
+    "textlint-15.2.3" = {
       name = "textlint";
       packageName = "textlint";
-      version = "15.2.2";
+      version = "15.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/textlint/-/textlint-15.2.2.tgz";
-        sha512 = "0V02Lvs7GJfXPNJgBVhayysW+9qe0bZVmyD8FrYzkW70xZcSoVK4Hdl6825wpQqn8KgdB171WNYlWq5FPEAPgg==";
+        url = "https://registry.npmjs.org/textlint/-/textlint-15.2.3.tgz";
+        sha512 = "TV6STsR0iDSuBtQTtgtAlQVT65OubHcpxOIGxWgRCBfRqlEwdkD6v3tx6ydE16nk0VdpPJP3/PuIMLKQSQk/ZA==";
       };
     };
     "textlint-rule-helper-2.5.0" = {
@@ -6888,7 +6888,7 @@ in
     dependencies = [
       sources."@commitlint/types-20.0.0"
       sources."@types/conventional-commits-parser-5.0.1"
-      sources."@types/node-24.7.1"
+      sources."@types/node-24.8.1"
       sources."array-ify-1.0.0"
       sources."chalk-5.6.2"
       sources."compare-func-2.0.0"
@@ -7060,7 +7060,7 @@ in
       sources."@commitlint/resolve-extends-20.1.0"
       sources."@commitlint/types-20.0.0"
       sources."@types/conventional-commits-parser-5.0.1"
-      sources."@types/node-24.7.1"
+      sources."@types/node-24.8.1"
       sources."ajv-8.17.1"
       sources."argparse-2.0.1"
       sources."callsites-3.1.0"
@@ -7120,7 +7120,7 @@ in
       sources."@commitlint/top-level-20.0.0"
       sources."@commitlint/types-20.0.0"
       sources."@types/conventional-commits-parser-5.0.1"
-      sources."@types/node-24.7.1"
+      sources."@types/node-24.8.1"
       sources."chalk-5.6.2"
       sources."dargs-8.1.0"
       sources."find-up-7.0.0"
@@ -7249,7 +7249,7 @@ in
       sources."spdx-exceptions-2.5.0"
       sources."spdx-expression-parse-3.0.1"
       sources."spdx-license-ids-3.0.22"
-      sources."strip-indent-4.1.0"
+      sources."strip-indent-4.1.1"
       sources."to-regex-range-5.0.1"
       sources."trim-newlines-4.1.1"
       sources."type-fest-3.13.1"
@@ -7411,7 +7411,7 @@ in
       sources."@textlint/utils-1.2.5"
       sources."@types/glob-7.2.0"
       sources."@types/minimatch-6.0.0"
-      sources."@types/node-24.7.1"
+      sources."@types/node-24.8.1"
       sources."@types/unist-2.0.11"
       sources."app-root-path-3.1.0"
       sources."argparse-1.0.10"
@@ -7499,7 +7499,7 @@ in
       sources."structured-source-3.0.2"
       (sources."textlint-rule-helper-2.5.0" // {
         dependencies = [
-          sources."@textlint/ast-node-types-15.2.2"
+          sources."@textlint/ast-node-types-15.2.3"
           sources."boundary-2.0.0"
           sources."structured-source-4.0.0"
         ];
@@ -7857,7 +7857,7 @@ in
       sources."jsox-1.2.123"
       sources."moo-0.5.2"
       sources."nearley-2.20.1"
-      sources."node-sql-parser-5.3.12"
+      sources."node-sql-parser-5.3.13"
       sources."prettier-3.6.2"
       sources."railroad-diagrams-1.0.0"
       sources."randexp-0.4.6"
@@ -7901,55 +7901,55 @@ in
       })
       sources."@keyv/bigmap-1.0.3"
       sources."@keyv/serialize-1.1.1"
-      sources."@modelcontextprotocol/sdk-1.20.0"
+      sources."@modelcontextprotocol/sdk-1.20.1"
       sources."@textlint/ast-node-types-12.6.1"
-      (sources."@textlint/ast-tester-15.2.2" // {
+      (sources."@textlint/ast-tester-15.2.3" // {
         dependencies = [
-          sources."@textlint/ast-node-types-15.2.2"
+          sources."@textlint/ast-node-types-15.2.3"
         ];
       })
-      (sources."@textlint/ast-traverse-15.2.2" // {
+      (sources."@textlint/ast-traverse-15.2.3" // {
         dependencies = [
-          sources."@textlint/ast-node-types-15.2.2"
+          sources."@textlint/ast-node-types-15.2.3"
         ];
       })
-      sources."@textlint/config-loader-15.2.2"
-      sources."@textlint/feature-flag-15.2.2"
-      sources."@textlint/fixer-formatter-15.2.2"
+      sources."@textlint/config-loader-15.2.3"
+      sources."@textlint/feature-flag-15.2.3"
+      sources."@textlint/fixer-formatter-15.2.3"
       sources."@textlint/get-config-base-dir-2.0.0"
-      (sources."@textlint/kernel-15.2.2" // {
+      (sources."@textlint/kernel-15.2.3" // {
         dependencies = [
-          sources."@textlint/ast-node-types-15.2.2"
+          sources."@textlint/ast-node-types-15.2.3"
         ];
       })
-      (sources."@textlint/linter-formatter-15.2.2" // {
+      (sources."@textlint/linter-formatter-15.2.3" // {
         dependencies = [
           sources."argparse-1.0.10"
           sources."js-yaml-3.14.1"
         ];
       })
-      (sources."@textlint/markdown-to-ast-15.2.2" // {
+      (sources."@textlint/markdown-to-ast-15.2.3" // {
         dependencies = [
-          sources."@textlint/ast-node-types-15.2.2"
+          sources."@textlint/ast-node-types-15.2.3"
         ];
       })
-      sources."@textlint/module-interop-15.2.2"
+      sources."@textlint/module-interop-15.2.3"
       sources."@textlint/regexp-string-matcher-1.1.1"
-      sources."@textlint/resolver-15.2.2"
-      sources."@textlint/source-code-fixer-15.2.2"
-      (sources."@textlint/text-to-ast-15.2.2" // {
+      sources."@textlint/resolver-15.2.3"
+      sources."@textlint/source-code-fixer-15.2.3"
+      (sources."@textlint/text-to-ast-15.2.3" // {
         dependencies = [
-          sources."@textlint/ast-node-types-15.2.2"
+          sources."@textlint/ast-node-types-15.2.3"
         ];
       })
-      sources."@textlint/textlint-plugin-markdown-15.2.2"
-      sources."@textlint/textlint-plugin-text-15.2.2"
-      (sources."@textlint/types-15.2.2" // {
+      sources."@textlint/textlint-plugin-markdown-15.2.3"
+      sources."@textlint/textlint-plugin-text-15.2.3"
+      (sources."@textlint/types-15.2.3" // {
         dependencies = [
-          sources."@textlint/ast-node-types-15.2.2"
+          sources."@textlint/ast-node-types-15.2.3"
         ];
       })
-      sources."@textlint/utils-15.2.2"
+      sources."@textlint/utils-15.2.3"
       sources."@types/mdast-3.0.15"
       sources."@types/normalize-package-data-2.4.4"
       sources."@types/unist-2.0.11"
@@ -8020,7 +8020,7 @@ in
       sources."file-entry-cache-10.1.4"
       sources."finalhandler-2.1.0"
       sources."find-up-simple-1.0.1"
-      sources."flat-cache-6.1.17"
+      sources."flat-cache-6.1.18"
       sources."flatted-3.3.3"
       sources."foreground-child-3.3.1"
       sources."format-0.2.2"
@@ -8035,7 +8035,7 @@ in
       sources."has-flag-4.0.0"
       sources."has-symbols-1.1.0"
       sources."hasown-2.0.2"
-      sources."hookified-1.12.1"
+      sources."hookified-1.12.2"
       sources."hosted-git-info-7.0.2"
       (sources."http-errors-2.0.0" // {
         dependencies = [
@@ -8190,9 +8190,9 @@ in
         ];
       })
       sources."text-table-0.2.0"
-      (sources."textlint-15.2.2" // {
+      (sources."textlint-15.2.3" // {
         dependencies = [
-          sources."@textlint/ast-node-types-15.2.2"
+          sources."@textlint/ast-node-types-15.2.3"
         ];
       })
       sources."to-regex-3.0.2"
@@ -8265,24 +8265,24 @@ in
       })
       sources."@keyv/bigmap-1.0.3"
       sources."@keyv/serialize-1.1.1"
-      sources."@modelcontextprotocol/sdk-1.20.0"
-      sources."@textlint/ast-node-types-15.2.2"
-      sources."@textlint/ast-tester-15.2.2"
-      sources."@textlint/ast-traverse-15.2.2"
-      sources."@textlint/config-loader-15.2.2"
-      sources."@textlint/feature-flag-15.2.2"
-      sources."@textlint/fixer-formatter-15.2.2"
-      sources."@textlint/kernel-15.2.2"
-      sources."@textlint/linter-formatter-15.2.2"
-      sources."@textlint/markdown-to-ast-15.2.2"
-      sources."@textlint/module-interop-15.2.2"
-      sources."@textlint/resolver-15.2.2"
-      sources."@textlint/source-code-fixer-15.2.2"
-      sources."@textlint/text-to-ast-15.2.2"
-      sources."@textlint/textlint-plugin-markdown-15.2.2"
-      sources."@textlint/textlint-plugin-text-15.2.2"
-      sources."@textlint/types-15.2.2"
-      sources."@textlint/utils-15.2.2"
+      sources."@modelcontextprotocol/sdk-1.20.1"
+      sources."@textlint/ast-node-types-15.2.3"
+      sources."@textlint/ast-tester-15.2.3"
+      sources."@textlint/ast-traverse-15.2.3"
+      sources."@textlint/config-loader-15.2.3"
+      sources."@textlint/feature-flag-15.2.3"
+      sources."@textlint/fixer-formatter-15.2.3"
+      sources."@textlint/kernel-15.2.3"
+      sources."@textlint/linter-formatter-15.2.3"
+      sources."@textlint/markdown-to-ast-15.2.3"
+      sources."@textlint/module-interop-15.2.3"
+      sources."@textlint/resolver-15.2.3"
+      sources."@textlint/source-code-fixer-15.2.3"
+      sources."@textlint/text-to-ast-15.2.3"
+      sources."@textlint/textlint-plugin-markdown-15.2.3"
+      sources."@textlint/textlint-plugin-text-15.2.3"
+      sources."@textlint/types-15.2.3"
+      sources."@textlint/utils-15.2.3"
       sources."@types/mdast-3.0.15"
       sources."@types/normalize-package-data-2.4.4"
       sources."@types/unist-2.0.11"
@@ -8348,7 +8348,7 @@ in
       sources."file-entry-cache-10.1.4"
       sources."finalhandler-2.1.0"
       sources."find-up-simple-1.0.1"
-      sources."flat-cache-6.1.17"
+      sources."flat-cache-6.1.18"
       sources."flatted-3.3.3"
       sources."foreground-child-3.3.1"
       sources."format-0.2.2"
@@ -8363,7 +8363,7 @@ in
       sources."has-flag-4.0.0"
       sources."has-symbols-1.1.0"
       sources."hasown-2.0.2"
-      sources."hookified-1.12.1"
+      sources."hookified-1.12.2"
       sources."hosted-git-info-7.0.2"
       (sources."http-errors-2.0.0" // {
         dependencies = [
@@ -8506,7 +8506,7 @@ in
         ];
       })
       sources."text-table-0.2.0"
-      sources."textlint-15.2.2"
+      sources."textlint-15.2.3"
       sources."toidentifier-1.0.1"
       sources."trough-1.0.5"
       sources."type-check-0.4.0"
@@ -8564,7 +8564,7 @@ in
       sources."@babel/parser-7.28.4"
       sources."@babel/types-7.28.4"
       sources."@textlint-ja/textlint-rule-no-synonyms-1.3.0"
-      sources."@textlint/ast-node-types-15.2.2"
+      sources."@textlint/ast-node-types-15.2.3"
       sources."@textlint/module-interop-1.2.5"
       sources."@types/unist-2.0.11"
       sources."argparse-1.0.10"
@@ -8647,7 +8647,7 @@ in
       sha512 = "WAiWY9TOE8/bRdl14XJdjkPQcV0hLS4O+PCUYU1yxXmJhZ8V3ciw2GYqpA9GL73qAxL25UD6mkf1yfz6aJ4qSA==";
     };
     dependencies = [
-      sources."@textlint/ast-node-types-15.2.2"
+      sources."@textlint/ast-node-types-15.2.3"
       sources."@textlint/regexp-string-matcher-2.0.2"
       sources."@types/unist-2.0.11"
       sources."async-function-1.0.0"
@@ -8778,7 +8778,7 @@ in
       sources."diff-4.0.2"
       sources."doublearray-0.0.2"
       sources."dunder-proto-1.0.1"
-      sources."emoji-regex-10.5.0"
+      sources."emoji-regex-10.6.0"
       sources."es-abstract-1.24.0"
       sources."es-define-property-1.0.1"
       sources."es-errors-1.3.0"
@@ -8936,7 +8936,7 @@ in
       sources."structured-source-4.0.0"
       (sources."textlint-rule-helper-2.5.0" // {
         dependencies = [
-          sources."@textlint/ast-node-types-15.2.2"
+          sources."@textlint/ast-node-types-15.2.3"
         ];
       })
       sources."textlint-rule-ja-no-abusage-3.0.0"
