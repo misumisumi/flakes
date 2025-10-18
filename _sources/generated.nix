@@ -115,6 +115,14 @@
     };
     date = "2023-11-01";
   };
+  mstflint-cx3-support = {
+    pname = "mstflint-cx3-support";
+    version = "4.25.0-1";
+    src = fetchurl {
+      url = "https://github.com/Mellanox/mstflint/releases/download/v4.25.0-1/mstflint-4.25.0-1.tar.gz";
+      sha256 = "sha256-nYGiWfr8a3q3+bGUb1ovLrAS8/LnEJf+4inIEllW95s=";
+    };
+  };
   openpace = {
     pname = "openpace";
     version = "1.1.3";

@@ -38,6 +38,10 @@ fetch.github = "ClusterLabs/fence-agents"
 src.git = "https://github.com/ku-nlp/knp/"
 fetch.github = "ku-nlp/knp"
 
+[mstflint-cx3-support]
+src.manual = "4.25.0-1"
+fetch.url = "https://github.com/Mellanox/mstflint/releases/download/v$ver/mstflint-$ver.tar.gz"
+
 [proton-ge-rtsp-bin]
 src.github_tag = "SpookySkeletons/proton-ge-rtsp"
 src.include_regex = "GE-Proton.*"
