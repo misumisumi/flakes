@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.5.0](https://github.com/misumisumi/flakes/compare/v3.4.2...v3.5.0) (2025-10-19)
+
+
+### Features
+
+* **mstflint-cx3-support:** add mstflint supporting connectx3 ([20a0317](https://github.com/misumisumi/flakes/commit/20a03173379f2c75f6c1d4408fc45e0cb8ff7521))
+* **mstflint-cx3-support:** add mstflint supporting connectx3 ([4b9d28d](https://github.com/misumisumi/flakes/commit/4b9d28d7d46559e2619b82f1f89f4fe3248b302e))
+
 ## [3.4.2](https://github.com/misumisumi/flakes/compare/v3.4.1...v3.4.2) (2025-10-07)
 
 
