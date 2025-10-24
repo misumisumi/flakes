@@ -71,6 +71,7 @@ In your `flake.nix`
   - jawiki-kana-kanji-dict-2025-08-11
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
+  - mstflint-cx3-support-4.25.0-1
   - napi-postinstall-0.3.4
   - nixos-diff
   - openpace-1.1.3
@@ -100,7 +101,7 @@ In your `flake.nix`
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2025-08-11
-  - zotero-better-bibtex-7.0.55
+  - zotero-better-bibtex-7.0.60
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.3.14
   - zotero-reading-list-1.5.14
