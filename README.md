@@ -101,9 +101,9 @@ In your `flake.nix`
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2025-08-11
-  - zotero-better-bibtex-7.0.60
+  - zotero-better-bibtex-7.0.62
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.3.14
+  - zotero-pdf-translate-2.3.15
   - zotero-reading-list-1.5.14
   - zotero-scipdf-1.3.0
   - zotero-zotfile-5.1.2
