@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.5.1](https://github.com/misumisumi/flakes/compare/v3.5.0...v3.5.1) (2025-11-01)
+
+
+### Bug Fixes
+
+* **nodePackages:** update build env by upstream ([cc521cf](https://github.com/misumisumi/flakes/commit/cc521cf08fed089c72a1e0256e86568c6d2112a0))
+
 ## [3.5.0](https://github.com/misumisumi/flakes/compare/v3.4.2...v3.5.0) (2025-10-19)
 
 
