@@ -940,13 +940,13 @@ let
         sha512 = "hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==";
       };
     };
-    "@types/node-24.9.1" = {
+    "@types/node-24.9.2" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "24.9.1";
+      version = "24.9.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-24.9.1.tgz";
-        sha512 = "QoiaXANRkSXK6p0Duvt56W208du4P9Uye9hWLWgGMDTEoKPhuenzNcC4vGUmrNkiOKTlIrBoyNQYNpSwfEZXSg==";
+        url = "https://registry.npmjs.org/@types/node/-/node-24.9.2.tgz";
+        sha512 = "uWN8YqxXxqFMX2RqGOrumsKeti4LlmIMIyV0lgut4jx7KQBcBiW6vkDtIBvHnHIquwNfJhk8v2OtmO8zXWHfPA==";
       };
     };
     "@types/normalize-package-data-2.4.4" = {
@@ -6888,7 +6888,7 @@ in
     dependencies = [
       sources."@commitlint/types-20.0.0"
       sources."@types/conventional-commits-parser-5.0.2"
-      sources."@types/node-24.9.1"
+      sources."@types/node-24.9.2"
       sources."array-ify-1.0.0"
       sources."chalk-5.6.2"
       sources."compare-func-2.0.0"
@@ -7060,7 +7060,7 @@ in
       sources."@commitlint/resolve-extends-20.1.0"
       sources."@commitlint/types-20.0.0"
       sources."@types/conventional-commits-parser-5.0.2"
-      sources."@types/node-24.9.1"
+      sources."@types/node-24.9.2"
       sources."ajv-8.17.1"
       sources."argparse-2.0.1"
       sources."callsites-3.1.0"
@@ -7120,7 +7120,7 @@ in
       sources."@commitlint/top-level-20.0.0"
       sources."@commitlint/types-20.0.0"
       sources."@types/conventional-commits-parser-5.0.2"
-      sources."@types/node-24.9.1"
+      sources."@types/node-24.9.2"
       sources."chalk-5.6.2"
       sources."dargs-8.1.0"
       sources."find-up-7.0.0"
@@ -7411,7 +7411,7 @@ in
       sources."@textlint/utils-1.2.5"
       sources."@types/glob-7.2.0"
       sources."@types/minimatch-6.0.0"
-      sources."@types/node-24.9.1"
+      sources."@types/node-24.9.2"
       sources."@types/unist-2.0.11"
       sources."app-root-path-3.1.0"
       sources."argparse-1.0.10"
