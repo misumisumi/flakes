@@ -1,17 +1,28 @@
-{ pkgSources
-, name
-, stdenv
-, lib
-, nukeReferences
-, linuxPackages
-, kernel ? linuxPackages.kernel
+{
+  pkgSources,
+  name,
+  stdenv,
+  lib,
+  nukeReferences,
+  gitMinimal,
+  coccinelle,
+  linuxPackages,
+  kernel ? linuxPackages.kernel,
 }:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
-  hardeningDisable = [ "pic" "format" ];
-  nativeBuildInputs = [ nukeReferences ] ++ kernel.moduleBuildDependencies;
+  hardeningDisable = [
+    "pic"
+    "format"
+  ];
+  nativeBuildInputs = [
+    nukeReferences
+    gitMinimal
+    coccinelle
+  ]
+  ++ kernel.moduleBuildDependencies;
 
   kernel = kernel.dev;
   kernelVersion = kernel.modDirVersion;
