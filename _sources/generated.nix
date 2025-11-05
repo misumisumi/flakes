@@ -33,6 +33,18 @@
       sha256 = "sha256-JnPiBVJ+ZJKivjq+Kizcf5U8vilOFdLVWBuRUiWJ5zE=";
     };
   };
+  discord-mcp = {
+    pname = "discord-mcp";
+    version = "ac33c4f492fcd99b08aa9dfbd95f8ec4279c1e72";
+    src = fetchFromGitHub {
+      owner = "SaseQ";
+      repo = "discord-mcp";
+      rev = "ac33c4f492fcd99b08aa9dfbd95f8ec4279c1e72";
+      fetchSubmodules = false;
+      sha256 = "sha256-E69M98CZ4jSmzu05Zjuw9UEvacm6nlKE3JvZFJjiYn4=";
+    };
+    date = "2025-08-11";
+  };
   drbd9-dkms = {
     pname = "drbd9-dkms";
     version = "9.1.23";
@@ -132,6 +144,14 @@
       rev = "1.1.3";
       fetchSubmodules = false;
       sha256 = "sha256-KsgCTHvbqxNOcf9HWgXGxagpIjHEcQ5Kryjq71F8XRk=";
+    };
+  };
+  paper-search-mcp = {
+    pname = "paper-search-mcp";
+    version = "0.1.3";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/p/paper_search_mcp/paper_search_mcp-0.1.3.tar.gz";
+      sha256 = "sha256-/dJ2xk9zInBJezYybbiq0NIJuVp1DNiLqshuzSsg87M=";
     };
   };
   proton-ge-rtsp-bin = {
