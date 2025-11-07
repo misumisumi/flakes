@@ -13,11 +13,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-MrJMj+BlzGY4qdxmlcLGaT5XkNrlVrh4HZ5bulEqWm0=",
+            "sha256": "sha256-8ylnCCbZNkkXLxy0XDZGU6ak1I9ddzQumjdat/6yHbQ=",
             "type": "url",
-            "url": "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.62/zotero-better-bibtex-7.0.62.xpi"
+            "url": "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.66/zotero-better-bibtex-7.0.66.xpi"
         },
-        "version": "7.0.62"
+        "version": "7.0.66"
     },
     "zotero-night": {
         "cargoLocks": null,
