@@ -16,6 +16,10 @@ src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&
 src.regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
 fetch.url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-$ver.i386.deb"
 
+[discord-mcp]
+src.git = "https://github.com/SaseQ/discord-mcp"
+fetch.github = "SaseQ/discord-mcp"
+
 [drbd9-dkms]
 src.github_tag = "LINBIT/drbd"
 src.include_regex = "drbd-9.1.*"
@@ -26,13 +30,13 @@ fetch.url = "https://pkg.linbit.com//downloads/drbd/9/drbd-$ver.tar.gz"
 src.github = "dev47apps/droidcam-obs-plugin"
 fetch.github = "dev47apps/droidcam-obs-plugin"
 
-[julius-speech]
-src.github_tag = "julius-speech/julius"
-fetch.github = "julius-speech/julius"
-
 [fence-agents]
 src.github_tag = "ClusterLabs/fence-agents"
 fetch.github = "ClusterLabs/fence-agents"
+
+[julius-speech]
+src.github_tag = "julius-speech/julius"
+fetch.github = "julius-speech/julius"
 
 [knp]
 src.git = "https://github.com/ku-nlp/knp/"
@@ -84,6 +88,10 @@ fetch.url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/$ver"
 [openpace]
 src.github_tag = "frankmorgner/openpace"
 fetch.github = "frankmorgner/openpace"
+
+[paper-search-mcp]
+src.pypi = "paper-search-mcp"
+fetch.pypi = "paper_search_mcp"
 
 [yaskkserv2]
 src.github_tag = "wachikun/yaskkserv2"

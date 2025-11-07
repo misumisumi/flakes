@@ -95,9 +95,9 @@
                   ;
               };
           }
-          // prev.lib.mapAttrs' (
-            name: value: prev.lib.nameValuePair value final.nodePackages.${name}
-          ) (import ./pkgs/node-packages/main-programs.nix)
+          // prev.lib.mapAttrs' (name: value: prev.lib.nameValuePair value final.nodePackages.${name}) (
+            import ./pkgs/node-packages/main-programs.nix
+          )
           // {
             zotero-addons = import ./pkgs/zotero-addons {
               inherit (prev)
@@ -140,9 +140,9 @@
             // lib.mapAttrs' (
               name: value: lib.nameValuePair "zotero-addons.${name}" pkgs.zotero-addons.${name}
             ) (with builtins; fromJSON (readFile ./pkgs/zotero-addons/_sources/generated.json))
-            // lib.mapAttrs' (
-              name: value: lib.nameValuePair value pkgs.${value}
-            ) (import ./pkgs/node-packages/main-programs.nix)
+            // lib.mapAttrs' (name: value: lib.nameValuePair value pkgs.${value}) (
+              import ./pkgs/node-packages/main-programs.nix
+            )
             // import ./env.nix { inherit pkgs; };
           apps = mkApps pkgs (runnableApps pkgs (names appsDir));
           checks = mkCheck packages;

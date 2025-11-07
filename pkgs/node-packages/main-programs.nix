@@ -7,4 +7,8 @@
   # aws-cdk = "cdk";
   # "@commitlint/cli" = "commitlint";
   "@pkgdeps/update-github-actions-permissions" = "update-github-actions-permissions";
+  "@modelcontextprotocol/server-filesystem" = "mcp-server-filesystem";
+  "@modelcontextprotocol/server-memory" = "mcp-server-memory";
+  "@modelcontextprotocol/server-sequential-thinking" = "mcp-server-sequential-thinking";
+  "mcp-hub" = "mcp-hub";
 }

@@ -24,5 +24,4 @@ final: prev: {
     # nativeBuildInputs = [ pkgs.bash ];
     buildInputs = old.buildInputs ++ [ pkgs.nodePackages.napi-postinstall ];
   });
-
 }
