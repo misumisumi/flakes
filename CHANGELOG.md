@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.6.0](https://github.com/misumisumi/flakes/compare/v3.5.1...v3.6.0) (2025-11-07)
+
+
+### Features
+
+* add some mcp-servers ([588d003](https://github.com/misumisumi/flakes/commit/588d0034be2bd9f2545d4962714e57fab8fd27c4))
+
 ## [3.5.1](https://github.com/misumisumi/flakes/compare/v3.5.0...v3.5.1) (2025-11-01)
 
 
