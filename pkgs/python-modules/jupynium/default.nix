@@ -17,7 +17,7 @@
   pynvim,
   selenium,
   setuptools,
-  setuptools_scm,
+  setuptools-scm,
   verboselogs,
   version-pioneer,
 }:
@@ -42,7 +42,7 @@ buildPythonPackage {
     pynvim
     selenium
     setuptools
-    setuptools_scm
+    setuptools-scm
     verboselogs
     version-pioneer
   ];
