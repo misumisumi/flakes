@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.6.1](https://github.com/misumisumi/flakes/compare/v3.6.0...v3.6.1) (2025-11-08)
+
+
+### Bug Fixes
+
+* **jupynium:** fix deprecated pkg name ([dd8bb04](https://github.com/misumisumi/flakes/commit/dd8bb04b47f0fcd8081cac7be99ef2adf419df0a))
+
 ## [3.6.0](https://github.com/misumisumi/flakes/compare/v3.5.1...v3.6.0) (2025-11-07)
 
 
