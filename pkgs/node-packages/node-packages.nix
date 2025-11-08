@@ -463,13 +463,13 @@ let
         sha512 = "slLdFaxQJ9AlRg+hw28iiTtGvShAOgOKXcD0F91nUcRYiOMuS9ZBYjcdNZRXW9G5JQ511GRTdUy1zQVZDpJ+4w==";
       };
     };
-    "@modelcontextprotocol/sdk-1.21.0" = {
+    "@modelcontextprotocol/sdk-1.21.1" = {
       name = "_at_modelcontextprotocol_slash_sdk";
       packageName = "@modelcontextprotocol/sdk";
-      version = "1.21.0";
+      version = "1.21.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@modelcontextprotocol/sdk/-/sdk-1.21.0.tgz";
-        sha512 = "YFBsXJMFCyI1zP98u7gezMFKX4lgu/XpoZJk7ufI6UlFKXLj2hAMUuRlQX/nrmIPOmhRrG6tw2OQ2ZA/ZlXYpQ==";
+        url = "https://registry.npmjs.org/@modelcontextprotocol/sdk/-/sdk-1.21.1.tgz";
+        sha512 = "UyLFcJLDvUuZbGnaQqXFT32CpPpGj7VS19roLut6gkQVhb439xUzYWbsUvdI3ZPL+2hnFosuugtYWE0Mcs1rmQ==";
       };
     };
     "@nodelib/fs.scandir-2.1.5" = {
@@ -8256,7 +8256,7 @@ in
       })
       sources."@keyv/bigmap-1.1.0"
       sources."@keyv/serialize-1.1.1"
-      sources."@modelcontextprotocol/sdk-1.21.0"
+      sources."@modelcontextprotocol/sdk-1.21.1"
       sources."@textlint/ast-node-types-12.6.1"
       (sources."@textlint/ast-tester-15.2.3" // {
         dependencies = [
@@ -8614,7 +8614,7 @@ in
       })
       sources."@keyv/bigmap-1.1.0"
       sources."@keyv/serialize-1.1.1"
-      sources."@modelcontextprotocol/sdk-1.21.0"
+      sources."@modelcontextprotocol/sdk-1.21.1"
       sources."@textlint/ast-node-types-15.2.3"
       sources."@textlint/ast-tester-15.2.3"
       sources."@textlint/ast-traverse-15.2.3"
@@ -9362,7 +9362,7 @@ in
     };
     dependencies = [
       sources."@cfworker/json-schema-4.1.1"
-      (sources."@modelcontextprotocol/sdk-1.21.0" // {
+      (sources."@modelcontextprotocol/sdk-1.21.1" // {
         dependencies = [
           sources."accepts-2.0.0"
           sources."body-parser-2.2.0"
@@ -9520,7 +9520,7 @@ in
       sources."@isaacs/balanced-match-4.0.1"
       sources."@isaacs/brace-expansion-5.0.0"
       sources."@isaacs/cliui-8.0.2"
-      sources."@modelcontextprotocol/sdk-1.21.0"
+      sources."@modelcontextprotocol/sdk-1.21.1"
       sources."accepts-2.0.0"
       sources."ajv-8.17.1"
       sources."ajv-formats-3.0.1"
