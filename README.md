@@ -94,7 +94,7 @@ In your `flake.nix`
   - prettier-plugin-sh-0.18.0
   - prettier-plugin-sql-0.19.2
   - proton-ge-rtsp-bin-GE-Proton10-20-rtsp19
-  - python3.13-jupynium-0.2.6
+  - python3.13-jupynium-0.2.7
   - python3.13-pyknp-0.6.1
   - python3.13-version-pioneer-0.0.13
   - ricoh-sp-c260series-ppd-1.00
@@ -112,7 +112,7 @@ In your `flake.nix`
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2025-08-11
-  - zotero-better-bibtex-7.0.66
+  - zotero-better-bibtex-7.0.67
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.3.15
   - zotero-reading-list-1.5.14
