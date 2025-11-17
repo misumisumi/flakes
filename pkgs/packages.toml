@@ -26,10 +26,6 @@ src.include_regex = "drbd-9.1.*"
 src.prefix = "drbd-"
 fetch.url = "https://pkg.linbit.com//downloads/drbd/9/drbd-$ver.tar.gz"
 
-[droidcam-obs-plugin]
-src.github = "dev47apps/droidcam-obs-plugin"
-fetch.github = "dev47apps/droidcam-obs-plugin"
-
 [fence-agents]
 src.github_tag = "ClusterLabs/fence-agents"
 fetch.github = "ClusterLabs/fence-agents"
