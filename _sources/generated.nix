@@ -11,10 +11,10 @@
   };
   csharp-ls = {
     pname = "csharp-ls";
-    version = "0.19.0";
+    version = "0.20.0";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.19.0";
-      sha256 = "sha256-Xd4DTSvhOyz+pqk4bpUCAz69WG5hby5yJsd/lO6Cs/Y=";
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.20.0";
+      sha256 = "sha256-OqapGZCn4q8SZZh5Nj8GLaxcZoNdMOeNVPw43bxMEg0=";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
@@ -98,10 +98,10 @@
   };
   jupynium = {
     pname = "jupynium";
-    version = "0.2.6";
+    version = "0.2.7";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.6.tar.gz";
-      sha256 = "sha256-TydqvoODO49WjXdD20GD4ywVLzqaGHUdh07fr0MtuXw=";
+      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.7.tar.gz";
+      sha256 = "sha256-fZtSND4uy5vja09a4ZshFElZIdonNzxAZIqXQABrPUM=";
     };
   };
   knp = {

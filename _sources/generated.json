@@ -23,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Xd4DTSvhOyz+pqk4bpUCAz69WG5hby5yJsd/lO6Cs/Y=",
+            "sha256": "sha256-OqapGZCn4q8SZZh5Nj8GLaxcZoNdMOeNVPw43bxMEg0=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.19.0"
+            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.20.0"
         },
-        "version": "0.19.0"
+        "version": "0.20.0"
     },
     "cups-brother-hll5100dn-cupswrapper": {
         "cargoLocks": null,
@@ -182,11 +182,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-TydqvoODO49WjXdD20GD4ywVLzqaGHUdh07fr0MtuXw=",
+            "sha256": "sha256-fZtSND4uy5vja09a4ZshFElZIdonNzxAZIqXQABrPUM=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.6.tar.gz"
+            "url": "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.7.tar.gz"
         },
-        "version": "0.2.6"
+        "version": "0.2.7"
     },
     "knp": {
         "cargoLocks": null,
