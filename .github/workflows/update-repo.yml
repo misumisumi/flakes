@@ -32,8 +32,20 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
-          nix run nixpkgs#nvfetcher -- -c pkgs/packages.toml -v
+          TEMP=$(mktemp -u)
+          nix run nixpkgs#nvfetcher -- -c pkgs/packages.toml -l "${TEMP}"
           nix run nixpkgs#nvfetcher -- -c pkgs/zotero-addons/addons.toml -o pkgs/zotero-addons/_sources -v
+
+          if [ "$(grep snack "${TEMP}")" != "" ]; then
+            pushd pkgs/apps/snack
+            eval "$(nix build .#snack.passthru.fetchPatch --print-out-paths --no-link)"
+            popd
+          fi
+          if [ "$(grep wavesurfer "${TEMP}")" != "" ]; then
+            pushd pkgs/apps/wavesurfer
+            eval "$(nix build .#wavesurfer.passthru.fetchPatch --print-out-paths --no-link)"
+            popd
+          fi
 
       - name: Update node package version
         run: |

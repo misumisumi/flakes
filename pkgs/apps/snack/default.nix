@@ -5,6 +5,8 @@
   fetchpatch,
   name,
   pkgSources,
+  writeScript,
+  curl,
   alsa-lib,
   libX11,
   tcl,
@@ -20,46 +22,14 @@ stdenv.mkDerivation {
     tcl
   ];
   patches = [
-    (fetchpatch {
-      name = "alsa.patch";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/alsa.patch?h=snack";
-      sha256 = "sha256-7VqIlQwPvNLMJ766TzgKKWdd3WK9TaSmoYsdZz0h9bE=";
-    })
-    (fetchpatch {
-      name = "archbuild.patch";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/archbuild.patch?h=snack";
-      sha256 = "sha256-ohCv6aVcc30mIahwPEr1hG/Wh+alVrePshvBTFlq/tM=";
-    })
-    (fetchpatch {
-      name = "args.patch";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/args.patch?h=snack";
-      sha256 = "sha256-+OdNZXJLw35RXryBkrM+8r6/l9uq39O+KBLIs4poYXI=";
-    })
-    (fetchpatch {
-      name = "CVE-2012-6303.patch";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/CVE-2012-6303.patch?h=snack";
-      sha256 = "sha256-FaP077XXIx745HP/l2DtYju2FF0cjy2ukQIAwAbaLjs=";
-    })
-    (fetchpatch {
-      name = "formant.patch";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/formant.patch?h=snack";
-      sha256 = "sha256-Hax3jrbk2oIsgZ1zagRPz0b45/XHYurFZLFX98Ioupo=";
-    })
-    (fetchpatch {
-      name = "libs";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/libs.patch?h=snack";
-      sha256 = "sha256-M3/UE6InacPmfnTawXc4ejaEYLzNMFQU72KGKCeFnKo=";
-    })
-    (fetchpatch {
-      name = "seektell";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/seektell.patch?h=snack";
-      sha256 = "sha256-yBCMgU6WXsayVoPxFyx038bQWHVrkNmyU1uFrqTAnQo=";
-    })
-    (fetchpatch {
-      name = "tksnack";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/tksnack.patch?h=snack";
-      sha256 = "sha256-4/uGhDF/tUClKp45sPgXtsx9cBJ+WlQwzXz7JyXfFOs=";
-    })
+    ./alsa.patch
+    ./archbuild.patch
+    ./args.patch
+    ./CVE-2012-6303.patch
+    ./formant.patch
+    ./libs.patch
+    ./seektell.patch
+    ./tksnack.patch
   ];
 
   preConfigure = ''
@@ -81,6 +51,20 @@ stdenv.mkDerivation {
   hardeningDisable = [ "format" ];
 
   installFlags = [ "DESTDIR=$(out)" ];
+
+  passthru.fetchPatch = writeScript "snack-patch-update" ''
+    #!${stdenv.shell}
+    set -eu -o pipefail
+
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/alsa.patch?h=snack" -o alsa.patch
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/archbuild.patch?h=snack" -o archbuild.patch
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/args.patch?h=snack" -o args.patch
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/CVE-2012-6303.patch?h=snack" -o CVE-2012-6303.patch
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/formant.patch?h=snack" -o formant.patch
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/libs.patch?h=snack" -o libs.patch
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/seektell.patch?h=snack" -o seektell.patch
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/tksnack.patch?h=snack" -o tksnack.patch
+  '';
 
   meta = with lib; {
     inherit version;

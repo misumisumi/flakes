@@ -11,10 +11,10 @@
   };
   csharp-ls = {
     pname = "csharp-ls";
-    version = "0.19.0";
+    version = "0.20.0";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.19.0";
-      sha256 = "sha256-Xd4DTSvhOyz+pqk4bpUCAz69WG5hby5yJsd/lO6Cs/Y=";
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.20.0";
+      sha256 = "sha256-OqapGZCn4q8SZZh5Nj8GLaxcZoNdMOeNVPw43bxMEg0=";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
@@ -51,17 +51,6 @@
     src = fetchurl {
       url = "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.23.tar.gz";
       sha256 = "sha256-Jyc8ltaNY5m9wPmiFYHE6+Z/s4cgblX4cn0FWVuvHK4=";
-    };
-  };
-  droidcam-obs-plugin = {
-    pname = "droidcam-obs-plugin";
-    version = "2.4.1";
-    src = fetchFromGitHub {
-      owner = "dev47apps";
-      repo = "droidcam-obs-plugin";
-      rev = "2.4.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-hxG/v15Q4D+6LU4BNV6ErSa1WvPk4kMPl07pIqiMcc4=";
     };
   };
   emoticon-data = {
@@ -109,10 +98,10 @@
   };
   jupynium = {
     pname = "jupynium";
-    version = "0.2.6";
+    version = "0.2.7";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.6.tar.gz";
-      sha256 = "sha256-TydqvoODO49WjXdD20GD4ywVLzqaGHUdh07fr0MtuXw=";
+      url = "https://pypi.org/packages/source/j/jupynium/jupynium-0.2.7.tar.gz";
+      sha256 = "sha256-fZtSND4uy5vja09a4ZshFElZIdonNzxAZIqXQABrPUM=";
     };
   };
   knp = {
