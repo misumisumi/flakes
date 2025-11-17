@@ -1,47 +1,30 @@
-{ stdenv
-, lib
-, name
-, pkgSources
-, fetchpatch
-, makeDesktopItem
-, makeWrapper
-, alsa-plugins
-, imagemagick
-, snack
-, tcl
-, tk
-, tkdnd
+{
+  stdenv,
+  lib,
+  name,
+  pkgSources,
+  fetchpatch,
+  makeDesktopItem,
+  makeWrapper,
+  writeScript,
+  curl,
+  alsa-plugins,
+  imagemagick,
+  snack,
+  tcl,
+  tk,
+  tkdnd,
 }:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
   patches = [
+    ./fix-defaultconfig-search.patch
     ./fix-drag-and-drop.patch
-    (fetchpatch {
-      name = "fix-wavebar.patch";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/fix-wavebar.patch?h=wavesurfer";
-      sha256 = "sha256-qEcNpXuFYW9DUimSz2UQlpowcc5M5Ueq2F6nMlpKyMM=";
-    })
-    (fetchpatch {
-      name = "fix-defaultconfig-search.patch";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/fix-defaultconfig-search.patch?h=wavesurfer";
-      sha256 = "sha256-CCYzJMCvP4Kz84aAaLJo3Yc6Izi7iEdWITeBJxvBHLI=";
-    })
-    (fetchpatch {
-      name = "fix-tkcon.patch";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/fix-tkcon.patch?h=wavesurfer";
-      sha256 = "sha256-0VMjzH2Wpu00owSE5jRYmL/3DIGA8K58nvHv/epzrOU=";
-    })
-    (fetchpatch {
-      name = "prefs.patch";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/prefs.patch?h=wavesurfer";
-      sha256 = "sha256-g6lS49EPJNB42ylawHFmAbydpUqv/2l91TnzWCNyGYU=";
-    })
-    (fetchpatch {
-      name = "snack-callbacks.patch";
-      url = "https://aur.archlinux.org/cgit/aur.git/plain/snack-callbacks.patch?h=wavesurfer";
-      sha256 = "sha256-9HYUarE7U1wWpI5aguO5k3feup3O8MQL/RVmC+Z0sbg=";
-    })
+    ./fix-tkcon.patch
+    ./fix-wavebar.patch
+    ./prefs.patch
+    ./snack-callbacks.patch
   ];
   patchPhase = ''
     for i in $patches ; do
@@ -65,8 +48,22 @@ stdenv.mkDerivation {
       icon = "wavesurfer";
       comment = "Open source tool for sound visualization and manipulation";
       desktopName = "WaveSurfer";
-      categories = [ "Application" "AudioVideo" "Audio" "AudioVideoEditing" ];
-      mimeTypes = [ "audio/wav" "audio/x-wav" "audio/mp3" "audio/x-mp3" "audio/mpeg" "audio/aiff" "audio/x-aiff" "audio/basic" ];
+      categories = [
+        "Application"
+        "AudioVideo"
+        "Audio"
+        "AudioVideoEditing"
+      ];
+      mimeTypes = [
+        "audio/wav"
+        "audio/x-wav"
+        "audio/mp3"
+        "audio/x-mp3"
+        "audio/mpeg"
+        "audio/aiff"
+        "audio/x-aiff"
+        "audio/basic"
+      ];
     })
   ];
 
@@ -89,9 +86,25 @@ stdenv.mkDerivation {
 
   postFixup = ''
     makeWrapper $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl $out/bin/wavesurfer \
-      --prefix PATH : ${lib.makeBinPath [ tk tcl ]} \
+      --prefix PATH : ${
+        lib.makeBinPath [
+          tk
+          tcl
+        ]
+      } \
       --set TCLLIBPATH  "${snack}/lib ${tkdnd}/lib" \
       --set ALSA_PLUGIN_DIR ${alsa-plugins}/lib/alsa-lib
+  '';
+
+  passthru.fetchPatch = writeScript "snack-patch-update" ''
+    #!${stdenv.shell}
+    set -eu -o pipefail
+
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/fix-wavebar.patch?h=wavesurfer" -o fix-wavebar.patch
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/fix-defaultconfig-search.patch?h=wavesurfer" -o fix-defaultconfig-search.patch
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/fix-tkcon.patch?h=wavesurfer" -o fix-tkcon.patch
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/prefs.patch?h=wavesurfer" -o prefs.patch
+    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/snack-callbacks.patch?h=wavesurfer" -o snack-callbacks.patch
   '';
 
   meta = with lib; {

@@ -65,7 +65,7 @@ jobs:
             max-jobs = 2
             stalled-download-timeout = 15
 
-      - uses: DeterminateSystems/flakehub-cache-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: DeterminateSystems/flake-checker-action@main
 
       - uses: cachix/cachix-action@v16
