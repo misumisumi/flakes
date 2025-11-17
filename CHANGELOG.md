@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.0.0](https://github.com/misumisumi/flakes/compare/v3.6.1...v4.0.0) (2025-11-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* rm droidcam-obs-plugin because it include to upstream
+
+### Bug Fixes
+
+* include patches for snack and wavesurfer in repo ([d0a25d6](https://github.com/misumisumi/flakes/commit/d0a25d67784a9843d1d5b2a842d11fcd46e41bba))
+* rm droidcam-obs-plugin because it include to upstream ([935ef8d](https://github.com/misumisumi/flakes/commit/935ef8d64456b4975e5c056345a7da07c224134b))
+
 ## [3.6.1](https://github.com/misumisumi/flakes/compare/v3.6.0...v3.6.1) (2025-11-08)
 
 
