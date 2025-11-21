@@ -75,7 +75,6 @@ In your `flake.nix`
   - commitlint-with-plugins
   - cups-brother-hll5100dn-3.5.1-1
   - discord-mcp-ac33c4f492fcd99b08aa9dfbd95f8ec4279c1e72
-  - droidcam-obs-plugin-2.4.1
   - jawiki-kana-kanji-dict-2025-08-11
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
