@@ -56,13 +56,13 @@ In your `flake.nix`
   - @commitlint/config-workspace-scopes-20.0.0
   - @commitlint/load-20.1.0
   - @commitlint/read-20.0.0
-  - @modelcontextprotocol/server-everything-2025.9.25
-  - @modelcontextprotocol/server-filesystem-2025.8.21
-  - @modelcontextprotocol/server-filesystem-2025.8.21
-  - @modelcontextprotocol/server-memory-2025.9.25
-  - @modelcontextprotocol/server-memory-2025.9.25
-  - @modelcontextprotocol/server-sequential-thinking-2025.7.1
-  - @modelcontextprotocol/server-sequential-thinking-2025.7.1
+  - @modelcontextprotocol/server-everything-2025.11.25
+  - @modelcontextprotocol/server-filesystem-2025.11.25
+  - @modelcontextprotocol/server-filesystem-2025.11.25
+  - @modelcontextprotocol/server-memory-2025.11.25
+  - @modelcontextprotocol/server-memory-2025.11.25
+  - @modelcontextprotocol/server-sequential-thinking-2025.11.25
+  - @modelcontextprotocol/server-sequential-thinking-2025.11.25
   - @pkgdeps/update-github-actions-permissions-2.9.1
   - @pkgdeps/update-github-actions-permissions-2.9.1
   - @prettier/plugin-php-0.24.0
@@ -111,7 +111,7 @@ In your `flake.nix`
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2025-08-11
-  - zotero-better-bibtex-7.0.67
+  - zotero-better-bibtex-7.0.68
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.3.15
   - zotero-reading-list-1.5.14

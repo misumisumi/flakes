@@ -3,10 +3,10 @@
 {
   zotero-better-bibtex = {
     pname = "zotero-better-bibtex";
-    version = "7.0.67";
+    version = "7.0.68";
     src = fetchurl {
-      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.67/zotero-better-bibtex-7.0.67.xpi";
-      sha256 = "sha256-le5LiyIVCdgDvJZYFBUutoi/pVgDDuxP85VJhhXm0OM=";
+      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.68/zotero-better-bibtex-7.0.68.xpi";
+      sha256 = "sha256-Nr6tSqeMqvmMl52crlPTegyquVbT1Y6nnve+muvEKT8=";
     };
     addonId = "better-bibtex@iris-advies.com";
     license = "mit";
