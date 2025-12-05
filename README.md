@@ -50,12 +50,12 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-20.0.0
-  - @commitlint/config-conventional-20.0.0
-  - @commitlint/config-patternplate-20.0.0
-  - @commitlint/config-workspace-scopes-20.0.0
-  - @commitlint/load-20.1.0
-  - @commitlint/read-20.0.0
+  - @commitlint/config-angular-20.2.0
+  - @commitlint/config-conventional-20.2.0
+  - @commitlint/config-patternplate-20.2.0
+  - @commitlint/config-workspace-scopes-20.2.0
+  - @commitlint/load-20.2.0
+  - @commitlint/read-20.2.0
   - @modelcontextprotocol/server-everything-2025.11.25
   - @modelcontextprotocol/server-filesystem-2025.11.25
   - @modelcontextprotocol/server-filesystem-2025.11.25
