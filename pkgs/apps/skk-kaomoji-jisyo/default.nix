@@ -27,5 +27,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Kaomoji SKK dictionary from mozc";
     homepage = "https://github.com/fcitx/mozc";
     license = licenses.bsd3;
+    platforms = platforms.all;
   };
 }

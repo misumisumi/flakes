@@ -1,4 +1,5 @@
 {
+  lib,
   name,
   pkgSources,
   buildPythonPackage,
@@ -21,5 +22,6 @@ buildPythonPackage {
   meta = {
     homepage = "https://github.com/kiyoon/version-pioneer";
     description = "Versioneer fork with hatchling, pdm support with useful CLI. Manage git tag-based version for any project.";
+    platforms = lib.platforms.all;
   };
 }

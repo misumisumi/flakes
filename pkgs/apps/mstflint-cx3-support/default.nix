@@ -7,16 +7,9 @@
   openssl,
   zlib,
 }:
-
-stdenv.mkDerivation rec {
-  # pname = "mstflint-cx3-support";
-  # version = "4.25.0-1";
+stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
-  # src = fetchurl {
-  #   url = "https://github.com/Mellanox/mstflint/releases/download/v${version}/mstflint-${version}.tar.gz";
-  #   sha256 = "sha256-nYGiWfr8a3q3+bGUb1ovLrAS8/LnEJf+4inIEllW95s=";
-  # };
   env.NIX_CFLAGS_COMPILE = toString [
     "-Wno-error=implicit-function-declaration"
     "-Wno-error=int-conversion"

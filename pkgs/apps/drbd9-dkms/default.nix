@@ -1,16 +1,20 @@
-{ pkgSources
-, name
-, stdenv
-, lib
-, nukeReferences
-, linuxPackages
-, kernel ? linuxPackages.kernel
+{
+  pkgSources,
+  name,
+  stdenv,
+  lib,
+  nukeReferences,
+  linuxPackages,
+  kernel ? linuxPackages.kernel,
 }:
 
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
-  hardeningDisable = [ "pic" "format" ];
+  hardeningDisable = [
+    "pic"
+    "format"
+  ];
   nativeBuildInputs = [ nukeReferences ] ++ kernel.moduleBuildDependencies;
 
   kernel = kernel.dev;
@@ -35,6 +39,6 @@ stdenv.mkDerivation {
     description = "A kernel module of drbd9";
     homepage = "https://github.com/LINBIT/drbd";
     license = licenses.gpl2;
-    platforms = platforms.linux;
+    platforms = [ "x86_64-linux" ];
   };
 }

@@ -111,7 +111,12 @@
             };
           };
       };
-      systems = [ "x86_64-linux" ];
+      systems = [
+        "aarch64-darwin"
+        "x86_64-darwin"
+        "aarch64-linux"
+        "x86_64-linux"
+      ];
       perSystem =
         {
           system,
@@ -129,21 +134,25 @@
             config.allowUnfree = true;
           };
           packages =
-            withContents appsDir (name: pkgs.${name})
-            // withContents pythonModulesDir (name: pkgs.python3Packages.${name})
-            // lib.listToAttrs (
-              map (name: {
-                name = "nodePackages.${name}";
-                value = pkgs.nodePackages.${name};
-              }) (with builtins; fromJSON (readFile ./pkgs/node-packages/node-packages.json))
-            )
-            // lib.mapAttrs' (
-              name: value: lib.nameValuePair "zotero-addons.${name}" pkgs.zotero-addons.${name}
-            ) (with builtins; fromJSON (readFile ./pkgs/zotero-addons/_sources/generated.json))
-            // lib.mapAttrs' (name: value: lib.nameValuePair value pkgs.${value}) (
-              import ./pkgs/node-packages/main-programs.nix
-            )
-            // import ./env.nix { inherit pkgs; };
+            let
+              pkgs' =
+                withContents appsDir (name: pkgs.${name})
+                // withContents pythonModulesDir (name: pkgs.python3Packages.${name})
+                // lib.listToAttrs (
+                  map (name: {
+                    name = "nodePackages.${name}";
+                    value = pkgs.nodePackages.${name};
+                  }) (with builtins; fromJSON (readFile ./pkgs/node-packages/node-packages.json))
+                )
+                // lib.mapAttrs' (
+                  name: value: lib.nameValuePair "zotero-addons.${name}" pkgs.zotero-addons.${name}
+                ) (with builtins; fromJSON (readFile ./pkgs/zotero-addons/_sources/generated.json))
+                // lib.mapAttrs' (name: value: lib.nameValuePair value pkgs.${value}) (
+                  import ./pkgs/node-packages/main-programs.nix
+                )
+                // import ./env.nix { inherit pkgs; };
+            in
+            lib.filterAttrs (name: value: builtins.any (x: system == x) (value.meta.platforms or [system])) pkgs';
           apps = mkApps pkgs (runnableApps pkgs (names appsDir));
           checks = mkCheck packages;
           devShells =

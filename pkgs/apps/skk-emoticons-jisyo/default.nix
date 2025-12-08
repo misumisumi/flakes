@@ -34,5 +34,6 @@ stdenvNoCC.mkDerivation rec {
     description = "emoticons dictionary for SKK";
     homepage = "https://github.com/w33ble/emoticon-data";
     license = licenses.mit;
+    platforms = platforms.all;
   };
 }

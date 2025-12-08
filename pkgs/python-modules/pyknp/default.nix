@@ -35,5 +35,6 @@ buildPythonPackage {
   meta = {
     homepage = "https://github.com/ku-nlp/pyknp";
     description = "Python Module for JUMAN++/KNP";
+    platforms = [ "x86_64-linux" ];
   };
 }

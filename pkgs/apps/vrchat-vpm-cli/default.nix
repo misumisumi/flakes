@@ -1,4 +1,11 @@
-{ stdenvNoCC, lib, fetchpatch, name, pkgSources, writeShellApplication, makeWrapper, dotnet-sdk_6, unzip }:
+{
+  stdenvNoCC,
+  lib,
+  name,
+  pkgSources,
+  dotnet-sdk_6,
+  unzip,
+}:
 
 stdenvNoCC.mkDerivation rec {
   inherit (pkgSources."${name}") pname version src;
@@ -18,9 +25,10 @@ stdenvNoCC.mkDerivation rec {
     cp ./{README.md,LICENSE.md} $out/
   '';
 
-  meta = with lib; {
+  meta = {
     inherit version;
     description = "The VRChat Package Manager from Command Line";
     homepage = "https://vcc.docs.vrchat.com/vpm/cli/";
+    platforms = lib.platforms.all;
   };
 }

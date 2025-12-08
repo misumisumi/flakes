@@ -18,5 +18,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Emoji dictionary for SKK";
     homepage = "https://github.com/uasi/skk-emoji-jisyo";
     license = licenses.mit;
+    platforms = platforms.all;
   };
 }
