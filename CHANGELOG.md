@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.3](https://github.com/misumisumi/flakes/compare/v4.0.2...v4.0.3) (2025-12-09)
+
+
+### Bug Fixes
+
+* **commitlint:** replace to NPM_CONFIG_PREFIX from PREFIX ([cccd1d9](https://github.com/misumisumi/flakes/commit/cccd1d9751f011eeb77b0399eb0ce78efd0be6e9))
+
 ## [4.0.2](https://github.com/misumisumi/flakes/compare/v4.0.1...v4.0.2) (2025-12-09)
 
 
