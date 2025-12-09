@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.1](https://github.com/misumisumi/flakes/compare/v4.0.0...v4.0.1) (2025-11-26)
+
+
+### Bug Fixes
+
+* **commitlint:** fix not be able to loading node_modules by NODE_PATH ([8a75048](https://github.com/misumisumi/flakes/commit/8a75048a21d22a8a52549412c430444432d5c841))
+* **commitlint:** fix not be able to loading node_modules by NODE_PATH ([40cc5cb](https://github.com/misumisumi/flakes/commit/40cc5cb00a043dc637fb4ecca80b275744d8d994))
+
 ## [4.0.0](https://github.com/misumisumi/flakes/compare/v3.6.1...v4.0.0) (2025-11-17)
 
 
