@@ -103,16 +103,16 @@ jobs:
     needs: [pre-build, build-check-matrix]
     if: ${{ !cancelled() }}
     steps:
-      - name: build-check-success
-        if: needs.build-check-matrix.result == 'success'
-        run: |
-          exit 0
       - name: build-check-skipped
         if: ${{ needs.pre-build.outputs.check == 'false' && needs.build-check-matrix.result == 'skipped' }}
         run: |
           exit 0
+      - name: build-check-success
+        if: ${{ needs.pre-build.outputs.check == 'true' && needs.build-check-matrix.result == 'success' }}
+        run: |
+          exit 0
       - name: build-check-failed
-        if: needs.build-check-matrix.result != 'success'
+        if: ${{ needs.pre-build.outputs.check == 'true' && needs.build-check-matrix.result != 'success' }}
         run: |
           exit 1
 
