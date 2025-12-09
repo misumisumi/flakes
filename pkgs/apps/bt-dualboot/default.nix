@@ -20,5 +20,9 @@ buildPythonApplication {
     homepage = "https://github.com/x2es/bt-dualboot";
     description = "User-friendly tool making your bluetooth devices working both in Windows and Linux without re-pairing chore.";
     license = licenses.mit;
+    platforms = [
+      "x86_64-linux"
+      "aarch64-linux"
+    ];
   };
 }

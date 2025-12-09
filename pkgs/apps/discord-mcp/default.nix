@@ -26,10 +26,10 @@ maven.buildMavenPackage {
     runHook postInstall
   '';
 
-  meta = {
-    description = "Simple command line wrapper around JD Core Java Decompiler project";
-    homepage = "https://github.com/intoolswetrust/jd-cli";
-    license = lib.licenses.gpl3Plus;
-    maintainers = with lib.maintainers; [ majiir ];
+  meta = with lib; {
+    description = "A MCP server for the Discord integration. Enable your AI assistants to seamlessly interact with Discord. Enhance your Discord experience with powerful automation capabilities.";
+    homepage = "https://github.com/SaseQ/discord-mcp";
+    license = licenses.mit;
+    platforms = platforms.all;
   };
 }

@@ -40,5 +40,6 @@ stdenvNoCC.mkDerivation {
   '';
   meta = {
     description = "ppp scripts from ubuntu";
+    platforms = [ "x86_64-linux" ];
   };
 }

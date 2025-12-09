@@ -45,5 +45,6 @@ stdenvNoCC.mkDerivation {
 
   meta = {
     description = "Dictionary for yaskkserv2 include Emoji and jawiki-kana-kanji-dict";
+    platforms = lib.platforms.all;
   };
 }

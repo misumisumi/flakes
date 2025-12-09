@@ -1,22 +1,25 @@
-{ lib
-, name
-, pkgSources
-, stdenv
-, fetchurl
-, dpkg
-, autoPatchelfHook
-, makeWrapper
-, perl
-, gnused
-, ghostscript
-, file
-, coreutils
-, gnugrep
-, which
+{
+  lib,
+  pkgSources,
+  stdenv,
+  dpkg,
+  autoPatchelfHook,
+  makeWrapper,
+  perl,
+  gnused,
+  ghostscript,
+  file,
+  coreutils,
+  gnugrep,
+  which,
 }:
 
 let
-  arches = [ "x86_64" "i686" "armv7l" ];
+  arches = [
+    "x86_64"
+    "i686"
+    "armv7l"
+  ];
   runtimeDeps = [
     ghostscript
     file
@@ -34,7 +37,11 @@ stdenv.mkDerivation {
   pname = name;
   inherit (pkgSources."${name}-lpr") version;
 
-  nativeBuildInputs = [ dpkg makeWrapper autoPatchelfHook ];
+  nativeBuildInputs = [
+    dpkg
+    makeWrapper
+    autoPatchelfHook
+  ];
   buildInputs = [ perl ];
 
   dontUnpack = true;
@@ -45,12 +52,12 @@ stdenv.mkDerivation {
     dpkg-deb -x ${cupsdeb} $out
     dpkg-deb -x ${lprdeb} $out
     # delete unnecessary files for the current architecture
-  '' + lib.concatMapStrings
-    (arch: ''
-      echo Deleting files for ${arch}
-      rm -r "$out/opt/brother/Printers/HLL5100DN/lpd/${arch}"
-    '')
-    (builtins.filter (arch: arch != stdenv.hostPlatform.linuxArch) arches) + ''
+  ''
+  + lib.concatMapStrings (arch: ''
+    echo Deleting files for ${arch}
+    rm -r "$out/opt/brother/Printers/HLL5100DN/lpd/${arch}"
+  '') (builtins.filter (arch: arch != stdenv.hostPlatform.linuxArch) arches)
+  + ''
     # bundled scripts don't understand the arch subdirectories for some reason
     ln -s \
       "$out/opt/brother/Printers/HLL5100DN/lpd/${stdenv.hostPlatform.linuxArch}/"* \
@@ -81,6 +88,6 @@ stdenv.mkDerivation {
     description = "Brother hl-l5100dn printer driver";
     sourceProvenance = with sourceTypes; [ binaryNativeCode ];
     license = licenses.unfree;
-    platforms = platforms.linux;
+    platforms = [ "x86_64-linux" ];
   };
 }

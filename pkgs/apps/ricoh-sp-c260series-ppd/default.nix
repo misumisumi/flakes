@@ -1,18 +1,18 @@
-{ lib
-, name
-, pkgSources
-, stdenv
-, makeWrapper
-, autoPatchelfHook
-, dpkg
-, ghostscript
-, file
-, gnused
-, gnugrep
-, coreutils
-, which
-, cups
-,
+{
+  lib,
+  name,
+  pkgSources,
+  stdenv,
+  makeWrapper,
+  autoPatchelfHook,
+  dpkg,
+  ghostscript,
+  file,
+  gnused,
+  gnugrep,
+  coreutils,
+  which,
+  cups,
 }:
 let
   runtimeDeps = [
@@ -27,7 +27,11 @@ in
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") src version pname;
   buildInputs = [ cups ];
-  nativeBuildInputs = [ dpkg makeWrapper autoPatchelfHook ];
+  nativeBuildInputs = [
+    dpkg
+    makeWrapper
+    autoPatchelfHook
+  ];
 
   unpackPhase = ''
     runHook preUnpack
@@ -52,6 +56,6 @@ stdenv.mkDerivation {
     description = "richo c260seriees printer driver";
     sourceProvenance = with sourceTypes; [ binaryNativeCode ];
     license = licenses.unfree;
-    platforms = platforms.linux;
+    platforms = [ "x86_64-linux" ];
   };
 }

@@ -1,48 +1,51 @@
-{ name
-, pkgSources
-, lib
-, stdenv
-, amtterm
-, automake
-, autoreconfHook
-, bison
-, byacc
-, corosync
-, docbook-xsl-ns
-, flex
-, glib
-, gnutls
-, inetutils
-, libqb
-, libtool
-, libvirt
-, libxml2
-, libxslt
-, nspr
-, nss
-, openssh
-, openssl
-, openstackclient
-, openwsman
-, patchelf
-, pkg-config
-, pythonPackages
-, sg3_utils
-, sudo
-, systemd
-, time
-, util-linux
-, agents ? "all"
+{
+  name,
+  pkgSources,
+  lib,
+  stdenv,
+  amtterm,
+  automake,
+  autoreconfHook,
+  bison,
+  byacc,
+  corosync,
+  docbook-xsl-ns,
+  flex,
+  glib,
+  gnutls,
+  inetutils,
+  libqb,
+  libtool,
+  libvirt,
+  libxml2,
+  libxslt,
+  nspr,
+  nss,
+  openssh,
+  openssl,
+  openstackclient,
+  openwsman,
+  patchelf,
+  pkg-config,
+  pythonPackages,
+  sg3_utils,
+  sudo,
+  systemd,
+  time,
+  util-linux,
+  agents ? "all",
 }:
 let
-  pythonEnv = pythonPackages.python.withPackages (p: with p; [
-    boto3
-    pexpect
-    pycurl
-    requests
-    kubernetes
-    aliyun-python-sdk-core
-  ]);
+  pythonEnv = pythonPackages.python.withPackages (
+    p: with p; [
+      boto3
+      pexpect
+      pycurl
+      requests
+      kubernetes
+      aliyun-python-sdk-core
+    ]
+  );
 in
 stdenv.mkDerivation rec {
   inherit (pkgSources."${name}") pname src;
@@ -141,5 +144,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/heavenshell/py-doq";
     description = "Docstring generator";
     license = licenses.bsd3;
+    platforms = [ "x86_64-linux" ];
   };
 }

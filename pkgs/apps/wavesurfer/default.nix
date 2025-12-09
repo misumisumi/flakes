@@ -112,5 +112,6 @@ stdenv.mkDerivation {
     description = "Open source tool for sound visualization and manipulation";
     homepage = "https://sourceforge.net/projects/wavesurfer/";
     license = licenses.bsd1;
+    platforms = [ "x86_64-linux" ];
   };
 }

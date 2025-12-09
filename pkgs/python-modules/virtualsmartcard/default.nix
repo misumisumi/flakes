@@ -48,11 +48,6 @@ toPythonModule (
       qrencode
     ];
 
-    # postInstall = ''
-    #   mv $out/var/lib/pcsc $out/
-    #   rm -rf $out/var
-    # '';
-
     postFixup = ''
       wrapPythonPrograms
     '';
@@ -62,6 +57,7 @@ toPythonModule (
       description = "umbrella project for emulation of smart card readers or smart cards";
       homepage = "https://frankmorgner.github.io/vsmartcard/virtualsmartcard/README.html";
       license = licenses.gpl3;
+      platforms = platforms.linux;
     };
   }
 )

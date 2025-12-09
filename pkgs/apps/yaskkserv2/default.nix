@@ -1,4 +1,12 @@
-{ stdenv, lib, rustPlatform, name, pkgSources, pkg-config, openssl }:
+{
+  stdenv,
+  lib,
+  rustPlatform,
+  name,
+  pkgSources,
+  pkg-config,
+  openssl,
+}:
 rustPlatform.buildRustPackage rec {
   inherit (pkgSources."${name}") pname version src;
   cargoLock = pkgSources."${name}".cargoLock."Cargo.lock";
@@ -27,5 +35,6 @@ rustPlatform.buildRustPackage rec {
     description = "skkserv wroten by rust";
     homepage = "https://github.com/wachikun/yaskkserv2";
     license = licenses.asl20;
+    platforms = platforms.all;
   };
 }

@@ -45,5 +45,6 @@ buildPythonApplication {
     homepage = "https://github.com/openags/paper-search-mcp";
     description = "A MCP for searching and downloading academic papers from multiple sources like arXiv, PubMed, bioRxiv, etc.";
     license = licenses.mit;
+    platforms = platforms.all;
   };
 }

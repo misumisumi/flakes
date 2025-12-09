@@ -51,5 +51,6 @@ buildPythonPackage {
     homepage = "https://github.com/kiyoon/jupynium.nvim";
     description = "Control Jupyter Notebook on Neovim with ZERO Compromise";
     license = licenses.mit;
+    platforms = lib.platforms.all;
   };
 }

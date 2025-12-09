@@ -71,6 +71,7 @@ stdenv.mkDerivation {
     description = "a sound toolkit for scripting languages (Tcl, Python, Ruby, ...)";
     homepage = "http://www.speech.kth.se/snack/";
     license = licenses.gpl2;
+    platforms = [ "x86_64-linux" ];
   };
 
 }

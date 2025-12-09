@@ -38,5 +38,6 @@ stdenv.mkDerivation {
     description = "Cryptographic library for EAC version 2";
     homepage = "https://frankmorgner.github.io/openpace/index.html";
     license = licenses.gpl3;
+    platforms = platforms.linux;
   };
 }

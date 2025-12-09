@@ -58,5 +58,6 @@ stdenv.mkDerivation {
     description = "plugin for droidcam obs";
     homepage = "https://github.com/dev47apps/droidcam-obs-plugin";
     license = licenses.gpl2;
+    platforms = [ "x86_64-linux" ];
   };
 }

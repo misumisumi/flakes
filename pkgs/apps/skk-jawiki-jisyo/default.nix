@@ -18,5 +18,6 @@ stdenvNoCC.mkDerivation rec {
     description = "SKK dictionary from Wikipedia(Japanese edition)";
     homepage = "https://github.com/tokuhirom/jawiki-kana-kanji-dict";
     license = licenses.mit;
+    platforms = platforms.all;
   };
 }
