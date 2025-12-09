@@ -23,14 +23,13 @@ jobs:
     uses: ./.github/workflows/agent-of-me.yml
     with:
       pr-number: ${{ github.event.pull_request.number }}
-      triggered-name: "reviewdog"
+      triggered-name: "build check"
     secrets:
       AGENT_OF_ME_APP_ID: ${{ secrets.AGENT_OF_ME_APP_ID }}
       AGENT_OF_ME_PRIVATE_KEY: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}
 
   pre-build:
     runs-on: ubuntu-latest
-    needs: [pre-workflow]
     outputs:
       check: ${{ steps.change.outputs.nix }}
     steps:
@@ -119,7 +118,7 @@ jobs:
 
   post-workflow:
     uses: ./.github/workflows/agent-of-me.yml
-    needs: [build-check-summary]
+    needs: [pre-workflow, build-check-summary]
     with:
       pr-number: ${{ github.event.pull_request.number }}
       triggered-name: "build-check"
