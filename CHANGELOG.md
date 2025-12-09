@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.2](https://github.com/misumisumi/flakes/compare/v4.0.1...v4.0.2) (2025-12-09)
+
+
+### Bug Fixes
+
+* support multi-platform ([89ae60d](https://github.com/misumisumi/flakes/commit/89ae60dd03565b6693cfea492f18d73c0f473232))
+* support multi-platform ([1e16752](https://github.com/misumisumi/flakes/commit/1e16752ed1e47e56118b365bb9ce3cc8b6083fa7))
+
 ## [4.0.1](https://github.com/misumisumi/flakes/compare/v4.0.0...v4.0.1) (2025-11-26)
 
 
