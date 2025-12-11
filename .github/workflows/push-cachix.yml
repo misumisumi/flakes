@@ -32,12 +32,14 @@ jobs:
           remove-codeql: true
           remove-docker-images: true
 
-      - uses: cachix/install-nix-action@v31
-        if: steps.change.outputs.nix == 'true'
+      - uses: DeterminateSystems/nix-installer-action@v21
         with:
-          nix_path: nixpkgs=channel:nixos-unstable
-          extra_nix_config: |
+          extra-conf: |
+            accept-flake-config = true
             connect-timeout = 15
+            cores = 2
+            http-connections = 25
+            max-jobs = 2
             stalled-download-timeout = 15
 
       - uses: DeterminateSystems/magic-nix-cache-action@main
