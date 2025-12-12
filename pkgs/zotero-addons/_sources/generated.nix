@@ -27,10 +27,10 @@
   };
   zotero-pdf-translate = {
     pname = "zotero-pdf-translate";
-    version = "2.3.15";
+    version = "2.3.16";
     src = fetchurl {
-      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.3.15/translate-for-zotero.xpi";
-      sha256 = "sha256-Dq+QmQTaURhHZDy2N2Ftkri/RGnUx/9I1tNNsYA7UQg=";
+      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.3.16/translate-for-zotero.xpi";
+      sha256 = "sha256-m/1Nr4bskoV8BsYzFkftKiYYQPdiWW5KqeKJXdqmMR8=";
     };
     addonId = "zoteropdftranslate@euclpts.com";
     license = "agpl3Only";
@@ -75,10 +75,10 @@
   };
   zotero-zotmoov = {
     pname = "zotero-zotmoov";
-    version = "1.2.24";
+    version = "1.2.25";
     src = fetchurl {
-      url = "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.24/zotmoov-1.2.24-fx.xpi";
-      sha256 = "sha256-77wLfqMv26C7SxXwmyOtiPjyFJb0xYcoj2m5hJzt+6c=";
+      url = "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.25/zotmoov-1.2.25-fx.xpi";
+      sha256 = "sha256-WnmKB5bR09KpR8KuLCK6rC8Ur2n6+Uw26CaeNzJUj1g=";
     };
     addonId = "zotmoov@wileyy.com";
     license = "gpl3Only";
