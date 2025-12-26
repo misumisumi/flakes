@@ -95,7 +95,7 @@ In your `flake.nix`
   - proton-ge-rtsp-bin-GE-Proton10-26-rtsp20
   - python3.13-jupynium-0.2.7
   - python3.13-pyknp-0.6.1
-  - python3.13-version-pioneer-0.0.13
+  - python3.13-version-pioneer-0.0.14
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
   - skk-emotikons-jisyo-2021-04-01
@@ -115,7 +115,7 @@ In your `flake.nix`
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.3.16
   - zotero-reading-list-1.5.14
-  - zotero-scipdf-1.3.0
+  - zotero-scipdf-8.0.1
   - zotero-zotfile-5.1.2
   - zotero-zotmoov-1.2.25
 

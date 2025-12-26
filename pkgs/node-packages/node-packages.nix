@@ -2353,13 +2353,13 @@ let
         sha512 = "iPeeDKJSWf4IEOasVVrknXpaBV0IApz/gp7S2bb7Z4Lljbl2MGJRqInZiUrQwV16cpzw/D3S5j5Julj/gT52AA==";
       };
     };
-    "fastq-1.19.1" = {
+    "fastq-1.20.1" = {
       name = "fastq";
       packageName = "fastq";
-      version = "1.19.1";
+      version = "1.20.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/fastq/-/fastq-1.19.1.tgz";
-        sha512 = "GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==";
+        url = "https://registry.npmjs.org/fastq/-/fastq-1.20.1.tgz";
+        sha512 = "GGToxJ/w1x32s/D2EKND7kTil4n8OVk/9mycTc4VDza13lOvpUZTGX3mFSCtV9ksdGBVzvsyAVLM6mHFThxXxw==";
       };
     };
     "fault-1.0.4" = {
@@ -2830,13 +2830,13 @@ let
         sha512 = "WlztFuK+Lrvi3EggsqOkQ52rKbxkXL3RwB6t5lwoa8QLMemoWfBuL43eDrwOamJyR7uKQKdmKYaBH1NZBiIRrQ==";
       };
     };
-    "hono-4.11.1" = {
+    "hono-4.11.3" = {
       name = "hono";
       packageName = "hono";
-      version = "4.11.1";
+      version = "4.11.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/hono/-/hono-4.11.1.tgz";
-        sha512 = "KsFcH0xxHes0J4zaQgWbYwmz3UPOOskdqZmItstUG93+Wk1ePBLkLGwbP9zlmh1BFUiL8Qp+Xfu9P7feJWpGNg==";
+        url = "https://registry.npmjs.org/hono/-/hono-4.11.3.tgz";
+        sha512 = "PmQi306+M/ct/m5s66Hrg+adPnkD5jiO6IjA7WhWw0gSBSo1EcRegwuI1deZ+wd5pzCGynCcn2DprnE4/yEV4w==";
       };
     };
     "hookified-1.14.0" = {
@@ -7376,7 +7376,7 @@ in
       sources."fast-deep-equal-3.1.3"
       sources."fast-glob-3.3.3"
       sources."fast-uri-3.1.0"
-      sources."fastq-1.19.1"
+      sources."fastq-1.20.1"
       sources."fill-range-7.1.1"
       sources."find-up-6.3.0"
       sources."function-bind-1.1.2"
@@ -7632,7 +7632,7 @@ in
       sources."es-object-atoms-1.1.1"
       sources."esprima-4.0.1"
       sources."fast-glob-3.3.3"
-      sources."fastq-1.19.1"
+      sources."fastq-1.20.1"
       sources."fetch-ponyfill-6.1.1"
       sources."fill-range-7.1.1"
       sources."fs.realpath-1.0.0"
@@ -8223,7 +8223,7 @@ in
       sources."has-symbols-1.1.0"
       sources."hashery-1.3.0"
       sources."hasown-2.0.2"
-      sources."hono-4.11.1"
+      sources."hono-4.11.3"
       sources."hookified-1.14.0"
       sources."hosted-git-info-7.0.2"
       sources."http-errors-2.0.1"
@@ -8538,7 +8538,7 @@ in
       sources."has-symbols-1.1.0"
       sources."hashery-1.3.0"
       sources."hasown-2.0.2"
-      sources."hono-4.11.1"
+      sources."hono-4.11.3"
       sources."hookified-1.14.0"
       sources."hosted-git-info-7.0.2"
       sources."http-errors-2.0.1"
@@ -9220,7 +9220,7 @@ in
       sources."gopd-1.2.0"
       sources."has-symbols-1.1.0"
       sources."hasown-2.0.2"
-      sources."hono-4.11.1"
+      sources."hono-4.11.3"
       sources."http-errors-2.0.1"
       sources."iconv-lite-0.7.1"
       sources."immediate-3.0.6"
@@ -9363,7 +9363,7 @@ in
       sources."gopd-1.2.0"
       sources."has-symbols-1.1.0"
       sources."hasown-2.0.2"
-      sources."hono-4.11.1"
+      sources."hono-4.11.3"
       sources."http-errors-2.0.1"
       sources."iconv-lite-0.7.1"
       sources."inherits-2.0.4"
@@ -9507,7 +9507,7 @@ in
       sources."gopd-1.2.0"
       sources."has-symbols-1.1.0"
       sources."hasown-2.0.2"
-      sources."hono-4.11.1"
+      sources."hono-4.11.3"
       sources."http-errors-2.0.1"
       sources."iconv-lite-0.7.1"
       sources."inherits-2.0.4"
@@ -9630,7 +9630,7 @@ in
       sources."gopd-1.2.0"
       sources."has-symbols-1.1.0"
       sources."hasown-2.0.2"
-      sources."hono-4.11.1"
+      sources."hono-4.11.3"
       sources."http-errors-2.0.1"
       sources."iconv-lite-0.7.1"
       sources."inherits-2.0.4"

@@ -196,10 +196,10 @@
   };
   version-pioneer = {
     pname = "version-pioneer";
-    version = "0.0.13";
+    version = "0.0.14";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/v/version_pioneer/version_pioneer-0.0.13.tar.gz";
-      sha256 = "sha256-bUocCPOtiHFNmf/GtU+szyLMomwYBziK7cPAY8Nki18=";
+      url = "https://pypi.org/packages/source/v/version_pioneer/version_pioneer-0.0.14.tar.gz";
+      sha256 = "sha256-Bhoe06MQUNCG62xeFi73W+W/m1ri6wcdaB0qvB0NxnU=";
     };
   };
   virtualsmartcard = {
