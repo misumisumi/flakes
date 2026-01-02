@@ -50,11 +50,11 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-20.2.0
-  - @commitlint/config-conventional-20.2.0
-  - @commitlint/config-patternplate-20.2.0
+  - @commitlint/config-angular-20.3.0
+  - @commitlint/config-conventional-20.3.0
+  - @commitlint/config-patternplate-20.3.0
   - @commitlint/config-workspace-scopes-20.2.0
-  - @commitlint/load-20.2.0
+  - @commitlint/load-20.3.0
   - @commitlint/read-20.2.0
   - @modelcontextprotocol/server-everything-2025.12.18
   - @modelcontextprotocol/server-filesystem-2025.12.18
@@ -111,7 +111,7 @@ In your `flake.nix`
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2025-08-11
-  - zotero-better-bibtex-7.0.70
+  - zotero-better-bibtex-7.0.71
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.3.16
   - zotero-reading-list-1.5.14
