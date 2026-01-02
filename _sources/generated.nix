@@ -11,10 +11,10 @@
   };
   csharp-ls = {
     pname = "csharp-ls";
-    version = "0.20.0";
+    version = "0.21.0";
     src = fetchurl {
-      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.20.0";
-      sha256 = "sha256-OqapGZCn4q8SZZh5Nj8GLaxcZoNdMOeNVPw43bxMEg0=";
+      url = "https://www.nuget.org/api/v2/package/csharp-ls/0.21.0";
+      sha256 = "sha256-XFzTJ7UWaFQEmFmdY/zY4zjKZaKK9aUq4Zbt3h+19bg=";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
