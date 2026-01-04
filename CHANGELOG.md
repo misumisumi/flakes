@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.5](https://github.com/misumisumi/flakes/compare/v4.0.4...v4.0.5) (2026-01-04)
+
+
+### Bug Fixes
+
+* patch using gcc15 ([c751bd6](https://github.com/misumisumi/flakes/commit/c751bd6a10a63787ca39651ef6504f7c8e42ba44))
+* patch using gcc15 ([38845d0](https://github.com/misumisumi/flakes/commit/38845d0ad00cb9801e070b4ff3f92a962aa9b903))
+
 ## [4.0.4](https://github.com/misumisumi/flakes/compare/v4.0.3...v4.0.4) (2026-01-04)
 
 
