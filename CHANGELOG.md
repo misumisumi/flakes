@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.4](https://github.com/misumisumi/flakes/compare/v4.0.3...v4.0.4) (2026-01-04)
+
+
+### Bug Fixes
+
+* fix some build failure pkgs ([00ca41b](https://github.com/misumisumi/flakes/commit/00ca41b4b3542ad1056e35ee6db292ad06748e2b))
+
 ## [4.0.3](https://github.com/misumisumi/flakes/compare/v4.0.2...v4.0.3) (2025-12-09)
 
 
