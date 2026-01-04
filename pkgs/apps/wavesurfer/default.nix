@@ -3,7 +3,6 @@
   lib,
   name,
   pkgSources,
-  fetchpatch,
   makeDesktopItem,
   makeWrapper,
   writeScript,

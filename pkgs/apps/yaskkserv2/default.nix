@@ -1,5 +1,4 @@
 {
-  stdenv,
   lib,
   rustPlatform,
   name,
@@ -7,7 +6,7 @@
   pkg-config,
   openssl,
 }:
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage {
   inherit (pkgSources."${name}") pname version src;
   cargoLock = pkgSources."${name}".cargoLock."Cargo.lock";
 

@@ -3,7 +3,6 @@
   lib,
   python3Packages,
   pkgSources,
-  fetchFromGitHub,
 }:
 let
   inherit (python3Packages) buildPythonApplication;
