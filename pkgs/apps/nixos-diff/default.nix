@@ -1,13 +1,13 @@
-{ lib
-, diffutils
-, nix
-, python3
-, stdenvNoCC
-, writeShellApplication
-, writers
+{
+  diffutils,
+  nix,
+  writeShellApplication,
+  writers,
 }:
 let
-  script = writers.writePython3 "format-nixpkgs-diff" { } (builtins.readFile ./format-nixpkgs-diff.py);
+  script = writers.writePython3 "format-nixpkgs-diff" { } (
+    builtins.readFile ./format-nixpkgs-diff.py
+  );
 in
 writeShellApplication {
   name = "nixos-diff";

@@ -2,11 +2,11 @@
 {
   stdenv,
   lib,
-  fetchpatch,
   name,
   pkgSources,
   writeScript,
   curl,
+  gcc14,
   alsa-lib,
   libX11,
   tcl,
@@ -14,6 +14,7 @@
 }:
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
+  nativeBuildInputs = [ gcc14 ];
 
   buildInputs = [
     alsa-lib

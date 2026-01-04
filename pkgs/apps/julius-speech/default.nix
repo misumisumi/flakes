@@ -3,15 +3,19 @@
   lib,
   name,
   pkgSources,
+  SDL2,
   alsa-lib,
+  gcc14,
   perl,
   pkg-config,
   zlib,
-  SDL2,
 }:
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [
+    gcc14
+    pkg-config
+  ];
   buildInputs = [
     alsa-lib
     SDL2

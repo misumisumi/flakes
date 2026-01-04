@@ -2,6 +2,7 @@
   name,
   pkgSources,
   lib,
+  gcc14,
   stdenv,
   libibmad,
   openssl,
@@ -15,6 +16,7 @@ stdenv.mkDerivation {
     "-Wno-error=int-conversion"
   ];
 
+  nativeBuildInputs = [ gcc14 ];
   buildInputs = [
     libibmad
     openssl
