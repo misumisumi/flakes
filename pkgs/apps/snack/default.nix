@@ -6,7 +6,6 @@
   pkgSources,
   writeScript,
   curl,
-  gcc14,
   alsa-lib,
   libX11,
   tcl,
@@ -14,7 +13,6 @@
 }:
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
-  nativeBuildInputs = [ gcc14 ];
 
   buildInputs = [
     alsa-lib
@@ -47,6 +45,7 @@ stdenv.mkDerivation {
     "-Wno-error=implicit-function-declaration"
     "-Wno-error=implicit-int"
     "-Wno-error=incompatible-pointer-types"
+    "-std=gnu17"
   ];
 
   hardeningDisable = [ "format" ];
