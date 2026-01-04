@@ -5,15 +5,16 @@
   pkgSources,
   SDL2,
   alsa-lib,
-  gcc14,
   perl,
   pkg-config,
   zlib,
 }:
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
+
+  env.NIX_CFLAGS_COMPILE = "-std=gnu17";
+
   nativeBuildInputs = [
-    gcc14
     pkg-config
   ];
   buildInputs = [

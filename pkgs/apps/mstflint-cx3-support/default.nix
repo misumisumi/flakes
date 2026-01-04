@@ -2,7 +2,6 @@
   name,
   pkgSources,
   lib,
-  gcc14,
   stdenv,
   libibmad,
   openssl,
@@ -14,9 +13,9 @@ stdenv.mkDerivation {
   env.NIX_CFLAGS_COMPILE = toString [
     "-Wno-error=implicit-function-declaration"
     "-Wno-error=int-conversion"
+    "-std=gnu++17"
   ];
 
-  nativeBuildInputs = [ gcc14 ];
   buildInputs = [
     libibmad
     openssl
