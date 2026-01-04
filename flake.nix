@@ -152,7 +152,9 @@
                 )
                 // import ./env.nix { inherit pkgs; };
             in
-            lib.filterAttrs (name: value: builtins.any (x: system == x) (value.meta.platforms or [system])) pkgs';
+            lib.filterAttrs (
+              name: value: builtins.any (x: system == x) (value.meta.platforms or [ system ])
+            ) pkgs';
           apps = mkApps pkgs (runnableApps pkgs (names appsDir));
           checks = mkCheck packages;
           devShells =
