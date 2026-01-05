@@ -10,11 +10,14 @@
 stdenv.mkDerivation {
   inherit (pkgSources."${name}") pname version src;
 
-  env.NIX_CFLAGS_COMPILE = toString [
-    "-Wno-error=implicit-function-declaration"
-    "-Wno-error=int-conversion"
-    "-std=gnu++17"
-  ];
+  env = {
+    NIX_CFLAGS_COMPILE = toString [
+      "-Wno-error=implicit-function-declaration"
+      "-Wno-error=int-conversion"
+    ];
+  };
+  CFLAGS = "-std=gnu17";
+  CXXFLAGS = "-std=c++17";
 
   buildInputs = [
     libibmad
