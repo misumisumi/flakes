@@ -63,13 +63,28 @@
             pythonPackagesOverlays = (prev.pythonPackagesOverlays or [ ]) ++ [
               (
                 pfinal: pprev:
-                withContents pythonModulesDir (
+                (withContents pythonModulesDir (
                   name:
                   let
                     module = import (pythonModulesDir + "/${name}");
                   in
                   pfinal.callPackage module (override name module)
-                )
+                ))
+                // {
+                  mcp = pprev.mcp.overridePythonAttrs (old: {
+                    postPatch = prev.lib.optionalString prev.stdenv.buildPlatform.isDarwin ''
+                      # time.sleep(0.1) feels a bit optimistic and it has been flaky whilst
+                      # testing this on macOS under load.
+                      substituteInPlace \
+                        "tests/shared/test_ws.py" \
+                        "tests/shared/test_sse.py" \
+                        --replace-fail "time.sleep(0.5)" "time.sleep(1)"
+                      substituteInPlace \
+                        "tests/client/test_stdio.py" \
+                        --replace-fail "time.sleep(0.1)" "time.sleep(1)"
+                    '';
+                  });
+                }
               )
             ];
             python3 =

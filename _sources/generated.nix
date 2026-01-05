@@ -65,6 +65,14 @@
     };
     date = "2021-04-01";
   };
+  fastmcp = {
+    pname = "fastmcp";
+    version = "2.14.2";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/f/fastmcp/fastmcp-2.14.2.tar.gz";
+      sha256 = "sha256-vSPRuAi29EZETxARTaxGixG/uRU+14Yo9WGXY9DPVz4=";
+    };
+  };
   fence-agents = {
     pname = "fence-agents";
     version = "v4.16.0";
@@ -151,6 +159,30 @@
       sha256 = "sha256-eAJjw575cJlj7qLsPC1LgRsVMW4O754Q6SO7IV74EyE=";
     };
   };
+  py-key-value-aio = {
+    pname = "py-key-value-aio";
+    version = "0.3.0";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/p/py-key-value-aio/py_key_value_aio-0.3.0.tar.gz";
+      sha256 = "sha256-hY6FL89taW0jEmbaZgQtM1Wn+YcWUEFf7vn8p6bNQVU=";
+    };
+  };
+  py-key-value-shared = {
+    pname = "py-key-value-shared";
+    version = "0.3.0";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/p/py-key-value-shared/py_key_value_shared-0.3.0.tar.gz";
+      sha256 = "sha256-j914bPlsPpABApRfkqoUcxOOvpYO9J2hyDN5AWDCiks=";
+    };
+  };
+  pydocket = {
+    pname = "pydocket";
+    version = "0.16.3";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/p/pydocket/pydocket-0.16.3.tar.gz";
+      sha256 = "sha256-eOnaV23gnp8/QQ0kce8cZ5t3Qd3SG1hsl6E4crab0mU=";
+    };
+  };
   pyknp = {
     pname = "pyknp";
     version = "0.6.1";
@@ -165,6 +197,23 @@
     src = fetchurl {
       url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb";
       sha256 = "sha256-aRqpBpYpQnOdAoGe21cBYrkhtRaiBZJTYgVsdN2irEU=";
+    };
+  };
+  rocksdict = {
+    pname = "rocksdict";
+    version = "v0.3.29";
+    src = fetchFromGitHub {
+      owner = "rocksdict";
+      repo = "RocksDict";
+      rev = "v0.3.29";
+      fetchSubmodules = true;
+      sha256 = "sha256-yP+OAVioKOGPvcYM8s1TTNHzzaFxw1sUQDrWxmptuJo=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./rocksdict-v0.3.29/Cargo.lock;
+      outputHashes = {
+        
+      };
     };
   };
   skk-emoji-jisyo = {
@@ -192,6 +241,20 @@
     src = fetchurl {
       url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.5.tar.gz";
       sha256 = "sha256-erLR18D1el3H9tVUKJW0R2KjGgFiHJ1/gPO71nx7zDk=";
+    };
+  };
+  valkey-glide = {
+    pname = "valkey-glide";
+    version = "2.2.3";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.3.tar.gz";
+      sha256 = "sha256-JPumKTm1ixVHb3sPfgyL7qGKKq7BjDU6IaV3YlKBTeo=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./valkey-glide-2.2.3/Cargo.lock;
+      outputHashes = {
+        
+      };
     };
   };
   version-pioneer = {
