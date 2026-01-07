@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.1.0](https://github.com/misumisumi/flakes/compare/v4.0.5...v4.1.0) (2026-01-07)
+
+
+### Features
+
+* add some python packages for fastmcp ([a718de8](https://github.com/misumisumi/flakes/commit/a718de8893083a75fb696b88115ca18ce561ab7a))
+
+
+### Bug Fixes
+
+* **mstflint-cx3-support:** fix gcc version ([6b6ab54](https://github.com/misumisumi/flakes/commit/6b6ab54961102ac8629a8a5cceade0beb8b2016f))
+
 ## [4.0.5](https://github.com/misumisumi/flakes/compare/v4.0.4...v4.0.5) (2026-01-04)
 
 
