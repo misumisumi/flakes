@@ -35,7 +35,7 @@ toPythonModule (
       wrapPython
     ];
 
-    propagatedBuildInputs = [
+    dependencies = [
       pycryptodome
       pyscard
       python

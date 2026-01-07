@@ -4,8 +4,8 @@
   pkgSources,
   buildPythonPackage,
   rustPlatform,
-  protobuf,
   anyio,
+  protobuf,
   sniffio,
 }:
 buildPythonPackage {
@@ -17,11 +17,9 @@ buildPythonPackage {
   cargoDeps = rustPlatform.importCargoLock {
     inherit (pkgSources."${name}".cargoLock."Cargo.lock") lockFile;
   };
-  propagatedBuildInputs = [
-    protobuf
-  ];
   dependencies = [
     anyio
+    protobuf
     sniffio
   ];
   postPatch = ''

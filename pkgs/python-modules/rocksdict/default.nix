@@ -31,13 +31,6 @@ buildPythonPackage {
     rustPlatform.bindgenHook
     rustfmt
   ];
-  propagatedBuildInputs = [
-    # protobuf
-  ];
-  dependencies = [
-    # anyio
-    # sniffio
-  ];
   # build-system = [ rustPlatform.maturinBuildHook ];
   build-system = [
     rustPlatform.cargoSetupHook

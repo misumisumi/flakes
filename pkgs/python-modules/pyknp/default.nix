@@ -26,7 +26,7 @@ buildPythonPackage {
 
   doCheck = false;
   # for runtime depend
-  propagatedBuildInputs = [
+  dependencies = [
     poetry-core
     six
     toml

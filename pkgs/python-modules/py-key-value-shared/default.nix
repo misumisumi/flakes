@@ -13,7 +13,7 @@ buildPythonPackage {
   doCheck = false;
   pyproject = true;
   # for runtime depend
-  propagatedBuildInputs = [
+  dependencies = [
     beartype
     typing-extensions
   ];
