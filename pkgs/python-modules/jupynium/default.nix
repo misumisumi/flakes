@@ -27,7 +27,7 @@ buildPythonPackage {
   doCheck = false;
   pyproject = true;
   # for runtime depend
-  propagatedBuildInputs = [
+  dependencies = [
     coloredlogs
     gitpython
     hatch-requirements-txt

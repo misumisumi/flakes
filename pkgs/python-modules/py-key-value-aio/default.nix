@@ -34,8 +34,9 @@ buildPythonPackage {
   doCheck = false;
   pyproject = true;
   # for runtime depend
-  propagatedBuildInputs = [
+  dependencies = [
     beartype
+    dependency-groups
     py-key-value-shared
   ];
   build-system = [ uv-build ];
@@ -43,9 +44,6 @@ buildPythonPackage {
     substituteInPlace pyproject.toml \
     --replace-fail "uv_build>=0.8.2,<0.9.0" "uv_build"
   '';
-  dependencies = [
-    dependency-groups
-  ];
   optional-dependencies = {
     dev = [
       # memory
