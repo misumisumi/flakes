@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.1](https://github.com/misumisumi/flakes/compare/v4.1.0...v4.1.1) (2026-01-07)
+
+
+### Bug Fixes
+
+* **pydocket:** add missing dependent package ([74ee8ee](https://github.com/misumisumi/flakes/commit/74ee8ee733399a58068cd79fd3c8d957ccb9f89b))
+
 ## [4.1.0](https://github.com/misumisumi/flakes/compare/v4.0.5...v4.1.0) (2026-01-07)
 
 
