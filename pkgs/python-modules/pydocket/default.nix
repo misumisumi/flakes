@@ -7,6 +7,7 @@
   hatch-vcs,
   cloudpickle,
   fakeredis,
+  lupa,
   opentelemetry-api,
   opentelemetry-exporter-prometheus,
   opentelemetry-instrumentation,
@@ -26,6 +27,7 @@ buildPythonPackage {
   dependencies = [
     cloudpickle
     fakeredis
+    lupa
     opentelemetry-api
     opentelemetry-exporter-prometheus
     opentelemetry-instrumentation
