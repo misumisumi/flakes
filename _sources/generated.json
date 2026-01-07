@@ -116,6 +116,21 @@
         },
         "version": "92b6211ec2a93e14052e0e572d697d4d06c71868"
     },
+    "fastmcp": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "fastmcp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-vSPRuAi29EZETxARTaxGixG/uRU+14Yo9WGXY9DPVz4=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/f/fastmcp/fastmcp-2.14.2.tar.gz"
+        },
+        "version": "2.14.2"
+    },
     "fence-agents": {
         "cargoLocks": null,
         "date": null,
@@ -274,6 +289,51 @@
         },
         "version": "GE-Proton10-26-rtsp20"
     },
+    "py-key-value-aio": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "py-key-value-aio",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-hY6FL89taW0jEmbaZgQtM1Wn+YcWUEFf7vn8p6bNQVU=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/p/py-key-value-aio/py_key_value_aio-0.3.0.tar.gz"
+        },
+        "version": "0.3.0"
+    },
+    "py-key-value-shared": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "py-key-value-shared",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-j914bPlsPpABApRfkqoUcxOOvpYO9J2hyDN5AWDCiks=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/p/py-key-value-shared/py_key_value_shared-0.3.0.tar.gz"
+        },
+        "version": "0.3.0"
+    },
+    "pydocket": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "pydocket",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-eOnaV23gnp8/QQ0kce8cZ5t3Qd3SG1hsl6E4crab0mU=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/p/pydocket/pydocket-0.16.3.tar.gz"
+        },
+        "version": "0.16.3"
+    },
     "pyknp": {
         "cargoLocks": null,
         "date": null,
@@ -303,6 +363,32 @@
             "url": "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
         },
         "version": "1.00"
+    },
+    "rocksdict": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./rocksdict-v0.3.29/Cargo.lock",
+                {}
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "rocksdict",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rocksdict",
+            "repo": "RocksDict",
+            "rev": "v0.3.29",
+            "sha256": "sha256-yP+OAVioKOGPvcYM8s1TTNHzzaFxw1sUQDrWxmptuJo=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.3.29"
     },
     "skk-emoji-jisyo": {
         "cargoLocks": null,
@@ -354,6 +440,26 @@
             "url": "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.5.tar.gz"
         },
         "version": "2.9.5"
+    },
+    "valkey-glide": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./valkey-glide-2.2.3/Cargo.lock",
+                {}
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "valkey-glide",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-JPumKTm1ixVHb3sPfgyL7qGKKq7BjDU6IaV3YlKBTeo=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.3.tar.gz"
+        },
+        "version": "2.2.3"
     },
     "version-pioneer": {
         "cargoLocks": null,

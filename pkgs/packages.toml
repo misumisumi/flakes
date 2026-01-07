@@ -102,6 +102,33 @@ fetch.url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/
 src.pypi = "jupynium"
 fetch.pypi = "jupynium"
 
+[py-key-value-aio]
+src.pypi = "py-key-value-aio"
+fetch.url = "https://pypi.org/packages/source/p/py-key-value-aio/py_key_value_aio-$ver.tar.gz"
+
+[py-key-value-shared]
+src.pypi = "py-key-value-shared"
+fetch.url = "https://pypi.org/packages/source/p/py-key-value-shared/py_key_value_shared-$ver.tar.gz"
+
+[valkey-glide]
+src.pypi = "valkey-glide"
+fetch.url = "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-$ver.tar.gz"
+cargo_locks = ["Cargo.lock"]
+
+[rocksdict]
+src.github_tag = "rocksdict/rocksdict"
+fetch.github = "rocksdict/RocksDict"
+cargo_locks = ["Cargo.lock"]
+git.fetchSubmodules = true
+
+[pydocket]
+src.pypi = "pydocket"
+fetch.pypi = "pydocket"
+
+[fastmcp]
+src.pypi = "fastmcp"
+fetch.pypi = "fastmcp"
+
 [pyknp]
 src.pypi = "pyknp"
 fetch.pypi = "pyknp"
