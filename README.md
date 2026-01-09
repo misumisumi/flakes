@@ -50,12 +50,12 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-20.3.0
-  - @commitlint/config-conventional-20.3.0
-  - @commitlint/config-patternplate-20.3.0
+  - @commitlint/config-angular-20.3.1
+  - @commitlint/config-conventional-20.3.1
+  - @commitlint/config-patternplate-20.3.1
   - @commitlint/config-workspace-scopes-20.2.0
-  - @commitlint/load-20.3.0
-  - @commitlint/read-20.2.0
+  - @commitlint/load-20.3.1
+  - @commitlint/read-20.3.1
   - @modelcontextprotocol/server-everything-2025.12.18
   - @modelcontextprotocol/server-filesystem-2025.12.18
   - @modelcontextprotocol/server-filesystem-2025.12.18
@@ -93,8 +93,14 @@ In your `flake.nix`
   - prettier-plugin-sh-0.18.0
   - prettier-plugin-sql-0.19.2
   - proton-ge-rtsp-bin-GE-Proton10-26-rtsp20
+  - python3.13-fastmcp--2.14.2
   - python3.13-jupynium-0.2.7
+  - python3.13-py-key-value-aio-0.3.0
+  - python3.13-py-key-value-shared-0.3.0
+  - python3.13-pydocket-0.16.4
   - python3.13-pyknp-0.6.1
+  - python3.13-rocksdict-v0.3.29
+  - python3.13-valkey-glide-2.2.3
   - python3.13-version-pioneer-0.0.14
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
@@ -102,7 +108,7 @@ In your `flake.nix`
   - skk-kaomoji-jisyo-2.30.5544.102
   - snack-2.2.10
   - textlint-filter-rule-allowlist-4.0.0
-  - textlint-filter-rule-comments-1.2.2
+  - textlint-filter-rule-comments-1.3.0
   - textlint-rule-preset-ja-engineering-paper-1.0.4
   - textlint-rule-preset-ja-spacing-2.4.3
   - textlint-rule-preset-ja-technical-writing-12.0.2
@@ -111,10 +117,10 @@ In your `flake.nix`
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2025-08-11
-  - zotero-better-bibtex-7.0.71
+  - zotero-better-bibtex-7.0.75
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.3.16
-  - zotero-reading-list-1.5.14
+  - zotero-reading-list-1.5.15
   - zotero-scipdf-8.0.1
   - zotero-zotfile-5.1.2
   - zotero-zotmoov-1.2.25
