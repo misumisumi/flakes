@@ -75,13 +75,13 @@
   };
   fence-agents = {
     pname = "fence-agents";
-    version = "v4.16.0";
+    version = "v4.17.0";
     src = fetchFromGitHub {
       owner = "ClusterLabs";
       repo = "fence-agents";
-      rev = "v4.16.0";
+      rev = "v4.17.0";
       fetchSubmodules = false;
-      sha256 = "sha256-44LzxXQbc3NqqAtZgsp6ClTZIPkP9hHffc1DSkT3bCA=";
+      sha256 = "sha256-vVpDG+97CYjdJI+ZyUP6qyAu3cRtwsUupmkfO/pgsuQ=";
     };
   };
   jawiki-kana-kanji-dict = {
@@ -177,10 +177,10 @@
   };
   pydocket = {
     pname = "pydocket";
-    version = "0.16.3";
+    version = "0.16.4";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydocket/pydocket-0.16.3.tar.gz";
-      sha256 = "sha256-eOnaV23gnp8/QQ0kce8cZ5t3Qd3SG1hsl6E4crab0mU=";
+      url = "https://pypi.org/packages/source/p/pydocket/pydocket-0.16.4.tar.gz";
+      sha256 = "sha256-0DTRrHWHdWDYYyn7NkPnuGL8vNrEB9h2pi9dnjhuh1M=";
     };
   };
   pyknp = {

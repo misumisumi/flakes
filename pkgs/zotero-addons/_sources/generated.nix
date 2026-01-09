@@ -3,10 +3,10 @@
 {
   zotero-better-bibtex = {
     pname = "zotero-better-bibtex";
-    version = "7.0.71";
+    version = "7.0.75";
     src = fetchurl {
-      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.71/zotero-better-bibtex-7.0.71.xpi";
-      sha256 = "sha256-TNEL8/33p3wkIYLyqg4hpM5ZYvGaSjuNLBfy/mf2PDY=";
+      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.75/zotero-better-bibtex-7.0.75.xpi";
+      sha256 = "sha256-3xAYLNs5Vruc+bIMpib/6OFhHqmzJqQQ/ER3Gr6foXM=";
     };
     addonId = "better-bibtex@iris-advies.com";
     license = "mit";
@@ -39,10 +39,10 @@
   };
   zotero-reading-list = {
     pname = "zotero-reading-list";
-    version = "1.5.14";
+    version = "1.5.15";
     src = fetchurl {
-      url = "https://github.com/Dominic-DallOsto/zotero-reading-list/releases/download/v1.5.14/zotero-reading-list.xpi";
-      sha256 = "sha256-ackaE5BpiyKJw98qsVdJpKAieogWwjeQ4mS+LSq+Ghg=";
+      url = "https://github.com/Dominic-DallOsto/zotero-reading-list/releases/download/v1.5.15/zotero-reading-list.xpi";
+      sha256 = "sha256-4twMGL4wM0xpT6GJNOv05xXd3hrY9A41Zu0oJuV1KEg=";
     };
     addonId = "reading-list@hotmail.com";
     license = "gpl3";
