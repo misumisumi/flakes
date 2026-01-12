@@ -426,6 +426,27 @@
         },
         "version": "2.2.10"
     },
+    "spicetify-dj-info": {
+        "cargoLocks": null,
+        "date": "2026-01-10",
+        "extract": null,
+        "name": "spicetify-dj-info",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "L3-N0X",
+            "repo": "spicetify-dj-info",
+            "rev": "9f5ef20697aa5613490c21278889fb007c594610",
+            "sha256": "sha256-FbDgfbrvM+Sz7/CgRdtB6oOMndlnb2SPsNFosuV7+AY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "9f5ef20697aa5613490c21278889fb007c594610"
+    },
     "tkdnd": {
         "cargoLocks": null,
         "date": null,
