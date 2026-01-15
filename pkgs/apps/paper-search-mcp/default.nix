@@ -15,7 +15,7 @@ buildPythonApplication {
 
   dependencies = with python3Packages; [
     beautifulsoup4
-    fastmcp'
+    fastmcp
     feedparser
     lxml
     mcp
