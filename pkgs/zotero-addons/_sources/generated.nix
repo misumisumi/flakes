@@ -3,10 +3,10 @@
 {
   zotero-better-bibtex = {
     pname = "zotero-better-bibtex";
-    version = "7.0.75";
+    version = "7.0.76";
     src = fetchurl {
-      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.75/zotero-better-bibtex-7.0.75.xpi";
-      sha256 = "sha256-3xAYLNs5Vruc+bIMpib/6OFhHqmzJqQQ/ER3Gr6foXM=";
+      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v7.0.76/zotero-better-bibtex-7.0.76.xpi";
+      sha256 = "sha256-4MWwqSoOWPGiuLiZA6BfS24ScDdYhDto+jNF9l0C7kw=";
     };
     addonId = "better-bibtex@iris-advies.com";
     license = "mit";
@@ -51,10 +51,10 @@
   };
   zotero-scipdf = {
     pname = "zotero-scipdf";
-    version = "8.0.1";
+    version = "8.0.2";
     src = fetchurl {
-      url = "https://github.com/syt2/zotero-scipdf/releases/download/V8.0.1/sci-pdf.xpi";
-      sha256 = "sha256-TvFjScju0yJ6sxXSS2jR3+Nquki5FTTHIAqldl4sYs4=";
+      url = "https://github.com/syt2/zotero-scipdf/releases/download/V8.0.2/sci-pdf.xpi";
+      sha256 = "sha256-bWNehOdmXZNLRDLdR65IBNkxxzSaWnomgI6mjLQU69E=";
     };
     addonId = "scipdf@ytshen.com";
     license = "agpl3Plus";

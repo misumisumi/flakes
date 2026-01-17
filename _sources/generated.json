@@ -116,21 +116,6 @@
         },
         "version": "92b6211ec2a93e14052e0e572d697d4d06c71868"
     },
-    "fastmcp": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "fastmcp",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-vSPRuAi29EZETxARTaxGixG/uRU+14Yo9WGXY9DPVz4=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/f/fastmcp/fastmcp-2.14.2.tar.gz"
-        },
-        "version": "2.14.2"
-    },
     "fence-agents": {
         "cargoLocks": null,
         "date": null,
@@ -154,18 +139,18 @@
     },
     "jawiki-kana-kanji-dict": {
         "cargoLocks": null,
-        "date": "2025-08-11",
+        "date": "2026-01-17",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-b9hPYmivPFhjxQyDuwmh/SPeqXu7v9G3GT4sY/aIdIc=",
+            "sha256": "sha256-S9V8rwJL3UP2qX5dWOMhth2s7nb5YeN0/PSKgEgsksU=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/78ec2eb2ffd13eb0e01e731cd451ef5b1fd2f94f/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/3dcaae28f1363691654a274587ba651a35bef46e/SKK-JISYO.jawiki"
         },
-        "version": "78ec2eb2ffd13eb0e01e731cd451ef5b1fd2f94f"
+        "version": "3dcaae28f1363691654a274587ba651a35bef46e"
     },
     "julius-speech": {
         "cargoLocks": null,
@@ -289,51 +274,6 @@
         },
         "version": "GE-Proton10-26-rtsp20"
     },
-    "py-key-value-aio": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "py-key-value-aio",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-hY6FL89taW0jEmbaZgQtM1Wn+YcWUEFf7vn8p6bNQVU=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/p/py-key-value-aio/py_key_value_aio-0.3.0.tar.gz"
-        },
-        "version": "0.3.0"
-    },
-    "py-key-value-shared": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "py-key-value-shared",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-j914bPlsPpABApRfkqoUcxOOvpYO9J2hyDN5AWDCiks=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/p/py-key-value-shared/py_key_value_shared-0.3.0.tar.gz"
-        },
-        "version": "0.3.0"
-    },
-    "pydocket": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "pydocket",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-0DTRrHWHdWDYYyn7NkPnuGL8vNrEB9h2pi9dnjhuh1M=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydocket/pydocket-0.16.4.tar.gz"
-        },
-        "version": "0.16.4"
-    },
     "pyknp": {
         "cargoLocks": null,
         "date": null,
@@ -363,32 +303,6 @@
             "url": "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
         },
         "version": "1.00"
-    },
-    "rocksdict": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./rocksdict-v0.3.29/Cargo.lock",
-                {}
-            ]
-        },
-        "date": null,
-        "extract": null,
-        "name": "rocksdict",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": true,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "rocksdict",
-            "repo": "RocksDict",
-            "rev": "v0.3.29",
-            "sha256": "sha256-yP+OAVioKOGPvcYM8s1TTNHzzaFxw1sUQDrWxmptuJo=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v0.3.29"
     },
     "skk-emoji-jisyo": {
         "cargoLocks": null,
@@ -431,7 +345,9 @@
         "date": "2026-01-10",
         "extract": null,
         "name": "spicetify-dj-info",
-        "passthru": null,
+        "passthru": {
+            "name": "dist/djinfo.mjs"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -465,7 +381,7 @@
     "valkey-glide": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./valkey-glide-2.2.3/Cargo.lock",
+                "./valkey-glide-2.2.5/Cargo.lock",
                 {}
             ]
         },
@@ -476,11 +392,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-JPumKTm1ixVHb3sPfgyL7qGKKq7BjDU6IaV3YlKBTeo=",
+            "sha256": "sha256-er1s4o1lXK7UpfQeBWtaE857MnFDWum8LIxyunJcSt8=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.3.tar.gz"
+            "url": "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.5.tar.gz"
         },
-        "version": "2.2.3"
+        "version": "2.2.5"
     },
     "version-pioneer": {
         "cargoLocks": null,
@@ -491,11 +407,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Bhoe06MQUNCG62xeFi73W+W/m1ri6wcdaB0qvB0NxnU=",
+            "sha256": "sha256-QeAgZ6ISf4HLf8/EY7yowl4y7HlXuI9b2oHouihayWk=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/v/version_pioneer/version_pioneer-0.0.14.tar.gz"
+            "url": "https://pypi.org/packages/source/v/version_pioneer/version_pioneer-0.0.15.tar.gz"
         },
-        "version": "0.0.14"
+        "version": "0.0.15"
     },
     "virtualsmartcard": {
         "cargoLocks": null,

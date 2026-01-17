@@ -57,7 +57,7 @@
           )
           // import ./pkgs/overrides/default.nix { inherit final prev; }
           // {
-            sources = pkgSources;
+            flakeSources = pkgSources;
           }
           // {
             pythonPackagesOverlays = (prev.pythonPackagesOverlays or [ ]) ++ [
