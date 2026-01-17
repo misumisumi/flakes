@@ -6,7 +6,6 @@
   lib,
   stdenv,
 }@args:
-
 let
 
   buildZoteroXpiAddon = lib.makeOverridable (
