@@ -1,7 +1,7 @@
 [zotero-better-bibtex]
 src.github_tag = "retorquere/zotero-better-bibtex"
 src.prefix = "v"
-src.exclude_regex = "v6.7.267"
+src.exclude_regex = "v6.7.267|v7.0.77"
 fetch.url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v$ver/zotero-better-bibtex-$ver.xpi"
 [zotero-better-bibtex.passthru]
 addonId = "better-bibtex@iris-advies.com"
