@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.1.2](https://github.com/misumisumi/flakes/compare/v4.1.1...v4.1.2) (2026-01-17)
+
+
+### Bug Fixes
+
+* **fastmcp:** remove fastmcp and dependeces ([03fb1ab](https://github.com/misumisumi/flakes/commit/03fb1ab4402b1eae99551dfa84176642097224fe))
+* remove including upstream package and update lockfile ([ab5d749](https://github.com/misumisumi/flakes/commit/ab5d7495189ea10d5cb65d413c9ff2f27d3b9e3e))
+* **zotero:** add no release version to regex for zotero-better-bibtex ([beee05d](https://github.com/misumisumi/flakes/commit/beee05db4af3d48d1174e9f7de6c8a14d51a7142))
+
 ## [4.1.1](https://github.com/misumisumi/flakes/compare/v4.1.0...v4.1.1) (2026-01-07)
 
 
