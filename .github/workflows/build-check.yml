@@ -92,10 +92,13 @@ jobs:
           sudo rm -rf ~/Library/Developer/Xcode
           df -h
 
+        #NOTE: Limit cpu usage because pytest often cannot connect to the server under high cpu load.
+      - run: nix profile add nixpkgs#cpulimit
+
       - name: Build check
         uses: gacts/run-and-post-run@v1
         with:
-          run: nix run github:Mic92/nix-fast-build  -- --no-link --no-nom --result-file result.json
+          run: cpulimit -l 90 -i -- nix run github:Mic92/nix-fast-build  -- --no-link --no-nom --result-file result.json
           post: jq -r '.results[] | select(.success==false) | .attr' result.json
 
   build-check-summary:
