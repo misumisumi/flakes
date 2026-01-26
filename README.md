@@ -56,9 +56,9 @@ In your `flake.nix`
   - @commitlint/config-workspace-scopes-20.2.0
   - @commitlint/load-20.3.1
   - @commitlint/read-20.3.1
-  - @modelcontextprotocol/server-everything-2025.12.18
-  - @modelcontextprotocol/server-filesystem-2025.12.18
-  - @modelcontextprotocol/server-filesystem-2025.12.18
+  - @modelcontextprotocol/server-everything-2026.1.14
+  - @modelcontextprotocol/server-filesystem-2026.1.14
+  - @modelcontextprotocol/server-filesystem-2026.1.14
   - @modelcontextprotocol/server-memory-2025.11.25
   - @modelcontextprotocol/server-memory-2025.11.25
   - @modelcontextprotocol/server-sequential-thinking-2025.12.18
@@ -75,7 +75,7 @@ In your `flake.nix`
   - commitlint-with-plugins
   - cups-brother-hll5100dn-3.5.1-1
   - discord-mcp-ac33c4f492fcd99b08aa9dfbd95f8ec4279c1e72
-  - jawiki-kana-kanji-dict-2025-08-11
+  - jawiki-kana-kanji-dict-2026-01-17
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
   - mcp-hub-4.2.1
@@ -93,15 +93,10 @@ In your `flake.nix`
   - prettier-plugin-sh-0.18.0
   - prettier-plugin-sql-0.19.2
   - proton-ge-rtsp-bin-GE-Proton10-26-rtsp20
-  - python3.13-fastmcp--2.14.2
   - python3.13-jupynium-0.2.7
-  - python3.13-py-key-value-aio-0.3.0
-  - python3.13-py-key-value-shared-0.3.0
-  - python3.13-pydocket-0.16.4
   - python3.13-pyknp-0.6.1
-  - python3.13-rocksdict-v0.3.29
-  - python3.13-valkey-glide-2.2.3
-  - python3.13-version-pioneer-0.0.14
+  - python3.13-valkey-glide-2.2.6
+  - python3.13-version-pioneer-0.0.15
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
   - skk-emotikons-jisyo-2021-04-01
@@ -116,12 +111,12 @@ In your `flake.nix`
   - virtualsmartcard-virtualsmartcard-0.10
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-2025-08-11
-  - zotero-better-bibtex-7.0.75
+  - yaskkserv2-dict-2026-01-17
+  - zotero-better-bibtex-7.0.76
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.3.16
   - zotero-reading-list-1.5.15
-  - zotero-scipdf-8.0.1
+  - zotero-scipdf-8.0.2
   - zotero-zotfile-5.1.2
   - zotero-zotmoov-1.2.25
 

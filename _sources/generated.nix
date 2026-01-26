@@ -209,13 +209,13 @@
   };
   valkey-glide = {
     pname = "valkey-glide";
-    version = "2.2.5";
+    version = "2.2.6";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.5.tar.gz";
-      sha256 = "sha256-er1s4o1lXK7UpfQeBWtaE857MnFDWum8LIxyunJcSt8=";
+      url = "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.6.tar.gz";
+      sha256 = "sha256-bsVpZp8FizvpuHP5AH7V8ps//HMpUcydAtZtKM3rKA0=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./valkey-glide-2.2.5/Cargo.lock;
+      lockFile = ./valkey-glide-2.2.6/Cargo.lock;
       outputHashes = {
         
       };

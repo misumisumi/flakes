@@ -381,7 +381,7 @@
     "valkey-glide": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./valkey-glide-2.2.5/Cargo.lock",
+                "./valkey-glide-2.2.6/Cargo.lock",
                 {}
             ]
         },
@@ -392,11 +392,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-er1s4o1lXK7UpfQeBWtaE857MnFDWum8LIxyunJcSt8=",
+            "sha256": "sha256-bsVpZp8FizvpuHP5AH7V8ps//HMpUcydAtZtKM3rKA0=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.5.tar.gz"
+            "url": "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.6.tar.gz"
         },
-        "version": "2.2.5"
+        "version": "2.2.6"
     },
     "version-pioneer": {
         "cargoLocks": null,
