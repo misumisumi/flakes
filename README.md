@@ -50,17 +50,17 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-20.3.1
-  - @commitlint/config-conventional-20.3.1
-  - @commitlint/config-patternplate-20.3.1
-  - @commitlint/config-workspace-scopes-20.2.0
-  - @commitlint/load-20.3.1
-  - @commitlint/read-20.3.1
-  - @modelcontextprotocol/server-everything-2026.1.14
+  - @commitlint/config-angular-20.4.1
+  - @commitlint/config-conventional-20.4.1
+  - @commitlint/config-patternplate-20.4.1
+  - @commitlint/config-workspace-scopes-20.4.0
+  - @commitlint/load-20.4.0
+  - @commitlint/read-20.4.0
+  - @modelcontextprotocol/server-everything-2026.1.26
   - @modelcontextprotocol/server-filesystem-2026.1.14
   - @modelcontextprotocol/server-filesystem-2026.1.14
-  - @modelcontextprotocol/server-memory-2025.11.25
-  - @modelcontextprotocol/server-memory-2025.11.25
+  - @modelcontextprotocol/server-memory-2026.1.26
+  - @modelcontextprotocol/server-memory-2026.1.26
   - @modelcontextprotocol/server-sequential-thinking-2025.12.18
   - @modelcontextprotocol/server-sequential-thinking-2025.12.18
   - @pkgdeps/update-github-actions-permissions-2.9.1
@@ -74,7 +74,7 @@ In your `flake.nix`
   - commitlint-format-json-1.1.0
   - commitlint-with-plugins
   - cups-brother-hll5100dn-3.5.1-1
-  - discord-mcp-ac33c4f492fcd99b08aa9dfbd95f8ec4279c1e72
+  - discord-mcp-18fa25a58b97c386f5aae6f9b42b3c034621569c
   - jawiki-kana-kanji-dict-2026-01-17
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
@@ -114,9 +114,9 @@ In your `flake.nix`
   - yaskkserv2-dict-2026-01-17
   - zotero-better-bibtex-7.0.76
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.3.16
+  - zotero-pdf-translate-2.4.2
   - zotero-reading-list-1.5.15
-  - zotero-scipdf-8.0.2
+  - zotero-scipdf-8.0.3
   - zotero-zotfile-5.1.2
-  - zotero-zotmoov-1.2.25
+  - zotero-zotmoov-1.2.26
 

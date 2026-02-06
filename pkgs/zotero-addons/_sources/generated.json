@@ -1,6 +1,6 @@
 {
     "zotero-better-bibtex": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "zotero-better-bibtex",
@@ -20,7 +20,7 @@
         "version": "7.0.76"
     },
     "zotero-night": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "zotero-night",
@@ -40,7 +40,7 @@
         "version": "0.4.23"
     },
     "zotero-pdf-translate": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "zotero-pdf-translate",
@@ -53,14 +53,14 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-m/1Nr4bskoV8BsYzFkftKiYYQPdiWW5KqeKJXdqmMR8=",
+            "sha256": "sha256-Z320cLzmpWUiNsAveIKMixt3Au9xgAeQVHS+jdy/tHs=",
             "type": "url",
-            "url": "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.3.16/translate-for-zotero.xpi"
+            "url": "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.4.2/translate-for-zotero.xpi"
         },
-        "version": "2.3.16"
+        "version": "2.4.2"
     },
     "zotero-reading-list": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "zotero-reading-list",
@@ -80,7 +80,7 @@
         "version": "1.5.15"
     },
     "zotero-scipdf": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "zotero-scipdf",
@@ -93,14 +93,14 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-bWNehOdmXZNLRDLdR65IBNkxxzSaWnomgI6mjLQU69E=",
+            "sha256": "sha256-mbCsPQpatep0RUiJyCEnE/qvb9Gjbb6ZW54OaalrC60=",
             "type": "url",
-            "url": "https://github.com/syt2/zotero-scipdf/releases/download/V8.0.2/sci-pdf.xpi"
+            "url": "https://github.com/syt2/zotero-scipdf/releases/download/V8.0.3/sci-pdf.xpi"
         },
-        "version": "8.0.2"
+        "version": "8.0.3"
     },
     "zotero-zotfile": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "zotero-zotfile",
@@ -120,7 +120,7 @@
         "version": "5.1.2"
     },
     "zotero-zotmoov": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "zotero-zotmoov",
@@ -133,10 +133,10 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-WnmKB5bR09KpR8KuLCK6rC8Ur2n6+Uw26CaeNzJUj1g=",
+            "sha256": "sha256-y89Pun0exbMa+Wq7BPdaBSkMtqmi3nHS5AH/qAuiyi4=",
             "type": "url",
-            "url": "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.25/zotmoov-1.2.25-fx.xpi"
+            "url": "https://github.com/wileyyugioh/zotmoov/releases/download/1.2.26/zotmoov-1.2.26-fx.xpi"
         },
-        "version": "1.2.25"
+        "version": "1.2.26"
     }
 }
