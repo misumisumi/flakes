@@ -83,12 +83,12 @@
   };
   jawiki-kana-kanji-dict = {
     pname = "jawiki-kana-kanji-dict";
-    version = "3dcaae28f1363691654a274587ba651a35bef46e";
+    version = "45d099368c462e4e9806887c73d88738ab0f7e6e";
     src = fetchurl {
-      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/3dcaae28f1363691654a274587ba651a35bef46e/SKK-JISYO.jawiki";
+      url = "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/45d099368c462e4e9806887c73d88738ab0f7e6e/SKK-JISYO.jawiki";
       sha256 = "sha256-S9V8rwJL3UP2qX5dWOMhth2s7nb5YeN0/PSKgEgsksU=";
     };
-    date = "2026-01-17";
+    date = "2026-02-08";
   };
   julius-speech = {
     pname = "julius-speech";
@@ -219,6 +219,12 @@
       url = "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.6.tar.gz";
       sha256 = "sha256-bsVpZp8FizvpuHP5AH7V8ps//HMpUcydAtZtKM3rKA0=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-bsVpZp8FizvpuHP5AH7V8ps__HMpUcydAtZtKM3rKA0=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   version-pioneer = {
     pname = "version-pioneer";
@@ -264,6 +270,12 @@
       rev = "0.1.7";
       fetchSubmodules = false;
       sha256 = "sha256-bF8OHP6nvGhxXNvvnVCuOVFarK/n7WhGRktRN4X5ZjE=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-bF8OHP6nvGhxXNvvnVCuOVFarK_n7WhGRktRN4X5ZjE=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
 }
