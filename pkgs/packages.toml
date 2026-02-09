@@ -98,7 +98,7 @@ fetch.pypi = "paper_search_mcp"
 [yaskkserv2]
 src.github_tag = "wachikun/yaskkserv2"
 fetch.github = "wachikun/yaskkserv2"
-cargo_locks = ["Cargo.lock"]
+cargo_lock = ["Cargo.lock"]
 
 [jawiki-kana-kanji-dict]
 src.git = "https://github.com/tokuhirom/jawiki-kana-kanji-dict.git"
@@ -111,7 +111,7 @@ fetch.pypi = "jupynium"
 [valkey-glide]
 src.pypi = "valkey-glide"
 fetch.url = "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-$ver.tar.gz"
-cargo_locks = ["Cargo.lock"]
+cargo_lock = ["Cargo.lock"]
 
 [pyknp]
 src.pypi = "pyknp"

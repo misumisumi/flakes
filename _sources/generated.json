@@ -1,6 +1,6 @@
 {
     "bt-dualboot": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "bt-dualboot",
@@ -15,7 +15,7 @@
         "version": "1.0.1"
     },
     "csharp-ls": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "csharp-ls",
@@ -23,14 +23,14 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-XFzTJ7UWaFQEmFmdY/zY4zjKZaKK9aUq4Zbt3h+19bg=",
+            "sha256": "sha256-11ysfIiYnQG1vpfvmUWHuCR//rOLfYVRoQWedThojqc=",
             "type": "url",
-            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.21.0"
+            "url": "https://www.nuget.org/api/v2/package/csharp-ls/0.22.0"
         },
-        "version": "0.21.0"
+        "version": "0.22.0"
     },
     "cups-brother-hll5100dn-cupswrapper": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "cups-brother-hll5100dn-cupswrapper",
@@ -45,7 +45,7 @@
         "version": "3.5.1-1"
     },
     "cups-brother-hll5100dn-lpr": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "cups-brother-hll5100dn-lpr",
@@ -60,8 +60,8 @@
         "version": "3.5.1-1"
     },
     "discord-mcp": {
-        "cargoLocks": null,
-        "date": "2025-08-11",
+        "cargoLock": null,
+        "date": "2026-02-05",
         "extract": null,
         "name": "discord-mcp",
         "passthru": null,
@@ -73,15 +73,15 @@
             "name": null,
             "owner": "SaseQ",
             "repo": "discord-mcp",
-            "rev": "ac33c4f492fcd99b08aa9dfbd95f8ec4279c1e72",
-            "sha256": "sha256-E69M98CZ4jSmzu05Zjuw9UEvacm6nlKE3JvZFJjiYn4=",
+            "rev": "18fa25a58b97c386f5aae6f9b42b3c034621569c",
+            "sha256": "sha256-An7ICy6sD0zQlkhDnzwHUjlNTKy5s/2kjagWbYnTRGc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "ac33c4f492fcd99b08aa9dfbd95f8ec4279c1e72"
+        "version": "18fa25a58b97c386f5aae6f9b42b3c034621569c"
     },
     "drbd9-dkms": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "drbd9-dkms",
@@ -96,7 +96,7 @@
         "version": "9.1.23"
     },
     "emoticon-data": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2021-04-01",
         "extract": null,
         "name": "emoticon-data",
@@ -117,7 +117,7 @@
         "version": "92b6211ec2a93e14052e0e572d697d4d06c71868"
     },
     "fence-agents": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "fence-agents",
@@ -138,8 +138,8 @@
         "version": "v4.17.0"
     },
     "jawiki-kana-kanji-dict": {
-        "cargoLocks": null,
-        "date": "2026-01-17",
+        "cargoLock": null,
+        "date": "2026-02-08",
         "extract": null,
         "name": "jawiki-kana-kanji-dict",
         "passthru": null,
@@ -148,12 +148,12 @@
             "name": null,
             "sha256": "sha256-S9V8rwJL3UP2qX5dWOMhth2s7nb5YeN0/PSKgEgsksU=",
             "type": "url",
-            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/3dcaae28f1363691654a274587ba651a35bef46e/SKK-JISYO.jawiki"
+            "url": "https://raw.githubusercontent.com/tokuhirom/jawiki-kana-kanji-dict/45d099368c462e4e9806887c73d88738ab0f7e6e/SKK-JISYO.jawiki"
         },
-        "version": "3dcaae28f1363691654a274587ba651a35bef46e"
+        "version": "45d099368c462e4e9806887c73d88738ab0f7e6e"
     },
     "julius-speech": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "julius-speech",
@@ -174,7 +174,7 @@
         "version": "v4.6"
     },
     "jupynium": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "jupynium",
@@ -189,7 +189,7 @@
         "version": "0.2.7"
     },
     "knp": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2023-11-01",
         "extract": null,
         "name": "knp",
@@ -210,7 +210,7 @@
         "version": "bc4cef188669f88cdeb590fe7afb1021ce2ae481"
     },
     "mstflint-cx3-support": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "mstflint-cx3-support",
@@ -225,7 +225,7 @@
         "version": "4.25.0-1"
     },
     "openpace": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "openpace",
@@ -246,7 +246,7 @@
         "version": "1.1.3"
     },
     "paper-search-mcp": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "paper-search-mcp",
@@ -261,7 +261,7 @@
         "version": "0.1.3"
     },
     "proton-ge-rtsp-bin": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "proton-ge-rtsp-bin",
@@ -275,7 +275,7 @@
         "version": "GE-Proton10-26-rtsp20"
     },
     "pyknp": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "pyknp",
@@ -290,7 +290,7 @@
         "version": "0.6.1"
     },
     "ricoh-sp-c260series-ppd": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "ricoh-sp-c260series-ppd",
@@ -305,7 +305,7 @@
         "version": "1.00"
     },
     "skk-emoji-jisyo": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "skk-emoji-jisyo",
@@ -326,7 +326,7 @@
         "version": "v0.0.9"
     },
     "snack": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "snack",
@@ -341,8 +341,8 @@
         "version": "2.2.10"
     },
     "spicetify-dj-info": {
-        "cargoLocks": null,
-        "date": "2026-01-10",
+        "cargoLock": null,
+        "date": "2026-02-05",
         "extract": null,
         "name": "spicetify-dj-info",
         "passthru": {
@@ -356,15 +356,15 @@
             "name": null,
             "owner": "L3-N0X",
             "repo": "spicetify-dj-info",
-            "rev": "9f5ef20697aa5613490c21278889fb007c594610",
-            "sha256": "sha256-FbDgfbrvM+Sz7/CgRdtB6oOMndlnb2SPsNFosuV7+AY=",
+            "rev": "ded7e12106ef02b9f32efefef72d49c5f0c82a6f",
+            "sha256": "sha256-Xqd4XKOAYvAFJ4lw04FbZnwc3c0ByM4cZHjnI5oeP+w=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "9f5ef20697aa5613490c21278889fb007c594610"
+        "version": "ded7e12106ef02b9f32efefef72d49c5f0c82a6f"
     },
     "tkdnd": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "tkdnd",
@@ -379,9 +379,9 @@
         "version": "2.9.5"
     },
     "valkey-glide": {
-        "cargoLocks": {
+        "cargoLock": {
             "Cargo.lock": [
-                "./valkey-glide-2.2.6/Cargo.lock",
+                "sha256-bsVpZp8FizvpuHP5AH7V8ps__HMpUcydAtZtKM3rKA0=/Cargo.lock",
                 {}
             ]
         },
@@ -399,7 +399,7 @@
         "version": "2.2.6"
     },
     "version-pioneer": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "version-pioneer",
@@ -414,7 +414,7 @@
         "version": "0.0.15"
     },
     "virtualsmartcard": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "virtualsmartcard",
@@ -435,7 +435,7 @@
         "version": "virtualsmartcard-0.10"
     },
     "vrchat-vpm-cli": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "vrchat-vpm-cli",
@@ -450,7 +450,7 @@
         "version": "0.1.28"
     },
     "wavesurfer": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "wavesurfer",
@@ -465,9 +465,9 @@
         "version": "1.8.8p5"
     },
     "yaskkserv2": {
-        "cargoLocks": {
+        "cargoLock": {
             "Cargo.lock": [
-                "./yaskkserv2-0.1.7/Cargo.lock",
+                "sha256-bF8OHP6nvGhxXNvvnVCuOVFarK_n7WhGRktRN4X5ZjE=/Cargo.lock",
                 {}
             ]
         },
