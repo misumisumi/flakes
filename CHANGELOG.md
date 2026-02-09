@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.3](https://github.com/misumisumi/flakes/compare/v4.1.2...v4.1.3) (2026-02-09)
+
+
+### Bug Fixes
+
+* fix key of packages.toml by upstream ([75a0279](https://github.com/misumisumi/flakes/commit/75a0279ebcdeeb0514e0e0ab89798b6c5b13683e))
+
 ## [4.1.2](https://github.com/misumisumi/flakes/compare/v4.1.1...v4.1.2) (2026-01-17)
 
 
