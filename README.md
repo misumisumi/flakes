@@ -74,8 +74,8 @@ In your `flake.nix`
   - commitlint-format-json-1.1.0
   - commitlint-with-plugins
   - cups-brother-hll5100dn-3.5.1-1
-  - discord-mcp-18fa25a58b97c386f5aae6f9b42b3c034621569c
-  - jawiki-kana-kanji-dict-2026-01-17
+  - discord-mcp-4cb95645611fedec358de66bc89fe3692d8d0239
+  - jawiki-kana-kanji-dict-2026-02-08
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
   - mcp-hub-4.2.1
@@ -95,7 +95,7 @@ In your `flake.nix`
   - proton-ge-rtsp-bin-GE-Proton10-26-rtsp20
   - python3.13-jupynium-0.2.7
   - python3.13-pyknp-0.6.1
-  - python3.13-valkey-glide-2.2.6
+  - python3.13-valkey-glide-2.2.7
   - python3.13-version-pioneer-0.0.15
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-v0.0.9
@@ -111,7 +111,7 @@ In your `flake.nix`
   - virtualsmartcard-virtualsmartcard-0.10
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-2026-01-17
+  - yaskkserv2-dict-2026-02-08
   - zotero-better-bibtex-7.0.76
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.4.2
