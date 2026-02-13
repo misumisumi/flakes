@@ -40,15 +40,15 @@
   };
   discord-mcp = {
     pname = "discord-mcp";
-    version = "18fa25a58b97c386f5aae6f9b42b3c034621569c";
+    version = "4cb95645611fedec358de66bc89fe3692d8d0239";
     src = fetchFromGitHub {
       owner = "SaseQ";
       repo = "discord-mcp";
-      rev = "18fa25a58b97c386f5aae6f9b42b3c034621569c";
+      rev = "4cb95645611fedec358de66bc89fe3692d8d0239";
       fetchSubmodules = false;
-      sha256 = "sha256-An7ICy6sD0zQlkhDnzwHUjlNTKy5s/2kjagWbYnTRGc=";
+      sha256 = "sha256-WPlCoWqw5JcmCOIxvcuGg9VVPOyK1uLr1lIKRGAvJf8=";
     };
-    date = "2026-02-05";
+    date = "2026-02-11";
   };
   drbd9-dkms = {
     pname = "drbd9-dkms";
@@ -193,16 +193,16 @@
   };
   spicetify-dj-info = {
     pname = "spicetify-dj-info";
-    version = "ded7e12106ef02b9f32efefef72d49c5f0c82a6f";
+    version = "1099b62b1200a1ca349f49d0ec31b4089031d4f5";
     src = fetchFromGitHub {
       owner = "L3-N0X";
       repo = "spicetify-dj-info";
-      rev = "ded7e12106ef02b9f32efefef72d49c5f0c82a6f";
+      rev = "1099b62b1200a1ca349f49d0ec31b4089031d4f5";
       fetchSubmodules = false;
-      sha256 = "sha256-Xqd4XKOAYvAFJ4lw04FbZnwc3c0ByM4cZHjnI5oeP+w=";
+      sha256 = "sha256-6El0glRS6X385s48+mwLY95QuXECm9lU2ZorFR64eic=";
     };
     name = "dist/djinfo.mjs";
-    date = "2026-02-05";
+    date = "2026-02-10";
   };
   tkdnd = {
     pname = "tkdnd";
@@ -214,13 +214,13 @@
   };
   valkey-glide = {
     pname = "valkey-glide";
-    version = "2.2.6";
+    version = "2.2.7";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.6.tar.gz";
-      sha256 = "sha256-bsVpZp8FizvpuHP5AH7V8ps//HMpUcydAtZtKM3rKA0=";
+      url = "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.7.tar.gz";
+      sha256 = "sha256-LNBbjIcceHjLiWeaw08pTxAEgbZPedeXzeMlodBRzck=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-bsVpZp8FizvpuHP5AH7V8ps__HMpUcydAtZtKM3rKA0=/Cargo.lock";
+      lockFile = ./. + "/sha256-LNBbjIcceHjLiWeaw08pTxAEgbZPedeXzeMlodBRzck=/Cargo.lock";
       outputHashes = {
         
       };
