@@ -50,9 +50,9 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-20.4.1
-  - @commitlint/config-conventional-20.4.1
-  - @commitlint/config-patternplate-20.4.1
+  - @commitlint/config-angular-20.4.2
+  - @commitlint/config-conventional-20.4.2
+  - @commitlint/config-patternplate-20.4.2
   - @commitlint/config-workspace-scopes-20.4.0
   - @commitlint/load-20.4.0
   - @commitlint/read-20.4.0
@@ -74,7 +74,7 @@ In your `flake.nix`
   - commitlint-format-json-1.1.0
   - commitlint-with-plugins
   - cups-brother-hll5100dn-3.5.1-1
-  - discord-mcp-4cb95645611fedec358de66bc89fe3692d8d0239
+  - discord-mcp-f820315b0ead18068ce437dac0bccfd7f69bd35b
   - jawiki-kana-kanji-dict-2026-02-08
   - julius-speech-v4.6
   - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
@@ -112,7 +112,7 @@ In your `flake.nix`
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2026-02-08
-  - zotero-better-bibtex-7.0.76
+  - zotero-better-bibtex-8.0.18
   - zotero-night-0.4.23
   - zotero-pdf-translate-2.4.2
   - zotero-reading-list-1.5.15

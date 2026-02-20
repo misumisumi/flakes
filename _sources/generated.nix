@@ -40,15 +40,15 @@
   };
   discord-mcp = {
     pname = "discord-mcp";
-    version = "4cb95645611fedec358de66bc89fe3692d8d0239";
+    version = "f820315b0ead18068ce437dac0bccfd7f69bd35b";
     src = fetchFromGitHub {
       owner = "SaseQ";
       repo = "discord-mcp";
-      rev = "4cb95645611fedec358de66bc89fe3692d8d0239";
+      rev = "f820315b0ead18068ce437dac0bccfd7f69bd35b";
       fetchSubmodules = false;
-      sha256 = "sha256-WPlCoWqw5JcmCOIxvcuGg9VVPOyK1uLr1lIKRGAvJf8=";
+      sha256 = "sha256-o6U3iRZeG8Bmp1FF+S7UI1kKcn5YIsEYS+7oFD2DQXc=";
     };
-    date = "2026-02-11";
+    date = "2026-02-14";
   };
   drbd9-dkms = {
     pname = "drbd9-dkms";
