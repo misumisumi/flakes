@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.1.5](https://github.com/misumisumi/flakes/compare/v4.1.4...v4.1.5) (2026-02-21)
+
+
+### Bug Fixes
+
+* **packages.toml:** fix passthru for spicitify-dj-info ([bb3ef2a](https://github.com/misumisumi/flakes/commit/bb3ef2acd69c872ea4b8499f56b4887e4134637a))
+* **packages.toml:** fix passthru for spicitify-dj-info ([9ec0ab2](https://github.com/misumisumi/flakes/commit/9ec0ab2faf6e28e27060da136e8465c921539b7e))
+
 ## [4.1.4](https://github.com/misumisumi/flakes/compare/v4.1.3...v4.1.4) (2026-02-21)
 
 
