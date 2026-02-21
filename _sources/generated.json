@@ -64,7 +64,9 @@
         "date": "2026-02-14",
         "extract": null,
         "name": "discord-mcp",
-        "passthru": null,
+        "passthru": {
+            "mvnHash": "sha256-fGOFUz/3E9J6uBvpFqNCiKnX4PWZ2pxyvoTMztICwpU="
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -345,9 +347,7 @@
         "date": "2026-02-10",
         "extract": null,
         "name": "spicetify-dj-info",
-        "passthru": {
-            "name": "dist/djinfo.mjs"
-        },
+        "passthru": null,
         "pinned": false,
         "src": {
             "deepClone": false,

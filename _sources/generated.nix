@@ -48,6 +48,7 @@
       fetchSubmodules = false;
       sha256 = "sha256-o6U3iRZeG8Bmp1FF+S7UI1kKcn5YIsEYS+7oFD2DQXc=";
     };
+    mvnHash = "sha256-fGOFUz/3E9J6uBvpFqNCiKnX4PWZ2pxyvoTMztICwpU=";
     date = "2026-02-14";
   };
   drbd9-dkms = {
@@ -201,7 +202,6 @@
       fetchSubmodules = false;
       sha256 = "sha256-6El0glRS6X385s48+mwLY95QuXECm9lU2ZorFR64eic=";
     };
-    name = "dist/djinfo.mjs";
     date = "2026-02-10";
   };
   tkdnd = {
@@ -222,7 +222,7 @@
     cargoLock."Cargo.lock" = {
       lockFile = ./. + "/sha256-LNBbjIcceHjLiWeaw08pTxAEgbZPedeXzeMlodBRzck=/Cargo.lock";
       outputHashes = {
-        
+
       };
     };
   };
@@ -274,7 +274,7 @@
     cargoLock."Cargo.lock" = {
       lockFile = ./. + "/sha256-bF8OHP6nvGhxXNvvnVCuOVFarK_n7WhGRktRN4X5ZjE=/Cargo.lock";
       outputHashes = {
-        
+
       };
     };
   };

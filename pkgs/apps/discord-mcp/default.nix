@@ -8,9 +8,12 @@
 }:
 
 maven.buildMavenPackage {
-  inherit (pkgSources."${name}") pname version src;
-
-  mvnHash = "sha256-T0K/TEJh99WonBt6jWo7ud6RAXPNBQ6KIugrcQvlh2s";
+  inherit (pkgSources."${name}")
+    pname
+    version
+    src
+    mvnHash
+    ;
 
   nativeBuildInputs = [ makeWrapper ];
 

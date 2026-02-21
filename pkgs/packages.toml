@@ -19,6 +19,8 @@ fetch.url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper
 [discord-mcp]
 src.git = "https://github.com/SaseQ/discord-mcp"
 fetch.github = "SaseQ/discord-mcp"
+[discord-mcp.passthru]
+mvnHash = "sha256-fGOFUz/3E9J6uBvpFqNCiKnX4PWZ2pxyvoTMztICwpU="
 
 [drbd9-dkms]
 src.github_tag = "LINBIT/drbd"
@@ -68,7 +70,6 @@ fetch.url = "http://www.speech.kth.se/snack/dist/snack$ver.tar.gz"
 [spicetify-dj-info]
 src.git = "https://github.com/L3-N0X/spicetify-dj-info"
 fetch.github = "L3-N0X/spicetify-dj-info"
-[spicetify-dj-info.passthru]
 
 name = "dist/djinfo.mjs"
 [tkdnd]
