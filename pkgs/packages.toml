@@ -70,8 +70,9 @@ fetch.url = "http://www.speech.kth.se/snack/dist/snack$ver.tar.gz"
 [spicetify-dj-info]
 src.git = "https://github.com/L3-N0X/spicetify-dj-info"
 fetch.github = "L3-N0X/spicetify-dj-info"
-
+[spicetify-dj-info.passthru]
 name = "dist/djinfo.mjs"
+
 [tkdnd]
 src.github_tag = "petasis/tkdnd"
 src.prefix = "tkdnd-release-test-v"
