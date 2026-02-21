@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.4](https://github.com/misumisumi/flakes/compare/v4.1.3...v4.1.4) (2026-02-21)
+
+
+### Bug Fixes
+
+* **discord-mcp:** add auto update mvnHash script ([3a7f4d6](https://github.com/misumisumi/flakes/commit/3a7f4d6067446d026417e12f30117c849164ff0f))
+
 ## [4.1.3](https://github.com/misumisumi/flakes/compare/v4.1.2...v4.1.3) (2026-02-09)
 
 
