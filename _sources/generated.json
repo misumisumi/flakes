@@ -347,7 +347,9 @@
         "date": "2026-02-10",
         "extract": null,
         "name": "spicetify-dj-info",
-        "passthru": null,
+        "passthru": {
+            "name": "dist/djinfo.mjs"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,

@@ -202,6 +202,7 @@
       fetchSubmodules = false;
       sha256 = "sha256-6El0glRS6X385s48+mwLY95QuXECm9lU2ZorFR64eic=";
     };
+    name = "dist/djinfo.mjs";
     date = "2026-02-10";
   };
   tkdnd = {
