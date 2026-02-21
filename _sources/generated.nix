@@ -40,15 +40,16 @@
   };
   discord-mcp = {
     pname = "discord-mcp";
-    version = "4cb95645611fedec358de66bc89fe3692d8d0239";
+    version = "f820315b0ead18068ce437dac0bccfd7f69bd35b";
     src = fetchFromGitHub {
       owner = "SaseQ";
       repo = "discord-mcp";
-      rev = "4cb95645611fedec358de66bc89fe3692d8d0239";
+      rev = "f820315b0ead18068ce437dac0bccfd7f69bd35b";
       fetchSubmodules = false;
-      sha256 = "sha256-WPlCoWqw5JcmCOIxvcuGg9VVPOyK1uLr1lIKRGAvJf8=";
+      sha256 = "sha256-o6U3iRZeG8Bmp1FF+S7UI1kKcn5YIsEYS+7oFD2DQXc=";
     };
-    date = "2026-02-11";
+    mvnHash = "sha256-fGOFUz/3E9J6uBvpFqNCiKnX4PWZ2pxyvoTMztICwpU=";
+    date = "2026-02-14";
   };
   drbd9-dkms = {
     pname = "drbd9-dkms";
@@ -201,7 +202,6 @@
       fetchSubmodules = false;
       sha256 = "sha256-6El0glRS6X385s48+mwLY95QuXECm9lU2ZorFR64eic=";
     };
-    name = "dist/djinfo.mjs";
     date = "2026-02-10";
   };
   tkdnd = {
@@ -222,7 +222,7 @@
     cargoLock."Cargo.lock" = {
       lockFile = ./. + "/sha256-LNBbjIcceHjLiWeaw08pTxAEgbZPedeXzeMlodBRzck=/Cargo.lock";
       outputHashes = {
-        
+
       };
     };
   };
@@ -274,7 +274,7 @@
     cargoLock."Cargo.lock" = {
       lockFile = ./. + "/sha256-bF8OHP6nvGhxXNvvnVCuOVFarK_n7WhGRktRN4X5ZjE=/Cargo.lock";
       outputHashes = {
-        
+
       };
     };
   };

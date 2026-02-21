@@ -49,9 +49,13 @@ jobs:
         run: |
           pkgs/node-packages/generate.sh
 
-      - name: Update yarn hash
+      - name: Update yarnHash
         run: |
           scripts/update-yarn-lock.sh
+
+      - name: Update mvnHash
+        run: |
+          scripts/update-mvn-hash.sh
 
       - name: Update README
         run: |
