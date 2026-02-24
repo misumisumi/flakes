@@ -3,6 +3,7 @@
   pkgs,
   lib,
   nodejs,
+  nodejs-slim,
   stdenv,
 }:
 
