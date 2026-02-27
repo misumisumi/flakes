@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.1.6](https://github.com/misumisumi/flakes/compare/v4.1.5...v4.1.6) (2026-02-27)
+
+
+### Bug Fixes
+
+* **node-packages:** replace to nodejs-slim from nodejs due to NixOS/nixpkgs[#481461](https://github.com/misumisumi/flakes/issues/481461) ([dd76b76](https://github.com/misumisumi/flakes/commit/dd76b76d8a6779c5534f643474adc9df5994a708))
+* **node-packages:** replace to nodejs-slim from nodejs due to NixOS/nixpkgs[#481461](https://github.com/misumisumi/flakes/issues/481461) ([4eced12](https://github.com/misumisumi/flakes/commit/4eced12422fe424851ff88f7c3d4eccede9a9932))
+
 ## [4.1.5](https://github.com/misumisumi/flakes/compare/v4.1.4...v4.1.5) (2026-02-21)
 
 
