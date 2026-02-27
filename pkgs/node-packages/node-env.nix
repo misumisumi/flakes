@@ -4,6 +4,7 @@
   lib,
   stdenv,
   nodejs,
+  nodejs-slim,
   pkgs,
   libtool,
   runCommand,
@@ -231,7 +232,7 @@ let
   # Extract the Node.js source code which is used to compile packages with
   # native bindings
   nodeSources = runCommand "node-sources" { } ''
-    tar --no-same-owner --no-same-permissions -xf ${nodejs.src}
+    tar --no-same-owner --no-same-permissions -xf ${nodejs-slim.src}
     mv node-* $out
   '';
 
@@ -625,7 +626,7 @@ let
 
         meta = {
           # default to Node.js' platforms
-          platforms = nodejs.meta.platforms;
+          platforms = nodejs-slim.meta.platforms;
         }
         // meta;
       }

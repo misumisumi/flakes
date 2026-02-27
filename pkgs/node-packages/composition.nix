@@ -6,6 +6,7 @@
   },
   system ? builtins.currentSystem,
   nodejs ? pkgs."nodejs_22",
+  nodejs-slim ? pkgs."nodejs-slim_22",
 }:
 
 let
@@ -17,7 +18,7 @@ let
       writeTextFile
       writeShellScript
       ;
-    inherit pkgs nodejs;
+    inherit pkgs nodejs nodejs-slim;
     libtool = if pkgs.stdenv.hostPlatform.isDarwin then pkgs.cctools or pkgs.darwin.cctools else null;
   };
 in
