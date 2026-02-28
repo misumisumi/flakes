@@ -11,4 +11,4 @@ nix run nixpkgs#node2nix -- \
   -o node-packages.nix \
   -c /dev/null \
   --no-copy-node-env \
-  --pkg-name nodejs-slim_22
+  --pkg-name nodejs_22
