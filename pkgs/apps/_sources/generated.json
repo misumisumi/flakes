@@ -1,0 +1,514 @@
+{
+    "blender-bin": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "blender-bin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-gBlYDuG3Ji5QX0GWoAI3zPdDyI0gWzjTQgFRBnbmCwk=",
+            "type": "url",
+            "url": "https://ftp.nluug.nl/pub/graphics/blender/release/Blender5.0/blender-5.0.1-linux-x64.tar.xz"
+        },
+        "version": "5.0.1"
+    },
+    "blender-bin_4_5": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "blender-bin_4_5",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-wVxT9Lohn8GHHyURbkqk+OTWLaskFEFw5fCJDokiOHU=",
+            "type": "url",
+            "url": "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blender-4.5.7-linux-x64.tar.xz"
+        },
+        "version": "4.5.7"
+    },
+    "blender-bin_lts": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "blender-bin_lts",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-wVxT9Lohn8GHHyURbkqk+OTWLaskFEFw5fCJDokiOHU=",
+            "type": "url",
+            "url": "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blender-4.5.7-linux-x64.tar.xz"
+        },
+        "version": "4.5.7"
+    },
+    "bt-dualboot": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "bt-dualboot",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-pjzGvLkotQllzyrnxqDIjGlpBOvUPkWpv0eooCUrgv8=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/b/bt-dualboot/bt-dualboot-1.0.1.tar.gz"
+        },
+        "version": "1.0.1"
+    },
+    "commitlint-format-json": {
+        "cargoLock": null,
+        "date": null,
+        "extract": {
+            "packages/json/package.json": "sha256-fazbw05HNdsFrNrawP6ZS3vYUBO1R4NGRF3nKfgzFno=/packages/json/package.json"
+        },
+        "name": "commitlint-format-json",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "byCedric",
+            "repo": "Commitlint-Formats",
+            "rev": "v1.1.4",
+            "sha256": "sha256-fazbw05HNdsFrNrawP6ZS3vYUBO1R4NGRF3nKfgzFno=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.1.4"
+    },
+    "cups-brother-hll5100dn-cupswrapper": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "cups-brother-hll5100dn-cupswrapper",
+        "passthru": {
+            "drvDir": "cups-brother-hll5100dn"
+        },
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-i309lhjE6FTNd8f0d4vv7/oaNUt165scU9Gzlff8gcE=",
+            "type": "url",
+            "url": "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-3.5.1-1.i386.deb"
+        },
+        "version": "3.5.1-1"
+    },
+    "cups-brother-hll5100dn-lpr": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "cups-brother-hll5100dn-lpr",
+        "passthru": {
+            "drvDir": "cups-brother-hll5100dn"
+        },
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-JnPiBVJ+ZJKivjq+Kizcf5U8vilOFdLVWBuRUiWJ5zE=",
+            "type": "url",
+            "url": "https://download.brother.com/welcome/dlf102553/hll5100dnlpr-3.5.1-1.i386.deb"
+        },
+        "version": "3.5.1-1"
+    },
+    "discord-mcp": {
+        "cargoLock": null,
+        "date": "2026-02-14",
+        "extract": null,
+        "name": "discord-mcp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "SaseQ",
+            "repo": "discord-mcp",
+            "rev": "f820315b0ead18068ce437dac0bccfd7f69bd35b",
+            "sha256": "sha256-o6U3iRZeG8Bmp1FF+S7UI1kKcn5YIsEYS+7oFD2DQXc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "f820315b0ead18068ce437dac0bccfd7f69bd35b"
+    },
+    "drbd9-dkms": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "drbd9-dkms",
+        "passthru": {
+            "skipCheck": "yes"
+        },
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Jyc8ltaNY5m9wPmiFYHE6+Z/s4cgblX4cn0FWVuvHK4=",
+            "type": "url",
+            "url": "https://pkg.linbit.com//downloads/drbd/9/drbd-9.1.23.tar.gz"
+        },
+        "version": "9.1.23"
+    },
+    "fence-agents": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "fence-agents",
+        "passthru": {
+            "skipCheck": "yes"
+        },
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ClusterLabs",
+            "repo": "fence-agents",
+            "rev": "v4.17.0",
+            "sha256": "sha256-vVpDG+97CYjdJI+ZyUP6qyAu3cRtwsUupmkfO/pgsuQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v4.17.0"
+    },
+    "julius-speech": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "julius-speech",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "julius-speech",
+            "repo": "julius",
+            "rev": "v4.6",
+            "sha256": "sha256-jw3SF18naDnkt7qW9iWcM+h4lcQY5bGCewcUeLbwwP0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v4.6"
+    },
+    "knp": {
+        "cargoLock": null,
+        "date": "2023-11-01",
+        "extract": null,
+        "name": "knp",
+        "passthru": {
+            "meta.skipCheck": "yes"
+        },
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ku-nlp",
+            "repo": "knp",
+            "rev": "bc4cef188669f88cdeb590fe7afb1021ce2ae481",
+            "sha256": "sha256-QdBeT/tJVleX0HgV30JqiOWXXzemWfS6VEhvN76fObE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "bc4cef188669f88cdeb590fe7afb1021ce2ae481"
+    },
+    "mcp-hub": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "mcp-hub",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ravitemer",
+            "repo": "mcp-hub",
+            "rev": "v4.2.1",
+            "sha256": "sha256-KakvXZf0vjdqzyT+LsAKHEr4GLICGXPmxl1hZ3tI7Yg=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v4.2.1"
+    },
+    "mstflint-cx3-support": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "mstflint-cx3-support",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-nYGiWfr8a3q3+bGUb1ovLrAS8/LnEJf+4inIEllW95s=",
+            "type": "url",
+            "url": "https://github.com/Mellanox/mstflint/releases/download/v4.25.0-1/mstflint-4.25.0-1.tar.gz"
+        },
+        "version": "4.25.0-1"
+    },
+    "openpace": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "openpace",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "frankmorgner",
+            "repo": "openpace",
+            "rev": "1.1.4",
+            "sha256": "sha256-S3YlVeovjcew72nrydBhd1A1scpk5tSw3CPIKm4aBaU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "1.1.4"
+    },
+    "paper-search-mcp": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "paper-search-mcp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-/dJ2xk9zInBJezYybbiq0NIJuVp1DNiLqshuzSsg87M=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/p/paper_search_mcp/paper_search_mcp-0.1.3.tar.gz"
+        },
+        "version": "0.1.3"
+    },
+    "proton-ge-rtsp-bin": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "proton-ge-rtsp-bin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "sha256": "sha256-eAJjw575cJlj7qLsPC1LgRsVMW4O754Q6SO7IV74EyE=",
+            "type": "tarball",
+            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton10-26-rtsp20/GE-Proton10-26-rtsp20.tar.gz"
+        },
+        "version": "GE-Proton10-26-rtsp20"
+    },
+    "ricoh-sp-c260series-ppd": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "ricoh-sp-c260series-ppd",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-aRqpBpYpQnOdAoGe21cBYrkhtRaiBZJTYgVsdN2irEU=",
+            "type": "url",
+            "url": "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
+        },
+        "version": "1.00"
+    },
+    "skk-emoji-jisyo": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "skk-emoji-jisyo",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "uasi",
+            "repo": "skk-emoji-jisyo",
+            "rev": "v0.0.9",
+            "sha256": "sha256-H73wfvFhff55vFvNOunkma3C28BnXGuLzMrSvTLTgXU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.0.9"
+    },
+    "skk-emoticons-jisyo": {
+        "cargoLock": null,
+        "date": "2021-04-01",
+        "extract": null,
+        "name": "skk-emoticons-jisyo",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "w33ble",
+            "repo": "emoticon-data",
+            "rev": "92b6211ec2a93e14052e0e572d697d4d06c71868",
+            "sha256": "sha256-AlzFMsXmkSz4zphpYPTSXJsQ303lI9I02pjVxA1YcIs=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "92b6211ec2a93e14052e0e572d697d4d06c71868"
+    },
+    "skk-jawiki-jisyo": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "skk-jawiki-jisyo",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Qg+bnvVWstVKUlmTR4idZ5hUx2rqojbq3jw8LFlWLC4=",
+            "type": "url",
+            "url": "https://github.com/tokuhirom/jawiki-kana-kanji-dict/releases/download/v2026.03.05.001107/SKK-JISYO.jawiki"
+        },
+        "version": "2026.03.05.001107"
+    },
+    "snack": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "snack",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-S/52RUerkrpY9Dt3Nm27fHs1EtZaJ82/nlhanLZM6B4=",
+            "type": "url",
+            "url": "http://www.speech.kth.se/snack/dist/snack2.2.10.tar.gz"
+        },
+        "version": "2.2.10"
+    },
+    "spicetify-dj-info": {
+        "cargoLock": null,
+        "date": "2026-02-10",
+        "extract": null,
+        "name": "spicetify-dj-info",
+        "passthru": {
+            "name": "dist/djinfo.mjs",
+            "notPackage": "yes",
+            "skipCheck": "yes"
+        },
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "L3-N0X",
+            "repo": "spicetify-dj-info",
+            "rev": "1099b62b1200a1ca349f49d0ec31b4089031d4f5",
+            "sha256": "sha256-6El0glRS6X385s48+mwLY95QuXECm9lU2ZorFR64eic=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "1099b62b1200a1ca349f49d0ec31b4089031d4f5"
+    },
+    "tkdnd": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "tkdnd",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-erLR18D1el3H9tVUKJW0R2KjGgFiHJ1/gPO71nx7zDk=",
+            "type": "url",
+            "url": "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v2.9.5.tar.gz"
+        },
+        "version": "2.9.5"
+    },
+    "update-github-actions-permissions": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "update-github-actions-permissions",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "pkgdeps",
+            "repo": "update-github-actions-permissions",
+            "rev": "v2.9.1",
+            "sha256": "sha256-qkot1TKnc7Hn825xNOtFS0Lu/zdCgw6GowLE05gap48=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.9.1"
+    },
+    "vrchat-vpm-cli": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "vrchat-vpm-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Pz8KBpjmpzx+6gD4nqGVBEp5z4UX6hFqZHGy8hJCD4k=",
+            "type": "url",
+            "url": "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/0.1.28"
+        },
+        "version": "0.1.28"
+    },
+    "wavesurfer": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "wavesurfer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-rlYGEUfdEXD3SF3JwZ23pF3RVwUKw5RmYsf8ec/7YRo=",
+            "type": "url",
+            "url": "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
+        },
+        "version": "1.8.8p5"
+    },
+    "yaskkserv2": {
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-bF8OHP6nvGhxXNvvnVCuOVFarK_n7WhGRktRN4X5ZjE=/Cargo.lock",
+                {}
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "yaskkserv2",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "wachikun",
+            "repo": "yaskkserv2",
+            "rev": "0.1.7",
+            "sha256": "sha256-bF8OHP6nvGhxXNvvnVCuOVFarK/n7WhGRktRN4X5ZjE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.1.7"
+    }
+}

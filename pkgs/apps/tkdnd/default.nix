@@ -1,16 +1,14 @@
-# { stdenv, lib, mySource, tc, tcl, alsa-lib, libX11 }:
 {
-  stdenv,
+  pkgSource,
   lib,
-  name,
-  pkgSources,
+  stdenv,
   cmake,
   libXcursor,
   tcl,
   tk,
 }:
 stdenv.mkDerivation rec {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
 
   nativeBuildInputs = [ cmake ];
   buildInputs = [
@@ -33,7 +31,6 @@ stdenv.mkDerivation rec {
     cp -r ../runtime/tkdnd* $out/lib
   '';
   meta = with lib; {
-    inherit version;
     description = "TkDND is an extension that adds native drag & drop capabilities to the Tk toolkit.";
     homepage = "https://github.com/petasis/tkdnd";
     license = licenses.free;

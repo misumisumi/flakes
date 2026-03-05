@@ -1,8 +1,7 @@
 {
+  pkgSource,
   stdenv,
   lib,
-  name,
-  pkgSources,
   autoreconfHook,
   gengetopt,
   help2man,
@@ -10,7 +9,7 @@
   pkg-config,
 }:
 stdenv.mkDerivation {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
   outputs = [
     "bin"
     "dev"
@@ -34,7 +33,6 @@ stdenv.mkDerivation {
   '';
 
   meta = with lib; {
-    inherit version;
     description = "Cryptographic library for EAC version 2";
     homepage = "https://frankmorgner.github.io/openpace/index.html";
     license = licenses.gpl3;

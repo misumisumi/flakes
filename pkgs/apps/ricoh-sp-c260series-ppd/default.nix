@@ -1,7 +1,6 @@
 {
+  pkgSource,
   lib,
-  name,
-  pkgSources,
   stdenv,
   makeWrapper,
   autoPatchelfHook,
@@ -25,7 +24,7 @@ let
   ];
 in
 stdenv.mkDerivation {
-  inherit (pkgSources."${name}") src version pname;
+  inherit (pkgSource) src version pname;
   buildInputs = [ cups ];
   nativeBuildInputs = [
     dpkg
@@ -44,7 +43,6 @@ stdenv.mkDerivation {
     runHook preInstall
     mv $out/usr/* $out
     rm -rf $out/usr
-    echo "PATH:${lib.makeBinPath runtimeDeps}"
     find "$out/lib" -executable -and -type f | while read file; do
       wrapProgram "$file" --prefix PATH : "${lib.makeBinPath runtimeDeps}"
     done

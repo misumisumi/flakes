@@ -1,18 +1,16 @@
-# { stdenv, lib, mySource, tc, tcl, alsa-lib, libX11 }:
 {
-  stdenv,
+  pkgSource,
   lib,
-  name,
-  pkgSources,
+  stdenv,
   writeScript,
-  curl,
   alsa-lib,
+  curl,
   libX11,
   tcl,
   tk,
 }:
 stdenv.mkDerivation {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
 
   buildInputs = [
     alsa-lib
@@ -67,7 +65,6 @@ stdenv.mkDerivation {
   '';
 
   meta = with lib; {
-    inherit version;
     description = "a sound toolkit for scripting languages (Tcl, Python, Ruby, ...)";
     homepage = "http://www.speech.kth.se/snack/";
     license = licenses.gpl2;

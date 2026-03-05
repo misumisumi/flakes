@@ -8,10 +8,10 @@
 {
   zotero-better-bibtex = {
     pname = "zotero-better-bibtex";
-    version = "8.0.18";
+    version = "9.0.2";
     src = fetchurl {
-      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v8.0.18/zotero-better-bibtex-8.0.18.xpi";
-      sha256 = "sha256-O9OYU6LeL424JxZ/BCQgxIgHp8/KGwV7T9kQe6Yiri0=";
+      url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v9.0.2/zotero-better-bibtex-9.0.2.xpi";
+      sha256 = "sha256-YwMwivET39vNUuD42h8qQNRzqTtYqcfCDEcNUbJf0S8=";
     };
     addonId = "better-bibtex@iris-advies.com";
     license = "mit";
@@ -32,10 +32,10 @@
   };
   zotero-pdf-translate = {
     pname = "zotero-pdf-translate";
-    version = "2.4.2";
+    version = "2.4.3";
     src = fetchurl {
-      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.4.2/translate-for-zotero.xpi";
-      sha256 = "sha256-Z320cLzmpWUiNsAveIKMixt3Au9xgAeQVHS+jdy/tHs=";
+      url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v2.4.3/translate-for-zotero.xpi";
+      sha256 = "sha256-/EHaAKXQBg1F5l8URsiVg+GGxQBmpLLpCML+Y0wmM3I=";
     };
     addonId = "zoteropdftranslate@euclpts.com";
     license = "agpl3Only";
@@ -44,10 +44,10 @@
   };
   zotero-reading-list = {
     pname = "zotero-reading-list";
-    version = "1.5.15";
+    version = "1.5.17";
     src = fetchurl {
-      url = "https://github.com/Dominic-DallOsto/zotero-reading-list/releases/download/v1.5.15/zotero-reading-list.xpi";
-      sha256 = "sha256-4twMGL4wM0xpT6GJNOv05xXd3hrY9A41Zu0oJuV1KEg=";
+      url = "https://github.com/Dominic-DallOsto/zotero-reading-list/releases/download/v1.5.17/zotero-reading-list.xpi";
+      sha256 = "sha256-tNe2qbMtpk65jvLenJc4XAfsNQhahRkUyw2ajQdVvfA=";
     };
     addonId = "reading-list@hotmail.com";
     license = "gpl3";
@@ -56,10 +56,10 @@
   };
   zotero-scipdf = {
     pname = "zotero-scipdf";
-    version = "8.0.3";
+    version = "8.0.4";
     src = fetchurl {
-      url = "https://github.com/syt2/zotero-scipdf/releases/download/V8.0.3/sci-pdf.xpi";
-      sha256 = "sha256-mbCsPQpatep0RUiJyCEnE/qvb9Gjbb6ZW54OaalrC60=";
+      url = "https://github.com/syt2/zotero-scipdf/releases/download/V8.0.4/sci-pdf.xpi";
+      sha256 = "sha256-LWZHzH8mMKeJt+nExKgZIqva9sR45454KwOwxT6YPlY=";
     };
     addonId = "scipdf@ytshen.com";
     license = "agpl3Plus";

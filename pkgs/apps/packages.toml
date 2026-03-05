@@ -1,0 +1,147 @@
+[blender-bin_lts]
+src.github_tag = "blender/blender"
+src.include_regex = "v4.5.*"
+src.prefix = "v"
+fetch.url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blender-$ver-linux-x64.tar.xz"
+
+
+[blender-bin]
+src.github_tag = "blender/blender"
+src.include_regex = "v5.0.*"
+src.prefix = "v"
+fetch.url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender5.0/blender-$ver-linux-x64.tar.xz"
+
+
+[blender-bin_4_5]
+src.github_tag = "blender/blender"
+src.include_regex = "v4.5.*"
+src.prefix = "v"
+fetch.url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blender-$ver-linux-x64.tar.xz"
+
+[bt-dualboot]
+src.pypi = "bt-dualboot"
+fetch.pypi = "bt-dualboot"
+
+[commitlint-format-json]
+src.github_tag = "byCedric/Commitlint-Formats"
+fetch.github = "byCedric/Commitlint-Formats"
+extract = ["packages/json/package.json"]
+
+[cups-brother-hll5100dn-lpr]
+src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
+src.regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
+fetch.url = "https://download.brother.com/welcome/dlf102553/hll5100dnlpr-$ver.i386.deb"
+[cups-brother-hll5100dn-lpr.passthru]
+drvDir = "cups-brother-hll5100dn"
+
+[cups-brother-hll5100dn-cupswrapper]
+src.webpage = "https://support.brother.co.jp/j/b/downloadlist.aspx?c=jp&lang=ja&prod=hll5100dn&os=128"
+src.regex = "[0-9]\\.[0-9]\\.[0-9]-[0-9]"
+fetch.url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-$ver.i386.deb"
+[cups-brother-hll5100dn-cupswrapper.passthru]
+drvDir = "cups-brother-hll5100dn"
+
+[discord-mcp]
+src.git = "https://github.com/SaseQ/discord-mcp"
+fetch.github = "SaseQ/discord-mcp"
+
+[drbd9-dkms]
+src.github_tag = "LINBIT/drbd"
+src.include_regex = "drbd-9.1.*"
+src.prefix = "drbd-"
+fetch.url = "https://pkg.linbit.com//downloads/drbd/9/drbd-$ver.tar.gz"
+[drbd9-dkms.passthru]
+skipCheck = "yes"
+
+[fence-agents]
+src.github_tag = "ClusterLabs/fence-agents"
+fetch.github = "ClusterLabs/fence-agents"
+[fence-agents.passthru]
+skipCheck = "yes"
+
+[julius-speech]
+src.github_tag = "julius-speech/julius"
+fetch.github = "julius-speech/julius"
+
+[knp]
+src.git = "https://github.com/ku-nlp/knp/"
+fetch.github = "ku-nlp/knp"
+[knp.passthru.meta]
+skipCheck = "yes"
+
+[mcp-hub]
+src.github_tag = "ravitemer/mcp-hub"
+fetch.github = "ravitemer/mcp-hub"
+
+[mstflint-cx3-support]
+src.manual = "4.25.0-1"
+fetch.url = "https://github.com/Mellanox/mstflint/releases/download/v$ver/mstflint-$ver.tar.gz"
+
+[openpace]
+src.github_tag = "frankmorgner/openpace"
+fetch.github = "frankmorgner/openpace"
+
+[paper-search-mcp]
+src.pypi = "paper-search-mcp"
+fetch.pypi = "paper_search_mcp"
+
+[proton-ge-rtsp-bin]
+src.github_tag = "SpookySkeletons/proton-ge-rtsp"
+src.include_regex = "GE-Proton.*"
+fetch.tarball = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/$ver/$ver.tar.gz"
+
+[ricoh-sp-c260series-ppd]
+src.manual = "1.00"
+fetch.url = "http://support.ricoh.com/w/bb/pub_j/dr_ut_d/4101035/4101035832/V100/5205252/sp-c260series-printer-1.00-amd64.deb"
+
+[skk-emoji-jisyo]
+src.github_tag = "uasi/skk-emoji-jisyo"
+fetch.github = "uasi/skk-emoji-jisyo"
+
+[skk-emoticons-jisyo]
+src.git = "https://github.com/w33ble/emoticon-data"
+fetch.github = "w33ble/emoticon-data"
+
+[skk-jawiki-jisyo]
+src.github = "tokuhirom/jawiki-kana-kanji-dict"
+src.prefix = "v"
+fetch.url = "https://github.com/tokuhirom/jawiki-kana-kanji-dict/releases/download/v$ver/SKK-JISYO.jawiki"
+
+[snack]
+src.regex = "Snack v[0-9]+\\.[0-9]+\\.[0-9]+"
+src.webpage = "https://www.speech.kth.se/snack/"
+src.prefix = "Snack v"
+fetch.url = "http://www.speech.kth.se/snack/dist/snack$ver.tar.gz"
+
+[spicetify-dj-info]
+src.git = "https://github.com/L3-N0X/spicetify-dj-info"
+fetch.github = "L3-N0X/spicetify-dj-info"
+[spicetify-dj-info.passthru]
+name = "dist/djinfo.mjs"
+skipCheck = "yes"
+notPackage = "yes"
+
+[tkdnd]
+src.github_tag = "petasis/tkdnd"
+src.prefix = "tkdnd-release-test-v"
+fetch.url = "https://github.com/petasis/tkdnd/archive/tkdnd-release-test-v$ver.tar.gz"
+
+[update-github-actions-permissions]
+src.github_tag = "pkgdeps/update-github-actions-permissions"
+fetch.github = "pkgdeps/update-github-actions-permissions"
+
+[vrchat-vpm-cli]
+src.regex = "0\\.[0-9]+\\.[a-z0-9-.]+"
+src.exclude_regex = ".*-alpha.*|.*-beta.*"
+src.webpage = "https://www.nuget.org/packages/VRChat.VPM.CLI"
+fetch.url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/$ver"
+
+[wavesurfer]
+src.httpheader = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-1.8.8p5-src.tgz"
+src.regex = "[0-9]+\\.[0-9]+\\.[0-9]+p[0-9]+"
+fetch.url = "http://downloads.sourceforge.net/wavesurfer/wavesurfer-$ver-src.tgz"
+
+[yaskkserv2]
+src.github_tag = "wachikun/yaskkserv2"
+fetch.github = "wachikun/yaskkserv2"
+cargo_lock = ["Cargo.lock"]

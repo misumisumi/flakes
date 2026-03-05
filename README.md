@@ -50,73 +50,54 @@ In your `flake.nix`
 
 ## Available packages
 
-  - @commitlint/config-angular-20.4.2
-  - @commitlint/config-conventional-20.4.2
-  - @commitlint/config-patternplate-20.4.2
-  - @commitlint/config-workspace-scopes-20.4.0
-  - @commitlint/load-20.4.0
-  - @commitlint/read-20.4.0
-  - @modelcontextprotocol/server-everything-2026.1.26
-  - @modelcontextprotocol/server-filesystem-2026.1.14
-  - @modelcontextprotocol/server-filesystem-2026.1.14
-  - @modelcontextprotocol/server-memory-2026.1.26
-  - @modelcontextprotocol/server-memory-2026.1.26
-  - @modelcontextprotocol/server-sequential-thinking-2025.12.18
-  - @modelcontextprotocol/server-sequential-thinking-2025.12.18
-  - @pkgdeps/update-github-actions-permissions-2.9.1
-  - @pkgdeps/update-github-actions-permissions-2.9.1
-  - @prettier/plugin-php-0.24.0
-  - @prettier/plugin-pug-3.4.2
-  - @prettier/plugin-ruby-4.0.4
-  - @prettier/plugin-xml-3.4.2
-  - @proofdict/textlint-rule-proofdict-3.1.2
+  - blender-bin_4_4-4.4.3
+  - blender-bin_4_5-4.5.7
+  - blender-bin_5_0-5.0.1
+  - blender-bin_latest-5.0.1
   - bt-dualboot-1.0.1
-  - commitlint-format-json-1.1.0
-  - commitlint-with-plugins
+  - commitlint-format-json-1.1.4
   - cups-brother-hll5100dn-3.5.1-1
-  - discord-mcp-f820315b0ead18068ce437dac0bccfd7f69bd35b
-  - jawiki-kana-kanji-dict-2026-02-08
-  - julius-speech-v4.6
-  - knp-bc4cef188669f88cdeb590fe7afb1021ce2ae481
-  - mcp-hub-4.2.1
+  - discord-mcp-2026-02-14
+  - drbd9-dkms-9.1.23
+  - fence-agents-4.17.0
+  - julius-speech-4.6
+  - knp-2023-11-01
   - mcp-hub-4.2.1
   - mstflint-cx3-support-4.25.0-1
-  - napi-postinstall-0.3.4
   - nixos-diff
-  - openpace-1.1.3
+  - openpace-1.1.4
   - paper-search-mcp-0.1.3
   - ppp-scripts-2.5.2
-  - prettier-plugin-go-template-0.0.15
+  - prettier-plugin-go-template-2023-07-26
   - prettier-plugin-kotlin-2.1.0
-  - prettier-plugin-nginx-1.0.3
-  - prettier-plugin-rust-0.1.9
-  - prettier-plugin-sh-0.18.0
-  - prettier-plugin-sql-0.19.2
+  - prettier-plugin-nginx-2023-03-17
+  - prettier-plugin-php-v0.24.0
+  - prettier-plugin-pug-3.4.2
+  - prettier-plugin-ruby-v4.0.4
+  - prettier-plugin-xml-v3.4.1
   - proton-ge-rtsp-bin-GE-Proton10-26-rtsp20
   - python3.13-jupynium-0.2.7
   - python3.13-pyknp-0.6.1
   - python3.13-valkey-glide-2.2.7
   - python3.13-version-pioneer-0.0.15
   - ricoh-sp-c260series-ppd-1.00
-  - skk-emoji-jisyo-v0.0.9
+  - skk-emoji-jisyo-0.0.9
   - skk-emotikons-jisyo-2021-04-01
+  - skk-jawiki-jisyo-2026.03.05.001107
   - skk-kaomoji-jisyo-2.30.5544.102
   - snack-2.2.10
-  - textlint-filter-rule-allowlist-4.0.0
-  - textlint-filter-rule-comments-1.3.0
-  - textlint-rule-preset-ja-engineering-paper-1.0.4
-  - textlint-rule-preset-ja-spacing-2.4.3
-  - textlint-rule-preset-ja-technical-writing-12.0.2
   - tkdnd-2.9.5
+  - update-github-actions-permissions-2.9.1
   - virtualsmartcard-virtualsmartcard-0.10
+  - vrchat-vpm-cli-0.1.28
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-2026-02-08
-  - zotero-better-bibtex-8.0.18
+  - yaskkserv2-dict-2026.03.05.001107
+  - zotero-better-bibtex-9.0.2
   - zotero-night-0.4.23
-  - zotero-pdf-translate-2.4.2
-  - zotero-reading-list-1.5.15
-  - zotero-scipdf-8.0.3
+  - zotero-pdf-translate-2.4.3
+  - zotero-reading-list-1.5.17
+  - zotero-scipdf-8.0.4
   - zotero-zotfile-5.1.2
   - zotero-zotmoov-1.2.26
 

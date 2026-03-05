@@ -1,13 +1,12 @@
 {
-  stdenv,
   lib,
-  name,
-  pkgSources,
+  pkgSource,
+  stdenv,
   makeDesktopItem,
   makeWrapper,
   writeScript,
-  curl,
   alsa-plugins,
+  curl,
   imagemagick,
   snack,
   tcl,
@@ -16,7 +15,7 @@
 }:
 
 stdenv.mkDerivation {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
   patches = [
     ./fix-defaultconfig-search.patch
     ./fix-drag-and-drop.patch
@@ -42,8 +41,8 @@ stdenv.mkDerivation {
 
   desktopItems = [
     (makeDesktopItem {
-      inherit name;
-      exec = name;
+      name = "wavesurfer";
+      exec = "wavesurfer";
       icon = "wavesurfer";
       comment = "Open source tool for sound visualization and manipulation";
       desktopName = "WaveSurfer";
@@ -107,7 +106,6 @@ stdenv.mkDerivation {
   '';
 
   meta = with lib; {
-    inherit version;
     description = "Open source tool for sound visualization and manipulation";
     homepage = "https://sourceforge.net/projects/wavesurfer/";
     license = licenses.bsd1;

@@ -14,18 +14,7 @@
   outputs =
     inputs@{ self, flake-parts, ... }:
     let
-      inherit (import ./lib.nix { inherit (inputs.nixpkgs) lib; })
-        mkApps
-        mkCheck
-        names
-        runnableApps
-        sources
-        pkgSourcesJSON
-        withContents
-        ;
-
-      appsDir = ./pkgs/apps;
-      pythonModulesDir = ./pkgs/python-modules;
+      inherit (inputs.nixpkgs) lib;
     in
     flake-parts.lib.mkFlake { inherit inputs; } {
       debug = true;
@@ -39,37 +28,32 @@
         overlay = overlays.default; # deprecated attributes for retro compatibility
         overlays.default =
           final: prev:
-          let
-            pkgSources = sources final;
-            override =
-              name: pkg:
-              builtins.intersectAttrs (builtins.functionArgs pkg) {
-                inherit name pkgSources pkgSourcesJSON;
-                pythonPackages = final.python3.pkgs;
-              };
-          in
-          withContents appsDir (
-            name:
-            let
-              app = import (appsDir + "/${name}");
-            in
-            final.callPackage app (override name app)
-          )
-          // import ./pkgs/overrides/default.nix { inherit final prev; }
-          // {
-            flakeSources = pkgSources;
-          }
+          (import ./pkgs/overrides { inherit final prev; })
+          // (import ./pkgs/apps {
+            inherit lib;
+            inherit (final)
+              fetchgit
+              fetchurl
+              fetchFromGitHub
+              dockerTools
+              callPackage
+              python3
+              ;
+          }).override
           // {
             pythonPackagesOverlays = (prev.pythonPackagesOverlays or [ ]) ++ [
               (
                 pfinal: pprev:
-                (withContents pythonModulesDir (
-                  name:
-                  let
-                    module = import (pythonModulesDir + "/${name}");
-                  in
-                  pfinal.callPackage module (override name module)
-                ))
+                (import ./pkgs/python-modules {
+                  inherit lib;
+                  inherit (final)
+                    fetchgit
+                    fetchurl
+                    fetchFromGitHub
+                    dockerTools
+                    python3
+                    ;
+                }).override
                 // {
                   mcp = pprev.mcp.overridePythonAttrs (old: {
                     postPatch = prev.lib.optionalString prev.stdenv.buildPlatform.isDarwin ''
@@ -98,38 +82,22 @@
             python3Packages = final.python3.pkgs;
           }
           // {
-            nodePackages =
-              prev.nodePackages
-              // import ./pkgs/node-packages {
+            zotero-addons =
+              (import ./pkgs/zotero-addons {
                 inherit (prev)
-                  config
-                  pkgs
+                  fetchgit
+                  fetchurl
+                  fetchFromGitHub
+                  dockerTools
                   lib
-                  nodejs
-                  nodejs-slim
                   stdenv
                   ;
-              };
-          }
-          // prev.lib.mapAttrs' (name: value: prev.lib.nameValuePair value final.nodePackages.${name}) (
-            import ./pkgs/node-packages/main-programs.nix
-          )
-          // {
-            zotero-addons = import ./pkgs/zotero-addons {
-              inherit (prev)
-                fetchgit
-                fetchurl
-                fetchFromGitHub
-                dockerTools
-                lib
-                stdenv
-                ;
-            };
+              }).override;
           };
       };
       systems = [
-        "aarch64-darwin"
-        "aarch64-linux"
+        # "aarch64-darwin"
+        # "aarch64-linux"
         "x86_64-linux"
       ];
       perSystem =
@@ -139,6 +107,51 @@
           lib,
           ...
         }:
+        let
+          inherit (import ./lib.nix { inherit lib; }) mkCheck mkPackages;
+          myPkgs =
+            (
+              (import ./pkgs/apps {
+                inherit lib;
+                inherit (pkgs)
+                  fetchgit
+                  fetchurl
+                  fetchFromGitHub
+                  dockerTools
+                  callPackage
+                  python3
+                  ;
+              }).packages
+              pkgs
+            )
+            // (
+              (import ./pkgs/python-modules {
+                inherit lib;
+                inherit (pkgs)
+                  fetchgit
+                  fetchurl
+                  fetchFromGitHub
+                  dockerTools
+                  python3
+                  ;
+              }).packages
+              pkgs
+            )
+            // (
+              (import ./pkgs/zotero-addons {
+                inherit (pkgs)
+                  fetchgit
+                  fetchurl
+                  fetchFromGitHub
+                  dockerTools
+                  lib
+                  stdenv
+                  ;
+              }).packages
+              pkgs
+            );
+
+        in
         rec {
           _module.args.pkgs = import inputs.nixpkgs {
             inherit system;
@@ -148,43 +161,8 @@
             ];
             config.allowUnfree = true;
           };
-          packages =
-            let
-              pkgs' =
-                withContents appsDir (name: pkgs.${name})
-                // withContents pythonModulesDir (name: pkgs.python3Packages.${name})
-                // lib.listToAttrs (
-                  map (name: {
-                    name = "nodePackages.${name}";
-                    value = pkgs.nodePackages.${name};
-                  }) (with builtins; fromJSON (readFile ./pkgs/node-packages/node-packages.json))
-                )
-                // lib.mapAttrs' (
-                  name: value: lib.nameValuePair "zotero-addons.${name}" pkgs.zotero-addons.${name}
-                ) (with builtins; fromJSON (readFile ./pkgs/zotero-addons/_sources/generated.json))
-                // lib.mapAttrs' (name: value: lib.nameValuePair value pkgs.${value}) (
-                  import ./pkgs/node-packages/main-programs.nix
-                )
-                // import ./env.nix { inherit pkgs; };
-            in
-            lib.filterAttrs (
-              name: value: builtins.any (x: system == x) (value.meta.platforms or [ system ])
-            ) pkgs';
-          apps = mkApps pkgs (runnableApps pkgs (names appsDir));
+          packages = mkPackages system myPkgs;
           checks = mkCheck packages;
-          devShells =
-            withContents appsDir (
-              name:
-              (pkgs.${name}.overrideAttrs (old: {
-                buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ];
-              }))
-            )
-            // withContents pythonModulesDir (
-              name:
-              (pkgs.python3Packages.${name}.overrideAttrs (old: {
-                buildInputs = (old.buildInputs or [ ]) ++ [ pkgs.bashInteractive ];
-              }))
-            );
           devshells.default = {
             packages = with pkgs; [
               bashInteractive

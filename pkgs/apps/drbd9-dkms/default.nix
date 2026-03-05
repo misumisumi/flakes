@@ -1,6 +1,5 @@
 {
-  pkgSources,
-  name,
+  pkgSource,
   stdenv,
   lib,
   nukeReferences,
@@ -9,7 +8,7 @@
 }:
 
 stdenv.mkDerivation {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
 
   hardeningDisable = [
     "pic"
@@ -40,5 +39,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/LINBIT/drbd";
     license = licenses.gpl2;
     platforms = [ "x86_64-linux" ];
+    broken = true;
   };
 }

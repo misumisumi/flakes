@@ -1,12 +1,11 @@
 {
-  stdenv,
   lib,
-  name,
+  pkgSource,
+  stdenv,
   autoreconfHook,
   help2man,
   openpace,
   pkg-config,
-  pkgSources,
   python,
   toPythonModule,
   wrapPython,
@@ -17,7 +16,7 @@
 }:
 toPythonModule (
   stdenv.mkDerivation rec {
-    inherit (pkgSources."${name}") pname version src;
+    inherit (pkgSource) pname version src;
     sourceRoot = "${src.name}/virtualsmartcard";
     outputs = [
       "out"

@@ -1,6 +1,6 @@
 {
-  stdenvNoCC,
   lib,
+  stdenvNoCC,
   fcitx5-mozc,
   yaskkserv2,
   python3,
@@ -23,7 +23,6 @@ stdenvNoCC.mkDerivation rec {
   '';
 
   meta = with lib; {
-    inherit version;
     description = "Kaomoji SKK dictionary from mozc";
     homepage = "https://github.com/fcitx/mozc";
     license = licenses.bsd3;
