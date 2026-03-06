@@ -1,8 +1,7 @@
 {
-  stdenv,
+  pkgSource,
   lib,
-  name,
-  pkgSources,
+  stdenv,
   SDL2,
   alsa-lib,
   perl,
@@ -10,7 +9,8 @@
   zlib,
 }:
 stdenv.mkDerivation {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname src;
+  version = lib.removePrefix "v" pkgSource.version;
 
   env.NIX_CFLAGS_COMPILE = "-std=gnu17";
 
@@ -34,10 +34,12 @@ stdenv.mkDerivation {
   '';
 
   meta = with lib; {
-    inherit version;
     description = "Open-Source Large Vocabulary Continuous Speech Recognition Engine";
     homepage = "https://github.com/julius-speech/julius";
     license = licenses.bsd3;
-    platforms = [ "x86_64-linux" ];
+    platforms = [
+      "x86_64-linux"
+      "aarch64-linux"
+    ];
   };
 }

@@ -1,13 +1,12 @@
 {
-  pkgSources,
   lib,
   stdenvNoCC,
-  yaskkserv2,
-  skkDictionaries,
-  skk-jawiki-jisyo,
   skk-emoji-jisyo,
   skk-emoticons-jisyo,
+  skk-jawiki-jisyo,
   skk-kaomoji-jisyo,
+  skkDictionaries,
+  yaskkserv2,
   withEmoji ? true,
   withKaomoji ? true,
   withEmoticons ? true,
@@ -18,7 +17,7 @@ let
 in
 stdenvNoCC.mkDerivation {
   pname = "yaskkserv2-dict";
-  version = pkgSources.jawiki-kana-kanji-dict.date;
+  inherit (skk-jawiki-jisyo) version;
   dontUnpack = true;
 
   buildPhase = ''

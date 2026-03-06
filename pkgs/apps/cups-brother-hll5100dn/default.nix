@@ -1,6 +1,7 @@
 {
   lib,
-  pkgSources,
+  lprdebSource,
+  cupsdebSource,
   stdenv,
   dpkg,
   autoPatchelfHook,
@@ -29,13 +30,10 @@ let
     which
   ];
 
-  name = "cups-brother-hll5100dn";
-  lprdeb = pkgSources."${name}-lpr".src;
-  cupsdeb = pkgSources."${name}-cupswrapper".src;
 in
-stdenv.mkDerivation {
-  pname = name;
-  inherit (pkgSources."${name}-lpr") version;
+stdenv.mkDerivation rec {
+  pname = "cups-brother-hll5100dn";
+  inherit (lprdebSource) version;
 
   nativeBuildInputs = [
     dpkg
@@ -49,8 +47,8 @@ stdenv.mkDerivation {
   installPhase = ''
     runHook preInstall
     mkdir -p $out
-    dpkg-deb -x ${cupsdeb} $out
-    dpkg-deb -x ${lprdeb} $out
+    dpkg-deb -x ${cupsdebSource.src} $out
+    dpkg-deb -x ${lprdebSource.src} $out
     # delete unnecessary files for the current architecture
   ''
   + lib.concatMapStrings (arch: ''

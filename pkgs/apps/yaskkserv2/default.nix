@@ -1,14 +1,15 @@
 {
+  pkgSource,
   lib,
-  rustPlatform,
-  name,
-  pkgSources,
-  pkg-config,
   openssl,
+  pkg-config,
+  rustPlatform,
 }:
 rustPlatform.buildRustPackage {
-  inherit (pkgSources."${name}") pname version src;
-  cargoLock = pkgSources."${name}".cargoLock."Cargo.lock";
+  inherit (pkgSource) pname src;
+  version = lib.removePrefix "v" pkgSource.version;
+
+  cargoLock = pkgSource.cargoLock."Cargo.lock";
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ openssl ];

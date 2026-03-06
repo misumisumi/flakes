@@ -1,14 +1,13 @@
 {
-  name,
+  pkgSource,
   lib,
   python3Packages,
-  pkgSources,
 }:
 let
   inherit (python3Packages) buildPythonApplication;
 in
 buildPythonApplication {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
   pyproject = true;
 
   build-system = with python3Packages; [ hatchling ];

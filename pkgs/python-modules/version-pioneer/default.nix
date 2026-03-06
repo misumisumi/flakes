@@ -1,14 +1,13 @@
 {
   lib,
-  name,
-  pkgSources,
+  pkgSource,
   buildPythonPackage,
   hatchling,
   hatch-requirements-txt,
   tomli,
 }:
 buildPythonPackage {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
 
   doCheck = false;
   pyproject = true;

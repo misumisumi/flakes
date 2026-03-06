@@ -1,15 +1,14 @@
 {
+  pkgSource,
   lib,
   python3Packages,
-  name,
-  pkgSources,
   chntpw,
 }:
 let
   inherit (python3Packages) buildPythonApplication;
 in
 buildPythonApplication {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
   dependencies = [ chntpw ];
   build-system = with python3Packages; [ poetry-core ];
 

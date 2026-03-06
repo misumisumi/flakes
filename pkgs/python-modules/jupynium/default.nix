@@ -1,7 +1,6 @@
 {
   lib,
-  name,
-  pkgSources,
+  pkgSource,
   buildPythonPackage,
   coloredlogs,
   gitpython,
@@ -22,7 +21,7 @@
   version-pioneer,
 }:
 buildPythonPackage {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
 
   doCheck = false;
   pyproject = true;

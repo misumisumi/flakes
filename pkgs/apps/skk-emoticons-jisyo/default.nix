@@ -1,15 +1,15 @@
 {
-  stdenvNoCC,
+  pkgSource,
   lib,
-  pkgSources,
+  stdenvNoCC,
   yaskkserv2,
   jq,
 }:
 
 stdenvNoCC.mkDerivation rec {
-  inherit (pkgSources."emoticon-data") src;
+  inherit (pkgSource) src;
   pname = "skk-emotikons-jisyo";
-  version = pkgSources."emoticon-data".date;
+  version = pkgSource.date;
   nativeBuildInputs = [
     jq
     yaskkserv2
@@ -30,7 +30,6 @@ stdenvNoCC.mkDerivation rec {
   '';
 
   meta = with lib; {
-    inherit version;
     description = "emoticons dictionary for SKK";
     homepage = "https://github.com/w33ble/emoticon-data";
     license = licenses.mit;

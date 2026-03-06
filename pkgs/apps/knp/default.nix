@@ -1,8 +1,7 @@
 {
-  stdenv,
+  pkgSource,
   lib,
-  name,
-  pkgSources,
+  stdenv,
   fetchurl,
   autoconf,
   automake,
@@ -12,7 +11,9 @@
   zlib,
 }:
 stdenv.mkDerivation {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname src;
+  version = pkgSource.date;
+
   buildInputs = [
     autoconf
     automake
@@ -34,6 +35,8 @@ stdenv.mkDerivation {
     "-Wno-error=implicit-int"
     "-Wno-error=incompatible-pointer-types"
     "-Wno-error=int-conversion"
+    "-Wold-style-definition"
+    "-std=gnu17"
   ];
 
   patches = [
@@ -54,10 +57,12 @@ stdenv.mkDerivation {
   '';
 
   meta = with lib; {
-    inherit version;
     description = "plugin for droidcam obs";
     homepage = "https://github.com/dev47apps/droidcam-obs-plugin";
     license = licenses.gpl2;
-    platforms = [ "x86_64-linux" ];
+    platforms = [
+      "x86_64-linux"
+      "aarch64-linux"
+    ];
   };
 }

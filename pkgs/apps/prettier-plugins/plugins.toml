@@ -1,0 +1,74 @@
+[prettier-plugin-php]
+src.github = "prettier/plugin-php"
+fetch.github = "prettier/plugin-php"
+[prettier-plugin-php.passthru]
+pkgmgr = "yarn"
+
+[prettier-plugin-pug]
+src.github = "prettier/plugin-pug"
+fetch.github = "prettier/plugin-pug"
+[prettier-plugin-pug.passthru]
+pkgmgr = "pnpm"
+dontNpmPrune = "yes"
+
+[prettier-plugin-ruby]
+src.github_tag = "prettier/plugin-ruby"
+fetch.github = "prettier/plugin-ruby"
+[prettier-plugin-ruby.passthru]
+pkgmgr = "yarn"
+dontYarnBuild = "yes"
+
+[prettier-plugin-xml]
+src.github_tag = "prettier/plugin-xml"
+fetch.github = "prettier/plugin-xml"
+[prettier-plugin-xml.passthru]
+pkgmgr = "yarn"
+dontYarnBuild = "yes"
+
+[prettier-plugin-kotlin]
+src.github_tag = "Angry-Potato/prettier-plugin-kotlin"
+fetch.github = "Angry-Potato/prettier-plugin-kotlin"
+[prettier-plugin-kotlin.passthru]
+pkgmgr = "npm"
+dontNpmBuild = "yes"
+
+[prettier-plugin-nginx]
+src.git = "https://github.com/jxddk/prettier-plugin-nginx"
+fetch.github = "jxddk/prettier-plugin-nginx"
+extract = ["package.json"]
+[prettier-plugin-nginx.passthru]
+pkgmgr = "npm"
+needGenLock = "yes"
+
+[prettier-plugin-sh]
+src.github_tag = "un-ts/prettier"
+src.include_regex = "prettier-plugin-sh@.*"
+src.prefix = "prettier-plugin-sh@"
+fetch.url = "https://registry.npmjs.org/prettier-plugin-sh/-/prettier-plugin-sh-$ver.tgz"
+extract = ["package.json"]
+[prettier-plugin-sh.passthru]
+pkgmgr = "npm"
+needGenLock = "yes"
+dontNpmBuild = "yes"
+
+[prettier-plugin-sql]
+src.github_tag = "un-ts/prettier"
+src.include_regex = "prettier-plugin-sql@.*"
+src.prefix = "prettier-plugin-sql@"
+fetch.url = "https://registry.npmjs.org/prettier-plugin-sql/-/prettier-plugin-sql-$ver.tgz"
+extract = ["package.json"]
+[prettier-plugin-sql.passthru]
+pkgmgr = "npm"
+needGenLock = "yes"
+dontNpmBuild = "yes"
+
+[prettier-plugin-toml]
+src.github_tag = "un-ts/prettier"
+src.include_regex = "prettier-plugin-toml@.*"
+src.prefix = "prettier-plugin-toml@"
+fetch.url = "https://registry.npmjs.org/prettier-plugin-toml/-/prettier-plugin-toml-$ver.tgz"
+extract = ["package.json"]
+[prettier-plugin-toml.passthru]
+pkgmgr = "npm"
+needGenLock = "yes"
+dontNpmBuild = "yes"

@@ -1,12 +1,12 @@
 {
-  stdenvNoCC,
+  pkgSource,
   lib,
-  name,
-  pkgSources,
+  stdenvNoCC,
 }:
 
-stdenvNoCC.mkDerivation rec {
-  inherit (pkgSources."${name}") pname version src;
+stdenvNoCC.mkDerivation {
+  inherit (pkgSource) pname src;
+  version = lib.removePrefix "v" pkgSource.version;
 
   installPhase = ''
     mkdir -p $out/share/skk
@@ -14,7 +14,6 @@ stdenvNoCC.mkDerivation rec {
   '';
 
   meta = with lib; {
-    inherit version;
     description = "Emoji dictionary for SKK";
     homepage = "https://github.com/uasi/skk-emoji-jisyo";
     license = licenses.mit;

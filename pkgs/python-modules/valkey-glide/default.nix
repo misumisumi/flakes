@@ -1,7 +1,6 @@
 {
   lib,
-  name,
-  pkgSources,
+  pkgSource,
   buildPythonPackage,
   rustPlatform,
   anyio,
@@ -9,13 +8,13 @@
   sniffio,
 }:
 buildPythonPackage {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
 
   doCheck = false;
   pyproject = true;
   # for runtime depend
   cargoDeps = rustPlatform.importCargoLock {
-    inherit (pkgSources."${name}".cargoLock."Cargo.lock") lockFile;
+    inherit (pkgSource.cargoLock."Cargo.lock") lockFile;
   };
   dependencies = [
     anyio

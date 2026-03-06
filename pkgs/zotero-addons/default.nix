@@ -7,6 +7,7 @@
   stdenv,
 }@args:
 let
+  inherit (lib) mapAttrs;
 
   buildZoteroXpiAddon = lib.makeOverridable (
     {
@@ -48,18 +49,21 @@ let
       ;
   };
 in
-lib.mapAttrs (
-  name: source:
-  buildZoteroXpiAddon {
-    inherit stdenv;
-    inherit (source)
-      pname
-      version
-      src
-      addonId
-      homepage
-      description
-      license
-      ;
-  }
-) addonSources
+rec {
+  override = mapAttrs (
+    name: source:
+    buildZoteroXpiAddon {
+      inherit stdenv;
+      inherit (source)
+        pname
+        version
+        src
+        addonId
+        homepage
+        description
+        license
+        ;
+    }
+  ) addonSources;
+  packages = nixpkgs: mapAttrs (n: v: nixpkgs.zotero-addons.${n}) override;
+}

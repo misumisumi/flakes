@@ -1,8 +1,7 @@
 {
-  name,
-  pkgSources,
+  pkgSource,
   proton-ge-bin,
 }:
 proton-ge-bin.overrideAttrs (oldAttrs: {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
 })

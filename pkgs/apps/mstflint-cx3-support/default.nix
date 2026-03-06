@@ -1,6 +1,5 @@
 {
-  name,
-  pkgSources,
+  pkgSource,
   lib,
   stdenv,
   libibmad,
@@ -8,7 +7,7 @@
   zlib,
 }:
 stdenv.mkDerivation {
-  inherit (pkgSources."${name}") pname version src;
+  inherit (pkgSource) pname version src;
 
   env = {
     NIX_CFLAGS_COMPILE = toString [

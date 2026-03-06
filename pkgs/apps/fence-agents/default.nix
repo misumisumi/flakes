@@ -1,6 +1,5 @@
 {
-  name,
-  pkgSources,
+  pkgSource,
   lib,
   stdenv,
   amtterm,
@@ -48,8 +47,8 @@ let
   );
 in
 stdenv.mkDerivation rec {
-  inherit (pkgSources."${name}") pname src;
-  version = lib.removePrefix "v" pkgSources."${name}".version;
+  inherit (pkgSource) pname src;
+  version = lib.removePrefix "v" pkgSource.version;
   nativeBuildInputs = [
     automake
     autoreconfHook
@@ -145,5 +144,6 @@ stdenv.mkDerivation rec {
     description = "Docstring generator";
     license = licenses.bsd3;
     platforms = [ "x86_64-linux" ];
+    broken = true;
   };
 }
