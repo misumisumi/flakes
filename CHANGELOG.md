@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/misumisumi/flakes/compare/v4.1.6...v4.2.0) (2026-03-06)
+
+
+### Features
+
+* **mcp-obsidian:** add mcp-obsidian ([b8c6695](https://github.com/misumisumi/flakes/commit/b8c6695c0f8bbb7a9c1730c3e375150bbbcc8d34))
+
 ## [4.1.6](https://github.com/misumisumi/flakes/compare/v4.1.5...v4.1.6) (2026-02-27)
 
 
