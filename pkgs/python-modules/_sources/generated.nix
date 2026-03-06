@@ -24,7 +24,7 @@
     cargoLock."Cargo.lock" = {
       lockFile = ./. + "/sha256-LNBbjIcceHjLiWeaw08pTxAEgbZPedeXzeMlodBRzck=/Cargo.lock";
       outputHashes = {
-
+        
       };
     };
   };

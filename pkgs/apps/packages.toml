@@ -73,6 +73,15 @@ skipCheck = "yes"
 src.github_tag = "ravitemer/mcp-hub"
 fetch.github = "ravitemer/mcp-hub"
 
+[mcp-obsidian]
+src.git = "https://github.com/bitbonsai/mcp-obsidian"
+fetch.github = "bitbonsai/mcp-obsidian"
+# src.webpage = "https://raw.githubusercontent.com/bitbonsai/mcp-obsidian/refs/heads/main/website/src/components/UpdateCallout.astro"
+# src.regex = "v[0-9]+\\.[0-9]+\\.[0-9]+"
+# src.prefix = "v"
+# fetch.url = "https://registry.npmjs.org/@mauricio.wolff/mcp-obsidian/-/mcp-obsidian-$ver.tgz"
+# extract = ["package.json"]
+
 [mstflint-cx3-support]
 src.manual = "4.25.0-1"
 fetch.url = "https://github.com/Mellanox/mstflint/releases/download/v$ver/mstflint-$ver.tar.gz"

@@ -138,6 +138,18 @@
       sha256 = "sha256-KakvXZf0vjdqzyT+LsAKHEr4GLICGXPmxl1hZ3tI7Yg=";
     };
   };
+  mcp-obsidian = {
+    pname = "mcp-obsidian";
+    version = "557c65e9c222727c5cab1fb711ce43083d976040";
+    src = fetchFromGitHub {
+      owner = "bitbonsai";
+      repo = "mcp-obsidian";
+      rev = "557c65e9c222727c5cab1fb711ce43083d976040";
+      fetchSubmodules = false;
+      sha256 = "sha256-jmGAtX2eYYJ7AfSeDWkUrj6PALXCZtDvY22jLW9ZMi4=";
+    };
+    date = "2026-03-04";
+  };
   mstflint-cx3-support = {
     pname = "mstflint-cx3-support";
     version = "4.25.0-1";

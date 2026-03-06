@@ -21,6 +21,7 @@ buildNpmPackage rec {
     };
 
   inherit (importNpmLock) npmConfigHook;
+
   dontNpmBuild = true;
   postInstall = ''
     cp -r src $out/lib/node_modules/${pname}/lib
