@@ -7,7 +7,7 @@ buildNpmPackage {
   inherit (pkgSource) pname src;
   version = pkgSource.date;
 
-  npmDepsHash = "sha256-y2aau3qmtdRHCiPgzAAc4T34IoElOJ+48/+URO1OBQA=";
+  npmDepsHash = "sha256-veQRpP6Bxq0yjDYn07P7TMSdVIT8gWc3czXNfDhrla0=";
 
   meta = {
     description = "A lightweight Model Context Protocol (MCP) server for safe Obsidian vault access";

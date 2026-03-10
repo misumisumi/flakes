@@ -40,16 +40,13 @@
   };
   commitlint-format-json = {
     pname = "commitlint-format-json";
-    version = "v1.1.4";
-    src = fetchFromGitHub {
-      owner = "byCedric";
-      repo = "Commitlint-Formats";
-      rev = "v1.1.4";
-      fetchSubmodules = false;
-      sha256 = "sha256-fazbw05HNdsFrNrawP6ZS3vYUBO1R4NGRF3nKfgzFno=";
+    version = "1.1.0";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/commitlint-format-json/-/commitlint-format-json-1.1.0.tgz";
+      sha256 = "sha256-VyY0HOpelsy7s96i1aI5Vl9Y63tUoa6cO6oT6bHu1uk=";
     };
     extract = {
-      "packages/json/package.json" = ./. + "/sha256-fazbw05HNdsFrNrawP6ZS3vYUBO1R4NGRF3nKfgzFno=/packages/json/package.json";
+      "package.json" = ./. + "/sha256-VyY0HOpelsy7s96i1aI5Vl9Y63tUoa6cO6oT6bHu1uk=/package.json";
     };
   };
   cups-brother-hll5100dn-cupswrapper = {
@@ -140,15 +137,15 @@
   };
   mcp-obsidian = {
     pname = "mcp-obsidian";
-    version = "557c65e9c222727c5cab1fb711ce43083d976040";
+    version = "c16c84b81c7dbc077882614bcf114faaf88409e1";
     src = fetchFromGitHub {
       owner = "bitbonsai";
       repo = "mcp-obsidian";
-      rev = "557c65e9c222727c5cab1fb711ce43083d976040";
+      rev = "c16c84b81c7dbc077882614bcf114faaf88409e1";
       fetchSubmodules = false;
-      sha256 = "sha256-jmGAtX2eYYJ7AfSeDWkUrj6PALXCZtDvY22jLW9ZMi4=";
+      sha256 = "sha256-qxFYM42uE+mK8h/lzLwoVAwzmdCXUKv8uQRFY6F0xJg=";
     };
-    date = "2026-03-04";
+    date = "2026-03-08";
   };
   mstflint-cx3-support = {
     pname = "mstflint-cx3-support";

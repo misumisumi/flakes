@@ -26,5 +26,6 @@
 	],
 	"peerDependencies": {
 		"commitlint": "^7.2.0"
-	}
+	},
+	"gitHead": "fe2ece68d1fdc527a2d690d767e1fb51b3837680"
 }
