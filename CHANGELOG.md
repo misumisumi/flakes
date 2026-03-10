@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.2.1](https://github.com/misumisumi/flakes/compare/v4.2.0...v4.2.1) (2026-03-10)
+
+
+### Bug Fixes
+
+* **commitlint-format-json:** fix version ([add7210](https://github.com/misumisumi/flakes/commit/add72104f7a559d32afae08c9c1c60c0db1a6913))
+* **commitlint-format-json:** fix version ([06eae08](https://github.com/misumisumi/flakes/commit/06eae0885f5408acc43ea4a6bbd2bb5a4ac494ce))
+
 ## [4.2.0](https://github.com/misumisumi/flakes/compare/v4.1.6...v4.2.0) (2026-03-06)
 
 
