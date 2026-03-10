@@ -5,7 +5,7 @@ set -eu -o pipefail
 
 GENERATED_FILE=../_sources/generated.json
 
-FILE="$(jq -r '.["commitlint-format-json"] | .extract["packages/json/package.json"]' "${GENERATED_FILE}")"
+FILE="$(jq -r '.["commitlint-format-json"] | .extract["package.json"]' "${GENERATED_FILE}")"
 pushd "../_sources/$(dirname "${FILE}")"
 npm install --package-lock-only
 popd

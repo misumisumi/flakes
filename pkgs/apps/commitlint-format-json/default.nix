@@ -8,8 +8,6 @@ buildNpmPackage rec {
   inherit (pkgSource) pname src;
   version = lib.removePrefix "v" pkgSource.version;
 
-  sourceRoot = "${src.name}/packages/json";
-
   npmDeps =
     let
       inherit (builtins) fromJSON readFile replaceStrings;
@@ -17,15 +15,12 @@ buildNpmPackage rec {
       sha256 = replaceStrings [ "/" ] [ "_" ] "${pkgJSON.src.sha256}";
     in
     importNpmLock {
-      npmRoot = ../_sources + "/${sha256}" + "/packages/json";
+      npmRoot = ../_sources + "/${sha256}";
     };
 
   inherit (importNpmLock) npmConfigHook;
 
   dontNpmBuild = true;
-  postInstall = ''
-    cp -r src $out/lib/node_modules/${pname}/lib
-  '';
 
   meta = with lib; {
     homepage = "https://github.com/bycedric/commitlint-formats";
