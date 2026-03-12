@@ -6,19 +6,6 @@
   dockerTools,
 }:
 {
-  prettier-plugin-kotlin = {
-    pname = "prettier-plugin-kotlin";
-    version = "v2.1.0";
-    src = fetchFromGitHub {
-      owner = "Angry-Potato";
-      repo = "prettier-plugin-kotlin";
-      rev = "v2.1.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-z2dpka6+53xjRqPOSkOCcfMHs1Z2hmDbvLNtjXH4VcA=";
-    };
-    pkgmgr = "npm";
-    dontNpmBuild = "yes";
-  };
   prettier-plugin-nginx = {
     pname = "prettier-plugin-nginx";
     version = "b3c840f4bac1373c2dc984825e3dad3308fcbcbe";

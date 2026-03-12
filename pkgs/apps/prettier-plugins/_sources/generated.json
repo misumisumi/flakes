@@ -1,28 +1,4 @@
 {
-    "prettier-plugin-kotlin": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "prettier-plugin-kotlin",
-        "passthru": {
-            "dontNpmBuild": "yes",
-            "pkgmgr": "npm"
-        },
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "Angry-Potato",
-            "repo": "prettier-plugin-kotlin",
-            "rev": "v2.1.0",
-            "sha256": "sha256-z2dpka6+53xjRqPOSkOCcfMHs1Z2hmDbvLNtjXH4VcA=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v2.1.0"
-    },
     "prettier-plugin-nginx": {
         "cargoLock": null,
         "date": "2023-03-17",

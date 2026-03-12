@@ -25,13 +25,6 @@ fetch.github = "prettier/plugin-xml"
 pkgmgr = "yarn"
 dontYarnBuild = "yes"
 
-[prettier-plugin-kotlin]
-src.github_tag = "Angry-Potato/prettier-plugin-kotlin"
-fetch.github = "Angry-Potato/prettier-plugin-kotlin"
-[prettier-plugin-kotlin.passthru]
-pkgmgr = "npm"
-dontNpmBuild = "yes"
-
 [prettier-plugin-nginx]
 src.git = "https://github.com/jxddk/prettier-plugin-nginx"
 fetch.github = "jxddk/prettier-plugin-nginx"
