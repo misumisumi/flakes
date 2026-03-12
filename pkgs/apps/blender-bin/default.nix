@@ -90,5 +90,8 @@ stdenv.mkDerivation {
 
   meta = {
     mainProgram = "blender";
+    platforms = [
+      "x86_64-linux"
+    ];
   };
 }

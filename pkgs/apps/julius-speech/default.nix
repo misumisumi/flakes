@@ -12,7 +12,10 @@ stdenv.mkDerivation {
   inherit (pkgSource) pname src;
   version = lib.removePrefix "v" pkgSource.version;
 
-  env.NIX_CFLAGS_COMPILE = "-std=gnu17";
+  env.NIX_CFLAGS_COMPILE = toString [
+    "-std=gnu17"
+    "-Wno-error=implicit-function-declaration"
+  ];
 
   nativeBuildInputs = [
     pkg-config

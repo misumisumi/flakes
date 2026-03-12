@@ -6,12 +6,12 @@
   unzip,
 }:
 
-stdenvNoCC.mkDerivation rec {
+stdenvNoCC.mkDerivation {
   inherit (pkgSource) pname version src;
   nativeBuildInputs = [ unzip ];
 
   unpackPhase = ''
-    unzip $src -d /build/
+    unzip $src
   '';
 
   installPhase = ''
@@ -28,6 +28,10 @@ stdenvNoCC.mkDerivation rec {
   meta = {
     description = "The VRChat Package Manager from Command Line";
     homepage = "https://vcc.docs.vrchat.com/vpm/cli/";
-    platforms = lib.platforms.all;
+    platforms = [
+      "x86_64-linux"
+      "aarch64-linux"
+      "aarch64-darwin"
+    ];
   };
 }

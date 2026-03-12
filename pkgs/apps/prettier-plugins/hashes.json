@@ -2,7 +2,5 @@
   "prettier-plugin-php": "sha256-Q8M4Mh0wQNmDkxtUr5bwyRiuFQTyGSGgkOVWhIien4s=",
   "prettier-plugin-pug": "sha256-GZYSlK1B0pb6X7ldW4PZWHJOUvtUMysYJjoD/nsV3S0=",
   "prettier-plugin-ruby": "sha256-KG6LwkBN3Ao85mIt244SNzOsLNxYM/g9meWJ5AknHis=",
-  "prettier-plugin-xml": "sha256-VRUnlE8AQQJfPTMdexPZ/5jPFtU/qSV5GFM0pSLH9zI=",
-  "prettier-plugin-kotlin": "sha256-oIYOzxU2k/JQ8Z5i/8BMNIxCnCbhA/Or+KdwYZNkLAc=",
-  "prettier-plugin-nginx": ""
+  "prettier-plugin-xml": "sha256-VRUnlE8AQQJfPTMdexPZ/5jPFtU/qSV5GFM0pSLH9zI="
 }
