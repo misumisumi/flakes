@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.2.2](https://github.com/misumisumi/flakes/compare/v4.2.1...v4.2.2) (2026-03-12)
+
+
+### Bug Fixes
+
+* **flake.nix:** fix system ([bfe8ff7](https://github.com/misumisumi/flakes/commit/bfe8ff76734ea344ffb0385c190c88f2e0dd899e))
+* **prettier-plugin-kotlin:** rm prettier-plugin-kotlin ([23ba96a](https://github.com/misumisumi/flakes/commit/23ba96a1f65f3a5c0613ab5c53598be007f60107))
+
 ## [4.2.1](https://github.com/misumisumi/flakes/compare/v4.2.0...v4.2.1) (2026-03-10)
 
 
