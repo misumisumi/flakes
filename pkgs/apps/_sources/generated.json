@@ -238,7 +238,7 @@
     },
     "mcp-obsidian": {
         "cargoLock": null,
-        "date": "2026-03-08",
+        "date": "2026-03-13",
         "extract": null,
         "name": "mcp-obsidian",
         "passthru": null,
@@ -250,12 +250,12 @@
             "name": null,
             "owner": "bitbonsai",
             "repo": "mcp-obsidian",
-            "rev": "c16c84b81c7dbc077882614bcf114faaf88409e1",
-            "sha256": "sha256-qxFYM42uE+mK8h/lzLwoVAwzmdCXUKv8uQRFY6F0xJg=",
+            "rev": "503c5839ca48882d8c741d1770bd7fa48bcd6c36",
+            "sha256": "sha256-qvcl2Pu+mZySxhuTrOZHVz94ynuDtSYIe8TujZAQIpA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "c16c84b81c7dbc077882614bcf114faaf88409e1"
+        "version": "503c5839ca48882d8c741d1770bd7fa48bcd6c36"
     },
     "mstflint-cx3-support": {
         "cargoLock": null,
@@ -411,7 +411,7 @@
     },
     "spicetify-dj-info": {
         "cargoLock": null,
-        "date": "2026-02-10",
+        "date": "2026-03-10",
         "extract": null,
         "name": "spicetify-dj-info",
         "passthru": {
@@ -427,12 +427,12 @@
             "name": null,
             "owner": "L3-N0X",
             "repo": "spicetify-dj-info",
-            "rev": "1099b62b1200a1ca349f49d0ec31b4089031d4f5",
-            "sha256": "sha256-6El0glRS6X385s48+mwLY95QuXECm9lU2ZorFR64eic=",
+            "rev": "ea169e6712b5b2f8e70e120a8e6a21650afb4959",
+            "sha256": "sha256-VQqD807STvFr+Q2XjEHa7yeW2mFuFlfqHaUJrP1J/iE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1099b62b1200a1ca349f49d0ec31b4089031d4f5"
+        "version": "ea169e6712b5b2f8e70e120a8e6a21650afb4959"
     },
     "tkdnd": {
         "cargoLock": null,
