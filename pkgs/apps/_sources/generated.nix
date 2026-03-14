@@ -137,15 +137,15 @@
   };
   mcp-obsidian = {
     pname = "mcp-obsidian";
-    version = "c16c84b81c7dbc077882614bcf114faaf88409e1";
+    version = "503c5839ca48882d8c741d1770bd7fa48bcd6c36";
     src = fetchFromGitHub {
       owner = "bitbonsai";
       repo = "mcp-obsidian";
-      rev = "c16c84b81c7dbc077882614bcf114faaf88409e1";
+      rev = "503c5839ca48882d8c741d1770bd7fa48bcd6c36";
       fetchSubmodules = false;
-      sha256 = "sha256-qxFYM42uE+mK8h/lzLwoVAwzmdCXUKv8uQRFY6F0xJg=";
+      sha256 = "sha256-qvcl2Pu+mZySxhuTrOZHVz94ynuDtSYIe8TujZAQIpA=";
     };
-    date = "2026-03-08";
+    date = "2026-03-13";
   };
   mstflint-cx3-support = {
     pname = "mstflint-cx3-support";
@@ -231,18 +231,18 @@
   };
   spicetify-dj-info = {
     pname = "spicetify-dj-info";
-    version = "1099b62b1200a1ca349f49d0ec31b4089031d4f5";
+    version = "ea169e6712b5b2f8e70e120a8e6a21650afb4959";
     src = fetchFromGitHub {
       owner = "L3-N0X";
       repo = "spicetify-dj-info";
-      rev = "1099b62b1200a1ca349f49d0ec31b4089031d4f5";
+      rev = "ea169e6712b5b2f8e70e120a8e6a21650afb4959";
       fetchSubmodules = false;
-      sha256 = "sha256-6El0glRS6X385s48+mwLY95QuXECm9lU2ZorFR64eic=";
+      sha256 = "sha256-VQqD807STvFr+Q2XjEHa7yeW2mFuFlfqHaUJrP1J/iE=";
     };
     notPackage = "yes";
     name = "dist/djinfo.mjs";
     skipCheck = "yes";
-    date = "2026-02-10";
+    date = "2026-03-10";
   };
   tkdnd = {
     pname = "tkdnd";
