@@ -1,3 +1,7 @@
+[anti-anti-cheat-patch]
+src.git = "https://github.com/Scrut1ny/AutoVirt"
+fetch.github = "Scrut1ny/AutoVirt"
+
 [blender-bin_lts]
 src.github_tag = "blender/blender"
 src.include_regex = "v4.5.*"
