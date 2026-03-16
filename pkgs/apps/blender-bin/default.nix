@@ -3,7 +3,6 @@
   lib,
   makeWrapper,
   stdenv,
-  cmake,
   wayland,
   libdecor,
   libx11,
