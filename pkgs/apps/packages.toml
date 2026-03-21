@@ -94,8 +94,7 @@ src.pypi = "paper-search-mcp"
 fetch.pypi = "paper_search_mcp"
 
 [proton-ge-rtsp-bin]
-src.github_tag = "SpookySkeletons/proton-ge-rtsp"
-src.include_regex = "GE-Proton.*"
+src.github = "SpookySkeletons/proton-ge-rtsp"
 fetch.tarball = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/$ver/$ver.tar.gz"
 
 [ricoh-sp-c260series-ppd]
