@@ -1,3 +1,7 @@
+[anti-anti-cheat-patch]
+src.git = "https://github.com/Scrut1ny/AutoVirt"
+fetch.github = "Scrut1ny/AutoVirt"
+
 [blender-bin_lts]
 src.github_tag = "blender/blender"
 src.include_regex = "v4.5.*"
@@ -90,8 +94,7 @@ src.pypi = "paper-search-mcp"
 fetch.pypi = "paper_search_mcp"
 
 [proton-ge-rtsp-bin]
-src.github_tag = "SpookySkeletons/proton-ge-rtsp"
-src.include_regex = "GE-Proton.*"
+src.github = "SpookySkeletons/proton-ge-rtsp"
 fetch.tarball = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/$ver/$ver.tar.gz"
 
 [ricoh-sp-c260series-ppd]

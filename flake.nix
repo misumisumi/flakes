@@ -31,14 +31,7 @@
           (import ./pkgs/overrides { inherit final prev; })
           // (import ./pkgs/apps {
             inherit lib;
-            inherit (final)
-              fetchgit
-              fetchurl
-              fetchFromGitHub
-              dockerTools
-              callPackage
-              python3
-              ;
+            pkgs = final;
           }).override
           // {
             pythonPackagesOverlays = (prev.pythonPackagesOverlays or [ ]) ++ [
@@ -113,14 +106,7 @@
             (
               (import ./pkgs/apps {
                 inherit lib;
-                inherit (pkgs)
-                  fetchgit
-                  fetchurl
-                  fetchFromGitHub
-                  dockerTools
-                  callPackage
-                  python3
-                  ;
+                inherit pkgs;
               }).packages
               pkgs
             )

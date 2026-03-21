@@ -1,15 +1,21 @@
 {
   lib,
-  fetchgit,
-  fetchurl,
-  fetchFromGitHub,
-  dockerTools,
-  callPackage,
-  python3,
+  pkgs,
 }:
 let
   inherit (builtins) head;
   inherit (lib) mapAttrs splitString;
+  inherit (pkgs)
+    callPackage
+    python3
+    fetchgit
+    fetchurl
+    fetchFromGitHub
+    dockerTools
+    qemu
+    OVMF
+    anti-anti-cheat-patch
+    ;
   inherit
     (import ../utils.nix {
       inherit lib;
@@ -62,8 +68,15 @@ let
       callPackage
       ;
   };
+  aacPkgs = import ./aac-edk2-qemu {
+    inherit
+      anti-anti-cheat-patch
+      qemu
+      OVMF
+      ;
+  };
 in
 rec {
-  override = (withContents pkgSources callPkgs) // prettierPlugins;
+  override = (withContents pkgSources callPkgs) // prettierPlugins // aacPkgs;
   packages = nixpkgs: mapAttrs (n: v: nixpkgs.${n}) override;
 }

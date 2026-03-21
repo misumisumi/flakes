@@ -1,4 +1,25 @@
 {
+    "anti-anti-cheat-patch": {
+        "cargoLock": null,
+        "date": "2026-03-05",
+        "extract": null,
+        "name": "anti-anti-cheat-patch",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Scrut1ny",
+            "repo": "AutoVirt",
+            "rev": "00ec7153c06184a36f028559fec3ae0e6051cbf6",
+            "sha256": "sha256-rmUfGWxz0Z2Lwmdvyt5oHNOzZGndyusWwu7TnFq1qC4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "00ec7153c06184a36f028559fec3ae0e6051cbf6"
+    },
     "blender-bin": {
         "cargoLock": null,
         "date": null,

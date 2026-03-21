@@ -6,6 +6,18 @@
   dockerTools,
 }:
 {
+  anti-anti-cheat-patch = {
+    pname = "anti-anti-cheat-patch";
+    version = "00ec7153c06184a36f028559fec3ae0e6051cbf6";
+    src = fetchFromGitHub {
+      owner = "Scrut1ny";
+      repo = "AutoVirt";
+      rev = "00ec7153c06184a36f028559fec3ae0e6051cbf6";
+      fetchSubmodules = false;
+      sha256 = "sha256-rmUfGWxz0Z2Lwmdvyt5oHNOzZGndyusWwu7TnFq1qC4=";
+    };
+    date = "2026-03-05";
+  };
   blender-bin = {
     pname = "blender-bin";
     version = "5.0.1";
