@@ -1,5 +1,18 @@
 # Changelog
 
+## [5.1.0](https://github.com/misumisumi/flakes/compare/v5.0.0...v5.1.0) (2026-03-21)
+
+
+### Features
+
+* **aac-*:** add anti-anti-cheat-patch and patched qemu and edk2 and nixosModules ([2452a19](https://github.com/misumisumi/flakes/commit/2452a19d6a0cb5cbed28b6cd9433bc2a1a67eb01))
+
+
+### Bug Fixes
+
+* **blender-bin:** rm non-dependent pkg ([ff16d7b](https://github.com/misumisumi/flakes/commit/ff16d7b5eafb7bd985d8e673410e45caec3eb2b6))
+* **packages.toml:** fix proton-ge-rtsp src ([7eb5e82](https://github.com/misumisumi/flakes/commit/7eb5e825f81723b8b3caa3e209da8a440053779d))
+
 ## [5.0.0](https://github.com/misumisumi/flakes/compare/v4.2.2...v5.0.0) (2026-03-12)
 
 
