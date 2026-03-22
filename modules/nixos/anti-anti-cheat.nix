@@ -38,14 +38,14 @@ in
         optionalString cfg.amd.enable ''
           mkdir -p /run/libvirt/{aac-emulators,aac-ovmf}
 
-          find ${pkgs.aac-qemu-amd}/bin -type f -name "qemu-*" -exec ln -sf {} /run/libvirt/aac-emulators/ \;
-          find ${pkgs.aac-OVMF-amd.fd}/FV -type f -name "*.fd" -exec ln -sf {} /run/libvirt/aac-ovmf/ \;
+          find ${pkgs.aac-qemu-amd}/bin -name "qemu-*" -exec ln -sf {} /run/libvirt/aac-emulators/ \;
+          find ${pkgs.aac-OVMF-amd.fd}/FV -name "*.fd" -exec ln -sf {} /run/libvirt/aac-ovmf/ \;
         ''
         + optionalString cfg.intel.enable ''
           mkdir -p /run/libvirt/{aac-emulators,aac-ovmf}
 
-          find ${pkgs.aac-qemu-intel}/bin -type f -name "qemu-*" -exec ln -sf {} /run/libvirt/aac-emulators/ \;
-          find ${pkgs.aac-OVMF-intel.fd}/FV -type f -name "*.fd" -exec ln -sf {} /run/libvirt/aac-ovmf/ \;
+          find ${pkgs.aac-qemu-intel}/bin -name "qemu-*" -exec ln -sf {} /run/libvirt/aac-emulators/ \;
+          find ${pkgs.aac-OVMF-intel.fd}/FV -name "*.fd" -exec ln -sf {} /run/libvirt/aac-ovmf/ \;
         '';
     };
   };
