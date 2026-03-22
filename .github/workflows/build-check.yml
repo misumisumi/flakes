@@ -40,7 +40,7 @@ jobs:
         with:
           filters: |
             nix:
-              - "**.nix"
+              - "pkgs/**.nix"
               - "flake.lock"
 
   build-check-matrix:
