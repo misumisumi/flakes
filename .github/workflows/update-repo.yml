@@ -2,7 +2,7 @@ name: update repository
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: "0 18 * * 5" # runs weekly on Saturday at 03:00 (JST)
+    - cron: "0 17 30 * 5" # runs weekly on Saturday at 02:30 (JST)
 
 permissions: read-all
 
