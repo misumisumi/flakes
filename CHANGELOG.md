@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.1.2](https://github.com/misumisumi/flakes/compare/v5.1.1...v5.1.2) (2026-03-22)
+
+
+### Bug Fixes
+
+* **modules/anti-anti-cheat:** fix find option ([2953e91](https://github.com/misumisumi/flakes/commit/2953e915b83cd9d53fed478e6f2d21f7720e58b2))
+* **modules/anti-anti-cheat:** fix find option ([eb208da](https://github.com/misumisumi/flakes/commit/eb208da43e3a4e55c697c1ab25dbe3b4b29411cf))
+
 ## [5.1.1](https://github.com/misumisumi/flakes/compare/v5.1.0...v5.1.1) (2026-03-22)
 
 
