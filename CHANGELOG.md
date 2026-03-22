@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.1](https://github.com/misumisumi/flakes/compare/v5.1.0...v5.1.1) (2026-03-22)
+
+
+### Bug Fixes
+
+* **modules/anti-anti-cheat:** fix service ([302e0fd](https://github.com/misumisumi/flakes/commit/302e0fd9ff9a838c0ef532d1f0c0d82ac8861da3))
+
 ## [5.1.0](https://github.com/misumisumi/flakes/compare/v5.0.0...v5.1.0) (2026-03-21)
 
 
