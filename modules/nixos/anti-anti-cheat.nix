@@ -6,7 +6,6 @@
 }:
 let
   cfg = config.virtualisation.libvirtd.antiAntiCheat;
-  libvirtdConfigScript = config.systemd.services.libvirtd-config.script;
 
   inherit (lib)
     optionalString
@@ -32,16 +31,18 @@ in
       }
     ];
     systemd.services.aac-libvirtd-config = {
+      wantedBy = [ "libvirtd-config.service" ];
+      partOf = [ "libvirtd-config.service" ];
       after = [ "libvirtd-config.service" ];
       script =
         optionalString cfg.amd.enable ''
-          mkdir /run/libvirt/{aac-emulators,aac-ovmf}
+          mkdir -p /run/libvirt/{aac-emulators,aac-ovmf}
 
           find ${pkgs.aac-qemu-amd}/bin -type f -name "qemu-*" -exec ln -sf {} /run/libvirt/aac-emulators/ \;
           find ${pkgs.aac-OVMF-amd.fd}/FV -type f -name "*.fd" -exec ln -sf {} /run/libvirt/aac-ovmf/ \;
         ''
         + optionalString cfg.intel.enable ''
-          mkdir /run/libvirt/{aac-emulators,aac-ovmf}
+          mkdir -p /run/libvirt/{aac-emulators,aac-ovmf}
 
           find ${pkgs.aac-qemu-intel}/bin -type f -name "qemu-*" -exec ln -sf {} /run/libvirt/aac-emulators/ \;
           find ${pkgs.aac-OVMF-intel.fd}/FV -type f -name "*.fd" -exec ln -sf {} /run/libvirt/aac-ovmf/ \;
