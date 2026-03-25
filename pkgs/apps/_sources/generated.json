@@ -257,11 +257,11 @@
         },
         "version": "v4.2.1"
     },
-    "mcp-obsidian": {
+    "mcpvault": {
         "cargoLock": null,
-        "date": "2026-03-13",
+        "date": "2026-03-23",
         "extract": null,
-        "name": "mcp-obsidian",
+        "name": "mcpvault",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -270,13 +270,13 @@
             "leaveDotGit": false,
             "name": null,
             "owner": "bitbonsai",
-            "repo": "mcp-obsidian",
-            "rev": "503c5839ca48882d8c741d1770bd7fa48bcd6c36",
-            "sha256": "sha256-qvcl2Pu+mZySxhuTrOZHVz94ynuDtSYIe8TujZAQIpA=",
+            "repo": "mcpvault",
+            "rev": "32776a5f7fd62526863618b10a85e086deb22db8",
+            "sha256": "sha256-3VCFumEz61m3kat4ACkmlKaoACyB6g5NXlwZBaPG+Rc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "503c5839ca48882d8c741d1770bd7fa48bcd6c36"
+        "version": "32776a5f7fd62526863618b10a85e086deb22db8"
     },
     "mstflint-cx3-support": {
         "cargoLock": null,
