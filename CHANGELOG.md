@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.0.1](https://github.com/misumisumi/flakes/compare/v6.0.0...v6.0.1) (2026-03-27)
+
+
+### Bug Fixes
+
+* **anti-anti-cheat-patch:** fix patch ([2498210](https://github.com/misumisumi/flakes/commit/2498210df6d3ee846c9140cda2b04f3e39e1434a))
+* **mcpvault:** rename mcp-obsidian to mpcvault by upstream ([bd117ad](https://github.com/misumisumi/flakes/commit/bd117adec8557d25da993e9836e2fc9cc85a2132))
+
 ## [6.0.0](https://github.com/misumisumi/flakes/compare/v5.1.2...v6.0.0) (2026-03-22)
 
 
