@@ -3,7 +3,7 @@
 
 set -eu -o pipefail
 
-PKGNAME=mcp-obsidian
+PKGNAME=mcpvault
 PKGFILE=./default.nix
 
 sed -i "s|npmDepsHash = \".*\";|npmDepsHash = lib.fakeHash;|" "$PKGFILE"

@@ -77,9 +77,9 @@ skipCheck = "yes"
 src.github_tag = "ravitemer/mcp-hub"
 fetch.github = "ravitemer/mcp-hub"
 
-[mcp-obsidian]
-src.git = "https://github.com/bitbonsai/mcp-obsidian"
-fetch.github = "bitbonsai/mcp-obsidian"
+[mcpvault]
+src.git = "https://github.com/bitbonsai/mcpvault"
+fetch.github = "bitbonsai/mcpvault"
 
 [mstflint-cx3-support]
 src.manual = "4.25.0-1"

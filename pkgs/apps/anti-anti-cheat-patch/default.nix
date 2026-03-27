@@ -86,7 +86,8 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       --replace-fail "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1022" "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1af4" \
       --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1022" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4" \
       --replace-fail "+#define PCI_SUBDEVICE_ID_QEMU            0x1022" "+#define PCI_SUBDEVICE_ID_QEMU            0x1100" \
-      --replace-fail "+    dc->hotpluggable = false;" "+    dc->hotpluggable = true;"
+      --replace-fail "+    dc->hotpluggable = false;" "+    dc->hotpluggable = true;" \
+      --replace-fail "pcmc->smbios_defaults = false" "pcmc->smbios_defaults = true"
 
     sed -i 's/\r//' "$out/QEMU/intel.patch"
     sed -i 's/\r//' "$out/QEMU/amd.patch"
