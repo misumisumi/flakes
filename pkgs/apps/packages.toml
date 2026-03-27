@@ -11,9 +11,9 @@ fetch.url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blende
 
 [blender-bin]
 src.github_tag = "blender/blender"
-src.include_regex = "v5.0.*"
+src.include_regex = "v5.1.*"
 src.prefix = "v"
-fetch.url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender5.0/blender-$ver-linux-x64.tar.xz"
+fetch.url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender5.1/blender-$ver-linux-x64.tar.xz"
 
 
 [blender-bin_4_5]

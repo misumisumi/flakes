@@ -75,13 +75,13 @@
   };
   prettier-plugin-sql = {
     pname = "prettier-plugin-sql";
-    version = "0.19.2";
+    version = "0.20.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/prettier-plugin-sql/-/prettier-plugin-sql-0.19.2.tgz";
-      sha256 = "sha256-iR/eL8vuwSdmEDVAkTn+IiXUQTXwtTVjs2eHyeEYIkQ=";
+      url = "https://registry.npmjs.org/prettier-plugin-sql/-/prettier-plugin-sql-0.20.0.tgz";
+      sha256 = "sha256-2RSzk9YnUHovc1GAJu360W3VeEyaUEEh9fT9RqZgFNA=";
     };
     extract = {
-      "package.json" = ./. + "/sha256-iR_eL8vuwSdmEDVAkTn+IiXUQTXwtTVjs2eHyeEYIkQ=/package.json";
+      "package.json" = ./. + "/sha256-2RSzk9YnUHovc1GAJu360W3VeEyaUEEh9fT9RqZgFNA=/package.json";
     };pkgmgr = "npm";
     dontNpmBuild = "yes";
     needGenLock = "yes";

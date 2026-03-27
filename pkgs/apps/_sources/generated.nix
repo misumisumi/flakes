@@ -8,38 +8,38 @@
 {
   anti-anti-cheat-patch = {
     pname = "anti-anti-cheat-patch";
-    version = "00ec7153c06184a36f028559fec3ae0e6051cbf6";
+    version = "0c317fca9448b480f28806acf26b36c7986e3dbe";
     src = fetchFromGitHub {
       owner = "Scrut1ny";
       repo = "AutoVirt";
-      rev = "00ec7153c06184a36f028559fec3ae0e6051cbf6";
+      rev = "0c317fca9448b480f28806acf26b36c7986e3dbe";
       fetchSubmodules = false;
-      sha256 = "sha256-rmUfGWxz0Z2Lwmdvyt5oHNOzZGndyusWwu7TnFq1qC4=";
+      sha256 = "sha256-0vFz7BQ50b6tVbHa0OeNxs9yNHC0xezVR/dV/tz17G8=";
     };
-    date = "2026-03-05";
+    date = "2026-03-26";
   };
   blender-bin = {
     pname = "blender-bin";
-    version = "5.0.1";
+    version = "5.1.0";
     src = fetchurl {
-      url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender5.0/blender-5.0.1-linux-x64.tar.xz";
-      sha256 = "sha256-gBlYDuG3Ji5QX0GWoAI3zPdDyI0gWzjTQgFRBnbmCwk=";
+      url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender5.1/blender-5.1.0-linux-x64.tar.xz";
+      sha256 = "sha256-fyR1mQYTyNTHrFaXgD/PQNCVQcH9jCOTb0sHoWmpIMc=";
     };
   };
   blender-bin_4_5 = {
     pname = "blender-bin_4_5";
-    version = "4.5.7";
+    version = "4.5.8";
     src = fetchurl {
-      url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blender-4.5.7-linux-x64.tar.xz";
-      sha256 = "sha256-wVxT9Lohn8GHHyURbkqk+OTWLaskFEFw5fCJDokiOHU=";
+      url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blender-4.5.8-linux-x64.tar.xz";
+      sha256 = "sha256-jMOZfKIUikMYfKYl8VC0G9PvfCmRmIclo0tGy/JbqC8=";
     };
   };
   blender-bin_lts = {
     pname = "blender-bin_lts";
-    version = "4.5.7";
+    version = "4.5.8";
     src = fetchurl {
-      url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blender-4.5.7-linux-x64.tar.xz";
-      sha256 = "sha256-wVxT9Lohn8GHHyURbkqk+OTWLaskFEFw5fCJDokiOHU=";
+      url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blender-4.5.8-linux-x64.tar.xz";
+      sha256 = "sha256-jMOZfKIUikMYfKYl8VC0G9PvfCmRmIclo0tGy/JbqC8=";
     };
   };
   bt-dualboot = {
@@ -81,15 +81,15 @@
   };
   discord-mcp = {
     pname = "discord-mcp";
-    version = "f820315b0ead18068ce437dac0bccfd7f69bd35b";
+    version = "6b8e97615bdbf1a534a773c2b6802e9604620e94";
     src = fetchFromGitHub {
       owner = "SaseQ";
       repo = "discord-mcp";
-      rev = "f820315b0ead18068ce437dac0bccfd7f69bd35b";
+      rev = "6b8e97615bdbf1a534a773c2b6802e9604620e94";
       fetchSubmodules = false;
-      sha256 = "sha256-o6U3iRZeG8Bmp1FF+S7UI1kKcn5YIsEYS+7oFD2DQXc=";
+      sha256 = "sha256-guDjaml7MbWwEpkAzy1D0iJSx+ctMiJTr39AhXY+tL0=";
     };
-    date = "2026-02-14";
+    date = "2026-03-16";
   };
   drbd9-dkms = {
     pname = "drbd9-dkms";
@@ -227,10 +227,10 @@
   };
   skk-jawiki-jisyo = {
     pname = "skk-jawiki-jisyo";
-    version = "2026.03.05.001107";
+    version = "2026.03.21.134903";
     src = fetchurl {
-      url = "https://github.com/tokuhirom/jawiki-kana-kanji-dict/releases/download/v2026.03.05.001107/SKK-JISYO.jawiki";
-      sha256 = "sha256-Qg+bnvVWstVKUlmTR4idZ5hUx2rqojbq3jw8LFlWLC4=";
+      url = "https://github.com/tokuhirom/jawiki-kana-kanji-dict/releases/download/v2026.03.21.134903/SKK-JISYO.jawiki";
+      sha256 = "sha256-Dt1zExGVR7MZVYjDaDDqKYn2gq1EzJDx0wG5rXyYtTw=";
     };
   };
   snack = {

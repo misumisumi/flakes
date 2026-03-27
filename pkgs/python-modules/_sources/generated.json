@@ -17,7 +17,7 @@
     "valkey-glide": {
         "cargoLock": {
             "Cargo.lock": [
-                "sha256-LNBbjIcceHjLiWeaw08pTxAEgbZPedeXzeMlodBRzck=/Cargo.lock",
+                "sha256-I_i5yikE9hTzYa+QVyJ0SU_wV0pZ7sKfP7O8T9+z5BQ=/Cargo.lock",
                 {}
             ]
         },
@@ -28,11 +28,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-LNBbjIcceHjLiWeaw08pTxAEgbZPedeXzeMlodBRzck=",
+            "sha256": "sha256-I/i5yikE9hTzYa+QVyJ0SU/wV0pZ7sKfP7O8T9+z5BQ=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.7.tar.gz"
+            "url": "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.3.0.tar.gz"
         },
-        "version": "2.2.7"
+        "version": "2.3.0"
     },
     "version-pioneer": {
         "cargoLock": null,
@@ -43,11 +43,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-QeAgZ6ISf4HLf8/EY7yowl4y7HlXuI9b2oHouihayWk=",
+            "sha256": "sha256-AdJ90fhZraBxc7dU1ckpB0TtBE56dZWaPXpFjwgRvKg=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/v/version_pioneer/version_pioneer-0.0.15.tar.gz"
+            "url": "https://pypi.org/packages/source/v/version_pioneer/version_pioneer-0.0.16.tar.gz"
         },
-        "version": "0.0.15"
+        "version": "0.0.16"
     },
     "virtualsmartcard": {
         "cargoLock": null,
