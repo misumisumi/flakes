@@ -2,6 +2,7 @@
   anti-anti-cheat-patch,
   OVMF,
   qemu,
+  buildPackages,
 }:
 let
   qemuOverrideAttrs =
@@ -25,6 +26,11 @@ let
       patches = old.patches or [ ] ++ [
         anti-anti-cheat-patch.edk2Patch.${cpu}
       ];
+      prePatch = ''
+        rm -rf BaseTools
+        cp -r ${buildPackages.edk2}/BaseTools BaseTools
+        chmod u+w -R BaseTools
+      '';
       postPatch =
         let
           biosVendor = "American Megatrends International, LLC.";

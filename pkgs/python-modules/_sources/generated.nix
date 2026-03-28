@@ -16,13 +16,13 @@
   };
   valkey-glide = {
     pname = "valkey-glide";
-    version = "2.2.7";
+    version = "2.3.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.2.7.tar.gz";
-      sha256 = "sha256-LNBbjIcceHjLiWeaw08pTxAEgbZPedeXzeMlodBRzck=";
+      url = "https://pypi.org/packages/source/v/valkey-glide/valkey_glide-2.3.0.tar.gz";
+      sha256 = "sha256-I/i5yikE9hTzYa+QVyJ0SU/wV0pZ7sKfP7O8T9+z5BQ=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-LNBbjIcceHjLiWeaw08pTxAEgbZPedeXzeMlodBRzck=/Cargo.lock";
+      lockFile = ./. + "/sha256-I_i5yikE9hTzYa+QVyJ0SU_wV0pZ7sKfP7O8T9+z5BQ=/Cargo.lock";
       outputHashes = {
         
       };
@@ -30,10 +30,10 @@
   };
   version-pioneer = {
     pname = "version-pioneer";
-    version = "0.0.15";
+    version = "0.0.16";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/v/version_pioneer/version_pioneer-0.0.15.tar.gz";
-      sha256 = "sha256-QeAgZ6ISf4HLf8/EY7yowl4y7HlXuI9b2oHouihayWk=";
+      url = "https://pypi.org/packages/source/v/version_pioneer/version_pioneer-0.0.16.tar.gz";
+      sha256 = "sha256-AdJ90fhZraBxc7dU1ckpB0TtBE56dZWaPXpFjwgRvKg=";
     };
   };
   virtualsmartcard = {

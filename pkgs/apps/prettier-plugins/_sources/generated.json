@@ -121,7 +121,7 @@
         "cargoLock": null,
         "date": null,
         "extract": {
-            "package.json": "sha256-iR_eL8vuwSdmEDVAkTn+IiXUQTXwtTVjs2eHyeEYIkQ=/package.json"
+            "package.json": "sha256-2RSzk9YnUHovc1GAJu360W3VeEyaUEEh9fT9RqZgFNA=/package.json"
         },
         "name": "prettier-plugin-sql",
         "passthru": {
@@ -132,11 +132,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-iR/eL8vuwSdmEDVAkTn+IiXUQTXwtTVjs2eHyeEYIkQ=",
+            "sha256": "sha256-2RSzk9YnUHovc1GAJu360W3VeEyaUEEh9fT9RqZgFNA=",
             "type": "url",
-            "url": "https://registry.npmjs.org/prettier-plugin-sql/-/prettier-plugin-sql-0.19.2.tgz"
+            "url": "https://registry.npmjs.org/prettier-plugin-sql/-/prettier-plugin-sql-0.20.0.tgz"
         },
-        "version": "0.19.2"
+        "version": "0.20.0"
     },
     "prettier-plugin-toml": {
         "cargoLock": null,

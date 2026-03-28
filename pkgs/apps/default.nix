@@ -14,6 +14,7 @@ let
     dockerTools
     qemu
     OVMF
+    buildPackages
     anti-anti-cheat-patch
     ;
   inherit
@@ -70,9 +71,10 @@ let
   };
   aacPkgs = import ./aac-edk2-qemu {
     inherit
-      anti-anti-cheat-patch
-      qemu
       OVMF
+      anti-anti-cheat-patch
+      buildPackages
+      qemu
       ;
   };
 in
