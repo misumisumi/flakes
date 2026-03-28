@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.2](https://github.com/misumisumi/flakes/compare/v6.0.1...v6.0.2) (2026-03-28)
+
+
+### Bug Fixes
+
+* **aac-edk2-qemu:** fix applying patch to edk2 ([f3635a3](https://github.com/misumisumi/flakes/commit/f3635a3bdb895e25f39676a08164166bd3e05003))
+
 ## [6.0.1](https://github.com/misumisumi/flakes/compare/v6.0.0...v6.0.1) (2026-03-27)
 
 
