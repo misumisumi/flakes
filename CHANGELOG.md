@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.0.3](https://github.com/misumisumi/flakes/compare/v6.0.2...v6.0.3) (2026-03-30)
+
+
+### Bug Fixes
+
+* **spicitify-dj-info:** rm spicitify-dj-info ([23c4435](https://github.com/misumisumi/flakes/commit/23c44353ac2b9afe9f11aac155be3b1092bb80ca))
+* **spicitify-dj-info:** rm spicitify-dj-info ([d71ff82](https://github.com/misumisumi/flakes/commit/d71ff82aa03ca8f2684e90e00791b08620c04140))
+
 ## [6.0.2](https://github.com/misumisumi/flakes/compare/v6.0.1...v6.0.2) (2026-03-28)
 
 
