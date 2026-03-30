@@ -58,7 +58,7 @@ let
     let
       path = ./${value.drvDir or (head (splitString "_" name))};
     in
-    if name == "spicetify-dj-info" then value else callPackage path (overrideArgs value (import path));
+    callPackage path (overrideArgs value (import path));
   prettierPlugins = import ./prettier-plugins {
     inherit
       lib

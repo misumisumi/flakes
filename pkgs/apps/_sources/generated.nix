@@ -241,21 +241,6 @@
       sha256 = "sha256-S/52RUerkrpY9Dt3Nm27fHs1EtZaJ82/nlhanLZM6B4=";
     };
   };
-  spicetify-dj-info = {
-    pname = "spicetify-dj-info";
-    version = "ea169e6712b5b2f8e70e120a8e6a21650afb4959";
-    src = fetchFromGitHub {
-      owner = "L3-N0X";
-      repo = "spicetify-dj-info";
-      rev = "ea169e6712b5b2f8e70e120a8e6a21650afb4959";
-      fetchSubmodules = false;
-      sha256 = "sha256-VQqD807STvFr+Q2XjEHa7yeW2mFuFlfqHaUJrP1J/iE=";
-    };
-    notPackage = "yes";
-    name = "dist/djinfo.mjs";
-    skipCheck = "yes";
-    date = "2026-03-10";
-  };
   tkdnd = {
     pname = "tkdnd";
     version = "2.9.5";
@@ -304,7 +289,7 @@
     cargoLock."Cargo.lock" = {
       lockFile = ./. + "/sha256-bF8OHP6nvGhxXNvvnVCuOVFarK_n7WhGRktRN4X5ZjE=/Cargo.lock";
       outputHashes = {
-        
+
       };
     };
   };
