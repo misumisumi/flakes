@@ -6,8 +6,15 @@
   ...
 }:
 
-with lib;
 let
+  inherit (lib)
+    flatten
+    mkEnableOption
+    mkIf
+    mkOption
+    splitString
+    types
+    ;
   cfg = config.services.yaskkserv2;
 in
 {
@@ -52,6 +59,23 @@ in
           "graphical-session.target"
           "fcitx5-daemon.service"
         ];
+      };
+    };
+    launchd.agents.yaskkserv2 = {
+      enable = true;
+      config = {
+        ProgramArguments = [
+          "${cfg.package}/bin/yaskkserv2"
+          "--no-daemonize"
+        ]
+        ++ flatten (map (x: splitString " " x) cfg.extraArgs)
+        ++ [
+          "${cfg.dictionary}"
+        ];
+        KeepAlive = true;
+        RunAtLoad = true;
+        StandardOutPath = "${config.home.homeDirectory}/Library/Logs/yaskkserv2/stdout";
+        StandardErrorPath = "${config.home.homeDirectory}/Library/Logs/yaskkserv2/stderr";
       };
     };
   };
