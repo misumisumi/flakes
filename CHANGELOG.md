@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.0.4](https://github.com/misumisumi/flakes/compare/v6.0.3...v6.0.4) (2026-04-02)
+
+
+### Bug Fixes
+
+* **yaskkserv2:** add launchd.agent for macos ([dc6a661](https://github.com/misumisumi/flakes/commit/dc6a661460fb6859adad246ee6c9f7cea5f7de10))
+* **yaskkserv2:** add launchd.agent for macos ([8725bc1](https://github.com/misumisumi/flakes/commit/8725bc1ce6a0eddd3e5ff019f73e5dfcd706e9a6))
+
 ## [6.0.3](https://github.com/misumisumi/flakes/compare/v6.0.2...v6.0.3) (2026-03-30)
 
 
