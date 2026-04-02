@@ -25,6 +25,7 @@ stdenvNoCC.mkDerivation {
       --dictionary-filename ./dictionary.yaskkserv2 \
       ${optionalString isUtf8 " --utf8"} \
       ${skkDictionaries.l}/share/skk/SKK-JISYO.L \
+      ${skkDictionaries.jinmei}/share/skk/SKK-JISYO.jinmei \
       ${skk-jawiki-jisyo}/share/skk/SKK-JISYO.jawiki \
       ${optionalString withEmoji "${skk-emoji-jisyo}/share/skk/SKK-JISYO.emoji.utf8"} \
       ${optionalString withKaomoji "${skk-kaomoji-jisyo}/share/skk/SKK-JISYO.kaomoji.utf8"} \
