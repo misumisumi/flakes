@@ -26,7 +26,7 @@ jobs:
           hatchet-protocol: "rampage" # Options: holster, carve, cleave (default), rampage
           root-safe-haven: "8192"
 
-      - uses: DeterminateSystems/nix-installer-action@v21
+      - uses: DeterminateSystems/nix-installer-action@v22
         with:
           extra-conf: |
             accept-flake-config = true
