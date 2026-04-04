@@ -2,12 +2,14 @@
   pkgSource,
   lib,
   python3Packages,
+  fetchFromGitHub,
 }:
 let
   inherit (python3Packages) buildPythonApplication;
 in
 buildPythonApplication {
-  inherit (pkgSource) pname version src;
+  inherit (pkgSource) pname src;
+  version = pkgSource.date;
   pyproject = true;
 
   build-system = with python3Packages; [ hatchling ];
@@ -18,27 +20,15 @@ buildPythonApplication {
     feedparser
     lxml
     mcp
-    pypdf2
+    pypdf
     requests
   ];
 
   pythonRelaxDeps = [ "fastmcp" ];
 
-  pythonImportsCheck = [ "paper_search_mcp" ];
-  fixupPhase = ''
-    runHook preFixup
-
-    runHook postFixup
-  '';
-  postFixup = ''
-
-    mkdir -p $out/bin
-    cat <<EOF > $out/bin/paper-search-mcp
-    PYTHONPATH=$PYTHONPATH ${python3Packages.python.interpreter} -m paper_search_mcp.server
-    EOF
-    chmod +x $out/bin/paper-search-mcp
-
-  '';
+  pythonImportsCheck = [
+    "paper_search_mcp"
+  ];
 
   meta = with lib; {
     homepage = "https://github.com/openags/paper-search-mcp";
