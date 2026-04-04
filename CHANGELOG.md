@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.0.5](https://github.com/misumisumi/flakes/compare/v6.0.4...v6.0.5) (2026-04-04)
+
+
+### Bug Fixes
+
+* **paper-search-mcp:** fix repo ([794936e](https://github.com/misumisumi/flakes/commit/794936eee05ccbfd03e4c1eb69246a8f067e73f5))
+* **paper-search-mcp:** fix repo ([0ecaec4](https://github.com/misumisumi/flakes/commit/0ecaec4d65bd17361449c3af451a62ce45f79c6f))
+
 ## [6.0.4](https://github.com/misumisumi/flakes/compare/v6.0.3...v6.0.4) (2026-04-02)
 
 
