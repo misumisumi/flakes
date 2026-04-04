@@ -316,18 +316,24 @@
     },
     "paper-search-mcp": {
         "cargoLock": null,
-        "date": null,
+        "date": "2026-04-04",
         "extract": null,
         "name": "paper-search-mcp",
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-/dJ2xk9zInBJezYybbiq0NIJuVp1DNiLqshuzSsg87M=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/p/paper_search_mcp/paper_search_mcp-0.1.3.tar.gz"
+            "owner": "misumisumi",
+            "repo": "paper-search-mcp",
+            "rev": "3b7610e168278483967b659f0d6668e8e6429cf1",
+            "sha256": "sha256-M8+GdY+Tnsf+ujZEZHDJ4Z0ueneeG4oy3Md1bzketEE=",
+            "sparseCheckout": [],
+            "type": "github"
         },
-        "version": "0.1.3"
+        "version": "3b7610e168278483967b659f0d6668e8e6429cf1"
     },
     "proton-ge-rtsp-bin": {
         "cargoLock": null,

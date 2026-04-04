@@ -180,11 +180,15 @@
   };
   paper-search-mcp = {
     pname = "paper-search-mcp";
-    version = "0.1.3";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/p/paper_search_mcp/paper_search_mcp-0.1.3.tar.gz";
-      sha256 = "sha256-/dJ2xk9zInBJezYybbiq0NIJuVp1DNiLqshuzSsg87M=";
+    version = "3b7610e168278483967b659f0d6668e8e6429cf1";
+    src = fetchFromGitHub {
+      owner = "misumisumi";
+      repo = "paper-search-mcp";
+      rev = "3b7610e168278483967b659f0d6668e8e6429cf1";
+      fetchSubmodules = false;
+      sha256 = "sha256-M8+GdY+Tnsf+ujZEZHDJ4Z0ueneeG4oy3Md1bzketEE=";
     };
+    date = "2026-04-04";
   };
   proton-ge-rtsp-bin = {
     pname = "proton-ge-rtsp-bin";
