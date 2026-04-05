@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.0.6](https://github.com/misumisumi/flakes/compare/v6.0.5...v6.0.6) (2026-04-05)
+
+
+### Bug Fixes
+
+* remove nodePackages because there are no maintenance on upstream ([c090551](https://github.com/misumisumi/flakes/commit/c090551fe7721c0da2fb7b2c2a4c62202a0138f7))
+* remove nodePackages because there are no maintenance on upstream ([4196b5f](https://github.com/misumisumi/flakes/commit/4196b5f6901b19436f5505063915a8ab70f21663))
+
 ## [6.0.5](https://github.com/misumisumi/flakes/compare/v6.0.4...v6.0.5) (2026-04-04)
 
 
