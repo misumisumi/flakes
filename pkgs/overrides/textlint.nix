@@ -1,10 +1,8 @@
 { final, prev }:
-with prev; nodePackages.textlint.overrideAttrs {
-  passthru.withPlugins = p:
-    let
-      _plugins = p final.nodePackages;
-      plugins = map (p: if lib.isDerivation p then p else final.nodePackages.${p}) _plugins;
-    in
+with prev;
+textlint.overrideAttrs {
+  passthru.withPlugins =
+    plugins:
     buildEnv {
       nativeBuildInputs = [ makeWrapper ];
       name = "textlint-with-plugins";

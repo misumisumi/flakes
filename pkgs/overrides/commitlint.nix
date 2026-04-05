@@ -2,15 +2,11 @@
 with prev;
 commitlint.overrideAttrs {
   passthru.withPlugins =
-    p:
-    let
-      _plugins = p final.nodePackages;
-      plugins = map (p: if lib.isDerivation p then p else final.nodePackages.${p}) _plugins;
-    in
+    plugins:
     buildEnv {
       nativeBuildInputs = [ makeWrapper ];
       name = "commitlint-with-plugins";
-      paths = [ nodePackages."@commitlint/cli" ] ++ plugins;
+      paths = [ commitlint ] ++ plugins;
       pathsToLink = [
         "/bin"
         "/lib/node_modules"
