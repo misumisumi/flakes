@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.0.7](https://github.com/misumisumi/flakes/compare/v6.0.6...v6.0.7) (2026-04-06)
+
+
+### Bug Fixes
+
+* **overrides:** fix adding plugins algo ([aa51886](https://github.com/misumisumi/flakes/commit/aa518864d7a7d67d30e8731cb868832005f581a0))
+* **overrides:** fix adding plugins algo ([bbdb1a1](https://github.com/misumisumi/flakes/commit/bbdb1a1df38c1da76699971b9d0cf89272e54e95))
+
 ## [6.0.6](https://github.com/misumisumi/flakes/compare/v6.0.5...v6.0.6) (2026-04-05)
 
 
