@@ -6,7 +6,7 @@ textlint.overrideAttrs {
     buildEnv {
       nativeBuildInputs = [ makeWrapper ];
       name = "textlint-with-plugins";
-      paths = [ nodePackages.textlint ] ++ plugins;
+      paths = [ nodePackages.textlint ] ++ (plugins final);
       pathsToLink = [
         "/bin"
         "/lib/node_modules"
