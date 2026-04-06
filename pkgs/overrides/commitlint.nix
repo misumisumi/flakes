@@ -6,7 +6,7 @@ commitlint.overrideAttrs {
     buildEnv {
       nativeBuildInputs = [ makeWrapper ];
       name = "commitlint-with-plugins";
-      paths = [ commitlint ] ++ plugins;
+      paths = [ commitlint ] ++ (plugins final);
       pathsToLink = [
         "/bin"
         "/lib/node_modules"
