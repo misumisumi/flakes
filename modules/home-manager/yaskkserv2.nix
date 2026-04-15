@@ -36,7 +36,6 @@ in
       extraArgs = mkOption {
         type = types.listOf types.str;
         default = [
-          "--midashi-utf8"
           "--google-japanese-input notfound"
           "--google-cache-filename=/tmp/yaskkserv2.cache"
         ];
