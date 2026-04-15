@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.0.8](https://github.com/misumisumi/flakes/compare/v6.0.7...v6.0.8) (2026-04-15)
+
+
+### Bug Fixes
+
+* **nixosModules:** remove --midashi-utf8 from default value ([89a3e5c](https://github.com/misumisumi/flakes/commit/89a3e5ccd647bed7f3da314e018a4a2236ca3389))
+* **nixosModules:** remove --midashi-utf8 from default value ([5d2c98c](https://github.com/misumisumi/flakes/commit/5d2c98c7633c52a09aafcf447ba6dab88d32944e))
+
 ## [6.0.7](https://github.com/misumisumi/flakes/compare/v6.0.6...v6.0.7) (2026-04-06)
 
 
