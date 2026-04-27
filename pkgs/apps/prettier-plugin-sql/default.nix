@@ -18,7 +18,7 @@ buildNpmPackage {
 
   dontNpmBuild = true;
 
-  npmDepsHash = "sha256-wr//XWfRoq/NJYxzMYcNlHWA9INncyhiNTeqN1fsRZs=";
+  npmDepsHash = "sha256-5QtQgUjGnRWuOxAtSKqR/zpg96ODqxA+sc4fzbKytlQ=";
   postPatch = ''
     cp ${./package-lock.json} ./package-lock.json
   '';

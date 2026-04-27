@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   yarnOfflineCache = fetchYarnDeps {
     yarnLock = finalAttrs.src + "/yarn.lock";
-    hash = "sha256-KG6LwkBN3Ao85mIt244SNzOsLNxYM/g9meWJ5AknHis=";
+    hash = "sha256-VRUnlE8AQQJfPTMdexPZ/5jPFtU/qSV5GFM0pSLH9zI=";
   };
 
   meta = {
