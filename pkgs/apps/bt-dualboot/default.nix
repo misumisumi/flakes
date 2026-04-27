@@ -23,6 +23,8 @@ buildPythonApplication {
   doCheck = false;
   pyproject = true;
 
+  passthru.useUpdateScript = false;
+
   meta = {
     homepage = "https://github.com/x2es/bt-dualboot";
     description = "User-friendly tool making your bluetooth devices working both in Windows and Linux without re-pairing chore.";

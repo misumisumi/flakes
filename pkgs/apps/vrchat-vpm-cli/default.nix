@@ -1,5 +1,6 @@
 {
   fetchurl,
+  writeScript,
   stdenvNoCC,
   dotnet-sdk,
   unzip,
@@ -7,7 +8,7 @@
 let
   version = "0.1.28";
 in
-stdenvNoCC.mkDerivation {
+stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "vrchat-vpm-cli";
   inherit version;
   src = fetchurl {
@@ -31,6 +32,16 @@ stdenvNoCC.mkDerivation {
     chmod +x $out/bin/vpm
   '';
 
+  passthru.updateScript = writeScript "update" ''
+    #!/usr/bin/env nix-shell
+    #!nix-shell -i bash -p curl jq nix-update
+
+    set -euo pipefail
+
+    version=$(curl -fsSL "https://api.nuget.org/v3-flatcontainer/vrchat.vpm.cli/index.json" | jq -er '.versions | last(.[] | select(match("^[0-9]+\\.[0-9]+\\.[0-9]+$")))')
+    nix-update --version "$version" --flake ${finalAttrs.pname}
+  '';
+
   meta = {
     description = "The VRChat Package Manager from Command Line";
     homepage = "https://vcc.docs.vrchat.com/vpm/cli/";
@@ -40,4 +51,4 @@ stdenvNoCC.mkDerivation {
       "aarch64-darwin"
     ];
   };
-}
+})

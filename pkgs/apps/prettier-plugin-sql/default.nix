@@ -3,7 +3,6 @@
   fetchurl,
   nix-update-script,
   buildNpmPackage,
-  importNpmLock,
 }:
 let
   inherit (lib) licenses;
@@ -17,13 +16,9 @@ buildNpmPackage {
     sha256 = "sha256-2RSzk9YnUHovc1GAJu360W3VeEyaUEEh9fT9RqZgFNA=";
   };
 
-  npmDeps = importNpmLock {
-    npmRoot = ./package-lock.json;
-  };
-  inherit (importNpmLock) npmConfigHook;
-
   dontNpmBuild = true;
 
+  npmDepsHash = "sha256-wr//XWfRoq/NJYxzMYcNlHWA9INncyhiNTeqN1fsRZs=";
   postPatch = ''
     cp ${./package-lock.json} ./package-lock.json
   '';

@@ -28,7 +28,17 @@
         overlay = overlays.default; # deprecated attributes for retro compatibility
         overlays.default =
           final: prev:
-          (import ./pkgs/overrides { inherit final prev; })
+          {
+            nix-update = prev.nix-update.overrideAttrs (old: {
+              patches = old.patches or [ ] ++ [
+                ./pkgs/nix-update.patch
+              ];
+              passthru = old.passthru // {
+                skipUpdate = true;
+              };
+            });
+          }
+          // (import ./pkgs/overrides { inherit final prev; })
           // (import ./pkgs/apps {
             inherit lib;
             pkgs = final;
@@ -120,12 +130,6 @@
               }).packages
               pkgs
             );
-          nix-update = pkgs.nix-update.overrideAttrs (old: {
-            postPatch = old.postPatch or "" + ''
-              substituteInPlace nix_update/eval.nix \
-                --replace-fail "pkg.npmDeps.outputHash or null" "if pkg ? npmDeps then pkg.npmDeps.outputHash or true else null"
-            '';
-          });
         in
         rec {
           _module.args.pkgs = import inputs.nixpkgs {
@@ -138,12 +142,12 @@
           };
           apps = {
             update-pkgs = import ./scripts/update-pkgs.nix {
-              inherit lib packages nix-update;
-              inherit (pkgs) writeShellScriptBin python3;
+              inherit lib packages;
+              inherit (pkgs) nix-update writeShellScriptBin;
             };
           };
           packages = (mkPackages system myPkgs) // {
-            inherit nix-update;
+            inherit (pkgs) nix-update;
           };
           checks = mkCheck packages;
           devshells.default = {

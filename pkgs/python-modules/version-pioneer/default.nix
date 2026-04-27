@@ -26,6 +26,7 @@ buildPythonPackage {
     hatch-requirements-txt
     tomli
   ];
+  passthru.useUpdateScript = false;
 
   meta = {
     homepage = "https://github.com/kiyoon/version-pioneer";

@@ -3,7 +3,6 @@
   fetchurl,
   nix-update-script,
   buildNpmPackage,
-  importNpmLock,
 }:
 buildNpmPackage {
   pname = "commitlint-format-json";
@@ -12,14 +11,9 @@ buildNpmPackage {
     url = "https://registry.npmjs.org/commitlint-format-json/-/commitlint-format-json-1.1.0.tgz";
     sha256 = "sha256-VyY0HOpelsy7s96i1aI5Vl9Y63tUoa6cO6oT6bHu1uk=";
   };
-
-  npmDeps = importNpmLock {
-    npmRoot = ./package-lock.json;
-  };
-  inherit (importNpmLock) npmConfigHook;
-
   dontNpmBuild = true;
 
+  npmDepsHash = "sha256-wr//XWfRoq/NJYxzMYcNlHWA9INncyhiNTeqN1fsRZs=";
   postPatch = ''
     cp ${./package-lock.json} ./package-lock.json
   '';

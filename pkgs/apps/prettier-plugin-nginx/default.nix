@@ -3,7 +3,6 @@
   fetchFromGitHub,
   nix-update-script,
   buildNpmPackage,
-  importNpmLock,
 }:
 let
   inherit (lib) licenses;
@@ -19,10 +18,10 @@ buildNpmPackage {
     sha256 = "sha256-JsAgLg89gxLlmXbeoFAceGsmvLLrHuQHA/heuzFxWSg=";
   };
 
-  npmDeps = importNpmLock {
-    npmRoot = ./package-lock.json;
-  };
-  inherit (importNpmLock) npmConfigHook;
+  npmDepsHash = "sha256-wr//XWfRoq/NJYxzMYcNlHWA9INncyhiNTeqN1fsRZs=";
+  postPatch = ''
+    cp ${./package-lock.json} ./package-lock.json
+  '';
 
   passthru.updateScript = nix-update-script {
     extraArgs = [

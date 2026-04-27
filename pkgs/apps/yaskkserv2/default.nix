@@ -20,7 +20,7 @@ rustPlatform.buildRustPackage {
     sha256 = "sha256-bF8OHP6nvGhxXNvvnVCuOVFarK/n7WhGRktRN4X5ZjE=";
   };
 
-  cargoDeps = rustPlatform.importCargoLock { lockFile = ./Cargo.lock; };
+  cargoLock.lockFile = ./Cargo.lock;
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ openssl ];
@@ -28,7 +28,7 @@ rustPlatform.buildRustPackage {
 
   patchPhase = ''
     substituteInPlace src/skk/mod.rs \
-      --replace /etc/yaskkserv2.conf $out/etc/yaskkserv2.conf
+      --replace-fail /etc/yaskkserv2.conf $out/etc/yaskkserv2.conf
   '';
 
   buildPhase = ''
@@ -41,13 +41,6 @@ rustPlatform.buildRustPackage {
     cp -av target/release/yaskkserv2 $out/bin
     cp -av target/release/yaskkserv2_make_dictionary $out/bin
   '';
-
-  passthru.updateScript = nix-update-script {
-    extraArgs = [
-      "--flake"
-      "--generate-lockfile"
-    ];
-  };
 
   meta = {
     description = "skkserv wroten by rust";

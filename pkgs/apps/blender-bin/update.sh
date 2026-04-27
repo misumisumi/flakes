@@ -22,4 +22,4 @@ fetch_aur_version() {
 }
 
 version=$(fetch_aur_version "$aur")
-nix-update "$pname" --flake --version "$version" --url "https://github.com/blender/blender" --override-filename pkgs/apps/blender-bin/default.nix --commit
+nix-update "$pname" --flake --version "$version" --url "https://github.com/blender/blender" --override-filename pkgs/apps/blender-bin/default.nix

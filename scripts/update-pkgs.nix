@@ -2,7 +2,6 @@
   lib,
   packages,
   nix-update,
-  python3,
   writeShellScriptBin,
 }:
 let
@@ -16,10 +15,20 @@ let
     set -euo pipefail
 
     ${concatStringsSep "\n" (
-      mapAttrsToList (pname: value: ''
-        echo "Updating ${pname}..."
-        ${nix-update}/bin/nix-update --flake ${pname} --use-update-script "$@"
-      '') (filterAttrs (n: v: !(v.passthru.skipUpdate or false) && (hasAttr "src" v)) packages)
+      mapAttrsToList (
+        pname: value:
+        let
+          useScript =
+            if (hasAttr "updateScript" value.passthru) && (value.passthru.useUpdateScript or true) then
+              "--use-update-script"
+            else
+              "";
+        in
+        ''
+          echo "Updating ${pname}..."
+          ${nix-update}/bin/nix-update ${pname} --flake ${useScript} "$@"
+        ''
+      ) (filterAttrs (n: v: !(v.passthru.skipUpdate or false) && (hasAttr "src" v)) packages)
     )}
   '';
 in

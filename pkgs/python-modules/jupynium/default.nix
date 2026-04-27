@@ -53,6 +53,7 @@ buildPythonPackage {
     verboselogs
     version-pioneer
   ];
+  passthru.useUpdateScript = false;
 
   meta = with lib; {
     homepage = "https://github.com/kiyoon/jupynium.nvim";
