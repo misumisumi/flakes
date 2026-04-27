@@ -1,14 +1,24 @@
 {
-  pkgSource,
   lib,
+  fetchFromGitHub,
   stdenv,
   cmake,
   libXcursor,
   tcl,
   tk,
 }:
-stdenv.mkDerivation rec {
-  inherit (pkgSource) pname version src;
+let
+  pname = "tkdnd";
+  version = "2.9.5";
+in
+stdenv.mkDerivation {
+  inherit pname version;
+  src = fetchFromGitHub {
+    owner = "petasis";
+    repo = pname;
+    rev = "tkdnd-release-test-v${version}";
+    sha256 = "sha256-VF1f9HSEThyFy3u7d3Kvo7EIpoosz6KpLOiHkf89PQI=";
+  };
 
   nativeBuildInputs = [ cmake ];
   buildInputs = [

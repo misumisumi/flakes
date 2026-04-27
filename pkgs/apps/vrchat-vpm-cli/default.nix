@@ -1,13 +1,19 @@
 {
-  lib,
-  pkgSource,
+  fetchurl,
   stdenvNoCC,
   dotnet-sdk,
   unzip,
 }:
-
+let
+  version = "0.1.28";
+in
 stdenvNoCC.mkDerivation {
-  inherit (pkgSource) pname version src;
+  pname = "vrchat-vpm-cli";
+  inherit version;
+  src = fetchurl {
+    url = "https://www.nuget.org/api/v2/package/VRChat.VPM.CLI/${version}";
+    sha256 = "sha256-Pz8KBpjmpzx+6gD4nqGVBEp5z4UX6hFqZHGy8hJCD4k=";
+  };
   nativeBuildInputs = [ unzip ];
 
   unpackPhase = ''

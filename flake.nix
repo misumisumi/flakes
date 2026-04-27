@@ -39,13 +39,7 @@
                 pfinal: pprev:
                 (import ./pkgs/python-modules {
                   inherit lib;
-                  inherit (final)
-                    fetchgit
-                    fetchurl
-                    fetchFromGitHub
-                    dockerTools
-                    python3
-                    ;
+                  pkgs = final;
                 }).override
                 // {
                   mcp = pprev.mcp.overridePythonAttrs (old: {
@@ -78,11 +72,9 @@
             zotero-addons =
               (import ./pkgs/zotero-addons {
                 inherit (prev)
-                  fetchgit
-                  fetchurl
-                  fetchFromGitHub
-                  dockerTools
                   lib
+                  fetchurl
+                  nix-update-script
                   stdenv
                   ;
               }).override;
@@ -113,30 +105,27 @@
             // (
               (import ./pkgs/python-modules {
                 inherit lib;
-                inherit (pkgs)
-                  fetchgit
-                  fetchurl
-                  fetchFromGitHub
-                  dockerTools
-                  python3
-                  ;
+                inherit pkgs;
               }).packages
               pkgs
             )
             // (
               (import ./pkgs/zotero-addons {
+                inherit lib;
                 inherit (pkgs)
-                  fetchgit
                   fetchurl
-                  fetchFromGitHub
-                  dockerTools
-                  lib
+                  nix-update-script
                   stdenv
                   ;
               }).packages
               pkgs
             );
-
+          nix-update = pkgs.nix-update.overrideAttrs (old: {
+            postPatch = old.postPatch or "" + ''
+              substituteInPlace nix_update/eval.nix \
+                --replace-fail "pkg.npmDeps.outputHash or null" "if pkg ? npmDeps then pkg.npmDeps.outputHash or true else null"
+            '';
+          });
         in
         rec {
           _module.args.pkgs = import inputs.nixpkgs {
@@ -147,7 +136,15 @@
             ];
             config.allowUnfree = true;
           };
-          packages = mkPackages system myPkgs;
+          apps = {
+            update-pkgs = import ./scripts/update-pkgs.nix {
+              inherit lib packages nix-update;
+              inherit (pkgs) writeShellScriptBin python3;
+            };
+          };
+          packages = (mkPackages system myPkgs) // {
+            inherit nix-update;
+          };
           checks = mkCheck packages;
           devshells.default = {
             packages = with pkgs; [

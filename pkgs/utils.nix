@@ -1,30 +1,23 @@
 {
   lib,
-  fetchgit,
-  fetchurl,
-  fetchFromGitHub,
-  dockerTools,
+  python3,
   ...
 }:
 let
-  inherit (builtins) fromJSON readFile;
-  inherit (lib)
-    nameValuePair
-    mapAttrs'
+  inherit (builtins)
+    functionArgs
+    intersectAttrs
     ;
+  inherit (lib) listToAttrs nameValuePair;
 in
 {
-  getSources =
-    path:
-    import path {
-      inherit
-        fetchgit
-        fetchurl
-        fetchFromGitHub
-        dockerTools
-        ;
+  overrideArgs =
+    pkgValue: pkgFunc:
+    # Replace attr values when existing in pkgFunc args, otherwise keep pkgFunc args
+    # Nothing do when attr values is not in pkgFunc args
+    intersectAttrs (functionArgs pkgFunc) {
+      pythonPackages = python3.pkgs;
     };
-  getSourcesJSON = path: fromJSON (readFile path);
   # [{name=<name>; value=func <name>;}] -> { <name> = func <name> <value>; }
-  withContents = src: func: mapAttrs' (n: v: nameValuePair (v.drvDir or n) (func n v)) src;
+  withContents = srcs: func: listToAttrs (map (n: nameValuePair n (func n)) srcs);
 }

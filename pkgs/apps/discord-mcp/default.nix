@@ -1,18 +1,23 @@
 {
-  pkgSource,
   lib,
+  fetchFromGitHub,
+  nix-update-script,
   jre,
   makeWrapper,
   maven,
 }:
 
 maven.buildMavenPackage {
-  inherit (pkgSource)
-    pname
-    src
-    ;
-  version = pkgSource.date;
-  mvnHash = "sha256-fGOFUz/3E9J6uBvpFqNCiKnX4PWZ2pxyvoTMztICwpU=";
+  pname = "discord-mcp";
+  version = "1.0.0-unstable-2026-04-25";
+  src = fetchFromGitHub {
+    owner = "SaseQ";
+    repo = "discord-mcp";
+    rev = "0b35793bf9f86cc65849ae42ebae940718fbf812";
+    fetchSubmodules = false;
+    sha256 = "sha256-cse7EqqdIBY6QiSmIYjdqRN9jCSQsaTOaI2EzPJKS8s=";
+  };
+  mvnHash = "sha256-ou9rfs19udyKP3NGaPRYqRREJQy5AtwWrYcUf42fXHQ=";
 
   nativeBuildInputs = [ makeWrapper ];
 
@@ -27,6 +32,14 @@ maven.buildMavenPackage {
 
     runHook postInstall
   '';
+
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+      "--version"
+      "branch"
+    ];
+  };
 
   meta = with lib; {
     description = "A MCP server for the Discord integration. Enable your AI assistants to seamlessly interact with Discord. Enhance your Discord experience with powerful automation capabilities.";

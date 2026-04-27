@@ -1,44 +1,38 @@
 {
   lib,
-  fetchgit,
-  fetchurl,
-  fetchFromGitHub,
-  dockerTools,
-  python3,
+  pkgs,
 }:
 let
-  inherit (builtins) head;
-  inherit (lib) mapAttrs splitString;
-  inherit
-    (import ../utils.nix {
-      inherit lib;
-      inherit
-        fetchgit
-        fetchurl
-        fetchFromGitHub
-        dockerTools
-        ;
-    })
-    getSources
-    withContents
+  inherit (builtins)
+    all
+    attrNames
+    functionArgs
+    head
+    intersectAttrs
+    readDir
     ;
-  pkgSources = getSources ./_sources/generated.nix;
+  inherit (lib) filterAttrs mapAttrs splitString;
 
-  overrideArgs =
-    pkgValue: pkgFunc:
-    builtins.intersectAttrs (builtins.functionArgs pkgFunc) {
-      pkgSource = pkgValue;
-      pythonPackages = python3.pkgs;
-    };
+  inherit (pkgs)
+    callPackage
+    python3
+    ;
+
+  inherit (import ../utils.nix { inherit lib python3 callPackage; }) withContents;
+
+  ignoreModules = [ ];
+  modules = attrNames (
+    filterAttrs (n: v: (all (p: n != p) ignoreModules) && (v == "directory")) (readDir ./.)
+  );
   callPkgs =
-    name: value:
+    name:
     let
-      name' = value.name or (head (splitString "_" name));
-      path = ./${name'};
+      path = ./${name};
     in
-    python3.pkgs.callPackage path (overrideArgs value (import path));
+    python3.pkgs.callPackage path { };
+
 in
 rec {
-  override = withContents pkgSources callPkgs;
+  override = withContents modules callPkgs;
   packages = nixpkgs: mapAttrs (n: v: nixpkgs.python3.pkgs.${n}) override;
 }

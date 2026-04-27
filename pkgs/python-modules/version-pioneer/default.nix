@@ -1,13 +1,22 @@
 {
   lib,
-  pkgSource,
+  fetchPypi,
   buildPythonPackage,
   hatchling,
   hatch-requirements-txt,
   tomli,
 }:
+let
+  version = "0.0.16";
+in
 buildPythonPackage {
-  inherit (pkgSource) pname version src;
+  pname = "version_pioneer";
+  inherit version;
+  src = fetchPypi {
+    pname = "version_pioneer";
+    inherit version;
+    sha256 = "sha256-AdJ90fhZraBxc7dU1ckpB0TtBE56dZWaPXpFjwgRvKg=";
+  };
 
   doCheck = false;
   pyproject = true;

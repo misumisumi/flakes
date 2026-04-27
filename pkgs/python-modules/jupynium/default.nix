@@ -1,6 +1,6 @@
 {
   lib,
-  pkgSource,
+  fetchPypi,
   buildPythonPackage,
   coloredlogs,
   gitpython,
@@ -20,8 +20,16 @@
   verboselogs,
   version-pioneer,
 }:
+let
+  pname = "jupynium";
+  version = "0.2.7";
+in
 buildPythonPackage {
-  inherit (pkgSource) pname version src;
+  inherit pname version;
+  src = fetchPypi {
+    inherit pname version;
+    sha256 = "sha256-fZtSND4uy5vja09a4ZshFElZIdonNzxAZIqXQABrPUM=";
+  };
 
   doCheck = false;
   pyproject = true;

@@ -1,15 +1,26 @@
 {
-  pkgSource,
   lib,
+  fetchFromGitHub,
+  nix-update-script,
   openssl,
   pkg-config,
   rustPlatform,
 }:
+let
+  inherit (lib) licenses platforms;
+  pname = "yaskkserv2";
+  version = "0.1.7";
+in
 rustPlatform.buildRustPackage {
-  inherit (pkgSource) pname src;
-  version = lib.removePrefix "v" pkgSource.version;
+  inherit pname version;
+  src = fetchFromGitHub {
+    owner = "wachikun";
+    repo = "${pname}";
+    rev = "${version}";
+    sha256 = "sha256-bF8OHP6nvGhxXNvvnVCuOVFarK/n7WhGRktRN4X5ZjE=";
+  };
 
-  cargoLock = pkgSource.cargoLock."Cargo.lock";
+  cargoDeps = rustPlatform.importCargoLock { lockFile = ./Cargo.lock; };
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ openssl ];
@@ -31,7 +42,14 @@ rustPlatform.buildRustPackage {
     cp -av target/release/yaskkserv2_make_dictionary $out/bin
   '';
 
-  meta = with lib; {
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+      "--generate-lockfile"
+    ];
+  };
+
+  meta = {
     description = "skkserv wroten by rust";
     homepage = "https://github.com/wachikun/yaskkserv2";
     license = licenses.asl20;

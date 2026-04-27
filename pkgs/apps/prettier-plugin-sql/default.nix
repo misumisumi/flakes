@@ -5,12 +5,16 @@
   buildNpmPackage,
   importNpmLock,
 }:
+let
+  inherit (lib) licenses;
+  pname = "prettier-plugin-sql";
+  version = "0.20.0";
+in
 buildNpmPackage {
-  pname = "commitlint-format-json";
-  version = "1.1.0";
+  inherit pname version;
   src = fetchurl {
-    url = "https://registry.npmjs.org/commitlint-format-json/-/commitlint-format-json-1.1.0.tgz";
-    sha256 = "sha256-VyY0HOpelsy7s96i1aI5Vl9Y63tUoa6cO6oT6bHu1uk=";
+    url = "https://registry.npmjs.org/prettier-plugin-sql/-/prettier-plugin-sql-${version}.tgz";
+    sha256 = "sha256-2RSzk9YnUHovc1GAJu360W3VeEyaUEEh9fT9RqZgFNA=";
   };
 
   npmDeps = importNpmLock {
@@ -31,9 +35,9 @@ buildNpmPackage {
     ];
   };
 
-  meta = with lib; {
-    homepage = "https://github.com/bycedric/commitlint-formats";
-    description = "Extra formatters for commitlint";
+  meta = {
+    homepage = "https://github.com/un-ts/prettier";
+    description = "Opinionated but Incredible Prettier plugins.";
     license = licenses.mit;
     platforms = [
       "x86_64-linux"

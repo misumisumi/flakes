@@ -1,6 +1,6 @@
 {
-  pkgSource,
   lib,
+  fetchFromGitHub,
   stdenv,
   SDL2,
   alsa-lib,
@@ -8,9 +8,18 @@
   pkg-config,
   zlib,
 }:
+let
+  pname = "julius-speech";
+  version = "v4.6";
+in
 stdenv.mkDerivation {
-  inherit (pkgSource) pname src;
-  version = lib.removePrefix "v" pkgSource.version;
+  inherit pname version;
+  src = fetchFromGitHub {
+    owner = pname;
+    repo = "julius";
+    rev = "v${version}";
+    sha256 = "sha256-jw3SF18naDnkt7qW9iWcM+h4lcQY5bGCewcUeLbwwP0=";
+  };
 
   env.NIX_CFLAGS_COMPILE = toString [
     "-std=gnu17"

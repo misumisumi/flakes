@@ -1,7 +1,6 @@
 {
   lib,
-  lprdebSource,
-  cupsdebSource,
+  fetchurl,
   stdenv,
   dpkg,
   autoPatchelfHook,
@@ -29,11 +28,28 @@ let
     coreutils
     which
   ];
-
+  cupsdebSource = {
+    pname = "cups-brother-hll5100dn-cupswrapper";
+    version = "3.5.1-1";
+    src = fetchurl {
+      url = "https://download.brother.com/welcome/dlf102554/hll5100dncupswrapper-3.5.1-1.i386.deb";
+      sha256 = "sha256-i309lhjE6FTNd8f0d4vv7/oaNUt165scU9Gzlff8gcE=";
+    };
+    drvDir = "cups-brother-hll5100dn";
+  };
+  lprdebSource = {
+    pname = "cups-brother-hll5100dn-lpr";
+    version = "3.5.1-1";
+    src = fetchurl {
+      url = "https://download.brother.com/welcome/dlf102553/hll5100dnlpr-3.5.1-1.i386.deb";
+      sha256 = "sha256-JnPiBVJ+ZJKivjq+Kizcf5U8vilOFdLVWBuRUiWJ5zE=";
+    };
+    drvDir = "cups-brother-hll5100dn";
+  };
 in
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "cups-brother-hll5100dn";
-  inherit (lprdebSource) version;
+  version = "3.5.1-1";
 
   nativeBuildInputs = [
     dpkg
@@ -80,6 +96,7 @@ stdenv.mkDerivation rec {
       $out/share/cups/model/
     runHook postInstall
   '';
+  passthru.skipUpdate = true;
 
   meta = with lib; {
     homepage = "http://www.brother.com/";

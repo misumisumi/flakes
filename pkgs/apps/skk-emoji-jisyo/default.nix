@@ -1,12 +1,20 @@
 {
-  pkgSource,
   lib,
+  fetchFromGitHub,
   stdenvNoCC,
 }:
-
+let
+  pname = "skk-emoji-jisyo";
+  version = "0.0.9";
+in
 stdenvNoCC.mkDerivation {
-  inherit (pkgSource) pname src;
-  version = lib.removePrefix "v" pkgSource.version;
+  inherit pname version;
+  src = fetchFromGitHub {
+    owner = "uasi";
+    repo = pname;
+    rev = "v${version}";
+    sha256 = "sha256-H73wfvFhff55vFvNOunkma3C28BnXGuLzMrSvTLTgXU=";
+  };
 
   installPhase = ''
     mkdir -p $out/share/skk
