@@ -13,7 +13,7 @@
 }:
 stdenv.mkDerivation {
   pname = "knp";
-  version = "bc4cef188669f88cdeb590fe7afb1021ce2ae481";
+  version = "trank-20121203+1-unstable-2023-11-01";
   src = fetchFromGitHub {
     owner = "ku-nlp";
     repo = "knp";
