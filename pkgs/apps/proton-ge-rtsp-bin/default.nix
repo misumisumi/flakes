@@ -1,5 +1,6 @@
 {
   proton-ge-bin,
+  fetchzip,
   nix-update-script,
 }:
 proton-ge-bin.overrideAttrs (
@@ -10,9 +11,9 @@ proton-ge-bin.overrideAttrs (
   in
   {
     inherit pname version;
-    src = fetchTarball {
+    src = fetchzip {
       url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/${version}/${version}.tar.gz";
-      sha256 = "sha256-eAJjw575cJlj7qLsPC1LgRsVMW4O754Q6SO7IV74EyE=";
+      hash = "sha256-KVc5YXJea0eQImKUPg6eW7uSSe1e+mncB4cSBV4IKME=";
     };
     passthru = (oldAttrs.passthru or { }) // {
       updateScript = nix-update-script {
