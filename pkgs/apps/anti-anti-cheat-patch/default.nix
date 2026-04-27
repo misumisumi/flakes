@@ -1,6 +1,7 @@
 {
   lib,
   fetchFromGitHub,
+  nix-update-script,
   stdenvNoCC,
   qemu,
   edk2,
@@ -108,9 +109,13 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       amd = "${finalAttrs.finalPackage.out}/EDK2/amd.patch";
       intel = "${finalAttrs.finalPackage.out}/EDK2/intel.patch";
     };
-    updateOptions = [
-      "--version=branch"
-    ];
+    updateScript = nix-update-script {
+      extraArgs = [
+        "--flake"
+        "--version"
+        "branch"
+      ];
+    };
   };
 
   meta = with lib; {
