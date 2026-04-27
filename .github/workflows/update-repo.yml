@@ -20,6 +20,10 @@ jobs:
           private_key: ${{ secrets.PRIVATE_KEY }}
 
       - uses: DeterminateSystems/nix-installer-action@v22
+        with:
+          extra-conf: |
+            accept-flake-config = true
+            download-buffer-size = 524288000
 
       - name: Setup git account
         run: |
@@ -30,7 +34,7 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
-          scripts/update-pkgs.sh
+          nix run .#update-pkgs -- --commit
 
       - name: Update README
         run: |
@@ -38,7 +42,7 @@ jobs:
 
       - name: Commit updated file
         run: |
-          git commit -a -m "chore(nvfetcher): auto update package version"
+          git commit -a -m "chore(README): update README"
 
       - uses: DeterminateSystems/update-flake-lock@v28
         id: update
