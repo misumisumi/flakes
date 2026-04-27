@@ -9,7 +9,7 @@ let
 in
 buildPythonApplication {
   pname = "paper-search-mcp";
-  version = "6d1f7ef5bcb7cfa5905d50c42fd7b8a4c1c16afd";
+  version = "0-unstable-2026-04-03";
   src = fetchFromGitHub {
     owner = "misumisumi";
     repo = "paper-search-mcp";
