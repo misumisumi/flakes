@@ -17,7 +17,7 @@
 }:
 let
   pname = "virtualsmartcard";
-  version = "virtualsmartcard-0.10";
+  version = "0.10";
 in
 toPythonModule (
   stdenv.mkDerivation (finalAttrs: {
@@ -25,7 +25,7 @@ toPythonModule (
     src = fetchFromGitHub {
       owner = "frankmorgner";
       repo = "vsmartcard";
-      rev = version;
+      rev = "virtualsmartcard-${version}";
       sha256 = "sha256-+BrX2aqByUvIUbN4K+sdq9bH29FD2rtTt4q+URPgx7A=";
     };
     sourceRoot = "${finalAttrs.src.name}/virtualsmartcard";
@@ -66,7 +66,7 @@ toPythonModule (
       extraArgs = [
         "--flake"
         "--version-regex"
-        "(virtualsmartcard-*)"
+        "virtualsmartcard-(.*)"
       ];
     };
 
