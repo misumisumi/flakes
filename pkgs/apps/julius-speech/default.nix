@@ -10,7 +10,7 @@
 }:
 let
   pname = "julius-speech";
-  version = "v4.6";
+  version = "4.6";
 in
 stdenv.mkDerivation {
   inherit pname version;
