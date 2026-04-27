@@ -3,7 +3,6 @@
   fetchurl,
   nix-update-script,
   buildNpmPackage,
-  importNpmLock,
 }:
 let
   inherit (lib) licenses;
@@ -17,13 +16,9 @@ buildNpmPackage {
     sha256 = "sha256-moAaaxeGJrqe4l/mg/rh2mpm93SXQj1wXD19hUu6cPA=";
   };
 
-  npmDeps = importNpmLock {
-    npmRoot = ./package-lock.json;
-  };
-  inherit (importNpmLock) npmConfigHook;
-
   dontNpmBuild = true;
 
+  npmDepsHash = "sha256-2iutb1mNmL8AoU38woNexhJT3VH5otLATc+UKG8NXco=";
   postPatch = ''
     cp ${./package-lock.json} ./package-lock.json
   '';
@@ -32,8 +27,6 @@ buildNpmPackage {
     extraArgs = [
       "--flake"
       "--generate-lockfile"
-      "--version-regex"
-      "prettier-plugin-sh@(*)"
     ];
   };
 
