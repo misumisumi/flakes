@@ -9,13 +9,13 @@ let
 in
 buildPythonApplication {
   pname = "paper-search-mcp";
-  version = "3b7610e168278483967b659f0d6668e8e6429cf1";
+  version = "6d1f7ef5bcb7cfa5905d50c42fd7b8a4c1c16afd";
   src = fetchFromGitHub {
     owner = "misumisumi";
     repo = "paper-search-mcp";
-    rev = "3b7610e168278483967b659f0d6668e8e6429cf1";
+    rev = "6d1f7ef5bcb7cfa5905d50c42fd7b8a4c1c16afd";
     fetchSubmodules = false;
-    sha256 = "sha256-M8+GdY+Tnsf+ujZEZHDJ4Z0ueneeG4oy3Md1bzketEE=";
+    sha256 = "sha256-P7PFynx+BZ/LuxXRjkuWhlqiYVm1+3UugFin3Qu7rmM=";
   };
   pyproject = true;
 
