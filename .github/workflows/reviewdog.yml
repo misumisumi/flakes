@@ -25,7 +25,7 @@ jobs:
       pr-number: ${{ github.event.pull_request.number }}
       triggered-name: "reviewdog"
     secrets:
-      AGENT_OF_ME_APP_ID: ${{ secrets.AGENT_OF_ME_APP_ID }}
+      AGENT_OF_ME_APP_CLIENT_ID: ${{ secrets.AGENT_OF_ME_APP_CLIENT_ID }}
       AGENT_OF_ME_PRIVATE_KEY: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}
 
   reviewdog:
@@ -56,5 +56,5 @@ jobs:
       pr-number: ${{ github.event.pull_request.number }}
       triggered-name: "reviewdog"
     secrets:
-      AGENT_OF_ME_APP_ID: ${{ secrets.AGENT_OF_ME_APP_ID }}
+      AGENT_OF_ME_CLIENT_ID: ${{ secrets.AGENT_OF_ME_CLIENT_ID }}
       AGENT_OF_ME_PRIVATE_KEY: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}
