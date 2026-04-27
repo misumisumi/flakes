@@ -9,13 +9,12 @@ let
 in
 buildPythonApplication {
   pname = "paper-search-mcp";
-  version = "0-unstable-2026-04-03";
+  version = "0.1.3-unstable-2026-04-27";
   src = fetchFromGitHub {
-    owner = "misumisumi";
+    owner = "openags";
     repo = "paper-search-mcp";
-    rev = "6d1f7ef5bcb7cfa5905d50c42fd7b8a4c1c16afd";
-    fetchSubmodules = false;
-    sha256 = "sha256-P7PFynx+BZ/LuxXRjkuWhlqiYVm1+3UugFin3Qu7rmM=";
+    rev = "d499d014db0cfe4b76328716788e5fb12fb80eed";
+    sha256 = "sha256-Q5kHDYawheAuRAzzChN9WGzDWMZOpDR76XmI7WVE3oQ=";
   };
   pyproject = true;
 
