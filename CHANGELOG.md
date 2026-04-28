@@ -1,5 +1,17 @@
 # Changelog
 
+## [6.0.9](https://github.com/misumisumi/flakes/compare/v6.0.8...v6.0.9) (2026-04-28)
+
+
+### Bug Fixes
+
+* fix missing derivation ([ea420ac](https://github.com/misumisumi/flakes/commit/ea420ace2c28f8b4411ccfc75b9ee86e2d03da26))
+* fix node and yarn deps hash ([d2aa00c](https://github.com/misumisumi/flakes/commit/d2aa00cb6573bcd172755cb4d28cadbb445b6191))
+* **mcp-server:** update src ([668ccc1](https://github.com/misumisumi/flakes/commit/668ccc1c677ec90aa32e39ff644e2fa6f4597256))
+* **paper-search-mcp:** fix repo ([9f07695](https://github.com/misumisumi/flakes/commit/9f076956e10967d22bf7c2c5bc5030842dac12fb))
+* **proton-ge-rtsp-bin:** fix derivation ([bbf31c8](https://github.com/misumisumi/flakes/commit/bbf31c855a148233e8abf994b408e3cd2c54f5e8))
+* **valkey-glide:** fix calculating cargoDeps ([a7d9078](https://github.com/misumisumi/flakes/commit/a7d90782dac35cd2b481556b952ba7ea00530b9b))
+
 ## [6.0.8](https://github.com/misumisumi/flakes/compare/v6.0.7...v6.0.8) (2026-04-15)
 
 
