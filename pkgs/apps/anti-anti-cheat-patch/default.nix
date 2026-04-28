@@ -1,6 +1,7 @@
 {
-  pkgSource,
   lib,
+  fetchFromGitHub,
+  nix-update-script,
   stdenvNoCC,
   qemu,
   edk2,
@@ -13,8 +14,14 @@ let
   edk2MajorMinor = majorMinor edk2Version;
 in
 stdenvNoCC.mkDerivation (finalAttrs: {
-  inherit (pkgSource) pname src;
-  version = pkgSource.date;
+  pname = "anti-anti-cheat-patch";
+  version = "0-unstable-2026-04-09";
+  src = fetchFromGitHub {
+    owner = "Scrut1ny";
+    repo = "AutoVirt";
+    rev = "bd326182066fccc10ffa4b98047981d1abf6383e";
+    sha256 = "sha256-u42De+yv4ejgIVWYgiPatqvxIUOykPLjw+900EOuxxA=";
+  };
 
   dontPatch = true;
   dontConfigure = true;
@@ -101,6 +108,13 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     edk2Patch = {
       amd = "${finalAttrs.finalPackage.out}/EDK2/amd.patch";
       intel = "${finalAttrs.finalPackage.out}/EDK2/intel.patch";
+    };
+    updateScript = nix-update-script {
+      extraArgs = [
+        "--flake"
+        "--version"
+        "branch"
+      ];
     };
   };
 

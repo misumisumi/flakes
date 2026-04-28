@@ -1,6 +1,6 @@
 {
   lib,
-  pkgSource,
+  fetchurl,
   stdenv,
   makeDesktopItem,
   makeWrapper,
@@ -13,9 +13,16 @@
   tk,
   tkdnd,
 }:
-
+let
+  pname = "wavesurfer";
+  version = "1.8.8p5";
+in
 stdenv.mkDerivation {
-  inherit (pkgSource) pname version src;
+  inherit pname version;
+  src = fetchurl {
+    url = "http://downloads.sourceforge.net/${pname}/${pname}-${version}-src.tgz";
+    sha256 = "sha256-rlYGEUfdEXD3SF3JwZ23pF3RVwUKw5RmYsf8ec/7YRo=";
+  };
   patches = [
     ./fix-defaultconfig-search.patch
     ./fix-drag-and-drop.patch
@@ -94,16 +101,22 @@ stdenv.mkDerivation {
       --set ALSA_PLUGIN_DIR ${alsa-plugins}/lib/alsa-lib
   '';
 
-  passthru.fetchPatch = writeScript "snack-patch-update" ''
-    #!${stdenv.shell}
-    set -eu -o pipefail
+  passthru = {
+    updateScript = writeScript "snack-patch-update" ''
+      #!${stdenv.shell}
+      set -eu -o pipefail
 
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/fix-wavebar.patch?h=wavesurfer" -o fix-wavebar.patch
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/fix-defaultconfig-search.patch?h=wavesurfer" -o fix-defaultconfig-search.patch
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/fix-tkcon.patch?h=wavesurfer" -o fix-tkcon.patch
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/prefs.patch?h=wavesurfer" -o prefs.patch
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/snack-callbacks.patch?h=wavesurfer" -o snack-callbacks.patch
-  '';
+      pushd pkgs/apps/wavesurfer
+
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/fix-wavebar.patch?h=wavesurfer" -o fix-wavebar.patch
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/fix-defaultconfig-search.patch?h=wavesurfer" -o fix-defaultconfig-search.patch
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/fix-tkcon.patch?h=wavesurfer" -o fix-tkcon.patch
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/prefs.patch?h=wavesurfer" -o prefs.patch
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/snack-callbacks.patch?h=wavesurfer" -o snack-callbacks.patch
+
+      popd
+    '';
+  };
 
   meta = with lib; {
     description = "Open source tool for sound visualization and manipulation";

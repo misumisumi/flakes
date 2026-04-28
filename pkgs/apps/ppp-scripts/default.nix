@@ -38,6 +38,7 @@ stdenvNoCC.mkDerivation {
     substituteInPlace $out/etc/ppp/ipv6-up \
       --replace run-parts ${busybox}/bin/run-parts
   '';
+  passthru.skipUpdate = true;
   meta = {
     description = "ppp scripts from ubuntu";
     platforms = [ "x86_64-linux" ];

@@ -1,6 +1,7 @@
 {
   lib,
-  pkgSource,
+  fetchFromGitHub,
+  nix-update-script,
   stdenv,
   autoreconfHook,
   help2man,
@@ -14,10 +15,20 @@
   qrencode,
   pcsclite,
 }:
+let
+  pname = "virtualsmartcard";
+  version = "0.10";
+in
 toPythonModule (
-  stdenv.mkDerivation rec {
-    inherit (pkgSource) pname version src;
-    sourceRoot = "${src.name}/virtualsmartcard";
+  stdenv.mkDerivation (finalAttrs: {
+    inherit pname version;
+    src = fetchFromGitHub {
+      owner = "frankmorgner";
+      repo = "vsmartcard";
+      rev = "virtualsmartcard-${version}";
+      sha256 = "sha256-+BrX2aqByUvIUbN4K+sdq9bH29FD2rtTt4q+URPgx7A=";
+    };
+    sourceRoot = "${finalAttrs.src.name}/virtualsmartcard";
     outputs = [
       "out"
       "man"
@@ -51,6 +62,14 @@ toPythonModule (
       wrapPythonPrograms
     '';
 
+    passthru.updateScript = nix-update-script {
+      extraArgs = [
+        "--flake"
+        "--version-regex"
+        "virtualsmartcard-(.*)"
+      ];
+    };
+
     meta = with lib; {
       inherit version;
       description = "umbrella project for emulation of smart card readers or smart cards";
@@ -58,5 +77,5 @@ toPythonModule (
       license = licenses.gpl3;
       platforms = platforms.linux;
     };
-  }
+  })
 )

@@ -1,18 +1,26 @@
 {
-  pkgSource,
   lib,
-  stdenv,
+  fetchFromGitHub,
   fetchurl,
+  nix-update-script,
   autoconf,
   automake,
   libtool,
   perl,
+  stdenv,
   unzip,
   zlib,
 }:
 stdenv.mkDerivation {
-  inherit (pkgSource) pname src;
-  version = pkgSource.date;
+  pname = "knp";
+  version = "trank-20121203+1-unstable-2023-11-01";
+  src = fetchFromGitHub {
+    owner = "ku-nlp";
+    repo = "knp";
+    rev = "bc4cef188669f88cdeb590fe7afb1021ce2ae481";
+    fetchSubmodules = false;
+    sha256 = "sha256-QdBeT/tJVleX0HgV30JqiOWXXzemWfS6VEhvN76fObE=";
+  };
 
   buildInputs = [
     autoconf
@@ -55,6 +63,17 @@ stdenv.mkDerivation {
     cp -r ./tmp/dict-bin/* ./dict
     ./configure --prefix=$out
   '';
+
+  passthru = {
+    skipCheck = true;
+    updateScript = nix-update-script {
+      extraArgs = [
+        "--flake"
+        "--version"
+        "branch"
+      ];
+    };
+  };
 
   meta = with lib; {
     description = "plugin for droidcam obs";

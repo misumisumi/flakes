@@ -25,7 +25,7 @@ jobs:
       pr-number: ${{ github.event.pull_request.number }}
       triggered-name: "build check"
     secrets:
-      AGENT_OF_ME_APP_ID: ${{ secrets.AGENT_OF_ME_APP_ID }}
+      AGENT_OF_ME_CLIENT_ID: ${{ secrets.AGENT_OF_ME_CLIENT_ID }}
       AGENT_OF_ME_PRIVATE_KEY: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}
 
   pre-build:
@@ -78,6 +78,7 @@ jobs:
             accept-flake-config = true
             connect-timeout = 15
             cores = 3
+            download-buffer-size = 524288000
             http-connections = 25
             max-jobs = 2
             stalled-download-timeout = 15
@@ -139,5 +140,5 @@ jobs:
       pr-number: ${{ github.event.pull_request.number }}
       triggered-name: "build-check"
     secrets:
-      AGENT_OF_ME_APP_ID: ${{ secrets.AGENT_OF_ME_APP_ID }}
+      AGENT_OF_ME_CLIENT_ID: ${{ secrets.AGENT_OF_ME_CLIENT_ID }}
       AGENT_OF_ME_PRIVATE_KEY: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}

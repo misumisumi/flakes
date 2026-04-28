@@ -42,6 +42,7 @@ stdenvNoCC.mkDerivation {
     cp dictionary.yaskkserv2 $out/share/
     cp SKK-JISYO.yaskkserv2.utf8 $out/share/
   '';
+  passthru.skipUpdate = true;
 
   meta = {
     description = "Dictionary for yaskkserv2 include Emoji and jawiki-kana-kanji-dict";

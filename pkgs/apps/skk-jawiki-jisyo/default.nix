@@ -1,10 +1,18 @@
 {
-  pkgSource,
   lib,
+  fetchurl,
   stdenvNoCC,
 }:
-stdenvNoCC.mkDerivation rec {
-  inherit (pkgSource) pname src version;
+let
+  version = "2026.04.21.141141";
+in
+stdenvNoCC.mkDerivation {
+  pname = "skk-jawiki-jisyo";
+  inherit version;
+  src = fetchurl {
+    url = "https://github.com/tokuhirom/jawiki-kana-kanji-dict/releases/download/v${version}/SKK-JISYO.jawiki";
+    sha256 = "sha256-3udQzvqsFOuScRXGx4Zf6yYUqu+zOkxKrqQdYG/7KQo=";
+  };
   dontUnpack = true;
 
   installPhase = ''

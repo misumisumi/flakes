@@ -1,6 +1,6 @@
 {
-  pkgSource,
   lib,
+  fetchFromGitHub,
   fetchPnpmDeps,
   nodejs,
   npmHooks,
@@ -8,9 +8,18 @@
   pnpmConfigHook,
   stdenv,
 }:
+let
+  pname = "update-github-actions-permissions";
+  version = "2.9.1";
+in
 stdenv.mkDerivation (finalAttrs: {
-  inherit (pkgSource) pname src;
-  version = lib.removePrefix "v" pkgSource.version;
+  inherit pname version;
+  src = fetchFromGitHub {
+    owner = "pkgdeps";
+    repo = pname;
+    rev = "v${version}";
+    sha256 = "sha256-qkot1TKnc7Hn825xNOtFS0Lu/zdCgw6GowLE05gap48=";
+  };
 
   nativeBuildInputs = [
     nodejs # in case scripts are run outside of a pnpm call

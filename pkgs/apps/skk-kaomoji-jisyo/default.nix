@@ -8,7 +8,7 @@
 let
   script = ./to-jisyo.py;
 in
-stdenvNoCC.mkDerivation rec {
+stdenvNoCC.mkDerivation {
   pname = "skk-kaomoji-jisyo";
   inherit (fcitx5-mozc) src version;
   nativeBuildInputs = [
@@ -21,6 +21,7 @@ stdenvNoCC.mkDerivation rec {
     python ${script} --input_file src/data/emoticon/emoticon.tsv --output_file SKK-JISYO.kaomoji.utf8
     cp SKK-JISYO.kaomoji.utf8 $out/share/skk/SKK-JISYO.kaomoji.utf8
   '';
+  passthru.skipUpdate = true;
 
   meta = with lib; {
     description = "Kaomoji SKK dictionary from mozc";

@@ -9,7 +9,7 @@ on:
         required: true
         type: string
     secrets:
-      AGENT_OF_ME_APP_ID:
+      AGENT_OF_ME_CLIENT_ID:
         required: true
       AGENT_OF_ME_PRIVATE_KEY:
         required: true
@@ -52,11 +52,11 @@ jobs:
         needs.workflow-status.outputs.all-success == 'false'
        }}
     steps:
-      - uses: tibdex/github-app-token@v2
+      - uses: actions/create-github-app-token@v3
         id: generate-token
         with:
-          app_id: ${{ secrets.AGENT_OF_ME_APP_ID }}
-          private_key: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}
+          client-id: ${{ secrets.AGENT_OF_ME_CLIENT_ID }}
+          private-key: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}
 
       - name: Dismiss approvals
         env:
@@ -79,11 +79,11 @@ jobs:
       GH_REPO: ${{ github.repository }}
       PR_NUM: ${{ inputs.pr-number }}
     steps:
-      - uses: tibdex/github-app-token@v2
+      - uses: actions/create-github-app-token@v3
         id: generate-token
         with:
-          app_id: ${{ secrets.AGENT_OF_ME_APP_ID }}
-          private_key: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}
+          client-id: ${{ secrets.AGENT_OF_ME_CLIENT_ID }}
+          private-key: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}
 
       - name: Auto approve
         env:
@@ -103,11 +103,11 @@ jobs:
       GH_REPO: ${{ github.repository }}
       PR_NUM: ${{ inputs.pr-number }}
     steps:
-      - uses: tibdex/github-app-token@v2
+      - uses: actions/create-github-app-token@v3
         id: generate-token
         with:
-          app_id: ${{ secrets.AGENT_OF_ME_APP_ID }}
-          private_key: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}
+          client-id: ${{ secrets.AGENT_OF_ME_CLIENT_ID }}
+          private-key: ${{ secrets.AGENT_OF_ME_PRIVATE_KEY }}
 
       - name: Auto approve and merge for bot PRs
         env:
@@ -128,7 +128,7 @@ jobs:
       GH_REPO: ${{ github.repository }}
       PR_NUM: ${{ inputs.pr-number }}
     steps:
-      - uses: dependabot/fetch-metadata@v2
+      - uses: dependabot/fetch-metadata@v3
         id: metadata
         with:
           github-token: ${{ github.token }}

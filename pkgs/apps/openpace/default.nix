@@ -1,7 +1,7 @@
 {
-  pkgSource,
-  stdenv,
   lib,
+  fetchFromGitHub,
+  stdenv,
   autoreconfHook,
   gengetopt,
   help2man,
@@ -9,7 +9,14 @@
   pkg-config,
 }:
 stdenv.mkDerivation {
-  inherit (pkgSource) pname version src;
+  pname = "openpace";
+  version = "1.1.4";
+  src = fetchFromGitHub {
+    owner = "frankmorgner";
+    repo = "openpace";
+    rev = "1.1.4";
+    sha256 = "sha256-S3YlVeovjcew72nrydBhd1A1scpk5tSw3CPIKm4aBaU=";
+  };
   outputs = [
     "bin"
     "dev"

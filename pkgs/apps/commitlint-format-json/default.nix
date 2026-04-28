@@ -1,26 +1,29 @@
 {
-  pkgSource,
   lib,
+  fetchurl,
+  nix-update-script,
   buildNpmPackage,
-  importNpmLock,
 }:
-buildNpmPackage rec {
-  inherit (pkgSource) pname src;
-  version = lib.removePrefix "v" pkgSource.version;
-
-  npmDeps =
-    let
-      inherit (builtins) fromJSON readFile replaceStrings;
-      pkgJSON = (fromJSON (readFile ../_sources/generated.json)).${pkgSource.pname};
-      sha256 = replaceStrings [ "/" ] [ "_" ] "${pkgJSON.src.sha256}";
-    in
-    importNpmLock {
-      npmRoot = ../_sources + "/${sha256}";
-    };
-
-  inherit (importNpmLock) npmConfigHook;
-
+buildNpmPackage {
+  pname = "commitlint-format-json";
+  version = "1.1.0";
+  src = fetchurl {
+    url = "https://registry.npmjs.org/commitlint-format-json/-/commitlint-format-json-1.1.0.tgz";
+    sha256 = "sha256-VyY0HOpelsy7s96i1aI5Vl9Y63tUoa6cO6oT6bHu1uk=";
+  };
   dontNpmBuild = true;
+
+  npmDepsHash = "sha256-wr//XWfRoq/NJYxzMYcNlHWA9INncyhiNTeqN1fsRZs=";
+  postPatch = ''
+    cp ${./package-lock.json} ./package-lock.json
+  '';
+
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+      "--generate-lockfile"
+    ];
+  };
 
   meta = with lib; {
     homepage = "https://github.com/bycedric/commitlint-formats";

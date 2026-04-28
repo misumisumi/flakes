@@ -1,14 +1,26 @@
 {
-  pkgSource,
   lib,
+  nix-update-script,
+  fetchFromGitHub,
   stdenv,
   cmake,
   libXcursor,
   tcl,
   tk,
 }:
-stdenv.mkDerivation rec {
-  inherit (pkgSource) pname version src;
+let
+  inherit (lib) licenses;
+  pname = "tkdnd";
+  version = "2.9.5";
+in
+stdenv.mkDerivation {
+  inherit pname version;
+  src = fetchFromGitHub {
+    owner = "petasis";
+    repo = pname;
+    rev = "tkdnd-release-test-v${version}";
+    sha256 = "sha256-VF1f9HSEThyFy3u7d3Kvo7EIpoosz6KpLOiHkf89PQI=";
+  };
 
   nativeBuildInputs = [ cmake ];
   buildInputs = [
@@ -30,7 +42,16 @@ stdenv.mkDerivation rec {
     mkdir -p $out/lib
     cp -r ../runtime/tkdnd* $out/lib
   '';
-  meta = with lib; {
+
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+      "--version-regex"
+      "tkdnd-release-test-v(.*)"
+    ];
+  };
+
+  meta = {
     description = "TkDND is an extension that adds native drag & drop capabilities to the Tk toolkit.";
     homepage = "https://github.com/petasis/tkdnd";
     license = licenses.free;

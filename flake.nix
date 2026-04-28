@@ -28,7 +28,17 @@
         overlay = overlays.default; # deprecated attributes for retro compatibility
         overlays.default =
           final: prev:
-          (import ./pkgs/overrides { inherit final prev; })
+          {
+            nix-update = prev.nix-update.overrideAttrs (old: {
+              patches = old.patches or [ ] ++ [
+                ./pkgs/nix-update.patch
+              ];
+              passthru = old.passthru // {
+                skipUpdate = true;
+              };
+            });
+          }
+          // (import ./pkgs/overrides { inherit final prev; })
           // (import ./pkgs/apps {
             inherit lib;
             pkgs = final;
@@ -39,13 +49,7 @@
                 pfinal: pprev:
                 (import ./pkgs/python-modules {
                   inherit lib;
-                  inherit (final)
-                    fetchgit
-                    fetchurl
-                    fetchFromGitHub
-                    dockerTools
-                    python3
-                    ;
+                  pkgs = final;
                 }).override
                 // {
                   mcp = pprev.mcp.overridePythonAttrs (old: {
@@ -78,11 +82,9 @@
             zotero-addons =
               (import ./pkgs/zotero-addons {
                 inherit (prev)
-                  fetchgit
-                  fetchurl
-                  fetchFromGitHub
-                  dockerTools
                   lib
+                  fetchurl
+                  nix-update-script
                   stdenv
                   ;
               }).override;
@@ -113,30 +115,21 @@
             // (
               (import ./pkgs/python-modules {
                 inherit lib;
-                inherit (pkgs)
-                  fetchgit
-                  fetchurl
-                  fetchFromGitHub
-                  dockerTools
-                  python3
-                  ;
+                inherit pkgs;
               }).packages
               pkgs
             )
             // (
               (import ./pkgs/zotero-addons {
+                inherit lib;
                 inherit (pkgs)
-                  fetchgit
                   fetchurl
-                  fetchFromGitHub
-                  dockerTools
-                  lib
+                  nix-update-script
                   stdenv
                   ;
               }).packages
               pkgs
             );
-
         in
         rec {
           _module.args.pkgs = import inputs.nixpkgs {
@@ -147,7 +140,15 @@
             ];
             config.allowUnfree = true;
           };
-          packages = mkPackages system myPkgs;
+          apps = {
+            update-pkgs = import ./scripts/update-pkgs.nix {
+              inherit lib packages;
+              inherit (pkgs) nix-update writeShellScriptBin;
+            };
+          };
+          packages = (mkPackages system myPkgs) // {
+            inherit (pkgs) nix-update;
+          };
           checks = mkCheck packages;
           devshells.default = {
             packages = with pkgs; [

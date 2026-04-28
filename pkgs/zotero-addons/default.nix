@@ -1,9 +1,7 @@
 {
-  fetchgit,
-  fetchurl,
-  fetchFromGitHub,
-  dockerTools,
   lib,
+  fetchurl,
+  nix-update-script,
   stdenv,
 }@args:
 let
@@ -19,6 +17,7 @@ let
       homepage,
       description,
       license,
+      updateOptions ? [ ],
       ...
     }:
     stdenv.mkDerivation {
@@ -34,19 +33,21 @@ let
         mkdir -p "$dst"
         install -v -m644 "$src" "$dst/${addonId}.xpi"
       '';
+      passthru.updateScript = nix-update-script {
+        extraArgs = [
+          "--flake"
+          "--use-github-releases"
+        ]
+        ++ updateOptions;
+      };
       meta = {
         inherit version homepage description;
         license = lib.licenses.${license};
       };
     }
   );
-  addonSources = import ./_sources/generated.nix {
-    inherit
-      fetchgit
-      fetchurl
-      fetchFromGitHub
-      dockerTools
-      ;
+  addonSources = import ./addons.nix {
+    inherit fetchurl;
   };
 in
 rec {
@@ -63,6 +64,7 @@ rec {
         description
         license
         ;
+      updateOptions = source.updateOptions or [ ];
     }
   ) addonSources;
   packages = nixpkgs: mapAttrs (n: v: nixpkgs.zotero-addons.${n}) override;

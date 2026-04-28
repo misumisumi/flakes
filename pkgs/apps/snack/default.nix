@@ -1,6 +1,6 @@
 {
-  pkgSource,
   lib,
+  fetchurl,
   stdenv,
   writeScript,
   alsa-lib,
@@ -9,8 +9,16 @@
   tcl,
   tk,
 }:
+let
+  pname = "snack";
+  version = "2.2.10";
+in
 stdenv.mkDerivation {
-  inherit (pkgSource) pname version src;
+  inherit pname version;
+  src = fetchurl {
+    url = "http://www.speech.kth.se/${pname}/dist/${pname}${version}.tar.gz";
+    sha256 = "sha256-S/52RUerkrpY9Dt3Nm27fHs1EtZaJ82/nlhanLZM6B4=";
+  };
 
   buildInputs = [
     alsa-lib
@@ -50,19 +58,25 @@ stdenv.mkDerivation {
 
   installFlags = [ "DESTDIR=$(out)" ];
 
-  passthru.fetchPatch = writeScript "snack-patch-update" ''
-    #!${stdenv.shell}
-    set -eu -o pipefail
+  passthru = {
+    updateScript = writeScript "snack-patch-update" ''
+      #!${stdenv.shell}
+      set -eu -o pipefail
 
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/alsa.patch?h=snack" -o alsa.patch
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/archbuild.patch?h=snack" -o archbuild.patch
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/args.patch?h=snack" -o args.patch
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/CVE-2012-6303.patch?h=snack" -o CVE-2012-6303.patch
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/formant.patch?h=snack" -o formant.patch
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/libs.patch?h=snack" -o libs.patch
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/seektell.patch?h=snack" -o seektell.patch
-    ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/tksnack.patch?h=snack" -o tksnack.patch
-  '';
+      pushd pkgs/apps/snack
+
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/alsa.patch?h=snack" -o alsa.patch
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/archbuild.patch?h=snack" -o archbuild.patch
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/args.patch?h=snack" -o args.patch
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/CVE-2012-6303.patch?h=snack" -o CVE-2012-6303.patch
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/formant.patch?h=snack" -o formant.patch
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/libs.patch?h=snack" -o libs.patch
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/seektell.patch?h=snack" -o seektell.patch
+      ${curl}/bin/curl --fail --retry 5 --retry-all-errors --retry-delay 10 "https://aur.archlinux.org/cgit/aur.git/plain/tksnack.patch?h=snack" -o tksnack.patch
+
+      popd
+    '';
+  };
 
   meta = with lib; {
     description = "a sound toolkit for scripting languages (Tcl, Python, Ruby, ...)";

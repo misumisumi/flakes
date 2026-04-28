@@ -1,13 +1,21 @@
 {
-  pkgSource,
   lib,
+  fetchurl,
   stdenv,
   libibmad,
   openssl,
   zlib,
 }:
+let
+  version = "4.25.0-1";
+in
 stdenv.mkDerivation {
-  inherit (pkgSource) pname version src;
+  pname = "mstflint-cx3-support";
+  inherit version;
+  src = fetchurl {
+    url = "https://github.com/Mellanox/mstflint/releases/download/v${version}/mstflint-${version}.tar.gz";
+    sha256 = "sha256-nYGiWfr8a3q3+bGUb1ovLrAS8/LnEJf+4inIEllW95s=";
+  };
 
   env = {
     NIX_CFLAGS_COMPILE = toString [
@@ -31,6 +39,8 @@ stdenv.mkDerivation {
     export CPPFLAGS="-I$(pwd)/tools_layouts"
     export INSTALL_BASEDIR=$out
   '';
+
+  passthru.skipUpdate = true;
 
   meta = with lib; {
     description = "Open source version of Mellanox Firmware Tools (MFT)";

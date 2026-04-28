@@ -17,6 +17,7 @@ let
           "hw/nvme/ctrl.c" \
           --replace-fail "NVMe Ctrl" "SanDisk SSD PLUS 1TB"
       '';
+      passthru.skipUpdate = true;
       meta.platforms = [ "x86_64-linux" ];
     });
   ovmfOverrideAttrs =
@@ -93,6 +94,7 @@ let
           sed -i 's/BOCHS_DEBUG_PORT_MAGIC/STD_DEBUG_PORT_MAGIC/g' \
             OvmfPkg/Library/PlatformDebugLibIoPort/DebugIoPortQemu.c 2>/dev/null || true
         '';
+      passthru.skipUpdate = true;
       meta.platforms = [ "x86_64-linux" ];
     });
 in

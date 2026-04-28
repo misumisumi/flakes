@@ -1,6 +1,7 @@
 {
-  pkgSource,
   lib,
+  fetchurl,
+  nix-update-script,
   makeWrapper,
   stdenv,
   wayland,
@@ -26,71 +27,170 @@
   vulkan-loader,
 }:
 let
-  inherit (pkgSource) pname src;
-  version = lib.removePrefix "v" pkgSource.version;
-
-  libs = [
-    wayland
-    libdecor
-    libx11
-    libxi
-    libxxf86vm
-    libxfixes
-    libxrender
-    libxkbcommon
-    libGLU
-    libglvnd
-    numactl
-    SDL2
-    libdrm
-    ocl-icd
-    stdenv.cc.cc.lib
-    openal
-    alsa-lib
-    pulseaudio
-  ]
-  ++ lib.optionals (lib.versionAtLeast version "3.5") [
-    libsm
-    libice
-    zlib
-  ]
-  ++ lib.optionals (lib.versionAtLeast version "4.5") [ vulkan-loader ];
+  inherit (lib.versions) majorMinor;
+  blender-bin =
+    let
+      version = "5.1.1";
+    in
+    {
+      pname = "blender-bin";
+      inherit version;
+      src = fetchurl {
+        url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender${majorMinor version}/blender-${version}-linux-x64.tar.xz";
+        sha256 = "sha256-b5//if7xVO95dNGhxLkWq0vB9WGLy0jVvv7hvQp8fyo=";
+      };
+      passthru.updateScript = {
+        command = [
+          ./update.sh
+          "blender-bin"
+          "blender-bin"
+        ];
+      };
+    };
+  blender-bin_4_5 =
+    let
+      version = "4.5.9";
+    in
+    {
+      pname = "blender-bin_4_5";
+      inherit version;
+      src = fetchurl {
+        url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blender-${version}-linux-x64.tar.xz";
+        sha256 = "sha256-3Nw+ymyYJbs1qAM7aJwFPzy1qbDNKmGy6sKklDa0rT0=";
+      };
+      passthru.updateScript = nix-update-script {
+        extraArgs = [
+          "--flake"
+          "--version-regex"
+          "v(4.5.*)"
+          "--url"
+          "https://github.com/blender/blender"
+          "--override-filename"
+          "pkgs/apps/blender-bin/default.nix"
+        ];
+      };
+    };
+  blender-bin_lts =
+    let
+      version = "4.5.9";
+    in
+    {
+      pname = "blender-bin_lts";
+      inherit version;
+      src = fetchurl {
+        url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender${majorMinor version}/blender-${version}-linux-x64.tar.xz";
+        sha256 = "sha256-3Nw+ymyYJbs1qAM7aJwFPzy1qbDNKmGy6sKklDa0rT0=";
+      };
+      passthru.updateScript = {
+        command = [
+          ./update.sh
+          "blender-bin_lts"
+          "blender-lts-bin"
+        ];
+      };
+    };
 in
-stdenv.mkDerivation {
-  inherit pname version src;
-
-  buildInputs = [ makeWrapper ];
-
-  preUnpack = ''
-    mkdir -p $out/libexec
-    cd $out/libexec
-  '';
-
-  installPhase = ''
-    cd $out/libexec
-    mv blender-* blender
-
-    mkdir -p $out/share/applications
-    mkdir -p $out/share/icons/hicolor/scalable/apps
-    mv ./blender/blender.desktop $out/share/applications/blender.desktop
-    mv ./blender/blender.svg $out/share/icons/hicolor/scalable/apps/blender.svg
-
-    mkdir $out/bin
-
-    makeWrapper $out/libexec/blender/blender $out/bin/blender \
-      --prefix LD_LIBRARY_PATH : /run/opengl-driver/lib:${lib.makeLibraryPath libs}
-
-    patchelf --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" \
-      blender/blender
-
-    patchelf --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)"  \
-      $out/libexec/blender/*/python/bin/python3*
-  '';
-
-  meta = {
-    mainProgram = "blender";
-    platforms = [
-      "x86_64-linux"
-    ];
+{
+  blender-bin = import ./package.nix {
+    inherit (blender-bin)
+      pname
+      version
+      src
+      passthru
+      ;
+    inherit
+      lib
+      makeWrapper
+      stdenv
+      wayland
+      libdecor
+      libx11
+      libxi
+      libxxf86vm
+      libxfixes
+      libxrender
+      libxkbcommon
+      libGLU
+      libglvnd
+      numactl
+      SDL2
+      libdrm
+      ocl-icd
+      openal
+      alsa-lib
+      pulseaudio
+      libsm
+      libice
+      zlib
+      vulkan-loader
+      ;
+  };
+  blender-bin_4_5 = import ./package.nix {
+    inherit (blender-bin_4_5)
+      pname
+      version
+      src
+      passthru
+      ;
+    inherit
+      lib
+      makeWrapper
+      stdenv
+      wayland
+      libdecor
+      libx11
+      libxi
+      libxxf86vm
+      libxfixes
+      libxrender
+      libxkbcommon
+      libGLU
+      libglvnd
+      numactl
+      SDL2
+      libdrm
+      ocl-icd
+      openal
+      alsa-lib
+      pulseaudio
+      libsm
+      libice
+      zlib
+      vulkan-loader
+      ;
+  };
+  blender-bin_lts = import ./package.nix {
+    inherit (blender-bin_lts)
+      pname
+      version
+      src
+      passthru
+      ;
+    inherit
+      lib
+      makeWrapper
+      stdenv
+      wayland
+      libdecor
+      libx11
+      libxi
+      libxxf86vm
+      libxfixes
+      libxrender
+      libxkbcommon
+      libGLU
+      libglvnd
+      numactl
+      SDL2
+      libdrm
+      ocl-icd
+      openal
+      alsa-lib
+      pulseaudio
+      libsm
+      libice
+      zlib
+      vulkan-loader
+      ;
   };
 }
