@@ -1,7 +1,6 @@
 {
   lib,
   fetchPypi,
-  nix-update-script,
   buildPythonPackage,
   rustPlatform,
   anyio,
@@ -43,6 +42,8 @@ buildPythonPackage {
     rustPlatform.cargoSetupHook
     rustPlatform.maturinBuildHook
   ];
+
+  passthru.useUpdateScript = false;
 
   meta = with lib; {
     homepage = "https://github.com/valkey-io/valkey-glide";
