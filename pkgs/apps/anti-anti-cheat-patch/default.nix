@@ -15,12 +15,12 @@ let
 in
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "anti-anti-cheat-patch";
-  version = "0-unstable-2026-04-09";
+  version = "0-unstable-2026-04-28";
   src = fetchFromGitHub {
     owner = "Scrut1ny";
     repo = "AutoVirt";
-    rev = "bd326182066fccc10ffa4b98047981d1abf6383e";
-    sha256 = "sha256-u42De+yv4ejgIVWYgiPatqvxIUOykPLjw+900EOuxxA=";
+    rev = "ca3191d9f593fc3d9103506e69ec9b46d089479d";
+    sha256 = "sha256-AMCsZbUhIHjEmLtm3pQzXQ9FFAxxRE1zkeqbcjueRAw=";
   };
 
   dontPatch = true;
