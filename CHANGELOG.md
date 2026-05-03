@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.10](https://github.com/misumisumi/flakes/compare/v6.0.9...v6.0.10) (2026-05-03)
+
+
+### Bug Fixes
+
+* **valkey-glide:** don't use updateScript ([718bb8e](https://github.com/misumisumi/flakes/commit/718bb8ee79ade0562e4b471f1f89b1ea304546d2))
+
 ## [6.0.9](https://github.com/misumisumi/flakes/compare/v6.0.8...v6.0.9) (2026-04-28)
 
 
