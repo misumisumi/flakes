@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.1.0](https://github.com/misumisumi/flakes/compare/v6.0.10...v6.1.0) (2026-05-15)
+
+
+### Features
+
+* **ndi-6:** ndi-6 is updated quickly and is managed using the same URL, so it is managed using overlay ([c5d77df](https://github.com/misumisumi/flakes/commit/c5d77df5dc423f484da031f8dc6eadeea2d549a3))
+* **ndi-6:** ndi-6 is updated quickly and is managed using the same URL, so it is managed using overlay ([5c3a795](https://github.com/misumisumi/flakes/commit/5c3a795e5a6d8736b9d4818314a09ff2f63018fd))
+
 ## [6.0.10](https://github.com/misumisumi/flakes/compare/v6.0.9...v6.0.10) (2026-05-03)
 
 
