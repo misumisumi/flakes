@@ -15,12 +15,12 @@ let
 in
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "anti-anti-cheat-patch";
-  version = "0-unstable-2026-05-22";
+  version = "0-unstable-2026-05-25";
   src = fetchFromGitHub {
     owner = "Scrut1ny";
     repo = "AutoVirt";
-    rev = "8ecba39894eca9fbfeeaf3b778fa3b31536c6166";
-    sha256 = "sha256-6W3/idevVIqcJ0RXe9COZJB5yKkUUDgvB8PlQ2S533U=";
+    rev = "60c984ee09137b07bd165831b4d88cc197f83a57";
+    sha256 = "sha256-ROFoeG3vbqSv28x1NgsBzwCUuDqmk5QipbbniqQNhXU=";
   };
 
   dontPatch = true;
@@ -43,15 +43,13 @@ stdenvNoCC.mkDerivation (finalAttrs: {
         return 1
       fi
 
-      version=$(find "$dir" -maxdepth 1 -type f -name "$pattern" | sort -r | head -n1 | grep -oE '[0-9]+(\.[0-9]+)+')
-
       mkdir -p "$outDir"
       while read -r patchFile; do
           base=$(basename "$patchFile")
           lower="''${base,,}"
           cp_tgt="''${lower%%-*}.patch"
           cp "$patchFile" "$outDir/''${cp_tgt}"
-      done < <(find $dir -maxdepth 1 -type f -name "*$version.patch")
+      done < <(find "$dir" -maxdepth 1 -type f -name "$pattern")
     }
 
     search_patterns=(
