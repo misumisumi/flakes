@@ -29,10 +29,19 @@ stdenv.mkDerivation (finalAttrs: {
     npmHooks.npmInstallHook
   ];
 
+  # for darwin build issue due to libuv
+  pnpmInstallFlags = [
+    "--child-concurrency=1"
+  ];
   dontNpmPrune = true;
 
   pnpmDeps = fetchPnpmDeps {
-    inherit (finalAttrs) pname version src;
+    inherit (finalAttrs)
+      pname
+      version
+      src
+      pnpmInstallFlags
+      ;
     fetcherVersion = 3;
     hash = "sha256-vpbevN2jgde4qsoRvWMEvkXBYDTeZEggpY0FlAAJomo=";
   };

@@ -28,7 +28,12 @@ stdenv.mkDerivation (finalAttrs: {
     npmHooks.npmInstallHook
   ];
   pnpmDeps = fetchPnpmDeps {
-    inherit (finalAttrs) pname version src;
+    inherit (finalAttrs)
+      pname
+      version
+      src
+      pnpmInstallFlags
+      ;
     fetcherVersion = 3;
     hash = "sha256-X8A3X3USp55NX55AQqYvjBoW3nvYrZIyXq3nesj4hgI=";
   };
@@ -46,7 +51,11 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postBuild
   '';
 
-  npmFlags = [ "--legacy-peer-deps" ];
+  npmFlags = [
+    "--legacy-peer-deps"
+  ];
+  # for darwin build issue due to libuv
+  pnpmInstallFlags = [ "--child-concurrency=1" ];
   dontNpmPrune = true;
 
   meta = with lib; {
