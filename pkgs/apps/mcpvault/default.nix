@@ -9,11 +9,11 @@ let
 in
 buildNpmPackage {
   inherit pname;
-  version = "0-unstable-2026-04-16";
+  version = "0-unstable-2026-05-25";
   src = fetchFromGitHub {
     owner = "bitbonsai";
     repo = pname;
-    rev = "dec984fee1f5daeac5d6a23ae1d9a62d6318fcb1";
+    rev = "488a9076f84fdc8d5818c11eb4f8e2cdbfd74e8c";
     sha256 = "sha256-Hd3ml5FmD9/EvhcWfX3AgF1vJQmBQRhRbIb+rW56N8A=";
   };
 
