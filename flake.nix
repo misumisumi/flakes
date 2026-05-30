@@ -28,17 +28,7 @@
         overlay = overlays.default; # deprecated attributes for retro compatibility
         overlays.default =
           final: prev:
-          {
-            nix-update = prev.nix-update.overrideAttrs (old: {
-              patches = old.patches or [ ] ++ [
-                ./pkgs/nix-update.patch
-              ];
-              passthru = old.passthru // {
-                skipUpdate = true;
-              };
-            });
-          }
-          // (import ./pkgs/overrides { inherit final prev; })
+          (import ./pkgs/overrides { inherit final prev; })
           // (import ./pkgs/apps {
             inherit lib;
             pkgs = final;

@@ -13,7 +13,7 @@
 }:
 stdenv.mkDerivation {
   pname = "knp";
-  version = "trank-20121203+1-unstable-2023-11-01";
+  version = "trank-20121203+1";
   src = fetchFromGitHub {
     owner = "ku-nlp";
     repo = "knp";
@@ -78,6 +78,7 @@ stdenv.mkDerivation {
   meta = with lib; {
     description = "plugin for droidcam obs";
     homepage = "https://github.com/dev47apps/droidcam-obs-plugin";
+    broken = true;
     license = licenses.gpl2;
     platforms = [
       "x86_64-linux"

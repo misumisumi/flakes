@@ -43,15 +43,13 @@ stdenvNoCC.mkDerivation (finalAttrs: {
         return 1
       fi
 
-      version=$(find "$dir" -maxdepth 1 -type f -name "$pattern" | sort -r | head -n1 | grep -oE '[0-9]+(\.[0-9]+)+')
-
       mkdir -p "$outDir"
       while read -r patchFile; do
           base=$(basename "$patchFile")
           lower="''${base,,}"
           cp_tgt="''${lower%%-*}.patch"
           cp "$patchFile" "$outDir/''${cp_tgt}"
-      done < <(find $dir -maxdepth 1 -type f -name "*$version.patch")
+      done < <(find "$dir" -maxdepth 1 -type f -name "$pattern")
     }
 
     search_patterns=(
