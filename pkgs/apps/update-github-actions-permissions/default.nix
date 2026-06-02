@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
       pname
       version
       src
-      pnpmInstallFlags
       ;
     fetcherVersion = 3;
     hash = "sha256-X8A3X3USp55NX55AQqYvjBoW3nvYrZIyXq3nesj4hgI=";
@@ -54,8 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
   npmFlags = [
     "--legacy-peer-deps"
   ];
-  # for darwin build issue due to libuv
-  pnpmInstallFlags = [ "--child-concurrency=1" ];
   dontNpmPrune = true;
 
   meta = with lib; {
@@ -68,7 +65,7 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = [
       "x86_64-linux"
       "aarch64-linux"
-      "aarch64-darwin"
+      # "aarch64-darwin" #NOTE: due to https://github.com/NixOS/nixpkgs/issues/525627
     ];
   };
 })

@@ -29,10 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     npmHooks.npmInstallHook
   ];
 
-  # for darwin build issue due to libuv
-  pnpmInstallFlags = [
-    "--child-concurrency=1"
-  ];
   dontNpmPrune = true;
 
   pnpmDeps = fetchPnpmDeps {
@@ -40,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
       pname
       version
       src
-      pnpmInstallFlags
       ;
     fetcherVersion = 3;
     hash = "sha256-vpbevN2jgde4qsoRvWMEvkXBYDTeZEggpY0FlAAJomo=";
@@ -53,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = [
       "x86_64-linux"
       "aarch64-linux"
-      "aarch64-darwin"
+      # "aarch64-darwin" #NOTE: due to https://github.com/NixOS/nixpkgs/issues/525627
     ];
   };
 })
