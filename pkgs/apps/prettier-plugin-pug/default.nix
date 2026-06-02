@@ -32,9 +32,13 @@ stdenv.mkDerivation (finalAttrs: {
   dontNpmPrune = true;
 
   pnpmDeps = fetchPnpmDeps {
-    inherit (finalAttrs) pname version src;
+    inherit (finalAttrs)
+      pname
+      version
+      src
+      ;
     fetcherVersion = 3;
-    hash = "sha256-GZYSlK1B0pb6X7ldW4PZWHJOUvtUMysYJjoD/nsV3S0=";
+    hash = "sha256-vpbevN2jgde4qsoRvWMEvkXBYDTeZEggpY0FlAAJomo=";
   };
 
   meta = {
@@ -44,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = [
       "x86_64-linux"
       "aarch64-linux"
-      "aarch64-darwin"
+      # "aarch64-darwin" #NOTE: due to https://github.com/NixOS/nixpkgs/issues/525627
     ];
   };
 })

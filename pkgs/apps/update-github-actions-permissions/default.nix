@@ -28,9 +28,13 @@ stdenv.mkDerivation (finalAttrs: {
     npmHooks.npmInstallHook
   ];
   pnpmDeps = fetchPnpmDeps {
-    inherit (finalAttrs) pname version src;
+    inherit (finalAttrs)
+      pname
+      version
+      src
+      ;
     fetcherVersion = 3;
-    hash = "sha256-BuTKNAC/fLWCMNgg1pn9jiUeK7WVgoaMzPQV/AA9EQE=";
+    hash = "sha256-X8A3X3USp55NX55AQqYvjBoW3nvYrZIyXq3nesj4hgI=";
   };
 
   postPatch = ''
@@ -46,7 +50,9 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postBuild
   '';
 
-  npmFlags = [ "--legacy-peer-deps" ];
+  npmFlags = [
+    "--legacy-peer-deps"
+  ];
   dontNpmPrune = true;
 
   meta = with lib; {
@@ -59,7 +65,7 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = [
       "x86_64-linux"
       "aarch64-linux"
-      "aarch64-darwin"
+      # "aarch64-darwin" #NOTE: due to https://github.com/NixOS/nixpkgs/issues/525627
     ];
   };
 })
