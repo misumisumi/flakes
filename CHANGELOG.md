@@ -1,5 +1,17 @@
 # Changelog
 
+## [6.1.1](https://github.com/misumisumi/flakes/compare/v6.1.0...v6.1.1) (2026-06-02)
+
+
+### Bug Fixes
+
+* add flag for darwin's libuv issue ([f6f6b28](https://github.com/misumisumi/flakes/commit/f6f6b286435a1633226193141b4ff3473c6f8186))
+* **anti-anti-cheat-patch:** fix copy patch logic ([494a71d](https://github.com/misumisumi/flakes/commit/494a71df77b3fba98e930101ea19a2f924dacb3f))
+* **knp:** URL to knp's dict is now down so mark broken ([9ad22ed](https://github.com/misumisumi/flakes/commit/9ad22edb777ada5453f109884f58046afa12d492))
+* **nix-update:** rm patch by upstream change ([f495a0a](https://github.com/misumisumi/flakes/commit/f495a0a71210333ac0998ca4c87a7ef9349fb1ee))
+* remove support aarch64-darwin from depending pnpm ([ef0b212](https://github.com/misumisumi/flakes/commit/ef0b2123d6d7b5e32425901ee3169a8b4d68a3e0))
+* **update-pkgs:** additional phase when include pnpmDeps ([3c0aa82](https://github.com/misumisumi/flakes/commit/3c0aa82d113e05472d896123a7c40fb10e246a6d))
+
 ## [6.1.0](https://github.com/misumisumi/flakes/compare/v6.0.10...v6.1.0) (2026-05-15)
 
 
