@@ -9,7 +9,7 @@
 
 maven.buildMavenPackage {
   pname = "discord-mcp";
-  version = "1.0.0-unstable-2026-04-25";
+  version = "0-unstable-2026-04-25";
   src = fetchFromGitHub {
     owner = "SaseQ";
     repo = "discord-mcp";
