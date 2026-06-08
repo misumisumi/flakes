@@ -9,7 +9,7 @@
 
 stdenvNoCC.mkDerivation {
   pname = "skk-emoticons-jisyo";
-  version = "0.2.1-unstable-2021-04-02";
+  version = "0-unstable-2021-04-02";
   src = fetchFromGitHub {
     owner = "w33ble";
     repo = "emoticon-data";
