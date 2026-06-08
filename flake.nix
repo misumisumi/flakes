@@ -136,9 +136,7 @@
               inherit (pkgs) nix-update writeShellScriptBin;
             };
           };
-          packages = (mkPackages system myPkgs) // {
-            inherit (pkgs) nix-update;
-          };
+          packages = mkPackages system myPkgs;
           checks = mkCheck packages;
           devshells.default = {
             packages = with pkgs; [
