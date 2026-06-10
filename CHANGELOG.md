@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.1.2](https://github.com/misumisumi/flakes/compare/v6.1.1...v6.1.2) (2026-06-10)
+
+
+### Bug Fixes
+
+* **wavesurfer:** fix scale for HiDPI monitor ([ab7ee47](https://github.com/misumisumi/flakes/commit/ab7ee47c5d0be7ac3d11c86c6214b4928f857b90))
+* **wavesurfer:** fix scale for HiDPI monitor ([4829b8b](https://github.com/misumisumi/flakes/commit/4829b8b9e073098f0e526f5fd836ac3a1993693a))
+
 ## [6.1.1](https://github.com/misumisumi/flakes/compare/v6.1.0...v6.1.1) (2026-06-02)
 
 
