@@ -9,18 +9,19 @@
   edk2Version ? edk2.version,
 }:
 let
+  inherit (lib) optionalString versionOlder;
   inherit (lib.versions) majorMinor;
   qemuMajorMinor = majorMinor qemuVersion;
   edk2MajorMinor = majorMinor edk2Version;
 in
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "anti-anti-cheat-patch";
-  version = "0-unstable-2026-05-25";
+  version = "0-unstable-2026-06-07";
   src = fetchFromGitHub {
     owner = "Scrut1ny";
     repo = "AutoVirt";
-    rev = "60c984ee09137b07bd165831b4d88cc197f83a57";
-    sha256 = "sha256-ROFoeG3vbqSv28x1NgsBzwCUuDqmk5QipbbniqQNhXU=";
+    rev = "ae2fa0ec0ad767102e1880af7f596f17dcd631cf";
+    sha256 = "sha256-WMb1rla7uoVG/HN/Sdez19MD88AzGfONlceaJcz56uY=";
   };
 
   dontPatch = true;
@@ -81,18 +82,24 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   '';
 
   postInstall = ''
+    # for using looking-glass without patch to that
     substituteInPlace "$out/QEMU/intel.patch" \
-      --replace-fail "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x8086" "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1af4 " \
-      --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x8086" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4 " \
-      --replace-fail "+#define PCI_SUBDEVICE_ID_QEMU            0x8086" "+#define PCI_SUBDEVICE_ID_QEMU            0x1100 " \
-      --replace-fail "+    dc->hotpluggable = false;" "+    dc->hotpluggable = true;"
-
+        --replace-fail "+    dc->hotpluggable = false;" "+    dc->hotpluggable = true;"
+    ${optionalString (versionOlder "11.0.0" qemuVersion) ''
+      substituteInPlace "$out/QEMU/intel.patch" \
+        --replace-fail "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x8086" "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1af4 " \
+        --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x8086" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4 " \
+        --replace-fail "+#define PCI_SUBDEVICE_ID_QEMU            0x8086" "+#define PCI_SUBDEVICE_ID_QEMU            0x1100 "
+    ''}
     substituteInPlace "$out/QEMU/amd.patch" \
-      --replace-fail "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1022" "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1af4" \
-      --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1022" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4" \
-      --replace-fail "+#define PCI_SUBDEVICE_ID_QEMU            0x1022" "+#define PCI_SUBDEVICE_ID_QEMU            0x1100" \
       --replace-fail "+    dc->hotpluggable = false;" "+    dc->hotpluggable = true;" \
       --replace-fail "pcmc->smbios_defaults = false" "pcmc->smbios_defaults = true"
+    ${optionalString (versionOlder "11.0.0" qemuVersion) ''
+      substituteInPlace "$out/QEMU/amd.patch" \
+        --replace-fail "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1022" "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1af4" \
+        --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1022" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4" \
+        --replace-fail "+#define PCI_SUBDEVICE_ID_QEMU            0x1022" "+#define PCI_SUBDEVICE_ID_QEMU            0x1100"
+    ''}
 
     sed -i 's/\r//' "$out/QEMU/intel.patch"
     sed -i 's/\r//' "$out/QEMU/amd.patch"
