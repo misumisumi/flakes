@@ -90,6 +90,7 @@ stdenv.mkDerivation {
   '';
 
   postFixup = ''
+    sed -i "5acatch {tk scaling 1.0}" $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl
     makeWrapper $out/lib/wavesurfer/src/app-wavesurfer/wavesurfer.tcl $out/bin/wavesurfer \
       --prefix PATH : ${
         lib.makeBinPath [
