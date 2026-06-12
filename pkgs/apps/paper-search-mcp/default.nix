@@ -9,7 +9,7 @@ let
 in
 buildPythonApplication {
   pname = "paper-search-mcp";
-  version = "0-unstable-2026-05-18";
+  version = "0.1.3-unstable-2026-05-18";
   src = fetchFromGitHub {
     owner = "openags";
     repo = "paper-search-mcp";
