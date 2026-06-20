@@ -85,7 +85,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     # for using looking-glass without patch to that
     substituteInPlace "$out/QEMU/intel.patch" \
         --replace-fail "+    dc->hotpluggable = false;" "+    dc->hotpluggable = true;"
-    ${optionalString (versionOlder "11.0.0" qemuVersion) ''
+    ${optionalString (versionOlder qemuVersion "11.0.0") ''
       substituteInPlace "$out/QEMU/intel.patch" \
         --replace-fail "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x8086" "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1af4 " \
         --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x8086" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4 " \
@@ -94,7 +94,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     substituteInPlace "$out/QEMU/amd.patch" \
       --replace-fail "+    dc->hotpluggable = false;" "+    dc->hotpluggable = true;" \
       --replace-fail "pcmc->smbios_defaults = false" "pcmc->smbios_defaults = true"
-    ${optionalString (versionOlder "11.0.0" qemuVersion) ''
+    ${optionalString (versionOlder qemuVersion "11.0.0") ''
       substituteInPlace "$out/QEMU/amd.patch" \
         --replace-fail "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1022" "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1af4" \
         --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1022" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4" \
