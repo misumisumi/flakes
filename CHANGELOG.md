@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.1.3](https://github.com/misumisumi/flakes/compare/v6.1.2...v6.1.3) (2026-06-20)
+
+
+### Bug Fixes
+
+* **anti-anti-cheat-patch:** fix missing version condtion ([3b998cb](https://github.com/misumisumi/flakes/commit/3b998cbddaa34c351c22de3de92ece23d355f428))
+
 ## [6.1.2](https://github.com/misumisumi/flakes/compare/v6.1.1...v6.1.2) (2026-06-10)
 
 
