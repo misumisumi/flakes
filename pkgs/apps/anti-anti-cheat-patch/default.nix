@@ -16,12 +16,12 @@ let
 in
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "anti-anti-cheat-patch";
-  version = "0-unstable-2026-06-11";
+  version = "0-unstable-2026-06-14";
   src = fetchFromGitHub {
     owner = "Scrut1ny";
     repo = "AutoVirt";
-    rev = "fb95798aedc87abfa9aba1535ada6e0808ecd5ee";
-    sha256 = "sha256-bdBTC8R36qL8xzr3q/50x9TCPeM/lhU+dbTdwdOcmfg=";
+    rev = "267ec3effbaf49ca43ad27c9c01dcc9859cebc2c";
+    sha256 = "sha256-oejSjvSlIpQL6JE8mR8B9KCy90V8kDPeO8UFrn0McVg=";
   };
 
   dontPatch = true;
@@ -85,7 +85,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     # for using looking-glass without patch to that
     substituteInPlace "$out/QEMU/intel.patch" \
         --replace-fail "+    dc->hotpluggable = false;" "+    dc->hotpluggable = true;"
-    ${optionalString (versionOlder "11.0.0" qemuVersion) ''
+    ${optionalString (versionOlder qemuVersion "11.0.0") ''
       substituteInPlace "$out/QEMU/intel.patch" \
         --replace-fail "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x8086" "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1af4 " \
         --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x8086" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4 " \
@@ -94,7 +94,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     substituteInPlace "$out/QEMU/amd.patch" \
       --replace-fail "+    dc->hotpluggable = false;" "+    dc->hotpluggable = true;" \
       --replace-fail "pcmc->smbios_defaults = false" "pcmc->smbios_defaults = true"
-    ${optionalString (versionOlder "11.0.0" qemuVersion) ''
+    ${optionalString (versionOlder qemuVersion "11.0.0") ''
       substituteInPlace "$out/QEMU/amd.patch" \
         --replace-fail "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1022" "+#define PCI_VENDOR_ID_REDHAT_QUMRANET    0x1af4" \
         --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1022" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4" \
