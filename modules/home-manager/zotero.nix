@@ -73,11 +73,10 @@ let
       in
       {
         assertion = duplicates == { };
-        message =
-          ''
-            Must not have a Zotero ${entityKind} with an existing ID but
-          ''
-          + concatStringsSep "\n" (mapAttrsToList mkMsg duplicates);
+        message = ''
+          Must not have a Zotero ${entityKind} with an existing ID but
+        ''
+        + concatStringsSep "\n" (mapAttrsToList mkMsg duplicates);
       }
     );
 
@@ -99,6 +98,15 @@ in
           The Zotero package to use.
           If you want to use Zotero 7, set to `pkgs.zotero-bete`.
           Set to `null` to disable installing Zotero.
+        '';
+      };
+
+      dataDir = mkOption {
+        type = types.str;
+        default = "Zotero";
+        description = ''
+          Path to Zotero data directory, relative to home directory.
+          This is where {file}`zotero.sqlite` is located.
         '';
       };
 
@@ -187,6 +195,25 @@ in
                   '';
                 };
 
+                fileRenameTemplate = mkOption {
+                  type = types.nullOr types.str;
+                  default = null;
+                  example = ''{{ authors max="1" initialize="given" replace="\s" "_" }}_{{ year }}_{{ title case="snake" }}'';
+                  description = ''
+                    Template for Zotero's automatic file renaming
+                    (Configure File Renaming...).
+                    When set, updates the `attachmentRenameTemplate` setting
+                    in {file}`zotero.sqlite` on activation.
+
+                    This template is written to the data directory's SQLite
+                    database. Only the template from the default profile
+                    (where `isDefault` is true) is used.
+
+                    See [Zotero File Renaming](https://www.zotero.org/support/file_renaming)
+                    for template syntax.
+                  '';
+                };
+
               };
             }
           )
@@ -198,63 +225,102 @@ in
     };
   };
 
-  config = mkIf cfg.enable {
-    assertions = [
-      (
-        let
-          defaults = catAttrs "name" (filter (a: a.isDefault) (attrValues cfg.profiles));
-        in
-        {
-          assertion = cfg.profiles == { } || length defaults == 1;
-          message =
-            "Must have exactly one default Firefox profile but found "
-            + toString (length defaults)
-            + optionalString (length defaults > 1) (", namely " + concatStringsSep ", " defaults);
-        }
-      )
+  config = mkIf cfg.enable (
+    let
+      defaultProfile = findFirst (p: p.isDefault) null (attrValues cfg.profiles);
 
-      (mkNoDuplicateAssertion cfg.profiles "profile")
-    ];
+      fileRenameTemplate = if defaultProfile != null then defaultProfile.fileRenameTemplate else null;
+    in
+    {
+      assertions = [
+        (
+          let
+            defaults = catAttrs "name" (filter (a: a.isDefault) (attrValues cfg.profiles));
+          in
+          {
+            assertion = cfg.profiles == { } || length defaults == 1;
+            message =
+              "Must have exactly one default Firefox profile but found "
+              + toString (length defaults)
+              + optionalString (length defaults > 1) (", namely " + concatStringsSep ", " defaults);
+          }
+        )
 
-    warnings = optional (cfg.enableGnomeExtensions or false) ''
-      Using 'programs.firefox.enableGnomeExtensions' has been deprecated and
-      will be removed in the future. Please change to overriding the package
-      configuration using 'programs.firefox.package' instead. You can refer to
-      its example for how to do this.
-    '';
+        (mkNoDuplicateAssertion cfg.profiles "profile")
+      ];
 
-    home.packages = lib.optional (cfg.package != null) cfg.package;
+      warnings = optional (cfg.enableGnomeExtensions or false) ''
+        Using 'programs.firefox.enableGnomeExtensions' has been deprecated and
+        will be removed in the future. Please change to overriding the package
+        configuration using 'programs.firefox.package' instead. You can refer to
+        its example for how to do this.
+      '';
 
-    home.file = mkMerge (
-      [
-        {
-          "${zoteroConfigPath}/profiles.ini" = mkIf (cfg.profiles != { }) { text = profilesIni; };
-        }
-      ]
-      ++ flip mapAttrsToList cfg.profiles (
-        _: profile: {
-          "${profilesPath}/${profile.path}/.keep".text = "";
+      home = {
+        packages = lib.optional (cfg.package != null) cfg.package;
 
-          "${profilesPath}/${profile.path}/user.js" =
-            mkIf (profile.settings != { } || profile.extraConfig != "")
-              {
-                text = mkUserJs profile.settings profile.extraConfig;
+        file = mkMerge (
+          [
+            {
+              "${zoteroConfigPath}/profiles.ini" = mkIf (cfg.profiles != { }) { text = profilesIni; };
+            }
+          ]
+          ++ flip mapAttrsToList cfg.profiles (
+            _: profile: {
+              "${profilesPath}/${profile.path}/.keep".text = "";
+
+              "${profilesPath}/${profile.path}/user.js" =
+                mkIf (profile.settings != { } || profile.extraConfig != "")
+                  {
+                    text = mkUserJs profile.settings profile.extraConfig;
+                  };
+
+              "${profilesPath}/${profile.path}/extensions" = mkIf (profile.extensions != [ ]) {
+                source =
+                  let
+                    extensionsEnvPkg = pkgs.buildEnv {
+                      name = "hm-zotero-extensions";
+                      paths = profile.extensions;
+                    };
+                  in
+                  "${extensionsEnvPkg}/share/zotero/${extensionPath}";
+                recursive = true;
+                force = true;
               };
+            }
+          )
+        );
 
-          "${profilesPath}/${profile.path}/extensions" = mkIf (profile.extensions != [ ]) {
-            source =
-              let
-                extensionsEnvPkg = pkgs.buildEnv {
-                  name = "hm-zotero-extensions";
-                  paths = profile.extensions;
-                };
-              in
-              "${extensionsEnvPkg}/share/zotero/${extensionPath}";
-            recursive = true;
-            force = true;
-          };
-        }
-      )
-    );
-  };
+        activation = mkIf (fileRenameTemplate != null) {
+          zoteroFileRenameTemplate =
+            let
+              dataDir = "${config.home.homeDirectory}/${cfg.dataDir}";
+              updateScript = pkgs.writeShellScript "zotero-update-rename-template" ''
+                            DB="${dataDir}/zotero.sqlite"
+                            if [ ! -f "$DB" ]; then
+                              exit 0
+                            fi
+                            ${pkgs.python3}/bin/python3 << 'PYEOF'
+                import json
+                import sqlite3
+
+                template = ${builtins.toJSON fileRenameTemplate}
+
+                conn = sqlite3.connect("${dataDir}/zotero.sqlite")
+                conn.execute(
+                    "UPDATE syncedSettings SET value = ?, version = version + 1, synced = 0 WHERE setting = 'attachmentRenameTemplate' AND libraryID = 1",
+                    (json.dumps(template),)
+                )
+                conn.commit()
+                conn.close()
+                PYEOF
+              '';
+            in
+            ''
+              ${updateScript}
+            '';
+        };
+      };
+    }
+  );
 }
