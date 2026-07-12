@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.1.4](https://github.com/misumisumi/flakes/compare/v6.1.3...v6.1.4) (2026-07-12)
+
+
+### Bug Fixes
+
+* update fetcherVersion to 4 ([e8ba14a](https://github.com/misumisumi/flakes/commit/e8ba14a899f92177856ab84fb3ff2f64b295d9d6))
+
 ## [6.1.3](https://github.com/misumisumi/flakes/compare/v6.1.2...v6.1.3) (2026-06-20)
 
 
