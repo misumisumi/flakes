@@ -4,6 +4,7 @@
   buildPythonPackage,
   rustPlatform,
   anyio,
+  cffi,
   protobuf,
   sniffio,
 }:
@@ -30,6 +31,7 @@ buildPythonPackage {
 
   dependencies = [
     anyio
+    cffi
     protobuf
     sniffio
   ];
