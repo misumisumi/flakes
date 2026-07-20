@@ -110,6 +110,7 @@ jobs:
 
       - name: Build check
         uses: gacts/run-and-post-run@v1
+        timeout-minutes: 150
         with:
           run: cpulimit -l 90 -i -- nix run github:Mic92/nix-fast-build  -- --no-link --no-nom --result-file result.json
           post: jq -r '.results[] | select(.success==false) | .attr' result.json
