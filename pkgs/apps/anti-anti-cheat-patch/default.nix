@@ -9,19 +9,19 @@
   edk2Version ? edk2.version,
 }:
 let
-  inherit (lib) optionalString versionOlder;
+  inherit (lib) optionalString versionOlder versionAtLeast;
   inherit (lib.versions) majorMinor;
   qemuMajorMinor = majorMinor qemuVersion;
   edk2MajorMinor = majorMinor edk2Version;
 in
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "anti-anti-cheat-patch";
-  version = "0-unstable-2026-07-08";
+  version = "0-unstable-2026-07-19";
   src = fetchFromGitHub {
     owner = "Scrut1ny";
     repo = "AutoVirt";
-    rev = "ed878b7b38926c3ccf513628c52e24491adae33c";
-    sha256 = "sha256-N04/j91RHpu3hsWBtLTuKkuJo86TEcjtEYb2+Dj/738=";
+    rev = "ac124d93260ba701e8eaba968f5716e99beae379";
+    sha256 = "sha256-2dhJP36q6k3IP4n7Vj1VWrS86GMUyrIQEdkago3GWEs=";
   };
 
   dontPatch = true;
@@ -91,6 +91,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
         --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x8086" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4 " \
         --replace-fail "+#define PCI_SUBDEVICE_ID_QEMU            0x8086" "+#define PCI_SUBDEVICE_ID_QEMU            0x1100 "
     ''}
+
     substituteInPlace "$out/QEMU/amd.patch" \
       --replace-fail "+    dc->hotpluggable = false;" "+    dc->hotpluggable = true;" \
       --replace-fail "pcmc->smbios_defaults = false" "pcmc->smbios_defaults = true"
@@ -100,6 +101,16 @@ stdenvNoCC.mkDerivation (finalAttrs: {
         --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1022" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4" \
         --replace-fail "+#define PCI_SUBDEVICE_ID_QEMU            0x1022" "+#define PCI_SUBDEVICE_ID_QEMU            0x1100"
     ''}
+    ${optionalString (versionAtLeast qemuVersion "11.0.1") ''
+      substituteInPlace "$out/QEMU/amd.patch" \
+        --replace-fail "+#define ICH9_LPC_DEV                            20" "+#define ICH9_LPC_DEV                            31" \
+        --replace-fail "+#define ICH9_LPC_FUNC                           3" "+#define ICH9_LPC_FUNC                           0" \
+        --replace-fail "+#define ICH9_A2_LPC_REVISION                    0x51" "+#define ICH9_A2_LPC_REVISION                    0x2"
+      substituteInPlace "$out/EDK2/amd.patch" \
+        --replace-fail "+  PCI_LIB_ADDRESS (0, 0x14, 3, (Offset))   // 0, ICH9_LPC_DEV, ICH9_LPC_FUNC | QEMU: include/hw/southbridge/ich9.h"  "+  PCI_LIB_ADDRESS (0, 0x1f, 0, (Offset))" \
+        --replace-fail "+  EFI_PCI_ADDRESS (0, 0x14, 3, (Offset))   // 0, ICH9_LPC_DEV, ICH9_LPC_FUNC | QEMU: include/hw/southbridge/ich9.h"  "+  EFI_PCI_ADDRESS (0, 0x1f, 0, (Offset))"
+    ''}
+
 
     sed -i 's/\r//' "$out/QEMU/intel.patch"
     sed -i 's/\r//' "$out/QEMU/amd.patch"

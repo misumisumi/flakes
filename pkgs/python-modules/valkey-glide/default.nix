@@ -4,16 +4,17 @@
   buildPythonPackage,
   rustPlatform,
   anyio,
+  cffi,
   protobuf,
   sniffio,
 }:
 let
   pname = "valkey-glide";
-  version = "2.4.2";
+  version = "2.5.0";
   src = fetchPypi {
     pname = "valkey_glide";
     inherit version;
-    sha256 = "sha256-1jp0g8LbWdjHNmajYCRsrarIK21xCH11g5OV/6z4Y+A=";
+    sha256 = "sha256-IanANxB69bo82yftEmq8AsdflpDdboInLyqRBC9Lii4=";
   };
 in
 buildPythonPackage {
@@ -25,11 +26,12 @@ buildPythonPackage {
   # cargoDeps = rustPlatform.importCargoLock { lockFile = ./Cargo.lock; };
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit pname version src;
-    hash = "sha256-dxb8c00tYitsBwArat3ETc1pz4jnCGZBKj5jbmDzVY4=";
+    hash = "sha256-BKXbti/MUGAuibMmomL8gUD0WEXeXuCFBiJJSDMVbcM=";
   };
 
   dependencies = [
     anyio
+    cffi
     protobuf
     sniffio
   ];
