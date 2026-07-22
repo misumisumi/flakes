@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.1.5](https://github.com/misumisumi/flakes/compare/v6.1.4...v6.1.5) (2026-07-22)
+
+
+### Bug Fixes
+
+* **anti-anti-cheat-patch:** update package and add timeout for build check ([44ec6f8](https://github.com/misumisumi/flakes/commit/44ec6f8b7529b48c7391841bc1ab1f11dfaf9c4f))
+* **valkey-glide:** fix dependeces ([002eeca](https://github.com/misumisumi/flakes/commit/002eecafb6c462581fada09697636953b32da9c0))
+
 ## [6.1.4](https://github.com/misumisumi/flakes/compare/v6.1.3...v6.1.4) (2026-07-12)
 
 
