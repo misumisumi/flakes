@@ -104,7 +104,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     ${optionalString (versionAtLeast qemuVersion "11.0.1") ''
       substituteInPlace "$out/QEMU/amd.patch" \
         --replace-fail "+#define ICH9_LPC_DEV                            20" "+#define ICH9_LPC_DEV                            31" \
-        --replace-fail "+#define ICH9_LPC_FUNC                           3" "+#define ICH9_LPC_FUNC                           0" \
         --replace-fail "+#define ICH9_A2_LPC_REVISION                    0x51" "+#define ICH9_A2_LPC_REVISION                    0x2"
       substituteInPlace "$out/EDK2/amd.patch" \
         --replace-fail "+  PCI_LIB_ADDRESS (0, 0x14, 3, (Offset))   // 0, ICH9_LPC_DEV, ICH9_LPC_FUNC | QEMU: include/hw/southbridge/ich9.h"  "+  PCI_LIB_ADDRESS (0, 0x1f, 0, (Offset))" \

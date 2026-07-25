@@ -12,6 +12,13 @@ let
       patches = old.patches or [ ] ++ [
         anti-anti-cheat-patch.qemuPatch.${cpu}
       ];
+      env.NIX_CFLAGS_COMPILE =
+        (old.NIX_CFLAGS_COMPILE or "")
+        + toString [
+          "-Wno-format-security"
+          "-Wno-unused-function"
+          "-Wno-unused-variable"
+        ];
       postPatch = old.postPatch or "" + ''
         substituteInPlace \
           "hw/nvme/ctrl.c" \
