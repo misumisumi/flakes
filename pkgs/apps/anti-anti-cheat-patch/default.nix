@@ -16,12 +16,12 @@ let
 in
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "anti-anti-cheat-patch";
-  version = "0-unstable-2026-07-19";
+  version = "0-unstable-2026-07-24";
   src = fetchFromGitHub {
     owner = "Scrut1ny";
     repo = "AutoVirt";
-    rev = "ac124d93260ba701e8eaba968f5716e99beae379";
-    sha256 = "sha256-2dhJP36q6k3IP4n7Vj1VWrS86GMUyrIQEdkago3GWEs=";
+    rev = "747cf5c18a7fe2da08a177339c64268f8b1cd977";
+    sha256 = "sha256-8Rz29xQHDZpZhx3KVOT0dw0yf3bFLexJQx4SUqT2iww=";
   };
 
   dontPatch = true;
@@ -104,7 +104,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     ${optionalString (versionAtLeast qemuVersion "11.0.1") ''
       substituteInPlace "$out/QEMU/amd.patch" \
         --replace-fail "+#define ICH9_LPC_DEV                            20" "+#define ICH9_LPC_DEV                            31" \
-        --replace-fail "+#define ICH9_LPC_FUNC                           3" "+#define ICH9_LPC_FUNC                           0" \
         --replace-fail "+#define ICH9_A2_LPC_REVISION                    0x51" "+#define ICH9_A2_LPC_REVISION                    0x2"
       substituteInPlace "$out/EDK2/amd.patch" \
         --replace-fail "+  PCI_LIB_ADDRESS (0, 0x14, 3, (Offset))   // 0, ICH9_LPC_DEV, ICH9_LPC_FUNC | QEMU: include/hw/southbridge/ich9.h"  "+  PCI_LIB_ADDRESS (0, 0x1f, 0, (Offset))" \
