@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.1.6](https://github.com/misumisumi/flakes/compare/v6.1.5...v6.1.6) (2026-07-26)
+
+
+### Bug Fixes
+
+* **anti-anti-cheat-patch:** fix patch ([61d976f](https://github.com/misumisumi/flakes/commit/61d976f8aa7bec53725e37b5c9c0314a4f19c1aa))
+
 ## [6.1.5](https://github.com/misumisumi/flakes/compare/v6.1.4...v6.1.5) (2026-07-22)
 
 
