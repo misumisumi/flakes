@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.1.7](https://github.com/misumisumi/flakes/compare/v6.1.6...v6.1.7) (2026-07-31)
+
+
+### Bug Fixes
+
+* **anti-anti-cheat-patch:** fix regex ([e629a77](https://github.com/misumisumi/flakes/commit/e629a7783a8a87cc138081e39f5f1e6ebe57d9e1))
+
 ## [6.1.6](https://github.com/misumisumi/flakes/compare/v6.1.5...v6.1.6) (2026-07-26)
 
 
