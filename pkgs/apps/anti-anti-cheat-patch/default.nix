@@ -43,7 +43,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       if [ "$patchExist" -eq 0 ]; then
         return 1
       fi
-
+      echo "Get patch for $pattern"
       mkdir -p "$outDir"
       while read -r patchFile; do
           base=$(basename "$patchFile")
@@ -105,11 +105,14 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       substituteInPlace "$out/QEMU/amd.patch" \
         --replace-fail "+#define ICH9_LPC_DEV                            20" "+#define ICH9_LPC_DEV                            31" \
         --replace-fail "+#define ICH9_A2_LPC_REVISION                    0x51" "+#define ICH9_A2_LPC_REVISION                    0x2"
+      substituteInPlace "$out/QEMU/amd.patch" \
+        --replace-fail "+#define ICH9_SATA1_DEV                          20" "+#define ICH9_SATA1_DEV                          31"
+      substituteInPlace "$out/QEMU/amd.patch" \
+        --replace-fail "+#define ICH9_SMB_DEV                            20" "+#define ICH9_SMB_DEV                            31"
       substituteInPlace "$out/EDK2/amd.patch" \
-        --replace-fail "+  PCI_LIB_ADDRESS (0, 0x14, 3, (Offset))   // 0, ICH9_LPC_DEV, ICH9_LPC_FUNC | QEMU: include/hw/southbridge/ich9.h"  "+  PCI_LIB_ADDRESS (0, 0x1f, 0, (Offset))" \
-        --replace-fail "+  EFI_PCI_ADDRESS (0, 0x14, 3, (Offset))   // 0, ICH9_LPC_DEV, ICH9_LPC_FUNC | QEMU: include/hw/southbridge/ich9.h"  "+  EFI_PCI_ADDRESS (0, 0x1f, 0, (Offset))"
+        --replace-fail "+  PCI_LIB_ADDRESS (0, 0x14, 0, (Offset))"  "+  PCI_LIB_ADDRESS (0, 0x1f, 0, (Offset))" \
+        --replace-fail "+  EFI_PCI_ADDRESS (0, 0x14, 0, (Offset))"  "+  EFI_PCI_ADDRESS (0, 0x1f, 0, (Offset))"
     ''}
-
 
     sed -i 's/\r//' "$out/QEMU/intel.patch"
     sed -i 's/\r//' "$out/QEMU/amd.patch"
