@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.2.0](https://github.com/misumisumi/flakes/compare/v6.1.7...v6.2.0) (2026-08-04)
+
+
+### Features
+
+* **tokyonight-gtk-theme:** added gtk theme that was removed upstream ([a5d8507](https://github.com/misumisumi/flakes/commit/a5d8507d0c2c60fddcc0f9ad76b2a47250034fbb))
+* **tokyonight-gtk-theme:** added gtk theme that was removed upstream ([68ec55e](https://github.com/misumisumi/flakes/commit/68ec55e8ef2637cf6ecbb7de8a8f1a250724bb19))
+
 ## [6.1.7](https://github.com/misumisumi/flakes/compare/v6.1.6...v6.1.7) (2026-07-31)
 
 
