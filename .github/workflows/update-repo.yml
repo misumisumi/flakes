@@ -46,6 +46,7 @@ jobs:
         run: |
           scripts/update-readme.sh
           git add README.md
+          git commit -m "chore: update README"
 
       - uses: DeterminateSystems/update-flake-lock@v28
         id: update
