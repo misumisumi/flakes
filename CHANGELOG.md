@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.2.1](https://github.com/misumisumi/flakes/compare/v6.2.0...v6.2.1) (2026-08-04)
+
+
+### Bug Fixes
+
+* **anti-anti-cheat-patch:** fix using usb device ([ff479ce](https://github.com/misumisumi/flakes/commit/ff479ce49128752549404b189c2948a3c19cdccf))
+* **anti-anti-cheat-patch:** fix using usb device ([a4288c4](https://github.com/misumisumi/flakes/commit/a4288c40fa339c0274c426684529b9691a17f216))
+
 ## [6.2.0](https://github.com/misumisumi/flakes/compare/v6.1.7...v6.2.0) (2026-08-04)
 
 
