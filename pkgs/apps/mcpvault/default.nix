@@ -9,15 +9,15 @@ let
 in
 buildNpmPackage {
   inherit pname;
-  version = "0-unstable-2026-08-06";
+  version = "0-unstable-2026-08-17";
   src = fetchFromGitHub {
     owner = "bitbonsai";
     repo = pname;
-    rev = "b6a0798836b2b5fee8750fa68c23028fbab94632";
-    sha256 = "sha256-ZrVF6PVjqNGt9dy9dWNXU8l+K6TiBr7naJ1IPQR7nd8=";
+    rev = "5ba7aac77a8dec4c0049bb08f3d7b4b99f01d01e";
+    sha256 = "sha256-zXoo71nY4/g8MN1CBJ+fR0io1+EkgxINHrEUCR5TpE0=";
   };
 
-  npmDepsHash = "sha256-69i6Jvi3HVEf2ZXbFG0s9mtJJC63bYVnz0cGGP8DkPY=";
+  npmDepsHash = "sha256-D6i839Yj66i2h2cAryqW8Cr7IAftLxKLtDfTpVZLSd0=";
 
   passthru.updateScript = nix-update-script {
     extraArgs = [
