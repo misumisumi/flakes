@@ -1,6 +1,6 @@
 {
   lib,
-  fetchFromGitHub,
+  fetchFromCodeberg,
   nix-update-script,
   stdenvNoCC,
   qemu,
@@ -17,7 +17,7 @@ in
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "anti-anti-cheat-patch";
   version = "0-unstable-2026-08-07";
-  src = fetchFromGitHub {
+  src = fetchFromCodeberg {
     owner = "Scrut1ny";
     repo = "AutoVirt";
     rev = "eb7d543e84189ea520fcf243f14e286ffb6ff07d";
