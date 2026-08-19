@@ -101,15 +101,18 @@ stdenvNoCC.mkDerivation (finalAttrs: {
         --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1022" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4" \
         --replace-fail "+#define PCI_SUBDEVICE_ID_QEMU            0x1022" "+#define PCI_SUBDEVICE_ID_QEMU            0x1100"
     ''}
-    ${optionalString (versionAtLeast qemuVersion "11.0.1") ''
+    ${optionalString (versionOlder qemuVersion "11.0.2") ''
       substituteInPlace "$out/QEMU/amd.patch" \
-        --replace-fail "+        case 20:" "+        case 31:" \
-        --replace-fail "Slot 20 (0x14): LPC" "Slot 31 (0x1F): LPC" \
-        --replace-fail "S20%X" "S31%X" \
-        --replace-fail "+#define ICH9_A2_LPC_REVISION                    0x51" "+#define ICH9_A2_LPC_REVISION                    0x2" \
-        --replace-fail "+#define ICH9_LPC_DEV                            20" "+#define ICH9_LPC_DEV                            31" \
         --replace-fail "+#define ICH9_SATA1_DEV                          20" "+#define ICH9_SATA1_DEV                          31" \
         --replace-fail "+#define ICH9_SMB_DEV                            20" "+#define ICH9_SMB_DEV                            31"
+        --replace-fail "+        case 20:" "+        case 31:" \
+        --replace-fail "Slot 20 (0x14): LPC" "Slot 31 (0x1F): LPC" \
+        --replace-fail "S20%X" "S31%X" 
+    ''}
+    ${optionalString (versionAtLeast qemuVersion "11.0.1") ''
+      substituteInPlace "$out/QEMU/amd.patch" \
+        --replace-fail "+#define ICH9_A2_LPC_REVISION                    0x51" "+#define ICH9_A2_LPC_REVISION                    0x2" \
+        --replace-fail "+#define ICH9_LPC_DEV                            20" "+#define ICH9_LPC_DEV                            31" \
 
       substituteInPlace "$out/EDK2/amd.patch" \
         --replace-fail "+  PCI_LIB_ADDRESS (0, 0x14, 0, (Offset))"  "+  PCI_LIB_ADDRESS (0, 0x1f, 0, (Offset))" \
