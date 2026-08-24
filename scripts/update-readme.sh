@@ -57,6 +57,6 @@ EOF
 cat <<EOF >>README.md
 ## Available packages
 
-$(nix flake show --json | jq '(.. | ."x86_64-linux"? | select(. != null)) | (.children // .) | objects | (.derivation.name // .name)' | sort | sed -e "s/\"//g" | sed -e "s/_at_/@/g" | sed -e "s/_slash_/\//g" | sed -e "s/^/  - /g")
+$(nix flake show --json | jq '(.. | ."x86_64-linux"? | select(. != null)) | (.children // .) | values[] | objects | (.derivation.name // .name)' | sort | sed -e "s/\"//g" | sed -e "s/_at_/@/g" | sed -e "s/_slash_/\//g" | sed -e "s/^/  - /g")
 
 EOF
