@@ -50,5 +50,9 @@ In your `flake.nix`
 
 ## Available packages
 
-
+  - null
+  - null
+  - null
+  - null
+  - null
 
