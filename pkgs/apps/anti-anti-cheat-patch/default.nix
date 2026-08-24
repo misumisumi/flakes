@@ -1,6 +1,6 @@
 {
   lib,
-  fetchFromGitHub,
+  fetchFromCodeberg,
   nix-update-script,
   stdenvNoCC,
   qemu,
@@ -16,12 +16,12 @@ let
 in
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "anti-anti-cheat-patch";
-  version = "0-unstable-2026-08-07";
-  src = fetchFromGitHub {
+  version = "0-unstable-2026-07-25";
+  src = fetchFromCodeberg {
     owner = "Scrut1ny";
     repo = "AutoVirt";
-    rev = "eb7d543e84189ea520fcf243f14e286ffb6ff07d";
-    sha256 = "sha256-kI4ndJ7DkofYk/pN0q4vm2aEJvcOUVlQcWCuNkelKzQ=";
+    rev = "8de94860b2c9ac9d90ba9e173d29c4f47144cbef";
+    sha256 = "sha256-CL7IocyQrZZd8zAk1faq+GPDJFNHTybD7m0EqKy4vhM=";
   };
 
   dontPatch = true;
@@ -101,15 +101,18 @@ stdenvNoCC.mkDerivation (finalAttrs: {
         --replace-fail "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1022" "+#define PCI_SUBVENDOR_ID_REDHAT_QUMRANET 0x1af4" \
         --replace-fail "+#define PCI_SUBDEVICE_ID_QEMU            0x1022" "+#define PCI_SUBDEVICE_ID_QEMU            0x1100"
     ''}
-    ${optionalString (versionAtLeast qemuVersion "11.0.1") ''
+    ${optionalString (versionOlder qemuVersion "11.0.2") ''
       substituteInPlace "$out/QEMU/amd.patch" \
-        --replace-fail "+        case 20:" "+        case 31:" \
-        --replace-fail "Slot 20 (0x14): LPC" "Slot 31 (0x1F): LPC" \
-        --replace-fail "S20%X" "S31%X" \
-        --replace-fail "+#define ICH9_A2_LPC_REVISION                    0x51" "+#define ICH9_A2_LPC_REVISION                    0x2" \
-        --replace-fail "+#define ICH9_LPC_DEV                            20" "+#define ICH9_LPC_DEV                            31" \
         --replace-fail "+#define ICH9_SATA1_DEV                          20" "+#define ICH9_SATA1_DEV                          31" \
         --replace-fail "+#define ICH9_SMB_DEV                            20" "+#define ICH9_SMB_DEV                            31"
+        --replace-fail "+        case 20:" "+        case 31:" \
+        --replace-fail "Slot 20 (0x14): LPC" "Slot 31 (0x1F): LPC" \
+        --replace-fail "S20%X" "S31%X" 
+    ''}
+    ${optionalString (versionAtLeast qemuVersion "11.0.1") ''
+      substituteInPlace "$out/QEMU/amd.patch" \
+        --replace-fail "+#define ICH9_A2_LPC_REVISION                    0x51" "+#define ICH9_A2_LPC_REVISION                    0x2" \
+        --replace-fail "+#define ICH9_LPC_DEV                            20" "+#define ICH9_LPC_DEV                            31" \
 
       substituteInPlace "$out/EDK2/amd.patch" \
         --replace-fail "+  PCI_LIB_ADDRESS (0, 0x14, 0, (Offset))"  "+  PCI_LIB_ADDRESS (0, 0x1f, 0, (Offset))" \

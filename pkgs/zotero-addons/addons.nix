@@ -19,22 +19,6 @@
       homepage = "https://github.com/retorquere/zotero-better-bibtex";
       description = "Make Zotero effective for us LaTeX holdouts";
     };
-  zotero-night =
-    let
-      version = "0.4.23";
-    in
-    {
-      pname = "zotero-night";
-      inherit version;
-      src = fetchurl {
-        url = "https://github.com/tefkah/zotero-night/releases/download/v${version}/night.xpi";
-        sha256 = "sha256-szoKwmYMm9fZrWxqN2ZJptahCgGkIUNwR0n3m5zhiJw=";
-      };
-      addonId = "night@tefkah.com";
-      license = "gpl3";
-      homepage = "https://github.com/tefkah/zotero";
-      description = "Night theme for Zotero UI and PDF";
-    };
   zotero-pdf-translate =
     let
       version = "2.4.3";
@@ -82,22 +66,6 @@
       license = "agpl3Plus";
       homepage = "https://github.com/syt2/zotero-scipdf";
       description = "Download PDF from Sci-Hub automatically (For Zotero7)";
-    };
-  zotero-zotfile =
-    let
-      version = "5.1.2";
-    in
-    {
-      pname = "zotero-zotfile";
-      inherit version;
-      src = fetchurl {
-        url = "https://github.com/jlegewie/zotfile/releases/download/v${version}/zotfile-${version}-fx.xpi";
-        sha256 = "sha256-vmJVLqNgxbI6eE3TqDKJs/u/Bdemag2aADfy8L89YKc=";
-      };
-      addonId = "zotfile@columbia.edu";
-      license = "gpl3";
-      homepage = "https://github.com/jlegewie/zotfile";
-      description = "Zotero plugin to manage your attachments: automatically rename, move, and attach PDFs (or other files) to Zotero items, sync PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.), and extract PDF annotations.";
     };
   zotero-zotmoov =
     let
