@@ -1,5 +1,15 @@
 # Changelog
 
+## [6.2.2](https://github.com/misumisumi/flakes/compare/v6.2.1...v6.2.2) (2026-08-24)
+
+
+### Bug Fixes
+
+* **anti-anti-cheat-patch:** fix patch ([f7d3f47](https://github.com/misumisumi/flakes/commit/f7d3f4759574f6cb1e50752c58f93191ff644eef))
+* **anti-anti-cheat-patch:** fix src ([4c66307](https://github.com/misumisumi/flakes/commit/4c66307ce86ece04b75532ada38e6f4b58a3c2ff))
+* **mcpvault:** fix build and automate node_modules update ([f75f43d](https://github.com/misumisumi/flakes/commit/f75f43d23247fbf787cf85d6b90dbbc9f70262a2))
+* **zotero:** remove some plugin ([7d754ae](https://github.com/misumisumi/flakes/commit/7d754aeb2d9cd3c44a9881ff03efea8ac044ebea))
+
 ## [6.2.1](https://github.com/misumisumi/flakes/compare/v6.2.0...v6.2.1) (2026-08-04)
 
 
