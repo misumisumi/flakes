@@ -38,12 +38,12 @@ let
 in
 buildNpmPackage {
   inherit pname;
-  version = "0-unstable-2026-08-18";
+  version = "0-unstable-2026-08-26";
   src = fetchFromGitHub {
     owner = "bitbonsai";
     repo = pname;
-    rev = "23fab5751dc0a675ea0a3695f08039c809ef84e3";
-    sha256 = "sha256-49RsEQj/rdjtFW7ZlLwzDoDd5s98niS7s8UESjYUo04=";
+    rev = "c5abeda9bed11864079f70ae7f33d134e294aad2";
+    sha256 = "sha256-K7MCnTBOtNYzJT1zz4v3H9y+N2lE1+S2xi8BNUXDEl0=";
   };
 
   postPatch = ''
@@ -51,7 +51,7 @@ buildNpmPackage {
   '';
 
   npmDepsFetcherVersion = 2;
-  npmDepsHash = "sha256-4KKSDUA0cnzJgQ1oXZInRhRwlfrg2iuZfsFp4XoHCjI=";
+  npmDepsHash = "sha256-STsZJifwgiqx5/Kg2/KkOq+8Tv/k1fmERzt61axt7hI=";
   npmFlags = [ "--legacy-peer-deps" ];
   makeCacheWritable = true;
 

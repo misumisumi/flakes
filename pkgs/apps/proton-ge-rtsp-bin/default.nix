@@ -27,6 +27,10 @@ proton-ge-bin.overrideAttrs (
           "https://github.com/SpookySkeletons/proton-ge-rtsp"
         ];
       };
+      variants."x86_64-linux" = {
+        toolName = "${version}";
+      };
     };
+    meta.platforms = [ "x86_64-linux" ];
   }
 )
