@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.2.3](https://github.com/misumisumi/flakes/compare/v6.2.2...v6.2.3) (2026-09-01)
+
+
+### Bug Fixes
+
+* **anti-anti-cheat-patch:** fix qemu version ([b33c21b](https://github.com/misumisumi/flakes/commit/b33c21b3b7f6ce544eae60e45ff4e910eb1392eb))
+* **proton-ge-rtsp-bin:** fix override by upstream change ([fb6302d](https://github.com/misumisumi/flakes/commit/fb6302dfe12127f196ad32c56d6d9e7936ef954b))
+
 ## [6.2.2](https://github.com/misumisumi/flakes/compare/v6.2.1...v6.2.2) (2026-08-24)
 
 
