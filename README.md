@@ -50,13 +50,13 @@ In your `flake.nix`
 
 ## Available packages
 
-  - aac-OVMF-202605
-  - aac-QEMU-amd-11.1.0
-  - aac-QEMU-intel-11.1.0
+  - aac-OVMF-202608
+  - aac-QEMU-amd-11.0.2
+  - aac-QEMU-intel-11.0.2
   - anti-anti-cheat-patch-0-unstable-2026-07-25
-  - blender-bin_4_5-5.2.0
-  - blender-bin-5.2.0
-  - blender-bin_lts-5.2.0
+  - blender-bin_4_5-5.2.1
+  - blender-bin-5.2.1
+  - blender-bin_lts-5.2.1
   - bt-dualboot-1.0.1
   - commitlint-format-json-1.1.0
   - cups-brother-hll5100dn-3.5.1-1
@@ -64,7 +64,7 @@ In your `flake.nix`
   - discord-mcp-1.0.0-unstable-2026-04-25
   - julius-speech-4.6
   - mcp-hub-4.2.1
-  - mcpvault-0-unstable-2026-08-22
+  - mcpvault-0-unstable-2026-08-26
   - mstflint-cx3-support-4.25.0-1
   - ndi-6-6.3.2.0
   - nixos-diff
