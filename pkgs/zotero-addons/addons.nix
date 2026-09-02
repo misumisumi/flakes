@@ -5,14 +5,14 @@
 {
   zotero-better-bibtex =
     let
-      version = "9.0.19";
+      version = "9.0.63";
     in
     {
       pname = "zotero-better-bibtex";
       inherit version;
       src = fetchurl {
         url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v${version}/zotero-better-bibtex-${version}.xpi";
-        sha256 = "sha256-sfHDfWKQ3+X0gtjCIb+yJGcfSc8TTMk71sCQJ7mC0Xs=";
+        sha256 = "sha256-Ok0IDslBU6jCS/gnVonF+UbZnjFLauD6tQYNaXD1Y4g=";
       };
       addonId = "better-bibtex@iris-advies.com";
       license = "mit";
@@ -21,14 +21,14 @@
     };
   zotero-pdf-translate =
     let
-      version = "2.4.3";
+      version = "2.4.7";
     in
     {
       pname = "zotero-pdf-translate";
       inherit version;
       src = fetchurl {
         url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v${version}/translate-for-zotero.xpi";
-        sha256 = "sha256-/EHaAKXQBg1F5l8URsiVg+GGxQBmpLLpCML+Y0wmM3I=";
+        sha256 = "sha256-DLJn7s/wTSzjlAHlRY4xMSQi13rEYPaVjJouLaEJLdI=";
       };
       addonId = "zoteropdftranslate@euclpts.com";
       license = "agpl3Only";
@@ -53,30 +53,34 @@
     };
   zotero-scipdf =
     let
-      version = "8.0.4";
+      version = "8.1.0";
     in
     {
       pname = "zotero-scipdf";
       inherit version;
       src = fetchurl {
         url = "https://github.com/syt2/zotero-scipdf/releases/download/V${version}/sci-pdf.xpi";
-        sha256 = "sha256-LWZHzH8mMKeJt+nExKgZIqva9sR45454KwOwxT6YPlY=";
+        sha256 = "sha256-uGzS/QCA9COtknCOhp3jShtIGQHkZo/10Tr3tFFxWjM=";
       };
       addonId = "scipdf@ytshen.com";
       license = "agpl3Plus";
       homepage = "https://github.com/syt2/zotero-scipdf";
       description = "Download PDF from Sci-Hub automatically (For Zotero7)";
+      updateOptions = [
+        "--version-regex"
+        "V(.*)"
+      ];
     };
   zotero-zotmoov =
     let
-      version = "1.2.26";
+      version = "1.2.32";
     in
     {
       pname = "zotero-zotmoov";
       inherit version;
       src = fetchurl {
         url = "https://github.com/wileyyugioh/zotmoov/releases/download/${version}/zotmoov-${version}-fx.xpi";
-        sha256 = "sha256-y89Pun0exbMa+Wq7BPdaBSkMtqmi3nHS5AH/qAuiyi4=";
+        sha256 = "sha256-d3DcLGLSqqsmYv10Aq+t0Fg4e/9pV4SBrAOb/AUOzCs=";
       };
       addonId = "zotmoov@wileyy.com";
       license = "gpl3Only";
