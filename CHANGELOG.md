@@ -1,5 +1,19 @@
 # Changelog
 
+## [7.0.0](https://github.com/misumisumi/flakes/compare/v6.2.3...v7.0.0) (2026-09-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove asus-notify
+
+### Bug Fixes
+
+* only apply fixed version to anti-anti-cheat-patch and AACPkgs ([8a86019](https://github.com/misumisumi/flakes/commit/8a860197e66cdf9d879f06b55c408a8c10d8e851))
+* only apply fixed version to anti-anti-cheat-patch and AACPkgs ([0997992](https://github.com/misumisumi/flakes/commit/0997992772be21cb82010f420342780b15b88bb7))
+* remove asus-notify ([2b32d05](https://github.com/misumisumi/flakes/commit/2b32d059bb85c754441714c72dc2f3466343fedd))
+* **zotero-addons:** fix update script ([d01e65d](https://github.com/misumisumi/flakes/commit/d01e65deafe321f84b8fa659ce07d548d6f7917a))
+
 ## [6.2.3](https://github.com/misumisumi/flakes/compare/v6.2.2...v6.2.3) (2026-09-01)
 
 
