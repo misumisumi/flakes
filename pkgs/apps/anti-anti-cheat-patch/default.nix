@@ -107,7 +107,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
         --replace-fail "+#define ICH9_SMB_DEV                            20" "+#define ICH9_SMB_DEV                            31"
         --replace-fail "+        case 20:" "+        case 31:" \
         --replace-fail "Slot 20 (0x14): LPC" "Slot 31 (0x1F): LPC" \
-        --replace-fail "S20%X" "S31%X" 
+        --replace-fail "S20%X" "S31%X"
     ''}
     ${optionalString (versionAtLeast qemuVersion "11.0.1") ''
       substituteInPlace "$out/QEMU/amd.patch" \

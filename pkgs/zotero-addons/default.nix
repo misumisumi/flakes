@@ -37,6 +37,8 @@ let
         extraArgs = [
           "--flake"
           "--use-github-releases"
+          "--override-filename"
+          "pkgs/zotero-addons/addons.nix"
         ]
         ++ updateOptions;
       };

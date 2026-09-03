@@ -2,7 +2,7 @@
   anti-anti-cheat-patch,
   OVMF,
   qemu,
-  buildPackages,
+  edk2,
 }:
 let
   qemuOverrideAttrs =
@@ -36,7 +36,7 @@ let
       ];
       prePatch = ''
         rm -rf BaseTools
-        cp -r ${buildPackages.edk2}/BaseTools BaseTools
+        cp -r ${edk2}/BaseTools BaseTools
         chmod u+w -R BaseTools
       '';
       postPatch =
@@ -108,6 +108,7 @@ in
 rec {
   aac-OVMF-amd =
     (OVMF.override {
+      inherit edk2;
       qemu = aac-qemu-amd;
       secureBoot = true;
       tpmSupport = true;
@@ -119,6 +120,7 @@ rec {
 
   aac-OVMF-intel =
     (OVMF.override {
+      inherit edk2;
       qemu = aac-qemu-intel;
       secureBoot = true;
       tpmSupport = true;
