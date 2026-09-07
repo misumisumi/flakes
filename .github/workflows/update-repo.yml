@@ -9,15 +9,15 @@ permissions: read-all
 jobs:
   update-repo:
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'misumisumi'
+    # if: github.repository_owner == 'misumisumi'
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/create-github-app-token@v3
-        id: generate-token
-        with:
-          client-id: ${{ secrets.CLIENT_ID }}
-          private-key: ${{ secrets.PRIVATE_KEY }}
+      # - uses: actions/create-github-app-token@v3
+      #   id: generate-token
+      #   with:
+      #     client-id: ${{ secrets.CLIENT_ID }}
+      #     private-key: ${{ secrets.PRIVATE_KEY }}
 
       - uses: DeterminateSystems/nix-installer-action@v22
         with:
@@ -48,12 +48,12 @@ jobs:
           git add README.md
           git commit -m "chore: update README"
 
-      - uses: DeterminateSystems/update-flake-lock@v28
-        id: update
-        with:
-          token: ${{ steps.generate-token.outputs.token }}
-          commit-msg: "chore(flake.lock): auto update flake.lock"
-          pr-title: "chore(flake.lock): auto update flake.lock" # Title of PR to be created
-          pr-labels: | # Labels to be set on the PR
-            dependencies
-            automated
+      # - uses: DeterminateSystems/update-flake-lock@v28
+      #   id: update
+      #   with:
+      #     token: ${{ steps.generate-token.outputs.token }}
+      #     commit-msg: "chore(flake.lock): auto update flake.lock"
+      #     pr-title: "chore(flake.lock): auto update flake.lock" # Title of PR to be created
+      #     pr-labels: | # Labels to be set on the PR
+      #       dependencies
+      #       automated
