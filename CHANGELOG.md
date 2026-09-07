@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.0.1](https://github.com/misumisumi/flakes/compare/v7.0.0...v7.0.1) (2026-09-07)
+
+
+### Bug Fixes
+
+* **mcpvault:** fix update logic ([ee51d71](https://github.com/misumisumi/flakes/commit/ee51d71e8eacd037b78aa538d67429df0def6617))
+* **mcpvault:** fix update logic ([1fbfdc1](https://github.com/misumisumi/flakes/commit/1fbfdc1f64b786a623e9d418706c7b0d54e3432c))
+
 ## [7.0.0](https://github.com/misumisumi/flakes/compare/v6.2.3...v7.0.0) (2026-09-03)
 
 
