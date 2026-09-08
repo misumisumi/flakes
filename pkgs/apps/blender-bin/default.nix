@@ -30,14 +30,14 @@ let
   inherit (lib.versions) majorMinor;
   blender-bin =
     let
-      version = "5.2.1";
+      version = "4.5.13";
     in
     {
       pname = "blender-bin";
       inherit version;
       src = fetchurl {
         url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender${majorMinor version}/blender-${version}-linux-x64.tar.xz";
-        sha256 = "sha256-ox9ST6maUn09Urf1qqaMNOGhnVoclHP3nFzGEP1bEOk=";
+        sha256 = "sha256-2k5psGt1ueZC0QZJbFDn4kAhi0EdL24YJxwdHYGc75E=";
       };
       passthru.updateScript = {
         command = [
@@ -49,14 +49,14 @@ let
     };
   blender-bin_4_5 =
     let
-      version = "5.2.1";
+      version = "4.5.13";
     in
     {
       pname = "blender-bin_4_5";
       inherit version;
       src = fetchurl {
         url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blender-${version}-linux-x64.tar.xz";
-        sha256 = "sha256-ox9ST6maUn09Urf1qqaMNOGhnVoclHP3nFzGEP1bEOk=";
+        sha256 = "sha256-2k5psGt1ueZC0QZJbFDn4kAhi0EdL24YJxwdHYGc75E=";
       };
       passthru.updateScript = nix-update-script {
         extraArgs = [
@@ -72,14 +72,14 @@ let
     };
   blender-bin_lts =
     let
-      version = "5.2.1";
+      version = "4.5.13";
     in
     {
       pname = "blender-bin_lts";
       inherit version;
       src = fetchurl {
         url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender${majorMinor version}/blender-${version}-linux-x64.tar.xz";
-        sha256 = "sha256-ox9ST6maUn09Urf1qqaMNOGhnVoclHP3nFzGEP1bEOk=";
+        sha256 = "sha256-2k5psGt1ueZC0QZJbFDn4kAhi0EdL24YJxwdHYGc75E=";
       };
       passthru.updateScript = {
         command = [
