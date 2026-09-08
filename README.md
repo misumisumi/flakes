@@ -50,12 +50,12 @@ In your `flake.nix`
 
 ## Available packages
 
-  - aac-OVMF-202608
+  - aac-OVMF-202605
   - aac-QEMU-amd-11.0.2
   - aac-QEMU-intel-11.0.2
   - anti-anti-cheat-patch-0-unstable-2026-07-25
-  - blender-bin_4_5-5.2.1
   - blender-bin-5.2.1
+  - blender-bin_4_5-5.2.1
   - blender-bin_lts-5.2.1
   - bt-dualboot-1.0.1
   - commitlint-format-json-1.1.0
@@ -64,15 +64,14 @@ In your `flake.nix`
   - discord-mcp-1.0.0-unstable-2026-04-25
   - julius-speech-4.6
   - mcp-hub-4.2.1
-  - mcpvault-0-unstable-2026-08-26
+  - mcpvault-0.16.0
   - mstflint-cx3-support-4.25.0-1
   - ndi-6-6.3.2.0
   - nixos-diff
-  - null
   - openpace-1.1.4
   - paper-search-mcp-0.1.4-unstable-2026-08-17
   - ppp-scripts-2.5.2
-  - prettier-plugin-nginx-0-unstable-2023-03-17
+  - prettier-plugin-nginx-0-unstable-2026-09-04
   - prettier-plugin-php-0.25.0
   - prettier-plugin-pug-3.4.2
   - prettier-plugin-ruby-3.4.1
@@ -82,12 +81,12 @@ In your `flake.nix`
   - prettier-plugin-toml-2.0.6
   - proton-ge-rtsp-bin-GE-Proton10-33-rtsp24-1
   - python3.14-jupynium-0.2.7
-  - python3.14-valkey-glide-2.5.1
+  - python3.14-valkey-glide-2.5.2
   - python3.14-version_pioneer-0.0.16
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-0.0.9
   - skk-emoticons-jisyo-0.2.1-unstable-2021-04-02
-  - skk-jawiki-jisyo-2026.08.21.141555
+  - skk-jawiki-jisyo-2026.09.01.174549
   - skk-kaomoji-jisyo-2.30.5544.102
   - snack-2.2.10
   - tkdnd-2.9.5
@@ -97,10 +96,11 @@ In your `flake.nix`
   - vrchat-vpm-cli-0.1.28
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-2026.08.21.141555
-  - zotero-better-bibtex-9.0.19
-  - zotero-pdf-translate-2.4.3
-  - zotero-reading-list-1.5.17
-  - zotero-scipdf-8.0.4
-  - zotero-zotmoov-1.2.26
+  - yaskkserv2-dict-2026.09.01.174549
+  - zotero-better-bibtex-9.0.63
+  - zotero-pdf-translate-2.4.7
+  - zotero-reading-list-1.5.22
+  - zotero-scipdf-8.1.0
+  - zotero-zotmoov-1.2.32
+  - null
 
