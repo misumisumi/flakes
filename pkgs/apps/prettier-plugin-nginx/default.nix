@@ -7,18 +7,18 @@
 let
   inherit (lib) licenses;
   pname = "prettier-plugin-nginx";
-  version = "0-unstable-2023-03-17";
+  version = "0-unstable-2026-09-04";
 in
 buildNpmPackage {
   inherit pname version;
   src = fetchFromGitHub {
     owner = "jxddk";
     repo = pname;
-    rev = "b3c840f4bac1373c2dc984825e3dad3308fcbcbe";
-    sha256 = "sha256-JsAgLg89gxLlmXbeoFAceGsmvLLrHuQHA/heuzFxWSg=";
+    rev = "f537ba5685806a6e7e4aacf33e1270041c885364";
+    sha256 = "sha256-sXG9rBURaY69O1DalvsULuAJeyNcdBPyv1Q45BVLwS8=";
   };
 
-  npmDepsHash = "sha256-tE9czVsJEfQxLUPiifZll8sV2aGmfCO/uCAgOCKGU+Y=";
+  npmDepsHash = "sha256-PaSaHDJH6L1w7ZElqVln98KloemejMPx9zc22mX9uAQ=";
   postPatch = ''
     cp ${./package-lock.json} ./package-lock.json
   '';
