@@ -10,11 +10,11 @@
 }:
 let
   pname = "valkey-glide";
-  version = "2.5.1";
+  version = "2.5.2";
   src = fetchPypi {
     pname = "valkey_glide";
     inherit version;
-    sha256 = "sha256-su+yPJh6mVrWzipyYWmWY4E33SUErCYr3WwEU3g5QJA=";
+    sha256 = "sha256-cdxTL9LDcbNxK13vRdJ3MEe/Wj1/XelAXgaMdpd3t+g=";
   };
 in
 buildPythonPackage {
@@ -26,7 +26,7 @@ buildPythonPackage {
   # cargoDeps = rustPlatform.importCargoLock { lockFile = ./Cargo.lock; };
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit pname version src;
-    hash = "sha256-lyWof2Ov/IDHT1ohQAKbVro5XoNsZWCONiXVEZz+6Wk=";
+    hash = "sha256-aMw9pbmQBuTfe/oUxylDehA7sZy9G1DIfJHwhWr/91s=";
   };
 
   dependencies = [
