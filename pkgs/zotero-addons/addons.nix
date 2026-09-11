@@ -53,14 +53,14 @@
     };
   zotero-scipdf =
     let
-      version = "8.1.0";
+      version = "8.1.1";
     in
     {
       pname = "zotero-scipdf";
       inherit version;
       src = fetchurl {
         url = "https://github.com/syt2/zotero-scipdf/releases/download/V${version}/sci-pdf.xpi";
-        sha256 = "sha256-uGzS/QCA9COtknCOhp3jShtIGQHkZo/10Tr3tFFxWjM=";
+        sha256 = "sha256-fOCH/mzTIsqs53xfd1/5mVKlMU4xBOumbKPglH96nXA=";
       };
       addonId = "scipdf@ytshen.com";
       license = "agpl3Plus";
