@@ -97,10 +97,10 @@ In your `flake.nix`
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2026.09.01.174549
-  - zotero-better-bibtex-9.0.63
+  - zotero-better-bibtex-9.0.64
   - zotero-pdf-translate-2.4.7
   - zotero-reading-list-1.5.22
-  - zotero-scipdf-8.1.0
+  - zotero-scipdf-8.1.1
   - zotero-zotmoov-1.2.32
   - null
 
