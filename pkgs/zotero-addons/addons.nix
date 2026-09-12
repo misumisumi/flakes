@@ -5,14 +5,14 @@
 {
   zotero-better-bibtex =
     let
-      version = "9.0.63";
+      version = "9.0.64";
     in
     {
       pname = "zotero-better-bibtex";
       inherit version;
       src = fetchurl {
         url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v${version}/zotero-better-bibtex-${version}.xpi";
-        sha256 = "sha256-Ok0IDslBU6jCS/gnVonF+UbZnjFLauD6tQYNaXD1Y4g=";
+        sha256 = "sha256-hMS1sF/6yanH4v95ZjYSSG93gWkN1ZsSoeYq7Nz6fCc=";
       };
       addonId = "better-bibtex@iris-advies.com";
       license = "mit";
@@ -53,14 +53,14 @@
     };
   zotero-scipdf =
     let
-      version = "8.1.0";
+      version = "8.1.1";
     in
     {
       pname = "zotero-scipdf";
       inherit version;
       src = fetchurl {
         url = "https://github.com/syt2/zotero-scipdf/releases/download/V${version}/sci-pdf.xpi";
-        sha256 = "sha256-uGzS/QCA9COtknCOhp3jShtIGQHkZo/10Tr3tFFxWjM=";
+        sha256 = "sha256-fOCH/mzTIsqs53xfd1/5mVKlMU4xBOumbKPglH96nXA=";
       };
       addonId = "scipdf@ytshen.com";
       license = "agpl3Plus";
