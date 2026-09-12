@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.0.2](https://github.com/misumisumi/flakes/compare/v7.0.1...v7.0.2) (2026-09-12)
+
+
+### Bug Fixes
+
+* **blender-bin:** fix previous lts version ([697c02e](https://github.com/misumisumi/flakes/commit/697c02e642593fcc1789fa1a8369b64b369b2450))
+
 ## [7.0.1](https://github.com/misumisumi/flakes/compare/v7.0.0...v7.0.1) (2026-09-07)
 
 
