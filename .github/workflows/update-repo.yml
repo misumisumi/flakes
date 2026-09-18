@@ -48,7 +48,7 @@ jobs:
           git add README.md
           git commit -m "chore: update README"
 
-      - uses: DeterminateSystems/update-flake-lock@v28
+      - uses: DeterminateSystems/update-flake-lock@v29
         id: update
         with:
           token: ${{ steps.generate-token.outputs.token }}
