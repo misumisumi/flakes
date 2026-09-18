@@ -10,7 +10,7 @@
 }:
 let
   inherit (lib) licenses;
-  version = "3.4.2";
+  version = "3.5.0";
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "prettier-plugin-pug";
@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "prettier";
     repo = "plugin-pug";
     rev = version;
-    sha256 = "sha256-4CsKMj8Xnq+dlGzLAG2hV8jTCMYBYhaV/uoKAfztSGs=";
+    sha256 = "sha256-TFVK2zmGmTCSdTdg15bbnMZTr7xRXr33hrSxrfDL/D4=";
   };
 
   nativeBuildInputs = [
@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
       src
       ;
     fetcherVersion = 4;
-    hash = "sha256-aUTjJnJG47NPgwrZWjsEY7Qrq+hKAgKYhYUfSEp+E9U=";
+    hash = "sha256-7m2Bi110eAzBIOPixwkB7/tyaIQT6kCfArDdyUHOUZQ=";
   };
 
   meta = {
