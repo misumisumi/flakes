@@ -4,13 +4,15 @@
   fetchPnpmDeps,
   nodejs,
   npmHooks,
-  pnpm,
+  pnpm_11,
   pnpmConfigHook,
   stdenv,
+  nix-update-script,
 }:
 let
   inherit (lib) licenses;
   version = "3.5.0";
+  pnpm = pnpm_11;
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "prettier-plugin-pug";
@@ -37,8 +39,15 @@ stdenv.mkDerivation (finalAttrs: {
       version
       src
       ;
+    inherit pnpm;
     fetcherVersion = 4;
     hash = "sha256-7m2Bi110eAzBIOPixwkB7/tyaIQT6kCfArDdyUHOUZQ=";
+  };
+
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+    ];
   };
 
   meta = {

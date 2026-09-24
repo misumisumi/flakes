@@ -4,13 +4,15 @@
   fetchPnpmDeps,
   nodejs,
   npmHooks,
-  pnpm,
+  pnpm_11,
   pnpmConfigHook,
   stdenv,
+  nix-update-script,
 }:
 let
   pname = "update-github-actions-permissions";
   version = "2.9.1";
+  pnpm = pnpm_11;
 in
 stdenv.mkDerivation (finalAttrs: {
   inherit pname version;
@@ -33,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
       version
       src
       ;
+    inherit pnpm;
     fetcherVersion = 4;
     hash = "sha256-RzdmGCwMFt/p/MYiKN3HAt1wrtc0gl6kAw08+FapCJ0=";
   };
@@ -54,6 +57,12 @@ stdenv.mkDerivation (finalAttrs: {
     "--legacy-peer-deps"
   ];
   dontNpmPrune = true;
+
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+    ];
+  };
 
   meta = with lib; {
     description = "A CLI that update GitHub Actions's `permissions` automatically";
