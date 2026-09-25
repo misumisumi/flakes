@@ -4,14 +4,14 @@
   stdenvNoCC,
 }:
 let
-  version = "2026.09.01.174549";
+  version = "2026.09.21.185756";
 in
 stdenvNoCC.mkDerivation {
   pname = "skk-jawiki-jisyo";
   inherit version;
   src = fetchurl {
     url = "https://github.com/tokuhirom/jawiki-kana-kanji-dict/releases/download/v${version}/SKK-JISYO.jawiki";
-    sha256 = "sha256-el5JHJ5L6U3CEfGihIO5AVIBN+PAOC86KyzOukywqGU=";
+    sha256 = "sha256-2EUKJP1YZDIXyp0XJVB6DWMq0TPTyyotySgcwIwWVXo=";
   };
   dontUnpack = true;
 
