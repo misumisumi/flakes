@@ -69,34 +69,34 @@ In your `flake.nix`
   - ndi-6-6.3.2.0
   - nixos-diff
   - openpace-1.1.4
-  - paper-search-mcp-0.1.4-unstable-2026-08-17
+  - paper-search-mcp-0.1.4-unstable-2026-09-22
   - ppp-scripts-2.5.2
   - prettier-plugin-nginx-0-unstable-2026-09-04
   - prettier-plugin-php-0.25.0
   - prettier-plugin-pug-3.5.0
   - prettier-plugin-ruby-3.4.1
   - prettier-plugin-ruby-4.0.4
-  - prettier-plugin-sh-0.19.0
+  - prettier-plugin-sh-0.20.2
   - prettier-plugin-sql-0.20.0
-  - prettier-plugin-toml-2.0.6
+  - prettier-plugin-toml-3.0.2
   - proton-ge-rtsp-bin-GE-Proton10-33-rtsp24-1
-  - python3.14-jupynium-0.2.7
-  - python3.14-valkey-glide-2.5.2
+  - python3.14-jupynium-0.2.8
+  - python3.14-valkey-glide-2.5.3
   - python3.14-version_pioneer-0.0.16
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-0.0.9
   - skk-emoticons-jisyo-0.2.1-unstable-2021-04-02
-  - skk-jawiki-jisyo-2026.09.01.174549
+  - skk-jawiki-jisyo-2026.09.21.185756
   - skk-kaomoji-jisyo-2.30.5544.102
   - snack-2.2.10
   - tkdnd-2.9.5
   - tokyonight-gtk-theme-0-unstable-2025-10-23
   - update-github-actions-permissions-2.9.1
-  - virtualsmartcard-0.10
+  - virtualsmartcard-0.11
   - vrchat-vpm-cli-0.1.28
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-2026.09.01.174549
+  - yaskkserv2-dict-2026.09.21.185756
   - zotero-better-bibtex-9.0.64
   - zotero-pdf-translate-2.4.7
   - zotero-reading-list-1.7.0
