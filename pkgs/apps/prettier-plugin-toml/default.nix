@@ -7,18 +7,18 @@
 let
   inherit (lib) licenses;
   pname = "prettier-plugin-toml";
-  version = "2.0.6";
+  version = "3.0.2";
 in
 buildNpmPackage {
   inherit pname version;
   src = fetchurl {
     url = "https://registry.npmjs.org/prettier-plugin-toml/-/prettier-plugin-toml-${version}.tgz";
-    sha256 = "sha256-TSG3iCwXcOjxbar7zWtey+JU9XPoSrenDOtU1abCo20=";
+    sha256 = "sha256-iQ82rawcKd3C92IfupO7uZsD/cnplHj+yc7yN52jw6w=";
   };
 
   dontNpmBuild = true;
 
-  npmDepsHash = "sha256-11tfR1NI16By7JzbmsO/NAOKH/H68vG2JjZpwT4ds/Q=";
+  npmDepsHash = "sha256-RVHamRWeEKspMQ1iQRvwqgVJSc0GSXYj3PdOhaYqVag=";
   postPatch = ''
     cp ${./package-lock.json} ./package-lock.json
   '';
