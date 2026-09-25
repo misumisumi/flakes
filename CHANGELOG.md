@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.0.3](https://github.com/misumisumi/flakes/compare/v7.0.2...v7.0.3) (2026-09-25)
+
+
+### Bug Fixes
+
+* fix pnpm version and update pnpm lockfile ([b6a15b3](https://github.com/misumisumi/flakes/commit/b6a15b31e913a98f09bb6a8c3a860cc48e753a7a))
+* **prettier-plugin-pug:** build dist and make output deterministic ([4ae4db6](https://github.com/misumisumi/flakes/commit/4ae4db602b5133ee59635901e885f5a26aa68198))
+
 ## [7.0.2](https://github.com/misumisumi/flakes/compare/v7.0.1...v7.0.2) (2026-09-12)
 
 
