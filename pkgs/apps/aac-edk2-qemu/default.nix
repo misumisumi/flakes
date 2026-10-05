@@ -1,10 +1,9 @@
 {
   anti-anti-cheat-patch,
   OVMF,
-  qemu,
-  edk2,
 }:
 let
+  inherit (anti-anti-cheat-patch.passthru) qemu edk2;
   qemuOverrideAttrs =
     cpu:
     (old: {
@@ -19,11 +18,38 @@ let
           "-Wno-unused-function"
           "-Wno-unused-variable"
         ];
-      postPatch = old.postPatch or "" + ''
-        substituteInPlace \
-          "hw/nvme/ctrl.c" \
-          --replace-fail "NVMe Ctrl" "SanDisk SSD PLUS 1TB"
-      '';
+      postPatch =
+        (old.postPatch or "")
+        + ''
+          substituteInPlace \
+            "hw/nvme/ctrl.c" \
+            --replace-fail "NVMe Ctrl" "SanDisk SSD PLUS 1TB"
+        ''
+        + (
+          if cpu == "amd" then
+            ''
+              # AutoVirt 2026-08-08 moved the ICH9 SATA1 and SMBus controllers from
+              # device 31 (0x1F) to device 20 (0x14) while leaving the LPC/ISA
+              # bridge at device 31.  The firmware (lpc_ich9.c) still references
+              # the ACPI name "LPCB", which is only produced for slot 20 func 0,
+              # so the Q35 topology must be restored to the pre-2026-08-08 layout.
+              sed -i \
+                -e 's/ICH9_SATA1_DEV[[:space:]]\+20/ICH9_SATA1_DEV                          31/' \
+                -e 's/ICH9_SMB_DEV[[:space:]]\+20/ICH9_SMB_DEV                            31/' \
+                include/hw/southbridge/ich9.h
+              sed -i \
+                -e 's|// Slot 20 (0x14): LPC / SMBus / SATA 2|// Slot 31 (0x1F): LPC / SMBus / SATA 2|' \
+                -e 's/        case 20:/        case 31:/' \
+                -e 's/sprintf(name, "S20%X", func)/sprintf(name, "S31%X", func)/' \
+                hw/acpi/pcihp.c
+              grep -q 'ICH9_SATA1_DEV                          31' include/hw/southbridge/ich9.h
+              grep -q 'ICH9_SMB_DEV                            31' include/hw/southbridge/ich9.h
+              grep -q 'case 31:' hw/acpi/pcihp.c
+              grep -q 'S31%X' hw/acpi/pcihp.c
+            ''
+          else
+            ""
+        );
       passthru.skipUpdate = true;
       meta.platforms = [ "x86_64-linux" ];
     });
