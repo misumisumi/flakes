@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.0.4](https://github.com/misumisumi/flakes/compare/v7.0.3...v7.0.4) (2026-10-07)
+
+
+### Bug Fixes
+
+* **anti-anti-cheat-patch:** fix patch and update script ([f79a71a](https://github.com/misumisumi/flakes/commit/f79a71a3bed721af80bb42372d13de897b09e8c7))
+
 ## [7.0.3](https://github.com/misumisumi/flakes/compare/v7.0.2...v7.0.3) (2026-09-25)
 
 
