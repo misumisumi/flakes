@@ -21,14 +21,14 @@
     };
   zotero-pdf-translate =
     let
-      version = "2.4.7";
+      version = "2.4.8";
     in
     {
       pname = "zotero-pdf-translate";
       inherit version;
       src = fetchurl {
         url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v${version}/translate-for-zotero.xpi";
-        sha256 = "sha256-DLJn7s/wTSzjlAHlRY4xMSQi13rEYPaVjJouLaEJLdI=";
+        sha256 = "sha256-gUXplyxQf2uu6TuT0sLo5/4kOIxY8s6+CjfinbXeJuY=";
       };
       addonId = "zoteropdftranslate@euclpts.com";
       license = "agpl3Only";
