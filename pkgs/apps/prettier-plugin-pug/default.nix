@@ -11,7 +11,7 @@
 }:
 let
   inherit (lib) licenses;
-  version = "3.5.1";
+  version = "3.6.0";
   pnpm = pnpm_12;
 in
 stdenv.mkDerivation (finalAttrs: {
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "prettier";
     repo = "plugin-pug";
     rev = version;
-    sha256 = "sha256-MmNEgSDhJYtNuNPx++zZOguS/8to3ZV4+NSGpfbkcUo=";
+    sha256 = "sha256-eesz2dY7fAzX3OhjGFan8gBJLVIRpUPn3dopkNj0PnA=";
   };
 
   nativeBuildInputs = [
@@ -67,7 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
       ;
     inherit pnpm;
     fetcherVersion = 4;
-    hash = "sha256-XvGsyTKTUC142XMLEfBtfp6g1+v0jLEmz58bCeL+EAQ=";
+    hash = "sha256-sW5cyGhhHQFK3F1PIVcXaDPIDk13VYC75TNu7zI2fDw=";
   };
 
   passthru.updateScript = nix-update-script {
