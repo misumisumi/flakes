@@ -30,14 +30,14 @@ let
   inherit (lib.versions) majorMinor;
   blender-bin =
     let
-      version = "5.2.1";
+      version = "5.2.2";
     in
     {
       pname = "blender-bin";
       inherit version;
       src = fetchurl {
         url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender${majorMinor version}/blender-${version}-linux-x64.tar.xz";
-        sha256 = "sha256-ox9ST6maUn09Urf1qqaMNOGhnVoclHP3nFzGEP1bEOk=";
+        sha256 = "sha256-hAmJEnidxFDpVpfEGE+4qQrL5REcK6Su3j/stXgGoWg=";
       };
       passthru.updateScript = {
         command = [
@@ -72,14 +72,14 @@ let
     };
   blender-bin_lts =
     let
-      version = "5.2.1";
+      version = "5.2.2";
     in
     {
       pname = "blender-bin_lts";
       inherit version;
       src = fetchurl {
         url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender${majorMinor version}/blender-${version}-linux-x64.tar.xz";
-        sha256 = "sha256-ox9ST6maUn09Urf1qqaMNOGhnVoclHP3nFzGEP1bEOk=";
+        sha256 = "sha256-hAmJEnidxFDpVpfEGE+4qQrL5REcK6Su3j/stXgGoWg=";
       };
       passthru.updateScript = {
         command = [
