@@ -7,7 +7,6 @@
   pnpm_11,
   pnpmConfigHook,
   stdenv,
-  nix-update-script,
 }:
 let
   pname = "update-github-actions-permissions";
@@ -58,9 +57,10 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   dontNpmPrune = true;
 
-  passthru.updateScript = nix-update-script {
-    extraArgs = [
-      "--flake"
+  passthru.updateScript = {
+    command = [
+      ../../../scripts/update-pnpm.sh
+      "update-github-actions-permissions"
     ];
   };
 

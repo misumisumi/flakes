@@ -7,7 +7,6 @@
   pnpm_12,
   pnpmConfigHook,
   stdenv,
-  nix-update-script,
 }:
 let
   inherit (lib) licenses;
@@ -67,12 +66,13 @@ stdenv.mkDerivation (finalAttrs: {
       ;
     inherit pnpm;
     fetcherVersion = 4;
-    hash = "sha256-sW5cyGhhHQFK3F1PIVcXaDPIDk13VYC75TNu7zI2fDw=";
+    hash = "sha256-aFIoqAFsTok2+z2+pIFsQvSrOp10dh2nqE07YzWGMXI=";
   };
 
-  passthru.updateScript = nix-update-script {
-    extraArgs = [
-      "--flake"
+  passthru.updateScript = {
+    command = [
+      ../../../scripts/update-pnpm.sh
+      "prettier-plugin-pug"
     ];
   };
 
