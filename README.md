@@ -51,12 +51,12 @@ In your `flake.nix`
 ## Available packages
 
   - aac-OVMF-202605
-  - aac-QEMU-amd-11.0.2
-  - aac-QEMU-intel-11.0.2
-  - anti-anti-cheat-patch-0-unstable-2026-07-25
-  - blender-bin-5.2.1
+  - aac-QEMU-amd-11.0.3
+  - aac-QEMU-intel-11.0.3
+  - anti-anti-cheat-patch-0-unstable-2026-08-08
+  - blender-bin-5.2.2
   - blender-bin_4_5-4.5.14
-  - blender-bin_lts-5.2.1
+  - blender-bin_lts-5.2.2
   - bt-dualboot-1.0.1
   - commitlint-format-json-1.1.0
   - cups-brother-hll5100dn-3.5.1-1
@@ -73,7 +73,7 @@ In your `flake.nix`
   - ppp-scripts-2.5.2
   - prettier-plugin-nginx-0-unstable-2026-09-04
   - prettier-plugin-php-0.25.0
-  - prettier-plugin-pug-3.5.1
+  - prettier-plugin-pug-3.6.0
   - prettier-plugin-ruby-3.4.1
   - prettier-plugin-ruby-4.0.4
   - prettier-plugin-sh-0.20.2
@@ -97,8 +97,8 @@ In your `flake.nix`
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2026.10.01.191227
-  - zotero-better-bibtex-9.0.68
-  - zotero-pdf-translate-2.4.7
+  - zotero-better-bibtex-9.0.71
+  - zotero-pdf-translate-2.4.8
   - zotero-reading-list-1.7.0
   - zotero-scipdf-8.1.1
   - zotero-zotmoov-1.2.32

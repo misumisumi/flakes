@@ -7,11 +7,10 @@
   pnpm_12,
   pnpmConfigHook,
   stdenv,
-  nix-update-script,
 }:
 let
   inherit (lib) licenses;
-  version = "3.5.1";
+  version = "3.6.0";
   pnpm = pnpm_12;
 in
 stdenv.mkDerivation (finalAttrs: {
@@ -21,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "prettier";
     repo = "plugin-pug";
     rev = version;
-    sha256 = "sha256-MmNEgSDhJYtNuNPx++zZOguS/8to3ZV4+NSGpfbkcUo=";
+    sha256 = "sha256-eesz2dY7fAzX3OhjGFan8gBJLVIRpUPn3dopkNj0PnA=";
   };
 
   nativeBuildInputs = [
@@ -67,12 +66,19 @@ stdenv.mkDerivation (finalAttrs: {
       ;
     inherit pnpm;
     fetcherVersion = 4;
-    hash = "sha256-XvGsyTKTUC142XMLEfBtfp6g1+v0jLEmz58bCeL+EAQ=";
+    # pnpm materializes platform-specific optionalDependencies
+    # (@esbuild/linux-x64 vs @esbuild/linux-arm64), so the fixed-output hash
+    # differs per system.
+    hash =
+      if stdenv.hostPlatform.isAarch64 then
+        "sha256-aQc0l/X3NWaMs9Yjs4XD4VSBWPK0buHH3bfrVqvQJow="
+      else
+        "sha256-aFIoqAFsTok2+z2+pIFsQvSrOp10dh2nqE07YzWGMXI=";
   };
 
-  passthru.updateScript = nix-update-script {
-    extraArgs = [
-      "--flake"
+  passthru.updateScript = {
+    command = [
+      ./update.sh
     ];
   };
 
