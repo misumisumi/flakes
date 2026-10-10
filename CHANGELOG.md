@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.0.5](https://github.com/misumisumi/flakes/compare/v7.0.4...v7.0.5) (2026-10-10)
+
+
+### Bug Fixes
+
+* always refresh pnpmDeps hashes on update ([6388e8e](https://github.com/misumisumi/flakes/commit/6388e8e6b46c29850f23b3bd58934df2397aa39b))
+
 ## [7.0.4](https://github.com/misumisumi/flakes/compare/v7.0.3...v7.0.4) (2026-10-07)
 
 
