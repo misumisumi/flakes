@@ -10,7 +10,6 @@ let
     concatStringsSep
     filterAttrs
     mapAttrsToList
-    optionalString
     ;
   app = writeShellScriptBin "update-pkgs" ''
     set -euo pipefail
@@ -28,7 +27,6 @@ let
         ''
           echo "Updating ${pname}..."
           ${nix-update}/bin/nix-update ${pname} --flake ${useScript} "$@"
-          ${optionalString (hasAttr "pnpmDeps" value) "${nix-update}/bin/nix-update ${pname} --flake ${useScript} --version=skip \"$@\""}
         ''
       ) (filterAttrs (n: v: !(v.passthru.skipUpdate or false) && (hasAttr "src" v)) packages)
     )}
