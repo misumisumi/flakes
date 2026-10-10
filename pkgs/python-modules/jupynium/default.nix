@@ -22,13 +22,13 @@
 }:
 let
   pname = "jupynium";
-  version = "0.2.7";
+  version = "0.2.8";
 in
 buildPythonPackage {
   inherit pname version;
   src = fetchPypi {
     inherit pname version;
-    sha256 = "sha256-fZtSND4uy5vja09a4ZshFElZIdonNzxAZIqXQABrPUM=";
+    sha256 = "sha256-Ao/HEzQ7XdARUEaLzQsxr8Koyh0TkcN0ajZJknMFaoA=";
   };
 
   doCheck = false;

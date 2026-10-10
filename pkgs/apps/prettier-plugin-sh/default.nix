@@ -7,18 +7,18 @@
 let
   inherit (lib) licenses;
   pname = "prettier-plugin-sh";
-  version = "0.19.0";
+  version = "0.20.2";
 in
 buildNpmPackage {
   inherit pname version;
   src = fetchurl {
     url = "https://registry.npmjs.org/prettier-plugin-sh/-/prettier-plugin-sh-${version}.tgz";
-    sha256 = "sha256-406FOQ1cZ9j05UstQfKsff7I3yGn43ZYka9WOJkVQhc=";
+    sha256 = "sha256-C+BmCxQpaYg52HycFNtPbikTg1erChUwYRELogVuhKU=";
   };
 
   dontNpmBuild = true;
 
-  npmDepsHash = "sha256-Rr4bWzcFicOvYqJbPAH9vvcxgMhreRtTRTbG0GeyRYM=";
+  npmDepsHash = "sha256-FVqFFsVpNBKLgnHo+A9GCn9qvcC5MWDb+26FZ/1pipo=";
   postPatch = ''
     cp ${./package-lock.json} ./package-lock.json
   '';

@@ -5,14 +5,14 @@
 {
   zotero-better-bibtex =
     let
-      version = "9.0.64";
+      version = "9.0.71";
     in
     {
       pname = "zotero-better-bibtex";
       inherit version;
       src = fetchurl {
         url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v${version}/zotero-better-bibtex-${version}.xpi";
-        sha256 = "sha256-hMS1sF/6yanH4v95ZjYSSG93gWkN1ZsSoeYq7Nz6fCc=";
+        sha256 = "sha256-v2GhaQ3IorerCb6d4siZhvT7bUlcgkB9ibECsm+6qdU=";
       };
       addonId = "better-bibtex@iris-advies.com";
       license = "mit";
@@ -21,14 +21,14 @@
     };
   zotero-pdf-translate =
     let
-      version = "2.4.7";
+      version = "2.4.8";
     in
     {
       pname = "zotero-pdf-translate";
       inherit version;
       src = fetchurl {
         url = "https://github.com/windingwind/zotero-pdf-translate/releases/download/v${version}/translate-for-zotero.xpi";
-        sha256 = "sha256-DLJn7s/wTSzjlAHlRY4xMSQi13rEYPaVjJouLaEJLdI=";
+        sha256 = "sha256-gUXplyxQf2uu6TuT0sLo5/4kOIxY8s6+CjfinbXeJuY=";
       };
       addonId = "zoteropdftranslate@euclpts.com";
       license = "agpl3Only";
@@ -37,14 +37,14 @@
     };
   zotero-reading-list =
     let
-      version = "1.5.22";
+      version = "1.7.0";
     in
     {
       pname = "zotero-reading-list";
       inherit version;
       src = fetchurl {
         url = "https://github.com/Dominic-DallOsto/zotero-reading-list/releases/download/v${version}/zotero-reading-list.xpi";
-        sha256 = "sha256-y1UC9bkoD9W52H902tDCucRwTy8JCLVbIdzJ9dVyQVs=";
+        sha256 = "sha256-Feva9EHmIBaEWNhMGynptyopHeveoPWdjSEFL2KDlnA=";
       };
       addonId = "reading-list@hotmail.com";
       license = "gpl3";
