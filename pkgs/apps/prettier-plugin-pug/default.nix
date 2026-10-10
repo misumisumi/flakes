@@ -66,13 +66,19 @@ stdenv.mkDerivation (finalAttrs: {
       ;
     inherit pnpm;
     fetcherVersion = 4;
-    hash = "sha256-aFIoqAFsTok2+z2+pIFsQvSrOp10dh2nqE07YzWGMXI=";
+    # pnpm materializes platform-specific optionalDependencies
+    # (@esbuild/linux-x64 vs @esbuild/linux-arm64), so the fixed-output hash
+    # differs per system.
+    hash =
+      if stdenv.hostPlatform.isAarch64 then
+        "sha256-aQc0l/X3NWaMs9Yjs4XD4VSBWPK0buHH3bfrVqvQJow="
+      else
+        "sha256-aFIoqAFsTok2+z2+pIFsQvSrOp10dh2nqE07YzWGMXI=";
   };
 
   passthru.updateScript = {
     command = [
-      ../../../scripts/update-pnpm.sh
-      "prettier-plugin-pug"
+      ./update.sh
     ];
   };
 

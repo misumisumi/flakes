@@ -59,8 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   passthru.updateScript = {
     command = [
-      ../../../scripts/update-pnpm.sh
-      "update-github-actions-permissions"
+      ./update.sh
     ];
   };
 
