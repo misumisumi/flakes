@@ -6,12 +6,9 @@ let
   inherit (builtins)
     all
     attrNames
-    functionArgs
-    head
-    intersectAttrs
     readDir
     ;
-  inherit (lib) filterAttrs mapAttrs splitString;
+  inherit (lib) filterAttrs mapAttrs;
 
   inherit (pkgs)
     callPackage
