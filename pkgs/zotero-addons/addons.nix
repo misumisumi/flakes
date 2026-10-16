@@ -37,14 +37,14 @@
     };
   zotero-reading-list =
     let
-      version = "1.7.0";
+      version = "1.7.1";
     in
     {
       pname = "zotero-reading-list";
       inherit version;
       src = fetchurl {
         url = "https://github.com/Dominic-DallOsto/zotero-reading-list/releases/download/v${version}/zotero-reading-list.xpi";
-        sha256 = "sha256-Feva9EHmIBaEWNhMGynptyopHeveoPWdjSEFL2KDlnA=";
+        sha256 = "sha256-5JQkFUuAi9daoal43MZbw7C8qtNqTvPP6c/aBACsGZU=";
       };
       addonId = "reading-list@hotmail.com";
       license = "gpl3";
