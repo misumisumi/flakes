@@ -66,14 +66,11 @@ stdenv.mkDerivation (finalAttrs: {
       ;
     inherit pnpm;
     fetcherVersion = 4;
-    # pnpm materializes platform-specific optionalDependencies
-    # (@esbuild/linux-x64 vs @esbuild/linux-arm64), so the fixed-output hash
-    # differs per system.
-    hash =
-      if stdenv.hostPlatform.isAarch64 then
-        "sha256-aQc0l/X3NWaMs9Yjs4XD4VSBWPK0buHH3bfrVqvQJow="
-      else
-        "sha256-aFIoqAFsTok2+z2+pIFsQvSrOp10dh2nqE07YzWGMXI=";
+    # Both supported platforms currently produce the same fetchPnpmDeps output,
+    # so a single hash covers them. If a platform-specific output ever appears
+    # again, keep the hashes as distinct literals so the update scripts can
+    # target each one individually.
+    hash = "sha256-sW5cyGhhHQFK3F1PIVcXaDPIDk13VYC75TNu7zI2fDw=";
   };
 
   passthru.updateScript = {
