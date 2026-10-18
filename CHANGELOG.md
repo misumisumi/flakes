@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.0.6](https://github.com/misumisumi/flakes/compare/v7.0.5...v7.0.6) (2026-10-18)
+
+
+### Bug Fixes
+
+* **prettier-plugin-pug:** use single pnpmDeps hash ([3683f7d](https://github.com/misumisumi/flakes/commit/3683f7dac66632be7bd95c8b3bdb87c2bb80ebef))
+
 ## [7.0.5](https://github.com/misumisumi/flakes/compare/v7.0.4...v7.0.5) (2026-10-10)
 
 
