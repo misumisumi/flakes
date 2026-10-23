@@ -9,13 +9,13 @@
 
 maven.buildMavenPackage {
   pname = "discord-mcp";
-  version = "1.0.0-unstable-2026-04-25";
+  version = "1.0.0-unstable-2026-10-23";
   src = fetchFromGitHub {
     owner = "SaseQ";
     repo = "discord-mcp";
-    rev = "0b35793bf9f86cc65849ae42ebae940718fbf812";
+    rev = "e134c03714cfadf786b686e3045b92537042a240";
     fetchSubmodules = false;
-    sha256 = "sha256-cse7EqqdIBY6QiSmIYjdqRN9jCSQsaTOaI2EzPJKS8s=";
+    sha256 = "sha256-4BIPmShJydtM9IkjOXOoZUKY10aWhU1I+EVWbq4YEqY=";
   };
   mvnHash = "sha256-ou9rfs19udyKP3NGaPRYqRREJQy5AtwWrYcUf42fXHQ=";
 
