@@ -6,20 +6,20 @@
 }:
 let
   pname = "mcpvault";
-  version = "0.16.0";
+  version = "0.17.1";
 in
 buildNpmPackage {
   inherit pname version;
   src = fetchurl {
     url = "https://registry.npmjs.org/@bitbonsai/mcpvault/-/mcpvault-${version}.tgz";
-    sha256 = "sha256-QZsyzmc1nxRr5QzWiE2WGw1LoJ5MsZf73mHbGbyXTS0=";
+    sha256 = "sha256-zkIsT5u/VwJj9RocfhK+FIvTWvnNVPspQHdJhKV3mPU=";
   };
 
   dontNpmBuild = true;
   postPatch = ''
     cp ${./package-lock.json} ./package-lock.json
   '';
-  npmDepsHash = "sha256-NXTHDqe8er0y/5n3xZahfT2HNl+IHMIGIjhOwRfEUZ4=";
+  npmDepsHash = "sha256-obpq6HgHnHOCrsSrYEU5Yt/2BAHIzt7ruZv6weJUEnQ=";
 
   passthru.updateScript = nix-update-script {
     extraArgs = [
