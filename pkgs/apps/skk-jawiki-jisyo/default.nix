@@ -4,7 +4,7 @@
   stdenvNoCC,
 }:
 let
-  version = "2026.10.01.191227";
+  version = "2026.10.21.182128";
 in
 stdenvNoCC.mkDerivation {
   pname = "skk-jawiki-jisyo";
