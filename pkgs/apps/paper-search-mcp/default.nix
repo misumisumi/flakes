@@ -25,7 +25,6 @@ buildPythonApplication {
     fastmcp
     feedparser
     lxml
-    mcp
     pypdf
     requests
   ];
