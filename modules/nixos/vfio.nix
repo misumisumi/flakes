@@ -131,15 +131,31 @@ in
         ++ (optional (cfg.enableNestedVirtualization && cfg.IOMMUType == "amd") "kvm_amd.nested=1");
 
       initrd = {
-        preDeviceCommands = optionalString (cfg.deviceDomains != [ ]) ''
-          DEVS="${concatMapStrings (x: x + " ") cfg.deviceDomains}"
-          if [ -z "$(ls -A /sys/class/iommu)" ]; then
-            exit 0
-          fi
-          for DEV in $DEVS; do
-            echo "vfio-pci" > "/sys/bus/pci/devices/''$DEV/driver_override"
-          done
-        '';
+        systemd.services = mkIf (cfg.deviceDomains != [ ]) {
+          vfio-pci-override = {
+            description = "Set vfio-pci driver_override for PCI devices";
+            wantedBy = [ "sysinit.target" ];
+            before = [
+              "systemd-modules-load.service"
+              "systemd-udevd.service"
+              "systemd-udev-trigger.service"
+            ];
+            unitConfig.DefaultDependencies = false;
+            script = ''
+              DEVS="${concatMapStrings (x: x + " ") cfg.deviceDomains}"
+              if [ -z "$(ls -A /sys/class/iommu)" ]; then
+                exit 0
+              fi
+              for DEV in $DEVS; do
+                echo "vfio-pci" > "/sys/bus/pci/devices/''$DEV/driver_override"
+              done
+            '';
+            serviceConfig = {
+              Type = "oneshot";
+              RemainAfterExit = true;
+            };
+          };
+        };
         kernelModules = mkBefore (
           optionals (cfg.devices != [ ]) [
             "vfio_pci"
