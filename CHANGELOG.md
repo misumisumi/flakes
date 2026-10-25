@@ -1,5 +1,17 @@
 # Changelog
 
+## [7.1.0](https://github.com/misumisumi/flakes/compare/v7.0.7...v7.1.0) (2026-10-25)
+
+
+### Features
+
+* **ibis-office:** add ibis-office ([1915e3c](https://github.com/misumisumi/flakes/commit/1915e3c6cdcba1d6c1a984e16024fe48ca0d513d))
+
+
+### Bug Fixes
+
+* **oh-my-openagent:** update oh-my-openagent ([dcda8af](https://github.com/misumisumi/flakes/commit/dcda8af68cff3f1188b70ff74b3db1e88b9de18e))
+
 ## [7.0.7](https://github.com/misumisumi/flakes/compare/v7.0.6...v7.0.7) (2026-10-25)
 
 
