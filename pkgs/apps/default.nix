@@ -12,8 +12,6 @@ let
   inherit (pkgs)
     callPackage
     python3
-    fetchgit
-    dockerTools
     OVMF
     ;
 
