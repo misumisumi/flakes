@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.0.7](https://github.com/misumisumi/flakes/compare/v7.0.6...v7.0.7) (2026-10-25)
+
+
+### Bug Fixes
+
+* **nixos/vfio:** migrate preDeviceCommands to systemd stage 1 service ([ca754ba](https://github.com/misumisumi/flakes/commit/ca754bae629be3c7af4d745324fd7be49af448d9))
+* **paper-search-mcp:** remove deplicated independent package ([195519d](https://github.com/misumisumi/flakes/commit/195519d216efa9ef04c04d07517dbc3966b7a085))
+
 ## [7.0.6](https://github.com/misumisumi/flakes/compare/v7.0.5...v7.0.6) (2026-10-18)
 
 
