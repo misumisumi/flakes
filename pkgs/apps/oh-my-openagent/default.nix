@@ -7,11 +7,11 @@
 }:
 stdenvNoCC.mkDerivation rec {
   pname = "oh-my-openagent";
-  version = "5.1.38";
+  version = "5.1.47";
 
   src = fetchurl {
     url = "https://github.com/code-yeongyu/oh-my-openagent/releases/download/v${version}/omo-linux-x64";
-    hash = "sha256-y+VqgX1xtf3Ln47oXHJLOTDEIFqB4olH/wCBEiPLrVU=";
+    hash = "sha256-b8EYWkE501Gk/CtG6XQr1YvH4k38Fh6gs5ReLy3Hj7M=";
   };
 
   dontUnpack = true;
