@@ -10,7 +10,7 @@
 }:
 let
   inherit (lib) licenses;
-  version = "0.25.0";
+  version = "0.26.0";
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "prettier-plugin-php";
@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "prettier";
     repo = "plugin-php";
     rev = "v${version}";
-    sha256 = "sha256-N/sDAV+u9h6cpxE5lstnp/FUzNHTXVR4GPyvckVrhus=";
+    sha256 = "sha256-LKCABrYH9XUZniB44XZzgwCLv7WP+Snp1xJRk2FtPyc=";
   };
 
   nativeBuildInputs = [
@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   yarnOfflineCache = fetchYarnDeps {
     yarnLock = finalAttrs.src + "/yarn.lock";
-    hash = "sha256-Of6OwyhVkhnGWGP++Es9/U3Z69it71Lu3E8DQNwC+eE=";
+    hash = "sha256-tNm/5S0ruP59G/KAH4rIosns54x4XmpdIPL1TRTDR/I=";
   };
 
   meta = {
