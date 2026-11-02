@@ -138,6 +138,11 @@
               inherit lib packages;
               inherit (pkgs) nix-update writeShellScriptBin;
             };
+            update-pkgs-hashes = import ./scripts/update-pkgs.nix {
+              inherit lib packages;
+              inherit (pkgs) nix-update writeShellScriptBin;
+              hashOnly = true;
+            };
           };
           packages = mkPackages system myPkgs;
           checks = mkCheck packages;

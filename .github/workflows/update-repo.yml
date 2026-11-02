@@ -11,13 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository_owner == 'misumisumi'
     steps:
-      - uses: actions/checkout@v7
-
       - uses: actions/create-github-app-token@v3
         id: generate-token
         with:
           client-id: ${{ secrets.CLIENT_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
+
+      - uses: actions/checkout@v7
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
 
       - uses: DeterminateSystems/nix-installer-action@v23
         with:
@@ -35,6 +37,28 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
+      # Update flake.lock first: package dependency hashes (cargoDeps, npmDeps,
+      # mvnHash, ...) depend on the nixpkgs revision, so package updates must
+      # run against the updated flake.lock.
+      - uses: DeterminateSystems/update-flake-lock@v29
+        id: update
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          branch: update_flake_lock_action
+          commit-msg: "chore(flake.lock): auto update flake.lock"
+          pr-title: "chore(flake.lock): auto update flake.lock" # Title of PR to be created
+          pr-labels: | # Labels to be set on the PR
+            dependencies
+            automated
+
+      # update-flake-lock creates its PR on branch update_flake_lock_action.
+      # Continue on that branch so package updates land in the same PR.
+      - name: Checkout update PR branch
+        if: steps.update.outputs.pull-request-number != '' && steps.update.outputs.pull-request-operation != 'closed'
+        run: |
+          git fetch origin update_flake_lock_action
+          git checkout -B update_flake_lock_action origin/update_flake_lock_action
+
       - name: Update package version
         timeout-minutes: 60
         env:
@@ -42,18 +66,36 @@ jobs:
         run: |
           nix run .#update-pkgs -- --commit
 
+      # nix-update skips dependency hashes when the version is unchanged.
+      # Refresh them after the flake.lock update (e.g. mvnHash with a newer
+      # Maven, cargoDeps/npmDeps with a newer toolchain).
+      - name: Refresh dependency hashes
+        timeout-minutes: 60
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: |
+          nix run .#update-pkgs-hashes -- --commit
+
       - name: Update README
         run: |
           scripts/update-readme.sh
           git add README.md
-          git commit -m "chore: update README"
+          git diff --cached --quiet || git commit -m "chore: update README"
 
+      - name: Push package updates to the PR
+        if: steps.update.outputs.pull-request-number != '' && steps.update.outputs.pull-request-operation != 'closed'
+        run: |
+          git push origin HEAD:update_flake_lock_action
+
+      # If flake.lock was already up to date, update-flake-lock did not create
+      # a PR. Run it again now that package updates exist so it can create one.
       - uses: DeterminateSystems/update-flake-lock@v29
-        id: update
+        if: steps.update.outputs.pull-request-number == '' || steps.update.outputs.pull-request-operation == 'closed'
         with:
           token: ${{ steps.generate-token.outputs.token }}
+          branch: update_flake_lock_action
           commit-msg: "chore(flake.lock): auto update flake.lock"
-          pr-title: "chore(flake.lock): auto update flake.lock" # Title of PR to be created
-          pr-labels: | # Labels to be set on the PR
+          pr-title: "chore(flake.lock): auto update flake.lock"
+          pr-labels: |
             dependencies
             automated
