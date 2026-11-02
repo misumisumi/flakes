@@ -13,7 +13,7 @@ let
   version = "3.4.1";
 in
 stdenv.mkDerivation (finalAttrs: {
-  pname = "prettier-plugin-ruby";
+  pname = "prettier-plugin-xml";
   inherit version;
   src = fetchFromGitHub {
     owner = "prettier";
@@ -31,8 +31,14 @@ stdenv.mkDerivation (finalAttrs: {
 
   dontYarnBuild = true;
 
+  # registry.yarnpkg.com intermittently serves identical non-tarball content
+  # to GitHub's aarch64-linux runners, which breaks fetchYarnDeps with a hash
+  # mismatch. The tarballs are byte-identical on registry.npmjs.org, so fetch
+  # them from there; the offline cache layout is host-independent, so the
+  # cache hash and the lockfile itself stay unchanged.
   yarnOfflineCache = fetchYarnDeps {
     yarnLock = finalAttrs.src + "/yarn.lock";
+    mirrorUrl = "https://registry.npmjs.org";
     hash = "sha256-VRUnlE8AQQJfPTMdexPZ/5jPFtU/qSV5GFM0pSLH9zI=";
   };
 

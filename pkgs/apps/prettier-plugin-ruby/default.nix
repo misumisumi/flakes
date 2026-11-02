@@ -31,8 +31,14 @@ stdenv.mkDerivation (finalAttrs: {
 
   dontYarnBuild = true;
 
+  # registry.yarnpkg.com intermittently serves identical non-tarball content
+  # to GitHub's aarch64-linux runners, which breaks fetchYarnDeps with a hash
+  # mismatch. The tarballs are byte-identical on registry.npmjs.org, so fetch
+  # them from there; the offline cache layout is host-independent, so the
+  # cache hash and the lockfile itself stay unchanged.
   yarnOfflineCache = fetchYarnDeps {
     yarnLock = finalAttrs.src + "/yarn.lock";
+    mirrorUrl = "https://registry.npmjs.org";
     hash = "sha256-KG6LwkBN3Ao85mIt244SNzOsLNxYM/g9meWJ5AknHis=";
   };
 
