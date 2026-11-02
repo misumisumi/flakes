@@ -1,5 +1,14 @@
 # Changelog
 
+## [7.1.1](https://github.com/misumisumi/flakes/compare/v7.1.0...v7.1.1) (2026-11-02)
+
+
+### Bug Fixes
+
+* **oh-my-openagent:** add update script to skip assetless releases ([506c3be](https://github.com/misumisumi/flakes/commit/506c3be34821c24ec9546546f34d159b3d1b266b))
+* **oh-my-openagent:** add update script to skip assetless releases ([06169bd](https://github.com/misumisumi/flakes/commit/06169bdd5a65c5d0306ba2a5a7d3e78c886736f7))
+* **prettier-plugins:** fetch yarn deps from registry.npmjs.org mirror ([14e6dad](https://github.com/misumisumi/flakes/commit/14e6dadcbedba42ea635daa9ac3349daf920430b))
+
 ## [7.1.0](https://github.com/misumisumi/flakes/compare/v7.0.7...v7.1.0) (2026-10-25)
 
 
