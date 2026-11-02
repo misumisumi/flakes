@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.1.2](https://github.com/misumisumi/flakes/compare/v7.1.1...v7.1.2) (2026-11-02)
+
+
+### Bug Fixes
+
+* **pdf-inspector:** fetch from PyPI so nix-update can update it ([aebf794](https://github.com/misumisumi/flakes/commit/aebf794510b72f243b99589f7b1c795956191485))
+* **pdf-inspector:** fetch from PyPI so nix-update can update it ([3819c69](https://github.com/misumisumi/flakes/commit/3819c692f027d2c4ac2db25c72b77fbbcb42ad91))
+
 ## [7.1.1](https://github.com/misumisumi/flakes/compare/v7.1.0...v7.1.1) (2026-11-02)
 
 
