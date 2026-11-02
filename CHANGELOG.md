@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.1.3](https://github.com/misumisumi/flakes/compare/v7.1.2...v7.1.3) (2026-11-02)
+
+
+### Bug Fixes
+
+* **pdf-inspector:** opt out of the default Python update script ([3c266d7](https://github.com/misumisumi/flakes/commit/3c266d773018d1da2023cef8739314976c9e8557))
+* **pdf-inspector:** opt out of the default Python update script ([ad5be59](https://github.com/misumisumi/flakes/commit/ad5be594afa7530fb3c3b7822b5c9791529349d8))
+
 ## [7.1.2](https://github.com/misumisumi/flakes/compare/v7.1.1...v7.1.2) (2026-11-02)
 
 
