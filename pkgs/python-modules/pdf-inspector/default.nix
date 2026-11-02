@@ -39,6 +39,10 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "pdf_inspector" ];
 
+  # Use nix-update directly instead of the default update-python-libraries
+  # script, which does not work with this flake.
+  passthru.useUpdateScript = false;
+
   meta = {
     description = "Fast PDF inspection, classification, and text extraction";
     homepage = "https://github.com/firecrawl/pdf-inspector";
