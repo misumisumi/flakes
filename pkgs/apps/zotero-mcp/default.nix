@@ -4,9 +4,26 @@
   nix-update,
   writeShellScript,
   python3Packages,
+  rustPlatform,
 }:
 let
   inherit (python3Packages) buildPythonApplication;
+
+  # Upstream pins pdf-inspector==0.2.6, so keep using that version here even
+  # though the overlay provides a newer one.
+  pdf-inspector = python3Packages.pdf-inspector.overridePythonAttrs (old: rec {
+    version = "0.2.6";
+    src = python3Packages.fetchPypi {
+      pname = "pdf_inspector";
+      inherit version;
+      hash = "sha256-W7OH85v3qTsCtJGItnC5eY+MzH5Y9o7uWIOlEqoFzrI=";
+    };
+    cargoDeps = rustPlatform.fetchCargoVendor {
+      inherit (old) pname;
+      inherit version src;
+      hash = "sha256-/PTqpmL2JdnK/Ejo3IAK/DqTSVrA9zTmFnmRPoc4tLc=";
+    };
+  });
 
   pyzotero = python3Packages.pyzotero.overridePythonAttrs (old: rec {
     version = "1.16.0";
@@ -39,6 +56,7 @@ buildPythonApplication rec {
 
   dependencies = [
     pyzotero
+    pdf-inspector
   ]
   ++ (with python3Packages; [
     bibtexparser
@@ -46,7 +64,6 @@ buildPythonApplication rec {
     httpx
     markdown-it-py
     markdownify
-    pdf-inspector
     pydantic
     python-dotenv
     requests
