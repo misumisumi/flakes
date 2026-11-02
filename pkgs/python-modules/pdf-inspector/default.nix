@@ -1,7 +1,7 @@
 {
   lib,
   buildPythonPackage,
-  fetchurl,
+  fetchPypi,
   cargo,
   rustc,
   rustPlatform,
@@ -10,17 +10,18 @@
 
 buildPythonPackage rec {
   pname = "pdf-inspector";
-  version = "0.2.6";
+  version = "1.25.2";
   pyproject = true;
 
-  src = fetchurl {
-    url = "https://files.pythonhosted.org/packages/8d/7a/525ee06cad5c46d8aa7357c15b8f72c60e803246f3b7e24523e602f01f6d/pdf_inspector-${version}.tar.gz";
-    hash = "sha256-W7OH85v3qTsCtJGItnC5eY+MzH5Y9o7uWIOlEqoFzrI=";
+  src = fetchPypi {
+    pname = "pdf_inspector";
+    inherit version;
+    hash = "sha256-InU365HIr7zZlcOG/14QaDKG87RObTheFDMEJV9y7pI=";
   };
 
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit pname version src;
-    hash = "sha256-/PTqpmL2JdnK/Ejo3IAK/DqTSVrA9zTmFnmRPoc4tLc=";
+    hash = "sha256-7VREdpt2S3o3VhA/vJT+vxaRPXSYJlZG9VNxX9zS/ms=";
   };
 
   build-system = [
