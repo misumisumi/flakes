@@ -55,6 +55,9 @@
                         --replace-fail "time.sleep(0.1)" "time.sleep(1)"
                     '';
                   });
+                  fastmcp-slim = pprev.fastmcp-slim.override {
+                    mcp = pprev.mcp_1;
+                  };
                 }
               )
             ];
@@ -100,14 +103,14 @@
                 inherit lib;
                 inherit pkgs;
               }).packages
-              pkgs
+                pkgs
             )
             // (
               (import ./pkgs/python-modules {
                 inherit lib;
                 inherit pkgs;
               }).packages
-              pkgs
+                pkgs
             )
             // (
               (import ./pkgs/zotero-addons {
@@ -118,7 +121,7 @@
                   stdenv
                   ;
               }).packages
-              pkgs
+                pkgs
             );
         in
         rec {
