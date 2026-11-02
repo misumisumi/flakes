@@ -73,14 +73,14 @@
     };
   zotero-zotmoov =
     let
-      version = "1.2.32";
+      version = "1.2.34";
     in
     {
       pname = "zotero-zotmoov";
       inherit version;
       src = fetchurl {
         url = "https://github.com/wileyyugioh/zotmoov/releases/download/${version}/zotmoov-${version}-fx.xpi";
-        sha256 = "sha256-d3DcLGLSqqsmYv10Aq+t0Fg4e/9pV4SBrAOb/AUOzCs=";
+        sha256 = "sha256-PK1oxs9DcGY3YHQ9mbEWpFxv0cF3MvUMfQM1t/IMeFQ=";
       };
       addonId = "zotmoov@wileyy.com";
       license = "gpl3Only";
