@@ -62,31 +62,34 @@ In your `flake.nix`
   - cups-brother-hll5100dn-3.5.1-1
   - devshell
   - discord-mcp-1.0.0-unstable-2026-10-23
+  - ibis-office-0.8.5
   - julius-speech-4.6
   - mcp-hub-4.2.1
-  - mcpvault-0.17.1
+  - mcpvault-0.18.3
   - mstflint-cx3-support-4.25.0-1
   - ndi-6-6.3.2.0
   - nixos-diff
+  - oh-my-openagent-5.1.57
   - openpace-1.1.4
   - paper-search-mcp-0.1.4-unstable-2026-10-02
   - ppp-scripts-2.5.2
   - prettier-plugin-nginx-0-unstable-2026-09-04
   - prettier-plugin-php-0.26.0
   - prettier-plugin-pug-3.6.0
-  - prettier-plugin-ruby-3.4.1
   - prettier-plugin-ruby-4.0.4
   - prettier-plugin-sh-0.20.2
   - prettier-plugin-sql-0.20.0
   - prettier-plugin-toml-4.1.0
+  - prettier-plugin-xml-3.4.1
   - proton-ge-rtsp-bin-GE-Proton10-33-rtsp24-1
   - python3.14-jupynium-0.2.8
+  - python3.14-pdf-inspector-1.25.2
   - python3.14-valkey-glide-2.5.3
   - python3.14-version_pioneer-0.0.16
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-0.0.9
   - skk-emoticons-jisyo-0.2.1-unstable-2021-04-02
-  - skk-jawiki-jisyo-2026.10.21.182128
+  - skk-jawiki-jisyo-2026.11.01.184542
   - skk-kaomoji-jisyo-2.30.5544.102
   - snack-2.2.10
   - tkdnd-2.9.5
@@ -96,11 +99,12 @@ In your `flake.nix`
   - vrchat-vpm-cli-0.1.28
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
-  - yaskkserv2-dict-2026.10.21.182128
-  - zotero-better-bibtex-9.0.71
+  - yaskkserv2-dict-2026.11.01.184542
+  - zotero-better-bibtex-9.0.76
+  - zotero-mcp-0.15.2
   - zotero-pdf-translate-2.4.8
   - zotero-reading-list-1.7.1
   - zotero-scipdf-8.1.1
-  - zotero-zotmoov-1.2.32
+  - zotero-zotmoov-1.2.34
   - null
 
