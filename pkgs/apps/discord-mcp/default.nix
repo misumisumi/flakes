@@ -17,7 +17,7 @@ maven.buildMavenPackage {
     fetchSubmodules = false;
     sha256 = "sha256-4BIPmShJydtM9IkjOXOoZUKY10aWhU1I+EVWbq4YEqY=";
   };
-  mvnHash = "sha256-ou9rfs19udyKP3NGaPRYqRREJQy5AtwWrYcUf42fXHQ=";
+  mvnHash = "sha256-F1bRgRVdi9ndfMc8sW5obmrV03xLMaaVnDwOkm04rNI=";
 
   nativeBuildInputs = [ makeWrapper ];
 

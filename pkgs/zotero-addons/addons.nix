@@ -5,14 +5,14 @@
 {
   zotero-better-bibtex =
     let
-      version = "9.0.71";
+      version = "9.0.76";
     in
     {
       pname = "zotero-better-bibtex";
       inherit version;
       src = fetchurl {
         url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v${version}/zotero-better-bibtex-${version}.xpi";
-        sha256 = "sha256-v2GhaQ3IorerCb6d4siZhvT7bUlcgkB9ibECsm+6qdU=";
+        sha256 = "sha256-E7uQoqv6n44oxTvGF4De+OfLOwzXEiT5qiBOL8/6HV4=";
       };
       addonId = "better-bibtex@iris-advies.com";
       license = "mit";
@@ -73,14 +73,14 @@
     };
   zotero-zotmoov =
     let
-      version = "1.2.32";
+      version = "1.2.34";
     in
     {
       pname = "zotero-zotmoov";
       inherit version;
       src = fetchurl {
         url = "https://github.com/wileyyugioh/zotmoov/releases/download/${version}/zotmoov-${version}-fx.xpi";
-        sha256 = "sha256-d3DcLGLSqqsmYv10Aq+t0Fg4e/9pV4SBrAOb/AUOzCs=";
+        sha256 = "sha256-PK1oxs9DcGY3YHQ9mbEWpFxv0cF3MvUMfQM1t/IMeFQ=";
       };
       addonId = "zotmoov@wileyy.com";
       license = "gpl3Only";
