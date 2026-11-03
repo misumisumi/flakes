@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.1.4](https://github.com/misumisumi/flakes/compare/v7.1.3...v7.1.4) (2026-11-03)
+
+
+### Bug Fixes
+
+* **fastmcp-slim:** use mcp 1.x to keep fastmcp packages buildable ([a2417ef](https://github.com/misumisumi/flakes/commit/a2417ef271e62bf3d4781adf185211579321402f))
+* **update-repo:** update flake.lock before package updates ([a17cef1](https://github.com/misumisumi/flakes/commit/a17cef15bca1a618b3c54bdcd7336e305c34e0f8))
+
 ## [7.1.3](https://github.com/misumisumi/flakes/compare/v7.1.2...v7.1.3) (2026-11-02)
 
 
