@@ -41,24 +41,6 @@
                   inherit lib;
                   pkgs = final;
                 }).override
-                // {
-                  mcp = pprev.mcp.overridePythonAttrs (old: {
-                    postPatch = prev.lib.optionalString prev.stdenv.buildPlatform.isDarwin ''
-                      # time.sleep(0.1) feels a bit optimistic and it has been flaky whilst
-                      # testing this on macOS under load.
-                      substituteInPlace \
-                        "tests/shared/test_ws.py" \
-                        "tests/shared/test_sse.py" \
-                        --replace-fail "time.sleep(0.5)" "time.sleep(1)"
-                      substituteInPlace \
-                        "tests/client/test_stdio.py" \
-                        --replace-fail "time.sleep(0.1)" "time.sleep(1)"
-                    '';
-                  });
-                  fastmcp-slim = pprev.fastmcp-slim.override {
-                    mcp = pprev.mcp_1;
-                  };
-                }
               )
             ];
             python3 =
