@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.1.5](https://github.com/misumisumi/flakes/compare/v7.1.4...v7.1.5) (2026-11-05)
+
+
+### Bug Fixes
+
+* **mcp:** remove override ([29c0fcd](https://github.com/misumisumi/flakes/commit/29c0fcd455dccbb43131984122b100effbf3bbed))
+
 ## [7.1.4](https://github.com/misumisumi/flakes/compare/v7.1.3...v7.1.4) (2026-11-03)
 
 
