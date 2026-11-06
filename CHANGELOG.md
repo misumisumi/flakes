@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.1.6](https://github.com/misumisumi/flakes/compare/v7.1.5...v7.1.6) (2026-11-06)
+
+
+### Bug Fixes
+
+* **oh-my-openagent:** add support aarch64-linux and aarch64-darwin ([996cf11](https://github.com/misumisumi/flakes/commit/996cf11a6bf015cd5d73ada5aa8350d425569d5f))
+* **oh-my-openagent:** add support aarch64-linux and aarch64-darwin ([1808072](https://github.com/misumisumi/flakes/commit/1808072b8c1556c0b379058340d30b862ca5d991))
+
 ## [7.1.5](https://github.com/misumisumi/flakes/compare/v7.1.4...v7.1.5) (2026-11-05)
 
 
