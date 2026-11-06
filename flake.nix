@@ -41,6 +41,11 @@
                   inherit lib;
                   pkgs = final;
                 }).override
+                // {
+                  fastmcp-slim = pprev.fastmcp-slim.override {
+                    mcp = pprev.mcp_1;
+                  };
+                }
               )
             ];
             python3 =

@@ -4,22 +4,47 @@
   fetchurl,
   stdenv,
   patchelf,
-  writeScript,
+  darwin,
 }:
-stdenvNoCC.mkDerivation rec {
-  pname = "oh-my-openagent";
+let
+  system = stdenv.hostPlatform.system;
   version = "5.1.57";
 
+  # Upstream publishes one standalone binary per OS/CPU. Keep the
+  # asset name and hash next to each other so the update script can
+  # refresh every platform in one go.
+  assets = {
+    "x86_64-linux" = {
+      name = "omo-linux-x64";
+      hash = "sha256-ujwRT3mIvW1AC5MBgHV/9Jw2IDm4NtVJB9vlOqIW3kw=";
+    };
+    "aarch64-linux" = {
+      name = "omo-linux-arm64";
+      hash = "sha256-fn57rZCa6Nmfwzen9g9ctm4Yp2MaKvPBujQN/3gBUKk=";
+    };
+    "aarch64-darwin" = {
+      name = "omo-darwin-arm64";
+      hash = "sha256-p3468ZBy/5TcjdKzteyiPbn4gJoYqgFyvax8C6vtdv0=";
+    };
+  };
+
+  source = assets.${system} or (throw "oh-my-openagent: unsupported system ${system}");
+in
+stdenvNoCC.mkDerivation {
+  pname = "oh-my-openagent";
+  inherit version;
+
   src = fetchurl {
-    url = "https://github.com/code-yeongyu/oh-my-openagent/releases/download/v${version}/omo-linux-x64";
-    hash = "sha256-ujwRT3mIvW1AC5MBgHV/9Jw2IDm4NtVJB9vlOqIW3kw=";
+    url = "https://github.com/code-yeongyu/oh-my-openagent/releases/download/v${version}/${source.name}";
+    inherit (source) hash;
   };
 
   dontUnpack = true;
 
-  nativeBuildInputs = [ patchelf ];
-
-  buildInputs = [ stdenv.cc.cc.lib ];
+  nativeBuildInputs =
+    lib.optionals stdenv.hostPlatform.isLinux [ patchelf ]
+    ++ lib.optionals stdenv.hostPlatform.isDarwin [ darwin.autoSignDarwinBinariesHook ];
+  buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
 
   dontAutoPatchelf = true;
 
@@ -31,7 +56,7 @@ stdenvNoCC.mkDerivation rec {
 
   # autoPatchelfHook rewrites sections and breaks the payload embedded in the
   # bun-compiled executable, so only patch the ELF interpreter.
-  postFixup = ''
+  postFixup = lib.optionalString stdenv.hostPlatform.isLinux ''
     patchelf --set-interpreter ${stdenv.cc.bintools.dynamicLinker} $out/bin/omo
   '';
 
@@ -43,24 +68,7 @@ stdenvNoCC.mkDerivation rec {
     runHook postInstallCheck
   '';
 
-  # Upstream publishes release tags that ship no binaries at all
-  # (e.g. v5.1.52 and v5.1.53 have no assets), which makes plain
-  # nix-update pick a version whose URL 404s. Select the newest
-  # release that actually contains the omo-linux-x64 asset.
-  passthru.updateScript = writeScript "oh-my-openagent-update" ''
-    #!/usr/bin/env nix-shell
-    #!nix-shell -i bash -p curl jq nix-update
-
-    set -euo pipefail
-
-    version=$(curl -fsSL "https://api.github.com/repos/code-yeongyu/oh-my-openagent/releases?per_page=100" | jq -er '
-      map(select(.draft == false and .prerelease == false
-        and any(.assets[]; .name == "omo-linux-x64")))
-      | first | .tag_name | ltrimstr("v")
-    ')
-
-    nix-update --version "$version" --flake ${pname}
-  '';
+  passthru.updateScript = ./update.sh;
 
   meta = with lib; {
     description = "OmO Native - standalone AI coding assistant with the OMO extension built in";
@@ -69,6 +77,10 @@ stdenvNoCC.mkDerivation rec {
     license = licenses.unfree;
     sourceProvenance = with sourceTypes; [ binaryNativeCode ];
     mainProgram = "omo";
-    platforms = [ "x86_64-linux" ];
+    platforms = [
+      "x86_64-linux"
+      "aarch64-linux"
+      "aarch64-darwin"
+    ];
   };
 }
