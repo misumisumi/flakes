@@ -10,23 +10,26 @@
 }:
 let
   pname = "valkey-glide";
-  version = "2.5.3";
+  version = "2.6.0";
+  # Since 2.6.0 the sdist keeps the crate in a subdirectory.
+  cargoRoot = "python/glide-async";
   src = fetchPypi {
     pname = "valkey_glide";
     inherit version;
-    sha256 = "sha256-zj2hoKknYxOF1rwKGsirTo4u+p9BQEv1S7z4KQTz6pg=";
+    sha256 = "sha256-a72FDPWZQ7d8dWdXnhqcdNzJcvjry+gTOrvAaeRAFmc=";
   };
 in
 buildPythonPackage {
-  inherit pname version src;
+  inherit pname version src cargoRoot;
 
   doCheck = false;
   pyproject = true;
-  # for runtime depend
-  # cargoDeps = rustPlatform.importCargoLock { lockFile = ./Cargo.lock; };
+  # NOTE: The PyPI sdist does not ship `glide_shared`, `libglide_ffi.so`
+  # and `_fast_response`, so the resulting package cannot `import glide`.
+  # Upstream issue: https://github.com/valkey-io/valkey-glide/issues/4884
   cargoDeps = rustPlatform.fetchCargoVendor {
-    inherit pname version src;
-    hash = "sha256-oTlFogVEL8cVyKsZtNDcCFC1WAV1diRAP4PEHLaDrkg=";
+    inherit pname version src cargoRoot;
+    hash = "sha256-awwyYKWqocaYLTEsgg3OePJ+Fje9i2ot4Z2VxYvaPnA=";
   };
 
   dependencies = [
