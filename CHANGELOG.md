@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.1.7](https://github.com/misumisumi/flakes/compare/v7.1.6...v7.1.7) (2026-11-07)
+
+
+### Bug Fixes
+
+* **valkey-glide:** fix by upstream issue ([7b1bd25](https://github.com/misumisumi/flakes/commit/7b1bd25349d5d8216612158a5443de278be9ee34))
+* **valkey-glide:** fix by upstream issue ([d6b9a86](https://github.com/misumisumi/flakes/commit/d6b9a867c16c27688159010db3f2e22892a98a14))
+
 ## [7.1.6](https://github.com/misumisumi/flakes/compare/v7.1.5...v7.1.6) (2026-11-06)
 
 
