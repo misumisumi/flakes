@@ -5,14 +5,14 @@
 {
   zotero-better-bibtex =
     let
-      version = "9.0.76";
+      version = "9.0.77";
     in
     {
       pname = "zotero-better-bibtex";
       inherit version;
       src = fetchurl {
         url = "https://github.com/retorquere/zotero-better-bibtex/releases/download/v${version}/zotero-better-bibtex-${version}.xpi";
-        sha256 = "sha256-E7uQoqv6n44oxTvGF4De+OfLOwzXEiT5qiBOL8/6HV4=";
+        sha256 = "sha256-pfHSuvj/QshXYbej2PZ5n/wwbwgugCTVuDzoDoWSvQs=";
       };
       addonId = "better-bibtex@iris-advies.com";
       license = "mit";
