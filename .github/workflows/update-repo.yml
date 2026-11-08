@@ -40,24 +40,15 @@ jobs:
       # Update flake.lock first: package dependency hashes (cargoDeps, npmDeps,
       # mvnHash, ...) depend on the nixpkgs revision, so package updates must
       # run against the updated flake.lock.
-      - uses: DeterminateSystems/update-flake-lock@v29
-        id: update
-        with:
-          token: ${{ steps.generate-token.outputs.token }}
-          branch: update_flake_lock_action
-          commit-msg: "chore(flake.lock): auto update flake.lock"
-          pr-title: "chore(flake.lock): auto update flake.lock" # Title of PR to be created
-          pr-labels: | # Labels to be set on the PR
-            dependencies
-            automated
-
-      # update-flake-lock creates its PR on branch update_flake_lock_action.
-      # Continue on that branch so package updates land in the same PR.
-      - name: Checkout update PR branch
-        if: steps.update.outputs.pull-request-number != '' && steps.update.outputs.pull-request-operation != 'closed'
+      # No PR is created here: changes are only committed locally and the PR is
+      # created once at the end, so a failed run never leaves a partial PR.
+      - name: Update flake.lock
         run: |
-          git fetch origin update_flake_lock_action
-          git checkout -B update_flake_lock_action origin/update_flake_lock_action
+          nix flake update
+          if ! git diff --quiet -- flake.lock; then
+            git add flake.lock
+            git commit -m "chore(flake.lock): auto update flake.lock"
+          fi
 
       - name: Update package version
         timeout-minutes: 60
@@ -82,20 +73,21 @@ jobs:
           git add README.md
           git diff --cached --quiet || git commit -m "chore: update README"
 
-      - name: Push package updates to the PR
-        if: steps.update.outputs.pull-request-number != '' && steps.update.outputs.pull-request-operation != 'closed'
-        run: |
-          git push origin HEAD:update_flake_lock_action
-
-      # If flake.lock was already up to date, update-flake-lock did not create
-      # a PR. Run it again now that package updates exist so it can create one.
-      - uses: DeterminateSystems/update-flake-lock@v29
-        if: steps.update.outputs.pull-request-number == '' || steps.update.outputs.pull-request-operation == 'closed'
+      # Create the PR only after every update step has succeeded.
+      # If there is no diff against the base branch, this step exits silently
+      # (no PR is created), matching the previous behavior.
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ steps.generate-token.outputs.token }}
           branch: update_flake_lock_action
-          commit-msg: "chore(flake.lock): auto update flake.lock"
-          pr-title: "chore(flake.lock): auto update flake.lock"
-          pr-labels: |
+          delete-branch: true
+          commit-message: "chore: auto update flake.lock and packages"
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          title: "chore: auto update flake.lock and packages"
+          body: |
+            Automated update of flake.lock, package versions and README.
+          labels: |
             dependencies
             automated
