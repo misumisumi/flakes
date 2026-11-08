@@ -62,14 +62,14 @@ In your `flake.nix`
   - cups-brother-hll5100dn-3.5.1-1
   - devshell
   - discord-mcp-1.0.0-unstable-2026-10-23
-  - ibis-office-0.8.5
+  - ibis-office-0.8.6
   - julius-speech-4.6
   - mcp-hub-4.2.1
   - mcpvault-0.18.3
   - mstflint-cx3-support-4.25.0-1
   - ndi-6-6.3.2.0
   - nixos-diff
-  - oh-my-openagent-5.1.57
+  - oh-my-openagent-5.1.64
   - openpace-1.1.4
   - paper-search-mcp-0.1.4-unstable-2026-10-02
   - ppp-scripts-2.5.2
@@ -84,13 +84,13 @@ In your `flake.nix`
   - proton-ge-rtsp-bin-GE-Proton10-33-rtsp24-1
   - python3.14-jupynium-0.2.8
   - python3.14-pdf-inspector-1.25.2
-  - python3.14-valkey-glide-2.5.3
+  - python3.14-valkey-glide-2.6.0
   - python3.14-version_pioneer-0.0.16
   - ricoh-sp-c260series-ppd-1.00
   - skk-emoji-jisyo-0.0.9
   - skk-emoticons-jisyo-0.2.1-unstable-2021-04-02
   - skk-jawiki-jisyo-2026.11.01.184542
-  - skk-kaomoji-jisyo-2.30.5544.102
+  - skk-kaomoji-jisyo-3.35.6354
   - snack-2.2.10
   - tkdnd-2.9.5
   - tokyonight-gtk-theme-0-unstable-2025-10-23
@@ -100,7 +100,7 @@ In your `flake.nix`
   - wavesurfer-1.8.8p5
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2026.11.01.184542
-  - zotero-better-bibtex-9.0.76
+  - zotero-better-bibtex-9.0.77
   - zotero-mcp-0.15.2
   - zotero-pdf-translate-2.4.8
   - zotero-reading-list-1.7.1
