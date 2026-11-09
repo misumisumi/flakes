@@ -31,17 +31,21 @@ jobs:
   pre-build:
     runs-on: ubuntu-latest
     outputs:
-      check: ${{ steps.change.outputs.nix }}
+      check: ${{ steps.change.outputs.check }}
+      all: ${{ steps.change.outputs.all }}
+      dirs: ${{ steps.change.outputs.dirs }}
     steps:
       - uses: actions/checkout@v7
-      - uses: DeterminateSystems/flake-checker-action@main
-      - uses: dorny/paths-filter@v4
-        id: change
         with:
-          filters: |
-            nix:
-              - "pkgs/**/*.nix"
-              - "flake.lock"
+          fetch-depth: 0
+      - uses: DeterminateSystems/flake-checker-action@main
+      - uses: DeterminateSystems/nix-installer-action@v23
+      - name: Detect changed packages
+        id: change
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: scripts/changed-pkgs.sh
 
   build-check-matrix:
     needs: [pre-build]
@@ -105,15 +109,18 @@ jobs:
           sudo rm -rf ~/Library/Developer/Xcode
           df -h
 
-        #NOTE: Limit cpu usage because pytest often cannot connect to the server under high cpu load.
-      - run: nix profile add nixpkgs#cpulimit
-
       - name: Build check
         uses: gacts/run-and-post-run@v1
         timeout-minutes: 150
+        env:
+          ALL: ${{ needs.pre-build.outputs.all }}
+          DIRS: ${{ needs.pre-build.outputs.dirs }}
         with:
-          run: cpulimit -l 85 -i -- nix run github:Mic92/nix-fast-build  -- --no-link --no-nom --result-file result.json --flake ".#checks.$(nix eval --raw --impure --file builtins.currentSystem)"
-          post: jq -r '.results[] | select(.success==false) | .attr' result.json
+          # gacts/run-and-post-run executes each input line as a separate
+          # command, so the script must stay in a file.
+          run: ./scripts/build-check.sh
+          post: |
+            if [ -f result.json ]; then jq -r '.results[] | select(.success==false) | .attr' result.json; fi
 
   build-check-summary:
     runs-on: ubuntu-latest
