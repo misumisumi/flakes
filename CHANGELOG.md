@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.1.8](https://github.com/misumisumi/flakes/compare/v7.1.7...v7.1.8) (2026-11-08)
+
+
+### Bug Fixes
+
+* **update-repo:** create pull request only after all updates succeed ([6cadd97](https://github.com/misumisumi/flakes/commit/6cadd9746a83bb34c48f2e39d989a4d520bf8ff8))
+
 ## [7.1.7](https://github.com/misumisumi/flakes/compare/v7.1.6...v7.1.7) (2026-11-07)
 
 
