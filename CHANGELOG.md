@@ -1,5 +1,19 @@
 # Changelog
 
+## [7.2.0](https://github.com/misumisumi/flakes/compare/v7.1.8...v7.2.0) (2026-11-09)
+
+
+### Features
+
+* **ibis-office-bin:** add Flatpak/macOS prebuilt package ([4645096](https://github.com/misumisumi/flakes/commit/464509664ba23ae5661bb75a8f84ad43955e0522))
+
+
+### Bug Fixes
+
+* **build-check:** generate a valid Nix attrset for --select ([23a4f40](https://github.com/misumisumi/flakes/commit/23a4f4091e42c9dd3685aec35d111a9726e8ca73))
+* **build-check:** run selection logic from a script ([23a4f40](https://github.com/misumisumi/flakes/commit/23a4f4091e42c9dd3685aec35d111a9726e8ca73))
+* **ibis-office:** install desktop entry and icons ([877ad54](https://github.com/misumisumi/flakes/commit/877ad5406479c2c291a66dc5cb7c27bff76ff135))
+
 ## [7.1.8](https://github.com/misumisumi/flakes/compare/v7.1.7...v7.1.8) (2026-11-08)
 
 
