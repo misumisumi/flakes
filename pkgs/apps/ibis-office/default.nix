@@ -81,6 +81,15 @@ rustPlatform.buildRustPackage {
   postInstall = optionals stdenv.hostPlatform.isLinux ''
     wrapProgram $out/bin/ibisOffice \
       --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [ vulkan-loader ]}
+
+    install -Dm644 crates/ibis-office-app/linux/ibisoffice.desktop \
+      $out/share/applications/ibisoffice.desktop
+
+    for size in 16 24 32 48 256; do
+      install -Dm644 \
+        "crates/ibis-office-app/windows/png/ico/ibisOffice_icon_win_''${size}px_transparent.png" \
+        $out/share/icons/hicolor/''${size}x''${size}/apps/ibisoffice.png
+    done
   '';
 
   doCheck = false;
