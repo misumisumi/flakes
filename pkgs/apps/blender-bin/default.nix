@@ -49,14 +49,14 @@ let
     };
   blender-bin_4_5 =
     let
-      version = "4.5.15";
+      version = "4.5.16";
     in
     {
       pname = "blender-bin_4_5";
       inherit version;
       src = fetchurl {
         url = "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.5/blender-${version}-linux-x64.tar.xz";
-        sha256 = "sha256-DSuLsu/pfmyOtX3mtzIviADhmE4xJbYN7MpfZ3Hkdz4=";
+        sha256 = "sha256-I0MrBkl3kIvrGrS38y8CTnMxEFyHXBh9zgAq/4SxDBE=";
       };
       passthru.updateScript = nix-update-script {
         extraArgs = [

@@ -27,7 +27,7 @@
 let
   inherit (lib) licenses platforms optionals;
   pname = "ibis-office";
-  version = "0.8.6";
+  version = "0.8.7";
 in
 rustPlatform.buildRustPackage {
   inherit pname version;
@@ -36,7 +36,7 @@ rustPlatform.buildRustPackage {
     url = "https://github.com/ibisjp/ibis-office";
     rev = "v${version}";
     fetchSubmodules = true;
-    hash = "sha256-h9XJ5WmXot50CFweHlBOmQTdhHzAUBf9XKpJyWidAFE=";
+    hash = "sha256-iCEn3HYMvrnesqwEzaWrUAaSwEPyHkYNxeAgZ09cte8=";
   };
 
   cargoLock.lockFile = ./Cargo.lock;
