@@ -2,8 +2,11 @@
   lib,
   fetchPypi,
   buildPythonPackage,
+  pkgs,
+  pkg-config,
   rustPlatform,
   anyio,
+  aws-lc,
   cffi,
   protobuf,
   sniffio,
@@ -47,6 +50,15 @@ buildPythonPackage {
     rustPlatform.cargoSetupHook
     rustPlatform.maturinBuildHook
   ];
+
+  nativeBuildInputs = [ pkg-config ];
+
+  buildInputs = [
+    aws-lc
+    pkgs.zstd.dev
+  ];
+
+  env.AWS_LC_SYS_USE_SYSTEM = true;
 
   passthru.useUpdateScript = false;
 
