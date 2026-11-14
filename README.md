@@ -62,7 +62,6 @@ In your `flake.nix`
   - cups-brother-hll5100dn-3.5.1-1
   - devshell
   - discord-mcp-1.0.0-unstable-2026-10-23
-  - ibis-office-0.8.7
   - ibis-office-bin-0.8.7
   - julius-speech-4.6
   - mcp-hub-4.2.1
