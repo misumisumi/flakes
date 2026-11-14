@@ -6,6 +6,8 @@
   rustc,
   rustPlatform,
   maturin,
+  oniguruma,
+  pkg-config,
 }:
 
 buildPythonPackage rec {
@@ -30,10 +32,15 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [
     cargo
+    pkg-config
     rustPlatform.cargoSetupHook
     rustPlatform.maturinBuildHook
     rustc
   ];
+
+  buildInputs = [ oniguruma ];
+
+  env.RUSTONIG_SYSTEM_LIBONIG = true;
 
   doCheck = false;
 
