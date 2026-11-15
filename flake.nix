@@ -115,6 +115,18 @@
           _module.args.pkgs = import inputs.nixpkgs {
             inherit system;
             overlays = [
+              # nix-update 1.16.0 is incompatible with Nix 2.35: `nix flake
+              # metadata` returns a store path for a lazily fetched flake
+              # source that is never materialised, so the following
+              # evaluation fails with "No such file or directory".
+              # Use Nix 2.34, which copies the flake source into the store.
+              # Can be removed once nix-update supports Nix 2.35.
+              # https://github.com/Mic92/nix-update/issues/687
+              (final: prev: {
+                nix-update = prev.nix-update.override {
+                  nix = prev.nixVersions.nix_2_34;
+                };
+              })
               self.overlays.default
               inputs.nvfetcher.overlays.default
             ];
