@@ -43,12 +43,12 @@ let
 in
 buildPythonApplication rec {
   pname = "zotero-mcp";
-  version = "0.15.2";
+  version = "0.17.1";
   src = fetchFromGitHub {
     owner = "54yyyu";
     repo = "zotero-mcp";
     tag = "v${version}";
-    hash = "sha256-fdnI7xrS+h8rfsH0kGrTlzFfxHlvjBq5Vkov7CofRxE=";
+    hash = "sha256-dVOBF8e9r6bbyQnpEIsIfe98nD6P21BAQENq4d6oZtA=";
   };
   pyproject = true;
 

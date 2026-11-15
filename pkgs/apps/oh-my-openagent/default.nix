@@ -8,7 +8,7 @@
 }:
 let
   system = stdenv.hostPlatform.system;
-  version = "5.1.64";
+  version = "5.1.70";
 
   # Upstream publishes one standalone binary per OS/CPU. Keep the
   # asset name and hash next to each other so the update script can
@@ -16,15 +16,15 @@ let
   assets = {
     "x86_64-linux" = {
       name = "omo-linux-x64";
-      hash = "sha256-CflgMNBL40zW/JfFvmalnva7LGWJB1rMiW93wVUvELg=";
+      hash = "sha256-bct/NPbcbI/XLL9vCgTsgjh7E1gVHFsWDIMICLykjSo=";
     };
     "aarch64-linux" = {
       name = "omo-linux-arm64";
-      hash = "sha256-/Fw6LeSj/qO0f71ue2F+Nor+0w9waJAj5GwovBLoEMQ=";
+      hash = "sha256-fEkp8ehW5KE4DeVtdylWJt/eSrETxLJqUpJJCbXrPVM=";
     };
     "aarch64-darwin" = {
       name = "omo-darwin-arm64";
-      hash = "sha256-WK+wYuqW6IrWxqtJglNveBD6vYobWyafW0hNjktgzUA=";
+      hash = "sha256-Bd3GgfTPRs4/m11nJS79DvOFrbDC4yfXz0ZCWHQnFTY=";
     };
   };
 
