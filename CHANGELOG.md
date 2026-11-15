@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.2.1](https://github.com/misumisumi/flakes/compare/v7.2.0...v7.2.1) (2026-11-15)
+
+
+### Bug Fixes
+
+* **ci:** pin nix-update to Nix 2.34 ([2cd8675](https://github.com/misumisumi/flakes/commit/2cd8675919c7aea5811ed2560538b179c0581a08))
+* **ci:** pin nix-update to Nix 2.34 ([728e3c5](https://github.com/misumisumi/flakes/commit/728e3c5185b297ccef9011df2416e2ae4125affa))
+
 ## [7.2.0](https://github.com/misumisumi/flakes/compare/v7.1.8...v7.2.0) (2026-11-09)
 
 
