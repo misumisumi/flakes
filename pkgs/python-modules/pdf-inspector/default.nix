@@ -12,18 +12,18 @@
 
 buildPythonPackage rec {
   pname = "pdf-inspector";
-  version = "1.26.0";
+  version = "1.27.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pdf_inspector";
     inherit version;
-    hash = "sha256-DJZ3ah83Dlo1I3TLGK0cNl7tTgmf8A7weRLa1NfbiK4=";
+    hash = "sha256-nMZTZkZeoWBAOSfXamq/G5gNcz7LZFMednmpLS506rA=";
   };
 
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit pname version src;
-    hash = "sha256-72L9SGxcFPmFulT6aEPWpj8fQS6hpJG29s45Et6DzDk=";
+    hash = "sha256-cYes6YqhWWb+QzMB96OvdQYaXSm3Oty7mzkUHFmBQyg=";
   };
 
   build-system = [
