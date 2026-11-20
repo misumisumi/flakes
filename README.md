@@ -54,23 +54,22 @@ In your `flake.nix`
   - aac-QEMU-amd-11.0.3
   - aac-QEMU-intel-11.0.3
   - anti-anti-cheat-patch-0-unstable-2026-08-08
+  - blender-bin-5.2.4
   - blender-bin_4_5-4.5.16
-  - blender-bin-5.2.3
-  - blender-bin_lts-5.2.3
+  - blender-bin_lts-5.2.4
   - bt-dualboot-1.0.1
   - commitlint-format-json-1.1.0
   - cups-brother-hll5100dn-3.5.1-1
   - devshell
   - discord-mcp-1.0.0-unstable-2026-10-23
-  - ibis-office-bin-0.8.7
+  - ibis-office-bin-0.8.9
   - julius-speech-4.6
   - mcp-hub-4.2.1
-  - mcpvault-0.18.3
+  - mcpvault-0.18.4
   - mstflint-cx3-support-4.25.0-1
-  - ndi-6-6.3.2.0
+  - ndi-6-6.4.0.2
   - nixos-diff
-  - null
-  - oh-my-openagent-5.1.70
+  - oh-my-openagent-5.1.79
   - openpace-1.1.4
   - paper-search-mcp-0.1.4-unstable-2026-10-02
   - ppp-scripts-2.5.2
@@ -84,7 +83,7 @@ In your `flake.nix`
   - prettier-plugin-xml-3.4.1
   - proton-ge-rtsp-bin-GE-Proton10-33-rtsp24-1
   - python3.14-jupynium-0.2.8
-  - python3.14-pdf-inspector-1.26.0
+  - python3.14-pdf-inspector-1.27.0
   - python3.14-valkey-glide-2.6.0
   - python3.14-version_pioneer-0.0.16
   - ricoh-sp-c260series-ppd-1.00
@@ -102,9 +101,10 @@ In your `flake.nix`
   - yaskkserv2-0.1.7
   - yaskkserv2-dict-2026.11.01.184542
   - zotero-better-bibtex-9.0.77
-  - zotero-mcp-0.17.1
+  - zotero-mcp-0.17.3
   - zotero-pdf-translate-2.4.8
-  - zotero-reading-list-1.7.1
+  - zotero-reading-list-1.7.2
   - zotero-scipdf-8.1.1
   - zotero-zotmoov-1.2.34
+  - null
 
