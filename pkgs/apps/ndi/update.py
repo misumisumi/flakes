@@ -22,7 +22,7 @@ FLAG_out = flags.DEFINE_string("out", None, "Path to read/write version.json fro
 def find_version_json() -> str:
     if FLAG_out.value:
         return FLAG_out.value
-    try_paths = ["pkgs/apps/ndi-6/version.json", "version.json"]
+    try_paths = ["pkgs/apps/ndi/version.json", "version.json"]
     for path in try_paths:
         if os.path.exists(path):
             return path
