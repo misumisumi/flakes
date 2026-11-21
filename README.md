@@ -81,7 +81,7 @@ In your `flake.nix`
   - prettier-plugin-sql-0.20.0
   - prettier-plugin-toml-4.1.0
   - prettier-plugin-xml-3.4.1
-  - proton-ge-rtsp-bin-GE-Proton10-33-rtsp24-1
+  - proton-ge-rtsp-bin-11.0-20260609-4
   - python3.14-jupynium-0.2.8
   - python3.14-pdf-inspector-1.27.0
   - python3.14-valkey-glide-2.6.0

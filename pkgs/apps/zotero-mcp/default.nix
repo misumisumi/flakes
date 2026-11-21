@@ -33,7 +33,11 @@ let
       tag = "v${version}";
       hash = "sha256-mNQFpta2tnb7vVCZhmDUSVW9pVnk4gYCf0U09C3GTgU=";
     };
-    dependencies = (old.dependencies or [ ]) ++ [ python3Packages.httpx2 ];
+    dependencies = builtins.filter (d: (d.pname or "") != "bibtexparser") (old.dependencies or [ ]) ++ [
+      python3Packages.bibtexparser_2
+      python3Packages.pylatexenc
+      python3Packages.httpx2
+    ];
     postPatch = ''
       substituteInPlace pyproject.toml \
         --replace-fail "uv_build>=0.8.14,<0.12.0" "uv-build"
@@ -59,7 +63,7 @@ buildPythonApplication rec {
     pdf-inspector
   ]
   ++ (with python3Packages; [
-    bibtexparser
+    bibtexparser_2
     fastmcp
     httpx
     markdown-it-py
