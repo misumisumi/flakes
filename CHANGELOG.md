@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.2.2](https://github.com/misumisumi/flakes/compare/v7.2.1...v7.2.2) (2026-11-21)
+
+
+### Bug Fixes
+
+* repair zotero-mcp and proton-ge-rtsp-bin builds ([734b6be](https://github.com/misumisumi/flakes/commit/734b6be3dac61e1abd768829406819eb997fdbfb))
+
 ## [7.2.1](https://github.com/misumisumi/flakes/compare/v7.2.0...v7.2.1) (2026-11-15)
 
 
