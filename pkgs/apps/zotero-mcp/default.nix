@@ -26,14 +26,18 @@ let
   });
 
   pyzotero = python3Packages.pyzotero.overridePythonAttrs (old: rec {
-    version = "1.16.0";
+    version = "1.17.0";
     src = fetchFromGitHub {
       owner = "urschrei";
       repo = "pyzotero";
       tag = "v${version}";
-      hash = "sha256-9iWBGu2VJb+lfDg2By2m2p4zC/4tOHatR5FBP86ntYs=";
+      hash = "sha256-mNQFpta2tnb7vVCZhmDUSVW9pVnk4gYCf0U09C3GTgU=";
     };
-    dependencies = (old.dependencies or [ ]) ++ [ python3Packages.httpx2 ];
+    dependencies = builtins.filter (d: (d.pname or "") != "bibtexparser") (old.dependencies or [ ]) ++ [
+      python3Packages.bibtexparser_2
+      python3Packages.pylatexenc
+      python3Packages.httpx2
+    ];
     postPatch = ''
       substituteInPlace pyproject.toml \
         --replace-fail "uv_build>=0.8.14,<0.12.0" "uv-build"
@@ -43,12 +47,12 @@ let
 in
 buildPythonApplication rec {
   pname = "zotero-mcp";
-  version = "0.17.1";
+  version = "0.17.3";
   src = fetchFromGitHub {
     owner = "54yyyu";
     repo = "zotero-mcp";
     tag = "v${version}";
-    hash = "sha256-dVOBF8e9r6bbyQnpEIsIfe98nD6P21BAQENq4d6oZtA=";
+    hash = "sha256-3YUqN6iEUa9x489mKciJBTgRHZCJGOIGDHjcUYCE7GM=";
   };
   pyproject = true;
 
@@ -59,7 +63,7 @@ buildPythonApplication rec {
     pdf-inspector
   ]
   ++ (with python3Packages; [
-    bibtexparser
+    bibtexparser_2
     fastmcp
     httpx
     markdown-it-py

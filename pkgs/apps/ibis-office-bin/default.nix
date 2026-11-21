@@ -6,22 +6,22 @@
 }:
 let
   pname = "ibis-office-bin";
-  version = "0.8.7";
+  version = "0.8.9";
 
   # The asset and hash of every supported platform, kept together so
   # update.sh can refresh them all in one go.
   sources = {
     "x86_64-linux" = {
       asset = "ibisOffice-${version}-Linux-x86_64.flatpak";
-      hash = "sha256-O4V3GsbZ3XePBUtk5gJQ3LU9j/zNlV5rs7DQS5320/E=";
+      hash = "sha256-hL0VGY3zb10+TFu4JuLBoqHWPAOQbov9Kw79zppf3bE=";
     };
     "aarch64-linux" = {
       asset = "ibisOffice-${version}-Linux-aarch64.flatpak";
-      hash = "sha256-YAP86HskSPlDBH+Z6A10BgWeG//I4t6ClnMhg+AiU2o=";
+      hash = "sha256-KUqw963+bwC5DsPgfWvYQ3I8VWdnKOz4K93Wc8ikYBg=";
     };
     "aarch64-darwin" = {
       asset = "ibisOffice-${version}-macOS.zip";
-      hash = "sha256-fwD/fcO8Y9BkeJ8vUblBaPftcvRgZm5gdGNBtBVyySA=";
+      hash = "sha256-/U4cDpwjExw8xY6OCWU0i9F7+LD101oCg8XZIbJNwRo=";
     };
   };
 
