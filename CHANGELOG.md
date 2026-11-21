@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.2.3](https://github.com/misumisumi/flakes/compare/v7.2.2...v7.2.3) (2026-11-21)
+
+
+### Bug Fixes
+
+* **ndi:** rename ndi-6 directory to ndi ([06fe87f](https://github.com/misumisumi/flakes/commit/06fe87fef8ba24b3bd2cc93e66fa94800a432710))
+* **ndi:** rename ndi-6 directory to ndi ([51d0e51](https://github.com/misumisumi/flakes/commit/51d0e51ff227c74d65d76af288acd85f5efa430d))
+
 ## [7.2.2](https://github.com/misumisumi/flakes/compare/v7.2.1...v7.2.2) (2026-11-21)
 
 
